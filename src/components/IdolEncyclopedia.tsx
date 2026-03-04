@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Search, User, Star, ChevronLeft, ExternalLink, MessageCircle, Newspaper, Sparkles, Calendar, Fingerprint, Moon } from 'lucide-react';
+import { Search, User, Star, ChevronLeft, ExternalLink, MessageCircle, Newspaper, Sparkles, Calendar, Fingerprint, Moon, Heart, Ruler, Droplets } from 'lucide-react';
 import { KPOP_GROUPS } from '../data/idols';
 import type { KpopGroup } from '../data/idols';
 
@@ -91,9 +91,15 @@ const IdolEncyclopedia: React.FC = () => {
               />
             </div>
             <div className="flex-1 text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-2 flex-wrap">
                 <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-mono text-slate-400 uppercase tracking-widest">{selectedGroup.company}</span>
                 <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-mono text-slate-400 uppercase tracking-widest">Debut: {selectedGroup.debut}</span>
+                {selectedGroup.fandom && (
+                  <span className="px-3 py-1 bg-neon-pink/10 border border-neon-pink/30 text-neon-pink rounded-full text-[10px] font-mono uppercase tracking-widest flex items-center gap-1">
+                    <Heart className="w-3 h-3" />
+                    {selectedGroup.fandom[currentLang]}
+                  </span>
+                )}
               </div>
               <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4 pr-4 leading-none">{selectedGroup.name[currentLang]}</h2>
               <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">{selectedGroup.description[currentLang]}</p>
@@ -133,6 +139,18 @@ const IdolEncyclopedia: React.FC = () => {
                         <Moon className="w-3 h-3 text-neon-yellow" />
                         {member.zodiac[currentLang]}
                       </div>
+                      {member.height && (
+                        <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
+                          <Ruler className="w-3 h-3 text-neon-orange" />
+                          {member.height}
+                        </div>
+                      )}
+                      {member.bloodType && (
+                        <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
+                          <Droplets className="w-3 h-3 text-red-500" />
+                          {member.bloodType} Type
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
