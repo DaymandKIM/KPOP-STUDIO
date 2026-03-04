@@ -19,19 +19,27 @@ const SafeImage: React.FC<{ src: string; alt: string; className?: string; accent
   const getAttemptUrl = (count: number): string => {
     if (!src) return '';
     
-    const isNaver = src.includes('naver.net') || src.includes('pstatic.net');
-    const cleanUrl = src.replace(/^https?:\/\//, '');
-    const encodedUrl = encodeURIComponent(src);
+    let finalSrc = src;
+    // Extract real image from search.pstatic.net if present to avoid nested HTTP issues
+    if (src.includes('search.pstatic.net/common')) {
+      const match = src.match(/src=([^&]+)/);
+      if (match) {
+        finalSrc = decodeURIComponent(match[1]).replace('http://', 'https://');
+      }
+    }
+
+    const isNaver = finalSrc.includes('naver.net') || finalSrc.includes('pstatic.net');
+    const cleanUrl = finalSrc.replace(/^https?:\/\//, '');
 
     if (count === 0) {
-      return isNaver ? src : `https://wsrv.nl/?url=${encodeURIComponent(cleanUrl)}&w=800`;
+      return isNaver ? finalSrc : `https://wsrv.nl/?url=${encodeURIComponent(cleanUrl)}&w=800`;
     }
     
     switch (count) {
       case 1: return `https://wsrv.nl/?url=${encodeURIComponent(cleanUrl)}&w=800`;
       case 2: return `https://images.weserv.nl/?url=${encodeURIComponent(cleanUrl)}&w=800`;
       case 3: return `https://i0.wp.com/${cleanUrl.split('?')[0]}`; // Simple photon fallback (no query params)
-      default: return src;
+      default: return finalSrc;
     }
   };
 
