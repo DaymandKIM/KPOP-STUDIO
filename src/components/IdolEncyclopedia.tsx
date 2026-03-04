@@ -28,17 +28,18 @@ const SafeImage: React.FC<{ src: string; alt: string; className?: string; accent
       }
     }
 
-    const isNaver = finalSrc.includes('naver.net') || finalSrc.includes('pstatic.net');
     const cleanUrl = finalSrc.replace(/^https?:\/\//, '');
 
-    if (count === 0) {
-      return isNaver ? finalSrc : `https://wsrv.nl/?url=${encodeURIComponent(cleanUrl)}&w=800`;
-    }
-    
+    // Strategy sequence:
+    // 0: Always try the extracted/direct URL first (Most SEO friendly and direct)
+    // 1: Try Primary Proxy (wsrv.nl) - handles many CORS/Hotlink issues
+    // 2: Try Secondary Proxy (weserv.nl)
+    // 3: Try Tertiary Proxy (wordpress photon)
     switch (count) {
+      case 0: return finalSrc;
       case 1: return `https://wsrv.nl/?url=${encodeURIComponent(cleanUrl)}&w=800`;
       case 2: return `https://images.weserv.nl/?url=${encodeURIComponent(cleanUrl)}&w=800`;
-      case 3: return `https://i0.wp.com/${cleanUrl.split('?')[0]}`; // Simple photon fallback (no query params)
+      case 3: return `https://i0.wp.com/${cleanUrl.split('?')[0]}`;
       default: return finalSrc;
     }
   };

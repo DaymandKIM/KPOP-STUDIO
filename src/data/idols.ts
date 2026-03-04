@@ -43,7 +43,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2016.08.08",
     fandom: { ko: "블링크 (BLINK)", en: "BLINK" },
     accentColor: "#ff66c4",
-    imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5092%2F2023%2F12%2F06%2F0000213034_001_20231206103005886.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Blackpink_Coachella_2023_04.jpg/1200px-Blackpink_Coachella_2023_04.jpg",
     wiki: {
       ko: "블랙핑크(BLACKPINK)는 YG 소속의 4인조 다국적 걸그룹이다. 세계에서 가장 많은 유튜브 구독자를 보유한 아티스트로 전 세계적인 파급력을 자랑한다.",
       en: "BLACKPINK is a 4-member multinational girl group under YG. They are artists with the most YouTube subscribers globally, boasting worldwide influence."
@@ -81,7 +81,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "162cm",
         bloodType: "A",
         description: { ko: "한국적인 아름다움을 지닌 정석 미녀. 특유의 허스키한 중저음 보이스가 매력입니다.", en: "A standard beauty with Korean elegance. Her unique husky deep voice is charming." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5441%2F2023%2F03%2F31%2F0000084534_001_20230331084203598.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Kim_Ji-soo_at_the_Dior_Fall-Winter_2024-2025_show_03.jpg/800px-Kim_Ji-soo_at_the_Dior_Fall-Winter_2024-2025_show_03.jpg"
       },
       {
         id: "jennie",
@@ -93,7 +93,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "163cm",
         bloodType: "B",
         description: { ko: "'인간 샤넬'로 불리는 트렌드 아이콘. 카리스마 있는 랩과 보컬을 겸비했습니다.", en: "A trend icon called 'Human Chanel'. Possesses both charismatic rap and vocals." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5338%2F2023%2F05%2F10%2F0000213194_001_20230510100405234.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/230522_Jennie_at_the_76th_Cannes_Film_Festival_03.jpg/800px-230522_Jennie_at_the_76th_Cannes_Film_Festival_03.jpg"
       },
       {
         id: "rose",
@@ -105,7 +105,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "168cm",
         bloodType: "B",
         description: { ko: "독보적인 황금 음색의 소유자. 슬렌더 피지컬에서 나오는 춤선이 아름답습니다.", en: "Possesses an unmatched golden voice. Her dance lines from a slender physique are beautiful." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5467%2F2024%2F02%2F11%2F0000109034_001_20240211102504885.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Ros%C3%A9_at_the_Rimowa_Event_on_April_15%2C_2024_02.jpg/800px-Ros%C3%A9_at_the_Rimowa_Event_on_April_15%2C_2024_02.jpg"
       },
       {
         id: "lisa",
@@ -117,7 +117,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "166.5cm",
         bloodType: "O",
         description: { ko: "무대를 찢어놓는 천재적인 댄스 실력과 완벽한 비율을 가진 태국인 멤버.", en: "Thai member with genius dance skills that tear up the stage and perfect proportions." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5113%2F2023%2F07%2F12%2F0000215394_001_20230712102005456.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Lisa_at_the_Bulgari_Studio_Event_on_March_14%2C_2024_02.jpg/800px-Lisa_at_the_Bulgari_Studio_Event_on_March_14%2C_2024_02.jpg"
       }
     ]
   },
@@ -129,7 +129,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2013.06.13",
     fandom: { ko: "아미 (ARMY)", en: "ARMY" },
     accentColor: "#b200ff",
-    imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5092%2F2023%2F06%2F13%2F0000213034_001_20230613103005886.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/BTS_at_the_White_House_220531.jpg/1200px-BTS_at_the_White_House_220531.jpg",
     wiki: {
       ko: "방탄소년단(BTS)은 빅히트 뮤직 소속 7인조 보이그룹이다. 빌보드 핫 100 1위를 수차례 차지하며 K-POP을 넘어 21세기 팝 아이콘으로 자리매김했다.",
       en: "BTS is a 7-member boy group under BIGHIT MUSIC. By topping the Billboard Hot 100 multiple times, they established themselves as 21st-century pop icons beyond K-POP."
@@ -167,7 +167,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "181cm",
         bloodType: "A",
         description: { ko: "팀의 든든한 리더이자 뛰어난 작사/작곡 능력을 갖춘 지성파 래퍼.", en: "The solid leader of the team and an intellectual rapper with excellent songwriting skills." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5441%2F2023%2F11%2F20%2F0000084534_001_20231120084203598.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/RM_at_the_2022_The_Fact_Music_Awards_03.jpg/800px-RM_at_the_2022_The_Fact_Music_Awards_03.jpg"
       },
       {
         id: "jin",
@@ -179,7 +179,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "179cm",
         bloodType: "O",
         description: { ko: "스스로를 '월드와이드 핸섬'이라 부르는 팀의 맏형. 맑고 서정적인 음색이 매력적입니다.", en: "The oldest brother who calls himself 'Worldwide Handsome'. His clear and lyrical voice is charming." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5338%2F2024%2F06%2F12%2F0000213194_001_20240612100405234.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Jin_at_the_2022_The_Fact_Music_Awards_02.jpg/800px-Jin_at_the_2022_The_Fact_Music_Awards_02.jpg"
       },
       {
         id: "suga",
@@ -191,7 +191,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "174cm",
         bloodType: "O",
         description: { ko: "팀의 뼈대를 만드는 천재 프로듀서. 날카롭고 묵직한 래핑을 보여줍니다.", en: "The genius producer forming the team's backbone. Shows sharp and heavy rapping." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5467%2F2023%2F05%2F11%2F0000109034_001_20230511102504885.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Suga_at_the_2022_The_Fact_Music_Awards_03.jpg/800px-Suga_at_the_2022_The_Fact_Music_Awards_03.jpg"
       },
       {
         id: "jhope",
@@ -203,7 +203,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "177cm",
         bloodType: "A",
         description: { ko: "팀의 안무 반장이자 비타민 같은 존재. 특유의 밝은 에너지와 뛰어난 리듬감을 가졌습니다.", en: "The team's dance captain and vitamin-like presence. Has unique bright energy and rhythm." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5113%2F2023%2F02%2F18%2F0000215394_001_20230218102005456.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/J-Hope_at_the_2022_The_Fact_Music_Awards_03.jpg/800px-J-Hope_at_the_2022_The_Fact_Music_Awards_03.jpg"
       },
       {
         id: "jimin",
@@ -215,7 +215,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "174cm",
         bloodType: "A",
         description: { ko: "현대무용 전공자 다운 우아한 춤선과 도입부 장인으로 불리는 독보적 음색.", en: "Elegant dance lines from modern dance background and a unique voice known as the intro master." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5441%2F2023%2F03%2F24%2F0000084534_001_20230324084203598.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jimin_at_the_2022_The_Fact_Music_Awards_02.jpg/800px-Jimin_at_the_2022_The_Fact_Music_Awards_02.jpg"
       },
       {
         id: "v",
@@ -227,7 +227,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "179cm",
         bloodType: "AB",
         description: { ko: "세계 1위 미남으로 자주 꼽히는 조각 비주얼. 소울풀한 저음이 매력적입니다.", en: "Sculpted visuals often ranked #1 most handsome. His soulful deep voice is attractive." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5338%2F2023%2F09%2F08%2F0000213194_001_20230908100405234.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/V_for_Celine_at_the_Hotel_du_Cap-Eden-Roc_03.jpg/800px-V_for_Celine_at_the_Hotel_du_Cap-Eden-Roc_03.jpg"
       },
       {
         id: "jungkook",
@@ -239,7 +239,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "179cm",
         bloodType: "A",
         description: { ko: "못하는 게 없는 황금 막내. 탄탄한 보컬 라이브 실력과 퍼포먼스로 팀의 센터를 맡고 있습니다.", en: "The Golden Maknae who can do everything. Centers the team with solid live vocals and performance." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5467%2F2023%2F11%2F03%2F0000109034_001_20231103102504885.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Jungkook_at_the_2023_Global_Citizen_Festival_04.jpg/800px-Jungkook_at_the_2023_Global_Citizen_Festival_04.jpg"
       }
     ]
   },
@@ -349,7 +349,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2015.10.20",
     fandom: { ko: "원스 (ONCE)", en: "ONCE" },
     accentColor: "#ff5fa2",
-    imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5092%2F2023%2F03%2F10%2F0000213034_001_20230310103005886.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Twice_at_the_Billboard_Women_in_Music_on_March_1%2C_2023.jpg/1200px-Twice_at_the_Billboard_Women_in_Music_on_March_1%2C_2023.jpg",
     wiki: {
       ko: "트와이스(TWICE)는 JYP 소속 9인조 다국적 걸그룹이다. '눈으로 한 번, 귀로 한 번 감동을 준다'는 뜻을 가졌다.",
       en: "TWICE is a 9-member multinational girl group under JYP. Meaning they touch people 'once through the eyes, once through the ears'."
@@ -387,7 +387,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "163cm",
         bloodType: "A",
         description: { ko: "팀의 맏언니이자 확신의 센터. 과즙미 넘치는 매력과 탄탄한 보컬 실력을 자랑합니다.", en: "The oldest and undisputed center. Boasts juicy charm and solid vocal skills." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5441%2F2023%2F11%2F20%2F0000084534_001_20231120084203598.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Im_Na-yeon_at_Music_Bank_on_July_1%2C_2022_03.jpg/800px-Im_Na-yeon_at_Music_Bank_on_July_1%2C_2022_03.jpg"
       },
       {
         id: "jeongyeon",
@@ -411,7 +411,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "163cm",
         bloodType: "A",
         description: { ko: "K-POP 씬을 대표하는 댄싱 머신인 일본인 멤버. 무대 밖에선 애교가 많습니다.", en: "Japanese member representing the K-POP dancing machine. Full of aegyo off stage." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5467%2F2023%2F05%2F11%2F0000109034_001_20230511102504885.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Momo_Hirai_at_the_Tasaki_70th_Anniversary_Exhibition_on_April_25%2C_2024_02.jpg/800px-Momo_Hirai_at_the_Tasaki_70th_Anniversary_Exhibition_on_April_25%2C_2024_02.jpg"
       },
       {
         id: "sana",
@@ -423,7 +423,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "164cm",
         bloodType: "B",
         description: { ko: "'샤샤샤' 열풍의 주역인 큐티 섹시 일본인 멤버. 밝고 사랑스러운 성격입니다.", en: "The cute & sexy Japanese member behind the 'Sha Sha Sha' craze. Bright and lovely personality." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5113%2F2023%2F02%2F18%2F0000215394_001_20230218102005456.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Sana_Minatozaki_at_the_Graff_Ginza_Main_Store_opening_event_on_November_10%2C_2023_02.jpg/800px-Sana_Minatozaki_at_the_Graff_Ginza_Main_Store_opening_event_on_November_10%2C_2023_02.jpg"
       },
       {
         id: "jihyo",
@@ -483,7 +483,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "170cm",
         bloodType: "A",
         description: { ko: "비주얼 에이스로 불리는 대만 출신 막내. 큰 키와 인형 같은 외모가 특징입니다.", en: "Youngest from Taiwan called the visual ace. Features tall height and doll-like looks." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5441%2F2024%2F01%2F15%2F0000084534_001_20240115084203598.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Chou_Tzu-yu_at_Music_Bank_on_September_6%2C_2024_03.jpg/800px-Chou_Tzu-yu_at_Music_Bank_on_September_6%2C_2024_03.jpg"
       }
     ]
   },
@@ -495,7 +495,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2022.07.22",
     fandom: { ko: "버니즈 (Bunnies)", en: "Bunnies" },
     accentColor: "#00ffff",
-    imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F421%2F2024%2F05%2F24%2F0007560424_001_20240524103505456.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/NewJeans_Blue_Dragon_Film_Awards_2023.jpg/1200px-NewJeans_Blue_Dragon_Film_Awards_2023.jpg",
     wiki: {
       ko: "뉴진스(NewJeans)는 청바지처럼 매일 찾게 되는 아이콘을 지향합니다. 정형화된 아이돌의 틀을 깨는 행보를 보여주고 있습니다.",
       en: "NewJeans aims to be an icon you seek everyday like jeans. They are breaking the mold of standardized idols."
@@ -533,7 +533,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "169cm",
         bloodType: "A",
         description: { ko: "고전적인 미인형으로 '국민 첫사랑' 이미지를 가졌으며 책임감이 강한 성격입니다.", en: "A classic beauty with a 'Nation's First Love' image and a strong sense of responsibility." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F001%2F2024%2F01%2F16%2FAKR20240116045200005_01_i_P4.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/NewJeans_Minji_230126.jpg/800px-NewJeans_Minji_230126.jpg"
       },
       {
         id: "hanni",
@@ -545,7 +545,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "161.7cm",
         bloodType: "O",
         description: { ko: "베트남계 호주인. 독보적인 음색과 리듬감을 가졌으며, 무대 위 카리스마가 대단합니다.", en: "Vietnamese-Australian. Has a unique voice and rhythm, showing immense charisma on stage." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F421%2F2024%2F05%2F21%2F0007552424_001_20240521101505456.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/NewJeans_Hanni_230126.jpg/800px-NewJeans_Hanni_230126.jpg"
       },
       {
         id: "danielle",
@@ -557,7 +557,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "165cm",
         bloodType: "AB",
         description: { ko: "햇살 같은 에너지를 가진 비타민 같은 멤버. 디즈니 공주 같은 비주얼로 유명합니다.", en: "A vitamin-like member with sunny energy. Famous for her Disney princess visuals." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F421%2F2024%2F05%2F24%2F0001729845_001_20240524104502456.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/NewJeans_Danielle_230126.jpg/800px-NewJeans_Danielle_230126.jpg"
       },
       {
         id: "haerin",
@@ -569,7 +569,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "164.5cm",
         bloodType: "B",
         description: { ko: "고양이 상의 대표 주자. 엉뚱하고 조용한 매력이 있으며 무대에서는 폭발적인 댄스 실력을 보여줍니다.", en: "The representative of cat-like features. Has a quirky, quiet charm but explosive dance skills." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F311%2F2024%2F05%2F24%2F0001729845_001_20240524104502456.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/NewJeans_Haerin_230126.jpg/800px-NewJeans_Haerin_230126.jpg"
       },
       {
         id: "hyein",
@@ -581,7 +581,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "170cm",
         bloodType: "O",
         description: { ko: "팀의 막내지만 모델 같은 피지컬을 자랑합니다. 시크한 마스크와 성숙한 목소리가 매력 포인트입니다.", en: "The youngest but boasts model-like proportions. Her chic mask and mature voice are charming." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F003%2F2024%2F01%2F16%2F0012321424_001_20240116101502456.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/NewJeans_Hyein_230126.jpg/800px-NewJeans_Hyein_230126.jpg"
       }
     ]
   },
@@ -593,7 +593,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2021.12.01",
     fandom: { ko: "다이브 (DIVE)", en: "DIVE" },
     accentColor: "#ff00ff",
-    imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F421%2F2024%2F04%2F29%2F0007511234_001_20240429102005456.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ive_Puma_Event_230126.jpg/1200px-Ive_Puma_Event_230126.jpg",
     wiki: {
       ko: "아이브(IVE)는 세련된 음악과 당당한 컨셉으로 모든 활동곡이 차트 1위를 차지했습니다.",
       en: "IVE topped charts with all title tracks through sophisticated music and confident concepts."
@@ -631,7 +631,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "173cm",
         bloodType: "A",
         description: { ko: "카리스마 리더와 예능감을 모두 갖춘 육각형 멤버.", en: "An all-rounder with charismatic leadership and variety show skills." },
-        imageUrl: "https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F161f5ead-162c-4b09-9d3f-b743832fcb1a.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/230510_An_Yu-jin.jpg/800px-230510_An_Yu-jin.jpg"
       },
       {
         id: "gaeul",
@@ -643,7 +643,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "164cm",
         bloodType: "B",
         description: { ko: "팀의 맏내. 차분한 분위기와 날카로운 랩 딜리버리가 특징입니다.", en: "The oldest but acts like the youngest. Features a calm vibe and sharp rap delivery." },
-        imageUrl: "https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Ffb48f5a5-c5ef-4573-b3c9-0ffc4a03494b.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/230126_Ive_Gaeul.jpg/800px-230126_Ive_Gaeul.jpg"
       },
       {
         id: "rei",
@@ -655,7 +655,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "169cm",
         bloodType: "A",
         description: { ko: "일본인 멤버지만 한국어를 능숙하게 구사합니다. 독특한 캐릭터와 힙한 랩 스타일을 보유했습니다.", en: "Japanese member fluent in Korean. Possesses a unique character and trendy rap style." },
-        imageUrl: "https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fc38e2197-0ec9-482a-89a3-5776d6ec03d7.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/230510_Ive_Rei.jpg/800px-230510_Ive_Rei.jpg"
       },
       {
         id: "jangwonyoung",
@@ -667,7 +667,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "173cm",
         bloodType: "O",
         description: { ko: "K-POP의 워너비 아이콘. 타고난 스타성과 프로페셔널한 마인드셋으로 항상 주목받습니다.", en: "The wannabe icon of K-POP. Always catches attention with innate star power." },
-        imageUrl: "https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fa6b5d0c7-01ee-48b0-811c-d784dfb9b4f2.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Jang_Won-young_at_Shinsegae_Duty_Free_event_on_December_21%2C_2023.jpg/800px-Jang_Won-young_at_Shinsegae_Duty_Free_event_on_December_21%2C_2023.jpg"
       },
       {
         id: "liz",
@@ -679,7 +679,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "170cm",
         bloodType: "AB",
         description: { ko: "독보적인 보컬 실력을 갖춘 메인 보컬급 멤버. 귀여운 보조개와 맑은 음색이 매력입니다.", en: "Main vocal-tier member with unmatched vocal skills. Cute dimples and clear voice are her charms." },
-        imageUrl: "https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F0ef2cda4-1b77-4402-a1f7-e7e6fbc62be9.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/230510_Ive_Liz.jpg/800px-230510_Ive_Liz.jpg"
       },
       {
         id: "leeseo",
@@ -691,7 +691,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "166cm",
         bloodType: "O",
         description: { ko: "팀의 활기찬 막내. 나이답지 않은 성숙한 표정 연기와 에너지를 무대에서 보여줍니다.", en: "The energetic youngest. Shows mature facial expressions and energy on stage." },
-        imageUrl: "https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F082522bb-652a-43cf-bf2f-0498bda7cc2b.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/230510_Ive_Leeseo.jpg/800px-230510_Ive_Leeseo.jpg"
       }
     ]
   },
@@ -703,7 +703,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2020.11.17",
     fandom: { ko: "마이 (MY)", en: "MY" },
     accentColor: "#9d00ff",
-    imageUrl: "https://images.unsplash.com/photo-1628191010210-a59de33e5941?w=800&q=80",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Aespa_at_the_76th_Cannes_Film_Festival_02.jpg/1200px-Aespa_at_the_76th_Cannes_Film_Festival_02.jpg",
     wiki: {
       ko: "에스파(aespa)는 'Avatar X Experience'를 의미하며 가상 세계의 아바타와 함께 활동합니다. 독보적인 세계관을 가졌습니다.",
       en: "aespa means 'Avatar X Experience', promoting alongside virtual avatars. They have a unique universe concept."
@@ -741,7 +741,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "168cm",
         bloodType: "B",
         description: { ko: "AI보다 더 AI 같은 압도적 비주얼 센터이자 다재다능한 리더.", en: "The overwhelming visual center and versatile leader, looking more like AI than actual AI." },
-        imageUrl: "https://images.unsplash.com/photo-1541534741688-6078c64b52d2?w=400&q=80"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/230524_aespa_Karina_at_the_76th_Cannes_Film_Festival_03.jpg/800px-230524_aespa_Karina_at_the_76th_Cannes_Film_Festival_03.jpg"
       },
       {
         id: "giselle",
@@ -765,7 +765,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "164cm",
         bloodType: "A",
         description: { ko: "청순한 외모에 숨겨진 파워풀한 고음과 날카로운 춤선.", en: "Powerful high notes and sharp dance lines hidden behind an innocent appearance." },
-        imageUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&q=80"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/230524_aespa_Winter_at_the_76th_Cannes_Film_Festival_02.jpg/800px-230524_aespa_Winter_at_the_76th_Cannes_Film_Festival_02.jpg"
       },
       {
         id: "ningning",
@@ -923,7 +923,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2022.05.02",
     fandom: { ko: "피어나 (FEARNOT)", en: "FEARNOT" },
     accentColor: "#ffffff",
-    imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F421%2F2024%2F02%2F19%2F0007359424_001_20240219101005456.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Le_Sserafim_Blue_Dragon_Film_Awards_2023.jpg/1200px-Le_Sserafim_Blue_Dragon_Film_Awards_2023.jpg",
     wiki: {
       ko: "르세라핌은 'IM FEARLESS'를 애너그램한 이름으로, 세상의 시선에 흔들리지 않고 두려움 없이 앞으로 나아가겠다는 뜻입니다.",
       en: "LE SSERAFIM is an anagram of 'IM FEARLESS', meaning they will move forward without fear of the world's gaze."
@@ -938,31 +938,31 @@ export const KPOP_GROUPS: KpopGroup[] = [
         id: "sakura", name: { ko: "사쿠라", en: "Sakura" }, role: { ko: "보컬", en: "Vocalist" },
         birth: "1998.03.19", mbti: "INTP", zodiac: { ko: "물고기자리", en: "Pisces" }, height: "163cm", bloodType: "A",
         description: { ko: "세 번의 데뷔를 성공시킨 대단한 경력의 멤버. 지적인 매력을 가졌습니다.", en: "A member with an incredible career of three debuts. Has intellectual charm." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F003%2F2024%2F02%2F19%2F0012380424_001_20240219101502456.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Sakura_Miyawaki_at_Incheon_Airport_on_May_20%2C_2024.jpg/800px-Sakura_Miyawaki_at_Incheon_Airport_on_May_20%2C_2024.jpg"
       },
       {
         id: "kimchaewon", name: { ko: "김채원", en: "Kim Chaewon" }, role: { ko: "리더/보컬", en: "Leader/Vocalist" },
         birth: "2000.08.01", mbti: "ISTP", zodiac: { ko: "사자자리", en: "Leo" }, height: "163cm", bloodType: "B",
         description: { ko: "칼 같은 춤선과 청량한 음색의 소유자. 카리스마 넘치는 리더입니다.", en: "Possesses sharp dance lines and a refreshing voice. Charismatic leader." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F421%2F2024%2F05%2F10%2F0007531234_001_20240510101005456.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/230510_Le_Sserafim_Kim_Chae-won.jpg/800px-230510_Le_Sserafim_Kim_Chae-won.jpg"
       },
       {
         id: "huhyunjin", name: { ko: "허윤진", en: "Huh Yunjin" }, role: { ko: "메인보컬", en: "Main Vocalist" },
         birth: "2001.10.08", mbti: "INFJ", zodiac: { ko: "천칭자리", en: "Libra" }, height: "172cm", bloodType: "B",
         description: { ko: "미국 출신으로 뛰어난 가창력과 자작곡 능력을 갖춘 핫걸.", en: "From the US, a hot girl with excellent vocal and songwriting skills." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F003%2F2024%2F02%2F19%2F0012380424_001_20240219101502456.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/230510_Le_Sserafim_Huh_Yun-jin.jpg/800px-230510_Le_Sserafim_Huh_Yun-jin.jpg"
       },
       {
         id: "kazuha", name: { ko: "카즈하", en: "Kazuha" }, role: { ko: "래퍼/댄서", en: "Rapper/Dancer" },
         birth: "2003.08.09", mbti: "ENFP", zodiac: { ko: "사자자리", en: "Leo" }, height: "170cm", bloodType: "Unknown",
         description: { ko: "발레 전공자 출신의 우아한 퍼포먼스. 청순한 외모와 달리 운동광입니다.", en: "Elegant performance from ballet background. A workout fanatic contrary to innocent looks." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F003%2F2024%2F05%2F10%2F0012539424_001_20240510101502456.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/230510_Le_Sserafim_Kazuha.jpg/800px-230510_Le_Sserafim_Kazuha.jpg"
       },
       {
         id: "hongeunchae", name: { ko: "홍은채", en: "Hong Eunchae" }, role: { ko: "보컬/댄서", en: "Vocalist/Dancer" },
         birth: "2006.11.10", mbti: "ISFP", zodiac: { ko: "전갈자리", en: "Scorpio" }, height: "170cm", bloodType: "Unknown",
         description: { ko: "팀의 사랑스러운 막내 '만채'. 밝은 에너지와 당당함을 가졌습니다.", en: "The lovely youngest. Has bright energy and confidence." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F421%2F2024%2F05%2F10%2F0007531234_001_20240510101005456.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/230510_Le_Sserafim_Hong_Eun-chae.jpg/800px-230510_Le_Sserafim_Hong_Eun-chae.jpg"
       }
     ]
   }
