@@ -136,17 +136,21 @@ const IdolEncyclopedia: React.FC = () => {
               />
             </div>
             <div className="flex-1 text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-2 flex-wrap">
-                <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-mono text-slate-400 uppercase tracking-widest">{selectedGroup.company}</span>
-                <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-mono text-slate-400 uppercase tracking-widest">Debut: {selectedGroup.debut}</span>
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-4 flex-wrap">
+                <span className="px-3 py-1.5 bg-gradient-to-r from-neon-blue/20 to-neon-blue/5 border border-neon-blue/30 text-neon-blue rounded-full text-[10px] font-mono uppercase tracking-widest flex items-center gap-1.5 font-bold shadow-[0_0_10px_rgba(0,255,255,0.1)]">
+                  <span className="text-white/60 font-normal">{currentLang === 'ko' ? '소속사:' : 'Company:'}</span> {selectedGroup.company}
+                </span>
+                <span className="px-3 py-1.5 bg-gradient-to-r from-neon-purple/20 to-neon-purple/5 border border-neon-purple/30 text-neon-purple rounded-full text-[10px] font-mono uppercase tracking-widest flex items-center gap-1.5 font-bold shadow-[0_0_10px_rgba(157,0,255,0.1)]">
+                  <span className="text-white/60 font-normal">{currentLang === 'ko' ? '데뷔일:' : 'Debut:'}</span> {selectedGroup.debut}
+                </span>
                 {selectedGroup.fandom && (
-                  <span className="px-3 py-1 bg-neon-pink/10 border border-neon-pink/30 text-neon-pink rounded-full text-[10px] font-mono uppercase tracking-widest flex items-center gap-1">
-                    <Heart className="w-3 h-3" />
-                    {selectedGroup.fandom[currentLang]}
+                  <span className="px-3 py-1.5 bg-gradient-to-r from-neon-pink/20 to-neon-pink/5 border border-neon-pink/30 text-neon-pink rounded-full text-[10px] font-mono uppercase tracking-widest flex items-center gap-1.5 font-bold shadow-[0_0_10px_rgba(255,0,255,0.1)]">
+                    <Heart className="w-3 h-3 fill-neon-pink/20" />
+                    <span className="text-white/60 font-normal">{currentLang === 'ko' ? '팬덤:' : 'Fandom:'}</span> {selectedGroup.fandom[currentLang]}
                   </span>
                 )}
                 {selectedGroup.officialSite && (
-                  <a href={selectedGroup.officialSite} target="_blank" rel="noopener noreferrer" className="px-3 py-1 bg-white/5 hover:bg-neon-blue/20 hover:text-neon-blue hover:border-neon-blue/50 transition-colors border border-white/10 rounded-full text-[10px] font-mono text-slate-300 uppercase tracking-widest flex items-center gap-1">
+                  <a href={selectedGroup.officialSite} target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 bg-white/5 hover:bg-white/10 hover:border-white/50 transition-all border border-white/20 text-white rounded-full text-[10px] font-mono uppercase tracking-widest flex items-center gap-1.5 font-bold">
                     <ExternalLink className="w-3 h-3" />
                     {currentLang === 'ko' ? '공식 홈페이지' : 'Official Site'}
                   </a>
