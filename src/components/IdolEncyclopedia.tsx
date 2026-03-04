@@ -58,13 +58,11 @@ const SafeImage: React.FC<{ src: string; alt: string; className?: string; accent
   if (error || !src) {
     return (
       <div 
-        className={`${className} flex flex-col items-center justify-center gap-4 relative overflow-hidden`}
+        className={`${className} flex flex-col items-center justify-center gap-4 relative overflow-hidden bg-slate-900`}
         style={{ 
-          background: `linear-gradient(135deg, #0f172a 0%, ${accentColor}22 50%, #020617 100%)`,
           border: `1px solid ${accentColor}44`
         }}
       >
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '24px 24px' }}></div>
         <div className="relative z-10 flex flex-col items-center gap-2">
           <Sparkles className="w-10 h-10 opacity-50" style={{ color: accentColor }} />
           <span className="text-xl font-black text-white italic tracking-tighter text-center px-6 leading-none uppercase drop-shadow-lg">
@@ -174,10 +172,9 @@ const IdolEncyclopedia: React.FC = () => {
             {selectedGroup.members.map((member) => (
               <div key={member.id} className="glass-card rounded-[32px] p-6 border-white/5 flex flex-col gap-6 hover:border-white/20 transition-all group relative overflow-hidden">
                 <div className="flex gap-6 items-start relative z-10">
-                  <div className="w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden flex-shrink-0 border-2 border-white/10 group-hover:neon-shadow-blue transition-all">
-                    <SafeImage src={member.imageUrl} alt={member.name[currentLang]} className="w-full h-full object-cover" accentColor={selectedGroup.accentColor} />
-                  </div>
-                  <div className="flex-1">
+                                                  <div className="w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden flex-shrink-0 border-2 border-white/10 group-hover:neon-shadow-blue transition-all">
+                                                    <SafeImage src={member.imageUrl} alt={member.name[currentLang]} className="w-full h-full object-cover object-center" accentColor={selectedGroup.accentColor} />
+                                                  </div>                  <div className="flex-1">
                     <h4 className="text-2xl font-black text-white mb-1">{member.name[currentLang]}</h4>
                     <p className="text-neon-blue font-mono text-[10px] uppercase font-black mb-4 tracking-widest">{member.role[currentLang]}</p>
                     
@@ -223,7 +220,7 @@ const IdolEncyclopedia: React.FC = () => {
               <div className="w-10 h-10 rounded-xl bg-neon-blue/10 flex items-center justify-center border border-neon-blue/30">
                 <Star className="w-6 h-6 text-neon-blue" />
               </div>
-              <h3 className="text-2xl font-black text-white uppercase italic">Overview</h3>
+              <h3 className="text-2xl font-black text-white uppercase italic">{currentLang === 'ko' ? '개요' : 'Overview'}</h3>
             </div>
             <p className="text-slate-300 leading-relaxed text-lg whitespace-pre-wrap">{selectedGroup.wiki[currentLang]}</p>
           </section>
@@ -238,15 +235,15 @@ const IdolEncyclopedia: React.FC = () => {
                 <h3 className="text-2xl font-black text-white uppercase italic">{currentLang === 'ko' ? '최신 뉴스' : 'Latest News'}</h3>
               </div>
               <div className="space-y-6">
-                {selectedGroup.news.map((news, i) => (
-                  <div key={i} className="border-b border-white/5 pb-6 last:border-0 last:pb-0 hover:bg-white/[0.02] transition-colors p-4 -mx-4 rounded-2xl cursor-pointer group">
+                {[...selectedGroup.news].sort((a, b) => new Date(b.date.replace(/\./g, '-')).getTime() - new Date(a.date.replace(/\./g, '-')).getTime()).map((news, i) => (
+                  <div key={i} className="border-b border-white/5 pb-6 last:border-0 last:pb-0 hover:bg-white/[0.02] transition-colors p-4 -mx-4 rounded-2xl group">
                     <div className="text-[10px] font-mono text-neon-green font-bold uppercase mb-2">{news.date}</div>
-                    <a href={news.url} target="_blank" rel="noopener noreferrer" className="block">
+                    <div className="block">
                       <h4 className="text-lg font-bold text-white mb-3 group-hover:text-neon-green transition-colors leading-snug">
                         {news.title[currentLang]}
                       </h4>
                       <p className="text-slate-400 text-sm line-clamp-3">{news.summary[currentLang]}</p>
-                    </a>
+                    </div>
                   </div>
                 ))}
               </div>

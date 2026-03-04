@@ -82,34 +82,34 @@ export const KPOP_GROUPS: KpopGroup[] = [
     },
     news: [
       {
-        title: { ko: "뉴진스, 스포티파이 스트리밍 50억 회 돌파 최단기 기록", en: "NewJeans Sets Record for Fastest 5 Billion Streams on Spotify" },
-        date: "2026.03.15",
-        summary: { ko: "데뷔 후 최단기간 내에 글로벌 플랫폼 스포티파이 누적 스트리밍 50억 회를 돌파하며 막강한 음원 파워를 증명했습니다.", en: "Proved immense streaming power by surpassing 5 billion cumulative streams on Spotify in the shortest time since debut." },
-        url: "https://news.google.com/search?q=%EB%89%B4%EC%A7%84%EC%8A%A4%20%EC%8A%A4%ED%8F%AC%ED%8B%B0%ED%8C%8C%EC%9D%B4"
+        title: { ko: "뉴진스, 소속사 어도어와 전속계약 분쟁... 다니엘 탈퇴 및 계약 해지", en: "NewJeans in Legal Dispute with ADOR... Danielle Leaves and Contract Terminated" },
+        date: "2026.03.04",
+        summary: { ko: "뉴진스와 하이브(어도어) 간의 법적 분쟁이 격화되는 가운데, 다니엘의 전속계약이 해지되며 팀을 탈퇴하게 되었습니다.", en: "Amid escalating legal disputes between NewJeans and HYBE (ADOR), Danielle's exclusive contract has been terminated and she left the team." },
+        url: "https://news.google.com/search?q=%EB%89%B4%EC%A7%84%EC%8A%A4+%EB%8B%A4%EB%8B%88%EC%97%98+%ED%83%88%ED%87%B4"
       },
       {
-        title: { ko: "도쿄돔 팬미팅 전석 매진, 9만 버니즈 열광", en: "Tokyo Dome Fanmeeting Sold Out, 90,000 Bunnies Go Wild" },
-        date: "2026.03.22",
-        summary: { ko: "해외 아티스트 사상 데뷔 최단기간 도쿄돔 입성 기록을 세운 데 이어, 시야제한석까지 초고속 매진을 기록했습니다.", en: "Following their record for the fastest Tokyo Dome entry by a foreign artist, even restricted view seats sold out instantly." },
-        url: "https://news.google.com/search?q=%EB%89%B4%EC%A7%84%EC%8A%A4%20%EB%8F%84%EC%BF%84%EB%8F%94"
+        title: { ko: "해린·혜인·하니, 어도어로 복귀 확정... 민지 거취 논의 중", en: "Haerin, Hyein, Hanni Confirmed to Return to ADOR... Minji's Status Under Discussion" },
+        date: "2026.03.03",
+        summary: { ko: "다니엘의 계약 해지와는 별개로 해린, 혜인, 하니는 소속사 어도어로 복귀하기로 결정했으며 민지는 논의가 진행 중입니다.", en: "Separate from Danielle's contract termination, Haerin, Hyein, and Hanni decided to return to ADOR, while Minji's status is still under discussion." },
+        url: "https://news.google.com/search?q=%EB%89%B4%EC%A7%84%EC%8A%A4+%EC%96%B4%EB%8F%84%EC%96%B4+%EB%B3%B5%EA%B7%80"
       },
       {
-        title: { ko: "뉴진스 'Ditto', 멜론 주간 차트 역대 최장 1위 신기록", en: "NewJeans 'Ditto' Sets New Record for Longest #1 on Melon Weekly Chart" },
-        date: "2026.02.10",
-        summary: { ko: "겨울 감성의 메가 히트곡 'Ditto'가 14주 연속 1위를 차지하며 한국 음원 차트 역사를 새로 썼습니다.", en: "The winter mega-hit 'Ditto' rewrote Korean music chart history by claiming #1 for 14 consecutive weeks." },
-        url: "https://news.google.com/search?q=%EB%89%B4%EC%A7%84%EC%8A%A4%20%EB%94%94%ED%86%A0%20%EA%B8%B0%EB%A1%9D"
+        title: { ko: "다니엘, 라이브 스트리밍서 심경 고백 '뉴진스는 항상 제 마음속에'", en: "Danielle Confesses Feelings in Live Stream 'NewJeans Will Always Be in My Heart'" },
+        date: "2026.03.02",
+        summary: { ko: "다니엘은 라이브 방송을 통해 팬들과 소통하며 팀과 멤버들을 지키기 위해 노력했음을 밝히고 눈물을 보였습니다.", en: "Danielle communicated with fans through a live broadcast, shedding tears and revealing her efforts to protect the team and members." },
+        url: "https://news.google.com/search?q=%EB%89%B4%EC%A7%84%EC%8A%A4+%EB%8B%A4%EB%8B%88%EC%97%98+%EB%9D%BC%EC%9D%B4%EB%B8%8C"
       },
       {
-        title: { ko: "영국 음악 매거진 NME 커버 장식 '글로벌 팝 센세이션'", en: "Graces Cover of UK Music Magazine NME as 'Global Pop Sensation'" },
-        date: "2026.02.05",
-        summary: { ko: "권위 있는 영국 음악 매거진 NME가 뉴진스를 '2020년대 팝의 미래를 제시하는 그룹'으로 집중 조명했습니다.", en: "Prestigious UK music magazine NME highlighted NewJeans as 'the group presenting the future of pop in the 2020s'." },
-        url: "https://news.google.com/search?q=%EB%89%B4%EC%A7%84%EC%8A%A4%20NME"
+        title: { ko: "어도어, 다니엘 및 민희진 전 대표 상대로 431억 원대 손해배상 소송", en: "ADOR Files 43.1 Billion KRW Lawsuit Against Danielle and Former CEO Min Hee-jin" },
+        date: "2026.03.01",
+        summary: { ko: "어도어는 계약 위반 및 명예 훼손 등을 이유로 다니엘과 민희진 전 대표 측에 대규모 위약벌 및 손해배상을 청구했습니다.", en: "ADOR claimed massive penalties and damages against Danielle and former CEO Min Hee-jin, citing breach of contract and defamation." },
+        url: "https://news.google.com/search?q=%EC%96%B4%EB%8F%84%EC%96%B4+%EB%8B%A4%EB%8B%88%EC%97%98+%EC%86%8C%EC%86%A1"
       },
       {
-        title: { ko: "뉴진스, 한국관광 명예홍보대사 위촉", en: "NewJeans Appointed Honorary Ambassadors for Korea Tourism" },
-        date: "2026.02.20",
-        summary: { ko: "전 세계적인 인지도를 바탕으로 20~30대 글로벌 관광객을 한국으로 이끄는 새로운 얼굴로 발탁되었습니다.", en: "Appointed as the new faces to draw global tourists in their 20s and 30s to Korea based on their worldwide recognition." },
-        url: "https://news.google.com/search?q=%EB%89%B4%EC%A7%84%EC%8A%A4%20%EA%B4%80%EA%B4%91%ED%99%8D%EB%B3%B4%EB%8C%80%EC%82%AC"
+        title: { ko: "팬덤 '버니즈', 하이브 사옥 앞 완전체 보장 요구 트럭 시위 진행", en: "Fandom 'Bunnies' Hold Truck Protests at HYBE Building Demanding Full Group Guarantee" },
+        date: "2026.02.28",
+        summary: { ko: "팬들은 하이브 사옥으로 트럭을 보내 분쟁의 조속한 종식과 다섯 멤버 전원의 완전체 활동을 촉구하고 나섰습니다.", en: "Fans sent protest trucks to the HYBE building, urging a swift end to the dispute and guaranteeing the full group activities of all five members." },
+        url: "https://news.google.com/search?q=%EB%89%B4%EC%A7%84%EC%8A%A4+%ED%8A%B8%EB%9F%AD+%EC%8B%9C%EC%9C%84"
       }
     ],
     members: [
@@ -220,36 +220,42 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "They are known as an 'all-center' group due to their flawless visuals, and all members model for famous cosmetics brands."
       ]
     },
-    news: [
+        news: [
       {
-        title: { ko: "아이브, 서울 앙코르 콘서트 3분 만에 전석 매진", en: "IVE's Seoul Encore Concert Sold Out in 3 Minutes" },
-        date: "2026.02.12",
-        summary: { ko: "첫 번째 월드투어의 피날레를 장식하는 서울 앙코르 콘서트 티켓이 오픈 3분 만에 매진되며 티켓 파워를 과시했습니다.", en: "Tickets for the Seoul encore concert marking the finale of their first world tour sold out in 3 minutes, showing immense ticket power." },
-        url: "https://news.google.com/search?q=%EC%95%84%EC%9D%B4%EB%B8%8C%20%EC%BD%98%EC%84%9C%ED%8A%B8%20%EB%A7%A4%EC%A7%84"
+        "title": {
+          "ko": "아이브, 두 번째 정규 앨범 'REVIVE+' 발매 및 빌보드 조명",
+          "en": "IVE Releases 2nd Full Album 'REVIVE+' and Receives Billboard Spotlight"
+        },
+        "date": "2026.03.03",
+        "summary": {
+          "ko": "아이브의 새 앨범 'REVIVE+'가 발매되었으며, 미국 빌보드로부터 음악적 방향을 제시했다는 호평을 받았습니다.",
+          "en": "IVE's new album 'REVIVE+' was released and received critical acclaim from US Billboard for setting a new musical direction."
+        },
+        "url": "https://news.google.com/search?q=%EC%95%84%EC%9D%B4%EB%B8%8C+REVIVE"
       },
       {
-        title: { ko: "장원영, 이탈리아 밀라노 패션위크에서 빛난 국위선양 비주얼", en: "Jang Wonyoung Shines at Milan Fashion Week with Breathtaking Visuals" },
-        date: "2026.01.20",
-        summary: { ko: "글로벌 앰버서더로 밀라노 패션위크에 참석한 장원영이 전 세계 파파라치들의 스포트라이트를 독차지했습니다.", en: "Attending Milan Fashion Week as a global ambassador, Jang Wonyoung monopolized the spotlight from paparazzi worldwide." },
-        url: "https://news.google.com/search?q=%EC%9E%A5%EC%9B%90%EC%98%81%20%EB%B0%80%EB%9D%BC%EB%85%B8"
+        "title": {
+          "ko": "선공개곡 'BANG BANG' 퍼펙트 올킬(PAK) 달성",
+          "en": "Pre-release Track 'BANG BANG' Achieves Perfect All-Kill (PAK)"
+        },
+        "date": "2026.02.28",
+        "summary": {
+          "ko": "정규 2집의 더블 타이틀곡 중 하나인 'BANG BANG'이 국내 주요 음원 플랫폼을 석권하며 퍼펙트 올킬을 기록했습니다.",
+          "en": "One of the double title tracks, 'BANG BANG', swept major domestic music platforms, recording a Perfect All-Kill."
+        },
+        "url": "https://news.google.com/search?q=%EC%95%84%EC%9D%B4%EB%B8%8C+BANG+BANG"
       },
       {
-        title: { ko: "아이브 'I AM', 유튜브 조회수 3억 뷰 돌파", en: "IVE 'I AM' Surpasses 300 Million YouTube Views" },
-        date: "2026.02.05",
-        summary: { ko: "짜릿한 고음과 화려한 퍼포먼스가 돋보이는 'I AM' 뮤직비디오가 3억 뷰를 돌파하며 통산 세 번째 기록을 세웠습니다.", en: "The 'I AM' MV featuring thrilling high notes and performance surpassed 300M views, marking their third MV to reach the milestone." },
-        url: "https://news.google.com/search?q=%EC%95%84%EC%9D%B4%EB%B8%8C%20%EC%95%84%EC%9D%B4%EC%97%A0%203%EC%96%B5"
-      },
-      {
-        title: { ko: "안유진, 금융권 및 주류 광고 모델 연속 발탁 '대세 입증'", en: "An Yujin Proves Trendiness as New Model for Finance and Liquor Brands" },
-        date: "2026.03.18",
-        summary: { ko: "건강하고 신뢰감 있는 이미지로 금융권과 주류 업계의 러브콜을 연이어 받으며 대세 광고 퀸임을 입증했습니다.", en: "With a healthy and trustworthy image, she received consecutive calls from finance and liquor industries, proving her status as an advertising queen." },
-        url: "https://news.google.com/search?q=%EC%95%88%EC%9C%A0%EC%A7%84%20%EA%B4%91%EA%B3%A0"
-      },
-      {
-        title: { ko: "아이브, 제21회 한국대중음악상 3관왕 영예", en: "IVE Wins 3 Awards at 21st Korean Music Awards" },
-        date: "2026.03.28",
-        summary: { ko: "올해의 노래상, 최우수 K-POP 앨범상 등을 휩쓸며 대중성과 음악성을 동시에 인정받았습니다.", en: "Swept Song of the Year and Best K-POP Album, being recognized for both massive popularity and musicality." },
-        url: "https://news.google.com/search?q=%EC%95%84%EC%9D%B4%EB%B8%8C%20%ED%95%9C%EA%B5%AD%EB%8C%80%EC%A4%91%EC%9D%8C%EC%95%85%EC%83%81"
+        "title": {
+          "ko": "아이브, 'BLACKHOLE'로 본격적인 음악방송 활동 돌입",
+          "en": "IVE Kicks Off Music Show Promotions with 'BLACKHOLE'"
+        },
+        "date": "2026.03.05",
+        "summary": {
+          "ko": "아이브가 정규 2집의 또 다른 타이틀곡 'BLACKHOLE'로 음악방송 활동을 이어가며 글로벌 팬들과 만납니다.",
+          "en": "IVE continues their music show promotions with another title track 'BLACKHOLE', meeting global fans."
+        },
+        "url": "https://news.google.com/search?q=%EC%95%84%EC%9D%B4%EB%B8%8C+BLACKHOLE"
       }
     ],
     members: [
@@ -370,36 +376,42 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "All 4 members possess main-vocal tier live singing skills, constantly receiving praise during encore stages."
       ]
     },
-    news: [
+        news: [
       {
-        title: { ko: "에스파, 빌보드 200 차트 탑10 진입 '커리어 하이'", en: "aespa Enters Top 10 of Billboard 200 Chart, Reaching 'Career High'" },
-        date: "2026.03.02",
-        summary: { ko: "정규 1집 'Armageddon' 앨범이 미국 빌보드 메인 차트에 최상위권으로 진입하며 글로벌 파급력을 증명했습니다.", en: "Their 1st full album 'Armageddon' entered the very top tiers of the US Billboard main chart, proving their global impact." },
-        url: "https://news.google.com/search?q=%EC%97%90%EC%8A%A4%ED%8C%8C%20%EB%B9%8C%EB%B3%B4%EB%93%9C"
+        "title": {
+          "ko": "에스파, 앤더슨 팩 협업 싱글 '키체인(Keychain)' 발표",
+          "en": "aespa Releases Collab Single 'Keychain' with Anderson .Paak"
+        },
+        "date": "2026.02.27",
+        "summary": {
+          "ko": "영화 '케이팝스!'의 OST로 한국계 미국인 팝스타 앤더슨 팩과 콜라보한 신곡을 공개했습니다.",
+          "en": "Released a new song collaborating with Korean-American pop star Anderson .Paak for the movie 'K-POPS!' OST."
+        },
+        "url": "https://news.google.com/search?q=%EC%97%90%EC%8A%A4%ED%8C%8C+%ED%82%A4%EC%B2%B4%EC%9D%B8"
       },
       {
-        title: { ko: "'Supernova' 식지 않는 인기, 스포티파이 4억 스트리밍", en: "'Supernova' Remains Hot, Reaches 400M Spotify Streams" },
-        date: "2026.03.14",
-        summary: { ko: "발매 된 지 수개월이 지났음에도 불구하고 밈과 챌린지를 양산하며 글로벌 스트리밍 차트에서 식지 않는 인기를 보여줍니다.", en: "Despite being released months ago, it continues to spawn memes and challenges, showing uncooled popularity on global streaming charts." },
-        url: "https://news.google.com/search?q=%EC%97%90%EC%8A%A4%ED%8C%8C%20%EC%8A%88%ED%8D%BC%EB%85%B8%EB%B0%94"
+        "title": {
+          "ko": "카리나, 밀라노 프라다 패션쇼에서 압도적 스포트라이트",
+          "en": "Karina Receives Overwhelming Spotlight at Prada Fashion Show in Milan"
+        },
+        "date": "2026.02.26",
+        "summary": {
+          "ko": "카리나가 브랜드 앰배서더 자격으로 밀라노 프라다 패션쇼에 참석해 글로벌 프레스의 이목을 집중시켰습니다.",
+          "en": "Attended the Prada fashion show in Milan as a brand ambassador, capturing the attention of the global press."
+        },
+        "url": "https://news.google.com/search?q=%EC%97%90%EC%8A%A4%ED%8C%8C+%EC%B9%B4%EB%A6%AC%EB%82%98+%ED%94%84%EB%9D%BC%EB%8B%A4"
       },
       {
-        title: { ko: "에스파, 두 번째 월드투어 'SYNK : PARALLEL LINE' 도쿄돔 매진", en: "aespa's 2nd World Tour 'SYNK : PARALLEL LINE' Sells Out Tokyo Dome" },
-        date: "2026.01.30",
-        summary: { ko: "해외 걸그룹 최단기간 도쿄돔 입성 기록을 보유한 에스파가 두 번째 투어에서도 이틀 연속 매진 신화를 썼습니다.", en: "aespa, who holds the record for the fastest Tokyo Dome entry by a foreign girl group, sold out two consecutive days again for their second tour." },
-        url: "https://news.google.com/search?q=%EC%97%90%EC%8A%A4%ED%8C%8C%20%EB%8F%84%EC%BF%84%EB%8F%94"
-      },
-      {
-        title: { ko: "윈터, 럭셔리 브랜드 구찌(Gucci) 글로벌 앰버서더 발탁", en: "Winter Selected as Global Ambassador for Luxury Brand Gucci" },
-        date: "2026.02.12",
-        summary: { ko: "세련되고 고혹적인 분위기를 인정받아 이탈리아 명품 브랜드 구찌의 새로운 글로벌 얼굴로 선정되었습니다.", en: "Recognized for her sophisticated and alluring vibe, she was chosen as the new global face for the Italian luxury brand Gucci." },
-        url: "https://news.google.com/search?q=%EC%9C%88%ED%84%B0%20%EC%95%B0%EB%B2%84%EC%84%9C%EB%8D%94"
-      },
-      {
-        title: { ko: "에스파, 제22회 한국대중음악상 4관왕 '올해의 음악인' 선정", en: "aespa Wins 4 Awards at KMA, Crowned 'Musician of the Year'" },
-        date: "2026.03.25",
-        summary: { ko: "'쇠 맛' 신드롬을 이끌며 대중과 평단을 모두 만족시킨 성과로 최고의 영예인 올해의 음악인상을 수상했습니다.", en: "Leading the 'iron taste' syndrome and satisfying both the public and critics, they took home the highest honor: Musician of the Year." },
-        url: "https://news.google.com/search?q=%EC%97%90%EC%8A%A4%ED%8C%8C%20%EB%8C%80%EC%83%81"
+        "title": {
+          "ko": "세 번째 월드 투어 'SYNK : aeXIS LINE' 순항 중",
+          "en": "3rd World Tour 'SYNK : aeXIS LINE' Cruising Smoothly"
+        },
+        "date": "2026.03.01",
+        "summary": {
+          "ko": "에스파가 세 번째 월드 투어를 통해 전 세계 팬들을 만나며 글로벌 인기를 다시 한번 입증하고 있습니다.",
+          "en": "aespa is proving their global popularity once again by meeting fans worldwide through their 3rd world tour."
+        },
+        "url": "https://news.google.com/search?q=%EC%97%90%EC%8A%A4%ED%8C%8C+%EC%9B%94%EB%93%9C%ED%88%AC%EC%96%B4"
       }
     ],
     members: [
@@ -498,34 +510,28 @@ export const KPOP_GROUPS: KpopGroup[] = [
     },
     news: [
       {
-        title: { ko: "스트레이 키즈, 빌보드 200 5연속 1위 대기록 달성", en: "Stray Kids Achieves Massive Record: 5 Consecutive #1s on Billboard 200" },
-        date: "2026.03.20",
-        summary: { ko: "새 미니 앨범 발매와 동시에 미국 빌보드 메인 앨범 차트 정상에 오르며 K-POP 보이그룹의 새 역사를 쓰고 있습니다.", en: "Topped the US Billboard main album chart simultaneously with their new mini-album release, writing new history for K-pop boy groups." },
-        url: "https://news.google.com/search?q=%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%ED%82%A4%EC%A6%88%20%EB%B9%8C%EB%B3%B4%EB%93%9C"
+        title: { ko: "스트레이 키즈, IFPI '글로벌 아티스트 차트' 2위 쾌거", en: "Stray Kids Ranks #2 on IFPI 'Global Artist Chart'" },
+        date: "2026.02.27",
+        summary: { ko: "테일러 스위프트에 이어 국제음반산업협회 글로벌 아티스트 차트 2위에 오르며 4년 연속 진입이자 최고 순위를 기록했습니다.", en: "Ranked #2 on the IFPI Global Artist Chart behind Taylor Swift, marking their highest rank and 4th consecutive year." },
+        url: "https://news.google.com/search?q=%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%ED%82%A4%EC%A6%88+IFPI"
       },
       {
-        title: { ko: "현진, 베르사체 글로벌 앰버서더 발탁 '독보적 관능미'", en: "Hyunjin Appointed Versace Global Ambassador, 'Unrivaled Sensuality'" },
-        date: "2026.01.05",
-        summary: { ko: "매혹적인 비주얼과 퍼포먼스를 인정받아 이탈리아 럭셔리 하우스 베르사체의 글로벌 얼굴로 선정되었습니다.", en: "Recognized for his captivating visuals and performance, he was chosen as the global face of Italian luxury house Versace." },
-        url: "https://news.google.com/search?q=%ED%98%84%EC%A7%84%20%EB%B2%A0%EB%A5%B4%EC%82%AC%EC%B2%B4"
+        title: { ko: "현진, 파리 디올 컬렉션 쇼 참석... 눈부신 비주얼", en: "Hyunjin Attends Dior Collection Show in Paris... Dazzling Visuals" },
+        date: "2026.03.02",
+        summary: { ko: "현진이 파리에서 열린 디올 가을-겨울 컬렉션 쇼에 참석해 현지 팬들과 취재진의 뜨거운 환호를 받았습니다.", en: "Hyunjin attended the Dior Fall-Winter Collection show in Paris, receiving passionate cheers from local fans and press." },
+        url: "https://news.google.com/search?q=%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%ED%82%A4%EC%A6%88+%ED%98%84%EC%A7%84+%EB%94%94%EC%98%AC"
       },
       {
-        title: { ko: "스트레이 키즈, 美 '롤라팔루자' 헤드라이너 무대 초토화", en: "Stray Kids Devastates Stage as Headliners at US 'Lollapalooza'" },
+        title: { ko: "데뷔 8주년 기념 팬미팅 '스테이 인 아워 리틀 하우스' 개최", en: "To Hold 8th Anniversary Fanmeeting 'STAY in Our Little House'" },
+        date: "2026.03.03",
+        summary: { ko: "데뷔 8주년을 맞아 팬들과 특별한 시간을 보내기 위해 대규모 팬미팅을 개최할 예정입니다.", en: "A large-scale fan meeting will be held to spend special time with fans in celebration of their 8th debut anniversary." },
+        url: "https://news.google.com/search?q=%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%ED%82%A4%EC%A6%88+%ED%8C%AC%EB%AF%B8%ED%8C%85"
+      },
+      {
+        title: { ko: "월드투어 실황 영화, 글로벌 박스오피스 정상 '279억 수익'", en: "World Tour Movie Tops Global Box Office with '27.9 Billion KRW Revenue'" },
         date: "2026.03.01",
-        summary: { ko: "미국 시카고에서 열린 대형 음악 페스티벌의 간판 출연자로 나서 라이브 밴드와 함께 폭발적인 무대를 선보였습니다.", en: "Appeared as marquee performers at the major US music festival in Chicago, delivering explosive stages with a live band." },
-        url: "https://news.google.com/search?q=%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%ED%82%A4%EC%A6%88%20%EB%A1%A4%EB%9D%BC%ED%8C%94%EB%A3%A8%EC%9E%90"
-      },
-      {
-        title: { ko: "자체 콘텐츠 'SKZ CODE' 누적 조회수 5억 뷰 돌파", en: "Original Content 'SKZ CODE' Surpasses 500M Cumulative Views" },
-        date: "2026.01.12",
-        summary: { ko: "무대 위 카리스마와 대비되는 멤버들의 비글미 넘치는 일상과 예능감이 담긴 콘텐츠로 전 세계 팬들을 끌어모으고 있습니다.", en: "Attracting global fans with content showing their beagle-like daily lives and variety skills, contrasting their on-stage charisma." },
-        url: "https://news.google.com/search?q=%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%ED%82%A4%EC%A6%88%20%EC%9C%A0%ED%8A%9C%EB%B8%8C"
-      },
-      {
-        title: { ko: "스포티파이 연말 결산 '가장 많이 스트리밍된 K팝 보이그룹' 2위", en: "Spotify Year-End: 2nd 'Most Streamed K-pop Boy Group'" },
-        date: "2026.01.01",
-        summary: { ko: "방탄소년단에 이어 스포티파이 스트리밍 순위 최상단에 이름을 올리며 굳건한 글로벌 스트리밍 파워를 입증했습니다.", en: "Ranked at the very top of Spotify streaming charts right behind BTS, proving their solid global streaming power." },
-        url: "https://news.google.com/search?q=%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%ED%82%A4%EC%A6%88%20%EC%8A%A4%ED%8F%AC%ED%8B%B0%ED%8C%8C%EC%9D%B4"
+        summary: { ko: "투어 실황을 담은 영화가 전 세계 61개 지역에서 개봉해 엄청난 흥행 수익을 거두었습니다.", en: "The movie featuring their live tour opened in 61 regions worldwide, raking in massive box office revenue." },
+        url: "https://news.google.com/search?q=%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%ED%82%A4%EC%A6%88+%EC%98%81%ED%99%94"
       }
     ],
     members: [
@@ -670,36 +676,54 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "Youngest Hong Eunchae was active as a 'Music Bank' MC, called 'Bank President Eunchae' for her unique loveliness."
       ]
     },
-    news: [
+        news: [
       {
-        title: { ko: "르세라핌, 美 '코첼라' 뜨겁게 달군 파워풀 퍼포먼스", en: "LE SSERAFIM Heats Up US 'Coachella' with Powerful Performance" },
-        date: "2026.02.14",
-        summary: { ko: "세계 최대 음악 축제인 코첼라 무대에 올라 밴드 편곡에 맞춘 강렬한 퍼포먼스로 사막의 밤을 열광시켰습니다.", en: "Took the stage at the world's largest music festival Coachella, thrilling the desert night with intense performances to band arrangements." },
-        url: "https://news.google.com/search?q=%EB%A5%B4%EC%84%B8%EB%9D%BC%ED%95%8C%20%EC%BD%94%EC%B2%BC%EB%9D%BC"
+        "title": {
+          "ko": "'CRAZY' 뮤직비디오 유튜브 조회수 2억 뷰 돌파",
+          "en": "'CRAZY' MV Surpasses 200 Million Views on YouTube"
+        },
+        "date": "2026.02.28",
+        "summary": {
+          "ko": "미니 4집 타이틀곡 'CRAZY'가 통산 세 번째 2억 뷰를 달성하며 식지 않는 글로벌 인기를 증명했습니다.",
+          "en": "Their 4th mini-album title track 'CRAZY' achieved 200M views, their third MV to do so, proving uncooled global popularity."
+        },
+        "url": "https://news.google.com/search?q=%EB%A5%B4%EC%84%B8%EB%9D%BC%ED%95%8C+%ED%81%AC%EB%A0%88%EC%9D%B4%EC%A7%80+2%EC%96%B5"
       },
       {
-        title: { ko: "'CRAZY' 뮤직비디오, 공개 2주 만에 1억 뷰 돌파", en: "'CRAZY' MV Surpasses 100M Views in Just 2 Weeks" },
-        date: "2026.01.15",
-        summary: { ko: "중독성 강한 보깅 댄스와 힙한 비주얼이 담긴 새 뮤직비디오가 폭발적인 글로벌 조회수를 기록 중입니다.", en: "The new MV featuring addictive voguing dance and hip visuals is recording explosive global views." },
-        url: "https://news.google.com/search?q=%EB%A5%B4%EC%84%B8%EB%9D%BC%ED%95%8C%20%ED%81%AC%EB%A0%88%EC%9D%B4%EC%A7%80"
+        "title": {
+          "ko": "'SPAGHETTI (feat. j-hope)', 스포티파이 최단 2억 스트리밍",
+          "en": "'SPAGHETTI (feat. j-hope)' Reaches 200M Spotify Streams in Record Time"
+        },
+        "date": "2026.02.28",
+        "summary": {
+          "ko": "방탄소년단 제이홉이 피처링한 곡이 팀 자체 최단 기간인 약 4개월 만에 2억 스트리밍을 달성했습니다.",
+          "en": "The track featuring BTS's j-hope hit 200M streams in about 4 months, the group's fastest record."
+        },
+        "url": "https://news.google.com/search?q=%EB%A5%B4%EC%84%B8%EB%9D%BC%ED%95%8C+%EC%8A%A4%ED%8C%8C%EA%B2%8C%ED%8B%B0"
       },
       {
-        title: { ko: "일본 오리콘 차트 상반기 랭킹 '아티스트별 세일즈' 1위", en: "Ranks #1 in 'Sales by Artist' on Japan Oricon First Half Rankings" },
-        date: "2026.01.20",
-        summary: { ko: "K-POP 걸그룹 최정상급 일본 내 인기를 증명하며 앨범 및 굿즈 판매량에서 압도적인 성적을 거두었습니다.", en: "Proved top-tier K-pop girl group popularity in Japan, achieving overwhelming results in album and merch sales." },
-        url: "https://news.google.com/search?q=%EB%A5%B4%EC%84%B8%EB%9D%BC%ED%95%8C%20%EC%98%A4%EB%A6%AC%EC%BD%98"
+        "title": {
+          "ko": "'Perfect Night', 일본 누적 재생 수 2억 회 '더블 플래티넘' 인증",
+          "en": "'Perfect Night' Certified 'Double Platinum' with 200M Streams in Japan"
+        },
+        "date": "2026.02.25",
+        "summary": {
+          "ko": "첫 영어 싱글이 일본레코드협회 기준 2억 스트리밍을 돌파하며 뜨거운 현지 인기를 보여주었습니다.",
+          "en": "Their first English single surpassed 200M streams based on RIAJ, showing hot local popularity."
+        },
+        "url": "https://news.google.com/search?q=%EB%A5%B4%EC%84%B8%EB%9D%BC%ED%95%8C+%ED%8D%BC%ED%8E%99%ED%8A%B8%EB%82%98%EC%9D%B4%ED%8A%B8"
       },
       {
-        title: { ko: "하우스 앰버서더 루이비통과 함께한 글로벌 캠페인 화제", en: "Global Campaign with House Ambassador Louis Vuitton Becomes Hot Topic" },
-        date: "2026.01.11",
-        summary: { ko: "멤버 전원이 루이비통의 하우스 앰버서더로 발탁된 후 공개된 첫 공식 글로벌 캠페인이 패션계의 주목을 받았습니다.", en: "The first official global campaign released after all members were chosen as Louis Vuitton house ambassadors caught the fashion world's attention." },
-        url: "https://news.google.com/search?q=%EB%A5%B4%EC%84%B8%EB%9D%BC%ED%95%8C%20%EB%A3%A8%EC%9D%B4%EB%B9%84%ED%86%B5"
-      },
-      {
-        title: { ko: "르세라핌 자체 예능 '르니버스' 시즌3 런칭", en: "LE SSERAFIM's Original Variety 'Leniverse' Launches Season 3" },
-        date: "2026.02.25",
-        summary: { ko: "무대 위 카리스마와 정반대되는 멤버들의 리얼하고 코믹한 일상을 담은 자체 예능이 새 시즌으로 돌아왔습니다.", en: "The original variety show capturing the members' real and comical daily lives, complete opposite of their stage charisma, returned with a new season." },
-        url: "https://news.google.com/search?q=%EB%A5%B4%EC%84%B8%EB%9D%BC%ED%95%8C%20%EB%A5%B4%EB%8B%88%EB%B2%84%EC%8A%A4"
+        "title": {
+          "ko": "일본 음악 페스티벌 '서머 소닉 2026' 출연 확정",
+          "en": "Confirmed to Perform at Japan Music Festival 'Summer Sonic 2026'"
+        },
+        "date": "2026.03.01",
+        "summary": {
+          "ko": "오는 8월 일본에서 열리는 대형 음악 축제 '서머 소닉 2026' 무대에 올라 열기를 더할 예정입니다.",
+          "en": "They will heat up the stage at the major music festival 'Summer Sonic 2026' held in Japan this August."
+        },
+        "url": "https://news.google.com/search?q=%EB%A5%B4%EC%84%B8%EB%9D%BC%ED%95%8C+%EC%84%9C%EB%A8%B8%EC%86%8C%EB%8B%89"
       }
     ],
     members: [
@@ -778,36 +802,42 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "The gap charm is that when all 4 gather, their stage charisma vanishes and they turn into loud, cute girls."
       ]
     },
-    news: [
+        news: [
       {
-        title: { ko: "블랙핑크, 전 멤버 소속사 '따로 또 같이' 행보... 개인 레이블 설립", en: "BLACKPINK Members Pursue 'Together but Separate' Path... Establish Solo Labels" },
-        date: "2026.03.10",
-        summary: { ko: "그룹 활동은 YG와 계속 함께하되 개별 활동은 각자의 1인 기획사를 설립하여 더욱 자유롭고 독보적인 커리어를 예고했습니다.", en: "While group activities remain with YG, they signaled freer and unique careers by establishing one-person agencies for solo promotions." },
-        url: "https://news.google.com/search?q=%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC%20%EA%B0%9C%EC%9D%B8%ED%99%9C%EB%8F%99"
+        "title": {
+          "ko": "미니 3집 'DEADLINE' 발매 직후 165만 장 판매 'K팝 걸그룹 신기록'",
+          "en": "Mini 3rd Album 'DEADLINE' Sells 1.65M Copies 'New K-pop Girl Group Record'"
+        },
+        "date": "2026.03.03",
+        "summary": {
+          "ko": "새 미니 앨범 'DEADLINE'이 초동 기록을 경신하며 K팝 걸그룹 사상 가장 높은 판매량을 기록했습니다.",
+          "en": "The new mini-album 'DEADLINE' broke initial sales records, achieving the highest sales ever for a K-pop girl group."
+        },
+        "url": "https://news.google.com/search?q=%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC+DEADLINE"
       },
       {
-        title: { ko: "K팝 걸그룹 최초 '코첼라' 헤드라이너 역대급 무대 '외신 극찬'", en: "First K-pop Girl Group to Headline 'Coachella', Epic Stage Praised by Foreign Press" },
-        date: "2023.04.18",
-        summary: { ko: "미국 최대 음악 페스티벌 코첼라에서 메인 무대를 장식하며 한복 디테일과 부채춤을 접목한 무대로 전 세계를 매료시켰습니다.", en: "Gracing the main stage of the US's largest music festival, they captivated the world with stages incorporating Hanbok details and fan dances." },
-        url: "https://news.google.com/search?q=%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC%20%EC%BD%94%EC%B2%BC%EB%9D%BC"
+        "title": {
+          "ko": "로제, 브릿 어워즈 '올해의 인터내셔널 송' 수상 쾌거",
+          "en": "Rosé Wins 'International Song of the Year' at BRIT Awards"
+        },
+        "date": "2026.03.02",
+        "summary": {
+          "ko": "로제가 브루노 마스와 협업한 'APT.'로 K팝 아티스트 최초로 영국 최고 권위 음악상 브릿 어워즈를 수상했습니다.",
+          "en": "Rosé became the first K-pop artist to win at the prestigious BRIT Awards for her collab 'APT.' with Bruno Mars."
+        },
+        "url": "https://news.google.com/search?q=%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC+%EB%A1%9C%EC%A0%9C+%EB%B8%8C%EB%A6%BF+%EC%96%B4%EC%9B%8C%EC%A6%88"
       },
       {
-        title: { ko: "BORN PINK 월드투어, 걸그룹 사상 최고 수익 3,500억 원 달성", en: "BORN PINK World Tour Achieves Highest Revenue for Girl Group at 350 Billion KRW" },
-        date: "2026.02.20",
-        summary: { ko: "전 세계 34개 도시에서 180만 명의 관객을 동원하며 전 세계 걸그룹 투어 역사상 최고 수익을 올리는 대기록을 썼습니다.", en: "Mobilizing 1.8M audiences across 34 global cities, they set a massive record for the highest-grossing girl group tour in history." },
-        url: "https://news.google.com/search?q=%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC%20%ED%88%AC%EC%96%B4%20%EC%88%98%EC%9D%B5"
-      },
-      {
-        title: { ko: "영국 찰스 3세 국왕으로부터 대영제국 훈장(MBE) 수훈", en: "Received Honorary MBEs from UK's King Charles III" },
-        date: "2023.11.22",
-        summary: { ko: "제26차 유엔 기후변화협약 당사국 총회(COP26) 홍보대사로 활동한 공로를 인정받아 버킹엄 궁전에서 훈장을 수여받았습니다.", en: "Recognized for their work as COP26 advocates, they were awarded MBEs at Buckingham Palace." },
-        url: "https://news.google.com/search?q=%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC%20%ED%9B%88%EC%9E%A5"
-      },
-      {
-        title: { ko: "유튜브 구독자 9천만 명 최초 돌파, 전 세계 1위 굳건", en: "First to Surpass 90M YouTube Subs, Solidifying Global #1" },
-        date: "2023.07.17",
-        summary: { ko: "공식 유튜브 채널 구독자 수가 전 세계 모든 아티스트를 통틀어 최초로 9000만 명을 돌파하며 범접 불가한 인기를 과시했습니다.", en: "Their official YouTube channel became the first among all global artists to surpass 90M subs, showing untouchable popularity." },
-        url: "https://news.google.com/search?q=%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC%20%EC%9C%A0%ED%8A%9C%EB%B8%8C%201%EC%9C%84"
+        "title": {
+          "ko": "타이틀곡 'GO', 38개 지역 아이튠즈 1위 및 유튜브 글로벌 1위",
+          "en": "Title Track 'GO' Hits #1 on iTunes in 38 Regions & #1 Globally on YouTube"
+        },
+        "date": "2026.02.28",
+        "summary": {
+          "ko": "콜드플레이 크리스 마틴이 참여한 타이틀곡 'GO'가 발매와 동시에 전 세계 음원 및 뮤직비디오 차트를 장악했습니다.",
+          "en": "Title track 'GO', featuring Coldplay's Chris Martin, dominated global music and MV charts upon release."
+        },
+        "url": "https://news.google.com/search?q=%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC+GO"
       }
     ],
     members: [
@@ -904,36 +934,42 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "Jimin, V, and Jungkook form the 'maknae line' who trained together, showing immense stage presence in vocals and dance."
       ]
     },
-    news: [
+        news: [
       {
-        title: { ko: "방탄소년단, 전 멤버 군 복무 완료 임박... 2026년 완전체 컴백 초읽기", en: "BTS Members Nearing End of Military Service... Countdown to Full-Group Comeback in 2026" },
-        date: "2026.02.15",
-        summary: { ko: "군백기를 무사히 마친 멤버들이 다시 모여 준비할 거대한 프로젝트에 전 세계 팝 시장의 이목이 쏠리고 있습니다.", en: "The entire global pop market's attention is focused on the massive projects they will prepare as members reunite after completing military service." },
-        url: "https://news.google.com/search?q=%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8%20%EC%BB%B4%EB%B0%B1"
+        "title": {
+          "ko": "방탄소년단, 정규 5집 'SWIM' 트랙리스트 공개... 기대감 고조",
+          "en": "BTS Reveals Tracklist for 5th Full Album 'SWIM'... Expectations Rise"
+        },
+        "date": "2026.03.04",
+        "summary": {
+          "ko": "타이틀곡 'SWIM'을 포함한 정규 5집 앨범의 트랙리스트가 공개되며 전 세계 팬들의 폭발적인 기대를 모으고 있습니다.",
+          "en": "The tracklist for the 5th full album, including the title track 'SWIM', has been revealed, gathering explosive global anticipation."
+        },
+        "url": "https://news.google.com/search?q=%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8+SWIM"
       },
       {
-        title: { ko: "스포티파이 스트리밍 누적 400억 회 돌파, 亞 아티스트 최초 신기록", en: "Surpasses 40 Billion Cumulative Spotify Streams, First Asian Artist Record" },
-        date: "2026.02.22",
-        summary: { ko: "그룹 공백기임에도 불구하고 솔로곡과 기존 히트곡들이 꾸준히 재생되며 전무후무한 대기록을 작성했습니다.", en: "Despite the group's hiatus, solo tracks and old hits continued to be played, setting an unprecedented massive record." },
-        url: "https://news.google.com/search?q=%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8%20%EC%8A%A4%ED%8F%AC%ED%8B%B0%ED%8C%8C%EC%9D%B4"
+        "title": {
+          "ko": "광화문 대형 컴백 라이브 'ARIRANG' 개최, 넷플릭스 생중계",
+          "en": "Massive Comeback Live 'ARIRANG' at Gwanghwamun, Netflix Live Stream"
+        },
+        "date": "2026.03.03",
+        "summary": {
+          "ko": "앨범 발매 다음 날 서울 광화문 광장에서 열리는 초대형 컴백 무대가 넷플릭스를 통해 전 세계에 실시간 중계됩니다.",
+          "en": "A massive comeback stage at Gwanghwamun Square the day after release will be live-streamed globally via Netflix."
+        },
+        "url": "https://news.google.com/search?q=%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8+%EC%BB%B4%EB%B0%B1+%EB%9D%BC%EC%9D%B4%EB%B8%8C"
       },
       {
-        title: { ko: "'Dynamite' 뮤직비디오 유튜브 조회수 20억 뷰 돌파", en: "'Dynamite' MV Surpasses 2 Billion Views on YouTube" },
-        date: "2026.03.10",
-        summary: { ko: "전 세계에 희망과 위로를 전했던 글로벌 메가 히트곡 다이너마이트가 또 한 번 유튜브 대기록을 세웠습니다.", en: "The global mega-hit 'Dynamite', which delivered hope and comfort to the world, set yet another massive YouTube record." },
-        url: "https://news.google.com/search?q=%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8%20%EB%8B%A4%EC%9D%B4%EB%84%88%EB%A7%88%EC%9D%B4%ED%8A%B8%2020%EC%96%B5"
-      },
-      {
-        title: { ko: "정국 솔로 앨범, 美 빌보드 핫 100 장기 흥행 '글로벌 팝스타 위용'", en: "Jungkook's Solo Album Long-Running Hit on US Billboard Hot 100, 'Global Popstar Majesty'" },
-        date: "2026.03.05",
-        summary: { ko: "막내 정국의 솔로곡들이 팝의 본고장 미국 라디오와 음원 차트를 휩쓸며 방탄소년단의 저력을 보여줬습니다.", en: "The youngest member Jungkook's solo songs swept US radio and music charts, showing BTS's individual power." },
-        url: "https://news.google.com/search?q=%EC%A0%95%EA%B5%AD%20%EB%B9%8C%EB%B3%B4%EB%93%9C"
-      },
-      {
-        title: { ko: "방탄소년단 기념 우표 2차 발행, 우체국 서버 마비 사태", en: "BTS Commemorative Stamps 2nd Release, Post Office Servers Crash" },
-        date: "2026.03.15",
-        summary: { ko: "데뷔 11주년을 기념해 발행된 공식 우표를 구매하기 위해 수백만 명의 팬들이 몰리며 시스템이 마비되었습니다.", en: "Millions of fans rushed to purchase the official stamps released to commemorate their 11th anniversary, crashing the systems." },
-        url: "https://news.google.com/search?q=%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8%20%EC%9A%B0%ED%91%9C"
+        "title": {
+          "ko": "정국, 자택 수십 차례 찾아온 해외 스토커 구속 기소",
+          "en": "Jungkook's Foreign Stalker Who Visited His Home Dozens of Times Indicted"
+        },
+        "date": "2026.03.01",
+        "summary": {
+          "ko": "멤버 정국의 거주지를 지속적으로 찾아가 괴롭힌 해외 국적의 스토커가 구속되어 재판에 넘겨졌습니다.",
+          "en": "A foreign stalker who continuously visited and harassed member Jungkook at his residence has been arrested and indicted."
+        },
+        "url": "https://news.google.com/search?q=%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8+%EC%A0%95%EA%B5%AD+%EC%8A%A4%ED%86%A0%EC%BB%A4"
       }
     ],
     members: [
@@ -959,7 +995,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "179cm",
         bloodType: "O",
         description: { ko: "자타공인 '월드와이드 핸섬' 맏형. 맑고 서정적인 은빛 보이스와 유쾌하고 친근한 성격으로 팀의 분위기를 띄웁니다.", en: "The self-proclaimed 'Worldwide Handsome' oldest brother. Lifts the team's mood with a clear, lyrical silver voice and a fun personality." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8%20%EC%A7%84%20%EC%A7%81%EC%BA%A0%20%EA%B3%A0%ED%99%94%EC%A7%88&w=600&h=600&c=7&rs=1&p=0"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/BTS_Jin_at_Maison_Fred%2C_13_March_2025_04.png/800px-BTS_Jin_at_Maison_Fred%2C_13_March_2025_04.png"
       },
       {
         id: "suga",
@@ -995,7 +1031,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "174cm",
         bloodType: "A",
         description: { ko: "현대무용 전공자 다운 섬세하고 예술적인 춤선. 노래의 도입부를 매혹적으로 살려내는 마성의 유니크한 음색을 가졌습니다.", en: "Delicate and artistic dance lines from a modern dance background. Has a magical, unique voice that captivates song intros." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8%20%EC%A7%80%EB%AF%BC%20%EC%A7%81%EC%BA%A0%20%EA%B3%A0%ED%99%94%EC%A7%88&w=600&h=600&c=7&rs=1&p=0"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/33/Jimin_on_the_way_to_SBS_Radio%2C_31_March_2023_%282%29.jpg"
       },
       {
         id: "v",
@@ -1019,7 +1055,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "179cm",
         bloodType: "A",
         description: { ko: "노래, 춤, 운동 등 못하는 게 없는 완벽한 '황금 막내'. 흔들림 없는 완벽한 라이브 실력으로 팀의 확신의 센터를 맡고 있습니다.", en: "The perfect 'Golden Maknae' who excels at everything from singing to dancing and sports. The undisputed center with flawless live skills." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8%20%EC%A0%95%EA%B5%AD%20%EC%A7%81%EC%BA%A0%20%EA%B3%A0%ED%99%94%EC%A7%88&w=600&h=600&c=7&rs=1&p=0"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Jung_Kook_of_BTS%2C_February_12%2C_2026_%281%29.png/800px-Jung_Kook_of_BTS%2C_February_12%2C_2026_%281%29.png"
       }
     ]
   },
@@ -1066,36 +1102,30 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "Each title track contains clear messages (feminism, self-love, breaking prejudice), earning overwhelming support from a female fandom."
       ]
     },
-    news: [
+        news: [
       {
-        title: { ko: "(여자)아이들, 월드투어 'iDOL' 성공적 개최... 글로벌 광폭 행보", en: "(G)I-DLE Successfully Holds World Tour 'iDOL'... Massive Global Steps" },
-        date: "2026.03.08",
-        summary: { ko: "자신들의 아이덴티티를 담은 초대형 월드투어를 진행하며 미주, 유럽, 아시아 팬들을 완벽하게 매료시켰습니다.", en: "Conducting a massive world tour carrying their identity, perfectly captivating fans across the Americas, Europe, and Asia." },
-        url: "https://news.google.com/search?q=%EC%97%AC%EC%9E%90%EC%95%84%EC%9D%B4%EB%93%A4%20%EC%9B%94%EB%93%9C%ED%88%AC%EC%96%B4"
+        "title": {
+          "ko": "그룹명 '아이들(i-dle)'로 파격 변경... '여자' 떼고 정체성 재확립",
+          "en": "Radical Group Name Change to 'i-dle'... Dropping 'G' to Re-establish Identity"
+        },
+        "date": "2026.03.01",
+        "summary": {
+          "ko": "데뷔 7주년을 맞아 그룹명에서 '여자(G)'를 삭제하고 '아이들'로 새 출발하며 성별에 얽매이지 않는 정체성을 강조했습니다.",
+          "en": "For their 7th anniversary, they dropped 'G' to become 'i-dle', emphasizing an identity unbound by gender."
+        },
+        "url": "https://news.google.com/search?q=%EC%97%AC%EC%9E%90%EC%95%84%EC%9D%B4%EB%93%A4+%EA%B7%B8%EB%A3%B9%EB%AA%85+%EB%B3%80%EA%B2%BD"
       },
       {
-        title: { ko: "'클락션(Klaxon)' 여름 음원 차트 올킬, 명실상부 서머퀸 등극", en: "'Klaxon' Sweeps Summer Music Charts, Unquestionable Summer Queens" },
-        date: "2026.02.30",
-        summary: { ko: "레트로 빈티지 컨셉의 여름 시즌송으로 차트를 휩쓸며 '믿고 듣는 (여자)아이들' 공식을 다시 증명했습니다.", en: "Sweeping the charts with a retro vintage summer season song, proving the formula of 'Trust and Listen to (G)I-DLE'." },
-        url: "https://news.google.com/search?q=%EC%97%AC%EC%9E%90%EC%95%84%EC%9D%B4%EB%93%A4%20%ED%81%B4%EB%9D%BD%EC%85%98"
-      },
-      {
-        title: { ko: "전소연, 한국음악저작권협회 정회원 승격 '천재 프로듀서'", en: "Soyeon Promoted to Regular Member of KOMCA, 'Genius Producer'" },
-        date: "2026.03.01",
-        summary: { ko: "수많은 히트곡을 직접 작사, 작곡한 저작권료 수익과 공로를 인정받아 최연소 급으로 정회원에 이름을 올렸습니다.", en: "Recognized for her royalties and contributions from writing/composing numerous hits, she became a regular member at a very young age." },
-        url: "https://news.google.com/search?q=%EC%A0%84%EC%86%8C%EC%97%B0%20%EC%A0%80%EC%9E%91%EA%B6%8C"
-      },
-      {
-        title: { ko: "미연 & 우기, 예능계 블루칩 부상... 각종 프로그램 섭외 1순위", en: "Miyeon & Yuqi Rise as Variety Blue Chips... #1 Casting Choices" },
-        date: "2026.01.11",
-        summary: { ko: "독보적인 예능감과 밝은 에너지로 웹 예능과 지상파를 가리지 않고 러브콜을 받으며 대세로 활약 중입니다.", en: "With unmatched variety skills and bright energy, they are active trends receiving love calls from both web shows and public broadcasts." },
-        url: "https://news.google.com/search?q=%EB%AF%B8%EC%97%B0%20%EC%9A%B0%EA%B8%B0%20%EC%98%88%EB%8A%A5"
-      },
-      {
-        title: { ko: "정규 2집 '2', 밀리언셀러 달성 및 국내외 차트 1위 석권", en: "2nd Full Album '2' Reaches Million Seller, Sweeps Domestic/Global Charts #1" },
-        date: "2026.02.29",
-        summary: { ko: "파격적인 메시지를 담은 정규 2집 앨범이 초동 100만 장을 넘기며 커리어 하이를 달성했습니다.", en: "Their 2nd full album containing unconventional messages exceeded 1 million first-week sales, achieving a career high." },
-        url: "https://news.google.com/search?q=%EC%97%AC%EC%9E%90%EC%95%84%EC%9D%B4%EB%93%A4%20%EB%B0%80%EB%A6%AC%EC%96%B8%EC%85%80%EB%9F%AC"
+        "title": {
+          "ko": "전원 재계약 후 미니 8집 '위 아(We are)'로 완전체 컴백",
+          "en": "Full Group Comeback with 8th Mini Album 'We are' After Full Contract Renewal"
+        },
+        "date": "2026.03.02",
+        "summary": {
+          "ko": "멤버 전원이 소속사와 재계약을 체결한 후, 타이틀곡 '굿 띵'이 수록된 새 앨범으로 화려하게 돌아왔습니다.",
+          "en": "After all members renewed contracts, they made a grand return with a new album featuring the title track 'Good Thing'."
+        },
+        "url": "https://news.google.com/search?q=%EC%97%AC%EC%9E%90%EC%95%84%EC%9D%B4%EB%93%A4+We+are"
       }
     ],
     members: [
@@ -1204,36 +1234,42 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "Main dancer Momo receives high praise from professionals for her top-tier powerful and flexible dance skills."
       ]
     },
-    news: [
+        news: [
       {
-        title: { ko: "트와이스, 해외 여성 아티스트 최초 일본 닛산 스타디움 공연 성료", en: "TWICE Becomes First Foreign Female Artist to Perform at Japan's Nissan Stadium" },
-        date: "2026.02.29",
-        summary: { ko: "일본 최대 규모의 공연장인 닛산 스타디움에 해외 여성 아티스트 사상 최초로 입성하며 압도적인 관객 동원력을 증명했습니다.", en: "Proved overwhelming ticket power by becoming the first foreign female artist to hold a concert at Nissan Stadium, Japan's largest venue." },
-        url: "https://news.google.com/search?q=%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4%20%EB%8B%9B%EC%82%B0%20%EC%8A%A4%ED%83%80%EB%94%94%EC%9B%80"
+        "title": {
+          "ko": "트와이스, 뉴욕 UBS 아레나 3일 공연 성료... 2026 월드투어 순항",
+          "en": "TWICE Successfully Completes 3-Day Show at NY UBS Arena... 2026 Tour Cruising"
+        },
+        "date": "2026.03.02",
+        "summary": {
+          "ko": "진행 중인 'THIS IS FOR' 월드 투어의 일환으로 뉴욕에서 3일간의 공연을 성공적으로 마치며 현지 팬들을 열광시켰습니다.",
+          "en": "As part of their ongoing 'THIS IS FOR' world tour, they successfully completed 3 days in NY, thrilling local fans."
+        },
+        "url": "https://news.google.com/search?q=%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4+%EB%89%B4%EC%9A%95"
       },
       {
-        title: { ko: "빌보드 200 차트 1위 달성 'With YOU-th', 글로벌 원탑 걸그룹 위엄", en: "Achieved #1 on Billboard 200 with 'With YOU-th', Majesty of Top Global Girl Group" },
-        date: "2026.01.04",
-        summary: { ko: "미니 13집으로 미국 메인 앨범 차트인 빌보드 200에서 1위를 차지하며 데뷔 10년 차에도 끊임없는 성장세를 보여줬습니다.", en: "Topped the US main album chart Billboard 200 with their 13th mini-album, showing continuous growth even in their 10th year." },
-        url: "https://news.google.com/search?q=%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4%20%EB%B9%8C%EB%B3%B4%EB%93%9C%201%EC%9C%84"
+        "title": {
+          "ko": "정연, 쿠싱 증후군 이겨내고 건강 되찾은 반가운 근황",
+          "en": "Jeongyeon Shares Welcome Update, Recovering Health After Overcoming Cushing's"
+        },
+        "date": "2026.02.25",
+        "summary": {
+          "ko": "건강 문제로 체중 변화를 겪었던 멤버 정연이 크게 호전된 모습과 밝은 근황을 전해 팬들의 응원이 쏟아지고 있습니다.",
+          "en": "Member Jeongyeon, who experienced weight changes due to health issues, shared a bright and recovered update, receiving fan support."
+        },
+        "url": "https://news.google.com/search?q=%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4+%EC%A0%95%EC%97%B0+%EA%B1%B4%EA%B0%95"
       },
       {
-        title: { ko: "다현, 명품 브랜드 마이클 코어스 글로벌 앰버서더 발탁", en: "Dahyun Appointed Global Ambassador for Luxury Brand Michael Kors" },
-        date: "2023.07.26",
-        summary: { ko: "단아하면서도 세련된 이미지로 미국 대표 패션 브랜드 마이클 코어스의 글로벌 얼굴로 선정되었습니다.", en: "Chosen as the global face of representative US fashion brand Michael Kors for her elegant and sophisticated image." },
-        url: "https://news.google.com/search?q=%EB%8B%A4%ED%98%84%20%EB%A7%88%EC%9D%B4%ED%81%B4%20%EC%BD%94%EC%96%B4%EC%8A%A4"
-      },
-      {
-        title: { ko: "트와이스 미국 전역 스타디움 투어 'SoFi 스타디움' 전석 매진", en: "TWICE's US Stadium Tour Sells Out 'SoFi Stadium'" },
-        date: "2023.06.12",
-        summary: { ko: "K-POP 걸그룹 최초로 미국 로스앤젤레스 소파이 스타디움에서 열린 단독 콘서트를 매진시키는 대기록을 달성했습니다.", en: "Achieved the massive milestone of becoming the first K-pop girl group to sell out a solo concert at SoFi Stadium in LA, USA." },
-        url: "https://news.google.com/search?q=%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4%20%EC%86%8C%ED%8C%8C%EC%9D%B4%20%EC%8A%A4%ED%83%80%EB%94%94%EC%9B%80"
-      },
-      {
-        title: { ko: "나연에 이어 지효, 솔로 데뷔... 빌보드 200 최상위권 진입 쾌거", en: "Following Nayeon, Jihyo's Solo Debut... Enters Top Tier of Billboard 200" },
-        date: "2023.08.28",
-        summary: { ko: "팀의 메인 보컬 지효가 솔로 앨범 'ZONE'을 발표하며 성공적인 홀로서기와 함께 글로벌 팝스타로서의 역량을 입증했습니다.", en: "Main vocalist Jihyo released her solo album 'ZONE', proving her capabilities as a global pop star with a successful solo endeavor." },
-        url: "https://news.google.com/search?q=%EC%A7%80%ED%9A%A8%20%EC%86%94%EB%A1%9C%20%EB%B9%8C%EB%B3%B4%EB%93%9C"
+        "title": {
+          "ko": "데뷔 10주년 기념 스페셜 앨범 및 다큐멘터리 영화 발표 예고",
+          "en": "Announces 10th Anniversary Special Album and Documentary Movie"
+        },
+        "date": "2026.01.15",
+        "summary": {
+          "ko": "다가오는 데뷔 10주년을 맞아 스페셜 앨범 발매와 지난 10년의 기록을 담은 다큐멘터리 영화 공개를 예고했습니다.",
+          "en": "Ahead of their 10th anniversary, they teased a special album release and a documentary movie chronicling their past 10 years."
+        },
+        "url": "https://news.google.com/search?q=%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4+10%EC%A3%BC%EB%85%84"
       }
     ],
     members: [
