@@ -24,6 +24,7 @@ export interface KpopGroup {
   company: string;
   debut: string;
   fandom: { ko: string; en: string };
+  officialSite?: string;
   accentColor: string;
   imageUrl: string;
   wiki: { ko: string; en: string };
@@ -37,6 +38,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
   {
     id: "blackpink",
     name: { ko: "블랙핑크", en: "BLACKPINK" },
+    officialSite: "https://www.blackpinkofficial.com/",
     company: "YG Entertainment",
     debut: "2016.08.08",
     fandom: { ko: "블링크 (BLINK)", en: "BLINK" },
@@ -122,6 +124,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
   {
     id: "bts",
     name: { ko: "방탄소년단", en: "BTS" },
+    officialSite: "https://ibighit.com/bts/kor/",
     company: "BIGHIT MUSIC",
     debut: "2013.06.13",
     fandom: { ko: "아미 (ARMY)", en: "ARMY" },
@@ -243,6 +246,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
   {
     id: "g_idle",
     name: { ko: "(여자)아이들", en: "(G)I-DLE" },
+    officialSite: "http://www.cubeent.co.kr/gidle",
     company: "Cube Entertainment",
     debut: "2018.05.02",
     fandom: { ko: "네버랜드 (NEVERLAND)", en: "NEVERLAND" },
@@ -340,6 +344,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
   {
     id: "twice",
     name: { ko: "트와이스", en: "TWICE" },
+    officialSite: "https://twice.jype.com/",
     company: "JYP Entertainment",
     debut: "2015.10.20",
     fandom: { ko: "원스 (ONCE)", en: "ONCE" },
@@ -485,6 +490,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
   {
     id: "newjeans",
     name: { ko: "뉴진스", en: "NewJeans" },
+    officialSite: "https://newjeans.kr/",
     company: "ADOR",
     debut: "2022.07.22",
     fandom: { ko: "버니즈 (Bunnies)", en: "Bunnies" },
@@ -582,6 +588,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
   {
     id: "ive",
     name: { ko: "아이브", en: "IVE" },
+    officialSite: "http://www.starship-ent.com/profile/musician/ive.php",
     company: "Starship",
     debut: "2021.12.01",
     fandom: { ko: "다이브 (DIVE)", en: "DIVE" },
@@ -691,6 +698,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
   {
     id: "aespa",
     name: { ko: "에스파", en: "aespa" },
+    officialSite: "https://aespa.com/",
     company: "SM Entertainment",
     debut: "2020.11.17",
     fandom: { ko: "마이 (MY)", en: "MY" },
@@ -776,6 +784,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
   {
     id: "straykids",
     name: { ko: "스트레이 키즈", en: "Stray Kids" },
+    officialSite: "https://straykids.jype.com/",
     company: "JYP Entertainment",
     debut: "2018.03.25",
     fandom: { ko: "스테이 (STAY)", en: "STAY" },
@@ -909,6 +918,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
   {
     id: "lesserafim",
     name: { ko: "르세라핌", en: "LE SSERAFIM" },
+    officialSite: "https://le-sserafim.com/",
     company: "Source Music",
     debut: "2022.05.02",
     fandom: { ko: "피어나 (FEARNOT)", en: "FEARNOT" },

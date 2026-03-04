@@ -144,6 +144,12 @@ const IdolEncyclopedia: React.FC = () => {
                     {selectedGroup.fandom[currentLang]}
                   </span>
                 )}
+                {selectedGroup.officialSite && (
+                  <a href={selectedGroup.officialSite} target="_blank" rel="noopener noreferrer" className="px-3 py-1 bg-white/5 hover:bg-neon-blue/20 hover:text-neon-blue hover:border-neon-blue/50 transition-colors border border-white/10 rounded-full text-[10px] font-mono text-slate-300 uppercase tracking-widest flex items-center gap-1">
+                    <ExternalLink className="w-3 h-3" />
+                    {currentLang === 'ko' ? '공식 홈페이지' : 'Official Site'}
+                  </a>
+                )}
               </div>
               <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4 pr-4 leading-none">{selectedGroup.name[currentLang]}</h2>
               <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">{selectedGroup.description[currentLang]}</p>
