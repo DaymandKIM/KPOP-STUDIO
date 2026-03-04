@@ -1,8 +1,53 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Search, User, Star, ChevronLeft, ExternalLink, MessageCircle, Newspaper } from 'lucide-react';
+import { Search, User, Star, ChevronLeft, ExternalLink, MessageCircle, Newspaper, ImageOff, Sparkles, Calendar, Fingerprint, Moon } from 'lucide-react';
 import { KPOP_GROUPS } from '../data/idols';
 import type { KpopGroup } from '../data/idols';
+
+// Enhanced Safe Image Component
+const SafeImage: React.FC<{ src: string; alt: string; className?: string; accentColor?: string }> = ({ src, alt, className, accentColor = '#00ffff' }) => {
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  if (error || !src) {
+    return (
+      <div 
+        className={`${className} flex flex-col items-center justify-center gap-4 relative overflow-hidden`}
+        style={{ 
+          background: `linear-gradient(135deg, #0f172a 0%, ${accentColor}22 50%, #020617 100%)`,
+          border: `1px solid ${accentColor}44`
+        }}
+      >
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '24px 24px' }}></div>
+        <div className="relative z-10 flex flex-col items-center gap-2">
+          <Sparkles className="w-10 h-10 opacity-50" style={{ color: accentColor }} />
+          <span className="text-xl font-black text-white italic tracking-tighter text-center px-6 leading-none uppercase drop-shadow-lg">
+            {alt}
+          </span>
+        </div>
+        <div className="absolute bottom-0 left-0 w-full h-1" style={{ backgroundColor: accentColor, boxShadow: `0 0 15px ${accentColor}` }}></div>
+      </div>
+    );
+  }
+
+  return (
+    <div className={`${className} relative bg-slate-900 overflow-hidden`}>
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center animate-pulse bg-slate-800">
+          <div className="w-8 h-8 rounded-full border-2 border-white/10 border-t-white/40 animate-spin"></div>
+        </div>
+      )}
+      <img 
+        src={src} 
+        alt={alt} 
+        className={`${className} transition-opacity duration-700 ${loading ? 'opacity-0' : 'opacity-100'}`} 
+        onError={() => { setError(true); setLoading(false); }}
+        onLoad={() => setLoading(false)}
+        loading="lazy"
+      />
+    </div>
+  );
+};
 
 const IdolEncyclopedia: React.FC = () => {
   const { t } = useTranslation();
@@ -34,25 +79,71 @@ const IdolEncyclopedia: React.FC = () => {
           
           <div className="flex-1 flex flex-col md:flex-row gap-8 items-center md:items-start">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-[40px] overflow-hidden border-4 border-white/10 neon-shadow-purple flex-shrink-0">
-              <img src={selectedGroup.imageUrl} alt={selectedGroup.name} className="w-full h-full object-cover" />
+              <SafeImage 
+                src={selectedGroup.imageUrl} 
+                alt={selectedGroup.name} 
+                className="w-full h-full object-cover" 
+                accentColor={selectedGroup.accentColor}
+              />
             </div>
             <div className="flex-1 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
                 <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-mono text-slate-400 uppercase tracking-widest">{selectedGroup.company}</span>
                 <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-mono text-slate-400 uppercase tracking-widest">Debut: {selectedGroup.debut}</span>
               </div>
-              <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4">{selectedGroup.name}</h2>
+              <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4 pr-4 leading-none">{selectedGroup.name}</h2>
               <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">{selectedGroup.description}</p>
             </div>
           </div>
         </div>
 
-        {/* Content Tabs/Sections */}
+        {/* Members Section */}
+        <section className="px-2">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-10 h-10 rounded-xl bg-neon-pink/10 flex items-center justify-center border border-neon-pink/30">
+              <User className="w-6 h-6 text-neon-pink" />
+            </div>
+            <h3 className="text-2xl font-black text-white uppercase italic">Complete Members</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {selectedGroup.members.map((member, i) => (
+              <div key={i} className="glass-card rounded-[32px] p-6 border-white/5 flex flex-col gap-6 hover:border-white/20 transition-all group relative overflow-hidden">
+                <div className="flex gap-6 items-start relative z-10">
+                  <div className="w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden flex-shrink-0 border-2 border-white/10 group-hover:neon-shadow-blue transition-all">
+                    <SafeImage src={member.imageUrl} alt={member.name} className="w-full h-full object-cover" accentColor={selectedGroup.accentColor} />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-2xl font-black text-white mb-1">{member.name}</h4>
+                    <p className="text-neon-blue font-mono text-[10px] uppercase font-black mb-4 tracking-widest">{member.role}</p>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
+                        <Calendar className="w-3 h-3 text-neon-purple" />
+                        {member.birth}
+                      </div>
+                      <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
+                        <Fingerprint className="w-3 h-3 text-neon-green" />
+                        MBTI: {member.mbti}
+                      </div>
+                      <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
+                        <Moon className="w-3 h-3 text-neon-yellow" />
+                        {member.zodiac}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed relative z-10">{member.description}</p>
+                
+                {/* Decoration */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Wiki & News Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-2">
-          
-          {/* Left Column: Wiki & Gossip */}
           <div className="lg:col-span-2 space-y-10">
-            {/* Wiki Section */}
             <section className="glass-card rounded-[40px] p-8 border-white/5">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-neon-blue/10 flex items-center justify-center border border-neon-blue/30">
@@ -62,35 +153,9 @@ const IdolEncyclopedia: React.FC = () => {
               </div>
               <p className="text-slate-300 leading-relaxed text-lg whitespace-pre-wrap">{selectedGroup.wiki}</p>
             </section>
-
-            {/* Members Section */}
-            <section>
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-10 h-10 rounded-xl bg-neon-pink/10 flex items-center justify-center border border-neon-pink/30">
-                  <User className="w-6 h-6 text-neon-pink" />
-                </div>
-                <h3 className="text-2xl font-black text-white uppercase italic">Members</h3>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {selectedGroup.members.map((member, i) => (
-                  <div key={i} className="glass-card rounded-3xl p-6 border-white/5 flex gap-6 hover:border-white/20 transition-all group">
-                    <div className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0 border-2 border-white/10 group-hover:neon-shadow-blue transition-all">
-                      <img src={member.imageUrl} alt={member.name} className="w-full h-full object-cover" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-xl font-black text-white mb-1">{member.name}</h4>
-                      <p className="text-neon-blue font-mono text-[10px] uppercase font-bold mb-2 tracking-widest">{member.role} // {member.birth}</p>
-                      <p className="text-slate-400 text-sm leading-snug">{member.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
           </div>
 
-          {/* Right Column: News & Gossip List */}
           <div className="space-y-10">
-            {/* Latest News */}
             <section className="glass-card rounded-[40px] p-8 border-white/5">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-neon-green/10 flex items-center justify-center border border-neon-green/30">
@@ -106,12 +171,7 @@ const IdolEncyclopedia: React.FC = () => {
                       {news.title}
                     </h4>
                     <p className="text-slate-400 text-sm mb-4 line-clamp-3">{news.summary}</p>
-                    <a 
-                      href={news.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-xs font-mono text-slate-500 hover:text-white uppercase font-black"
-                    >
+                    <a href={news.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-mono text-slate-500 hover:text-white uppercase font-black">
                       Read on Naver <ExternalLink className="w-3 h-3" />
                     </a>
                   </div>
@@ -119,13 +179,12 @@ const IdolEncyclopedia: React.FC = () => {
               </div>
             </section>
 
-            {/* Gossip/Fun Facts */}
             <section className="glass-card rounded-[40px] p-8 border-white/5 bg-gradient-to-br from-white/5 to-transparent">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-neon-yellow/10 flex items-center justify-center border border-neon-yellow/30">
                   <MessageCircle className="w-6 h-6 text-neon-yellow" />
                 </div>
-                <h3 className="text-2xl font-black text-white uppercase italic">Gossip & Facts</h3>
+                <h3 className="text-2xl font-black text-white uppercase italic">Fan Gossip</h3>
               </div>
               <ul className="space-y-4">
                 {selectedGroup.gossip.map((fact, i) => (
@@ -137,7 +196,6 @@ const IdolEncyclopedia: React.FC = () => {
               </ul>
             </section>
           </div>
-
         </div>
       </div>
     );
@@ -167,10 +225,11 @@ const IdolEncyclopedia: React.FC = () => {
             onClick={() => setSelectedGroup(group)}
           >
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-6 border border-white/10 group-hover:neon-shadow-blue transition-all duration-500">
-              <img 
+              <SafeImage 
                 src={group.imageUrl} 
                 alt={group.name} 
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                accentColor={group.accentColor}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
               <div className="absolute bottom-4 left-4">
@@ -180,7 +239,7 @@ const IdolEncyclopedia: React.FC = () => {
 
             <div className="flex flex-col gap-2">
               <div className="flex justify-between items-end">
-                <h3 className="text-3xl font-black text-white group-hover:text-neon-blue transition-all italic tracking-tighter">{group.name}</h3>
+                <h3 className="text-3xl font-black text-white group-hover:text-neon-blue transition-all italic tracking-tighter pr-2 leading-none">{group.name}</h3>
                 <span className="text-[10px] font-mono text-slate-500 uppercase font-black">{group.debut}</span>
               </div>
               <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed mb-4">{group.description}</p>
