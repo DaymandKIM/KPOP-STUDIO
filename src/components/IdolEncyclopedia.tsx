@@ -240,10 +240,7 @@ const IdolEncyclopedia: React.FC = () => {
                     <h4 className="text-lg font-bold text-white mb-3 hover:text-neon-green cursor-pointer transition-colors leading-snug">
                       {news.title[currentLang]}
                     </h4>
-                    <p className="text-slate-400 text-sm mb-4 line-clamp-3">{news.summary[currentLang]}</p>
-                    <a href={news.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-mono text-slate-500 hover:text-white uppercase font-black">
-                      Read on Naver <ExternalLink className="w-3 h-3" />
-                    </a>
+                    <p className="text-slate-400 text-sm line-clamp-3">{news.summary[currentLang]}</p>
                   </div>
                 ))}
               </div>
