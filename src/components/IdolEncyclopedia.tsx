@@ -215,22 +215,22 @@ const IdolEncyclopedia: React.FC = () => {
           </div>
         </section>
 
-        {/* Wiki & News Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-2">
-          <div className="lg:col-span-2 space-y-10">
-            <section className="glass-card rounded-[40px] p-8 border-white/5">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-neon-blue/10 flex items-center justify-center border border-neon-blue/30">
-                  <Star className="w-6 h-6 text-neon-blue" />
-                </div>
-                <h3 className="text-2xl font-black text-white uppercase italic">Overview</h3>
+        {/* Wiki & News & Gossip Section */}
+        <div className="flex flex-col gap-10 px-2">
+          {/* Overview takes full width */}
+          <section className="glass-card rounded-[40px] p-8 md:p-10 border-white/5">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-neon-blue/10 flex items-center justify-center border border-neon-blue/30">
+                <Star className="w-6 h-6 text-neon-blue" />
               </div>
-              <p className="text-slate-300 leading-relaxed text-lg whitespace-pre-wrap">{selectedGroup.wiki[currentLang]}</p>
-            </section>
-          </div>
+              <h3 className="text-2xl font-black text-white uppercase italic">Overview</h3>
+            </div>
+            <p className="text-slate-300 leading-relaxed text-lg whitespace-pre-wrap">{selectedGroup.wiki[currentLang]}</p>
+          </section>
 
-          <div className="space-y-10">
-            <section className="glass-card rounded-[40px] p-8 border-white/5">
+          {/* News and Gossip side-by-side on large screens */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <section className="glass-card rounded-[40px] p-8 md:p-10 border-white/5">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-neon-green/10 flex items-center justify-center border border-neon-green/30">
                   <Newspaper className="w-6 h-6 text-neon-green" />
@@ -239,28 +239,30 @@ const IdolEncyclopedia: React.FC = () => {
               </div>
               <div className="space-y-6">
                 {selectedGroup.news.map((news, i) => (
-                  <div key={i} className="border-b border-white/5 pb-6 last:border-0 last:pb-0">
+                  <div key={i} className="border-b border-white/5 pb-6 last:border-0 last:pb-0 hover:bg-white/[0.02] transition-colors p-4 -mx-4 rounded-2xl cursor-pointer group">
                     <div className="text-[10px] font-mono text-neon-green font-bold uppercase mb-2">{news.date}</div>
-                    <h4 className="text-lg font-bold text-white mb-3 hover:text-neon-green cursor-pointer transition-colors leading-snug">
-                      {news.title[currentLang]}
-                    </h4>
-                    <p className="text-slate-400 text-sm line-clamp-3">{news.summary[currentLang]}</p>
+                    <a href={news.url} target="_blank" rel="noopener noreferrer" className="block">
+                      <h4 className="text-lg font-bold text-white mb-3 group-hover:text-neon-green transition-colors leading-snug">
+                        {news.title[currentLang]}
+                      </h4>
+                      <p className="text-slate-400 text-sm line-clamp-3">{news.summary[currentLang]}</p>
+                    </a>
                   </div>
                 ))}
               </div>
             </section>
 
-            <section className="glass-card rounded-[40px] p-8 border-white/5 bg-gradient-to-br from-white/5 to-transparent">
+            <section className="glass-card rounded-[40px] p-8 md:p-10 border-white/5 bg-gradient-to-br from-white/5 to-transparent h-fit">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-neon-yellow/10 flex items-center justify-center border border-neon-yellow/30">
                   <MessageCircle className="w-6 h-6 text-neon-yellow" />
                 </div>
                 <h3 className="text-2xl font-black text-white uppercase italic">{currentLang === 'ko' ? '팬 가십' : 'Fan Gossip'}</h3>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 {selectedGroup.gossip[currentLang].map((fact, i) => (
-                  <li key={i} className="flex gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-neon-yellow flex-shrink-0 mt-2"></span>
+                  <li key={i} className="flex gap-4 items-start bg-black/20 p-4 rounded-2xl border border-white/5 hover:border-neon-yellow/30 transition-colors">
+                    <span className="w-2 h-2 rounded-full bg-neon-yellow flex-shrink-0 mt-1.5 shadow-[0_0_8px_rgba(255,240,31,0.8)]"></span>
                     <p className="text-slate-300 text-sm leading-relaxed">{fact}</p>
                   </li>
                 ))}
