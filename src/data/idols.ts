@@ -624,7 +624,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "173cm",
         bloodType: "A",
         description: { ko: "카리스마 리더와 예능감을 모두 갖춘 육각형 멤버.", en: "An all-rounder with charismatic leadership and variety show skills." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F003%2F2024%2F05%2F10%2F0012539424_001_20240510101502456.jpg"
+        imageUrl: "https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F161f5ead-162c-4b09-9d3f-b743832fcb1a.jpg"
       },
       {
         id: "gaeul",
@@ -636,7 +636,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "164cm",
         bloodType: "B",
         description: { ko: "팀의 맏내. 차분한 분위기와 날카로운 랩 딜리버리가 특징입니다.", en: "The oldest but acts like the youngest. Features a calm vibe and sharp rap delivery." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F421%2F2024%2F05%2F10%2F0007531424_001_20240510101005456.jpg"
+        imageUrl: "https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Ffb48f5a5-c5ef-4573-b3c9-0ffc4a03494b.jpg"
       },
       {
         id: "rei",
@@ -648,7 +648,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "169cm",
         bloodType: "A",
         description: { ko: "일본인 멤버지만 한국어를 능숙하게 구사합니다. 독특한 캐릭터와 힙한 랩 스타일을 보유했습니다.", en: "Japanese member fluent in Korean. Possesses a unique character and trendy rap style." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F003%2F2024%2F05%2F10%2F0012539424_001_20240510101502456.jpg"
+        imageUrl: "https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fc38e2197-0ec9-482a-89a3-5776d6ec03d7.jpg"
       },
       {
         id: "jangwonyoung",
@@ -660,7 +660,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "173cm",
         bloodType: "O",
         description: { ko: "K-POP의 워너비 아이콘. 타고난 스타성과 프로페셔널한 마인드셋으로 항상 주목받습니다.", en: "The wannabe icon of K-POP. Always catches attention with innate star power." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F421%2F2024%2F05%2F16%2F0007542424_001_20240516100505456.jpg"
+        imageUrl: "https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fa6b5d0c7-01ee-48b0-811c-d784dfb9b4f2.jpg"
       },
       {
         id: "liz",
@@ -672,7 +672,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "170cm",
         bloodType: "AB",
         description: { ko: "독보적인 보컬 실력을 갖춘 메인 보컬급 멤버. 귀여운 보조개와 맑은 음색이 매력입니다.", en: "Main vocal-tier member with unmatched vocal skills. Cute dimples and clear voice are her charms." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F003%2F2024%2F05%2F10%2F0012539424_001_20240510101502456.jpg"
+        imageUrl: "https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F0ef2cda4-1b77-4402-a1f7-e7e6fbc62be9.jpg"
       },
       {
         id: "leeseo",
@@ -684,7 +684,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "166cm",
         bloodType: "O",
         description: { ko: "팀의 활기찬 막내. 나이답지 않은 성숙한 표정 연기와 에너지를 무대에서 보여줍니다.", en: "The energetic youngest. Shows mature facial expressions and energy on stage." },
-        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2F421%2F2024%2F05%2F10%2F0007531424_001_20240510101005456.jpg"
+        imageUrl: "https://search.pstatic.net/common?type=n&size=150x168&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2F082522bb-652a-43cf-bf2f-0498bda7cc2b.jpg"
       }
     ]
   },
