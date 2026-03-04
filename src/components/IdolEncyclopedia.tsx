@@ -123,7 +123,7 @@ const IdolEncyclopedia: React.FC = () => {
             className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors font-mono uppercase text-sm mb-4 md:mb-0"
           >
             <ChevronLeft className="w-5 h-5" />
-            {currentLang === 'ko' ? '목록으로' : 'Back to List'}
+            {currentLang === 'ko' ? '뒤로' : 'Back'}
           </button>
           
           <div className="flex-1 flex flex-col md:flex-row gap-8 items-center md:items-start">
@@ -289,7 +289,10 @@ const IdolEncyclopedia: React.FC = () => {
           <div 
             key={group.id}
             className="glass-card rounded-[32px] p-6 cursor-pointer hover:scale-[1.02] active:scale-95 transition-all group flex flex-col border-white/5"
-            onClick={() => setSelectedGroup(group)}
+            onClick={() => {
+              setSelectedGroup(group);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
           >
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-6 border border-white/10 group-hover:neon-shadow-blue transition-all duration-500">
               <SafeImage 
@@ -311,7 +314,7 @@ const IdolEncyclopedia: React.FC = () => {
               <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed mb-4">{group.description[currentLang]}</p>
               
               <button className="w-full py-3 bg-white/5 rounded-xl border border-white/10 text-xs font-mono font-black uppercase tracking-widest text-slate-300 group-hover:bg-neon-blue group-hover:text-black group-hover:border-transparent transition-all">
-                {currentLang === 'ko' ? '프로필 입장' : 'Enter Profile'}
+                {currentLang === 'ko' ? '상세보기' : 'View Details'}
               </button>
             </div>
           </div>
