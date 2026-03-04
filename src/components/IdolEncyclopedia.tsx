@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Search, User, Zap, Star, Sparkles, X, ChevronLeft, ExternalLink, MessageCircle, Newspaper } from 'lucide-react';
-import { KPOP_GROUPS, KpopGroup, Member } from '../data/idols';
+import { Search, User, Star, ChevronLeft, ExternalLink, MessageCircle, Newspaper } from 'lucide-react';
+import { KPOP_GROUPS } from '../data/idols';
+import type { KpopGroup } from '../data/idols';
 
 const IdolEncyclopedia: React.FC = () => {
   const { t } = useTranslation();

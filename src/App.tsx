@@ -10,7 +10,7 @@ type ViewMode = 'identification' | 'encyclopedia';
 
 function App() {
   const { t, i18n } = useTranslation();
-  const { model, isModelLoading, modelError, predict } = useTeachableMachine();
+  const { model, isModelLoading, predict } = useTeachableMachine();
   
   const [viewMode, setViewMode] = useState<ViewMode>('identification');
   const [appState, setAppState] = useState<AppState>('idle');
