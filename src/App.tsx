@@ -1,19 +1,23 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Upload, RefreshCw, Star, Database, Crosshair, Zap, Sparkles, Menu, X } from 'lucide-react';
+import { Upload, RefreshCw, Star, Database, Crosshair, Sparkles, Menu, X } from 'lucide-react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { useTeachableMachine } from './hooks/useTeachableMachine';
 import IdolEncyclopedia from './components/IdolEncyclopedia';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 import './App.css';
 
 type AppState = 'idle' | 'analyzing' | 'result';
 type ViewMode = 'identification' | 'encyclopedia';
 
-function App() {
+function MainContent() {
   const { t, i18n } = useTranslation();
   const { model, isModelLoading, predict } = useTeachableMachine();
-  
+
   const [viewMode, setViewMode] = useState<ViewMode>('identification');
-  const [appState, setAppState] = useState<AppState>('idle');
+...
+
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [predictions, setPredictions] = useState<any[]>([]);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -58,20 +62,20 @@ function App() {
 
   return (
     <div className="min-h-screen bg-black text-slate-50 font-sans flex flex-col relative overflow-hidden">
-      {/* Global Scanlines */}
       <div className="scanlines"></div>
 
-      {/* Header */}
       <header className="px-4 py-4 md:px-8 md:py-6 flex justify-between items-center bg-black/40 backdrop-blur-2xl border-b border-white/5 sticky top-0 z-50">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-tr from-neon-pink via-neon-purple to-neon-blue rounded-xl flex items-center justify-center neon-shadow-purple rotate-3">
-            <Star className="w-6 h-6 md:w-7 md:h-7 text-white fill-white" />
-          </div>
-          <div>
-            <div className="text-white font-black text-xl md:text-2xl uppercase tracking-tighter leading-none glitch-text pr-1">
-              {t('app_title')}
+          <Link to="/" onClick={() => setViewMode('identification')} className="flex items-center gap-3">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-tr from-neon-pink via-neon-purple to-neon-blue rounded-xl flex items-center justify-center neon-shadow-purple rotate-3">
+              <Star className="w-6 h-6 md:w-7 md:h-7 text-white fill-white" />
             </div>
-          </div>
+            <div>
+              <div className="text-white font-black text-xl md:text-2xl uppercase tracking-tighter leading-none glitch-text pr-1">
+                {t('app_title')}
+              </div>
+            </div>
+          </Link>
         </div>
         
         <div className="flex items-center gap-2 md:gap-6">
@@ -100,7 +104,6 @@ function App() {
             <span className="hidden xs:inline">{i18n.language.toUpperCase()}</span>
           </button>
 
-          {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2.5 rounded-xl bg-white/5 border border-white/10 text-white"
@@ -110,7 +113,6 @@ function App() {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center p-6 md:hidden">
           <nav className="flex flex-col gap-6 w-full max-w-xs">
@@ -132,12 +134,10 @@ function App() {
         </div>
       )}
 
-      {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-center p-4 md:p-8 w-full max-w-7xl mx-auto z-10">
         
         {viewMode === 'identification' ? (
           <>
-            {/* Intro Text */}
             {appState === 'idle' && (
               <div className="text-center mb-8 md:mb-12 animate-fade-in-up w-full px-2">
                 <h1 className="text-5xl xs:text-6xl md:text-8xl font-black mb-4 md:mb-6 tracking-tighter italic text-white leading-[1.1] md:leading-none">
@@ -150,7 +150,6 @@ function App() {
               </div>
             )}
 
-            {/* Upload Area */}
             {appState === 'idle' && (
               <div className="w-full max-w-lg px-2">
                 {isModelLoading ? (
@@ -193,7 +192,6 @@ function App() {
               </div>
             )}
 
-            {/* Analyzing View */}
             {appState === 'analyzing' && selectedImage && (
               <div className="flex flex-col items-center justify-center w-full max-w-lg animate-fade-in-up px-2">
                 <div className="relative rounded-[28px] md:rounded-[32px] overflow-hidden mb-8 md:mb-12 border-4 border-neon-purple/50 neon-shadow-purple w-full aspect-square md:aspect-auto">
@@ -204,8 +202,6 @@ function App() {
                     className="w-full h-full md:h-auto md:max-h-[500px] object-cover opacity-70 grayscale contrast-125"
                     crossOrigin="anonymous"
                   />
-                  
-                  {/* Multi-color Scanning Animation */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
                     <div className="w-full h-2 bg-gradient-to-r from-neon-pink via-neon-blue to-neon-green shadow-[0_0_25px_rgba(255,255,255,0.8)] absolute top-0 animate-[scan_2s_linear_infinite]"></div>
                     <Crosshair className="w-16 h-16 md:w-24 md:h-24 text-white opacity-40 animate-pulse rotate-45" />
@@ -216,24 +212,12 @@ function App() {
                   <p className="text-xl md:text-2xl font-black italic tracking-[0.2em] text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink animate-pulse uppercase">
                     {t('analyzing')}
                   </p>
-                  <div className="mt-4 md:mt-6 flex gap-1.5 md:gap-2 justify-center">
-                    {['#00ffff', '#ff00ff', '#9d00ff', '#39ff14', '#fff01f'].map((color, i) => (
-                      <div key={i} className="w-8 md:w-10 h-1.5 bg-white/10 overflow-hidden rounded-full">
-                        <div 
-                          className="w-full h-full animate-[pulse_1s_infinite]" 
-                          style={{ backgroundColor: color, animationDelay: `${i * 0.1}s` }}
-                        ></div>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
             )}
 
-            {/* Result View */}
             {appState === 'result' && selectedImage && predictions.length > 0 && (
               <div className="w-full max-w-5xl flex flex-col items-center animate-fade-in-up px-2 pb-10">
-                
                 <div className="flex items-center gap-4 md:gap-6 mb-8 md:mb-12">
                   <div className="h-px w-10 xs:w-20 md:w-40 bg-gradient-to-r from-transparent via-neon-pink to-transparent"></div>
                   <h2 className="text-2xl xs:text-3xl md:text-6xl font-black italic text-white uppercase tracking-tighter flex items-center gap-3 md:gap-4 glitch-text pr-2">
@@ -244,7 +228,6 @@ function App() {
 
                 <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[48px] p-1 w-full mb-8 md:mb-12">
                   <div className="bg-black/80 backdrop-blur-3xl rounded-[30px] md:rounded-[46px] p-6 md:p-14 flex flex-col md:flex-row gap-8 md:gap-14 items-center">
-                    
                     <div className="relative group w-full md:w-auto flex justify-center">
                       <div className="w-56 h-56 md:w-80 md:h-80 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-white/10 relative flex-shrink-0 neon-shadow-purple">
                         <img 
@@ -273,34 +256,7 @@ function App() {
                             <span className="text-neon-blue font-mono text-sm md:text-xl font-black">%</span>
                           </div>
                         </div>
-
-                        <div className="bg-white/5 border border-neon-green/30 rounded-2xl p-4 md:p-6 flex flex-col items-center md:items-start backdrop-blur-md">
-                          <p className="text-slate-500 font-mono text-[9px] md:text-[10px] uppercase font-black mb-1 md:mb-2 tracking-widest">Potential</p>
-                          <div className="flex items-center gap-2 md:gap-3">
-                            <Zap className="w-5 h-5 md:w-7 md:h-7 text-neon-green fill-neon-green" />
-                            <span className="text-xl md:text-3xl font-black text-neon-green uppercase italic pr-1">S-CLASS</span>
-                          </div>
-                        </div>
                       </div>
-
-                      {predictions.length > 1 && (
-                        <div className="space-y-3">
-                          <p className="text-[9px] font-mono text-slate-500 uppercase tracking-[0.3em] font-black text-left">Alternatives:</p>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            {predictions.slice(1, 3).map((pred: any, i: number) => (
-                              <div key={i} className="flex justify-between items-center bg-white/5 p-3 rounded-xl border border-white/5">
-                                <span className="text-xs font-black text-slate-300 uppercase italic tracking-tight truncate pr-4">{pred.className}</span>
-                                <div className="flex items-center gap-2 flex-shrink-0">
-                                  <div className="w-12 xs:w-16 h-1 bg-white/10 rounded-full overflow-hidden">
-                                    <div className="h-full bg-neon-purple" style={{ width: `${Math.round(pred.probability * 100)}%` }}></div>
-                                  </div>
-                                  <span className="text-[10px] font-mono font-black text-neon-purple">{Math.round(pred.probability * 100)}%</span>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
                     </div>
                   </div>
                 </div>
@@ -321,13 +277,17 @@ function App() {
         )}
       </main>
 
-      {/* Footer */}
-      <footer className="p-4 md:p-6 flex justify-center items-center border-t border-white/5 bg-black/40 backdrop-blur-md z-10">
+      <footer className="p-8 md:p-12 flex flex-col items-center border-t border-white/5 bg-black/40 backdrop-blur-md z-10">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-12 mb-8">
+          <Link to="/privacy" className="text-slate-400 hover:text-neon-blue transition-colors text-xs font-mono uppercase tracking-widest">Privacy Policy</Link>
+          <Link to="/terms" className="text-slate-400 hover:text-neon-pink transition-colors text-xs font-mono uppercase tracking-widest">Terms of Service</Link>
+        </div>
         <div className="flex gap-4 md:gap-6">
           <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-neon-blue animate-pulse neon-shadow-blue"></div>
           <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-neon-pink animate-pulse neon-shadow-pink" style={{ animationDelay: '0.3s' }}></div>
           <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-neon-green animate-pulse neon-shadow-green" style={{ animationDelay: '0.6s' }}></div>
         </div>
+        <p className="mt-8 text-slate-600 font-mono text-[10px] uppercase tracking-[0.2em]">© 2026 K-POP STUDIO. ALL RIGHTS RESERVED.</p>
       </footer>
 
       <style>{`
@@ -344,13 +304,20 @@ function App() {
         .animate-fade-in-up {
           animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
-        @media (max-width: 480px) {
-          .glitch-text {
-            text-shadow: 1px 0 var(--color-neon-pink), -1px 0 var(--color-neon-blue);
-          }
-        }
       `}</style>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter basename="/KPOP-STUDIO">
+      <Routes>
+        <Route path="/" element={<MainContent />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsOfService />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
