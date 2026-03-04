@@ -307,11 +307,10 @@ const IdolEncyclopedia: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-2">
-              <div className="flex justify-between items-end">
-                <h3 className="text-3xl font-black text-white group-hover:text-neon-blue transition-all italic tracking-tighter pr-2 leading-none">{group.name[currentLang]}</h3>
-                <span className="text-[10px] font-mono text-slate-500 uppercase font-black">{group.debut}</span>
-              </div>
+            <div className="flex flex-col gap-2 mt-4">
+              <h3 className="text-3xl font-black text-white group-hover:text-neon-blue transition-all italic tracking-tighter pr-2 leading-none">
+                {currentLang === 'ko' ? `${group.name.ko} (${group.name.en})` : `${group.name.en} (${group.name.ko})`}
+              </h3>
               <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed mb-4">{group.description[currentLang]}</p>
               
               <button className="w-full py-3 bg-white/5 rounded-xl border border-white/10 text-xs font-mono font-black uppercase tracking-widest text-slate-300 group-hover:bg-neon-blue group-hover:text-black group-hover:border-transparent transition-all">
