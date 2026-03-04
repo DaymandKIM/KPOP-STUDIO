@@ -9,7 +9,11 @@ const SafeImage: React.FC<{ src: string; alt: string; className?: string; accent
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const proxiedSrc = src ? `https://images.weserv.nl/?url=${encodeURIComponent(src.replace(/^https?:\/\//, ''))}&w=800` : src;
+  const proxiedSrc = src 
+    ? (src.includes('naver.net') || src.includes('pstatic.net') 
+        ? src 
+        : `https://images.weserv.nl/?url=${encodeURIComponent(src.replace(/^https?:\/\//, ''))}&w=800`) 
+    : src;
 
   if (error || !src) {
     return (
