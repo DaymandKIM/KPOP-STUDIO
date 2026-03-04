@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Search, User, Star, ChevronLeft, ExternalLink, MessageCircle, Newspaper, ImageOff, Sparkles, Calendar, Fingerprint, Moon } from 'lucide-react';
+import { Search, User, Star, ChevronLeft, ExternalLink, MessageCircle, Newspaper, Sparkles, Calendar, Fingerprint, Moon } from 'lucide-react';
 import { KPOP_GROUPS } from '../data/idols';
 import type { KpopGroup } from '../data/idols';
 
-// Enhanced Safe Image Component
+// Enhanced Safe Image Component with Image Proxy Bypass
 const SafeImage: React.FC<{ src: string; alt: string; className?: string; accentColor?: string }> = ({ src, alt, className, accentColor = '#00ffff' }) => {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
+
+  const proxiedSrc = src ? `https://images.weserv.nl/?url=${encodeURIComponent(src.replace(/^https?:\/\//, ''))}&w=800` : src;
 
   if (error || !src) {
     return (
@@ -38,9 +40,10 @@ const SafeImage: React.FC<{ src: string; alt: string; className?: string; accent
         </div>
       )}
       <img 
-        src={src} 
+        src={proxiedSrc} 
         alt={alt} 
         className={`${className} transition-opacity duration-700 ${loading ? 'opacity-0' : 'opacity-100'}`} 
+        referrerPolicy="no-referrer"
         onError={() => { setError(true); setLoading(false); }}
         onLoad={() => setLoading(false)}
         loading="lazy"
@@ -50,13 +53,14 @@ const SafeImage: React.FC<{ src: string; alt: string; className?: string; accent
 };
 
 const IdolEncyclopedia: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language === 'ko' ? 'ko' : 'en') as 'ko' | 'en';
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedGroup, setSelectedGroup] = useState<KpopGroup | null>(null);
 
   const filteredGroups = KPOP_GROUPS.filter(group => 
-    group.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    group.nameEn.toLowerCase().includes(searchTerm.toLowerCase())
+    group.name.ko.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    group.name.en.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handleBackToList = () => {
@@ -74,14 +78,14 @@ const IdolEncyclopedia: React.FC = () => {
             className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors font-mono uppercase text-sm mb-4 md:mb-0"
           >
             <ChevronLeft className="w-5 h-5" />
-            Back to List
+            {currentLang === 'ko' ? '목록으로' : 'Back to List'}
           </button>
           
           <div className="flex-1 flex flex-col md:flex-row gap-8 items-center md:items-start">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-[40px] overflow-hidden border-4 border-white/10 neon-shadow-purple flex-shrink-0">
               <SafeImage 
                 src={selectedGroup.imageUrl} 
-                alt={selectedGroup.name} 
+                alt={selectedGroup.name[currentLang]} 
                 className="w-full h-full object-cover" 
                 accentColor={selectedGroup.accentColor}
               />
@@ -91,8 +95,8 @@ const IdolEncyclopedia: React.FC = () => {
                 <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-mono text-slate-400 uppercase tracking-widest">{selectedGroup.company}</span>
                 <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-mono text-slate-400 uppercase tracking-widest">Debut: {selectedGroup.debut}</span>
               </div>
-              <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4 pr-4 leading-none">{selectedGroup.name}</h2>
-              <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">{selectedGroup.description}</p>
+              <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4 pr-4 leading-none">{selectedGroup.name[currentLang]}</h2>
+              <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">{selectedGroup.description[currentLang]}</p>
             </div>
           </div>
         </div>
@@ -103,18 +107,18 @@ const IdolEncyclopedia: React.FC = () => {
             <div className="w-10 h-10 rounded-xl bg-neon-pink/10 flex items-center justify-center border border-neon-pink/30">
               <User className="w-6 h-6 text-neon-pink" />
             </div>
-            <h3 className="text-2xl font-black text-white uppercase italic">Complete Members</h3>
+            <h3 className="text-2xl font-black text-white uppercase italic">{currentLang === 'ko' ? '멤버 프로필' : 'Members'}</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {selectedGroup.members.map((member, i) => (
-              <div key={i} className="glass-card rounded-[32px] p-6 border-white/5 flex flex-col gap-6 hover:border-white/20 transition-all group relative overflow-hidden">
+            {selectedGroup.members.map((member) => (
+              <div key={member.id} className="glass-card rounded-[32px] p-6 border-white/5 flex flex-col gap-6 hover:border-white/20 transition-all group relative overflow-hidden">
                 <div className="flex gap-6 items-start relative z-10">
                   <div className="w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden flex-shrink-0 border-2 border-white/10 group-hover:neon-shadow-blue transition-all">
-                    <SafeImage src={member.imageUrl} alt={member.name} className="w-full h-full object-cover" accentColor={selectedGroup.accentColor} />
+                    <SafeImage src={member.imageUrl} alt={member.name[currentLang]} className="w-full h-full object-cover" accentColor={selectedGroup.accentColor} />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-2xl font-black text-white mb-1">{member.name}</h4>
-                    <p className="text-neon-blue font-mono text-[10px] uppercase font-black mb-4 tracking-widest">{member.role}</p>
+                    <h4 className="text-2xl font-black text-white mb-1">{member.name[currentLang]}</h4>
+                    <p className="text-neon-blue font-mono text-[10px] uppercase font-black mb-4 tracking-widest">{member.role[currentLang]}</p>
                     
                     <div className="flex flex-wrap gap-2">
                       <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
@@ -127,15 +131,12 @@ const IdolEncyclopedia: React.FC = () => {
                       </div>
                       <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
                         <Moon className="w-3 h-3 text-neon-yellow" />
-                        {member.zodiac}
+                        {member.zodiac[currentLang]}
                       </div>
                     </div>
                   </div>
                 </div>
-                <p className="text-slate-400 text-sm leading-relaxed relative z-10">{member.description}</p>
-                
-                {/* Decoration */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <p className="text-slate-400 text-sm leading-relaxed relative z-10">{member.description[currentLang]}</p>
               </div>
             ))}
           </div>
@@ -151,7 +152,7 @@ const IdolEncyclopedia: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-black text-white uppercase italic">Overview</h3>
               </div>
-              <p className="text-slate-300 leading-relaxed text-lg whitespace-pre-wrap">{selectedGroup.wiki}</p>
+              <p className="text-slate-300 leading-relaxed text-lg whitespace-pre-wrap">{selectedGroup.wiki[currentLang]}</p>
             </section>
           </div>
 
@@ -161,16 +162,16 @@ const IdolEncyclopedia: React.FC = () => {
                 <div className="w-10 h-10 rounded-xl bg-neon-green/10 flex items-center justify-center border border-neon-green/30">
                   <Newspaper className="w-6 h-6 text-neon-green" />
                 </div>
-                <h3 className="text-2xl font-black text-white uppercase italic">Latest News</h3>
+                <h3 className="text-2xl font-black text-white uppercase italic">{currentLang === 'ko' ? '최신 뉴스' : 'Latest News'}</h3>
               </div>
               <div className="space-y-6">
                 {selectedGroup.news.map((news, i) => (
                   <div key={i} className="border-b border-white/5 pb-6 last:border-0 last:pb-0">
                     <div className="text-[10px] font-mono text-neon-green font-bold uppercase mb-2">{news.date}</div>
                     <h4 className="text-lg font-bold text-white mb-3 hover:text-neon-green cursor-pointer transition-colors leading-snug">
-                      {news.title}
+                      {news.title[currentLang]}
                     </h4>
-                    <p className="text-slate-400 text-sm mb-4 line-clamp-3">{news.summary}</p>
+                    <p className="text-slate-400 text-sm mb-4 line-clamp-3">{news.summary[currentLang]}</p>
                     <a href={news.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-mono text-slate-500 hover:text-white uppercase font-black">
                       Read on Naver <ExternalLink className="w-3 h-3" />
                     </a>
@@ -184,10 +185,10 @@ const IdolEncyclopedia: React.FC = () => {
                 <div className="w-10 h-10 rounded-xl bg-neon-yellow/10 flex items-center justify-center border border-neon-yellow/30">
                   <MessageCircle className="w-6 h-6 text-neon-yellow" />
                 </div>
-                <h3 className="text-2xl font-black text-white uppercase italic">Fan Gossip</h3>
+                <h3 className="text-2xl font-black text-white uppercase italic">{currentLang === 'ko' ? '팬 가십' : 'Fan Gossip'}</h3>
               </div>
               <ul className="space-y-4">
-                {selectedGroup.gossip.map((fact, i) => (
+                {selectedGroup.gossip[currentLang].map((fact, i) => (
                   <li key={i} className="flex gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-neon-yellow flex-shrink-0 mt-2"></span>
                     <p className="text-slate-300 text-sm leading-relaxed">{fact}</p>
@@ -227,7 +228,7 @@ const IdolEncyclopedia: React.FC = () => {
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-6 border border-white/10 group-hover:neon-shadow-blue transition-all duration-500">
               <SafeImage 
                 src={group.imageUrl} 
-                alt={group.name} 
+                alt={group.name[currentLang]} 
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                 accentColor={group.accentColor}
               />
@@ -239,13 +240,13 @@ const IdolEncyclopedia: React.FC = () => {
 
             <div className="flex flex-col gap-2">
               <div className="flex justify-between items-end">
-                <h3 className="text-3xl font-black text-white group-hover:text-neon-blue transition-all italic tracking-tighter pr-2 leading-none">{group.name}</h3>
+                <h3 className="text-3xl font-black text-white group-hover:text-neon-blue transition-all italic tracking-tighter pr-2 leading-none">{group.name[currentLang]}</h3>
                 <span className="text-[10px] font-mono text-slate-500 uppercase font-black">{group.debut}</span>
               </div>
-              <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed mb-4">{group.description}</p>
+              <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed mb-4">{group.description[currentLang]}</p>
               
               <button className="w-full py-3 bg-white/5 rounded-xl border border-white/10 text-xs font-mono font-black uppercase tracking-widest text-slate-300 group-hover:bg-neon-blue group-hover:text-black group-hover:border-transparent transition-all">
-                Enter Profile
+                {currentLang === 'ko' ? '프로필 입장' : 'Enter Profile'}
               </button>
             </div>
           </div>
