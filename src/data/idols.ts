@@ -35,6 +35,454 @@ export interface KpopGroup {
 
 export const KPOP_GROUPS: KpopGroup[] = [
   {
+    id: "blackpink",
+    name: { ko: "블랙핑크", en: "BLACKPINK" },
+    company: "YG Entertainment",
+    debut: "2016.08.08",
+    fandom: { ko: "블링크 (BLINK)", en: "BLINK" },
+    accentColor: "#ff66c4",
+    imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5092%2F2023%2F12%2F06%2F0000213034_001_20231206103005886.jpg",
+    wiki: {
+      ko: "블랙핑크(BLACKPINK)는 YG 소속의 4인조 다국적 걸그룹이다. 세계에서 가장 많은 유튜브 구독자를 보유한 아티스트로 전 세계적인 파급력을 자랑한다.",
+      en: "BLACKPINK is a 4-member multinational girl group under YG. They are artists with the most YouTube subscribers globally, boasting worldwide influence."
+    },
+    description: {
+      ko: "명실상부 글로벌 탑티어, 전 세계를 휩쓰는 K-POP 여왕들입니다.",
+      en: "Undeniable global top-tier, the queens of K-POP sweeping the world."
+    },
+    gossip: {
+      ko: [
+        "멤버 전원이 디올, 샤넬, 생로랑, 셀린느 등 세계적인 하이엔드 명품 브랜드의 글로벌 앰버서더입니다.",
+        "K-POP 걸그룹 최초로 코첼라 헤드라이너로 섰습니다."
+      ],
+      en: [
+        "All members are global ambassadors for luxury brands like Dior, Chanel, Saint Laurent, and Celine.",
+        "The first K-POP girl group to headline Coachella."
+      ]
+    },
+    news: [
+      {
+        title: { ko: "블랙핑크, 완전체 월드투어 'BORN PINK' 성료", en: "BLACKPINK Completes Full-Group World Tour 'BORN PINK'" },
+        date: "2024.09.17",
+        summary: { ko: "K-POP 걸그룹 사상 최대 규모의 월드투어를 성공적으로 마무리했습니다.", en: "Successfully concluded the largest-scale world tour in K-POP girl group history." },
+        url: "https://search.naver.com/search.naver?query=블랙핑크"
+      }
+    ],
+    members: [
+      {
+        id: "jisoo",
+        name: { ko: "지수", en: "Jisoo" },
+        role: { ko: "리드보컬", en: "Lead Vocalist" },
+        birth: "1995.01.03",
+        mbti: "ISTP",
+        zodiac: { ko: "염소자리", en: "Capricorn" },
+        height: "162cm",
+        bloodType: "A",
+        description: { ko: "한국적인 아름다움을 지닌 정석 미녀. 특유의 허스키한 중저음 보이스가 매력입니다.", en: "A standard beauty with Korean elegance. Her unique husky deep voice is charming." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5441%2F2023%2F03%2F31%2F0000084534_001_20230331084203598.jpg"
+      },
+      {
+        id: "jennie",
+        name: { ko: "제니", en: "Jennie" },
+        role: { ko: "메인래퍼/리드보컬", en: "Main Rapper/Lead Vocalist" },
+        birth: "1996.01.16",
+        mbti: "INFP",
+        zodiac: { ko: "염소자리", en: "Capricorn" },
+        height: "163cm",
+        bloodType: "B",
+        description: { ko: "'인간 샤넬'로 불리는 트렌드 아이콘. 카리스마 있는 랩과 보컬을 겸비했습니다.", en: "A trend icon called 'Human Chanel'. Possesses both charismatic rap and vocals." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5338%2F2023%2F05%2F10%2F0000213194_001_20230510100405234.jpg"
+      },
+      {
+        id: "rose",
+        name: { ko: "로제", en: "Rosé" },
+        role: { ko: "메인보컬/리드댄서", en: "Main Vocalist/Lead Dancer" },
+        birth: "1997.02.11",
+        mbti: "ENFP",
+        zodiac: { ko: "물병자리", en: "Aquarius" },
+        height: "168cm",
+        bloodType: "B",
+        description: { ko: "독보적인 황금 음색의 소유자. 슬렌더 피지컬에서 나오는 춤선이 아름답습니다.", en: "Possesses an unmatched golden voice. Her dance lines from a slender physique are beautiful." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5467%2F2024%2F02%2F11%2F0000109034_001_20240211102504885.jpg"
+      },
+      {
+        id: "lisa",
+        name: { ko: "리사", en: "Lisa" },
+        role: { ko: "메인댄서/리드래퍼", en: "Main Dancer/Lead Rapper" },
+        birth: "1997.03.27",
+        mbti: "ESFP",
+        zodiac: { ko: "양자리", en: "Aries" },
+        height: "166.5cm",
+        bloodType: "O",
+        description: { ko: "무대를 찢어놓는 천재적인 댄스 실력과 완벽한 비율을 가진 태국인 멤버.", en: "Thai member with genius dance skills that tear up the stage and perfect proportions." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5113%2F2023%2F07%2F12%2F0000215394_001_20230712102005456.jpg"
+      }
+    ]
+  },
+  {
+    id: "bts",
+    name: { ko: "방탄소년단", en: "BTS" },
+    company: "BIGHIT MUSIC",
+    debut: "2013.06.13",
+    fandom: { ko: "아미 (ARMY)", en: "ARMY" },
+    accentColor: "#b200ff",
+    imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5092%2F2023%2F06%2F13%2F0000213034_001_20230613103005886.jpg",
+    wiki: {
+      ko: "방탄소년단(BTS)은 빅히트 뮤직 소속 7인조 보이그룹이다. 빌보드 핫 100 1위를 수차례 차지하며 K-POP을 넘어 21세기 팝 아이콘으로 자리매김했다.",
+      en: "BTS is a 7-member boy group under BIGHIT MUSIC. By topping the Billboard Hot 100 multiple times, they established themselves as 21st-century pop icons beyond K-POP."
+    },
+    description: {
+      ko: "설명이 필요 없는 21세기 팝 아이콘, 전 세계 음악의 역사를 새로 쓴 그룹입니다.",
+      en: "21st-century pop icons needing no explanation, the group that rewrote global music history."
+    },
+    gossip: {
+      ko: [
+        "빌보드 뮤직 어워즈, 아메리칸 뮤직 어워즈 등을 휩쓸며 한국 음악의 위상을 드높였습니다.",
+        "유엔(UN) 총회 연설, 백악관 방문 등 음악 외적으로도 막대한 선한 영향력을 행사합니다."
+      ],
+      en: [
+        "Raised the status of Korean music by sweeping Billboard Music Awards, AMAs, etc.",
+        "Exercise immense positive influence beyond music, such as speaking at the UN and visiting the White House."
+      ]
+    },
+    news: [
+      {
+        title: { ko: "방탄소년단, 군 복무 마치고 2025년 완전체 컴백 예고", en: "BTS Predicts Full-Group Comeback in 2025 After Military Service" },
+        date: "2024.12.30",
+        summary: { ko: "멤버들이 국방의 의무를 마치고 다시 모일 2025년에 전 세계의 이목이 집중되고 있습니다.", en: "The world's attention is focused on 2025 when members reunite after completing military duties." },
+        url: "https://search.naver.com/search.naver?query=방탄소년단"
+      }
+    ],
+    members: [
+      {
+        id: "rm",
+        name: { ko: "RM", en: "RM" },
+        role: { ko: "리더/메인래퍼", en: "Leader/Main Rapper" },
+        birth: "1994.09.12",
+        mbti: "ENFP",
+        zodiac: { ko: "처녀자리", en: "Virgo" },
+        height: "181cm",
+        bloodType: "A",
+        description: { ko: "팀의 든든한 리더이자 뛰어난 작사/작곡 능력을 갖춘 지성파 래퍼.", en: "The solid leader of the team and an intellectual rapper with excellent songwriting skills." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5441%2F2023%2F11%2F20%2F0000084534_001_20231120084203598.jpg"
+      },
+      {
+        id: "jin",
+        name: { ko: "진", en: "Jin" },
+        role: { ko: "서브보컬", en: "Sub Vocalist" },
+        birth: "1992.12.04",
+        mbti: "INTP",
+        zodiac: { ko: "사수자리", en: "Sagittarius" },
+        height: "179cm",
+        bloodType: "O",
+        description: { ko: "스스로를 '월드와이드 핸섬'이라 부르는 팀의 맏형. 맑고 서정적인 음색이 매력적입니다.", en: "The oldest brother who calls himself 'Worldwide Handsome'. His clear and lyrical voice is charming." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5338%2F2024%2F06%2F12%2F0000213194_001_20240612100405234.jpg"
+      },
+      {
+        id: "suga",
+        name: { ko: "슈가", en: "SUGA" },
+        role: { ko: "리드래퍼", en: "Lead Rapper" },
+        birth: "1993.03.09",
+        mbti: "ISTP",
+        zodiac: { ko: "물고기자리", en: "Pisces" },
+        height: "174cm",
+        bloodType: "O",
+        description: { ko: "팀의 뼈대를 만드는 천재 프로듀서. 날카롭고 묵직한 래핑을 보여줍니다.", en: "The genius producer forming the team's backbone. Shows sharp and heavy rapping." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5467%2F2023%2F05%2F11%2F0000109034_001_20230511102504885.jpg"
+      },
+      {
+        id: "jhope",
+        name: { ko: "제이홉", en: "j-hope" },
+        role: { ko: "메인댄서/서브래퍼", en: "Main Dancer/Sub Rapper" },
+        birth: "1994.02.18",
+        mbti: "INFJ",
+        zodiac: { ko: "물병자리", en: "Aquarius" },
+        height: "177cm",
+        bloodType: "A",
+        description: { ko: "팀의 안무 반장이자 비타민 같은 존재. 특유의 밝은 에너지와 뛰어난 리듬감을 가졌습니다.", en: "The team's dance captain and vitamin-like presence. Has unique bright energy and rhythm." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5113%2F2023%2F02%2F18%2F0000215394_001_20230218102005456.jpg"
+      },
+      {
+        id: "jimin",
+        name: { ko: "지민", en: "Jimin" },
+        role: { ko: "메인댄서/리드보컬", en: "Main Dancer/Lead Vocalist" },
+        birth: "1995.10.13",
+        mbti: "ESTP",
+        zodiac: { ko: "천칭자리", en: "Libra" },
+        height: "174cm",
+        bloodType: "A",
+        description: { ko: "현대무용 전공자 다운 우아한 춤선과 도입부 장인으로 불리는 독보적 음색.", en: "Elegant dance lines from modern dance background and a unique voice known as the intro master." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5441%2F2023%2F03%2F24%2F0000084534_001_20230324084203598.jpg"
+      },
+      {
+        id: "v",
+        name: { ko: "뷔", en: "V" },
+        role: { ko: "서브보컬/리드댄서", en: "Sub Vocalist/Lead Dancer" },
+        birth: "1995.12.30",
+        mbti: "INFP",
+        zodiac: { ko: "염소자리", en: "Capricorn" },
+        height: "179cm",
+        bloodType: "AB",
+        description: { ko: "세계 1위 미남으로 자주 꼽히는 조각 비주얼. 소울풀한 저음이 매력적입니다.", en: "Sculpted visuals often ranked #1 most handsome. His soulful deep voice is attractive." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5338%2F2023%2F09%2F08%2F0000213194_001_20230908100405234.jpg"
+      },
+      {
+        id: "jungkook",
+        name: { ko: "정국", en: "Jungkook" },
+        role: { ko: "메인보컬/리드댄서", en: "Main Vocalist/Lead Dancer" },
+        birth: "1997.09.01",
+        mbti: "INTP",
+        zodiac: { ko: "처녀자리", en: "Virgo" },
+        height: "179cm",
+        bloodType: "A",
+        description: { ko: "못하는 게 없는 황금 막내. 탄탄한 보컬 라이브 실력과 퍼포먼스로 팀의 센터를 맡고 있습니다.", en: "The Golden Maknae who can do everything. Centers the team with solid live vocals and performance." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5467%2F2023%2F11%2F03%2F0000109034_001_20231103102504885.jpg"
+      }
+    ]
+  },
+  {
+    id: "g_idle",
+    name: { ko: "(여자)아이들", en: "(G)I-DLE" },
+    company: "Cube Entertainment",
+    debut: "2018.05.02",
+    fandom: { ko: "네버랜드 (NEVERLAND)", en: "NEVERLAND" },
+    accentColor: "#e6002b",
+    imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5092%2F2023%2F05%2F15%2F0000213034_001_20230515103005886.jpg",
+    wiki: {
+      ko: "(여자)아이들은 큐브 엔터테인먼트 소속의 5인조 걸그룹이다. 멤버들이 직접 앨범 프로듀싱에 참여하는 실력파 자체 제작돌이다.",
+      en: "(G)I-DLE is a 5-member girl group under Cube. They are a talented self-producing group with members actively participating in album production."
+    },
+    description: {
+      ko: "파격적인 컨셉과 자체 프로듀싱 능력으로 걸크러시의 진수를 보여주는 그룹입니다.",
+      en: "A group showing the essence of girl crush through unconventional concepts and self-producing skills."
+    },
+    gossip: {
+      ko: [
+        "리더 전소연이 모든 타이틀곡을 작사/작곡하는 천재 프로듀서로 유명합니다.",
+        "'TOMBOY', 'Nxde', '퀸카' 3연속 메가 히트를 기록하며 신드롬을 일으켰습니다."
+      ],
+      en: [
+        "Leader Soyeon is famous as a genius producer who writes/composes all title tracks.",
+        "Caused a syndrome with 3 consecutive mega-hits: 'TOMBOY', 'Nxde', and 'Queencard'."
+      ]
+    },
+    news: [
+      {
+        title: { ko: "(여자)아이들, 신곡 빌보드 글로벌 차트 강타", en: "(G)I-DLE's New Song Hits Billboard Global Charts" },
+        date: "2024.02.10",
+        summary: { ko: "자체 프로듀싱 곡으로 글로벌 음악 시장에서 강력한 영향력을 입증했습니다.", en: "Proved strong influence in the global music market with self-produced songs." },
+        url: "https://search.naver.com/search.naver?query=여자아이들"
+      }
+    ],
+    members: [
+      {
+        id: "miyeon",
+        name: { ko: "미연", en: "Miyeon" },
+        role: { ko: "메인보컬", en: "Main Vocalist" },
+        birth: "1997.01.31",
+        mbti: "ENFP",
+        zodiac: { ko: "물병자리", en: "Aquarius" },
+        height: "161cm",
+        bloodType: "B",
+        description: { ko: "화려한 비주얼과 탄탄한 가창력을 겸비한 팀의 맏언니. 엉뚱하고 귀여운 성격입니다.", en: "The oldest member combining gorgeous visuals and solid vocals. Has a quirky, cute personality." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5441%2F2023%2F11%2F20%2F0000084534_001_20231120084203598.jpg"
+      },
+      {
+        id: "minnie",
+        name: { ko: "민니", en: "Minnie" },
+        role: { ko: "메인보컬", en: "Main Vocalist" },
+        birth: "1997.10.23",
+        mbti: "ENFJ",
+        zodiac: { ko: "전갈자리", en: "Scorpio" },
+        height: "167cm",
+        bloodType: "O",
+        description: { ko: "몽환적이고 독특한 음색을 가진 태국인 멤버. 팀의 세련된 분위기를 담당합니다.", en: "Thai member with a dreamy, unique voice. In charge of the team's sophisticated vibe." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5338%2F2023%2F05%2F10%2F0000213194_001_20230510100405234.jpg"
+      },
+      {
+        id: "soyeon",
+        name: { ko: "소연", en: "Soyeon" },
+        role: { ko: "리더/메인래퍼", en: "Leader/Main Rapper" },
+        birth: "1998.08.26",
+        mbti: "INTP",
+        zodiac: { ko: "처녀자리", en: "Virgo" },
+        height: "157cm",
+        bloodType: "B",
+        description: { ko: "팀의 총괄 프로듀서이자 압도적인 랩핑, 무대 장악력을 보여주는 천재 리더.", en: "The genius leader, executive producer showing overwhelming rapping and stage presence." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5467%2F2023%2F05%2F11%2F0000109034_001_20230511102504885.jpg"
+      },
+      {
+        id: "yuqi",
+        name: { ko: "우기", en: "Yuqi" },
+        role: { ko: "리드보컬/리드댄서", en: "Lead Vocalist/Lead Dancer" },
+        birth: "1999.09.23",
+        mbti: "ESFJ",
+        zodiac: { ko: "천칭자리", en: "Libra" },
+        height: "163cm",
+        bloodType: "O",
+        description: { ko: "허스키한 저음이 매력적인 중국인 멤버. 밝은 성격으로 예능에서도 맹활약 중입니다.", en: "Chinese member charming with husky deep vocals. Active in variety shows with her bright personality." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5113%2F2023%2F02%2F18%2F0000215394_001_20230218102005456.jpg"
+      },
+      {
+        id: "shuhua",
+        name: { ko: "슈화", en: "Shuhua" },
+        role: { ko: "서브보컬", en: "Sub Vocalist" },
+        birth: "2000.01.06",
+        mbti: "INFP",
+        zodiac: { ko: "염소자리", en: "Capricorn" },
+        height: "161cm",
+        bloodType: "A",
+        description: { ko: "청순한 비주얼의 대만 출신 막내. 당당하고 솔직한 성격이 매력 포인트입니다.", en: "Youngest member from Taiwan with innocent visuals. Her confident and honest personality is charming." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5441%2F2023%2F03%2F24%2F0000084534_001_20230324084203598.jpg"
+      }
+    ]
+  },
+  {
+    id: "twice",
+    name: { ko: "트와이스", en: "TWICE" },
+    company: "JYP Entertainment",
+    debut: "2015.10.20",
+    fandom: { ko: "원스 (ONCE)", en: "ONCE" },
+    accentColor: "#ff5fa2",
+    imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5092%2F2023%2F03%2F10%2F0000213034_001_20230310103005886.jpg",
+    wiki: {
+      ko: "트와이스(TWICE)는 JYP 소속 9인조 다국적 걸그룹이다. '눈으로 한 번, 귀로 한 번 감동을 준다'는 뜻을 가졌다.",
+      en: "TWICE is a 9-member multinational girl group under JYP. Meaning they touch people 'once through the eyes, once through the ears'."
+    },
+    description: {
+      ko: "K-POP을 대표하는 국민 걸그룹, 밝고 건강한 에너지로 전 세계 팬들의 사랑을 받고 있습니다.",
+      en: "A national girl group representing K-POP, loved by global fans for their bright and healthy energy."
+    },
+    gossip: {
+      ko: [
+        "한국 걸그룹 최초로 일본 돔 투어 및 미국 스타디움 투어를 매진시킨 레전드입니다.",
+        "데뷔곡부터 수많은 히트곡을 보유한 명실상부 3세대 원탑 걸그룹입니다."
+      ],
+      en: [
+        "Legends who were the first K-pop girl group to sell out Japan dome tours and US stadium tours.",
+        "The undisputed top 3rd-gen girl group with numerous hits since debut."
+      ]
+    },
+    news: [
+      {
+        title: { ko: "트와이스, 빌보드 200 차트 1위 석권", en: "TWICE Tops Billboard 200 Chart" },
+        date: "2024.03.04",
+        summary: { ko: "발매하는 앨범마다 글로벌 차트 정상에 오르며 꾸준한 최정상 인기를 증명합니다.", en: "Proving consistent top popularity by reaching the summit of global charts with every release." },
+        url: "https://search.naver.com/search.naver?query=트와이스"
+      }
+    ],
+    members: [
+      {
+        id: "nayeon",
+        name: { ko: "나연", en: "Nayeon" },
+        role: { ko: "리드보컬/리드댄서", en: "Lead Vocalist/Lead Dancer" },
+        birth: "1995.09.22",
+        mbti: "ISTP",
+        zodiac: { ko: "처녀자리", en: "Virgo" },
+        height: "163cm",
+        bloodType: "A",
+        description: { ko: "팀의 맏언니이자 확신의 센터. 과즙미 넘치는 매력과 탄탄한 보컬 실력을 자랑합니다.", en: "The oldest and undisputed center. Boasts juicy charm and solid vocal skills." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5441%2F2023%2F11%2F20%2F0000084534_001_20231120084203598.jpg"
+      },
+      {
+        id: "jeongyeon",
+        name: { ko: "정연", en: "Jeongyeon" },
+        role: { ko: "리드보컬", en: "Lead Vocalist" },
+        birth: "1996.11.01",
+        mbti: "ISFJ",
+        zodiac: { ko: "전갈자리", en: "Scorpio" },
+        height: "167cm",
+        bloodType: "O",
+        description: { ko: "보이시한 매력과 청순함을 오가는 멤버. 시원시원한 가창력이 돋보입니다.", en: "A member alternating between boyish charm and innocence. Her refreshing vocals stand out." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5338%2F2023%2F05%2F10%2F0000213194_001_20230510100405234.jpg"
+      },
+      {
+        id: "momo",
+        name: { ko: "모모", en: "Momo" },
+        role: { ko: "메인댄서/서브보컬", en: "Main Dancer/Sub Vocalist" },
+        birth: "1996.11.09",
+        mbti: "INFP",
+        zodiac: { ko: "전갈자리", en: "Scorpio" },
+        height: "163cm",
+        bloodType: "A",
+        description: { ko: "K-POP 씬을 대표하는 댄싱 머신인 일본인 멤버. 무대 밖에선 애교가 많습니다.", en: "Japanese member representing the K-POP dancing machine. Full of aegyo off stage." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5467%2F2023%2F05%2F11%2F0000109034_001_20230511102504885.jpg"
+      },
+      {
+        id: "sana",
+        name: { ko: "사나", en: "Sana" },
+        role: { ko: "서브보컬", en: "Sub Vocalist" },
+        birth: "1996.12.29",
+        mbti: "ENFP",
+        zodiac: { ko: "염소자리", en: "Capricorn" },
+        height: "164cm",
+        bloodType: "B",
+        description: { ko: "'샤샤샤' 열풍의 주역인 큐티 섹시 일본인 멤버. 밝고 사랑스러운 성격입니다.", en: "The cute & sexy Japanese member behind the 'Sha Sha Sha' craze. Bright and lovely personality." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5113%2F2023%2F02%2F18%2F0000215394_001_20230218102005456.jpg"
+      },
+      {
+        id: "jihyo",
+        name: { ko: "지효", en: "Jihyo" },
+        role: { ko: "리더/메인보컬", en: "Leader/Main Vocalist" },
+        birth: "1997.02.01",
+        mbti: "ESFP",
+        zodiac: { ko: "물병자리", en: "Aquarius" },
+        height: "160cm",
+        bloodType: "O",
+        description: { ko: "팀을 이끄는 든든한 리더이자 폭발적인 성량을 자랑하는 메인 보컬.", en: "The solid leader guiding the team and main vocalist boasting explosive volume." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5441%2F2023%2F03%2F24%2F0000084534_001_20230324084203598.jpg"
+      },
+      {
+        id: "mina",
+        name: { ko: "미나", en: "Mina" },
+        role: { ko: "메인댄서/서브보컬", en: "Main Dancer/Sub Vocalist" },
+        birth: "1997.03.24",
+        mbti: "ISFP",
+        zodiac: { ko: "양자리", en: "Aries" },
+        height: "163cm",
+        bloodType: "A",
+        description: { ko: "발레 전공 특유의 우아함과 고급스러운 분위기를 풍기는 일본인 멤버.", en: "Japanese member exuding unique elegance and luxurious vibe from ballet background." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5338%2F2023%2F09%2F08%2F0000213194_001_20230908100405234.jpg"
+      },
+      {
+        id: "dahyun",
+        name: { ko: "다현", en: "Dahyun" },
+        role: { ko: "리드래퍼/서브보컬", en: "Lead Rapper/Sub Vocalist" },
+        birth: "1998.05.28",
+        mbti: "ISFJ",
+        zodiac: { ko: "쌍둥이자리", en: "Gemini" },
+        height: "161cm",
+        bloodType: "O",
+        description: { ko: "두부처럼 하얀 피부와 넘치는 예능감으로 분위기 메이커를 담당합니다.", en: "Mood maker with tofu-like white skin and overflowing variety skills." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5467%2F2023%2F11%2F03%2F0000109034_001_20231103102504885.jpg"
+      },
+      {
+        id: "chaeyoung",
+        name: { ko: "채영", en: "Chaeyoung" },
+        role: { ko: "메인래퍼/서브보컬", en: "Main Rapper/Sub Vocalist" },
+        birth: "1999.04.23",
+        mbti: "INFP",
+        zodiac: { ko: "황소자리", en: "Taurus" },
+        height: "159cm",
+        bloodType: "B",
+        description: { ko: "자유로운 영혼의 아티스트. 수준급 랩핑과 더불어 그림 등 예술적 재능이 뛰어납니다.", en: "A free-spirited artist. Has excellent artistic talent like drawing along with top-tier rapping." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5113%2F2023%2F12%2F25%2F0000215394_001_20231225102005456.jpg"
+      },
+      {
+        id: "tzuyu",
+        name: { ko: "쯔위", en: "Tzuyu" },
+        role: { ko: "리드댄서/서브보컬", en: "Lead Dancer/Sub Vocalist" },
+        birth: "1999.06.14",
+        mbti: "ISFP",
+        zodiac: { ko: "쌍둥이자리", en: "Gemini" },
+        height: "170cm",
+        bloodType: "A",
+        description: { ko: "비주얼 에이스로 불리는 대만 출신 막내. 큰 키와 인형 같은 외모가 특징입니다.", en: "Youngest from Taiwan called the visual ace. Features tall height and doll-like looks." },
+        imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5441%2F2024%2F01%2F15%2F0000084534_001_20240115084203598.jpg"
+      }
+    ]
+  },
+  {
     id: "newjeans",
     name: { ko: "뉴진스", en: "NewJeans" },
     company: "ADOR",
