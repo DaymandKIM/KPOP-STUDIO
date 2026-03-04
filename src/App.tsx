@@ -16,8 +16,7 @@ function MainContent() {
   const { model, isModelLoading, predict } = useTeachableMachine();
 
   const [viewMode, setViewMode] = useState<ViewMode>('identification');
-...
-
+  const [appState, setAppState] = useState<AppState>('idle');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [predictions, setPredictions] = useState<any[]>([]);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
