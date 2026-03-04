@@ -1,8 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Upload, RefreshCw, Star, Database, Crosshair, Sparkles, Menu, X } from 'lucide-react';
+import { Upload, RefreshCw, Star, Database, Crosshair, Sparkles, Menu, X, ArrowRight } from 'lucide-react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { useTeachableMachine } from './hooks/useTeachableMachine';
+import { KPOP_GROUPS } from './data/idols';
 import IdolEncyclopedia from './components/IdolEncyclopedia';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
@@ -21,6 +22,26 @@ function MainContent() {
   const [predictions, setPredictions] = useState<any[]>([]);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const imageRef = useRef<HTMLImageElement>(null);
+
+  const currentLang = (i18n.language === 'ko' ? 'ko' : 'en') as 'ko' | 'en';
+
+  // Find matched idol data based on prediction
+  const matchedIdol = useMemo(() => {
+    if (predictions.length === 0) return null;
+    const topLabel = predictions[0].className;
+    
+    // Logic to map Teachable Machine labels to our data
+    // Labels are: "방탄소년단 BTS 정국", "아이브 IVE 장원영"
+    let targetMemberId = "";
+    if (topLabel.includes("정국")) targetMemberId = "jungkook";
+    if (topLabel.includes("장원영")) targetMemberId = "jangwonyoung";
+
+    for (const group of KPOP_GROUPS) {
+      const member = group.members.find(m => m.id === targetMemberId);
+      if (member) return { group, member };
+    }
+    return null;
+  }, [predictions]);
 
   const toggleLanguage = () => {
     const newLang = i18n.language === 'en' ? 'ko' : 'en';
@@ -227,35 +248,79 @@ function MainContent() {
 
                 <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[48px] p-1 w-full mb-8 md:mb-12">
                   <div className="bg-black/80 backdrop-blur-3xl rounded-[30px] md:rounded-[46px] p-6 md:p-14 flex flex-col md:flex-row gap-8 md:gap-14 items-center">
-                    <div className="relative group w-full md:w-auto flex justify-center">
-                      <div className="w-56 h-56 md:w-80 md:h-80 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-white/10 relative flex-shrink-0 neon-shadow-purple">
-                        <img 
-                          src={selectedImage} 
-                          alt="User" 
-                          className="w-full h-full object-cover"
-                        />
+                    <div className="relative group w-full md:w-auto flex flex-col gap-6 justify-center items-center">
+                      <div className="relative">
+                        <div className="w-48 h-48 md:w-72 md:h-72 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-white/10 relative flex-shrink-0 neon-shadow-purple">
+                          <img 
+                            src={selectedImage} 
+                            alt="User" 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-2xl border-2 border-neon-purple z-20 rotate-6">
+                          <Sparkles className="w-8 h-8 text-neon-purple animate-pulse" />
+                        </div>
                       </div>
+                      
+                      {matchedIdol && (
+                        <div className="flex flex-col items-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                          <ArrowRight className="w-8 h-8 text-white/30 rotate-90 md:rotate-0 mb-2" />
+                          <div className="w-32 h-32 md:w-48 md:h-48 rounded-[24px] md:rounded-[32px] overflow-hidden border-2 border-neon-blue neon-shadow-blue scale-90 md:scale-100">
+                            <img 
+                              src={matchedIdol.member.imageUrl} 
+                              alt={matchedIdol.member.name[currentLang]} 
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        </div>
+                      )}
                     </div>
 
                     <div className="flex-1 text-center md:text-left space-y-6 md:space-y-8 w-full">
                       <div>
                         <div className="inline-block px-3 py-1 bg-neon-pink/10 border border-neon-pink/30 rounded-lg text-neon-pink font-mono text-[10px] uppercase tracking-[0.2em] font-black mb-3">Best Match</div>
-                        <h3 className="text-5xl md:text-8xl font-black text-white italic tracking-tighter leading-tight mb-2 truncate pr-2">
-                          {predictions[0].className}
+                        <h3 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter leading-tight mb-2 truncate pr-2">
+                          {matchedIdol ? matchedIdol.member.name[currentLang] : predictions[0].className}
                         </h3>
+                        {matchedIdol && (
+                          <p className="text-neon-blue font-black text-xl md:text-2xl uppercase tracking-widest italic opacity-80">
+                            {matchedIdol.group.name[currentLang]}
+                          </p>
+                        )}
                       </div>
                       
-                      <div className="grid grid-cols-2 gap-3 md:flex md:flex-wrap md:gap-6">
-                        <div className="bg-white/5 border border-neon-blue/30 rounded-2xl p-4 md:p-6 flex flex-col items-center md:items-start backdrop-blur-md">
+                      <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6">
+                        <div className="bg-white/5 border border-neon-blue/30 rounded-2xl p-4 md:p-6 flex flex-col items-center md:items-start backdrop-blur-md min-w-[140px]">
                           <p className="text-slate-500 font-mono text-[9px] md:text-[10px] uppercase font-black mb-1 md:mb-2 tracking-widest">{t('similarity')}</p>
                           <div className="flex items-baseline gap-1 md:gap-2">
-                            <span className="text-3xl md:text-5xl font-black text-neon-blue italic">
+                            <span className="text-4xl md:text-6xl font-black text-neon-blue italic">
                               {Math.round(predictions[0].probability * 100)}
                             </span>
                             <span className="text-neon-blue font-mono text-sm md:text-xl font-black">%</span>
                           </div>
                         </div>
+
+                        {matchedIdol && (
+                          <div className="bg-white/5 border border-neon-purple/30 rounded-2xl p-4 md:p-6 flex flex-col items-center md:items-start backdrop-blur-md flex-1 min-w-[200px]">
+                            <p className="text-slate-500 font-mono text-[9px] md:text-[10px] uppercase font-black mb-1 md:mb-2 tracking-widest">{currentLang === 'ko' ? '포지션' : 'Role'}</p>
+                            <p className="text-xl md:text-2xl font-black text-white italic">{matchedIdol.member.role[currentLang]}</p>
+                            <p className="text-slate-400 text-xs mt-2 line-clamp-2">{matchedIdol.member.description[currentLang]}</p>
+                          </div>
+                        )}
                       </div>
+
+                      {matchedIdol && (
+                        <div className="pt-4 flex justify-center md:justify-start">
+                          <button 
+                            onClick={() => setViewMode('encyclopedia')}
+                            className="flex items-center gap-3 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl text-xs font-black uppercase tracking-widest transition-all group/btn"
+                          >
+                            <Database className="w-4 h-4 text-neon-green" />
+                            <span>{currentLang === 'ko' ? '백과사전에서 더보기' : 'View in Encyclopedia'}</span>
+                            <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                          </button>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

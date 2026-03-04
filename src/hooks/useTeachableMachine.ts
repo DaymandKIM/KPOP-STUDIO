@@ -5,7 +5,7 @@ import * as tmImage from '@teachablemachine/image';
 // const URL = "https://teachablemachine.withgoogle.com/models/YOUR_MODEL_ID/";
 // For development and testing without a real model yet, we can mock it or use a public one if available.
 // Let's create a robust hook that handles loading and predicting.
-const MODEL_URL = "https://teachablemachine.withgoogle.com/models/v_sl95BzE/"; // Example model, should be replaced
+const MODEL_URL = "https://teachablemachine.withgoogle.com/models/j3lcqWjqg/";
 
 export function useTeachableMachine() {
   const [model, setModel] = useState<tmImage.CustomMobileNet | null>(null);
