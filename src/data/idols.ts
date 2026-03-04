@@ -43,7 +43,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2022.07.22",
     fandom: { ko: "버니즈 (Bunnies)", en: "Bunnies" },
     accentColor: "#00ffff",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/NewJeans_Blue_Dragon_Film_Awards_2023.jpg/1200px-NewJeans_Blue_Dragon_Film_Awards_2023.jpg",
+    imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans%20kpop%20group%20high%20resolution&w=800&h=800&c=7&rs=1&p=0",
     wiki: {
       ko: "뉴진스(NewJeans)는 청바지(Jeans)처럼 시대의 아이콘이 되겠다는 포부와 'New Genes'(새로운 유전자)가 되겠다는 각오를 담은 어도어(ADOR) 소속의 5인조 다국적 걸그룹입니다. 민희진 전 대표가 총괄 프로듀싱을 맡아 K-POP 시장에 'Y2K'와 '이지리스닝' 열풍을 일으켰습니다. 1990년대 후반~2000년대 초반의 향수를 현대적으로 재해석한 독보적인 컨셉, 과도한 화장이나 킬힐을 배제한 10대 소녀 특유의 자연스러움을 강조하여 데뷔와 동시에 엄청난 신드롬을 일으켰습니다. 데뷔 앨범 타이틀곡 'Attention'과 'Hype Boy'부터 'Ditto', 'OMG', 'Super Shy'까지 발매하는 모든 곡을 메가 히트시키며 국내외 음원 차트를 장기 집권했습니다.",
       en: "NewJeans is a 5-member multinational girl group under ADOR, with the ambition to become icons of the times like everyday jeans, and to represent 'New Genes' in K-pop. Executive produced by Min Hee-jin, they sparked the 'Y2K' and 'easy-listening' trends in the K-pop market. By modernly reinterpreting the nostalgia of the late 90s to early 00s and emphasizing the natural vibe of teenage girls without heavy makeup or killer heels, they created a massive syndrome upon debut. From their debut tracks 'Attention' and 'Hype Boy' to 'Ditto', 'OMG', and 'Super Shy', every release became a mega-hit, dominating domestic and global charts for extended periods."
@@ -123,7 +123,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "169cm",
         bloodType: "A",
         description: { ko: "고전적인 미인형으로 '국민 첫사랑' 이미지를 가졌으며 책임감이 강한 성격입니다.", en: "A classic beauty with a 'Nation's First Love' image and a strong sense of responsibility." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/NewJeans_Minji_230126.jpg/800px-NewJeans_Minji_230126.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans%20minji%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "hanni",
@@ -135,7 +135,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "161.7cm",
         bloodType: "O",
         description: { ko: "베트남계 호주인. 독보적인 음색과 리듬감을 가졌으며, 무대 위 카리스마가 대단합니다.", en: "Vietnamese-Australian. Has a unique voice and rhythm, showing immense charisma on stage." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/NewJeans_Hanni_230126.jpg/800px-NewJeans_Hanni_230126.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans%20hanni%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "danielle",
@@ -147,7 +147,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "165cm",
         bloodType: "AB",
         description: { ko: "햇살 같은 에너지를 가진 비타민 같은 멤버. 디즈니 공주 같은 비주얼로 유명합니다.", en: "A vitamin-like member with sunny energy. Famous for her Disney princess visuals." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/NewJeans_Danielle_230126.jpg/800px-NewJeans_Danielle_230126.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans%20danielle%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "haerin",
@@ -159,7 +159,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "164.5cm",
         bloodType: "B",
         description: { ko: "고양이 상의 대표 주자. 엉뚱하고 조용한 매력이 있으며 무대에서는 폭발적인 댄스 실력을 보여줍니다.", en: "The representative of cat-like features. Has a quirky, quiet charm but explosive dance skills." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/NewJeans_Haerin_230126.jpg/800px-NewJeans_Haerin_230126.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans%20haerin%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "hyein",
@@ -171,7 +171,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "170cm",
         bloodType: "O",
         description: { ko: "팀의 막내지만 모델 같은 피지컬을 자랑합니다. 시크한 마스크와 성숙한 목소리가 매력 포인트입니다.", en: "The youngest but boasts model-like proportions. Her chic mask and mature voice are charming." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/NewJeans_Hyein_230126.jpg/800px-NewJeans_Hyein_230126.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans%20hyein%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       }
     ]
   },
@@ -183,7 +183,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2021.12.01",
     fandom: { ko: "다이브 (DIVE)", en: "DIVE" },
     accentColor: "#ff00ff",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ive_Puma_Event_230126.jpg/1200px-Ive_Puma_Event_230126.jpg",
+    imageUrl: "https://tse1.mm.bing.net/th?q=IVE%20kpop%20group%20high%20resolution&w=800&h=800&c=7&rs=1&p=0",
     wiki: {
       ko: "아이브(IVE)는 스타쉽 엔터테인먼트 소속 6인조 다국적 걸그룹입니다. 그룹명 'IVE'는 'I HAVE'의 축약형으로, '우리가 가진 것들을 모두 당당하게 보여주겠다'는 강렬한 포부를 담고 있습니다. 다른 아이돌들이 주로 다루는 성장 서사나 짝사랑을 넘어, 데뷔 때부터 이미 완성된 그룹으로서 주체적이고 당당한 '나르시시즘(자기애)'을 일관된 세계관으로 선보여 큰 호응을 얻었습니다. 데뷔곡 'ELEVEN'부터 'LOVE DIVE', 'After LIKE', 'I AM', 'Kitsch', '해야 (HEYA)'까지 발매한 모든 타이틀곡이 음악방송 1위와 음원 차트 최상위권을 휩쓸며 K-POP 4세대 대표 걸그룹으로 우뚝 섰습니다.",
       en: "IVE is a 6-member multinational girl group under Starship Entertainment. The name 'IVE' stands for 'I HAVE', reflecting their bold ambition to confidently show everything they've got. Deviating from typical growth narratives or unrequited love concepts, they debuted as a 'complete' group pushing a consistent theme of 'narcissism' (self-love) and independence, which garnered massive acclaim. From their debut 'ELEVEN' to 'LOVE DIVE', 'After LIKE', 'I AM', 'Kitsch', and 'HEYA', every title track swept music show wins and chart summits, cementing their status as the leading 4th-generation K-pop girl group."
@@ -263,7 +263,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "173cm",
         bloodType: "A",
         description: { ko: "카리스마 리더와 예능감을 모두 갖춘 육각형 멤버. 믿고 듣는 탄탄한 라이브 실력을 자랑합니다.", en: "An all-rounder with charismatic leadership and variety show skills. Boasts reliable and solid live vocals." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/230510_An_Yu-jin.jpg/800px-230510_An_Yu-jin.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=IVE%20anyujin%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "gaeul",
@@ -275,7 +275,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "164cm",
         bloodType: "B",
         description: { ko: "팀의 맏언니이자 메인 댄서급 실력자. 차분한 분위기와 날카로운 랩 딜리버리가 특징입니다.", en: "The oldest and a main dancer-level talent. Features a calm vibe and sharp rap delivery." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/230126_Ive_Gaeul.jpg/800px-230126_Ive_Gaeul.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=IVE%20gaeul%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "rei",
@@ -287,7 +287,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "169cm",
         bloodType: "A",
         description: { ko: "일본인 멤버지만 한국어를 유창하게 구사합니다. 독보적인 캐릭터와 트렌디한 랩 스타일을 보유했습니다.", en: "Japanese member fluent in Korean. Possesses a highly unique character and trendy rap style." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/230510_Ive_Rei.jpg/800px-230510_Ive_Rei.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=IVE%20rei%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "jangwonyoung",
@@ -299,7 +299,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "173cm",
         bloodType: "O",
         description: { ko: "K-POP 4세대를 대표하는 워너비 아이콘. 타고난 스타성과 프로페셔널한 긍정 마인드로 무장했습니다.", en: "The wannabe icon representing 4th-gen K-POP. Armed with innate star power and a professional positive mindset." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Jang_Won-young_at_Shinsegae_Duty_Free_event_on_December_21%2C_2023.jpg/800px-Jang_Won-young_at_Shinsegae_Duty_Free_event_on_December_21%2C_2023.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=IVE%20jangwonyoung%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "liz",
@@ -311,7 +311,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "170cm",
         bloodType: "AB",
         description: { ko: "독보적인 고음과 성량을 갖춘 메인 보컬. 귀여운 보조개와 부드러운 음색이 매력입니다.", en: "Main vocalist with unmatched high notes and volume. Cute dimples and a soft voice are her charms." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/230510_Ive_Liz.jpg/800px-230510_Ive_Liz.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=IVE%20liz%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "leeseo",
@@ -323,7 +323,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "166cm",
         bloodType: "O",
         description: { ko: "팀의 활기찬 막내. 나이답지 않은 무대 장악력과 시시각각 변하는 표정 연기 장인입니다.", en: "The energetic youngest. Shows stage presence and expressive acting unbefitting her young age." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/230510_Ive_Leeseo.jpg/800px-230510_Ive_Leeseo.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=IVE%20leeseo%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       }
     ]
   },
@@ -335,7 +335,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2020.11.17",
     fandom: { ko: "마이 (MY)", en: "MY" },
     accentColor: "#9d00ff",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Aespa_at_the_76th_Cannes_Film_Festival_02.jpg/1200px-Aespa_at_the_76th_Cannes_Film_Festival_02.jpg",
+    imageUrl: "https://tse1.mm.bing.net/th?q=aespa%20kpop%20group%20high%20resolution&w=800&h=800&c=7&rs=1&p=0",
     wiki: {
       ko: "에스파(aespa)는 SM 엔터테인먼트 소속의 4인조 다국적 걸그룹입니다. 그룹명 'aespa'는 'Avatar X Experience'를 표현한 'æ'와 양면성을 뜻하는 'aspect'를 결합한 것으로, '자신의 또 다른 자아인 아바타(ae)를 만나 새로운 세계를 경험하게 된다'는 혁신적인 메타버스 세계관을 바탕으로 합니다. 데뷔곡 'Black Mamba'부터 'Next Level', 'Savage'를 연달아 히트시키며 사이버펑크와 광야(KWANGYA) 컨셉을 K-POP 씬에 각인시켰습니다. 최근에는 현실 세계로 넘어와 더욱 세련되고 강력한 '쇠 맛' 사운드의 정점인 'Supernova'와 'Armageddon'으로 국내외 음원 차트 장기 1위를 싹쓸이하며 압도적인 1군 걸그룹의 위상을 증명했습니다.",
       en: "aespa is a 4-member multinational girl group under SM Entertainment. The name combines 'æ' (Avatar X Experience) and 'aspect' (meaning two-sidedness), based on the innovative metaverse concept of 'experiencing a new world by meeting your other self, your avatar'. From their debut 'Black Mamba' to consecutive hits 'Next Level' and 'Savage', they imprinted cyberpunk and the 'KWANGYA' lore onto K-pop. Recently transitioning to the real world, they showcased the peak of their metallic 'iron taste' sound with 'Supernova' and 'Armageddon', sweeping domestic and global charts for months and proving their dominant top-tier status."
@@ -413,7 +413,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "168cm",
         bloodType: "B",
         description: { ko: "AI보다 더 완벽한 외모와 완벽한 비율의 압도적 비주얼 센터. 강렬한 춤선과 세심한 리더십을 갖췄습니다.", en: "The overwhelming visual center with looks and proportions more perfect than AI. Possesses intense dance lines and attentive leadership." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/230524_aespa_Karina_at_the_76th_Cannes_Film_Festival_03.jpg/800px-230524_aespa_Karina_at_the_76th_Cannes_Film_Festival_03.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=aespa%20karina%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "giselle",
@@ -425,7 +425,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "164cm",
         bloodType: "O",
         description: { ko: "독특한 음색과 쫀득한 딕션의 랩핑을 자랑하는 한일 혼혈 멤버. 다국어에 능통한 스마트한 매력이 있습니다.", en: "A Korean-Japanese member boasting a unique voice and catchy rap diction. Has smart charm being fluent in multiple languages." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/230524_aespa_Giselle_at_the_76th_Cannes_Film_Festival_02.jpg/800px-230524_aespa_Giselle_at_the_76th_Cannes_Film_Festival_02.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=aespa%20giselle%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "winter",
@@ -437,7 +437,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "164cm",
         bloodType: "A",
         description: { ko: "청순한 외모에 숨겨진 파워풀한 고음 스나이퍼. 검술을 하듯 날카롭고 깔끔한 춤선이 일품입니다.", en: "A powerful high-note sniper hidden behind an innocent appearance. Her sharp and clean dance lines, like swordplay, are masterpiece." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/230524_aespa_Winter_at_the_76th_Cannes_Film_Festival_02.jpg/800px-230524_aespa_Winter_at_the_76th_Cannes_Film_Festival_02.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=aespa%20winter%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "ningning",
@@ -449,7 +449,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "161cm",
         bloodType: "O",
         description: { ko: "시원하게 귀를 뚫어주는 폭발적인 성량의 중국인 메인보컬. 통통 튀고 쿨한 핫걸 성격의 소유자입니다.", en: "Chinese main vocalist with explosive volume that clears the ears. Has a bubbly and cool 'hot girl' personality." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/230524_aespa_Ningning_at_the_76th_Cannes_Film_Festival_02.jpg/800px-230524_aespa_Ningning_at_the_76th_Cannes_Film_Festival_02.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=aespa%20ningning%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       }
     ]
   },
@@ -461,7 +461,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2018.03.25",
     fandom: { ko: "스테이 (STAY)", en: "STAY" },
     accentColor: "#ff5e00",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/240506_Stray_Kids.jpg/1200px-240506_Stray_Kids.jpg",
+    imageUrl: "https://tse1.mm.bing.net/th?q=Stray%20Kids%20kpop%20group%20high%20resolution&w=800&h=800&c=7&rs=1&p=0",
     wiki: {
       ko: "스트레이 키즈(Stray Kids)는 JYP 엔터테인먼트 소속의 8인조 보이그룹입니다. 팀명은 '길을 잃은 아이들'이라는 뜻으로, 기존의 정형화된 틀에서 벗어나 자유롭고 독창적인 자신들만의 길을 개척하겠다는 정체성을 담고 있습니다. 아이돌 음악의 한계를 부수는 강렬하고 자극적인 '마라맛' 장르의 선구자로, 방찬, 창빈, 한으로 구성된 자체 프로듀싱 팀 '3RACHA(쓰리라차)'가 전곡을 직접 작사, 작곡, 편곡합니다. '神메뉴', 'Back Door', '소리꾼', 'MANIAC', '특' 등 폭발적인 에너지를 뿜어내는 곡들로 글로벌 팬덤을 열광시키며 빌보드 200 차트에서 5연속 1위를 차지하는 대기록을 썼습니다.",
       en: "Stray Kids is an 8-member boy group under JYP Entertainment. The name means 'lost kids', reflecting their identity of breaking free from standardized molds to pioneer their own free and original path. As pioneers of the intense and stimulating 'spicy/mala taste' genre that shatters idol music limits, their in-house producing team '3RACHA' (Bang Chan, Changbin, Han) writes, composes, and arranges all their songs. With explosively energetic tracks like 'God's Menu', 'Back Door', 'Thunderous', 'MANIAC', and 'S-Class', they drove global fandoms wild and achieved the massive record of topping the Billboard 200 chart 5 consecutive times."
@@ -539,7 +539,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "171cm",
         bloodType: "O",
         description: { ko: "팀의 핵심 프로듀서이자 든든한 정신적 지주인 호주 출신 멤버. 곡 작업부터 멤버 관리까지 완벽한 리더십을 보여줍니다.", en: "The core producer and solid mental pillar from Australia. Shows perfect leadership from song production to member management." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Bang_Chan_at_the_2022_The_Fact_Music_Awards.jpg/800px-Bang_Chan_at_the_2022_The_Fact_Music_Awards.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray%20Kids%20bangchan%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "leeknow",
@@ -551,7 +551,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "172cm",
         bloodType: "O",
         description: { ko: "완벽한 조각 미남 비주얼과 대비되는 엉뚱한 '4차원' 성격의 소유자. 한 치의 오차도 없는 춤의 정석을 보여주는 댄스 반장입니다.", en: "Possesses a quirky 4D personality contrasting his sculpted handsome visuals. The dance captain showing flawless textbook dancing." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Lee_Know_at_the_2022_The_Fact_Music_Awards.jpg/800px-Lee_Know_at_the_2022_The_Fact_Music_Awards.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray%20Kids%20leeknow%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "changbin",
@@ -563,7 +563,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "167cm",
         bloodType: "O",
         description: { ko: "압도적인 성량과 발성을 자랑하는 K-pop 탑티어 래퍼. 쓰리라차(3RACHA) 멤버로 강렬한 랩과 근육질 몸매가 특징입니다.", en: "A top-tier K-pop rapper boasting overwhelming volume and vocalization. 3RACHA member known for intense rap and a muscular physique." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Changbin_at_the_2022_The_Fact_Music_Awards.jpg/800px-Changbin_at_the_2022_The_Fact_Music_Awards.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray%20Kids%20changbin%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "hyunjin",
@@ -575,7 +575,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "179cm",
         bloodType: "B",
         description: { ko: "예술적인 춤선과 장발이 찰떡인 무대 장인 비주얼 멤버. 특유의 빙의한 듯한 표정 연기로 퍼포먼스를 이끕니다.", en: "A stage master visual member with artistic dance lines, perfectly pulling off long hair. Leads performances with possessed-like facial expressions." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Hyunjin_at_the_2022_The_Fact_Music_Awards.jpg/800px-Hyunjin_at_the_2022_The_Fact_Music_Awards.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray%20Kids%20hyunjin%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "han",
@@ -587,7 +587,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "169cm",
         bloodType: "B",
         description: { ko: "랩, 고음 보컬, 프로듀싱 모두 완벽하게 해내는 천재적인 올라운더. 넘치는 에너지와 예능감도 가졌습니다.", en: "A genius all-rounder who perfectly handles rap, high-note vocals, and producing. Also has overflowing energy and variety skills." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Han_at_the_2022_The_Fact_Music_Awards.jpg/800px-Han_at_the_2022_The_Fact_Music_Awards.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray%20Kids%20han%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "felix",
@@ -599,7 +599,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "171cm",
         bloodType: "AB",
         description: { ko: "매력적인 극저음 동굴 목소리와 주근깨를 가진 요정 비주얼의 반전 매력. 호주 출신의 천사 같은 심성을 가진 멤버입니다.", en: "Unexpected charm of an ultra-deep cave-like voice and fairy visuals with freckles. An angel-hearted member from Australia." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Felix_at_the_2022_The_Fact_Music_Awards.jpg/800px-Felix_at_the_2022_The_Fact_Music_Awards.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray%20Kids%20felix%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "seungmin",
@@ -611,7 +611,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "175cm",
         bloodType: "A",
         description: { ko: "단단하고 포근한 음색으로 거친 팀의 사운드 중심을 부드럽게 잡아주는 메인 보컬. 깔끔하고 댄디한 외모가 특징입니다.", en: "Main vocalist gently holding the center of the team's rough sound with a solid and warm voice. Features a clean, dandy look." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Seungmin_at_the_2022_The_Fact_Music_Awards.jpg/800px-Seungmin_at_the_2022_The_Fact_Music_Awards.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray%20Kids%20seungmin%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "in",
@@ -623,7 +623,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "172cm",
         bloodType: "A",
         description: { ko: "독특하고 트렌디한 음색을 가진 팀의 막내. 귀여운 사막여우 상으로 형들의 사랑과 장난을 독차지합니다.", en: "The youngest with a unique and trendy voice. Monopolizes older members' love and pranks with a cute fennec fox look." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/I.N_at_the_2022_The_Fact_Music_Awards.jpg/800px-I.N_at_the_2022_The_Fact_Music_Awards.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray%20Kids%20in%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       }
     ]
   },
@@ -635,7 +635,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2022.05.02",
     fandom: { ko: "피어나 (FEARNOT)", en: "FEARNOT" },
     accentColor: "#ffffff",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Le_Sserafim_Blue_Dragon_Film_Awards_2023.jpg/1200px-Le_Sserafim_Blue_Dragon_Film_Awards_2023.jpg",
+    imageUrl: "https://tse1.mm.bing.net/th?q=LE%20SSERAFIM%20kpop%20group%20high%20resolution&w=800&h=800&c=7&rs=1&p=0",
     wiki: {
       ko: "르세라핌(LE SSERAFIM)은 하이브 산하 쏘스뮤직 소속의 5인조 다국적 걸그룹입니다. 그룹명은 'IM FEARLESS'를 애너그램(철자 배열을 바꿈)하여 만든 이름으로, 세상의 시선에 흔들리지 않고 두려움 없이 앞으로 나아가겠다는 굳센 의지를 내포하고 있습니다. 치열한 아이돌 생태계에서 독보적인 '근육질 건강미'와 '칼군무 퍼포먼스'를 내세워 강렬한 인상을 남겼습니다. 데뷔 앨범 'FEARLESS'부터 'ANTIFRAGILE', 'UNFORGIVEN', 'EASY', 'CRAZY'까지 거침없는 상승세를 보이며, 런웨이를 연상케 하는 도도하고 파워풀한 무대로 4세대 걸그룹 최정상 반열에 올랐습니다.",
       en: "LE SSERAFIM is a 5-member multinational girl group under HYBE's Source Music. The name is an anagram of 'IM FEARLESS', implying a strong will to move forward without fear, unswayed by the world's gaze. In the fierce idol ecosystem, they left a strong impression by highlighting unrivaled 'muscular healthy beauty' and 'synchronized sharp choreography'. From their debut 'FEARLESS' to 'ANTIFRAGILE', 'UNFORGIVEN', 'EASY', and 'CRAZY', they showed relentless momentum, rising to the top tier of 4th-gen girl groups with chic and powerful runway-like stages."
@@ -707,31 +707,31 @@ export const KPOP_GROUPS: KpopGroup[] = [
         id: "sakura", name: { ko: "사쿠라", en: "Sakura" }, role: { ko: "보컬", en: "Vocalist" },
         birth: "1998.03.19", mbti: "INTP", zodiac: { ko: "물고기자리", en: "Pisces" }, height: "163cm", bloodType: "A",
         description: { ko: "총 세 번의 데뷔를 성공시킨 대단한 경력의 베테랑. 지적인 매력과 꾸준히 발전하는 끈기의 아이콘입니다.", en: "A veteran who successfully debuted three times. An icon of persistence and intellectual charm who constantly improves." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Sakura_Miyawaki_at_Incheon_Airport_on_May_20%2C_2024.jpg/800px-Sakura_Miyawaki_at_Incheon_Airport_on_May_20%2C_2024.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=LE%20SSERAFIM%20sakura%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "kimchaewon", name: { ko: "김채원", en: "Kim Chaewon" }, role: { ko: "리더/보컬", en: "Leader/Vocalist" },
         birth: "2000.08.01", mbti: "ISTP", zodiac: { ko: "사자자리", en: "Leo" }, height: "163cm", bloodType: "B",
         description: { ko: "칼 같은 춤선과 단단하고 청량한 음색의 소유자. 무대 위 카리스마와 귀여운 외모를 겸비한 리더입니다.", en: "Possesses sharp dance lines and a solid, refreshing voice. A leader combining on-stage charisma and cute looks." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/230510_Le_Sserafim_Kim_Chae-won.jpg/800px-230510_Le_Sserafim_Kim_Chae-won.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=LE%20SSERAFIM%20kimchaewon%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "huhyunjin", name: { ko: "허윤진", en: "Huh Yunjin" }, role: { ko: "메인보컬", en: "Main Vocalist" },
         birth: "2001.10.08", mbti: "INFJ", zodiac: { ko: "천칭자리", en: "Libra" }, height: "172cm", bloodType: "B",
         description: { ko: "미국 출신으로 뛰어난 가창력과 자작곡 능력을 갖춘 다재다능한 아티스트. 당당한 핫걸 스타일의 표본입니다.", en: "A versatile artist from the US with excellent vocal and songwriting skills. The epitome of a confident hot girl style." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/230510_Le_Sserafim_Huh_Yun-jin.jpg/800px-230510_Le_Sserafim_Huh_Yun-jin.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=LE%20SSERAFIM%20huhyunjin%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "kazuha", name: { ko: "카즈하", en: "Kazuha" }, role: { ko: "래퍼/댄서", en: "Rapper/Dancer" },
         birth: "2003.08.09", mbti: "ENFP", zodiac: { ko: "사자자리", en: "Leo" }, height: "170cm", bloodType: "Unknown",
         description: { ko: "발레 전공자 특유의 우아하고 유연한 퍼포먼스. 첫사랑을 연상케 하는 청순한 외모에 완벽한 11자 복근을 가졌습니다.", en: "Elegant and flexible performance typical of a ballet major. Has 11-line abs despite innocent looks reminiscent of a first love." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/230510_Le_Sserafim_Kazuha.jpg/800px-230510_Le_Sserafim_Kazuha.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=LE%20SSERAFIM%20kazuha%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "hongeunchae", name: { ko: "홍은채", en: "Hong Eunchae" }, role: { ko: "보컬/댄서", en: "Vocalist/Dancer" },
         birth: "2006.11.10", mbti: "ISFP", zodiac: { ko: "전갈자리", en: "Scorpio" }, height: "170cm", bloodType: "Unknown",
         description: { ko: "팀의 사랑스러운 비타민 막내 '만채'. 무대에서는 나이가 믿기지 않는 당당함과 에너지 넘치는 춤을 선보입니다.", en: "The lovely vitamin youngest. On stage, she shows confidence and energetic dancing unbelievable for her age." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/230510_Le_Sserafim_Hong_Eun-chae.jpg/800px-230510_Le_Sserafim_Hong_Eun-chae.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=LE%20SSERAFIM%20hongeunchae%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       }
     ]
   },
@@ -743,7 +743,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2016.08.08",
     fandom: { ko: "블링크 (BLINK)", en: "BLINK" },
     accentColor: "#ff66c4",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Blackpink_Coachella_2023_04.jpg/1200px-Blackpink_Coachella_2023_04.jpg",
+    imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK%20kpop%20group%20high%20resolution&w=800&h=800&c=7&rs=1&p=0",
     wiki: {
       ko: "블랙핑크(BLACKPINK)는 YG 엔터테인먼트 소속의 4인조 다국적 걸그룹입니다. 가장 예쁜 색으로 표현되는 '핑크'에 '블랙'을 더해 '예쁜 게 다가 아니다'라는 반전의 의미를 담고 있습니다. K-POP을 넘어 글로벌 팝 씬을 대표하는 명실상부한 월드클래스 걸그룹으로, 스포티파이와 유튜브 등 글로벌 플랫폼에서 K-POP 걸그룹 최초, 최고의 기록들을 끝없이 경신하고 있습니다. '뚜두뚜두', 'Kill This Love', 'How You Like That', 'Pink Venom' 등 강력한 힙합 베이스의 걸크러시 음악과 세련된 패션 감각으로 전 세계적인 롤모델로 자리 잡았습니다. 2023년에는 아시아 아티스트 최초로 코첼라 페스티벌 헤드라이너로 서며 역사적인 무대를 남겼습니다.",
       en: "BLACKPINK is a 4-member multinational girl group under YG Entertainment. Adding 'Black' to 'Pink' (representing the prettiest color) implies 'pretty isn't everything'. Beyond K-pop, they are undeniably a world-class girl group representing the global pop scene, endlessly breaking 'first' and 'best' records for K-pop girl groups on global platforms like Spotify and YouTube. With powerful hip-hop-based girl crush tracks like 'DDU-DU DDU-DU', 'Kill This Love', 'How You Like That', and 'Pink Venom', along with sophisticated fashion, they became global role models. In 2023, they made history as the first Asian act to headline Coachella."
@@ -821,7 +821,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "162cm",
         bloodType: "A",
         description: { ko: "배우 느낌이 물씬 나는 고전적이고 우아한 정석 미녀. 털털한 입담과 특유의 허스키한 중저음 보이스가 매력입니다.", en: "A classic and elegant beauty with a strong actor vibe. Easygoing talk and a unique husky deep voice are her charms." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Kim_Ji-soo_at_the_Dior_Fall-Winter_2024-2025_show_03.jpg/800px-Kim_Ji-soo_at_the_Dior_Fall-Winter_2024-2025_show_03.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK%20jisoo%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "jennie",
@@ -833,7 +833,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "163cm",
         bloodType: "B",
         description: { ko: "머리부터 발끝까지 트렌드 그 자체인 '인간 샤넬'. 압도적인 무대 장악력과 앙칼진 랩, 쫀득한 보컬을 겸비했습니다.", en: "'Human Chanel', the epitome of trends from head to toe. Combines overwhelming stage presence, fierce rap, and catchy vocals." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/230522_Jennie_at_the_76th_Cannes_Film_Festival_03.jpg/800px-230522_Jennie_at_the_76th_Cannes_Film_Festival_03.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK%20jennie%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "rose",
@@ -845,7 +845,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "168cm",
         bloodType: "B",
         description: { ko: "K-POP 씬에서 독보적인 위치를 차지하는 달콤하고 매혹적인 황금 음색. 슬렌더 피지컬에서 나오는 우아한 춤선이 일품입니다.", en: "Sweet and captivating golden voice holding an unrivaled position in K-pop. Elegant dance lines from a slender physique." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Ros%C3%A9_at_the_Rimowa_Event_on_April_15%2C_2024_02.jpg/800px-Ros%C3%A9_at_the_Rimowa_Event_on_April_15%2C_2024_02.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK%20rose%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "lisa",
@@ -857,7 +857,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "166.5cm",
         bloodType: "O",
         description: { ko: "무대를 완벽히 찢어놓는 천재적인 댄스 실력과 만화 같은 비율을 가진 태국인 멤버. 폭발적인 카리스마 래퍼입니다.", en: "Thai member with genius dance skills that tear up the stage and comic-like proportions. An explosively charismatic rapper." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Lisa_at_the_Bulgari_Studio_Event_on_March_14%2C_2024_02.jpg/800px-Lisa_at_the_Bulgari_Studio_Event_on_March_14%2C_2024_02.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK%20lisa%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       }
     ]
   },
@@ -869,7 +869,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2013.06.13",
     fandom: { ko: "아미 (ARMY)", en: "ARMY" },
     accentColor: "#b200ff",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/BTS_at_the_White_House_220531.jpg/1200px-BTS_at_the_White_House_220531.jpg",
+    imageUrl: "https://tse1.mm.bing.net/th?q=BTS%20kpop%20group%20high%20resolution&w=800&h=800&c=7&rs=1&p=0",
     wiki: {
       ko: "방탄소년단(BTS)은 빅히트 뮤직 소속 7인조 보이그룹입니다. '10대, 20대들을 향한 억압과 편견을 막아내고 자신들의 음악과 가치를 지켜내겠다'는 의미를 담고 출발하여, 현재는 K-POP을 넘어 21세기 글로벌 팝 씬을 대표하는 살아있는 전설이 되었습니다. 'Dynamite', 'Butter', 'Permission to Dance' 등으로 빌보드 핫 100 차트 1위를 무수히 석권했으며, 그래미 어워즈에 노미네이트 되고 단독 무대를 펼치는 등 한국 대중음악의 모든 '최초'와 '최고'의 기록을 갈아치웠습니다. 음악적 성취를 넘어 UN 총회 연설, 백악관 방문 등 선한 영향력을 전파하며 언어와 인종의 장벽을 허문 시대의 아이콘입니다.",
       en: "BTS is a 7-member boy group under BIGHIT MUSIC. Starting with the meaning of 'blocking out stereotypes and criticisms aimed at teenagers and protecting their musical values', they are now living legends representing the 21st-century global pop scene beyond K-POP. With hits like 'Dynamite', 'Butter', and 'Permission to Dance', they dominated the Billboard Hot 100 #1 spot numerous times, and rewrote every 'first' and 'best' record in Korean pop music history, including Grammy nominations and solo stages. Beyond musical achievements, they are icons of the era who broke down language and racial barriers, spreading positive influence through UN speeches and White House visits."
@@ -947,7 +947,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "181cm",
         bloodType: "A",
         description: { ko: "팀을 이끄는 든든한 지주이자 철학적인 가사를 쓰는 지성파 래퍼. 깊이 있는 예술적 안목과 리더십을 갖췄습니다.", en: "The solid pillar guiding the team and an intellectual rapper writing philosophical lyrics. Has deep artistic insight and leadership." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/RM_at_the_2022_The_Fact_Music_Awards_03.jpg/800px-RM_at_the_2022_The_Fact_Music_Awards_03.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=BTS%20rm%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "jin",
@@ -959,7 +959,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "179cm",
         bloodType: "O",
         description: { ko: "자타공인 '월드와이드 핸섬' 맏형. 맑고 서정적인 은빛 보이스와 유쾌하고 친근한 성격으로 팀의 분위기를 띄웁니다.", en: "The self-proclaimed 'Worldwide Handsome' oldest brother. Lifts the team's mood with a clear, lyrical silver voice and a fun personality." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Jin_at_the_2022_The_Fact_Music_Awards_02.jpg/800px-Jin_at_the_2022_The_Fact_Music_Awards_02.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=BTS%20jin%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "suga",
@@ -971,7 +971,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "174cm",
         bloodType: "O",
         description: { ko: "팀의 음악적 뼈대를 만드는 천재 프로듀서. 냉철하고 날카로운 래핑 뒤에 따뜻한 츤데레 매력을 숨기고 있습니다.", en: "The genius producer forming the team's musical backbone. Hides a warm 'tsundere' charm behind cold and sharp rapping." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Suga_at_the_2022_The_Fact_Music_Awards_03.jpg/800px-Suga_at_the_2022_The_Fact_Music_Awards_03.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=BTS%20suga%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "jhope",
@@ -983,7 +983,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "177cm",
         bloodType: "A",
         description: { ko: "팀의 퍼포먼스를 총괄하는 안무 반장이자 에너지 넘치는 비타민. 독보적인 그루브와 긍정적인 바이브의 소유자입니다.", en: "The dance captain overseeing team performance and an energetic vitamin. Possesses a unique groove and positive vibe." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/J-Hope_at_the_2022_The_Fact_Music_Awards_03.jpg/800px-J-Hope_at_the_2022_The_Fact_Music_Awards_03.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=BTS%20jhope%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "jimin",
@@ -995,7 +995,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "174cm",
         bloodType: "A",
         description: { ko: "현대무용 전공자 다운 섬세하고 예술적인 춤선. 노래의 도입부를 매혹적으로 살려내는 마성의 유니크한 음색을 가졌습니다.", en: "Delicate and artistic dance lines from a modern dance background. Has a magical, unique voice that captivates song intros." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jimin_at_the_2022_The_Fact_Music_Awards_02.jpg/800px-Jimin_at_the_2022_The_Fact_Music_Awards_02.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=BTS%20jimin%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "v",
@@ -1007,7 +1007,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "179cm",
         bloodType: "AB",
         description: { ko: "세계 1위 미남으로 꼽히는 화려한 조각 비주얼. 얼굴만큼이나 짙고 소울풀한 재즈풍의 저음 보컬이 깊은 여운을 줍니다.", en: "Gorgeous sculpted visuals ranked #1 most handsome worldwide. His deep, soulful jazz-style bass vocal leaves a lasting impression." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/V_for_Celine_at_the_Hotel_du_Cap-Eden-Roc_03.jpg/800px-V_for_Celine_at_the_Hotel_du_Cap-Eden-Roc_03.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=BTS%20v%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "jungkook",
@@ -1019,7 +1019,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "179cm",
         bloodType: "A",
         description: { ko: "노래, 춤, 운동 등 못하는 게 없는 완벽한 '황금 막내'. 흔들림 없는 완벽한 라이브 실력으로 팀의 확신의 센터를 맡고 있습니다.", en: "The perfect 'Golden Maknae' who excels at everything from singing to dancing and sports. The undisputed center with flawless live skills." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Jungkook_at_the_2023_Global_Citizen_Festival_04.jpg/800px-Jungkook_at_the_2023_Global_Citizen_Festival_04.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=BTS%20jungkook%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       }
     ]
   },
@@ -1031,7 +1031,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2018.05.02",
     fandom: { ko: "네버랜드 (NEVERLAND)", en: "NEVERLAND" },
     accentColor: "#e6002b",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/%28G%29I-dle_for_Marie_Claire_Korea_in_August_2023.jpg/1200px-%28G%29I-dle_for_Marie_Claire_Korea_in_August_2023.jpg",
+    imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE%20kpop%20group%20high%20resolution&w=800&h=800&c=7&rs=1&p=0",
     wiki: {
       ko: "(여자)아이들((G)I-DLE)은 큐브 엔터테인먼트 소속의 5인조 다국적 걸그룹입니다. 그룹명은 '각자의 개성을 가진 여자 아이들이 모였다'는 의미를 가졌습니다. K-POP 씬에서 가장 독보적인 '자체 제작 걸그룹'으로, 리더 전소연을 필두로 멤버들이 타이틀곡은 물론 앨범 수록곡 대다수를 직접 작사, 작곡, 프로듀싱합니다. 'LATATA', 'LION', 'Oh my god' 등으로 탄탄한 팬덤을 구축한 후, 'TOMBOY', 'Nxde', '퀸카(Queencard)', 'Super Lady', '클락션(Klaxon)'으로 이어지는 전무후무한 메가 히트를 기록하며 편견을 깨는 메시지와 파격적인 컨셉으로 대체 불가한 걸그룹 정점에 섰습니다.",
       en: "(G)I-DLE is a 5-member multinational girl group under Cube Entertainment. The name means 'a gathering of girls with individual personalities'. They are the most unrivaled 'self-producing girl group' in K-pop. Led by Soyeon, the members personally write, compose, and produce most of their album tracks, including titles. After building a solid fandom with 'LATATA', 'LION', and 'Oh my god', they reached the absolute peak of irreplaceable girl groups with an unprecedented streak of mega-hits: 'TOMBOY', 'Nxde', 'Queencard', 'Super Lady', and 'Klaxon', delivering boundary-breaking messages and unconventional concepts."
@@ -1109,7 +1109,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "161cm",
         bloodType: "B",
         description: { ko: "디즈니 공주를 연상케 하는 눈부신 정석 미녀. 흔들림 없는 단단한 가창력을 지녔으나 성격은 매우 엉뚱하고 타격감이 좋은 반전 매력을 가졌습니다.", en: "Dazzling classic beauty reminiscent of a Disney princess. Has solid, unwavering vocals but a very quirky personality that makes her a fun target for jokes." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Cho_Mi-yeon_at_the_SBS_Radio_Cultwo_Show_in_February_2024.jpg/800px-Cho_Mi-yeon_at_the_SBS_Radio_Cultwo_Show_in_February_2024.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE%20miyeon%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "minnie",
@@ -1121,7 +1121,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "167cm",
         bloodType: "O",
         description: { ko: "곡의 도입부를 장악하는 몽환적이고 유니크한 음색을 가진 태국 출신 멤버. 수준급의 작사/작곡 능력으로 팀의 세련된 감성을 더합니다.", en: "Thai member with a dreamy, unique voice that dominates song intros. Adds sophisticated emotion to the team with high-level songwriting skills." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Minnie_Nicha_Yontararak_in_April_2024.jpg/800px-Minnie_Nicha_Yontararak_in_April_2024.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE%20minnie%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "soyeon",
@@ -1133,7 +1133,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "157cm",
         bloodType: "B",
         description: { ko: "팀의 총괄 프로듀서이자 메가 히트곡 제조기. 무대를 씹어먹는 압도적인 래핑과 무대 장악력을 보여주는 천재 카리스마 리더입니다.", en: "The executive producer and mega-hit maker. A genius charismatic leader showing overwhelming rapping and stage presence that devours the stage." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jeon_So-yeon_at_TMA_2022.jpg/800px-Jeon_So-yeon_at_TMA_2022.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE%20soyeon%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "yuqi",
@@ -1145,7 +1145,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "163cm",
         bloodType: "O",
         description: { ko: "매력적이고 허스키한 저음 보컬을 지닌 중국인 멤버. 넘치는 에너지와 엄청난 친화력으로 한국 예능을 휩쓰는 분위기 메이커입니다.", en: "Chinese member with an attractive husky deep vocal. A mood maker sweeping Korean variety shows with overflowing energy and massive sociability." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Song_Yu-qi_in_April_2024.jpg/800px-Song_Yu-qi_in_April_2024.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE%20yuqi%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "shuhua",
@@ -1157,7 +1157,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "161cm",
         bloodType: "A",
         description: { ko: "하얀 피부와 고전적인 청순 비주얼을 자랑하는 대만 출신 막내. 누구의 눈치도 보지 않는 당당하고 솔직한 '보스 베이비' 매력이 특징입니다.", en: "Youngest from Taiwan boasting white skin and classic innocent visuals. Features a confident and honest 'Boss Baby' charm, caring about nobody's judgement." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Yeh_Shu-hua_going_to_Music_Bank_in_February_2024.jpg/800px-Yeh_Shu-hua_going_to_Music_Bank_in_February_2024.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE%20shuhua%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       }
     ]
   },
@@ -1169,7 +1169,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     debut: "2015.10.20",
     fandom: { ko: "원스 (ONCE)", en: "ONCE" },
     accentColor: "#ff5fa2",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Twice_at_the_Billboard_Women_in_Music_on_March_1%2C_2023.jpg/1200px-Twice_at_the_Billboard_Women_in_Music_on_March_1%2C_2023.jpg",
+    imageUrl: "https://tse1.mm.bing.net/th?q=TWICE%20kpop%20group%20high%20resolution&w=800&h=800&c=7&rs=1&p=0",
     wiki: {
       ko: "트와이스(TWICE)는 JYP 엔터테인먼트 소속의 9인조 다국적 걸그룹입니다. 그룹명은 '좋은 음악으로 한 번, 멋진 퍼포먼스로 또 한 번 감동을 선사하겠다'는 뜻입니다. 데뷔곡 'OOH-AHH하게'부터 'CHEER UP', 'TT', 'KNOCK KNOCK', 'SIGNAL', 'LIKEY', 'What is Love?' 등 발매하는 모든 곡을 대한민국 전역에 유행시키며 K-POP 3세대 걸그룹을 대표하는 원탑 아이콘으로 자리 잡았습니다. 상큼하고 발랄한 에너지부터 우아하고 성숙한 컨셉까지 완벽하게 소화하며, K-POP 걸그룹 최초로 미국 스타디움 단독 콘서트 매진과 일본 돔 투어를 성공시키는 등 현재진행형 글로벌 레전드로 활약 중입니다.",
       en: "TWICE is a 9-member multinational girl group under JYP Entertainment. The name means 'to touch people's hearts once through good music and twice through great performances'. From their debut 'Like OOH-AHH' to 'CHEER UP', 'TT', 'KNOCK KNOCK', 'SIGNAL', 'LIKEY', and 'What is Love?', they made every release a nationwide trend, becoming the undisputed top icon of 3rd-gen K-pop girl groups. Perfectly pulling off everything from fresh, bubbly energy to elegant, mature concepts, they are active as living global legends, being the first K-pop girl group to sell out US stadium concerts and Japan dome tours."
@@ -1247,7 +1247,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "163cm",
         bloodType: "A",
         description: { ko: "트와이스의 상큼함을 책임지는 맏언니이자 확신의 센터. 과즙미 터지는 매력적인 토끼상 비주얼과 탄탄하고 시원한 보컬 실력을 자랑합니다.", en: "The oldest and undisputed center responsible for TWICE's freshness. Boasts juicy rabbit-like visuals and solid, refreshing vocal skills." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Im_Na-yeon_at_Music_Bank_on_July_1%2C_2022_03.jpg/800px-Im_Na-yeon_at_Music_Bank_on_July_1%2C_2022_03.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE%20nayeon%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "jeongyeon",
@@ -1259,7 +1259,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "167cm",
         bloodType: "O",
         description: { ko: "보이시한 걸크러시 매력부터 청순함까지 오가는 따뜻한 성격의 멤버. 흔들림 없고 파워풀한 가창력으로 곡의 퀄리티를 높입니다.", en: "A warm-hearted member alternating between boyish girl-crush charm and innocence. Elevates song quality with unwavering, powerful vocals." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Yoo_Jeong-yeon_going_to_Music_Bank_in_March_2024.jpg/800px-Yoo_Jeong-yeon_going_to_Music_Bank_in_March_2024.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE%20jeongyeon%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "momo",
@@ -1271,7 +1271,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "163cm",
         bloodType: "A",
         description: { ko: "K-POP 씬 전체를 대표하는 댄싱 머신인 일본인 멤버. 무대 위 카리스마와 달리 무대 밖에선 어눌한 말투의 귀여운 바보 매력이 있습니다.", en: "Japanese member representing the dancing machine of the entire K-pop scene. Contrasting her stage charisma, she has a cute, clumsy charm off stage." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Momo_Hirai_at_the_Tasaki_70th_Anniversary_Exhibition_on_April_25%2C_2024_02.jpg/800px-Momo_Hirai_at_the_Tasaki_70th_Anniversary_Exhibition_on_April_25%2C_2024_02.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE%20momo%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "sana",
@@ -1283,7 +1283,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "164cm",
         bloodType: "B",
         description: { ko: "'샤샤샤' 열풍의 주역인 큐티 섹시 일본인 멤버. 타고난 애교와 능숙한 한국어 구사력, 밝고 사랑스러운 성격으로 팬들을 홀립니다.", en: "The cute & sexy Japanese member who birthed numerous killing parts. Captivates fans with innate aegyo, fluent Korean, and a bright personality." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Sana_Minatozaki_at_the_Graff_Ginza_Main_Store_opening_event_on_November_10%2C_2023_02.jpg/800px-Sana_Minatozaki_at_the_Graff_Ginza_Main_Store_opening_event_on_November_10%2C_2023_02.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE%20sana%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "jihyo",
@@ -1295,7 +1295,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "160cm",
         bloodType: "O",
         description: { ko: "10년의 긴 연습생 생활을 거쳐 팀을 이끄는 든든하고 열정적인 리더. 폭발적인 성량과 에너지 넘치는 댄스를 자랑하는 마이크 대장입니다.", en: "The reliable and passionate leader who endured 10 years of training. The mic captain boasting explosive volume and energetic dancing." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Park_Ji-hyo_in_August_2023.jpg/800px-Park_Ji-hyo_in_August_2023.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE%20jihyo%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "mina",
@@ -1307,7 +1307,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "163cm",
         bloodType: "A",
         description: { ko: "11년간 발레를 전공해 특유의 우아한 춤선과 고급스러운 분위기를 풍기는 일본인 멤버. 차분하고 조용한 성격의 '블랙 스완'입니다.", en: "Japanese member with 11 years of ballet training, exuding elegant dance lines and a luxurious vibe. The calm and quiet 'Black Swan'." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mina_Myoui_going_to_Music_Bank_in_March_2024.jpg/800px-Mina_Myoui_going_to_Music_Bank_in_March_2024.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE%20mina%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "dahyun",
@@ -1319,7 +1319,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "161cm",
         bloodType: "O",
         description: { ko: "별명처럼 두부같이 하얀 피부를 가진 흥 부자. 기막힌 카메라 찾기 능력과 뛰어난 예능감으로 분위기 메이커를 담당합니다.", en: "A joy-rich member with tofu-like white skin as her nickname suggests. Acts as mood maker with uncanny camera-finding skills and great variety sense." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Kim_Da-hyun_for_Michael_Kors_in_September_2023.jpg/800px-Kim_Da-hyun_for_Michael_Kors_in_September_2023.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE%20dahyun%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "chaeyoung",
@@ -1331,7 +1331,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "159cm",
         bloodType: "B",
         description: { ko: "독특한 취향과 자유로운 영혼을 가진 '아기 맹수'. 훌륭한 랩 실력뿐만 아니라 그림과 작사 등 예술적 재능이 매우 뛰어납니다.", en: "A 'baby beast' with unique tastes and a free spirit. Has excellent artistic talents in drawing and lyric writing along with great rap skills." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Son_Chae-young_going_to_Music_Bank_in_March_2024.jpg/800px-Son_Chae-young_going_to_Music_Bank_in_March_2024.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE%20chaeyoung%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       },
       {
         id: "tzuyu",
@@ -1343,7 +1343,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "170cm",
         bloodType: "A",
         description: { ko: "세상에서 가장 아름다운 얼굴 1위에 오르기도 했던 대만 출신의 기럭지 막내. 인형 같은 무결점 외모와 엉뚱한 매력을 가졌습니다.", en: "The tall youngest from Taiwan who once ranked #1 for Most Beautiful Face in the World. Has doll-like flawless looks and a quirky charm." },
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Chou_Tzu-yu_at_Music_Bank_on_September_6%2C_2024_03.jpg/800px-Chou_Tzu-yu_at_Music_Bank_on_September_6%2C_2024_03.jpg"
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE%20tzuyu%20kpop%20high%20resolution&w=500&h=500&c=7&rs=1&p=0"
       }
     ]
   }
