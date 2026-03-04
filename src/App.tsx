@@ -310,7 +310,7 @@ function MainContent() {
 
 function App() {
   return (
-    <BrowserRouter basename="/KPOP-STUDIO">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainContent />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
