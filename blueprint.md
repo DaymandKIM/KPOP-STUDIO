@@ -1,46 +1,41 @@
-# Blueprint: K-pop Studio Lookalike
+# Blueprint: K-pop Studio Lookalike (Demon Hunter Edition)
 
 ## 1. Overview
-K-pop Studio Lookalike is an interactive, multi-lingual web application that uses AI (Google Teachable Machine) to find the K-pop star that most closely resembles the user's uploaded or captured photo. The application aims for an energetic, dark-mode, neon-accented aesthetic resembling a modern K-pop stage or music video.
+K-pop Studio Lookalike: Demon Hunter Edition is an interactive, multi-lingual web application that uses AI to find the K-pop star that most closely resembles the user's uploaded or captured photo. The application features a "K-POP Demon Hunters" aesthetic, framing the search as a "Hunter Identification" process, and includes an "Idol Encyclopedia" to browse the roster of active hunters.
 
 ## 2. Core Features & Capabilities
-*   **Image Input:** Users can upload an image from their device or capture a photo using their web camera.
-*   **AI Analysis:** Utilizes a pre-trained Teachable Machine Image Model (TensorFlow.js) directly in the browser to analyze facial features.
-*   **Multilingual Support (i18n):** Offers the app interface in multiple languages (English as default, plus Korean) using `react-i18next`.
-*   **Result Display:** Shows the predicted K-pop star, the confidence percentage (similarity score), and a visual comparison (user photo vs. star photo).
-*   **Responsive Design:** Fully optimized for mobile and desktop screens, prioritizing a mobile-first approach.
+*   **Hunter Identification (AI Analysis):** Analyzes facial features using a pre-trained Teachable Machine model to identify the user's K-pop "hunter" counterpart.
+*   **Idol Encyclopedia (Hunter Database):** A searchable, filterable roster of K-pop idols, categorized by their "Hunter Class" (e.g., Vanguard, Scout, Striker) and "Element".
+*   **Multilingual Support (i18n):** EN and KO support for all interface elements.
+*   **Responsive HUD-style Design:** A mobile-first, high-tech interface inspired by cyberpunk and demon hunter aesthetics.
 
 ## 3. Technology Stack
 *   **Frontend Framework:** React 18, TypeScript, Vite
-*   **Styling:** Tailwind CSS (for rapid, utility-first styling and dark mode support)
+*   **Styling:** Tailwind CSS + Custom CSS for HUD effects
 *   **AI/ML Integration:** `@teachablemachine/image`, `@tensorflow/tfjs`
 *   **Internationalization:** `i18next`, `react-i18next`
-*   **Icons:** `lucide-react`
+*   **Icons:** `lucide-react` (for tech/hunter icons)
 
-## 4. UI/UX Design Guidelines
-*   **Theme:** Dark mode dominant (deep blacks, dark grays).
-*   **Accents:** Vibrant neon colors (Electric Blue, Hot Pink, Cyber Purple) to represent the "K-pop" vibe.
-*   **Typography:** Modern, sans-serif fonts (e.g., Inter or Roboto). Large, bold headings.
-*   **Effects:** Use of `backdrop-blur` (glassmorphism) for cards, soft neon shadows for interactive elements (buttons, upload areas).
-*   **Animations:** Smooth transitions for state changes (uploading -> analyzing -> result). A prominent, visually engaging loading animation during the AI analysis phase.
+## 4. UI/UX Design Guidelines (K-POP Demon Hunters Theme)
+*   **Theme:** Dark mode dominant (deep blacks, slate grays).
+*   **Accents:** Cyber-neon Fuchsia and Cyan.
+*   **Visual Elements:**
+    *   **HUD Overlays:** Use of crosshairs, scanlines, and tech-wear patterns.
+    *   **Sharp Borders:** Moving away from soft rounded corners to more angular, "armored" looks.
+    *   **Typography:** Monospaced fonts for technical data (e.g., similarity scores) and bold, aggressive sans-serif for headings.
+    *   **Animations:** Glitch effects on hover, "terminal" typing effects, and high-tech scanning animations.
 
 ## 5. Development Plan & Steps (Current)
-1.  **Project Initialization & Dependencies:**
-    *   Set up React/Vite/TypeScript environment.
-    *   Install necessary packages: `tailwindcss`, `postcss`, `autoprefixer`, `@teachablemachine/image`, `@tensorflow/tfjs`, `react-i18next`, `i18next`, `lucide-react`.
-2.  **Configuration:**
-    *   Configure Tailwind CSS (`tailwind.config.js`, `index.css`).
-    *   Set up `i18n` translations (EN, KO).
-3.  **Teachable Machine Integration:**
-    *   Create a service or React hook to load the Teachable Machine model from a URL.
-    *   Implement the `predict` function that takes an image element (or video frame) and returns probabilities.
-    *   *(Note: Initially, a placeholder model URL or mock data will be used until the user provides their specific trained model URL).*
-4.  **UI Component Development:**
-    *   `Layout`: Header with Logo and Language Selector.
-    *   `HomeView`: Hero section, instructions, Image Upload/Camera Capture component (Drag & Drop, Camera access).
-    *   `AnalyzingView`: Neon/Cyberpunk style loading animation.
-    *   `ResultView`: Display user photo, matched K-pop star info (Name, Group, Similarity %), and "Try Again" action.
-5.  **State Management:**
-    *   Manage application state (idle, capturing, analyzing, result, error) using React `useState` and `useEffect`.
-6.  **Refinement:**
-    *   Apply final styling touches, ensure mobile responsiveness, and test across different browsers.
+1.  **Redesign Theme (Demon Hunter Aesthetic):**
+    *   Update `index.css` with HUD-specific styles (scanlines, tech borders, monospaced fonts).
+    *   Refine `App.tsx` layout to use a navigation bar for switching between "Identification" and "Encyclopedia".
+2.  **Implement Idol Encyclopedia:**
+    *   Create a data structure for Idols (Name, Group, Class, Element, Description).
+    *   Build `IdolEncyclopedia` component with search and filter capabilities.
+3.  **Update Translations:**
+    *   Add "Demon Hunter" themed terminology to `i18n.ts`.
+4.  **Refine AI Workflow:**
+    *   Re-frame the "analyzing" state as "Targeting" or "Identifying".
+    *   Update result display to show "Hunter Match" details.
+5.  **Final Polish:**
+    *   Add subtle animations and sound-like visual cues (visual only).
