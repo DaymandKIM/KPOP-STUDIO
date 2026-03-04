@@ -5,15 +5,46 @@ import { KPOP_GROUPS } from '../data/idols';
 import type { KpopGroup } from '../data/idols';
 
 // Enhanced Safe Image Component with Image Proxy Bypass
+// Extremely Resilient Image Component with Multiple Fallback Strategies
 const SafeImage: React.FC<{ src: string; alt: string; className?: string; accentColor?: string }> = ({ src, alt, className, accentColor = '#00ffff' }) => {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [retryCount, setRetryCount] = useState(0);
 
-  const proxiedSrc = src 
-    ? (src.includes('naver.net') || src.includes('pstatic.net') 
-        ? src 
-        : `https://images.weserv.nl/?url=${encodeURIComponent(src.replace(/^https?:\/\//, ''))}&w=800`) 
-    : src;
+  // Strategy sequence:
+  // 0: Try direct (if Naver) or Primary Proxy (if others)
+  // 1: Try Primary Proxy (wsrv.nl)
+  // 2: Try Secondary Proxy (weserv.nl)
+  // 3: Try Tertiary Proxy (wordpress photon)
+  const getAttemptUrl = (count: number): string => {
+    if (!src) return '';
+    
+    const isNaver = src.includes('naver.net') || src.includes('pstatic.net');
+    const cleanUrl = src.replace(/^https?:\/\//, '');
+    const encodedUrl = encodeURIComponent(src);
+
+    if (count === 0) {
+      return isNaver ? src : `https://wsrv.nl/?url=${encodeURIComponent(cleanUrl)}&w=800`;
+    }
+    
+    switch (count) {
+      case 1: return `https://wsrv.nl/?url=${encodeURIComponent(cleanUrl)}&w=800`;
+      case 2: return `https://images.weserv.nl/?url=${encodeURIComponent(cleanUrl)}&w=800`;
+      case 3: return `https://i0.wp.com/${cleanUrl.split('?')[0]}`; // Simple photon fallback (no query params)
+      default: return src;
+    }
+  };
+
+  const currentSrc = getAttemptUrl(retryCount);
+
+  const handleError = () => {
+    if (retryCount < 3) {
+      setRetryCount(prev => prev + 1);
+    } else {
+      setError(true);
+      setLoading(false);
+    }
+  };
 
   if (error || !src) {
     return (
@@ -44,11 +75,12 @@ const SafeImage: React.FC<{ src: string; alt: string; className?: string; accent
         </div>
       )}
       <img 
-        src={proxiedSrc} 
+        key={retryCount} // Force re-mount on retry to ensure browser tries again
+        src={currentSrc} 
         alt={alt} 
         className={`${className} transition-opacity duration-700 ${loading ? 'opacity-0' : 'opacity-100'}`} 
         referrerPolicy="no-referrer"
-        onError={() => { setError(true); setLoading(false); }}
+        onError={handleError}
         onLoad={() => setLoading(false)}
         loading="lazy"
       />
