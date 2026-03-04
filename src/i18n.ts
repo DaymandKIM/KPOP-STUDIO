@@ -49,7 +49,7 @@ const resources = {
       "error_image": "데이터 오류: 이미지 처리에 실패했습니다.",
       "loading_model": "분석 엔진 가동 중...",
       "nav_identification": "닮은꼴 찾기",
-      "nav_encyclopedia": "아이돌 백과사전",
+      "nav_encyclopedia": "KPOP Star 백과사전",
       "search_placeholder": "아이돌 검색...",
       "class": "포지션",
       "element": "분위기",
