@@ -1,4 +1,21 @@
+# Best SEO practices for KPOP STUDIO
+# Optimized for Google Search and Naver Search Advisor
+
 User-agent: *
 Allow: /
+Disallow: /dist/
+Disallow: /node_modules/
 
+# Naver bot optimization
+User-agent: Yeti
+Allow: /
+
+# Google bot optimization
+User-agent: Googlebot
+Allow: /
+
+# Host information
+Host: https://kpop-studio.pages.dev
+
+# Sitemap location
 Sitemap: https://kpop-studio.pages.dev/sitemap.xml
