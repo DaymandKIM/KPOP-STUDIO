@@ -179,7 +179,7 @@ function MainContent() {
             {appState === 'idle' && (
               <div className="w-full max-w-lg px-2 flex justify-center">
                 {isModelLoading ? (
-                  <div className="glass-card p-10 md:p-16 rounded-[32px] md:rounded-[40px] flex flex-col items-center justify-center border-neon-blue/20 min-h-[300px] md:min-h-[400px] w-full">
+                  <div className="glass-card rounded-[32px] md:rounded-[40px] flex flex-col items-center justify-center border-neon-blue/20 min-h-[320px] md:min-h-[400px] w-full">
                      <div className="relative">
                         <RefreshCw className="w-12 h-12 md:w-16 md:h-16 text-neon-blue animate-spin mb-6 md:mb-8" />
                         <div className="absolute inset-0 blur-xl bg-neon-blue/30 animate-pulse"></div>
@@ -187,31 +187,29 @@ function MainContent() {
                      <p className="text-neon-blue font-mono text-[10px] md:text-xs font-black uppercase tracking-[0.3em]">{t('loading_model')}</p>
                   </div>
                 ) : (
-                  <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] group relative cursor-pointer min-h-[320px] md:min-h-[400px] flex items-center justify-center active:scale-95 transition-transform duration-200 w-full">
+                  <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] group relative cursor-pointer min-h-[320px] md:min-h-[400px] flex flex-col items-center justify-center active:scale-95 transition-transform duration-200 w-full overflow-hidden">
                     <input 
                       type="file" 
                       accept="image/*"
                       onChange={handleImageUpload}
-                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20"
+                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-30"
                     />
                     
-                    <div className="flex flex-col items-center justify-center gap-6 md:gap-10 p-8 md:p-16 w-full relative z-10">
-                      <div className="relative group-hover:scale-110 transition-transform duration-700">
+                    <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 pointer-events-none">
+                      <div className="relative mb-8 md:mb-12 group-hover:scale-110 transition-transform duration-700">
                         <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue via-neon-purple to-neon-pink blur-3xl opacity-20 group-hover:opacity-60 transition-opacity"></div>
                         <div className="w-24 h-24 md:w-32 md:h-32 rounded-3xl bg-black border border-white/20 flex items-center justify-center relative z-10 neon-shadow-blue">
                           <Upload className="w-10 h-10 md:w-12 md:h-12 text-neon-blue group-hover:text-white transition-colors" />
                         </div>
                       </div>
                       
-                      <div className="text-center w-full">
-                        <p className="font-black text-3xl md:text-4xl text-white mb-2 md:mb-3 uppercase italic tracking-tight">{t('upload_btn')}</p>
-                        <p className="text-[10px] md:text-[11px] font-mono text-slate-500 uppercase tracking-[0.2em] font-bold">{i18n.language === 'ko' ? '사진을 선택해 주세요' : 'Tap to Upload Image'}</p>
-                      </div>
+                      <h3 className="font-black text-4xl md:text-6xl text-white mb-3 md:mb-5 uppercase italic tracking-tighter leading-tight">{t('upload_btn')}</h3>
+                      <p className="text-xs md:text-sm font-mono text-slate-500 uppercase tracking-[0.2em] font-bold">{i18n.language === 'ko' ? '사진을 선택해 주세요' : 'Tap to Upload Image'}</p>
 
-                      <div className="hud-corner hud-corner-tl !border-neon-blue !w-8 !h-8 md:!w-10 md:!h-10"></div>
-                      <div className="hud-corner hud-corner-tr !border-neon-purple !w-8 !h-8 md:!w-10 md:!h-10"></div>
-                      <div className="hud-corner hud-corner-bl !border-neon-pink !w-8 !h-8 md:!w-10 md:!h-10"></div>
-                      <div className="hud-corner hud-corner-br !border-neon-green !w-8 !h-8 md:!w-10 md:!h-10"></div>
+                      <div className="hud-corner hud-corner-tl !border-neon-blue !w-8 !h-8 md:!w-12 md:!h-12"></div>
+                      <div className="hud-corner hud-corner-tr !border-neon-purple !w-8 !h-8 md:!w-12 md:!h-12"></div>
+                      <div className="hud-corner hud-corner-bl !border-neon-pink !w-8 !h-8 md:!w-12 md:!h-12"></div>
+                      <div className="hud-corner hud-corner-br !border-neon-green !w-8 !h-8 md:!w-12 md:!h-12"></div>
                     </div>
                   </div>
                 )}
