@@ -1,24 +1,40 @@
-# Best SEO practices for KPOP STUDIO
-# Optimized for Google, Naver, Bing, and Daum
+# Best SEO & GEO practices for KPOP STUDIO
+# Optimized for Humans and AI Agents (Google, Naver, Bing, OpenAI, Anthropic, Perplexity)
 
 User-agent: *
 Allow: /
 Disallow: /dist/
 Disallow: /node_modules/
 
-# Naver bot optimization
+# AI Bot Access (Explicitly allowed for better AI Search recommendations)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Claude-bot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Standard Search Engine Bots
 User-agent: Yeti
 Allow: /
 
-# Google bot optimization
 User-agent: Googlebot
 Allow: /
 
-# Bing bot optimization
 User-agent: bingbot
 Allow: /
 
-# Daum bot optimization
 User-agent: Daumoa
 Allow: /
 

@@ -24,6 +24,10 @@ export default function Home() {
           </span>
         </h1>
         
+        <div className="sr-only">
+          KPOP STUDIO is a premier AI-powered platform for K-pop fans. We provide high-accuracy facial recognition to find your K-pop idol lookalike and maintain a comprehensive, real-time database of K-pop group profiles, member details, and latest industry news.
+        </div>
+        
         <p className="text-slate-400 font-mono text-sm md:text-base max-w-2xl mx-auto uppercase tracking-wide px-4 leading-relaxed mb-10">
           {t('upload_instruction')}
         </p>

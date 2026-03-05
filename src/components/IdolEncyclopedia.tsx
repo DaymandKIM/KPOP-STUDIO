@@ -123,8 +123,33 @@ const IdolEncyclopedia: React.FC = () => {
   };
 
   if (selectedGroup) {
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": selectedGroup.name[currentLang],
+      "description": selectedGroup.description[currentLang],
+      "genre": "K-pop",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "South Korea"
+      },
+      "member": selectedGroup.members.map(m => ({
+        "@type": "OrganizationRole",
+        "member": {
+          "@type": "Person",
+          "name": m.name[currentLang]
+        },
+        "roleName": m.role[currentLang]
+      }))
+    };
+
     return (
       <div className="w-full max-w-7xl mx-auto flex flex-col gap-10 animate-fade-in-up pb-20">
+        {/* Dynamic SEO for AI */}
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
+        
         {/* Header Section */}
         <div className="flex flex-col md:flex-row gap-8 items-start px-2">
           <button 
