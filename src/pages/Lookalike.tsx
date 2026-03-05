@@ -2,8 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Upload, RefreshCw, Star, ArrowRight, User, AlertCircle, Crosshair, Database } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { useTeachableMachine } from '../hooks/useTeachableMachine';
-import type { Prediction } from '../hooks/useTeachableMachine';
+import { useFaceRecognition } from '../hooks/useFaceRecognition';
+import type { Prediction } from '../hooks/useFaceRecognition';
 import { KPOP_GROUPS } from '../data/idols';
 
 type AppState = 'idle' | 'analyzing' | 'result';
@@ -11,7 +11,7 @@ type AppState = 'idle' | 'analyzing' | 'result';
 export default function Lookalike() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  const { model, isModelLoading, modelError, predict } = useTeachableMachine();
+  const { model, isModelLoading, modelError, predict } = useFaceRecognition();
 
   const [appState, setAppState] = useState<AppState>('idle');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -23,14 +23,9 @@ export default function Lookalike() {
   const getMatchedIdol = () => {
     if (predictions.length === 0) return null;
     const topLabel = predictions[0].className;
-    
-    // Logic to map Teachable Machine labels to our data
-    let targetMemberId = "";
-    if (topLabel.includes("정국")) targetMemberId = "jungkook";
-    if (topLabel.includes("장원영")) targetMemberId = "jangwonyoung";
 
     for (const group of KPOP_GROUPS) {
-      const member = group.members.find(m => m.id === targetMemberId);
+      const member = group.members.find(m => m.name.ko === topLabel || m.name.en === topLabel);
       if (member) return { group, member };
     }
     return null;
