@@ -125,7 +125,7 @@ const IdolEncyclopedia: React.FC = () => {
           </button>
           
           <div className="flex-1 flex flex-col md:flex-row gap-8 items-center md:items-start">
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-[40px] overflow-hidden border-4 border-white/10 neon-shadow-purple flex-shrink-0">
+            <div className="w-64 h-64 md:w-96 md:h-96 rounded-[40px] md:rounded-[56px] overflow-hidden border-4 border-white/10 neon-shadow-purple flex-shrink-0">
               <SafeImage 
                 src={selectedGroup.imageUrl} 
                 alt={selectedGroup.name[currentLang]} 
