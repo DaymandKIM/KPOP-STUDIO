@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://DaymandKIM.github.io/KPOP-STUDIO/sitemap.xml
+Sitemap: https://studio-3461279798-7aed1.web.app/sitemap.xml
