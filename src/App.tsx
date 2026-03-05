@@ -81,7 +81,7 @@ function MainContent() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-slate-50 font-sans flex flex-col relative overflow-hidden">
+    <div className="min-h-screen text-slate-50 font-sans flex flex-col relative overflow-hidden">
       <div className="stage-container">
         <div className="stage-glow glow-1"></div>
         <div className="stage-glow glow-2"></div>
