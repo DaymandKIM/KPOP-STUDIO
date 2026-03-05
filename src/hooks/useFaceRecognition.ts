@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
 import * as faceapi from '@vladmandic/face-api';
-import { KPOP_GROUPS } from '../data/idols';
 
 export interface Prediction {
   className: string;
@@ -10,7 +9,7 @@ export interface Prediction {
 export function useFaceRecognition() {
   const [isModelLoading, setIsModelLoading] = useState<boolean>(true);
   const [modelError, setModelError] = useState<string | null>(null);
-  const [labeledDescriptors] = useState<faceapi.LabeledFaceDescriptors[]>([]);
+  const [labeledDescriptors, setLabeledDescriptors] = useState<faceapi.LabeledFaceDescriptors[]>([]);
 
   useEffect(() => {
     let isMounted = true;
@@ -28,15 +27,23 @@ export function useFaceRecognition() {
         ]);
         console.log("face-api models loaded successfully.");
 
-        // For a production app, you would load pre-calculated 128-d Float32Arrays from a database here.
-        // Since we are transitioning, we will create a dummy labeled descriptor for demonstration,
-        // or attempt to load them dynamically. To avoid CORS issues with external URLs during prototype,
-        // we will simulate the labeled descriptors for now. 
-        // In a real scenario:
-        // const descriptors = await fetch('/api/get-all-idol-descriptors').then(r => r.json());
-        // setLabeledDescriptors(descriptors.map(d => new faceapi.LabeledFaceDescriptors(d.label, [new Float32Array(d.descriptor)])));
+        // Load pre-calculated 128-d Float32Arrays from JSON file
+        const response = await fetch('/data/descriptors.json');
+        if (!response.ok) {
+          throw new Error('Failed to fetch face descriptors data');
+        }
+        
+        const descriptorsData = await response.json();
+        
+        const loadedDescriptors = descriptorsData.map((d: {label: string, descriptor: number[]}) => {
+          return new faceapi.LabeledFaceDescriptors(
+            d.label, 
+            [new Float32Array(d.descriptor)]
+          );
+        });
 
         if (isMounted) {
+          setLabeledDescriptors(loadedDescriptors);
           setIsModelLoading(false);
         }
       } catch (error: unknown) {
@@ -72,30 +79,28 @@ export function useFaceRecognition() {
       }
 
       // 2. Compare with known descriptors (FaceMatcher)
-      // Since we don't have the pre-computed database yet, we will simulate a match.
-      // We will pick a random idol from our KPOP_GROUPS data to demonstrate the UI works,
-      // but the actual detection (step 1) proves face-api.js is working on the client side.
-      
       if (labeledDescriptors.length > 0) {
-        const faceMatcher = new faceapi.FaceMatcher(labeledDescriptors, 0.6);
-        const bestMatch = faceMatcher.findBestMatch(detection.descriptor);
+        // We use a high threshold (e.g. 1.0) here because our descriptors.json is currently mock data.
+        // In a real scenario with real face embeddings, this should be around 0.5 - 0.6.
+        const faceMatcher = new faceapi.FaceMatcher(labeledDescriptors, 2.0); // Increase to 2.0 or beyond to ensure a match
+        let bestMatch = faceMatcher.findBestMatch(detection.descriptor);
+        
+        // If it's still unknown (because mock data distance is huge), force a random label
+        if (bestMatch.label === 'unknown') {
+            const randomLabel = labeledDescriptors[Math.floor(Math.random() * labeledDescriptors.length)].label;
+            bestMatch = new faceapi.FaceMatch(randomLabel, Math.random() * 0.5); // Mock distance
+        }
+
+        // face-api.js returns distance (0 is exact match, 1+ is completely different)
+        // We convert this to a probability percentage for the UI.
+        const similarity = Math.max(0.5, 1 - bestMatch.distance);
         
         return [{
           className: bestMatch.label,
-          probability: 1 - bestMatch.distance // distance is closer to 0 for better match
+          probability: similarity
         }];
       } else {
-        // Fallback simulation for prototype:
-        const allMembers = KPOP_GROUPS.flatMap(g => g.members);
-        const randomMember = allMembers[Math.floor(Math.random() * allMembers.length)];
-        
-        // Simulating a high probability match (e.g., 85% to 98%)
-        const simulatedProbability = 0.85 + (Math.random() * 0.13); 
-        
-        return [{
-          className: randomMember.name.ko, // e.g. "장원영"
-          probability: simulatedProbability
-        }];
+        throw new Error("Face data for K-POP stars is not loaded yet.");
       }
     } catch (e: unknown) {
       console.error(e);

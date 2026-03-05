@@ -5,6 +5,7 @@ import { Crosshair, Sparkles, ArrowRight } from 'lucide-react';
 
 export default function Home() {
   const { t, i18n } = useTranslation();
+  const isKo = i18n?.language === 'ko';
 
   return (
     <div className="flex-1 flex flex-col items-center p-4 md:p-8 w-full max-w-7xl mx-auto z-10 animate-fade-in-up">
@@ -17,10 +18,10 @@ export default function Home() {
         
         <h1 className="text-5xl xs:text-6xl md:text-8xl font-black mb-6 tracking-tighter italic text-white leading-[1.1] md:leading-none max-w-5xl mx-auto uppercase">
           <div className="mb-2 md:mb-4">
-            {i18n.language === 'ko' ? t('home_hero_title') : t('app_title')}
+            {isKo ? t('home_hero_title') : t('app_title')}
           </div>
           <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue pb-1 md:pb-2 break-keep">
-            {i18n.language === 'ko' ? t('home_hero_subtitle') : t('app_subtitle')}
+            {isKo ? t('home_hero_subtitle') : t('app_subtitle')}
           </span>
         </h1>
         

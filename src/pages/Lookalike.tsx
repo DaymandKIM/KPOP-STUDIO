@@ -51,9 +51,12 @@ export default function Lookalike() {
             setPredictions(results);
             setAppState('result');
           }
-        } catch (error) {
+        } catch (error: unknown) {
           console.error("Analysis failed", error);
+          const errorMessage = error instanceof Error ? error.message : "분석 중 오류가 발생했습니다. 다른 사진으로 시도해주세요.";
+          alert(errorMessage);
           setAppState('idle');
+          setSelectedImage(null);
         }
       }, 2500);
 
@@ -154,21 +157,22 @@ export default function Lookalike() {
       )}
 
       {appState === 'result' && selectedImage && predictions.length > 0 && (
-        <div className="w-full max-w-6xl flex flex-col items-center animate-fade-in-up px-2 pb-10 mt-8 md:mt-12">
+        <div className="w-full max-w-5xl flex flex-col items-center animate-fade-in-up px-2 pb-10 mt-8 md:mt-12">
           <div className="flex items-center gap-4 md:gap-6 mb-8 md:mb-12">
-            <div className="h-px w-10 xs:w-20 md:w-40 bg-gradient-to-r from-transparent via-neon-pink to-transparent"></div>
-            <h2 className="text-2xl xs:text-3xl md:text-6xl font-black italic text-white uppercase tracking-tighter flex items-center gap-3 md:gap-4 glitch-text pr-2">
+            <div className="h-px w-10 xs:w-20 md:w-32 bg-gradient-to-r from-transparent via-neon-pink to-transparent"></div>
+            <h2 className="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-black italic text-white uppercase tracking-tighter flex items-center gap-3 md:gap-4 glitch-text pr-2">
               {t('match_found')}
             </h2>
-            <div className="h-px w-10 xs:w-20 md:w-40 bg-gradient-to-r from-transparent via-neon-blue to-transparent"></div>
+            <div className="h-px w-10 xs:w-20 md:w-32 bg-gradient-to-r from-transparent via-neon-blue to-transparent"></div>
           </div>
 
-          <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[48px] p-1 w-full mb-10 md:mb-16">
-            <div className="bg-black/80 backdrop-blur-3xl rounded-[30px] md:rounded-[46px] p-6 md:p-16 flex flex-col lg:flex-row gap-10 md:gap-16 items-center relative z-10">
+          <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[48px] p-1 w-full mb-10 md:mb-16 overflow-hidden max-w-4xl mx-auto">
+            <div className="bg-black/80 backdrop-blur-3xl rounded-[30px] md:rounded-[46px] p-6 md:p-10 lg:p-12 flex flex-col items-center relative z-10">
               
-              <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row items-center justify-center gap-6 md:gap-8 w-full lg:w-auto">
-                <div className="relative">
-                  <div className="w-44 h-44 xs:w-56 xs:h-56 md:w-64 md:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-white/10 neon-shadow-purple relative flex-shrink-0">
+              {/* Image Comparison Section */}
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 w-full mb-10 md:mb-14">
+                <div className="relative group/img">
+                  <div className="w-48 h-48 xs:w-56 xs:h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-white/10 neon-shadow-purple relative flex-shrink-0 transition-transform duration-500 group-hover/img:scale-[1.02]">
                     <img 
                       src={selectedImage} 
                       alt="User" 
@@ -181,14 +185,14 @@ export default function Lookalike() {
                 </div>
                 
                 <div className="flex items-center justify-center">
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center neon-shadow-blue animate-pulse">
-                    <ArrowRight className="w-6 h-6 md:w-8 md:h-8 text-neon-blue rotate-90 md:rotate-0 lg:rotate-90 xl:rotate-0" />
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center neon-shadow-blue animate-pulse shrink-0">
+                    <ArrowRight className="w-6 h-6 md:w-8 md:h-8 text-neon-blue rotate-90 md:rotate-0" />
                   </div>
                 </div>
 
                 {matchedIdol && (
-                  <div className="relative">
-                    <div className="w-44 h-44 xs:w-56 xs:h-56 md:w-64 md:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-neon-blue neon-shadow-blue relative flex-shrink-0">
+                  <div className="relative group/img">
+                    <div className="w-48 h-48 xs:w-56 xs:h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-neon-blue neon-shadow-blue relative flex-shrink-0 transition-transform duration-500 group-hover/img:scale-[1.02]">
                       <img 
                         src={matchedIdol.member.imageUrl} 
                         alt={matchedIdol.member.name[currentLang]} 
@@ -202,47 +206,49 @@ export default function Lookalike() {
                 )}
               </div>
 
-              <div className="flex-1 text-center lg:text-left space-y-6 md:space-y-10 w-full">
+              {/* Result Info Section */}
+              <div className="w-full text-center space-y-8 md:space-y-10">
                 <div className="space-y-2 md:space-y-4">
                   <div className="inline-block px-4 py-1.5 bg-neon-pink/10 border border-neon-pink/30 rounded-full text-neon-pink font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] font-black">Best Match Identified</div>
-                  <h3 className="text-5xl md:text-8xl font-black text-white italic tracking-tighter leading-none pr-2">
+                  <h3 className="text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tighter leading-none pr-2">
                     {matchedIdol ? matchedIdol.member.name[currentLang] : predictions[0].className}
                   </h3>
                   {matchedIdol && (
-                    <div className="flex items-center justify-center lg:justify-start gap-3">
+                    <div className="flex items-center justify-center gap-3">
                       <div className="h-px w-8 bg-neon-blue/50"></div>
-                      <p className="text-neon-blue font-black text-xl md:text-3xl uppercase tracking-widest italic">
+                      <p className="text-neon-blue font-black text-2xl md:text-3xl lg:text-4xl uppercase tracking-widest italic">
                         {matchedIdol.group.name[currentLang]}
                       </p>
+                      <div className="h-px w-8 bg-neon-blue/50"></div>
                     </div>
                   )}
                 </div>
                 
-                <div className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-8">
-                  <div className="bg-white/5 border border-neon-blue/30 rounded-[32px] p-6 md:p-8 flex flex-col items-center lg:items-start backdrop-blur-md min-w-[140px] flex-1">
-                    <p className="text-slate-500 font-mono text-[10px] md:text-xs uppercase font-black mb-2 md:mb-4 tracking-widest">{t('similarity')}</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl mx-auto">
+                  <div className="bg-white/5 border border-neon-blue/30 rounded-[28px] p-5 md:p-7 flex flex-col items-center backdrop-blur-md min-w-[160px]">
+                    <p className="text-slate-500 font-mono text-[10px] md:text-xs uppercase font-black mb-2 md:mb-3 tracking-widest">{t('similarity')}</p>
                     <div className="flex items-baseline gap-1 md:gap-2">
-                      <span className="text-5xl md:text-7xl font-black text-neon-blue italic">
+                      <span className="text-4xl md:text-6xl font-black text-neon-blue italic">
                         {Math.round(predictions[0].probability * 100)}
                       </span>
-                      <span className="text-neon-blue font-mono text-xl md:text-3xl font-black">%</span>
+                      <span className="text-neon-blue font-mono text-xl md:text-2xl font-black">%</span>
                     </div>
                   </div>
 
                   {matchedIdol && (
-                    <>
-                      <div className="bg-white/5 border border-neon-purple/30 rounded-[32px] p-6 md:p-8 flex flex-col items-center lg:items-start backdrop-blur-md min-w-[140px] flex-1">
-                        <p className="text-slate-500 font-mono text-[10px] md:text-xs uppercase font-black mb-2 md:mb-4 tracking-widest">{t('class')}</p>
-                        <p className="text-2xl md:text-4xl font-black text-white italic truncate w-full text-center lg:text-left">{matchedIdol.member.role[currentLang]}</p>
-                      </div>
-                    </>
+                    <div className="bg-white/5 border border-neon-purple/30 rounded-[28px] p-5 md:p-7 flex flex-col items-center backdrop-blur-md min-w-[160px]">
+                      <p className="text-slate-500 font-mono text-[10px] md:text-xs uppercase font-black mb-2 md:mb-3 tracking-widest">{t('class')}</p>
+                      <p className="text-xl md:text-3xl font-black text-white italic whitespace-normal text-center break-keep line-clamp-2">
+                        {matchedIdol.member.role[currentLang]}
+                      </p>
+                    </div>
                   )}
                 </div>
 
                 {matchedIdol && (
-                  <div className="pt-4 flex justify-center lg:justify-start">
+                  <div className="pt-4 flex justify-center">
                     <button 
-                      onClick={() => navigate('/encyclopedia')}
+                      onClick={() => navigate('/encyclopedia', { state: { selectedMemberId: matchedIdol.member.id, selectedGroupId: matchedIdol.group.id } })}
                       className="flex items-center gap-4 px-8 py-4 bg-white/5 hover:bg-neon-green/10 border border-white/10 hover:border-neon-green/50 rounded-2xl text-xs md:text-sm font-black uppercase tracking-[0.2em] transition-all group/btn"
                     >
                       <Database className="w-5 h-5 text-neon-green" />

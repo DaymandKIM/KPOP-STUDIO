@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Search, User, Star, ChevronLeft, ExternalLink, MessageCircle, Newspaper, Sparkles, Calendar, Fingerprint, Heart } from 'lucide-react';
 import { KPOP_GROUPS } from '../data/idols';
 import type { KpopGroup } from '../data/idols';
+import { useLocation } from 'react-router-dom';
 
 // Enhanced Safe Image Component with Image Proxy Bypass
 // Extremely Resilient Image Component with Multiple Fallback Strategies
@@ -97,9 +98,19 @@ const SafeImage: React.FC<{ src: string; alt: string; className?: string; accent
 
 const IdolEncyclopedia: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const currentLang = (i18n.language === 'ko' ? 'ko' : 'en') as 'ko' | 'en';
+  const location = useLocation();
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedGroup, setSelectedGroup] = useState<KpopGroup | null>(null);
+  
+  const currentLang = (i18n.language === 'ko' ? 'ko' : 'en') as 'ko' | 'en';
+
+  // Initialize state directly from location if available
+  const [selectedGroup, setSelectedGroup] = useState<KpopGroup | null>(() => {
+    if (location.state && location.state.selectedGroupId) {
+      const group = KPOP_GROUPS.find(g => g.id === location.state.selectedGroupId);
+      if (group) return group;
+    }
+    return null;
+  });
 
   const filteredGroups = KPOP_GROUPS.filter(group => 
     group.name.ko.toLowerCase().includes(searchTerm.toLowerCase()) ||
