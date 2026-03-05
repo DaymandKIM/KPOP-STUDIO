@@ -1,6 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import * as tmImage from '@teachablemachine/image';
 
+export interface Prediction {
+  className: string;
+  probability: number;
+}
+
 // Replace this with your actual Teachable Machine model URL
 // const URL = "https://teachablemachine.withgoogle.com/models/YOUR_MODEL_ID/";
 // For development and testing without a real model yet, we can mock it or use a public one if available.
@@ -22,19 +27,17 @@ export function useTeachableMachine() {
         const metadataURL = MODEL_URL + "metadata.json";
 
         // Load the model and metadata
-        // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
-        // or files from your local hard drive
-        // Note: the pose library adds "tmImage" object to your window (window.tmImage)
         const loadedModel = await tmImage.load(modelURL, metadataURL);
         
         if (isMounted) {
           setModel(loadedModel);
           setIsModelLoading(false);
         }
-      } catch (error: any) {
+      } catch (error: unknown) {
+        const errorMessage = error instanceof Error ? error.message : "Failed to load model";
         console.error("Failed to load Teachable Machine model:", error);
         if (isMounted) {
-          setModelError(error.message || "Failed to load model");
+          setModelError(errorMessage);
           setIsModelLoading(false);
         }
       }
@@ -47,7 +50,7 @@ export function useTeachableMachine() {
     };
   }, []);
 
-  const predict = useCallback(async (imageElement: HTMLImageElement | HTMLVideoElement | HTMLCanvasElement) => {
+  const predict = useCallback(async (imageElement: HTMLImageElement | HTMLVideoElement | HTMLCanvasElement): Promise<Prediction[]> => {
     if (!model) {
       throw new Error("Model is not loaded yet");
     }
@@ -56,7 +59,7 @@ export function useTeachableMachine() {
     const predictions = await model.predict(imageElement);
     
     // Sort predictions by probability, highest first
-    return predictions.sort((a, b) => b.probability - a.probability);
+    return (predictions as Prediction[]).sort((a, b) => b.probability - a.probability);
   }, [model]);
 
   return { model, isModelLoading, modelError, predict };

@@ -1,8 +1,9 @@
-import React, { useState, useRef, useEffect, useMemo } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Upload, RefreshCw, Star, Database, Crosshair, Sparkles, Menu, X, ArrowRight, User } from 'lucide-react';
+import { Upload, RefreshCw, Star, Database, Crosshair, Sparkles, Menu, X, ArrowRight, User, AlertCircle } from 'lucide-react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { useTeachableMachine } from './hooks/useTeachableMachine';
+import type { Prediction } from './hooks/useTeachableMachine';
 import { KPOP_GROUPS } from './data/idols';
 import IdolEncyclopedia from './components/IdolEncyclopedia';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -14,19 +15,19 @@ type ViewMode = 'identification' | 'encyclopedia';
 
 function MainContent() {
   const { t, i18n } = useTranslation();
-  const { model, isModelLoading, predict } = useTeachableMachine();
+  const { model, isModelLoading, modelError, predict } = useTeachableMachine();
 
   const [viewMode, setViewMode] = useState<ViewMode>('identification');
   const [appState, setAppState] = useState<AppState>('idle');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [predictions, setPredictions] = useState<any[]>([]);
+  const [predictions, setPredictions] = useState<Prediction[]>([]);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const imageRef = useRef<HTMLImageElement>(null);
 
   const currentLang = (i18n.language === 'ko' ? 'ko' : 'en') as 'ko' | 'en';
 
   // Find matched idol data based on prediction
-  const matchedIdol = useMemo(() => {
+  const getMatchedIdol = () => {
     if (predictions.length === 0) return null;
     const topLabel = predictions[0].className;
     
@@ -40,7 +41,9 @@ function MainContent() {
       if (member) return { group, member };
     }
     return null;
-  }, [predictions]);
+  };
+
+  const matchedIdol = getMatchedIdol();
 
   const toggleLanguage = () => {
     const newLang = i18n.language === 'en' ? 'ko' : 'en';
@@ -60,9 +63,11 @@ function MainContent() {
     if (appState === 'analyzing' && selectedImage && imageRef.current && model) {
       const timer = setTimeout(async () => {
         try {
-          const results = await predict(imageRef.current!);
-          setPredictions(results);
-          setAppState('result');
+          if (imageRef.current) {
+            const results = await predict(imageRef.current);
+            setPredictions(results);
+            setAppState('result');
+          }
         } catch (error) {
           console.error("Analysis failed", error);
           setAppState('idle');
@@ -183,6 +188,12 @@ function MainContent() {
                         <div className="absolute inset-0 blur-xl bg-neon-blue/30 animate-pulse"></div>
                      </div>
                      <p className="text-neon-blue font-mono text-[10px] md:text-xs font-black uppercase tracking-[0.3em]">{t('loading_model')}</p>
+                  </div>
+                ) : modelError ? (
+                  <div className="glass-card rounded-[32px] md:rounded-[40px] flex flex-col items-center justify-center border-neon-pink/20 min-h-[320px] md:min-h-[400px] w-full p-8 text-center">
+                     <AlertCircle className="w-12 h-12 md:w-16 md:h-16 text-neon-pink mb-6" />
+                     <h3 className="text-neon-pink font-black text-xl mb-2">{t('error_model')}</h3>
+                     <p className="text-slate-400 text-sm font-mono">{modelError}</p>
                   </div>
                 ) : (
                   <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] flex items-center justify-center min-h-[340px] md:min-h-[440px] w-full group relative cursor-pointer active:scale-95 transition-transform duration-200 overflow-hidden">
@@ -378,10 +389,10 @@ function MainContent() {
                   {[1, 2, 3].map((i) => (
                     <div key={i} className={`glass-card p-8 rounded-3xl border-white/5 hover:border-white/10 transition-all ${i === 1 ? 'md:col-span-2' : ''}`}>
                       <h3 className="text-xl font-black text-white mb-4 uppercase italic tracking-wide">
-                        {t(`feature_${i}_title` as any)}
+                        {t(`feature_${i}_title`)}
                       </h3>
                       <p className="text-slate-400 text-sm leading-relaxed">
-                        {t(`feature_${i}_desc` as any)}
+                        {t(`feature_${i}_desc`)}
                       </p>
                     </div>
                   ))}
