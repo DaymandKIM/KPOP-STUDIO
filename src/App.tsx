@@ -345,10 +345,10 @@ function MainContent() {
             <div className="w-full max-w-5xl mt-20 md:mt-32 px-4 pb-20 border-t border-white/5 pt-20">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div className="space-y-8">
-                  <h2 className="text-4xl md:text-5xl font-black text-white italic tracking-tighter uppercase leading-none">
+                  <h2 className="text-4xl md:text-5xl font-black text-white italic tracking-tight uppercase leading-tight">
                     {t('about_title')}
                   </h2>
-                  <p className="text-slate-400 text-lg leading-relaxed">
+                  <p className="text-slate-300 text-lg leading-relaxed">
                     {t('about_desc')}
                   </p>
                   <div className="flex gap-4">
@@ -361,7 +361,7 @@ function MainContent() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[1, 2, 3].map((i) => (
                     <div key={i} className={`glass-card p-8 rounded-3xl border-white/5 hover:border-white/10 transition-all ${i === 1 ? 'md:col-span-2' : ''}`}>
-                      <h3 className="text-xl font-black text-white mb-4 uppercase italic">
+                      <h3 className="text-xl font-black text-white mb-4 uppercase italic tracking-wide">
                         {t(`feature_${i}_title` as any)}
                       </h3>
                       <p className="text-slate-400 text-sm leading-relaxed">
