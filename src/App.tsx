@@ -82,6 +82,12 @@ function MainContent() {
 
   return (
     <div className="min-h-screen bg-black text-slate-50 font-sans flex flex-col relative overflow-hidden">
+      <div className="stage-container">
+        <div className="stage-glow glow-1"></div>
+        <div className="stage-glow glow-2"></div>
+        <div className="stage-glow glow-3"></div>
+        <div className="stage-grid"></div>
+      </div>
       <div className="scanlines"></div>
 
       <header className="px-4 py-4 md:px-8 md:py-6 flex justify-between items-center bg-black/40 backdrop-blur-2xl border-b border-white/5 sticky top-0 z-50">
