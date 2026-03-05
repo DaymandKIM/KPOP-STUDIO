@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-do
 
 import Home from './pages/Home';
 import Lookalike from './pages/Lookalike';
+import About from './pages/About';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import IdolEncyclopedia from './components/IdolEncyclopedia';
@@ -114,6 +115,7 @@ function AppLayout() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/lookalike" element={<Lookalike />} />
+          <Route path="/about" element={<About />} />
           <Route path="/encyclopedia" element={<IdolEncyclopedia />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
@@ -123,6 +125,8 @@ function AppLayout() {
       {/* Footer */}
       <footer className="p-8 md:p-12 flex flex-col items-center border-t border-white/5 bg-black/40 backdrop-blur-md z-10 mt-auto">
         <div className="flex flex-wrap justify-center gap-6 md:gap-12 mb-8">
+          <Link to="/about" className="text-slate-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">About Us</Link>
+          <Link to="/about" className="text-slate-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">Contact</Link>
           <Link to="/privacy" className="text-slate-400 hover:text-neon-blue transition-colors text-xs font-mono uppercase tracking-widest">Privacy Policy</Link>
           <Link to="/terms" className="text-slate-400 hover:text-neon-pink transition-colors text-xs font-mono uppercase tracking-widest">Terms of Service</Link>
         </div>

@@ -167,6 +167,15 @@ const IdolEncyclopedia: React.FC = () => {
               </div>
               <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4 pr-4 leading-none">{selectedGroup.name[currentLang]}</h2>
               <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">{selectedGroup.description[currentLang]}</p>
+              
+              <div className="mt-6 p-4 bg-neon-blue/5 border-l-4 border-neon-blue rounded-r-xl inline-block">
+                <p className="text-xs font-mono text-neon-blue uppercase tracking-widest font-bold mb-1">Editorial Note</p>
+                <p className="text-slate-400 text-xs italic">
+                  {currentLang === 'ko' 
+                    ? '이 프로필은 최신 공식 활동 데이터를 기반으로 KPOP STUDIO 에디터가 검수했습니다.' 
+                    : 'This profile is verified by KPOP STUDIO editors based on the latest official activity data.'}
+                </p>
+              </div>
             </div>
           </div>
         </div>

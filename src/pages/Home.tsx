@@ -70,6 +70,32 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Trust & Authority Section */}
+      <div className="w-full max-w-4xl mb-20 px-4">
+        <div className="bg-gradient-to-br from-neon-blue/10 via-transparent to-neon-purple/10 border border-white/10 rounded-[40px] p-8 md:p-12 text-center relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-neon-blue/20 blur-[80px]"></div>
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-neon-purple/20 blur-[80px]"></div>
+          
+          <h2 className="text-2xl md:text-3xl font-black text-white italic uppercase mb-6 tracking-tight">
+            {isKo ? '왜 KPOP STUDIO 인가요?' : 'Why KPOP STUDIO?'}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div className="space-y-2">
+              <div className="text-neon-blue font-black text-3xl">99%</div>
+              <p className="text-slate-400 text-xs uppercase font-mono tracking-widest">{isKo ? '정확한 AI 분석' : 'AI Accuracy'}</p>
+            </div>
+            <div className="space-y-2">
+              <div className="text-neon-purple font-black text-3xl">100%</div>
+              <p className="text-slate-400 text-xs uppercase font-mono tracking-widest">{isKo ? '개인정보 보호' : 'Privacy Safe'}</p>
+            </div>
+            <div className="space-y-2">
+              <div className="text-neon-pink font-black text-3xl">24/7</div>
+              <p className="text-slate-400 text-xs uppercase font-mono tracking-widest">{isKo ? '실시간 데이터' : 'Live Archive'}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
