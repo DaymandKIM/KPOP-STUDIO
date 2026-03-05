@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Star, Database, Crosshair, Sparkles, Menu, X } from 'lucide-react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
