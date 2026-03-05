@@ -301,11 +301,16 @@ function MainContent() {
                         </div>
 
                         {matchedIdol && (
-                          <div className="bg-white/5 border border-neon-purple/30 rounded-2xl p-4 md:p-6 flex flex-col items-center md:items-start backdrop-blur-md flex-1 min-w-[200px]">
-                            <p className="text-slate-500 font-mono text-[9px] md:text-[10px] uppercase font-black mb-1 md:mb-2 tracking-widest">{currentLang === 'ko' ? '포지션' : 'Role'}</p>
-                            <p className="text-xl md:text-2xl font-black text-white italic">{matchedIdol.member.role[currentLang]}</p>
-                            <p className="text-slate-400 text-xs mt-2 line-clamp-2">{matchedIdol.member.description[currentLang]}</p>
-                          </div>
+                          <>
+                            <div className="bg-white/5 border border-neon-purple/30 rounded-2xl p-4 md:p-6 flex flex-col items-center md:items-start backdrop-blur-md min-w-[140px]">
+                              <p className="text-slate-500 font-mono text-[9px] md:text-[10px] uppercase font-black mb-1 md:mb-2 tracking-widest">{t('class')}</p>
+                              <p className="text-xl md:text-2xl font-black text-white italic">{matchedIdol.member.role[currentLang]}</p>
+                            </div>
+                            <div className="bg-white/5 border border-neon-green/30 rounded-2xl p-4 md:p-6 flex flex-col items-center md:items-start backdrop-blur-md min-w-[140px]">
+                              <p className="text-slate-500 font-mono text-[9px] md:text-[10px] uppercase font-black mb-1 md:mb-2 tracking-widest">{t('element')}</p>
+                              <p className="text-xl md:text-2xl font-black text-white italic">{matchedIdol.group.company}</p>
+                            </div>
+                          </>
                         )}
                       </div>
 
@@ -335,6 +340,38 @@ function MainContent() {
                 </button>
               </div>
             )}
+
+            {/* About Section for AdSense Content */}
+            <div className="w-full max-w-5xl mt-20 md:mt-32 px-4 pb-20 border-t border-white/5 pt-20">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="space-y-8">
+                  <h2 className="text-4xl md:text-5xl font-black text-white italic tracking-tighter uppercase leading-none">
+                    {t('about_title')}
+                  </h2>
+                  <p className="text-slate-400 text-lg leading-relaxed">
+                    {t('about_desc')}
+                  </p>
+                  <div className="flex gap-4">
+                    <div className="w-12 h-1 bg-neon-blue"></div>
+                    <div className="w-12 h-1 bg-neon-purple"></div>
+                    <div className="w-12 h-1 bg-neon-pink"></div>
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className={`glass-card p-8 rounded-3xl border-white/5 hover:border-white/10 transition-all ${i === 1 ? 'md:col-span-2' : ''}`}>
+                      <h3 className="text-xl font-black text-white mb-4 uppercase italic">
+                        {t(`feature_${i}_title` as any)}
+                      </h3>
+                      <p className="text-slate-400 text-sm leading-relaxed">
+                        {t(`feature_${i}_desc` as any)}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </>
         ) : (
           <IdolEncyclopedia />

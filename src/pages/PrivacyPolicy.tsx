@@ -35,7 +35,7 @@ const PrivacyPolicy: React.FC = () => {
         },
         {
           title: '6. 문의처',
-          body: '개인정보처리방침과 관련된 문의사항이 있으시면 아래 연락처로 문의해 주시기 바랍니다.\n이메일: [이메일 주소 입력]'
+          body: '개인정보처리방침과 관련된 문의사항이 있으시면 아래 연락처로 문의해 주시기 바랍니다.\n이메일: support@kpopstudio.ai'
         }
       ]
     },
@@ -65,7 +65,7 @@ const PrivacyPolicy: React.FC = () => {
         },
         {
           title: '6. Contact Us',
-          body: 'If you have any questions regarding this Privacy Policy, please contact us at:\nEmail: [Your Email Address]'
+          body: 'If you have any questions regarding this Privacy Policy, please contact us at:\nEmail: support@kpopstudio.ai'
         }
       ]
     }

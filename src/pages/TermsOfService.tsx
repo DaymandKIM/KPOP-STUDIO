@@ -34,8 +34,8 @@ const TermsOfService: React.FC = () => {
           body: '서비스 제공자는 사전 공지 없이 서비스의 일부 또는 전체를 변경하거나 중단할 수 있습니다.'
         },
         {
-          title: '6. 면책 조항',
-          body: '서비스 제공자는 본 서비스의 이용과 관련하여 발생한 사용자의 어떠한 손해에 대해서도 책임을 지지 않습니다. 데이터는 서버에 저장되지 않으며, 사용자 기기에서 로컬로 처리됩니다.'
+          title: '6. 문의 및 기타',
+          body: '본 약관이나 서비스 이용과 관련된 문의는 아래 이메일로 연락 주시기 바랍니다.\n이메일: support@kpopstudio.ai'
         }
       ]
     },
@@ -64,8 +64,8 @@ const TermsOfService: React.FC = () => {
           body: 'The service provider may modify or suspend parts or all of the Service without prior notice.'
         },
         {
-          title: '6. Disclaimer',
-          body: 'The service provider is not liable for any damages incurred by the user in connection with the use of this Service. Data is not stored on any servers and is processed locally on the user\'s device.'
+          title: '6. Contact Information',
+          body: 'If you have any questions regarding these Terms of Service, please contact us at:\nEmail: support@kpopstudio.ai'
         }
       ]
     }
