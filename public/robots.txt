@@ -1,5 +1,5 @@
 # Best SEO practices for KPOP STUDIO
-# Optimized for Google Search and Naver Search Advisor
+# Optimized for Google, Naver, Bing, and Daum
 
 User-agent: *
 Allow: /
@@ -12,6 +12,14 @@ Allow: /
 
 # Google bot optimization
 User-agent: Googlebot
+Allow: /
+
+# Bing bot optimization
+User-agent: bingbot
+Allow: /
+
+# Daum bot optimization
+User-agent: Daumoa
 Allow: /
 
 # Host information
