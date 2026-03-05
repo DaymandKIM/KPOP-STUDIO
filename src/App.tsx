@@ -185,7 +185,7 @@ function MainContent() {
                      <p className="text-neon-blue font-mono text-[10px] md:text-xs font-black uppercase tracking-[0.3em]">{t('loading_model')}</p>
                   </div>
                 ) : (
-                  <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] group relative cursor-pointer min-h-[320px] md:min-h-[400px] flex flex-col items-center justify-center active:scale-95 transition-transform duration-200 w-full overflow-hidden">
+                  <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] flex flex-col items-center justify-center min-h-[320px] md:min-h-[400px] w-full group relative cursor-pointer active:scale-95 transition-transform duration-200 overflow-hidden">
                     <input 
                       type="file" 
                       accept="image/*"
@@ -194,7 +194,7 @@ function MainContent() {
                     />
                     
                     {/* Centered Content Container */}
-                    <div className="relative z-10 flex flex-col items-center justify-center text-center pointer-events-none">
+                    <div className="relative z-10 flex flex-col items-center justify-center text-center pointer-events-none p-6">
                       <div className="relative mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
                         <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue via-neon-purple to-neon-pink blur-3xl opacity-20 group-hover:opacity-60 transition-opacity"></div>
                         <div className="w-20 h-20 md:w-28 md:h-28 rounded-3xl bg-black border border-white/20 flex items-center justify-center relative z-10 neon-shadow-blue">
@@ -348,7 +348,7 @@ function MainContent() {
                   className="w-full md:w-auto group relative flex items-center justify-center gap-4 bg-white text-black font-black uppercase italic py-5 md:py-6 px-12 md:px-20 rounded-2xl overflow-hidden transition-all active:scale-95 neon-shadow-pink"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                  <RefreshCw className="w-6 h-6 relative z-10 group-hover:rotate-180 transition-transform duration-700" />
+                  <RefreshCw className="w-5 h-5 md:w-6 md:h-6 relative z-10 group-hover:rotate-180 transition-transform duration-700" />
                   <span className="relative z-10 text-xl md:text-2xl group-hover:text-white transition-colors">{t('try_again')}</span>
                 </button>
               </div>
