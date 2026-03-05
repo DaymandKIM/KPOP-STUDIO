@@ -185,7 +185,7 @@ function MainContent() {
                      <p className="text-neon-blue font-mono text-[10px] md:text-xs font-black uppercase tracking-[0.3em]">{t('loading_model')}</p>
                   </div>
                 ) : (
-                  <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] flex flex-col items-center justify-center min-h-[320px] md:min-h-[400px] w-full group relative cursor-pointer active:scale-95 transition-transform duration-200 overflow-hidden">
+                  <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] flex items-center justify-center min-h-[340px] md:min-h-[440px] w-full group relative cursor-pointer active:scale-95 transition-transform duration-200 overflow-hidden">
                     <input 
                       type="file" 
                       accept="image/*"
@@ -193,17 +193,20 @@ function MainContent() {
                       className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-30"
                     />
                     
-                    {/* Centered Content Container */}
-                    <div className="relative z-10 flex flex-col items-center justify-center text-center pointer-events-none p-6">
-                      <div className="relative mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
-                        <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue via-neon-purple to-neon-pink blur-3xl opacity-20 group-hover:opacity-60 transition-opacity"></div>
-                        <div className="w-20 h-20 md:w-28 md:h-28 rounded-3xl bg-black border border-white/20 flex items-center justify-center relative z-10 neon-shadow-blue">
-                          <Upload className="w-10 h-10 md:w-12 md:h-12 text-neon-blue group-hover:text-white transition-colors" />
+                    {/* Glowing Icon at Absolute Center */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
+                      <div className="relative group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                        <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue via-neon-purple to-neon-pink blur-3xl opacity-30 group-hover:opacity-70 transition-opacity"></div>
+                        <div className="w-24 h-24 md:w-32 md:h-32 rounded-3xl bg-black border border-white/20 flex items-center justify-center relative z-10 neon-shadow-blue">
+                          <Upload className="w-10 h-10 md:w-14 md:h-14 text-neon-blue group-hover:text-white transition-colors" />
                         </div>
                       </div>
-                      
-                      <h3 className="font-black text-4xl md:text-6xl text-white mb-2 md:mb-4 uppercase italic tracking-tighter leading-none">{t('upload_btn')}</h3>
-                      <p className="text-[10px] md:text-xs font-mono text-slate-500 uppercase tracking-[0.3em] font-bold">{i18n.language === 'ko' ? '사진을 선택해 주세요' : 'Tap to Upload Image'}</p>
+                    </div>
+                    
+                    {/* Text pushed to the Bottom */}
+                    <div className="absolute bottom-8 md:bottom-12 left-0 w-full text-center z-10 pointer-events-none px-6">
+                      <h3 className="font-black text-3xl md:text-5xl text-white mb-2 md:mb-3 uppercase italic tracking-tighter leading-none">{t('upload_btn')}</h3>
+                      <p className="text-[10px] md:text-xs font-mono text-slate-500 uppercase tracking-[0.2em] font-bold">{i18n.language === 'ko' ? '사진을 선택해 주세요' : 'Tap to Upload Image'}</p>
                     </div>
 
                     <div className="hud-corner hud-corner-tl !border-neon-blue !w-8 !h-8 md:!w-12 md:!h-12"></div>
