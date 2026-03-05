@@ -160,59 +160,61 @@ const IdolEncyclopedia: React.FC = () => {
           </div>
         </div>
 
-        {/* Members Section */}
-        <section className="px-2">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-neon-pink/10 flex items-center justify-center border border-neon-pink/30">
-              <User className="w-6 h-6 text-neon-pink" />
-            </div>
-            <h3 className="text-2xl font-black text-white uppercase italic">{currentLang === 'ko' ? '멤버 프로필' : 'Members'}</h3>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {selectedGroup.members.map((member) => (
-              <div 
-                key={member.id} 
-                onClick={() => {
-                  const soloArtist = KPOP_GROUPS.find(g => g.id === member.id);
-                  if (soloArtist) {
-                    setSelectedGroup(soloArtist);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }
-                }}
-                className={`glass-card rounded-[32px] p-6 border-white/5 flex flex-col gap-6 hover:border-white/20 transition-all group relative overflow-hidden ${KPOP_GROUPS.some(g => g.id === member.id) ? 'cursor-pointer' : ''}`}
-              >
-                <div className="flex gap-6 items-start relative z-10">
-                  <div className="w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden flex-shrink-0 border-2 border-white/10 group-hover:neon-shadow-blue transition-all">
-                    <SafeImage src={member.imageUrl} alt={member.name[currentLang]} className="w-full h-full object-cover object-center" accentColor={selectedGroup.accentColor} />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h4 className="text-2xl font-black text-white">{member.name[currentLang]}</h4>
-                      {KPOP_GROUPS.some(g => g.id === member.id) && (
-                        <span className="px-2 py-0.5 bg-neon-blue/20 text-neon-blue rounded-md text-[8px] font-mono border border-neon-blue/30 uppercase font-black">
-                          {currentLang === 'ko' ? '솔로 프로필 있음' : 'Solo Profile'}
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-neon-blue font-mono text-[10px] uppercase font-black mb-4 tracking-widest">{member.role[currentLang]}</p>
-                    
-                    <div className="flex flex-wrap gap-2">
-                      <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
-                        <Calendar className="w-3 h-3 text-neon-purple" />
-                        {member.birth}
-                      </div>
-                      <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
-                        <Fingerprint className="w-3 h-3 text-neon-green" />
-                        MBTI: {member.mbti}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <p className="text-slate-400 text-sm leading-relaxed relative z-10 line-clamp-3">{member.description[currentLang]}</p>
+        {/* Members Section - Only show if it's a group with members */}
+        {selectedGroup.members && selectedGroup.members.length > 0 && (
+          <section className="px-2">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-10 h-10 rounded-xl bg-neon-pink/10 flex items-center justify-center border border-neon-pink/30">
+                <User className="w-6 h-6 text-neon-pink" />
               </div>
-            ))}
-          </div>
-        </section>
+              <h3 className="text-2xl font-black text-white uppercase italic">{currentLang === 'ko' ? '멤버 프로필' : 'Members'}</h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {selectedGroup.members.map((member) => (
+                <div 
+                  key={member.id} 
+                  onClick={() => {
+                    const soloArtist = KPOP_GROUPS.find(g => g.id === member.id);
+                    if (soloArtist) {
+                      setSelectedGroup(soloArtist);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className={`glass-card rounded-[32px] p-6 border-white/5 flex flex-col gap-6 hover:border-white/20 transition-all group relative overflow-hidden ${KPOP_GROUPS.some(g => g.id === member.id) ? 'cursor-pointer' : ''}`}
+                >
+                  <div className="flex gap-6 items-start relative z-10">
+                    <div className="w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden flex-shrink-0 border-2 border-white/10 group-hover:neon-shadow-blue transition-all">
+                      <SafeImage src={member.imageUrl} alt={member.name[currentLang]} className="w-full h-full object-cover object-center" accentColor={selectedGroup.accentColor} />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-1">
+                        <h4 className="text-2xl font-black text-white">{member.name[currentLang]}</h4>
+                        {KPOP_GROUPS.some(g => g.id === member.id) && (
+                          <span className="px-2 py-0.5 bg-neon-blue/20 text-neon-blue rounded-md text-[8px] font-mono border border-neon-blue/30 uppercase font-black">
+                            {currentLang === 'ko' ? '솔로 프로필 있음' : 'Solo Profile'}
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-neon-blue font-mono text-[10px] uppercase font-black mb-4 tracking-widest">{member.role[currentLang]}</p>
+                      
+                      <div className="flex flex-wrap gap-2">
+                        <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
+                          <Calendar className="w-3 h-3 text-neon-purple" />
+                          {member.birth}
+                        </div>
+                        <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
+                          <Fingerprint className="w-3 h-3 text-neon-green" />
+                          MBTI: {member.mbti}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-slate-400 text-sm leading-relaxed relative z-10 line-clamp-3">{member.description[currentLang]}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Wiki & News & Gossip Section */}
         <div className="flex flex-col gap-10 px-2">
