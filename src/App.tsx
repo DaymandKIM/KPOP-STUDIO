@@ -31,7 +31,6 @@ function MainContent() {
     const topLabel = predictions[0].className;
     
     // Logic to map Teachable Machine labels to our data
-    // Labels are: "방탄소년단 BTS 정국", "아이브 IVE 장원영"
     let targetMemberId = "";
     if (topLabel.includes("정국")) targetMemberId = "jungkook";
     if (topLabel.includes("장원영")) targetMemberId = "jangwonyoung";
@@ -161,7 +160,6 @@ function MainContent() {
       )}
 
       <main className="flex-1 flex flex-col items-center justify-center p-4 md:p-8 w-full max-w-7xl mx-auto z-10">
-        
         {viewMode === 'identification' ? (
           <>
             {appState === 'idle' && (
@@ -180,14 +178,14 @@ function MainContent() {
               <div className="w-full max-w-lg px-2 flex justify-center">
                 {isModelLoading ? (
                   <div className="glass-card rounded-[32px] md:rounded-[40px] flex flex-col items-center justify-center border-neon-blue/20 min-h-[320px] md:min-h-[400px] w-full">
-                     <div className="relative">
-                        <RefreshCw className="w-12 h-12 md:w-16 md:h-16 text-neon-blue animate-spin mb-6 md:mb-8" />
+                     <div className="relative mb-6 md:mb-8">
+                        <RefreshCw className="w-12 h-12 md:w-16 md:h-16 text-neon-blue animate-spin" />
                         <div className="absolute inset-0 blur-xl bg-neon-blue/30 animate-pulse"></div>
                      </div>
                      <p className="text-neon-blue font-mono text-[10px] md:text-xs font-black uppercase tracking-[0.3em]">{t('loading_model')}</p>
                   </div>
                 ) : (
-                  <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] group relative cursor-pointer min-h-[320px] md:min-h-[400px] flex items-center justify-center active:scale-95 transition-transform duration-200 w-full overflow-hidden">
+                  <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] group relative cursor-pointer min-h-[320px] md:min-h-[400px] flex flex-col items-center justify-center active:scale-95 transition-transform duration-200 w-full overflow-hidden">
                     <input 
                       type="file" 
                       accept="image/*"
@@ -195,7 +193,8 @@ function MainContent() {
                       className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-30"
                     />
                     
-                    <div className="relative z-10 w-full h-full flex flex-col items-center justify-center pointer-events-none">
+                    {/* Centered Content Container */}
+                    <div className="relative z-10 flex flex-col items-center justify-center text-center pointer-events-none">
                       <div className="relative mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
                         <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue via-neon-purple to-neon-pink blur-3xl opacity-20 group-hover:opacity-60 transition-opacity"></div>
                         <div className="w-20 h-20 md:w-28 md:h-28 rounded-3xl bg-black border border-white/20 flex items-center justify-center relative z-10 neon-shadow-blue">
@@ -203,16 +202,14 @@ function MainContent() {
                         </div>
                       </div>
                       
-                      <div className="text-center">
-                        <h3 className="font-black text-4xl md:text-6xl text-white mb-3 md:mb-5 uppercase italic tracking-tighter leading-tight">{t('upload_btn')}</h3>
-                        <p className="text-[10px] md:text-xs font-mono text-slate-500 uppercase tracking-[0.3em] font-bold">{i18n.language === 'ko' ? '사진을 선택해 주세요' : 'Tap to Upload Image'}</p>
-                      </div>
-
-                      <div className="hud-corner hud-corner-tl !border-neon-blue !w-8 !h-8 md:!w-12 md:!h-12"></div>
-                      <div className="hud-corner hud-corner-tr !border-neon-purple !w-8 !h-8 md:!w-12 md:!h-12"></div>
-                      <div className="hud-corner hud-corner-bl !border-neon-pink !w-8 !h-8 md:!w-12 md:!h-12"></div>
-                      <div className="hud-corner hud-corner-br !border-neon-green !w-8 !h-8 md:!w-12 md:!h-12"></div>
+                      <h3 className="font-black text-4xl md:text-6xl text-white mb-2 md:mb-4 uppercase italic tracking-tighter leading-none">{t('upload_btn')}</h3>
+                      <p className="text-[10px] md:text-xs font-mono text-slate-500 uppercase tracking-[0.3em] font-bold">{i18n.language === 'ko' ? '사진을 선택해 주세요' : 'Tap to Upload Image'}</p>
                     </div>
+
+                    <div className="hud-corner hud-corner-tl !border-neon-blue !w-8 !h-8 md:!w-12 md:!h-12"></div>
+                    <div className="hud-corner hud-corner-tr !border-neon-purple !w-8 !h-8 md:!w-12 md:!h-12"></div>
+                    <div className="hud-corner hud-corner-bl !border-neon-pink !w-8 !h-8 md:!w-12 md:!h-12"></div>
+                    <div className="hud-corner hud-corner-br !border-neon-green !w-8 !h-8 md:!w-12 md:!h-12"></div>
                   </div>
                 )}
               </div>
@@ -278,7 +275,7 @@ function MainContent() {
 
                       {matchedIdol && (
                         <div className="relative">
-                          <div className="w-44 h-44 xs:w-56 xs:h-56 md:w-64 md:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-white/10 neon-shadow-blue neon-shadow-blue relative flex-shrink-0">
+                          <div className="w-44 h-44 xs:w-56 xs:h-56 md:w-64 md:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-neon-blue neon-shadow-blue relative flex-shrink-0">
                             <img 
                               src={matchedIdol.member.imageUrl} 
                               alt={matchedIdol.member.name[currentLang]} 
@@ -302,7 +299,7 @@ function MainContent() {
                         {matchedIdol && (
                           <div className="flex items-center justify-center lg:justify-start gap-3">
                             <div className="h-px w-8 bg-neon-blue/50"></div>
-                            <p className="text-neon-blue font-black text-xl md:text-2xl uppercase tracking-widest italic">
+                            <p className="text-neon-blue font-black text-xl md:text-3xl uppercase tracking-widest italic">
                               {matchedIdol.group.name[currentLang]}
                             </p>
                           </div>
@@ -337,7 +334,7 @@ function MainContent() {
                             className="flex items-center gap-4 px-8 py-4 bg-white/5 hover:bg-neon-green/10 border border-white/10 hover:border-neon-green/50 rounded-2xl text-xs md:text-sm font-black uppercase tracking-[0.2em] transition-all group/btn"
                           >
                             <Database className="w-5 h-5 text-neon-green" />
-                            <span>{currentLang === 'ko' ? '백과사전에서 더보기' : 'View in Encyclopedia'}</span>
+                            <span>{currentLang === 'ko' ? '도감에서 더보기' : 'View in Encyclopedia'}</span>
                             <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
                           </button>
                         </div>
@@ -351,7 +348,7 @@ function MainContent() {
                   className="w-full md:w-auto group relative flex items-center justify-center gap-4 bg-white text-black font-black uppercase italic py-5 md:py-6 px-12 md:px-20 rounded-2xl overflow-hidden transition-all active:scale-95 neon-shadow-pink"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                  <RefreshCw className="w-5 h-5 md:w-6 md:h-6 relative z-10 group-hover:rotate-180 transition-transform duration-700" />
+                  <RefreshCw className="w-6 h-6 relative z-10 group-hover:rotate-180 transition-transform duration-700" />
                   <span className="relative z-10 text-xl md:text-2xl group-hover:text-white transition-colors">{t('try_again')}</span>
                 </button>
               </div>
