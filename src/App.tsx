@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Upload, RefreshCw, Star, Database, Crosshair, Sparkles, Menu, X, ArrowRight } from 'lucide-react';
+import { Upload, RefreshCw, Star, Database, Crosshair, Sparkles, Menu, X, ArrowRight, User } from 'lucide-react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { useTeachableMachine } from './hooks/useTeachableMachine';
 import { KPOP_GROUPS } from './data/idols';
@@ -195,8 +195,8 @@ function MainContent() {
                       className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-30"
                     />
                     
-                    <div className="relative z-10 w-full h-full flex flex-col items-center justify-center pointer-events-none p-4">
-                      <div className="relative mb-8 md:mb-12 group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                    <div className="relative z-10 w-full h-full flex flex-col items-center justify-center pointer-events-none">
+                      <div className="relative mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
                         <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue via-neon-purple to-neon-pink blur-3xl opacity-20 group-hover:opacity-60 transition-opacity"></div>
                         <div className="w-20 h-20 md:w-28 md:h-28 rounded-3xl bg-black border border-white/20 flex items-center justify-center relative z-10 neon-shadow-blue">
                           <Upload className="w-10 h-10 md:w-12 md:h-12 text-neon-blue group-hover:text-white transition-colors" />
@@ -204,7 +204,7 @@ function MainContent() {
                       </div>
                       
                       <div className="text-center">
-                        <h3 className="font-black text-4xl md:text-6xl text-white mb-3 md:mb-5 uppercase italic tracking-tighter leading-none">{t('upload_btn')}</h3>
+                        <h3 className="font-black text-4xl md:text-6xl text-white mb-3 md:mb-5 uppercase italic tracking-tighter leading-tight">{t('upload_btn')}</h3>
                         <p className="text-[10px] md:text-xs font-mono text-slate-500 uppercase tracking-[0.3em] font-bold">{i18n.language === 'ko' ? '사진을 선택해 주세요' : 'Tap to Upload Image'}</p>
                       </div>
 
@@ -243,7 +243,7 @@ function MainContent() {
             )}
 
             {appState === 'result' && selectedImage && predictions.length > 0 && (
-              <div className="w-full max-w-5xl flex flex-col items-center animate-fade-in-up px-2 pb-10">
+              <div className="w-full max-w-6xl flex flex-col items-center animate-fade-in-up px-2 pb-10">
                 <div className="flex items-center gap-4 md:gap-6 mb-8 md:mb-12">
                   <div className="h-px w-10 xs:w-20 md:w-40 bg-gradient-to-r from-transparent via-neon-pink to-transparent"></div>
                   <h2 className="text-2xl xs:text-3xl md:text-6xl font-black italic text-white uppercase tracking-tighter flex items-center gap-3 md:gap-4 glitch-text pr-2">
@@ -252,83 +252,93 @@ function MainContent() {
                   <div className="h-px w-10 xs:w-20 md:w-40 bg-gradient-to-r from-transparent via-neon-blue to-transparent"></div>
                 </div>
 
-                <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[48px] p-1 w-full mb-8 md:mb-12">
-                  <div className="bg-black/80 backdrop-blur-3xl rounded-[30px] md:rounded-[46px] p-6 md:p-14 flex flex-col md:flex-row gap-8 md:gap-14 items-center relative z-10">
-                    <div className="relative group w-full md:w-auto flex flex-col gap-6 justify-center items-center">
+                <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[48px] p-1 w-full mb-10 md:mb-16">
+                  <div className="bg-black/80 backdrop-blur-3xl rounded-[30px] md:rounded-[46px] p-6 md:p-16 flex flex-col lg:flex-row gap-10 md:gap-16 items-center relative z-10">
+                    
+                    {/* Image Comparison Section */}
+                    <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row items-center justify-center gap-6 md:gap-8 w-full lg:w-auto">
                       <div className="relative">
-                        <div className="w-48 h-48 md:w-72 md:h-72 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-white/10 relative flex-shrink-0 neon-shadow-purple">
+                        <div className="w-44 h-44 xs:w-56 xs:h-56 md:w-64 md:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-white/10 neon-shadow-purple relative flex-shrink-0">
                           <img 
                             src={selectedImage} 
                             alt="User" 
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-2xl border-2 border-neon-purple z-20 rotate-6">
-                          <Sparkles className="w-8 h-8 text-neon-purple animate-pulse" />
+                        <div className="absolute -bottom-3 -right-3 w-12 h-12 md:w-14 md:h-14 bg-white rounded-2xl flex items-center justify-center shadow-2xl border-2 border-neon-purple z-20 rotate-6">
+                          <User className="w-6 h-6 text-neon-purple" />
                         </div>
                       </div>
                       
+                      <div className="flex items-center justify-center">
+                        <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center neon-shadow-blue animate-pulse">
+                          <ArrowRight className="w-6 h-6 md:w-8 md:h-8 text-neon-blue rotate-90 md:rotate-0 lg:rotate-90 xl:rotate-0" />
+                        </div>
+                      </div>
+
                       {matchedIdol && (
-                        <div className="flex flex-col items-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                          <ArrowRight className="w-8 h-8 text-white/30 rotate-90 md:rotate-0 mb-2" />
-                          <div className="w-32 h-32 md:w-48 md:h-48 rounded-[24px] md:rounded-[32px] overflow-hidden border-2 border-neon-blue neon-shadow-blue scale-90 md:scale-100">
+                        <div className="relative">
+                          <div className="w-44 h-44 xs:w-56 xs:h-56 md:w-64 md:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-white/10 neon-shadow-blue neon-shadow-blue relative flex-shrink-0">
                             <img 
                               src={matchedIdol.member.imageUrl} 
                               alt={matchedIdol.member.name[currentLang]} 
                               className="w-full h-full object-cover"
                             />
                           </div>
+                          <div className="absolute -bottom-3 -right-3 w-12 h-12 md:w-14 md:h-14 bg-white rounded-2xl flex items-center justify-center shadow-2xl border-2 border-neon-blue z-20 -rotate-6">
+                            <Star className="w-6 h-6 text-neon-blue fill-neon-blue" />
+                          </div>
                         </div>
                       )}
                     </div>
 
-                    <div className="flex-1 text-center md:text-left space-y-6 md:space-y-8 w-full">
-                      <div>
-                        <div className="inline-block px-3 py-1 bg-neon-pink/10 border border-neon-pink/30 rounded-lg text-neon-pink font-mono text-[10px] uppercase tracking-[0.2em] font-black mb-3">Best Match</div>
-                        <h3 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter leading-tight mb-2 truncate pr-2">
+                    {/* Result Info Section */}
+                    <div className="flex-1 text-center lg:text-left space-y-6 md:space-y-10 w-full">
+                      <div className="space-y-2 md:space-y-4">
+                        <div className="inline-block px-4 py-1.5 bg-neon-pink/10 border border-neon-pink/30 rounded-full text-neon-pink font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] font-black">Best Match Identified</div>
+                        <h3 className="text-5xl md:text-8xl font-black text-white italic tracking-tighter leading-none pr-2">
                           {matchedIdol ? matchedIdol.member.name[currentLang] : predictions[0].className}
                         </h3>
                         {matchedIdol && (
-                          <p className="text-neon-blue font-black text-xl md:text-2xl uppercase tracking-widest italic opacity-80">
-                            {matchedIdol.group.name[currentLang]}
-                          </p>
+                          <div className="flex items-center justify-center lg:justify-start gap-3">
+                            <div className="h-px w-8 bg-neon-blue/50"></div>
+                            <p className="text-neon-blue font-black text-xl md:text-2xl uppercase tracking-widest italic">
+                              {matchedIdol.group.name[currentLang]}
+                            </p>
+                          </div>
                         )}
                       </div>
                       
-                      <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6">
-                        <div className="bg-white/5 border border-neon-blue/30 rounded-2xl p-4 md:p-6 flex flex-col items-center md:items-start backdrop-blur-md min-w-[140px]">
-                          <p className="text-slate-500 font-mono text-[9px] md:text-[10px] uppercase font-black mb-1 md:mb-2 tracking-widest">{t('similarity')}</p>
+                      <div className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-8">
+                        <div className="bg-white/5 border border-neon-blue/30 rounded-[32px] p-6 md:p-8 flex flex-col items-center lg:items-start backdrop-blur-md min-w-[140px] flex-1">
+                          <p className="text-slate-500 font-mono text-[10px] md:text-xs uppercase font-black mb-2 md:mb-4 tracking-widest">{t('similarity')}</p>
                           <div className="flex items-baseline gap-1 md:gap-2">
-                            <span className="text-4xl md:text-6xl font-black text-neon-blue italic">
+                            <span className="text-5xl md:text-7xl font-black text-neon-blue italic">
                               {Math.round(predictions[0].probability * 100)}
                             </span>
-                            <span className="text-neon-blue font-mono text-sm md:text-xl font-black">%</span>
+                            <span className="text-neon-blue font-mono text-xl md:text-3xl font-black">%</span>
                           </div>
                         </div>
 
                         {matchedIdol && (
                           <>
-                            <div className="bg-white/5 border border-neon-purple/30 rounded-2xl p-4 md:p-6 flex flex-col items-center md:items-start backdrop-blur-md min-w-[140px]">
-                              <p className="text-slate-500 font-mono text-[9px] md:text-[10px] uppercase font-black mb-1 md:mb-2 tracking-widest">{t('class')}</p>
-                              <p className="text-xl md:text-2xl font-black text-white italic">{matchedIdol.member.role[currentLang]}</p>
-                            </div>
-                            <div className="bg-white/5 border border-neon-green/30 rounded-2xl p-4 md:p-6 flex flex-col items-center md:items-start backdrop-blur-md min-w-[140px]">
-                              <p className="text-slate-500 font-mono text-[9px] md:text-[10px] uppercase font-black mb-1 md:mb-2 tracking-widest">{t('element')}</p>
-                              <p className="text-xl md:text-2xl font-black text-white italic">{matchedIdol.group.company}</p>
+                            <div className="bg-white/5 border border-neon-purple/30 rounded-[32px] p-6 md:p-8 flex flex-col items-center lg:items-start backdrop-blur-md min-w-[140px] flex-1">
+                              <p className="text-slate-500 font-mono text-[10px] md:text-xs uppercase font-black mb-2 md:mb-4 tracking-widest">{t('class')}</p>
+                              <p className="text-2xl md:text-4xl font-black text-white italic truncate w-full text-center lg:text-left">{matchedIdol.member.role[currentLang]}</p>
                             </div>
                           </>
                         )}
                       </div>
 
                       {matchedIdol && (
-                        <div className="pt-4 flex justify-center md:justify-start">
+                        <div className="pt-4 flex justify-center lg:justify-start">
                           <button 
                             onClick={() => setViewMode('encyclopedia')}
-                            className="flex items-center gap-3 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl text-xs font-black uppercase tracking-widest transition-all group/btn"
+                            className="flex items-center gap-4 px-8 py-4 bg-white/5 hover:bg-neon-green/10 border border-white/10 hover:border-neon-green/50 rounded-2xl text-xs md:text-sm font-black uppercase tracking-[0.2em] transition-all group/btn"
                           >
-                            <Database className="w-4 h-4 text-neon-green" />
+                            <Database className="w-5 h-5 text-neon-green" />
                             <span>{currentLang === 'ko' ? '백과사전에서 더보기' : 'View in Encyclopedia'}</span>
-                            <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                            <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
                           </button>
                         </div>
                       )}
@@ -338,11 +348,11 @@ function MainContent() {
 
                 <button 
                   onClick={resetApp}
-                  className="w-full md:w-auto group relative flex items-center justify-center gap-4 bg-white text-black font-black uppercase italic py-4 md:py-5 px-10 md:px-14 rounded-2xl overflow-hidden transition-all active:scale-95 neon-shadow-pink"
+                  className="w-full md:w-auto group relative flex items-center justify-center gap-4 bg-white text-black font-black uppercase italic py-5 md:py-6 px-12 md:px-20 rounded-2xl overflow-hidden transition-all active:scale-95 neon-shadow-pink"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
                   <RefreshCw className="w-5 h-5 md:w-6 md:h-6 relative z-10 group-hover:rotate-180 transition-transform duration-700" />
-                  <span className="relative z-10 text-lg md:text-xl group-hover:text-white transition-colors">{t('try_again')}</span>
+                  <span className="relative z-10 text-xl md:text-2xl group-hover:text-white transition-colors">{t('try_again')}</span>
                 </button>
               </div>
             )}
