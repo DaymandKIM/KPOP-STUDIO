@@ -177,9 +177,9 @@ function MainContent() {
             )}
 
             {appState === 'idle' && (
-              <div className="w-full max-w-lg px-2">
+              <div className="w-full max-w-lg px-2 flex justify-center">
                 {isModelLoading ? (
-                  <div className="glass-card p-10 md:p-16 rounded-[32px] md:rounded-[40px] flex flex-col items-center justify-center border-neon-blue/20 min-h-[300px] md:min-h-[400px]">
+                  <div className="glass-card p-10 md:p-16 rounded-[32px] md:rounded-[40px] flex flex-col items-center justify-center border-neon-blue/20 min-h-[300px] md:min-h-[400px] w-full">
                      <div className="relative">
                         <RefreshCw className="w-12 h-12 md:w-16 md:h-16 text-neon-blue animate-spin mb-6 md:mb-8" />
                         <div className="absolute inset-0 blur-xl bg-neon-blue/30 animate-pulse"></div>
@@ -187,15 +187,15 @@ function MainContent() {
                      <p className="text-neon-blue font-mono text-[10px] md:text-xs font-black uppercase tracking-[0.3em]">{t('loading_model')}</p>
                   </div>
                 ) : (
-                  <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] group relative cursor-pointer min-h-[320px] md:min-h-[400px] flex items-center justify-center active:scale-95 transition-transform duration-200">
+                  <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] group relative cursor-pointer min-h-[320px] md:min-h-[400px] flex items-center justify-center active:scale-95 transition-transform duration-200 w-full">
                     <input 
                       type="file" 
                       accept="image/*"
                       onChange={handleImageUpload}
-                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20"
                     />
                     
-                    <div className="flex flex-col items-center justify-center gap-6 md:gap-10 p-8 md:p-16 w-full">
+                    <div className="flex flex-col items-center justify-center gap-6 md:gap-10 p-8 md:p-16 w-full relative z-10">
                       <div className="relative group-hover:scale-110 transition-transform duration-700">
                         <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue via-neon-purple to-neon-pink blur-3xl opacity-20 group-hover:opacity-60 transition-opacity"></div>
                         <div className="w-24 h-24 md:w-32 md:h-32 rounded-3xl bg-black border border-white/20 flex items-center justify-center relative z-10 neon-shadow-blue">
@@ -203,9 +203,9 @@ function MainContent() {
                         </div>
                       </div>
                       
-                      <div className="text-center relative z-10">
-                        <p className="font-black text-2xl md:text-3xl text-white mb-2 md:mb-3 uppercase italic tracking-tight">{t('upload_btn')}</p>
-                        <p className="text-[9px] md:text-[10px] font-mono text-slate-500 uppercase tracking-[0.2em] font-bold">{i18n.language === 'ko' ? '사진을 선택해 주세요' : 'Tap to Upload Image'}</p>
+                      <div className="text-center w-full">
+                        <p className="font-black text-3xl md:text-4xl text-white mb-2 md:mb-3 uppercase italic tracking-tight">{t('upload_btn')}</p>
+                        <p className="text-[10px] md:text-[11px] font-mono text-slate-500 uppercase tracking-[0.2em] font-bold">{i18n.language === 'ko' ? '사진을 선택해 주세요' : 'Tap to Upload Image'}</p>
                       </div>
 
                       <div className="hud-corner hud-corner-tl !border-neon-blue !w-8 !h-8 md:!w-10 md:!h-10"></div>
@@ -253,7 +253,7 @@ function MainContent() {
                 </div>
 
                 <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[48px] p-1 w-full mb-8 md:mb-12">
-                  <div className="bg-black/80 backdrop-blur-3xl rounded-[30px] md:rounded-[46px] p-6 md:p-14 flex flex-col md:flex-row gap-8 md:gap-14 items-center">
+                  <div className="bg-black/80 backdrop-blur-3xl rounded-[30px] md:rounded-[46px] p-6 md:p-14 flex flex-col md:flex-row gap-8 md:gap-14 items-center relative z-10">
                     <div className="relative group w-full md:w-auto flex flex-col gap-6 justify-center items-center">
                       <div className="relative">
                         <div className="w-48 h-48 md:w-72 md:h-72 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-white/10 relative flex-shrink-0 neon-shadow-purple">
