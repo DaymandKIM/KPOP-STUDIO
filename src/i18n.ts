@@ -18,7 +18,7 @@ const resources = {
       "error_image": "Data error: Image processing failed.",
       "loading_model": "Booting Analysis Engine...",
       "nav_identification": "Find Lookalike",
-      "nav_encyclopedia": "Idol Encyclopedia",
+      "nav_encyclopedia": "K-pop Star Encyclopedia",
       "search_placeholder": "Search K-pop Stars...",
       "class": "Position",
       "element": "Company",
@@ -33,13 +33,13 @@ const resources = {
       "light": "Pure",
       "hunter_details": "Star Profile",
       "about_title": "Welcome to KPOP STUDIO",
-      "about_desc": "KPOP STUDIO is your ultimate digital playground where K-pop fandom meets cutting-edge AI. Ever wondered which idol you'd be in a group? Our AI-powered lookalike finder connects you with the stars, while our growing archive keeps you updated on everything you love about the scene.",
-      "feature_1_title": "Find Your Idol Twin",
-      "feature_1_desc": "Curious about your K-pop counterpart? Our AI analyzes your unique features to find the idol who shares your vibe and visual energy. Discover your 'destiny' match in seconds!",
-      "feature_2_title": "The Ultimate Stan Guide",
-      "feature_2_desc": "Dive deep into the world of your favorite artists. From debut behind-the-scenes to the latest viral news and member profiles, we've gathered everything to fuel your fandom.",
+      "about_desc": "KPOP STUDIO is your ultimate digital playground where K-pop fandom meets cutting-edge AI. Ever wondered which K-pop star you'd be? Our AI-powered lookalike finder connects you with the stars, while our growing archive keeps you updated on everything you love about the scene.",
+      "feature_1_title": "Find Your K-pop Twin",
+      "feature_1_desc": "Curious about your K-pop counterpart? Our AI analyzes your unique features to find the K-pop star who shares your vibe and visual energy. Discover your 'destiny' match in seconds!",
+      "feature_2_title": "The Ultimate Star Guide",
+      "feature_2_desc": "Dive deep into the world of your favorite artists. From debut behind-the-scenes to the latest viral news and star profiles, we've gathered everything to fuel your fandom.",
       "feature_3_title": "Hidden TMIs & Facts",
-      "feature_3_desc": "Go beyond the stage! Explore fun facts, MBTI types, and those precious TMI details about idols that only true fans know. It's the perfect place to learn more about your bias."
+      "feature_3_desc": "Go beyond the stage! Explore fun facts, MBTI types, and those precious TMI details about K-pop stars that only true fans know. It's the perfect place to learn more about your bias."
     }
   },
   ko: {
@@ -57,8 +57,8 @@ const resources = {
       "error_image": "데이터 오류: 이미지 처리에 실패했습니다.",
       "loading_model": "분석 엔진 가동 중...",
       "nav_identification": "닮은꼴 찾기",
-      "nav_encyclopedia": "아이돌 백과사전",
-      "search_placeholder": "아이돌 또는 그룹 검색...",
+      "nav_encyclopedia": "K-POP 스타 도감",
+      "search_placeholder": "K-POP 스타 검색...",
       "class": "포지션",
       "element": "소속사",
       "vanguard": "센터",
@@ -72,13 +72,13 @@ const resources = {
       "light": "청순",
       "hunter_details": "스타 프로필",
       "about_title": "KPOP 스튜디오에 오신 것을 환영합니다!",
-      "about_desc": "KPOP 스튜디오는 인공지능 기술과 K-POP 팬덤 문화가 만나는 여러분만의 디지털 놀이터입니다. '내가 아이돌 멤버라면 누구와 가장 닮았을까?'라는 궁금증을 최첨단 AI로 풀어보세요. 닮은꼴 찾기는 물론, 최애 그룹의 깊은 정보까지 한곳에서 즐길 수 있습니다.",
-      "feature_1_title": "나의 아이돌 도플갱어 찾기",
-      "feature_1_desc": "수천 명의 아티스트 데이터를 학습한 AI가 여러분의 안면 특징을 분석해 가장 닮은 아이돌을 찾아줍니다. 나와 비슷한 분위기를 가진 '운명의 멤버'는 누구일까요?",
-      "feature_2_title": "덕질 지수를 높여줄 가이드",
-      "feature_2_desc": "좋아하는 그룹의 데뷔 비하인드부터 최근 핫한 뉴스까지! 입덕을 도와줄 상세한 프로필과 최신 소식들을 놓치지 말고 확인하세요.",
+      "about_desc": "KPOP 스튜디오는 인공지능 기술과 K-POP 팬덤 문화가 만나는 여러분만의 디지털 놀이터입니다. '내가 K-POP 스타라면 누구와 가장 닮았을까?'라는 궁금증을 최첨단 AI로 풀어보세요. 닮은꼴 찾기는 물론, 모든 K-POP 아티스트의 깊은 정보까지 한곳에서 즐길 수 있습니다.",
+      "feature_1_title": "나의 K-POP 스타 도플갱어 찾기",
+      "feature_1_desc": "수천 명의 아티스트 데이터를 학습한 AI가 여러분의 안면 특징을 분석해 가장 닮은 K-POP 스타를 찾아줍니다. 나와 비슷한 분위기를 가진 '운명의 아티스트'는 누구일까요?",
+      "feature_2_title": "최고의 스타 가이드",
+      "feature_2_desc": "좋아하는 아티스트의 데뷔 비하인드부터 최근 핫한 뉴스까지! 입덕을 도와줄 상세한 프로필과 최신 소식들을 놓치지 말고 확인하세요.",
       "feature_3_title": "깨알 같은 TMI와 비하인드",
-      "feature_3_desc": "무대 위 모습뿐만 아니라 MBTI, 취미, 습관 등 팬들이라면 궁금해할 소소하고 소중한 TMI 정보들을 가득 담았습니다. 최애에 대해 더 깊이 알아가는 시간을 가져보세요!"
+      "feature_3_desc": "무대 위 모습뿐만 아니라 MBTI, 취미, 습관 등 팬들이라면 궁금해할 소소하고 소중한 K-POP 스타의 TMI 정보들을 가득 담았습니다. 최애에 대해 더 깊이 알아가는 시간을 가져보세요!"
     }
   }
 };
