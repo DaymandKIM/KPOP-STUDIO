@@ -39,12 +39,14 @@ const resources = {
       "feature_2_title": "The Ultimate Star Guide",
       "feature_2_desc": "Dive deep into the world of your favorite artists. From debut behind-the-scenes to the latest viral news and star profiles, we've gathered everything to fuel your fandom.",
       "feature_3_title": "Hidden TMIs & Facts",
-      "feature_3_desc": "Go beyond the stage! Explore fun facts, MBTI types, and those precious TMI details about K-pop stars that only true fans know. It's the perfect place to learn more about your bias."
+      "feature_3_desc": "Go beyond the stage! Explore fun facts, MBTI types, and those precious TMI details about K-pop stars that only true fans know. It's the perfect place to learn more about your bias.",
+      "home_ai_badge": "AI-POWERED LOOKALIKES",
+      "home_cta_btn": "Start Analysis"
     }
   },
   ko: {
     translation: {
-      "app_title": "KPOP 스튜디오",
+      "app_title": "KPOP STUDIO",
       "app_subtitle": "나와 닮은 K-POP 스타 찾기",
       "upload_instruction": "사진을 업로드하여 AI가 분석한 당신과 가장 닮은 K-POP 스타를 찾아보세요.",
       "upload_btn": "분석 시작",
@@ -71,14 +73,18 @@ const resources = {
       "dark": "시크",
       "light": "청순",
       "hunter_details": "스타 프로필",
-      "about_title": "KPOP 스튜디오에 오신 것을 환영합니다!",
-      "about_desc": "KPOP 스튜디오는 인공지능 기술과 K-POP 팬덤 문화가 만나는 여러분만의 디지털 놀이터입니다. '내가 K-POP 스타라면 누구와 가장 닮았을까?'라는 궁금증을 최첨단 AI로 풀어보세요. 닮은꼴 찾기는 물론, 모든 K-POP 아티스트의 깊은 정보까지 한곳에서 즐길 수 있습니다.",
+      "about_title": "KPOP STUDIO에 오신 것을 환영합니다!",
+      "about_desc": "KPOP STUDIO는 인공지능 기술과 K-POP 팬덤 문화가 만나는 여러분만의 디지털 놀이터입니다. '내가 K-POP 스타라면 누구와 가장 닮았을까?'라는 궁금증을 최첨단 AI로 풀어보세요. 닮은꼴 찾기는 물론, 모든 K-POP 아티스트의 깊은 정보까지 한곳에서 즐길 수 있습니다.",
       "feature_1_title": "나의 K-POP 스타 도플갱어 찾기",
       "feature_1_desc": "수천 명의 아티스트 데이터를 학습한 AI가 여러분의 안면 특징을 분석해 가장 닮은 K-POP 스타를 찾아줍니다. 나와 비슷한 분위기를 가진 '운명의 아티스트'는 누구일까요?",
       "feature_2_title": "최고의 스타 가이드",
       "feature_2_desc": "좋아하는 아티스트의 데뷔 비하인드부터 최근 핫한 뉴스까지! 입덕을 도와줄 상세한 프로필과 최신 소식들을 놓치지 말고 확인하세요.",
       "feature_3_title": "깨알 같은 TMI와 비하인드",
-      "feature_3_desc": "무대 위 모습뿐만 아니라 MBTI, 취미, 습관 등 팬들이라면 궁금해할 소소하고 소중한 K-POP 스타의 TMI 정보들을 가득 담았습니다. 최애에 대해 더 깊이 알아가는 시간을 가져보세요!"
+      "feature_3_desc": "무대 위 모습뿐만 아니라 MBTI, 취미, 습관 등 팬들이라면 궁금해할 소소하고 소중한 K-POP 스타의 TMI 정보들을 가득 담았습니다. 최애에 대해 더 깊이 알아가는 시간을 가져보세요!",
+      "home_ai_badge": "AI 기반 닮은꼴 분석",
+      "home_cta_btn": "나의 닮은꼴 찾기",
+      "home_hero_title": "KPOP STUDIO",
+      "home_hero_subtitle": "나와 가장 닮은 K-POP 스타는?"
     }
   }
 };
