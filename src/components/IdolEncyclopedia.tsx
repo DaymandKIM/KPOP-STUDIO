@@ -175,8 +175,8 @@ const IdolEncyclopedia: React.FC = () => {
     const jsonLd = {
       "@context": "https://schema.org",
       "@type": "MusicGroup",
-      "name": getLangText(selectedGroup.name),
-      "description": getLangText(selectedGroup.description),
+      "name": getLangText(selectedGroup.name, i18n.language),
+      "description": getLangText(selectedGroup.description, i18n.language),
       "genre": "K-pop",
       "foundingLocation": {
         "@type": "Place",
@@ -186,9 +186,9 @@ const IdolEncyclopedia: React.FC = () => {
         "@type": "OrganizationRole",
         "member": {
           "@type": "Person",
-          "name": getLangText(m.name)
+          "name": getLangText(m.name, i18n.language)
         },
-        "roleName": getLangText(m.role)
+        "roleName": getLangText(m.role, i18n.language)
       }))
     };
 
@@ -213,7 +213,7 @@ const IdolEncyclopedia: React.FC = () => {
             <div className="w-64 h-64 md:w-96 md:h-96 rounded-[40px] md:rounded-[56px] overflow-hidden border-4 border-white/10 neon-shadow-purple flex-shrink-0">
               <SafeImage 
                 src={selectedGroup.imageUrl} 
-                alt={getLangText(selectedGroup.name)} 
+                alt={getLangText(selectedGroup.name, i18n.language)} 
                 className="w-full h-full object-cover" 
                 accentColor={selectedGroup.accentColor}
               />
@@ -229,7 +229,7 @@ const IdolEncyclopedia: React.FC = () => {
                 {selectedGroup.fandom && (
                   <span className="px-3 py-1.5 bg-gradient-to-r from-neon-pink/20 to-neon-pink/5 border border-neon-pink/30 text-neon-pink rounded-full text-[10px] font-mono uppercase tracking-widest flex items-center gap-1.5 font-bold shadow-[0_0_10px_rgba(255,0,255,0.1)]">
                   <Heart className="w-3 h-3 fill-neon-pink/20" />
-                  <span className="text-white/60 font-normal">{t('fandom')}</span> {getLangText(selectedGroup.fandom)}
+                  <span className="text-white/60 font-normal">{t('fandom')}</span> {getLangText(selectedGroup.fandom, i18n.language)}
                 </span>
                 )}
                 {selectedGroup.officialSite && (
@@ -239,8 +239,8 @@ const IdolEncyclopedia: React.FC = () => {
                 </a>
                 )}
               </div>
-              <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4 pr-4 leading-none">{getLangText(selectedGroup.name)}</h2>
-              <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">{getLangText(selectedGroup.description)}</p>
+              <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4 pr-4 leading-none">{getLangText(selectedGroup.name, i18n.language)}</h2>
+              <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">{getLangText(selectedGroup.description, i18n.language)}</p>
               
               <SocialLinks socials={selectedGroup.socials} accentColor={selectedGroup.accentColor} />
 
@@ -257,10 +257,10 @@ const IdolEncyclopedia: React.FC = () => {
               {showGroupShare && (
                 <div className="mt-3">
                   <SharePanel
-                    title={`${getLangText(selectedGroup.name)} | KPOP STUDIO`}
+                    title={`${getLangText(selectedGroup.name, i18n.language)} | KPOP STUDIO`}
                     text={i18n.language === 'ko'
-                      ? `KPOP STUDIO에서 ${getLangText(selectedGroup.name)} 프로필 확인하기 ✨`
-                      : `Check out ${getLangText(selectedGroup.name)} profiles on KPOP STUDIO ✨`}
+                      ? `KPOP STUDIO에서 ${getLangText(selectedGroup.name, i18n.language)} 프로필 확인하기 ✨`
+                      : `Check out ${getLangText(selectedGroup.name, i18n.language)} profiles on KPOP STUDIO ✨`}
                     url="https://kpopstudio.ai/encyclopedia"
                     lang={i18n.language}
                   />
@@ -301,18 +301,18 @@ const IdolEncyclopedia: React.FC = () => {
                 >
                   <div className="flex gap-6 items-start relative z-10">
                     <div className="w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden flex-shrink-0 border-2 border-white/10 group-hover:neon-shadow-blue transition-all">
-                      <SafeImage src={member.imageUrl} alt={getLangText(member.name)} className="w-full h-full object-cover object-center" accentColor={selectedGroup.accentColor} />
+                      <SafeImage src={member.imageUrl} alt={getLangText(member.name, i18n.language)} className="w-full h-full object-cover object-center" accentColor={selectedGroup.accentColor} />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
-                        <h4 className="text-2xl font-black text-white">{getLangText(member.name)}</h4>
+                        <h4 className="text-2xl font-black text-white">{getLangText(member.name, i18n.language)}</h4>
                         {KPOP_GROUPS.some(g => g.id === member.id) && (
                           <span className="px-2 py-0.5 bg-neon-blue/20 text-neon-blue rounded-md text-[8px] font-mono border border-neon-blue/30 uppercase font-black">
                             {t('solo_profile')}
                           </span>
                         )}
                       </div>
-                      <p className="text-neon-blue font-mono text-[10px] uppercase font-black mb-4 tracking-widest">{getLangText(member.role)}</p>
+                      <p className="text-neon-blue font-mono text-[10px] uppercase font-black mb-4 tracking-widest">{getLangText(member.role, i18n.language)}</p>
                       
                       <div className="flex flex-wrap gap-2">
                         <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
@@ -325,7 +325,7 @@ const IdolEncyclopedia: React.FC = () => {
                         </div>
                         <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
                           <Moon className="w-3 h-3 text-neon-yellow" />
-                          {getLangText(member.zodiac)}
+                          {getLangText(member.zodiac, i18n.language)}
                         </div>
                         <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
                           <Droplets className="w-3 h-3 text-neon-pink" />
@@ -336,7 +336,7 @@ const IdolEncyclopedia: React.FC = () => {
                       <SocialLinks socials={member.socials} accentColor={selectedGroup.accentColor} />
                     </div>
                   </div>
-                  <p className="text-slate-400 text-sm leading-relaxed relative z-10 line-clamp-3">{getLangText(member.description)}</p>
+                  <p className="text-slate-400 text-sm leading-relaxed relative z-10 line-clamp-3">{getLangText(member.description, i18n.language)}</p>
                 </div>
               ))}
             </div>
@@ -352,7 +352,7 @@ const IdolEncyclopedia: React.FC = () => {
               </div>
               <h3 className="text-2xl font-black text-white uppercase italic">{t('overview')}</h3>
             </div>
-            <p className="text-slate-300 leading-relaxed text-lg whitespace-pre-wrap">{getLangText(selectedGroup.wiki)}</p>
+            <p className="text-slate-300 leading-relaxed text-lg whitespace-pre-wrap">{getLangText(selectedGroup.wiki, i18n.language)}</p>
           </section>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -369,9 +369,9 @@ const IdolEncyclopedia: React.FC = () => {
                     <div className="text-[10px] font-mono text-neon-green font-bold uppercase mb-2">{news.date}</div>
                     <a href={news.url} target="_blank" rel="noopener noreferrer" className="block">
                       <h4 className="text-lg font-bold text-white mb-3 group-hover:text-neon-green transition-colors leading-snug">
-                        {getLangText(news.title)}
+                        {getLangText(news.title, i18n.language)}
                       </h4>
-                      <p className="text-slate-400 text-sm line-clamp-3">{getLangText(news.summary)}</p>
+                      <p className="text-slate-400 text-sm line-clamp-3">{getLangText(news.summary, i18n.language)}</p>
                     </a>
                   </div>
                 ))}
@@ -386,7 +386,7 @@ const IdolEncyclopedia: React.FC = () => {
                 <h3 className="text-2xl font-black text-white uppercase italic">{t('star_behind')}</h3>
               </div>
               <ul className="space-y-5">
-                {getLangArray(selectedGroup.tmi).map((fact, i) => (
+                {getLangArray(selectedGroup.tmi, i18n.language).map((fact, i) => (
                   <li key={i} className="flex gap-4 items-start bg-black/20 p-4 rounded-2xl border border-white/5 hover:border-neon-yellow/30 transition-colors">
                     <span className="w-2 h-2 rounded-full bg-neon-yellow flex-shrink-0 mt-1.5 shadow-[0_0_8px_rgba(255,240,31,0.8)]"></span>
                     <p className="text-slate-300 text-sm leading-relaxed">{fact}</p>
@@ -437,7 +437,7 @@ const IdolEncyclopedia: React.FC = () => {
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-6 border border-white/10 group-hover:neon-shadow-blue transition-all duration-500">
               <SafeImage 
                 src={group.imageUrl} 
-                alt={getLangText(group.name)} 
+                alt={getLangText(group.name, i18n.language)} 
                 className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                 accentColor={group.accentColor}
               />
@@ -449,9 +449,9 @@ const IdolEncyclopedia: React.FC = () => {
 
             <div className="flex flex-col gap-2 mt-4">
               <h3 className="text-3xl font-black text-white group-hover:text-neon-blue transition-all italic tracking-tighter pr-2 leading-none">
-                {getLangText(group.name)} {group.name.ko && i18n.language !== 'ko' ? `(${group.name.ko})` : (group.name.en && i18n.language === 'ko' ? `(${group.name.en})` : '')}
+                {getLangText(group.name, i18n.language)} {group.name.ko && i18n.language !== 'ko' ? `(${group.name.ko})` : (group.name.en && i18n.language === 'ko' ? `(${group.name.en})` : '')}
               </h3>
-              <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed mb-4">{getLangText(group.description)}</p>
+              <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed mb-4">{getLangText(group.description, i18n.language)}</p>
               
               <button className="w-full py-3 bg-white/5 rounded-xl border border-white/10 text-xs font-mono font-black uppercase tracking-widest text-slate-300 group-hover:bg-neon-blue group-hover:text-black group-hover:border-transparent transition-all">
                 {t('view_details')}

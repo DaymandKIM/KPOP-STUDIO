@@ -7,7 +7,7 @@ import type { Prediction } from '../hooks/useFaceRecognition';
 import { KPOP_GROUPS } from '../data/idols';
 import { generateShareCard } from '../hooks/useShareCard';
 import SharePanel from '../components/SharePanel';
-import { getLangText, getLangArray } from '../utils/lang';
+import { getLangText } from '../utils/lang';
 
 type AppState = 'idle' | 'analyzing' | 'result';
 

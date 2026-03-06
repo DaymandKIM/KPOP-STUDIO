@@ -91,7 +91,7 @@ const PrivacyPolicy: React.FC = () => {
         <p className="text-slate-400 font-mono text-sm mb-12">{data.lastUpdated}</p>
 
         <div className="space-y-8">
-          {data.sections.map((section, index) => (
+          {data.sections.map((section: any, index: number) => (
             <div key={index}>
               <h2 className="text-xl font-bold text-white mb-3 flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-neon-pink inline-block"></span>
