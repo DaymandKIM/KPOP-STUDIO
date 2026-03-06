@@ -135,7 +135,7 @@ const resources = {
       "about_title": "KPOP STUDIOへようこそ",
       "about_desc": "KPOP STUDIOは、K-POPファンと最先端のAIが出会う究極のデジタルプレイグラウンドです。自分がどのK-POPスターに似ているか気になりませんか？AIを活用した似てる人探しでスターと繋がり、成長し続けるアーカイブでお気に入りのシーンの最新情報をチェックしましょう。",
       "feature_1_title": "あなたのK-POPツインを見つける",
-      "feature_1_desc": "AIがあなたのユニークな特徴を分析し、あなたの雰囲気やビジュアルエネルギーを共有するK-POPスターを見つけます。数秒で「運命」の相手を発見！",
+      "feature_1_desc": "AI가 당신의 유니크한 특징을 분석하여, 당신의 분위기와 비주얼 에너지를 공유하는 K-POP 스타를 찾아냅니다. 수초 만에 '운명'의 상대를 발견!",
       "feature_2_title": "究極のスターガイド",
       "feature_2_desc": "お気に入りのアーティストの世界に深く飛び込みましょう。デビューの舞台裏から最新のバイラルニュース、スターのプロフィールまで、ファン活動を盛り上げるすべてを集めました。",
       "feature_3_title": "隠れたTMIと事実",
@@ -143,7 +143,15 @@ const resources = {
       "home_ai_badge": "AI搭載 似てる人分析",
       "home_cta_btn": "似てる人を探す",
       "home_hero_title": "KPOP STUDIO",
-      "home_hero_subtitle": "あなたに最も似ているK-POPスターは？"
+      "home_hero_subtitle": "あなたに最も似ているK-POPスターは？",
+      "trust_title": "なぜKPOP STUDIOなのですか？",
+      "trust_stat_1_label": "正確なAI分析",
+      "trust_stat_2_label": "プライバシー保護",
+      "trust_stat_3_label": "リアルタイムデータ",
+      "footer_about": "サービス紹介",
+      "footer_contact": "お問い合わせ",
+      "footer_privacy": "プライバシーポリシー",
+      "footer_terms": "利用規約"
     }
   },
   zh: {
@@ -178,15 +186,23 @@ const resources = {
       "about_title": "欢迎来到 KPOP STUDIO",
       "about_desc": "KPOP STUDIO 是 K-pop 粉丝与尖端 AI 结合的终极数字游乐场。想知道你长得像哪位 K-pop 明星吗？我们的 AI 明星脸搜索功能将你与明星联系起来，而我们不断增长的档案库将让你随时了解有关该领域的所有喜爱内容。",
       "feature_1_title": "寻找你的 K-pop 孪生兄弟/姐妹",
-      "feature_1_desc": "我们的 AI 分析您的独特特征，找出与您拥有相似氛围和视觉能量的 K-pop 明星。在几秒钟内发现您的“命运”匹配！",
+      "feature_1_desc": "我们的 AI 分析您的独特特征，找出与您拥有相似氛围 and 视觉能量의 K-pop 明星。在几秒钟内发现您的“命运”匹配！",
       "feature_2_title": "终极明星指南",
-      "feature_2_desc": "深入了解您最喜欢的艺术家的世界。从出道幕后到最新的热门新闻和明星档案，我们收集了一切来激发您的追星热情。",
+      "feature_2_desc": "深入了解您最喜欢的艺术家的世界. 从出道幕后到最新的热门新闻和明星档案, 我们收集了一切来激发您的追星热情.",
       "feature_3_title": "隐藏的 TMI 和事实",
       "feature_3_desc": "超越舞台！探索关于 K-pop 明星的趣事、MBTI 类型，以及只有真正的粉丝才知道的珍贵 TMI 细节。这是深入了解您的本命的理想场所。",
       "home_ai_badge": "AI 明星脸分析",
       "home_cta_btn": "开始分析",
       "home_hero_title": "KPOP STUDIO",
-      "home_hero_subtitle": "谁是你最像的K-pop明星？"
+      "home_hero_subtitle": "谁是你最像的K-pop明星？",
+      "trust_title": "为什么选择 KPOP STUDIO？",
+      "trust_stat_1_label": "精确的 AI 分析",
+      "trust_stat_2_label": "隐私保护",
+      "trust_stat_3_label": "实时数据",
+      "footer_about": "关于我们",
+      "footer_contact": "联系我们",
+      "footer_privacy": "隐私政策",
+      "footer_terms": "服务条款"
     }
   },
   es: {
@@ -229,7 +245,15 @@ const resources = {
       "home_ai_badge": "Análisis de parecidos con IA",
       "home_cta_btn": "Buscar mi parecido",
       "home_hero_title": "KPOP STUDIO",
-      "home_hero_subtitle": "¿A qué estrella de K-pop te pareces más?"
+      "home_hero_subtitle": "¿A qué estrella de K-pop te pareces más?",
+      "trust_title": "¿Por qué KPOP STUDIO?",
+      "trust_stat_1_label": "Precisión de IA",
+      "trust_stat_2_label": "Privacidad segura",
+      "trust_stat_3_label": "Archivo en vivo",
+      "footer_about": "Sobre nosotros",
+      "footer_contact": "Contacto",
+      "footer_privacy": "Política de privacidad",
+      "footer_terms": "Términos de servicio"
     }
   },
   id: {
@@ -272,7 +296,15 @@ const resources = {
       "home_ai_badge": "Analisis Kembaran AI",
       "home_cta_btn": "Cari Kembaranku",
       "home_hero_title": "KPOP STUDIO",
-      "home_hero_subtitle": "Bintang K-pop mana yang paling mirip denganmu?"
+      "home_hero_subtitle": "Bintang K-pop mana yang paling mirip denganmu?",
+      "trust_title": "Mengapa KPOP STUDIO?",
+      "trust_stat_1_label": "Akurasi AI",
+      "trust_stat_2_label": "Privasi Aman",
+      "trust_stat_3_label": "Arsip Langsung",
+      "footer_about": "Tentang Kami",
+      "footer_contact": "Kontak",
+      "footer_privacy": "Kebijakan Privasi",
+      "footer_terms": "Ketentuan Layanan"
     }
   },
   fr: {
@@ -315,7 +347,15 @@ const resources = {
       "home_ai_badge": "Analyse de sosie par IA",
       "home_cta_btn": "Chercher mon sosie",
       "home_hero_title": "KPOP STUDIO",
-      "home_hero_subtitle": "À quelle star de K-pop ressemblez-vous le plus ?"
+      "home_hero_subtitle": "À quelle star de K-pop ressemblez-vous le plus ?",
+      "trust_title": "Pourquoi KPOP STUDIO ?",
+      "trust_stat_1_label": "Précision de l'IA",
+      "trust_stat_2_label": "Confidentialité garantie",
+      "trust_stat_3_label": "Archives en direct",
+      "footer_about": "À propos",
+      "footer_contact": "Contact",
+      "footer_privacy": "Confidentialité",
+      "footer_terms": "Conditions"
     }
   },
   hi: {
@@ -358,7 +398,15 @@ const resources = {
       "home_ai_badge": "AI-संचालित हमशक्ल विश्लेषण",
       "home_cta_btn": "हमशक्ल खोजें",
       "home_hero_title": "KPOP STUDIO",
-      "home_hero_subtitle": "आप सबसे ज्यादा किस के-पॉप स्टार की तरह दिखते हैं?"
+      "home_hero_subtitle": "आप सबसे ज्यादा किस के-पॉप स्टार की तरह दिखते हैं?",
+      "trust_title": "KPOP STUDIO क्यों चुनें?",
+      "trust_stat_1_label": "AI सटीकता",
+      "trust_stat_2_label": "गोपनीयता सुरक्षित",
+      "trust_stat_3_label": "लाइव आर्काइव",
+      "footer_about": "हमारे बारे में",
+      "footer_contact": "संपर्क",
+      "footer_privacy": "गोपनीयता नीति",
+      "footer_terms": "सेवा की शर्तें"
     }
   },
   pt: {
@@ -401,7 +449,15 @@ const resources = {
       "home_ai_badge": "Análise de Sósia por IA",
       "home_cta_btn": "Encontrar meu sósia",
       "home_hero_title": "KPOP STUDIO",
-      "home_hero_subtitle": "Com qual estrela de K-pop você mais se parece?"
+      "home_hero_subtitle": "Com qual estrela de K-pop você mais se parece?",
+      "trust_title": "Por que KPOP STUDIO?",
+      "trust_stat_1_label": "Precisão de IA",
+      "trust_stat_2_label": "Privacidade Segura",
+      "trust_stat_3_label": "Arquivo ao Vivo",
+      "footer_about": "Sobre Nós",
+      "footer_contact": "Contato",
+      "footer_privacy": "Privacidade",
+      "footer_terms": "Termos"
     }
   },
   ar: {
@@ -444,7 +500,15 @@ const resources = {
       "home_ai_badge": "تحليل الشبيه بالذكاء الاصطناعي",
       "home_cta_btn": "ابحث عن شبيهي",
       "home_hero_title": "KPOP STUDIO",
-      "home_hero_subtitle": "من هو نجم الكيبوب الأكثر شبهاً بك؟"
+      "home_hero_subtitle": "من هو نجم الكيبوب الأكثر شبهاً بك؟",
+      "trust_title": "لماذا KPOP STUDIO؟",
+      "trust_stat_1_label": "دقة الذكاء الاصطناعي",
+      "trust_stat_2_label": "خصوصية آمنة",
+      "trust_stat_3_label": "أرشيف مباشر",
+      "footer_about": "من نحن",
+      "footer_contact": "اتصل بنا",
+      "footer_privacy": "سياسة الخصوصية",
+      "footer_terms": "شروط الخدمة"
     }
   },
   th: {
@@ -487,7 +551,15 @@ const resources = {
       "home_ai_badge": "วิเคราะห์หน้าเหมือนด้วย AI",
       "home_cta_btn": "ค้นหาหน้าเหมือน",
       "home_hero_title": "KPOP STUDIO",
-      "home_hero_subtitle": "คุณหน้าเหมือนศิลปิน K-pop คนไหนมากที่สุด?"
+      "home_hero_subtitle": "คุณหน้าเหมือนศิลปิน K-pop คนไหนมากที่สุด?",
+      "trust_title": "ทำไมต้อง KPOP STUDIO?",
+      "trust_stat_1_label": "AI แม่นยำ",
+      "trust_stat_2_label": "เป็นส่วนตัว",
+      "trust_stat_3_label": "คลังข้อมูลสด",
+      "footer_about": "เกี่ยวกับเรา",
+      "footer_contact": "ติดต่อเรา",
+      "footer_privacy": "นโยบายความเป็นส่วนตัว",
+      "footer_terms": "เงื่อนไขการใช้บริการ"
     }
   },
   vi: {
@@ -530,7 +602,15 @@ const resources = {
       "home_ai_badge": "Phân tích bản sao AI",
       "home_cta_btn": "Tìm bản sao của tôi",
       "home_hero_title": "KPOP STUDIO",
-      "home_hero_subtitle": "Bạn giống ngôi sao K-pop nào nhất?"
+      "home_hero_subtitle": "Bạn giống ngôi sao K-pop nào nhất?",
+      "trust_title": "Tại sao lại là KPOP STUDIO?",
+      "trust_stat_1_label": "AI Chính xác",
+      "trust_stat_2_label": "Bảo mật riêng tư",
+      "trust_stat_3_label": "Kho lưu trữ trực tiếp",
+      "footer_about": "Về chúng tôi",
+      "footer_contact": "Liên hệ",
+      "footer_privacy": "Chính sách bảo mật",
+      "footer_terms": "Điều khoản dịch vụ"
     }
   },
   ru: {
@@ -573,7 +653,15 @@ const resources = {
       "home_ai_badge": "ИИ-анализ сходства",
       "home_cta_btn": "Найти двойника",
       "home_hero_title": "KPOP STUDIO",
-      "home_hero_subtitle": "На какую K-pop звезду ты похож больше всего?"
+      "home_hero_subtitle": "На какую K-pop звезду ты похож больше всего?",
+      "trust_title": "Почему KPOP STUDIO?",
+      "trust_stat_1_label": "Точность ИИ",
+      "trust_stat_2_label": "Конфиденциальность",
+      "trust_stat_3_label": "Живой архив",
+      "footer_about": "О нас",
+      "footer_contact": "Контакты",
+      "footer_privacy": "Конфиденциальность",
+      "footer_terms": "Условия"
     }
   }
 };
