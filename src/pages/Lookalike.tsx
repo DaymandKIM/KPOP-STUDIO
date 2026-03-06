@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
+import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import { Upload, RefreshCw, Star, ArrowRight, User, AlertCircle, Crosshair, Database, Share2, Sparkles, CheckCircle2, XCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -686,9 +687,9 @@ export default function Lookalike() {
     </div>
 
       {/* 멤버 상세보기 모달 */}
-      {showMemberModal && matchedIdol && (
+      {showMemberModal && matchedIdol && createPortal(
         <div
-          className="fixed inset-0 z-[60] flex items-center justify-center p-4"
+          className="fixed inset-0 z-[200] flex items-center justify-center p-4"
           onClick={() => setShowMemberModal(false)}
         >
           <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
@@ -788,15 +789,16 @@ export default function Lookalike() {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
       {/* Photo guide modal overlay */}
-      {showGuide && appState === 'idle' && (() => {
+      {showGuide && appState === 'idle' && createPortal((() => {
         const guide = getGuide(i18n.language);
         return (
           <div
-            className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4 sm:p-6"
+            className="fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-4 sm:p-6"
             onClick={() => setShowGuide(false)}
           >
             <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
@@ -859,7 +861,7 @@ export default function Lookalike() {
             </div>
           </div>
         );
-      })()}
+      })(), document.body)}
     </>
   );
 }
