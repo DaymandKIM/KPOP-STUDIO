@@ -276,10 +276,13 @@ export default function Lookalike() {
 
   const matchedIdol = getMatchedIdol();
 
-  // 랜덤 TMI — 결과가 바뀔 때마다 새로 선택
+  // 랜덤 TMI — 멤버 개인 TMI 우선, 없으면 그룹 TMI fallback
   const randomTmi = useMemo(() => {
     if (!matchedIdol) return null;
-    const tmiArr = matchedIdol.group.tmi[i18n.language] ?? matchedIdol.group.tmi.en;
+    const memberTmi = matchedIdol.member.tmi;
+    const tmiArr =
+      (memberTmi?.[i18n.language] ?? memberTmi?.en) ??
+      (matchedIdol.group.tmi[i18n.language] ?? matchedIdol.group.tmi.en);
     if (!tmiArr || tmiArr.length === 0) return null;
     return tmiArr[Math.floor(Math.random() * tmiArr.length)];
   // eslint-disable-next-line react-hooks/exhaustive-deps
