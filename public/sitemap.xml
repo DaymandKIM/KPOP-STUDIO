@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Home Page -->
   <url>
-    <loc>https://kpop-studio.pages.dev/</loc>
+    <loc>https://kpopstudio.ai/</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- Lookalike AI Feature -->
   <url>
-    <loc>https://kpop-studio.pages.dev/lookalike</loc>
+    <loc>https://kpopstudio.ai/lookalike</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- K-pop Star Encyclopedia -->
   <url>
-    <loc>https://kpop-studio.pages.dev/encyclopedia</loc>
+    <loc>https://kpopstudio.ai/encyclopedia</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Privacy Policy -->
   <url>
-    <loc>https://kpop-studio.pages.dev/privacy</loc>
+    <loc>https://kpopstudio.ai/privacy</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <!-- Terms of Service -->
   <url>
-    <loc>https://kpop-studio.pages.dev/terms</loc>
+    <loc>https://kpopstudio.ai/terms</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

@@ -39,7 +39,7 @@ User-agent: Daumoa
 Allow: /
 
 # Host information
-Host: https://kpop-studio.pages.dev
+Host: https://kpopstudio.ai
 
 # Sitemap location
-Sitemap: https://kpop-studio.pages.dev/sitemap.xml
+Sitemap: https://kpopstudio.ai/sitemap.xml
