@@ -72,20 +72,32 @@ export default function SharePanel({
   const [copied, setCopied] = useState(false);
   const [instaSaved, setInstaSaved] = useState(false);
 
-  const handleDownload = async () => {
-    if (!blob) return;
-    const file = new File([blob], filename, { type: 'image/png' });
-    if (navigator.canShare?.({ files: [file] })) {
-      try { await navigator.share({ files: [file] }); return; } catch { return; }
-    }
-    const objectUrl = URL.createObjectURL(blob);
+  // 이미지를 <a> 태그로 동기 다운로드
+  function triggerDownload(b: Blob) {
+    const objectUrl = URL.createObjectURL(b);
     const a = document.createElement('a');
     a.href = objectUrl;
     a.download = filename;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(objectUrl);
+    setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+  }
+
+  const handleDownload = async () => {
+    if (!blob) return;
+    const file = new File([blob], filename, { type: 'image/png' });
+    // iOS/Android: 네이티브 공유시트로 이미지 저장 (카메라 롤 포함)
+    if (navigator.canShare?.({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file] });
+        return;
+      } catch (e) {
+        if ((e as Error).name === 'AbortError') return; // 사용자 취소
+        // 다른 에러는 fallback으로 이어짐
+      }
+    }
+    triggerDownload(blob);
   };
 
   const handleWebShare = async () => {
@@ -97,6 +109,7 @@ export default function SharePanel({
     try { await navigator.share(shareData); } catch { /* cancelled */ }
   };
 
+  // iOS에서 window.open은 반드시 동기 컨텍스트에서 호출해야 팝업 차단 안 됨
   const handleTwitter = () => {
     const tweet = encodeURIComponent(`${text}\n`);
     const turl = encodeURIComponent(url);
@@ -120,47 +133,47 @@ export default function SharePanel({
   const handleInstagram = async () => {
     if (blob) {
       const file = new File([blob], filename, { type: 'image/png' });
-      // Mobile: native share sheet includes Instagram
+      // iOS/Android: 네이티브 공유시트 (인스타그램 앱으로 직접 연결)
       if (navigator.canShare?.({ files: [file] })) {
         try {
           await navigator.share({ files: [file], title, text });
           return;
         } catch (e) {
-          if ((e as Error).name === 'AbortError') return; // user cancelled
+          if ((e as Error).name === 'AbortError') return;
         }
       }
-      // Desktop/fallback: download image, show saved state, then open Instagram
-      const objectUrl = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = objectUrl;
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(objectUrl);
+      // 데스크탑: window.open을 먼저 동기로 호출 후 다운로드 (iOS 팝업 차단 우회)
+      window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer');
+      triggerDownload(blob);
       setInstaSaved(true);
-      setTimeout(() => {
-        window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer');
-        setTimeout(() => setInstaSaved(false), 3000);
-      }, 400);
+      setTimeout(() => setInstaSaved(false), 3000);
     } else {
       window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer');
     }
   };
 
   const handleCopy = async () => {
+    let ok = false;
     try {
       await navigator.clipboard.writeText(url);
+      ok = true;
     } catch {
-      const el = document.createElement('textarea');
-      el.value = url;
-      document.body.appendChild(el);
-      el.select();
-      document.execCommand('copy');
-      document.body.removeChild(el);
+      // iOS 구버전 clipboard API 폴백
+      try {
+        const el = document.createElement('textarea');
+        el.value = url;
+        el.style.cssText = 'position:fixed;top:0;left:0;opacity:0;';
+        document.body.appendChild(el);
+        el.focus();
+        el.setSelectionRange(0, el.value.length); // iOS 필수
+        ok = document.execCommand('copy');
+        document.body.removeChild(el);
+      } catch { /* no-op */ }
     }
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (ok) {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
   };
 
   const btnBase =

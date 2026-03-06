@@ -255,16 +255,16 @@ export default function Lookalike() {
               <div className="w-full text-center space-y-8 md:space-y-10">
                 <div className="space-y-2 md:space-y-4">
                   <div className="inline-block px-4 py-1.5 bg-neon-pink/10 border border-neon-pink/30 rounded-full text-neon-pink font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] font-black">{t('best_match_badge')}</div>
-                  <h3 className="text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tight pb-1 pr-2">
+                  <h3 className="text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tight w-full text-center break-words">
                     {matchedIdol ? getLangText(matchedIdol.member.name, i18n.language) : predictions[0].className}
                   </h3>
                   {matchedIdol && (
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="h-px w-8 bg-neon-blue/50"></div>
-                      <p className="text-neon-blue font-black text-2xl md:text-3xl lg:text-4xl uppercase tracking-widest italic">
+                    <div className="flex items-center justify-center gap-2 w-full px-2">
+                      <div className="h-px flex-1 max-w-[40px] bg-neon-blue/50 shrink-0"></div>
+                      <p className="text-neon-blue font-black text-xl md:text-3xl lg:text-4xl uppercase tracking-wider italic text-center break-words min-w-0">
                         {getLangText(matchedIdol.group.name, i18n.language)}
                       </p>
-                      <div className="h-px w-8 bg-neon-blue/50"></div>
+                      <div className="h-px flex-1 max-w-[40px] bg-neon-blue/50 shrink-0"></div>
                     </div>
                   )}
                 </div>
