@@ -64,7 +64,12 @@ const resources = {
       "overview": "Overview",
       "latest_news": "Latest News",
       "star_behind": "Star Behind (TMI)",
-      "view_details": "View Details"
+      "view_details": "View Details",
+      "best_match_badge": "Best Match",
+      "view_in_encyclopedia": "View in Encyclopedia",
+      "share_result": "Share Result",
+      "share_via": "Share via",
+      "tap_to_upload": "Tap to Upload"
     }
   },
   ko: {
@@ -130,7 +135,12 @@ const resources = {
       "overview": "개요",
       "latest_news": "최신 뉴스",
       "star_behind": "스타 비하인드 (TMI)",
-      "view_details": "상세보기"
+      "view_details": "상세보기",
+      "best_match_badge": "닮은꼴 발견",
+      "view_in_encyclopedia": "도감에서 더보기",
+      "share_result": "결과 공유하기",
+      "share_via": "공유 방법 선택",
+      "tap_to_upload": "사진을 선택해 주세요"
     }
   },
   ja: {
@@ -196,7 +206,12 @@ const resources = {
       "overview": "概要",
       "latest_news": "最新ニュース",
       "star_behind": "スタービハインド (TMI)",
-      "view_details": "詳細を見る"
+      "view_details": "詳細を見る",
+      "best_match_badge": "マッチング完了",
+      "view_in_encyclopedia": "図鑑で見る",
+      "share_result": "結果をシェア",
+      "share_via": "シェア方法",
+      "tap_to_upload": "タップして写真を選択"
     }
   },
   zh: {
@@ -262,7 +277,12 @@ const resources = {
       "overview": "概述",
       "latest_news": "最新新闻",
       "star_behind": "明星幕后 (TMI)",
-      "view_details": "查看详情"
+      "view_details": "查看详情",
+      "best_match_badge": "最佳匹配",
+      "view_in_encyclopedia": "在百科查看",
+      "share_result": "分享结果",
+      "share_via": "分享方式",
+      "tap_to_upload": "点击上传图片"
     }
   },
   es: {
@@ -328,7 +348,12 @@ const resources = {
       "overview": "Resumen",
       "latest_news": "Últimas Noticias",
       "star_behind": "Detrás de la Estrella (TMI)",
-      "view_details": "Ver Detalles"
+      "view_details": "Ver Detalles",
+      "best_match_badge": "Mejor Coincidencia",
+      "view_in_encyclopedia": "Ver en Enciclopedia",
+      "share_result": "Compartir",
+      "share_via": "Compartir via",
+      "tap_to_upload": "Toca para Subir"
     }
   },
   id: {
@@ -394,7 +419,12 @@ const resources = {
       "overview": "Ringkasan",
       "latest_news": "Berita Terbaru",
       "star_behind": "Di Balik Bintang (TMI)",
-      "view_details": "Lihat Detail"
+      "view_details": "Lihat Detail",
+      "best_match_badge": "Kecocokan Terbaik",
+      "view_in_encyclopedia": "Lihat di Ensiklopedia",
+      "share_result": "Bagikan Hasil",
+      "share_via": "Bagikan via",
+      "tap_to_upload": "Ketuk untuk Unggah"
     }
   },
   fr: {
@@ -460,7 +490,12 @@ const resources = {
       "overview": "Aperçu",
       "latest_news": "Dernières Nouvelles",
       "star_behind": "Derrière la Star (TMI)",
-      "view_details": "Voir les Détails"
+      "view_details": "Voir les Détails",
+      "best_match_badge": "Meilleure Correspondance",
+      "view_in_encyclopedia": "Voir dans l'Encyclopédie",
+      "share_result": "Partager",
+      "share_via": "Partager via",
+      "tap_to_upload": "Appuyer pour Télécharger"
     }
   },
   hi: {
@@ -526,7 +561,12 @@ const resources = {
       "overview": "अवलोकन",
       "latest_news": "नवीनतम समाचार",
       "star_behind": "स्टार के पीछे (TMI)",
-      "view_details": "विवरण देखें"
+      "view_details": "विवरण देखें",
+      "best_match_badge": "सर्वश्रेष्ठ मिलान",
+      "view_in_encyclopedia": "विश्वकोश में देखें",
+      "share_result": "परिणाम साझा करें",
+      "share_via": "इसके माध्यम से",
+      "tap_to_upload": "अपलोड के लिए टैप करें"
     }
   },
   pt: {
@@ -592,7 +632,12 @@ const resources = {
       "overview": "Visão Geral",
       "latest_news": "Últimas Notícias",
       "star_behind": "Por Trás da Estrela (TMI)",
-      "view_details": "Ver Detalhes"
+      "view_details": "Ver Detalhes",
+      "best_match_badge": "Melhor Correspondência",
+      "view_in_encyclopedia": "Ver na Enciclopédia",
+      "share_result": "Compartilhar",
+      "share_via": "Compartilhar via",
+      "tap_to_upload": "Toque para Carregar"
     }
   },
   ar: {
@@ -658,7 +703,12 @@ const resources = {
       "overview": "نظرة عامة",
       "latest_news": "أحدث الأخبار",
       "star_behind": "خلف النجم (TMI)",
-      "view_details": "عرض التفاصيل"
+      "view_details": "عرض التفاصيل",
+      "best_match_badge": "أفضل تطابق",
+      "view_in_encyclopedia": "عرض في الموسوعة",
+      "share_result": "مشاركة النتيجة",
+      "share_via": "مشاركة عبر",
+      "tap_to_upload": "انقر للرفع"
     }
   },
   th: {
@@ -724,7 +774,12 @@ const resources = {
       "overview": "ภาพรวม",
       "latest_news": "ข่าวล่าสุด",
       "star_behind": "เบื้องหลังดารา (TMI)",
-      "view_details": "ดูรายละเอียด"
+      "view_details": "ดูรายละเอียด",
+      "best_match_badge": "ผลลัพธ์ที่ดีที่สุด",
+      "view_in_encyclopedia": "ดูใน Encyclopedia",
+      "share_result": "แชร์ผลลัพธ์",
+      "share_via": "แชร์ผ่าน",
+      "tap_to_upload": "แตะเพื่ออัปโหลด"
     }
   },
   vi: {
@@ -790,7 +845,12 @@ const resources = {
       "overview": "Tổng quan",
       "latest_news": "Tin tức mới nhất",
       "star_behind": "Phía sau Ngôi sao (TMI)",
-      "view_details": "Xem chi tiết"
+      "view_details": "Xem chi tiết",
+      "best_match_badge": "Kết quả tốt nhất",
+      "view_in_encyclopedia": "Xem trong Bách khoa",
+      "share_result": "Chia sẻ kết quả",
+      "share_via": "Chia sẻ qua",
+      "tap_to_upload": "Nhấn để tải lên"
     }
   },
   ru: {
@@ -856,7 +916,12 @@ const resources = {
       "overview": "Обзор",
       "latest_news": "Последние новости",
       "star_behind": "За кулисами звезды (TMI)",
-      "view_details": "Подробнее"
+      "view_details": "Подробнее",
+      "best_match_badge": "Лучшее совпадение",
+      "view_in_encyclopedia": "Смотреть в Энциклопедии",
+      "share_result": "Поделиться",
+      "share_via": "Поделиться через",
+      "tap_to_upload": "Нажмите для загрузки"
     }
   }
 };

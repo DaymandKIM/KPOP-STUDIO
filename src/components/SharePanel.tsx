@@ -1,6 +1,18 @@
 import { useState } from 'react';
 import { Download, Share2, Copy, Check, Twitter, Loader2 } from 'lucide-react';
 
+const L: Record<string, Record<string, string>> = {
+  save:       { ko:'저장', ja:'保存', zh:'保存', ar:'حفظ', hi:'सेव', th:'บันทึก', vi:'Lưu', ru:'Сохранить', default:'Save' },
+  share:      { ko:'공유', ja:'シェア', zh:'分享', ar:'مشاركة', hi:'शेयर', th:'แชร์', vi:'Chia sẻ', ru:'Поделиться', default:'Share' },
+  copied:     { ko:'복사됨!', ja:'コピー済!', zh:'已复制!', ar:'تم النسخ!', hi:'कॉपी!', th:'คัดลอก!', vi:'Đã sao!', ru:'Скопировано!', default:'Copied!' },
+  link:       { ko:'링크', ja:'リンク', zh:'链接', ar:'رابط', hi:'लिंक', th:'ลิงก์', vi:'Liên kết', ru:'Ссылка', default:'Link' },
+  generating: { ko:'카드 생성 중...', ja:'カード作成中...', zh:'生成中...', ar:'جارٍ الإنشاء...', hi:'बना रहे हैं...', th:'กำลังสร้าง...', vi:'Đang tạo...', ru:'Создание...', default:'Generating...' },
+};
+function lx(key: string, lang: string) {
+  const m = L[key];
+  return m[lang] ?? m[lang.split('-')[0]] ?? m.default;
+}
+
 interface SharePanelProps {
   title: string;
   text: string;
@@ -21,8 +33,6 @@ export default function SharePanel({
   lang = 'en',
 }: SharePanelProps) {
   const [copied, setCopied] = useState(false);
-  const isKo = lang === 'ko';
-
   const handleDownload = () => {
     if (!blob) return;
     const a = document.createElement('a');
@@ -84,7 +94,7 @@ export default function SharePanel({
         <div className="flex items-center justify-center gap-3 py-4 text-neon-blue">
           <Loader2 className="w-5 h-5 animate-spin" />
           <span className="font-mono text-xs uppercase tracking-widest font-bold">
-            {isKo ? '카드 생성 중...' : 'Generating card...'}
+            {lx('generating', lang)}
           </span>
         </div>
       ) : (
@@ -98,7 +108,7 @@ export default function SharePanel({
             >
               <Download className="w-5 h-5" />
               <span className="text-[10px] font-mono font-black uppercase tracking-wider">
-                {isKo ? '저장' : 'Save'}
+                {lx('save', lang)}
               </span>
             </button>
           )}
@@ -111,7 +121,7 @@ export default function SharePanel({
             >
               <Share2 className="w-5 h-5" />
               <span className="text-[10px] font-mono font-black uppercase tracking-wider">
-                {isKo ? '공유' : 'Share'}
+                {lx('share', lang)}
               </span>
             </button>
           )}
@@ -138,7 +148,7 @@ export default function SharePanel({
           >
             {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
             <span className="text-[10px] font-mono font-black uppercase tracking-wider">
-              {copied ? (isKo ? '복사됨!' : 'Copied!') : (isKo ? '링크' : 'Link')}
+              {copied ? (lx('copied', lang)) : (lx('link', lang))}
             </span>
           </button>
         </div>

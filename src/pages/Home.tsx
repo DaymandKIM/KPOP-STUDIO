@@ -19,7 +19,7 @@ export default function Home() {
           <div className="mb-2 md:mb-4">
             {isKo ? t('home_hero_title') : t('app_title')}
           </div>
-          <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue pb-1 md:pb-2 break-keep">
+          <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue pb-2 md:pb-3 break-keep">
             {isKo ? t('home_hero_subtitle') : t('app_subtitle')}
           </span>
         </h1>

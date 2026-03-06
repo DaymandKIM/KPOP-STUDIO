@@ -110,7 +110,7 @@ export default function Lookalike() {
         <div className="text-center mb-8 md:mb-12 animate-fade-in-up w-full px-2 mt-8 md:mt-12">
           <h1 className="text-5xl xs:text-6xl md:text-8xl font-black mb-4 md:mb-6 tracking-tighter italic text-white leading-[1.1] md:leading-none uppercase">
             {t('app_title')} <br className="xs:hidden" />
-            <span className="inline-block pr-4 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">{t('app_subtitle')}</span>
+            <span className="inline-block pr-4 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">{t('app_subtitle')}</span>
           </h1>
           <p className="text-slate-400 font-mono text-xs md:text-sm max-w-lg mx-auto uppercase tracking-wide px-4">
             {t('upload_instruction')}
@@ -152,7 +152,7 @@ export default function Lookalike() {
               </div>
               <div className="absolute bottom-8 md:bottom-12 left-0 w-full text-center z-10 pointer-events-none px-6">
                 <h3 className="font-black text-3xl md:text-5xl text-white mb-2 md:mb-3 uppercase italic tracking-tighter leading-none">{t('upload_btn')}</h3>
-                <p className="text-[10px] md:text-xs font-mono text-slate-500 uppercase tracking-[0.2em] font-bold">{i18n.language === 'ko' ? '사진을 선택해 주세요' : 'Tap to Upload Image'}</p>
+                <p className="text-[10px] md:text-xs font-mono text-slate-500 uppercase tracking-[0.2em] font-bold">{t('tap_to_upload')}</p>
               </div>
               <div className="hud-corner hud-corner-tl !border-neon-blue !w-8 !h-8 md:!w-12 md:!h-12"></div>
               <div className="hud-corner hud-corner-tr !border-neon-purple !w-8 !h-8 md:!w-12 md:!h-12"></div>
@@ -233,8 +233,8 @@ export default function Lookalike() {
               {/* Result Info */}
               <div className="w-full text-center space-y-8 md:space-y-10">
                 <div className="space-y-2 md:space-y-4">
-                  <div className="inline-block px-4 py-1.5 bg-neon-pink/10 border border-neon-pink/30 rounded-full text-neon-pink font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] font-black">Best Match Identified</div>
-                  <h3 className="text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tighter leading-none pr-2">
+                  <div className="inline-block px-4 py-1.5 bg-neon-pink/10 border border-neon-pink/30 rounded-full text-neon-pink font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] font-black">{t('best_match_badge')}</div>
+                  <h3 className="text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tight pb-1 pr-2">
                     {matchedIdol ? matchedIdol.member.name[currentLang] : predictions[0].className}
                   </h3>
                   {matchedIdol && (
@@ -277,7 +277,7 @@ export default function Lookalike() {
                       className="flex items-center gap-4 px-8 py-4 bg-white/5 hover:bg-neon-green/10 border border-white/10 hover:border-neon-green/50 rounded-2xl text-xs md:text-sm font-black uppercase tracking-[0.2em] transition-all group/btn"
                     >
                       <Database className="w-5 h-5 text-neon-green" />
-                      <span>{currentLang === 'ko' ? '도감에서 더보기' : 'View in Encyclopedia'}</span>
+                      <span>{t('view_in_encyclopedia')}</span>
                       <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
                     </button>
                   )}
@@ -288,7 +288,7 @@ export default function Lookalike() {
                       className="flex items-center gap-3 px-8 py-4 bg-neon-pink/10 hover:bg-neon-pink/20 border border-neon-pink/30 hover:border-neon-pink/60 rounded-2xl text-xs md:text-sm font-black uppercase tracking-[0.2em] transition-all text-neon-pink"
                     >
                       <Share2 className="w-5 h-5" />
-                      <span>{currentLang === 'ko' ? '결과 공유하기' : 'Share Result'}</span>
+                      <span>{t('share_result')}</span>
                     </button>
                   )}
                 </div>
@@ -297,7 +297,7 @@ export default function Lookalike() {
                 {showSharePanel && matchedIdol && (
                   <div className="mt-4 pt-6 border-t border-white/10 w-full">
                     <p className="text-slate-500 font-mono text-[10px] uppercase tracking-widest font-black mb-4">
-                      {currentLang === 'ko' ? '공유 방법 선택' : 'Share via'}
+                      {t('share_via')}
                     </p>
                     <SharePanel
                       title={currentLang === 'ko' ? 'KPOP STUDIO AI 닮은꼴 결과' : 'My KPOP STUDIO AI Result'}

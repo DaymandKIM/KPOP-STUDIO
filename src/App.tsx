@@ -114,17 +114,17 @@ function AppLayout() {
         </div>
         
         <div className="flex items-center gap-2 md:gap-6">
-          <nav className="hidden md:flex bg-white/5 p-1.5 rounded-2xl border border-white/10 backdrop-blur-md">
+          <nav className="hidden md:flex bg-white/5 p-1.5 rounded-2xl border border-white/10 backdrop-blur-md min-w-0 shrink">
             <Link 
               to="/lookalike"
-              className={`px-6 py-2.5 rounded-xl text-xs font-black uppercase transition-all flex items-center gap-2 ${isIdentification ? 'bg-gradient-to-r from-neon-blue to-neon-purple text-white neon-shadow-blue' : 'text-slate-400 hover:text-white hover:bg-white/5'}`}
+              className={`px-3 lg:px-5 py-2.5 rounded-xl text-[10px] lg:text-xs font-black uppercase transition-all flex items-center gap-2 whitespace-nowrap ${isIdentification ? 'bg-gradient-to-r from-neon-blue to-neon-purple text-white neon-shadow-blue' : 'text-slate-400 hover:text-white hover:bg-white/5'}`}
             >
               <Crosshair className="w-4 h-4" />
               {t('nav_identification')}
             </Link>
             <Link 
               to="/encyclopedia"
-              className={`px-6 py-2.5 rounded-xl text-xs font-black uppercase transition-all flex items-center gap-2 ${isEncyclopedia ? 'bg-gradient-to-r from-neon-pink to-neon-orange text-white neon-shadow-pink' : 'text-slate-400 hover:text-white hover:bg-white/5'}`}
+              className={`px-3 lg:px-5 py-2.5 rounded-xl text-[10px] lg:text-xs font-black uppercase transition-all flex items-center gap-2 whitespace-nowrap ${isEncyclopedia ? 'bg-gradient-to-r from-neon-pink to-neon-orange text-white neon-shadow-pink' : 'text-slate-400 hover:text-white hover:bg-white/5'}`}
             >
               <Database className="w-4 h-4" />
               {t('nav_encyclopedia')}
