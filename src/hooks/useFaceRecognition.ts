@@ -90,23 +90,23 @@ export function useFaceRecognition() {
 
       // 2. Compare with known descriptors (FaceMatcher)
       if (labeledDescriptors.length > 0) {
-        // We use a high threshold (e.g. 1.0) here because our descriptors.json is currently mock data.
-        // In a real scenario with real face embeddings, this should be around 0.5 - 0.6.
-        const faceMatcher = new faceapi.FaceMatcher(labeledDescriptors, 2.0); // Increase to 2.0 or beyond to ensure a match
-        let bestMatch = faceMatcher.findBestMatch(detection.descriptor);
-        
-        // If it's still unknown (because mock data distance is huge), force a random label
-        if (bestMatch.label === 'unknown') {
-            const randomLabel = labeledDescriptors[Math.floor(Math.random() * labeledDescriptors.length)].label;
-            bestMatch = new faceapi.FaceMatch(randomLabel, Math.random() * 0.5); // Mock distance
-        }
+        // 실제 얼굴 임베딩 기준 threshold: 0.6 (face-api 권장값)
+        const faceMatcher = new faceapi.FaceMatcher(labeledDescriptors, 0.6);
+        const bestMatch = faceMatcher.findBestMatch(detection.descriptor);
 
-        // face-api.js returns distance (0 is exact match, 1+ is completely different)
-        // We convert this to a probability percentage for the UI.
-        const similarity = Math.max(0.5, 1 - bestMatch.distance);
-        
+        // distance → similarity 변환 (0=완벽일치, 1+=완전다름)
+        // unknown인 경우 가장 가까운 레이블로 fallback
+        const label = bestMatch.label === 'unknown'
+          ? labeledDescriptors.reduce((best, ld) => {
+              const d = faceapi.euclideanDistance(detection.descriptor, ld.descriptors[0]);
+              return d < best.dist ? { label: ld.label, dist: d } : best;
+            }, { label: labeledDescriptors[0].label, dist: Infinity }).label
+          : bestMatch.label;
+
+        const similarity = Math.min(0.99, Math.max(0.5, 1 - bestMatch.distance));
+
         return [{
-          className: bestMatch.label,
+          className: label,
           probability: similarity
         }];
       } else {
