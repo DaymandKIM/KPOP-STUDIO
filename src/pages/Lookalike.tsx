@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Upload, RefreshCw, Star, ArrowRight, User, AlertCircle, Crosshair, Database, Share2, Sparkles } from 'lucide-react';
+import { Upload, RefreshCw, Star, ArrowRight, User, AlertCircle, Crosshair, Database, Share2, Sparkles, CheckCircle2, XCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useFaceRecognition } from '../hooks/useFaceRecognition';
 import type { Prediction } from '../hooks/useFaceRecognition';
@@ -11,12 +11,82 @@ import { getLangText } from '../utils/lang';
 
 type AppState = 'idle' | 'analyzing' | 'result';
 
+// K-pop 단어가 줄바꿈 되지 않도록 whitespace-nowrap 처리
+function wrapKpop(text: string) {
+  const parts = text.split(/(K-[Pp][Oo][Pp])/g);
+  return parts.map((part, i) =>
+    /^K-[Pp][Oo][Pp]$/.test(part)
+      ? <span key={i} className="whitespace-nowrap">{part}</span>
+      : part
+  );
+}
+
+// 사진 업로드 가이드 콘텐츠 (언어별)
+const GUIDE: Record<string, {title:string; sub:string; good:{icon:string;text:string}[]; bad:{icon:string;text:string}[]; btn:string}> = {
+  ko: {
+    title: '더 정확한 분석을 위한 사진 가이드',
+    sub: '아래 조건에 맞는 사진일수록 분석 정확도가 높아집니다.',
+    good: [
+      { icon: '🧑‍🦱', text: '정면을 바라보는 얼굴 사진' },
+      { icon: '💡', text: '밝고 균일한 조명' },
+      { icon: '🙋', text: '혼자 찍힌 사진 (1인)' },
+      { icon: '😊', text: '표정이 자연스러운 사진' },
+    ],
+    bad: [
+      { icon: '😎', text: '선글라스·마스크 착용' },
+      { icon: '↩️', text: '측면·뒷모습' },
+      { icon: '👥', text: '여러 명이 찍힌 사진' },
+      { icon: '🌑', text: '어둡거나 역광인 사진' },
+    ],
+    btn: '이해했어요, 사진 선택하기',
+  },
+  ja: {
+    title: 'より正確な分析のための写真ガイド',
+    sub: '以下の条件に合う写真ほど分析精度が高くなります。',
+    good: [
+      { icon: '🧑‍🦱', text: '正面を向いた顔写真' },
+      { icon: '💡', text: '明るく均一な照明' },
+      { icon: '🙋', text: '一人で写った写真' },
+      { icon: '😊', text: '自然な表情の写真' },
+    ],
+    bad: [
+      { icon: '😎', text: 'サングラス・マスク着用' },
+      { icon: '↩️', text: '横顔・後ろ姿' },
+      { icon: '👥', text: '複数人が写った写真' },
+      { icon: '🌑', text: '暗い・逆光の写真' },
+    ],
+    btn: '了解、写真を選ぶ',
+  },
+  en: {
+    title: 'Photo Guide for Best Results',
+    sub: 'Photos matching these tips will give you the most accurate match.',
+    good: [
+      { icon: '🧑‍🦱', text: 'Front-facing, clear face' },
+      { icon: '💡', text: 'Bright, even lighting' },
+      { icon: '🙋', text: 'Solo photo (just you)' },
+      { icon: '😊', text: 'Natural expression' },
+    ],
+    bad: [
+      { icon: '😎', text: 'Sunglasses or mask' },
+      { icon: '↩️', text: 'Side view or back' },
+      { icon: '👥', text: 'Multiple people' },
+      { icon: '🌑', text: 'Dark or backlit photo' },
+    ],
+    btn: 'Got it, Select Photo',
+  },
+};
+function getGuide(lang: string) {
+  return GUIDE[lang] ?? GUIDE[lang.split('-')[0]] ?? GUIDE.en;
+}
+
 export default function Lookalike() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const { model, isModelLoading, modelError, predict } = useFaceRecognition();
 
   const [appState, setAppState] = useState<AppState>('idle');
+  const [showGuide, setShowGuide] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [predictions, setPredictions] = useState<Prediction[]>([]);
   const [shareBlob, setShareBlob] = useState<Blob | null>(null);
@@ -93,6 +163,7 @@ export default function Lookalike() {
     setShareBlob(null);
     setShowSharePanel(false);
     setIsGeneratingCard(false);
+    setShowGuide(false);
   };
 
   const handleShare = async () => {
@@ -131,7 +202,7 @@ export default function Lookalike() {
         <div className="text-center mb-8 md:mb-12 animate-fade-in-up w-full px-2 mt-8 md:mt-12">
           <h1 className="text-5xl xs:text-6xl md:text-8xl font-black mb-4 md:mb-6 tracking-tighter italic text-white leading-[1.1] md:leading-none uppercase">
             {t('app_title')} <br className="xs:hidden" />
-            <span className="inline-block pr-4 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">{t('app_subtitle')}</span>
+            <span className="inline-block pr-4 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">{wrapKpop(t('app_subtitle'))}</span>
           </h1>
           <p className="text-slate-400 font-mono text-xs md:text-sm max-w-lg mx-auto uppercase tracking-wide px-4">
             {t('upload_instruction')}
@@ -155,14 +226,76 @@ export default function Lookalike() {
                <h3 className="text-neon-pink font-black text-xl mb-2">{t('error_model')}</h3>
                <p className="text-slate-400 text-sm font-mono">{modelError}</p>
             </div>
+          ) : showGuide ? (
+            (() => {
+              const guide = getGuide(i18n.language);
+              return (
+                <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] w-full overflow-hidden">
+                  <div className="bg-black/80 backdrop-blur-3xl rounded-[30px] md:rounded-[38px] p-6 md:p-8 flex flex-col gap-5">
+                    <div className="text-center">
+                      <p className="text-neon-blue font-mono text-[10px] uppercase tracking-[0.25em] font-black mb-1">PHOTO GUIDE</p>
+                      <h3 className="text-white font-black text-lg md:text-xl leading-snug">{guide.title}</h3>
+                      <p className="text-slate-400 text-xs md:text-sm mt-1">{guide.sub}</p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="bg-neon-green/5 border border-neon-green/25 rounded-2xl p-3 md:p-4">
+                        <div className="flex items-center gap-1.5 mb-2">
+                          <CheckCircle2 className="w-4 h-4 text-neon-green shrink-0" />
+                          <span className="text-neon-green font-mono text-[10px] uppercase font-black tracking-wider">GOOD</span>
+                        </div>
+                        <ul className="space-y-1.5">
+                          {guide.good.map((item, i) => (
+                            <li key={i} className="flex items-start gap-2 text-xs text-slate-300">
+                              <span className="text-sm leading-none mt-0.5">{item.icon}</span>
+                              <span>{item.text}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="bg-neon-pink/5 border border-neon-pink/25 rounded-2xl p-3 md:p-4">
+                        <div className="flex items-center gap-1.5 mb-2">
+                          <XCircle className="w-4 h-4 text-neon-pink shrink-0" />
+                          <span className="text-neon-pink font-mono text-[10px] uppercase font-black tracking-wider">AVOID</span>
+                        </div>
+                        <ul className="space-y-1.5">
+                          {guide.bad.map((item, i) => (
+                            <li key={i} className="flex items-start gap-2 text-xs text-slate-300">
+                              <span className="text-sm leading-none mt-0.5">{item.icon}</span>
+                              <span>{item.text}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => fileInputRef.current?.click()}
+                      className="w-full relative flex items-center justify-center gap-3 text-white font-black uppercase italic py-4 px-8 rounded-2xl overflow-hidden active:scale-95 transition-transform"
+                      style={{
+                        background: 'linear-gradient(90deg, #00ffff, #9d00ff, #ff00ff, #9d00ff, #00ffff)',
+                        backgroundSize: '300% 100%',
+                        animation: 'neon-gradient 4s linear infinite',
+                        boxShadow: '0 0 24px rgba(0,255,255,0.35), 0 0 48px rgba(157,0,255,0.15)',
+                      }}
+                    >
+                      <Upload className="w-5 h-5 shrink-0" />
+                      <span>{guide.btn}</span>
+                    </button>
+                    <input
+                      ref={fileInputRef}
+                      type="file"
+                      accept="image/*"
+                      onChange={handleImageUpload}
+                      className="hidden"
+                    />
+                  </div>
+                </div>
+              );
+            })()
           ) : (
-            <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] flex items-center justify-center min-h-[340px] md:min-h-[440px] w-full group relative cursor-pointer active:scale-95 transition-transform duration-200 overflow-hidden">
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleImageUpload}
-                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-30"
-              />
+            <div
+              className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] flex items-center justify-center min-h-[340px] md:min-h-[440px] w-full group relative cursor-pointer active:scale-95 transition-transform duration-200 overflow-hidden"
+              onClick={() => setShowGuide(true)}
+            >
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
                 <div className="relative group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
                   <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue via-neon-purple to-neon-pink blur-3xl opacity-30 group-hover:opacity-70 transition-opacity"></div>

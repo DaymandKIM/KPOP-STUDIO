@@ -88,58 +88,47 @@ const SafeImage: React.FC<{ src: string; alt: string; className?: string; accent
   );
 };
 
-const SocialLinks: React.FC<{ socials?: Socials; accentColor?: string }> = ({ socials, accentColor = '#00ffff' }) => {
+const SocialLinks: React.FC<{ socials?: Socials; accentColor?: string }> = ({ socials }) => {
   if (!socials) return null;
 
+  const link = (href: string, title: string, bg: string, shadow: string, icon: React.ReactNode) => (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={title}
+      className="p-2 rounded-xl border transition-all active:scale-95 hover:scale-110"
+      style={{ background: bg, boxShadow: shadow }}
+    >
+      {icon}
+    </a>
+  );
+
   return (
-    <div className="flex gap-3 mt-4">
-      {socials.instagram && (
-        <a 
-          href={socials.instagram} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="p-2 bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 transition-all hover:scale-110 group/social" 
-          title="Instagram"
-          style={{ '--hover-border': accentColor } as React.CSSProperties}
-        >
-          <Instagram className="w-4 h-4 text-white group-hover/social:text-[var(--hover-border)] transition-colors" />
-        </a>
+    <div className="flex gap-3 mt-4 flex-wrap">
+      {socials.instagram && link(
+        socials.instagram, 'Instagram',
+        'linear-gradient(135deg, rgba(225,48,108,0.25), rgba(247,119,55,0.2))',
+        '0 0 10px rgba(225,48,108,0.4)',
+        <Instagram className="w-4 h-4 text-[#E1306C]" />
       )}
-      {socials.twitter && (
-        <a 
-          href={socials.twitter} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="p-2 bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 transition-all hover:scale-110 group/social" 
-          title="X (Twitter)"
-          style={{ '--hover-border': accentColor } as React.CSSProperties}
-        >
-          <Twitter className="w-4 h-4 text-white group-hover/social:text-[var(--hover-border)] transition-colors" />
-        </a>
+      {socials.twitter && link(
+        socials.twitter, 'X (Twitter)',
+        'rgba(255,255,255,0.07)',
+        '0 0 10px rgba(255,255,255,0.15)',
+        <Twitter className="w-4 h-4 text-white" />
       )}
-      {socials.youtube && (
-        <a 
-          href={socials.youtube} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="p-2 bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 transition-all hover:scale-110 group/social" 
-          title="YouTube"
-          style={{ '--hover-border': accentColor } as React.CSSProperties}
-        >
-          <Youtube className="w-4 h-4 text-white group-hover/social:text-[var(--hover-border)] transition-colors" />
-        </a>
+      {socials.youtube && link(
+        socials.youtube, 'YouTube',
+        'rgba(255,0,0,0.15)',
+        '0 0 10px rgba(255,0,0,0.35)',
+        <Youtube className="w-4 h-4 text-red-400" />
       )}
-      {socials.tiktok && (
-        <a 
-          href={socials.tiktok} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="p-2 bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 transition-all hover:scale-110 group/social" 
-          title="TikTok"
-          style={{ '--hover-border': accentColor } as React.CSSProperties}
-        >
-          <Music2 className="w-4 h-4 text-white group-hover/social:text-[var(--hover-border)] transition-colors" />
-        </a>
+      {socials.tiktok && link(
+        socials.tiktok, 'TikTok',
+        'linear-gradient(135deg, rgba(0,242,234,0.15), rgba(255,0,80,0.15))',
+        '0 0 10px rgba(0,242,234,0.3)',
+        <Music2 className="w-4 h-4 text-neon-blue" />
       )}
     </div>
   );
@@ -225,17 +214,17 @@ const IdolEncyclopedia: React.FC = () => {
             {t('back')}
           </button>
           
-          <div className="flex-1 flex flex-col md:flex-row gap-8 items-center md:items-start">
-            <div className="w-64 h-64 md:w-96 md:h-96 rounded-[40px] md:rounded-[56px] overflow-hidden border-4 border-white/10 neon-shadow-purple flex-shrink-0">
-              <SafeImage 
-                src={selectedGroup.imageUrl} 
-                alt={getLangText(selectedGroup.name, i18n.language)} 
-                className="w-full h-full object-cover" 
+          <div className="flex-1 flex flex-col lg:flex-row gap-8 items-center lg:items-start">
+            <div className="w-full max-w-[280px] md:max-w-xs lg:w-80 lg:h-80 aspect-square rounded-[40px] overflow-hidden border-4 border-white/10 neon-shadow-purple flex-shrink-0 mx-auto lg:mx-0">
+              <SafeImage
+                src={selectedGroup.imageUrl}
+                alt={getLangText(selectedGroup.name, i18n.language)}
+                className="w-full h-full object-cover object-top"
                 accentColor={selectedGroup.accentColor}
               />
             </div>
-            <div className="flex-1 text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-4 flex-wrap">
+            <div className="flex-1 text-center lg:text-left w-full min-w-0">
+              <div className="flex items-center justify-center lg:justify-start gap-3 mb-4 flex-wrap">
                 <span className="px-3 py-1.5 bg-gradient-to-r from-neon-blue/20 to-neon-blue/5 border border-neon-blue/30 text-neon-blue rounded-full text-[10px] font-mono uppercase tracking-widest flex items-center gap-1.5 font-bold shadow-[0_0_10px_rgba(0,255,255,0.1)]">
                   <span className="text-white/60 font-normal">{t('company')}</span> {selectedGroup.company}
                 </span>
@@ -255,8 +244,8 @@ const IdolEncyclopedia: React.FC = () => {
                 </a>
                 )}
               </div>
-              <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4 pr-4 leading-none">{getLangText(selectedGroup.name, i18n.language)}</h2>
-              <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">{getLangText(selectedGroup.description, i18n.language)}</p>
+              <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4 leading-none break-words">{getLangText(selectedGroup.name, i18n.language)}</h2>
+              <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl">{getLangText(selectedGroup.description, i18n.language)}</p>
               
               <SocialLinks socials={selectedGroup.socials} accentColor={selectedGroup.accentColor} />
 
@@ -317,7 +306,7 @@ const IdolEncyclopedia: React.FC = () => {
                 >
                   <div className="flex gap-6 items-start relative z-10">
                     <div className="w-28 h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden flex-shrink-0 border-2 border-white/10 group-hover:neon-shadow-blue transition-all">
-                      <SafeImage src={member.imageUrl} alt={getLangText(member.name, i18n.language)} className="w-full h-full object-cover object-center" accentColor={selectedGroup.accentColor} />
+                      <SafeImage src={member.imageUrl} alt={getLangText(member.name, i18n.language)} className="w-full h-full object-cover object-top" accentColor={selectedGroup.accentColor} />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
