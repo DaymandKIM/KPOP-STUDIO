@@ -33,13 +33,28 @@ export default function SharePanel({
   lang = 'en',
 }: SharePanelProps) {
   const [copied, setCopied] = useState(false);
-  const handleDownload = () => {
+  const handleDownload = async () => {
     if (!blob) return;
+    // iOS/Android: Web Share API로 파일 공유 (카메라 롤에 저장 가능)
+    const file = new File([blob], filename, { type: 'image/png' });
+    if (navigator.canShare?.({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file] });
+        return;
+      } catch {
+        // 사용자 취소 — no-op
+        return;
+      }
+    }
+    // 데스크탑: 앵커 다운로드
+    const objectUrl = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
+    a.href = objectUrl;
     a.download = filename;
+    document.body.appendChild(a);
     a.click();
-    URL.revokeObjectURL(a.href);
+    document.body.removeChild(a);
+    URL.revokeObjectURL(objectUrl);
   };
 
   const handleWebShare = async () => {

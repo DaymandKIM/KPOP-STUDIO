@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* hover: 실제 마우스 호버 가능 기기에서만 동작하도록 제한 (모바일 탭 후 고착 방지) */
+@custom-variant hover {
+  @media (hover: hover) {
+    &:hover {
+      @slot;
+    }
+  }
+}
+
 @theme {
   --color-neon-pink: #ff00ff;
   --color-neon-blue: #00ffff;
