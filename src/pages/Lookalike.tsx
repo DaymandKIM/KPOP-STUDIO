@@ -226,93 +226,37 @@ export default function Lookalike() {
                <h3 className="text-neon-pink font-black text-xl mb-2">{t('error_model')}</h3>
                <p className="text-slate-400 text-sm font-mono">{modelError}</p>
             </div>
-          ) : showGuide ? (
-            (() => {
-              const guide = getGuide(i18n.language);
-              return (
-                <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] w-full overflow-hidden">
-                  <div className="bg-black/80 backdrop-blur-3xl rounded-[30px] md:rounded-[38px] p-6 md:p-8 flex flex-col gap-5">
-                    <div className="text-center">
-                      <p className="text-neon-blue font-mono text-[10px] uppercase tracking-[0.25em] font-black mb-1">PHOTO GUIDE</p>
-                      <h3 className="text-white font-black text-lg md:text-xl leading-snug">{guide.title}</h3>
-                      <p className="text-slate-400 text-xs md:text-sm mt-1">{guide.sub}</p>
-                    </div>
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="bg-neon-green/5 border border-neon-green/25 rounded-2xl p-3 md:p-4">
-                        <div className="flex items-center gap-1.5 mb-2">
-                          <CheckCircle2 className="w-4 h-4 text-neon-green shrink-0" />
-                          <span className="text-neon-green font-mono text-[10px] uppercase font-black tracking-wider">GOOD</span>
-                        </div>
-                        <ul className="space-y-1.5">
-                          {guide.good.map((item, i) => (
-                            <li key={i} className="flex items-start gap-2 text-xs text-slate-300">
-                              <span className="text-sm leading-none mt-0.5">{item.icon}</span>
-                              <span>{item.text}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="bg-neon-pink/5 border border-neon-pink/25 rounded-2xl p-3 md:p-4">
-                        <div className="flex items-center gap-1.5 mb-2">
-                          <XCircle className="w-4 h-4 text-neon-pink shrink-0" />
-                          <span className="text-neon-pink font-mono text-[10px] uppercase font-black tracking-wider">AVOID</span>
-                        </div>
-                        <ul className="space-y-1.5">
-                          {guide.bad.map((item, i) => (
-                            <li key={i} className="flex items-start gap-2 text-xs text-slate-300">
-                              <span className="text-sm leading-none mt-0.5">{item.icon}</span>
-                              <span>{item.text}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                    <button
-                      onClick={() => fileInputRef.current?.click()}
-                      className="w-full relative flex items-center justify-center gap-3 text-white font-black uppercase italic py-4 px-8 rounded-2xl overflow-hidden active:scale-95 transition-transform"
-                      style={{
-                        background: 'linear-gradient(90deg, #00ffff, #9d00ff, #ff00ff, #9d00ff, #00ffff)',
-                        backgroundSize: '300% 100%',
-                        animation: 'neon-gradient 4s linear infinite',
-                        boxShadow: '0 0 24px rgba(0,255,255,0.35), 0 0 48px rgba(157,0,255,0.15)',
-                      }}
-                    >
-                      <Upload className="w-5 h-5 shrink-0" />
-                      <span>{guide.btn}</span>
-                    </button>
-                    <input
-                      ref={fileInputRef}
-                      type="file"
-                      accept="image/*"
-                      onChange={handleImageUpload}
-                      className="hidden"
-                    />
-                  </div>
-                </div>
-              );
-            })()
           ) : (
-            <div
-              className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] flex items-center justify-center min-h-[340px] md:min-h-[440px] w-full group relative cursor-pointer active:scale-95 transition-transform duration-200 overflow-hidden"
-              onClick={() => setShowGuide(true)}
-            >
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
-                <div className="relative group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue via-neon-purple to-neon-pink blur-3xl opacity-30 group-hover:opacity-70 transition-opacity"></div>
-                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-3xl bg-black border border-white/20 flex items-center justify-center relative z-10 neon-shadow-blue">
-                    <Upload className="w-10 h-10 md:w-14 md:h-14 text-neon-blue group-hover:text-white transition-colors" />
+            <>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                onChange={handleImageUpload}
+                className="hidden"
+              />
+              <div
+                className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] flex items-center justify-center min-h-[340px] md:min-h-[440px] w-full group relative cursor-pointer active:scale-95 transition-transform duration-200 overflow-hidden"
+                onClick={() => setShowGuide(true)}
+              >
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
+                  <div className="relative group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue via-neon-purple to-neon-pink blur-3xl opacity-30 group-hover:opacity-70 transition-opacity"></div>
+                    <div className="w-24 h-24 md:w-32 md:h-32 rounded-3xl bg-black border border-white/20 flex items-center justify-center relative z-10 neon-shadow-blue">
+                      <Upload className="w-10 h-10 md:w-14 md:h-14 text-neon-blue group-hover:text-white transition-colors" />
+                    </div>
                   </div>
                 </div>
+                <div className="absolute bottom-8 md:bottom-12 left-0 w-full text-center z-10 pointer-events-none px-6">
+                  <h3 className="font-black text-3xl md:text-5xl text-white mb-2 md:mb-3 uppercase italic tracking-tighter leading-none">{t('upload_btn')}</h3>
+                  <p className="text-[10px] md:text-xs font-mono text-slate-500 uppercase tracking-[0.2em] font-bold">{t('tap_to_upload')}</p>
+                </div>
+                <div className="hud-corner hud-corner-tl !border-neon-blue !w-8 !h-8 md:!w-12 md:!h-12"></div>
+                <div className="hud-corner hud-corner-tr !border-neon-purple !w-8 !h-8 md:!w-12 md:!h-12"></div>
+                <div className="hud-corner hud-corner-bl !border-neon-pink !w-8 !h-8 md:!w-12 md:!h-12"></div>
+                <div className="hud-corner hud-corner-br !border-neon-green !w-8 !h-8 md:!w-12 md:!h-12"></div>
               </div>
-              <div className="absolute bottom-8 md:bottom-12 left-0 w-full text-center z-10 pointer-events-none px-6">
-                <h3 className="font-black text-3xl md:text-5xl text-white mb-2 md:mb-3 uppercase italic tracking-tighter leading-none">{t('upload_btn')}</h3>
-                <p className="text-[10px] md:text-xs font-mono text-slate-500 uppercase tracking-[0.2em] font-bold">{t('tap_to_upload')}</p>
-              </div>
-              <div className="hud-corner hud-corner-tl !border-neon-blue !w-8 !h-8 md:!w-12 md:!h-12"></div>
-              <div className="hud-corner hud-corner-tr !border-neon-purple !w-8 !h-8 md:!w-12 md:!h-12"></div>
-              <div className="hud-corner hud-corner-bl !border-neon-pink !w-8 !h-8 md:!w-12 md:!h-12"></div>
-              <div className="hud-corner hud-corner-br !border-neon-green !w-8 !h-8 md:!w-12 md:!h-12"></div>
-            </div>
+            </>
           )}
         </div>
       )}
@@ -533,5 +477,75 @@ export default function Lookalike() {
         </div>
       )}
     </div>
+
+      {/* Photo guide modal overlay */}
+      {showGuide && appState === 'idle' && (() => {
+        const guide = getGuide(i18n.language);
+        return (
+          <div
+            className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4 sm:p-6"
+            onClick={() => setShowGuide(false)}
+          >
+            <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+            <div
+              className="relative z-10 w-full max-w-lg animate-fade-in-up"
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="neon-border-animated rounded-[32px] overflow-hidden">
+                <div className="bg-[#080810]/95 backdrop-blur-3xl rounded-[30px] p-6 md:p-8 flex flex-col gap-5">
+                  <div className="text-center">
+                    <p className="text-neon-blue font-mono text-[10px] uppercase tracking-[0.25em] font-black mb-1">PHOTO GUIDE</p>
+                    <h3 className="text-white font-black text-lg md:text-xl leading-snug">{guide.title}</h3>
+                    <p className="text-slate-400 text-xs md:text-sm mt-1">{guide.sub}</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-neon-green/5 border border-neon-green/25 rounded-2xl p-3 md:p-4">
+                      <div className="flex items-center gap-1.5 mb-2">
+                        <CheckCircle2 className="w-4 h-4 text-neon-green shrink-0" />
+                        <span className="text-neon-green font-mono text-[10px] uppercase font-black tracking-wider">GOOD</span>
+                      </div>
+                      <ul className="space-y-1.5">
+                        {guide.good.map((item, i) => (
+                          <li key={i} className="flex items-start gap-2 text-xs text-slate-300">
+                            <span className="text-sm leading-none mt-0.5">{item.icon}</span>
+                            <span>{item.text}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="bg-neon-pink/5 border border-neon-pink/25 rounded-2xl p-3 md:p-4">
+                      <div className="flex items-center gap-1.5 mb-2">
+                        <XCircle className="w-4 h-4 text-neon-pink shrink-0" />
+                        <span className="text-neon-pink font-mono text-[10px] uppercase font-black tracking-wider">AVOID</span>
+                      </div>
+                      <ul className="space-y-1.5">
+                        {guide.bad.map((item, i) => (
+                          <li key={i} className="flex items-start gap-2 text-xs text-slate-300">
+                            <span className="text-sm leading-none mt-0.5">{item.icon}</span>
+                            <span>{item.text}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => { setShowGuide(false); fileInputRef.current?.click(); }}
+                    className="w-full relative flex items-center justify-center gap-3 text-white font-black uppercase italic py-4 px-8 rounded-2xl overflow-hidden active:scale-95 transition-transform"
+                    style={{
+                      background: 'linear-gradient(90deg, #00ffff, #9d00ff, #ff00ff, #9d00ff, #00ffff)',
+                      backgroundSize: '300% 100%',
+                      animation: 'neon-gradient 4s linear infinite',
+                      boxShadow: '0 0 24px rgba(0,255,255,0.35), 0 0 48px rgba(157,0,255,0.15)',
+                    }}
+                  >
+                    <Upload className="w-5 h-5 shrink-0" />
+                    <span>{guide.btn}</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
   );
 }
