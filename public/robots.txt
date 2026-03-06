@@ -1,45 +1,35 @@
-# Best SEO & GEO practices for KPOP STUDIO
-# Optimized for Humans and AI Agents (Google, Naver, Bing, OpenAI, Anthropic, Perplexity)
-
+# Optimized for Humans, AI Search (Perplexity, GPT, Claude) and Traditional Bots
 User-agent: *
 Allow: /
 Disallow: /dist/
 Disallow: /node_modules/
+Disallow: /private/
 
-# AI Bot Access (Explicitly allowed for better AI Search recommendations)
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Claude-bot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-# Standard Search Engine Bots
-User-agent: Yeti
-Allow: /
-
+# Explicitly allow major crawlers
 User-agent: Googlebot
 Allow: /
 
 User-agent: bingbot
 Allow: /
 
+User-agent: Yeti
+Allow: /
+
+User-agent: NaverBot
+Allow: /
+
 User-agent: Daumoa
 Allow: /
 
-# Host information
-Host: https://kpopstudio.ai
+# AI Agents
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Claude-bot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
 
-# Sitemap location
+# Sitemap
 Sitemap: https://kpopstudio.ai/sitemap.xml
