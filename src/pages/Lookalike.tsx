@@ -688,7 +688,7 @@ export default function Lookalike() {
       {/* 멤버 상세보기 모달 */}
       {showMemberModal && matchedIdol && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 z-[60] flex items-center justify-center p-4"
           onClick={() => setShowMemberModal(false)}
         >
           <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
@@ -734,10 +734,10 @@ export default function Lookalike() {
                   {/* 프로필 그리드 */}
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                     {[
-                      { label: i18n.language === 'ko' ? '생일' : 'Birthday', value: matchedIdol.member.birth, borderCls: 'border-neon-pink/30', textCls: 'text-neon-pink' },
+                      { label: t('birthday'), value: matchedIdol.member.birth, borderCls: 'border-neon-pink/30', textCls: 'text-neon-pink' },
                       { label: 'MBTI', value: matchedIdol.member.mbti, borderCls: 'border-neon-purple/30', textCls: 'text-neon-purple' },
-                      { label: i18n.language === 'ko' ? '혈액형' : 'Blood', value: matchedIdol.member.bloodType + (i18n.language === 'ko' ? '형' : ''), borderCls: 'border-neon-blue/30', textCls: 'text-neon-blue' },
-                      { label: i18n.language === 'ko' ? '키' : 'Height', value: matchedIdol.member.height, borderCls: 'border-neon-orange/30', textCls: 'text-neon-orange' },
+                      { label: t('blood_type'), value: matchedIdol.member.bloodType + (i18n.language === 'ko' ? '형' : ''), borderCls: 'border-neon-blue/30', textCls: 'text-neon-blue' },
+                      { label: t('height'), value: matchedIdol.member.height, borderCls: 'border-neon-orange/30', textCls: 'text-neon-orange' },
                     ].map(({ label, value, borderCls, textCls }) => (
                       <div key={label} className={`bg-white/5 border ${borderCls} rounded-2xl p-3 flex flex-col items-center`}>
                         <p className="text-slate-500 font-mono text-[9px] uppercase font-black mb-1 tracking-widest">{label}</p>
@@ -750,7 +750,7 @@ export default function Lookalike() {
                   <div className="bg-white/5 border border-neon-purple/25 rounded-2xl px-4 py-3 flex items-center justify-center gap-2">
                     <span className="text-lg">✨</span>
                     <p className="text-slate-300 font-mono text-xs font-black uppercase tracking-widest">
-                      {i18n.language === 'ko' ? '별자리' : 'Zodiac'} &nbsp;·&nbsp;
+                      {t('zodiac')} &nbsp;·&nbsp;
                       <span className="text-white">{getLangText(matchedIdol.member.zodiac, i18n.language)}</span>
                     </p>
                   </div>
@@ -761,7 +761,7 @@ export default function Lookalike() {
                       <div className="flex items-center gap-2">
                         <Sparkles className="w-4 h-4 text-neon-purple shrink-0" />
                         <p className="text-neon-purple font-mono text-[10px] uppercase font-black tracking-widest">
-                          BEHIND STORY
+                          {t('behind_story')}
                         </p>
                       </div>
                       <ol className="space-y-2">
@@ -781,7 +781,7 @@ export default function Lookalike() {
                     className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-white/5 hover:bg-neon-green/10 border border-white/10 hover:border-neon-green/50 rounded-2xl text-xs font-black uppercase tracking-[0.2em] transition-all group/btn"
                   >
                     <Database className="w-4 h-4 text-neon-green" />
-                    <span>{i18n.language === 'ko' ? '백과사전에서 보기' : 'View in Encyclopedia'}</span>
+                    <span>{t('view_in_encyclopedia')}</span>
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </button>
                 </div>
