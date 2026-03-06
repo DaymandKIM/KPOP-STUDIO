@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Upload, RefreshCw, Star, ArrowRight, User, AlertCircle, Crosshair, Database, Share2 } from 'lucide-react';
+import { Upload, RefreshCw, Star, ArrowRight, User, AlertCircle, Crosshair, Database, Share2, Sparkles } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useFaceRecognition } from '../hooks/useFaceRecognition';
 import type { Prediction } from '../hooks/useFaceRecognition';
@@ -36,6 +36,15 @@ export default function Lookalike() {
   };
 
   const matchedIdol = getMatchedIdol();
+
+  // 랜덤 TMI — 결과가 바뀔 때마다 새로 선택
+  const randomTmi = useMemo(() => {
+    if (!matchedIdol) return null;
+    const tmiArr = matchedIdol.group.tmi[i18n.language] ?? matchedIdol.group.tmi.en;
+    if (!tmiArr || tmiArr.length === 0) return null;
+    return tmiArr[Math.floor(Math.random() * tmiArr.length)];
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [matchedIdol?.member.id]);
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -259,8 +268,9 @@ export default function Lookalike() {
                   )}
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl mx-auto">
-                  <div className="bg-white/5 border border-neon-blue/30 rounded-[28px] p-5 md:p-7 flex flex-col items-center backdrop-blur-md min-w-[160px]">
+                {/* 유사도 + 포지션 */}
+                <div className="grid grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl mx-auto">
+                  <div className="bg-white/5 border border-neon-blue/30 rounded-[28px] p-5 md:p-7 flex flex-col items-center backdrop-blur-md">
                     <p className="text-slate-500 font-mono text-[10px] md:text-xs uppercase font-black mb-2 md:mb-3 tracking-widest">{t('similarity')}</p>
                     <div className="flex items-baseline gap-1 md:gap-2">
                       <span className="text-4xl md:text-6xl font-black text-neon-blue italic">
@@ -271,14 +281,61 @@ export default function Lookalike() {
                   </div>
 
                   {matchedIdol && (
-                    <div className="bg-white/5 border border-neon-purple/30 rounded-[28px] p-5 md:p-7 flex flex-col items-center backdrop-blur-md min-w-[160px]">
+                    <div className="bg-white/5 border border-neon-purple/30 rounded-[28px] p-5 md:p-7 flex flex-col items-center backdrop-blur-md">
                       <p className="text-slate-500 font-mono text-[10px] md:text-xs uppercase font-black mb-2 md:mb-3 tracking-widest">{t('class')}</p>
                       <p className="text-xl md:text-3xl font-black text-white italic whitespace-normal text-center break-keep line-clamp-2">
-                        {matchedIdol.member.role[currentLang]}
+                        {matchedIdol.member.role[currentLang] ?? matchedIdol.member.role.en}
                       </p>
                     </div>
                   )}
                 </div>
+
+                {/* 인적사항 상세 */}
+                {matchedIdol && (
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full max-w-2xl mx-auto">
+                    {[
+                      { label: currentLang === 'ko' ? '생년월일' : 'Birthday', value: matchedIdol.member.birth, color: 'neon-pink' },
+                      { label: currentLang === 'ko' ? '혈액형' : 'Blood Type', value: matchedIdol.member.bloodType + '형', color: 'neon-blue' },
+                      { label: 'MBTI', value: matchedIdol.member.mbti, color: 'neon-purple' },
+                      { label: currentLang === 'ko' ? '키' : 'Height', value: matchedIdol.member.height, color: 'neon-green' },
+                    ].map(({ label, value, color }) => (
+                      <div key={label} className={`bg-white/5 border border-${color}/20 rounded-2xl p-3 md:p-4 flex flex-col items-center backdrop-blur-md`}>
+                        <p className="text-slate-500 font-mono text-[9px] md:text-[10px] uppercase font-black mb-1 tracking-widest">{label}</p>
+                        <p className={`text-sm md:text-base font-black text-${color} text-center leading-tight`}>{value}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* 별자리 */}
+                {matchedIdol && (
+                  <div className="w-full max-w-2xl mx-auto">
+                    <div className="bg-white/5 border border-white/10 rounded-2xl px-5 py-3 flex items-center justify-center gap-3">
+                      <span className="text-xl">✨</span>
+                      <p className="text-slate-300 font-mono text-xs font-black uppercase tracking-widest">
+                        {currentLang === 'ko' ? '별자리' : 'Zodiac'} &nbsp;·&nbsp;
+                        <span className="text-white">{matchedIdol.member.zodiac[currentLang] ?? matchedIdol.member.zodiac.en}</span>
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* TMI 비하인드 스토리 */}
+                {randomTmi && (
+                  <div className="w-full max-w-2xl mx-auto">
+                    <div className="bg-neon-purple/5 border border-neon-purple/20 rounded-2xl p-5 md:p-6 text-left">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Sparkles className="w-4 h-4 text-neon-purple shrink-0" />
+                        <p className="text-neon-purple font-mono text-[10px] uppercase font-black tracking-widest">
+                          {currentLang === 'ko' ? '비하인드 스토리' : 'Behind Story'}
+                        </p>
+                      </div>
+                      <p className="text-slate-300 text-sm md:text-base leading-relaxed font-medium">
+                        {randomTmi}
+                      </p>
+                    </div>
+                  </div>
+                )}
 
                 {/* Action buttons */}
                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">

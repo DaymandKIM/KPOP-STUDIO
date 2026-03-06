@@ -638,5 +638,79 @@ export const KPOP_GROUPS: KpopGroup[] = [
       { id: "lisa", name: { ko: "리사", en: "Lisa", ja: "リサ", zh: "Lisa (拉莉莎)", es: "Lisa", id: "Lisa", fr: "Lisa", hi: "लिसा", pt: "Lisa", ar: "ليسا", th: "ลิซ่า", vi: "Lisa", ru: "Лиса" }, role: { ko: "메인댄서/리드래퍼", en: "Main Dancer/Lead Rapper", ja: "メインダンサー/リードラッパー", zh: "主舞/领 Rapper", es: "Bailarina Principal/Rapera Principal", id: "Penari Utama/Rapper Utama", fr: "Danseuse Principale/Rappeuse Principale", hi: "मुख्य डांसर/लीड रैपर", pt: "Dançarina Principal/Rapper Líder", ar: "راقصة رئيسية/مغنية راب قائدة", th: "เมนแดนซ์/ลีดแร็ปเปอร์", vi: "Nhảy chính/Rapper dẫn", ru: "Главный танцор/Ведущий рэпер" }, birth: "1997.03.27", mbti: "ESFJ", zodiac: { ko: "양자리", en: "Aries", ja: "牡羊座", zh: "白羊座", es: "Aries", id: "Aries", fr: "Bélier", hi: "मेष", pt: "Áries", ar: "الحمل", th: "เมษ", vi: "Bạch Dương", ru: "Овен" }, height: "167cm", bloodType: "O", description: { ko: "압도적인 춤 실력과 비율을 가진 팀의 메인 댄서.", en: "The main dancer with overwhelming dance skills.", ja: "圧倒的なダンスの実力とスタイルを持つグループのメインダンサー。", zh: "拥有惊人舞蹈实力和极佳身材比例的主舞担当。", es: "La bailarina principal con habilidades de baile abrumadoras.", id: "Penari utama dengan keterampilan menari yang luar biasa.", fr: "La danseuse principale avec des compétences de danse écrasantes.", hi: "अत्यधिक नृत्य कौशल वाली मुख्य डांसर。", pt: "A dançarina principal com habilidades de dança esmagadoras.", ar: "الراقصة الرئيسية بمهارات رقص ساحقة.", th: "นักเต้นหลักที่มีทักษะการเต้นที่ยอดเยี่ยม", vi: "Vũ công chính với kỹ năng nhảy tuyệt đỉnh.", ru: "Главный танцор с потрясающими танцевальными навыками." }, imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK+Lisa+Official+Portrait", socials: { instagram: "https://www.instagram.com/lalalalisa_m/" } },
       { id: "rose", name: { ko: "로제", en: "Rosé", ja: "ロゼ", zh: "Rosé (朴彩英)", es: "Rosé", id: "Rosé", fr: "Rosé", hi: "रोज़े", pt: "Rosé", ar: "روزي", th: "โรเซ่", vi: "Rosé", ru: "Розэ" }, role: { ko: "메인보컬/리드댄서", en: "Main Vocalist/Lead Dancer", ja: "メインボーカル/リードダンサー", zh: "主唱/领舞", es: "Vocalista Principal/Bailarina Principal", id: "Vokalis Utama/Penari Utama", fr: "Chanteuse Principale/Danseuse Principale", hi: "मुख्य वोकलिस्ट/लीड डांसर", pt: "Vocalista Principal/Dançarina Líder", ar: "مغنية رئيسية/راقصة قائدة", th: "เมนโวคอล/ลีดแดนซ์", vi: "Hát chính/Nhảy dẫn", ru: "Главный вокалист/Ведущий танцор" }, birth: "1997.02.11", mbti: "ENFP", zodiac: { ko: "물병자리", en: "Aquarius", ja: "水瓶座", zh: "水瓶座", es: "Acuario", id: "Aquarius", fr: "Verseau", hi: "कुंभ", pt: "Aquário", ar: "الدلو", th: "กุมภ์", vi: "Bảo Bình", ru: "Водолей" }, height: "168cm", bloodType: "B", description: { ko: "유니크한 음색을 가진 메인 보컬.", en: "The main vocalist with a unique tone.", ja: "ユニークな音色を持つメインボーカル。", zh: "拥有独特音色的主唱成员。", es: "La vocalista principal con un tono único.", id: "Vokalis utama dengan nada yang unik.", fr: "La chanteuse principale avec un ton unique.", hi: "एक अद्वितीय स्वर वाली मुख्य वोकलिस्ट。", pt: "A vocalista principal com um tom único.", ar: "المغنية الرئيسية ذات نبرة الصوت الفريدة.", th: "นักร้องหลักที่มีน้ำเสียงที่เป็นเอกลักษณ์", vi: "Giọng hát chính với âm sắc độc đáo.", ru: "Главный вокалист с уникальным тоном." }, imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK+Rose+Official+Portrait", socials: { instagram: "https://www.instagram.com/roses_are_rosie/" } }
     ]
+  },
+  {
+    id: "lesserafim",
+    name: { ko: "르세라핌", en: "LE SSERAFIM", ja: "ル・セラフィム", zh: "LE SSERAFIM", es: "LE SSERAFIM", id: "LE SSERAFIM", fr: "LE SSERAFIM", hi: "ले सेराफिम", pt: "LE SSERAFIM", ar: "لو سيرافيم", th: "เล เซราฟิม", vi: "LE SSERAFIM", ru: "LE SSERAFIM" },
+    officialSite: "https://lesserafim.com/",
+    company: "HYBE / Source Music",
+    debut: "2022.05.02",
+    fandom: { ko: "피어나 (FEARNOT)", en: "FEARNOT", ja: "フィオナ (FEARNOT)", zh: "FEARNOT", es: "FEARNOT", id: "FEARNOT", fr: "FEARNOT", hi: "FEARNOT", pt: "FEARNOT", ar: "فيرنوت (FEARNOT)", th: "FEARNOT", vi: "FEARNOT", ru: "FEARNOT" },
+    accentColor: "#c8a97e",
+    imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+group+official+photo+2024&w=600&h=600&rs=1",
+    socials: { instagram: "https://www.instagram.com/le_sserafim/", twitter: "https://twitter.com/le_sserafim", youtube: "https://www.youtube.com/@LESSERAFIM_official" },
+    wiki: { ko: "르세라핌(LE SSERAFIM)은 HYBE 산하 쏘스뮤직 소속 5인조 걸그룹입니다. 그룹명은 'I AM FEARLESS'의 애너그램으로, 두려움 없이 나아가겠다는 의지를 담고 있습니다.", en: "LE SSERAFIM is a 5-member girl group under HYBE's Source Music. The name is an anagram of 'I AM FEARLESS'." },
+    description: { ko: "두려움 없이 무대를 장악하는 4세대 대표 걸그룹. 파워풀한 퍼포먼스와 강렬한 비주얼로 전 세계를 사로잡았습니다.", en: "The defining 4th-gen girl group that dominates stages fearlessly with powerful performances and intense visuals." },
+    tmi: {
+      ko: [
+        "그룹명 LE SSERAFIM은 'I AM FEARLESS'의 애너그램으로, 멤버들이 직접 그 의미를 고안했습니다.",
+        "카즈하는 데뷔 전 일본에서 프로 발레리나로 활동했으며, 이 배경이 우아한 무대 퍼포먼스에 큰 영향을 줬습니다.",
+        "사쿠라는 IZ*ONE 출신으로, 두 번의 걸그룹 데뷔라는 독특한 이력을 갖고 있습니다.",
+        "멤버들은 연습생 시절 서로 '언제쯤 데뷔할 수 있을까'라는 불안을 나눴다고 합니다."
+      ],
+      en: [
+        "The name LE SSERAFIM is an anagram of 'I AM FEARLESS', a meaning the members personally devised.",
+        "Kazuha was a professional ballerina in Japan before her K-pop debut, which greatly influences her elegant stage performances.",
+        "Sakura is a former IZ*ONE member, making her K-pop journey uniquely spanning two successful girl groups.",
+        "During trainee days, members shared their anxieties about when they would finally debut."
+      ]
+    },
+    news: [
+      { title: { ko: "르세라핌, 글로벌 투어 성료", en: "LE SSERAFIM Completes Global Tour" }, date: "2025.12.01", summary: { ko: "르세라핌이 아시아·북미·유럽을 아우르는 대규모 월드투어를 성황리에 마쳤습니다.", en: "LE SSERAFIM successfully completed a large-scale world tour spanning Asia, North America, and Europe." }, url: "#" }
+    ],
+    members: [
+      { id: "chaewon", name: { ko: "김채원", en: "Kim Chaewon", ja: "キム・チェウォン", zh: "金彩源" }, role: { ko: "리더/메인보컬", en: "Leader/Main Vocalist" }, birth: "2000.08.05", mbti: "INFJ", zodiac: { ko: "사자자리", en: "Leo" }, height: "163cm", bloodType: "A", description: { ko: "IZ*ONE 출신의 리더로, 섬세한 감성과 강한 리더십을 겸비했습니다.", en: "Former IZ*ONE member and leader with delicate emotion and strong leadership." }, imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Kim+Chaewon+%EA%B9%80%EC%B1%84%EC%9B%90+%EC%A7%81%EC%BA%A0+%EA%B3%A0%ED%99%94%EC%A7%88&w=600&h=600&rs=1", socials: { instagram: "https://www.instagram.com/chaewo.n/" } },
+      { id: "sakura", name: { ko: "사쿠라", en: "Sakura", ja: "宮脇咲良", zh: "宫胁咲良" }, role: { ko: "보컬", en: "Vocalist" }, birth: "1998.03.19", mbti: "ISTP", zodiac: { ko: "물고기자리", en: "Pisces" }, height: "164cm", bloodType: "AB", description: { ko: "HKT48·IZ*ONE를 거쳐 르세라핌까지, 독보적인 K-팝·J-팝 커리어를 보유한 멤버입니다.", en: "From HKT48 to IZ*ONE to LE SSERAFIM, she has an unrivaled cross-genre idol career." }, imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Sakura+%EC%82%AC%EC%BF%A0%EB%9D%BC+%EC%A7%81%EC%BA%A0+%EA%B3%A0%ED%99%94%EC%A7%88&w=600&h=600&rs=1", socials: { instagram: "https://www.instagram.com/39saku_chan/" } },
+      { id: "yunjin", name: { ko: "허윤진", en: "Huh Yunjin", ja: "ホ・ユンジン", zh: "许允祯" }, role: { ko: "리드보컬/리드댄서", en: "Lead Vocalist/Lead Dancer" }, birth: "2001.10.08", mbti: "ENFJ", zodiac: { ko: "천칭자리", en: "Libra" }, height: "167cm", bloodType: "A", description: { ko: "미국에서 성장한 글로벌 감성을 가진 솔로 싱어송라이터이자 멤버입니다.", en: "A solo singer-songwriter raised in the US with a global sensibility." }, imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Huh+Yunjin+%ED%97%88%EC%9C%A4%EC%A7%84+%EC%A7%81%EC%BA%A0+%EA%B3%A0%ED%99%94%EC%A7%88&w=600&h=600&rs=1", socials: { instagram: "https://www.instagram.com/yunjin_huh/" } },
+      { id: "kazuha", name: { ko: "카즈하", en: "Kazuha", ja: "中村羽咲", zh: "中村羽咲" }, role: { ko: "댄서/보컬", en: "Dancer/Vocalist" }, birth: "2003.08.09", mbti: "ISFP", zodiac: { ko: "사자자리", en: "Leo" }, height: "170cm", bloodType: "O", description: { ko: "일본 발레리나 출신으로, 우아한 발레 무브먼트를 케이팝 퍼포먼스에 접목한 독보적인 댄서입니다.", en: "A former Japanese professional ballerina who uniquely fuses elegant ballet movement into K-pop performances." }, imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Kazuha+%EC%B9%B4%EC%A6%88%ED%95%98+%EC%A7%81%EC%BA%A0+%EA%B3%A0%ED%99%94%EC%A7%88&w=600&h=600&rs=1", socials: { instagram: "https://www.instagram.com/kazuha.official_/" } },
+      { id: "eunchae", name: { ko: "홍은채", en: "Hong Eunchae", ja: "ホン・ウンチェ", zh: "洪恩彩" }, role: { ko: "막내/보컬", en: "Maknae/Vocalist" }, birth: "2004.11.10", mbti: "ISFP", zodiac: { ko: "전갈자리", en: "Scorpio" }, height: "163cm", bloodType: "O", description: { ko: "막내지만 무대에서는 언니들 못지않은 존재감을 뿜어내는 팀의 에너지 충전기입니다.", en: "The youngest but packs just as much stage presence as her unnies — the team's energy charger." }, imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Hong+Eunchae+%ED%99%8D%EC%9D%80%EC%B1%84+%EC%A7%81%EC%BA%A0+%EA%B3%A0%ED%99%94%EC%A7%88&w=600&h=600&rs=1", socials: { instagram: "https://www.instagram.com/eunchae.official_/" } }
+    ]
+  },
+  {
+    id: "gidle",
+    name: { ko: "(여자)아이들", en: "(G)I-DLE", ja: "(G)I-DLE", zh: "(G)I-DLE", es: "(G)I-DLE", id: "(G)I-DLE", fr: "(G)I-DLE", hi: "(G)I-DLE", pt: "(G)I-DLE", ar: "(G)I-DLE", th: "(G)I-DLE", vi: "(G)I-DLE", ru: "(G)I-DLE" },
+    officialSite: "https://cube-gidle.com/",
+    company: "Cube Entertainment",
+    debut: "2018.05.02",
+    fandom: { ko: "네버랜드 (NEVERLAND)", en: "NEVERLAND", ja: "ネバーランド", zh: "NEVERLAND", es: "NEVERLAND", id: "NEVERLAND", fr: "NEVERLAND", hi: "नेवरलैंड", pt: "NEVERLAND", ar: "نيفرلاند", th: "NEVERLAND", vi: "NEVERLAND", ru: "NEVERLAND" },
+    accentColor: "#9c59d1",
+    imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+group+official+photo+2024&w=600&h=600&rs=1",
+    socials: { instagram: "https://www.instagram.com/official_g_i_dle/", twitter: "https://twitter.com/G_I_DLE", youtube: "https://www.youtube.com/@GIDLE" },
+    wiki: { ko: "(여자)아이들은 큐브 엔터테인먼트 소속의 5인조 걸그룹입니다. 멤버 소연이 직접 작곡·작사에 참여하는 자체 제작 걸그룹으로, 강렬한 콘셉트와 높은 음악적 완성도를 자랑합니다.", en: "(G)I-DLE is a 5-member self-producing girl group under Cube Entertainment, where member Soyeon leads production." },
+    description: { ko: "소연이 직접 곡을 쓰고 이끄는 자체 제작 걸그룹. 강렬하고 실험적인 음악으로 독보적인 위치를 굳혔습니다.", en: "A self-producing girl group led by Soyeon's songwriting with intense, experimental music." },
+    tmi: {
+      ko: [
+        "소연은 YG 연습생 출신으로, JYP·YG·큐브를 거치는 특이한 이력을 갖고 있습니다.",
+        "민니는 태국 유명 가수의 딸로, 태국에서 이미 연예인 집안 출신으로 알려져 있습니다.",
+        "슈화는 대만 출신으로, 처음에는 한국어를 전혀 몰랐지만 연습생 기간에 빠르게 습득했습니다.",
+        "멤버들은 컴백할 때마다 소연이 새로운 장르에 도전하는 것을 보며 '이번엔 또 뭐지?'라며 기대한다고 합니다."
+      ],
+      en: [
+        "Soyeon is a former YG trainee who uniquely passed through JYP, YG, and Cube before debuting.",
+        "Minnie is the daughter of a famous Thai singer, making her from an entertainment family in Thailand.",
+        "Shuhua is from Taiwan and initially knew no Korean at all, but picked it up rapidly during her trainee period.",
+        "Members say they always look forward to comebacks thinking 'what genre will Soyeon try this time?'"
+      ]
+    },
+    news: [
+      { title: { ko: "(여자)아이들, 5주년 단독 콘서트 성료", en: "(G)I-DLE Completes 5th Anniversary Concert" }, date: "2023.05.02", summary: { ko: "(여자)아이들이 데뷔 5주년을 기념한 단독 콘서트를 성황리에 마쳤습니다.", en: "(G)I-DLE successfully held their 5th anniversary solo concert." }, url: "#" }
+    ],
+    members: [
+      { id: "miyeon", name: { ko: "미연", en: "Miyeon", ja: "ミヨン", zh: "米延" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "1997.01.31", mbti: "INFP", zodiac: { ko: "물병자리", en: "Aquarius" }, height: "163cm", bloodType: "O", description: { ko: "순수하고 맑은 보이스로 팀의 감성을 책임지는 메인 보컬입니다.", en: "The main vocalist responsible for the team's emotional touch with a pure, clear voice." }, imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Miyeon+%EB%AF%B8%EC%97%B0+%EC%A7%81%EC%BA%A0+%EA%B3%A0%ED%99%94%EC%A7%88&w=600&h=600&rs=1", socials: { instagram: "https://www.instagram.com/miyeon__dlwlrma/" } },
+      { id: "minnie", name: { ko: "민니", en: "Minnie", ja: "ミンニ", zh: "敏妮" }, role: { ko: "리드보컬", en: "Lead Vocalist" }, birth: "1997.10.23", mbti: "ENFP", zodiac: { ko: "천칭자리", en: "Libra" }, height: "163cm", bloodType: "B", description: { ko: "태국 출신의 리드 보컬로, 뛰어난 어학 실력과 감성적인 무대를 선보입니다.", en: "Thai lead vocalist with outstanding linguistic ability and emotional stage presence." }, imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Minnie+%EB%AF%BC%EB%8B%88+%EC%A7%81%EC%BA%A0+%EA%B3%A0%ED%99%94%EC%A7%88&w=600&h=600&rs=1", socials: { instagram: "https://www.instagram.com/minniecandy1023/" } },
+      { id: "soyeon", name: { ko: "소연", en: "Soyeon", ja: "ソヨン", zh: "素妍" }, role: { ko: "리더/메인래퍼", en: "Leader/Main Rapper" }, birth: "1998.08.26", mbti: "ENTJ", zodiac: { ko: "처녀자리", en: "Virgo" }, height: "158cm", bloodType: "O", description: { ko: "직접 작사·작곡·프로듀싱까지 맡는 천재 래퍼이자 팀의 핵심 크리에이터입니다.", en: "A genius rapper who personally handles lyrics, composition, and producing — the team's creative core." }, imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Soyeon+%EC%86%8C%EC%97%B0+%EC%A7%81%EC%BA%A0+%EA%B3%A0%ED%99%94%EC%A7%88&w=600&h=600&rs=1", socials: { instagram: "https://www.instagram.com/soyeon_dlwlrma/" } },
+      { id: "yuqi", name: { ko: "우기", en: "Yuqi", ja: "ウギ", zh: "宋雨琦" }, role: { ko: "리드보컬/댄서", en: "Lead Vocalist/Dancer" }, birth: "1999.09.23", mbti: "ESTP", zodiac: { ko: "천칭자리", en: "Libra" }, height: "163cm", bloodType: "O", description: { ko: "중국 출신으로 솔직 담백한 성격과 폭발적인 에너지로 멤버들의 시선을 끄는 팀의 분위기 메이커입니다.", en: "Chinese member whose frank personality and explosive energy makes her the team's mood maker." }, imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Yuqi+%EC%9A%B0%EA%B8%B0+%EC%A7%81%EC%BA%A0+%EA%B3%A0%ED%99%94%EC%A7%88&w=600&h=600&rs=1", socials: { instagram: "https://www.instagram.com/yuqi_dlwlrma/" } },
+      { id: "shuhua", name: { ko: "슈화", en: "Shuhua", ja: "シュファ", zh: "叶舒华" }, role: { ko: "보컬", en: "Vocalist" }, birth: "2000.01.06", mbti: "INFP", zodiac: { ko: "염소자리", en: "Capricorn" }, height: "165cm", bloodType: "AB", description: { ko: "대만 출신의 막내로, 솔직한 반응과 독특한 매력으로 팬들의 큰 사랑을 받고 있습니다.", en: "Taiwanese maknae loved by fans for her honest reactions and unique charm." }, imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Shuhua+%EC%8A%88%ED%99%94+%EC%A7%81%EC%BA%A0+%EA%B3%A0%ED%99%94%EC%A7%88&w=600&h=600&rs=1", socials: { instagram: "https://www.instagram.com/shuhua_dlwlrma/" } }
+    ]
   }
 ];
