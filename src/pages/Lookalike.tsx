@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Upload, RefreshCw, Star, ArrowRight, User, AlertCircle, Crosshair, Database } from 'lucide-react';
+import { Upload, RefreshCw, Star, ArrowRight, User, AlertCircle, Crosshair, Database, Share2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useFaceRecognition } from '../hooks/useFaceRecognition';
 import type { Prediction } from '../hooks/useFaceRecognition';
 import { KPOP_GROUPS } from '../data/idols';
+import { generateShareCard } from '../hooks/useShareCard';
+import SharePanel from '../components/SharePanel';
 
 type AppState = 'idle' | 'analyzing' | 'result';
 
@@ -16,6 +18,9 @@ export default function Lookalike() {
   const [appState, setAppState] = useState<AppState>('idle');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [predictions, setPredictions] = useState<Prediction[]>([]);
+  const [shareBlob, setShareBlob] = useState<Blob | null>(null);
+  const [isGeneratingCard, setIsGeneratingCard] = useState(false);
+  const [showSharePanel, setShowSharePanel] = useState(false);
   const imageRef = useRef<HTMLImageElement>(null);
 
   const currentLang = (i18n.language === 'ko' ? 'ko' : 'en') as 'ko' | 'en';
@@ -23,7 +28,6 @@ export default function Lookalike() {
   const getMatchedIdol = () => {
     if (predictions.length === 0) return null;
     const topLabel = predictions[0].className;
-
     for (const group of KPOP_GROUPS) {
       const member = group.members.find(m => m.name.ko === topLabel || m.name.en === topLabel);
       if (member) return { group, member };
@@ -59,7 +63,6 @@ export default function Lookalike() {
           setSelectedImage(null);
         }
       }, 2500);
-
       return () => clearTimeout(timer);
     }
   }, [appState, selectedImage, model, predict]);
@@ -68,7 +71,38 @@ export default function Lookalike() {
     setAppState('idle');
     setSelectedImage(null);
     setPredictions([]);
+    setShareBlob(null);
+    setShowSharePanel(false);
+    setIsGeneratingCard(false);
   };
+
+  const handleShare = async () => {
+    if (!matchedIdol || !selectedImage) return;
+    setShowSharePanel(true);
+    if (shareBlob) return;
+    setIsGeneratingCard(true);
+    try {
+      const blob = await generateShareCard({
+        userImageSrc: selectedImage,
+        idolImageSrc: matchedIdol.member.imageUrl,
+        idolName: matchedIdol.member.name[currentLang],
+        groupName: matchedIdol.group.name[currentLang],
+        similarity: Math.round(predictions[0].probability * 100),
+        lang: i18n.language,
+      });
+      setShareBlob(blob);
+    } catch (e) {
+      console.error('Share card generation failed', e);
+    } finally {
+      setIsGeneratingCard(false);
+    }
+  };
+
+  const shareText = matchedIdol
+    ? currentLang === 'ko'
+      ? `나는 AI로 ${Math.round(predictions[0]?.probability * 100)}% ${matchedIdol.member.name.ko}(${matchedIdol.group.name.ko})을(를) 닮았대! 너도 해봐 ✨`
+      : `I'm ${Math.round(predictions[0]?.probability * 100)}% ${matchedIdol.member.name.en} (${matchedIdol.group.name.en}) according to AI! Try yours ✨`
+    : '';
 
   return (
     <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-8 w-full max-w-7xl mx-auto z-10">
@@ -102,13 +136,12 @@ export default function Lookalike() {
             </div>
           ) : (
             <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[40px] flex items-center justify-center min-h-[340px] md:min-h-[440px] w-full group relative cursor-pointer active:scale-95 transition-transform duration-200 overflow-hidden">
-              <input 
-                type="file" 
+              <input
+                type="file"
                 accept="image/*"
                 onChange={handleImageUpload}
                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-30"
               />
-              
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
                 <div className="relative group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
                   <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue via-neon-purple to-neon-pink blur-3xl opacity-30 group-hover:opacity-70 transition-opacity"></div>
@@ -117,12 +150,10 @@ export default function Lookalike() {
                   </div>
                 </div>
               </div>
-              
               <div className="absolute bottom-8 md:bottom-12 left-0 w-full text-center z-10 pointer-events-none px-6">
                 <h3 className="font-black text-3xl md:text-5xl text-white mb-2 md:mb-3 uppercase italic tracking-tighter leading-none">{t('upload_btn')}</h3>
                 <p className="text-[10px] md:text-xs font-mono text-slate-500 uppercase tracking-[0.2em] font-bold">{i18n.language === 'ko' ? '사진을 선택해 주세요' : 'Tap to Upload Image'}</p>
               </div>
-
               <div className="hud-corner hud-corner-tl !border-neon-blue !w-8 !h-8 md:!w-12 md:!h-12"></div>
               <div className="hud-corner hud-corner-tr !border-neon-purple !w-8 !h-8 md:!w-12 md:!h-12"></div>
               <div className="hud-corner hud-corner-bl !border-neon-pink !w-8 !h-8 md:!w-12 md:!h-12"></div>
@@ -135,19 +166,20 @@ export default function Lookalike() {
       {appState === 'analyzing' && selectedImage && (
         <div className="flex flex-col items-center justify-center w-full max-w-lg animate-fade-in-up px-2 mt-8 md:mt-16">
           <div className="relative rounded-[28px] md:rounded-[32px] overflow-hidden mb-8 md:mb-12 border-4 border-neon-purple/50 neon-shadow-purple w-full aspect-square md:aspect-auto">
-            <img 
+            <img
               ref={imageRef}
-              src={selectedImage} 
-              alt="Target" 
+              src={selectedImage}
+              alt="Target"
               className="w-full h-full md:h-auto md:max-h-[500px] object-cover opacity-70 grayscale contrast-125"
               crossOrigin="anonymous"
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <div className="absolute inset-0 overflow-hidden">
               <div className="w-full h-2 bg-gradient-to-r from-neon-pink via-neon-blue to-neon-green shadow-[0_0_25px_rgba(255,255,255,0.8)] absolute top-0 animate-[scan_2s_linear_infinite]"></div>
+            </div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
               <Crosshair className="w-16 h-16 md:w-24 md:h-24 text-white opacity-40 animate-pulse rotate-45" />
             </div>
           </div>
-          
           <div className="text-center">
             <p className="text-xl md:text-2xl font-black italic tracking-[0.2em] text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink animate-pulse uppercase">
               {t('analyzing')}
@@ -168,22 +200,18 @@ export default function Lookalike() {
 
           <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[48px] p-1 w-full mb-10 md:mb-16 overflow-hidden max-w-4xl mx-auto">
             <div className="bg-black/80 backdrop-blur-3xl rounded-[30px] md:rounded-[46px] p-6 md:p-10 lg:p-12 flex flex-col items-center relative z-10">
-              
-              {/* Image Comparison Section */}
+
+              {/* Image Comparison */}
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 w-full mb-10 md:mb-14">
                 <div className="relative group/img">
                   <div className="w-48 h-48 xs:w-56 xs:h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-white/10 neon-shadow-purple relative flex-shrink-0 transition-transform duration-500 group-hover/img:scale-[1.02]">
-                    <img 
-                      src={selectedImage} 
-                      alt="User" 
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={selectedImage} alt="User" className="w-full h-full object-cover" />
                   </div>
                   <div className="absolute -bottom-3 -right-3 w-12 h-12 md:w-14 md:h-14 bg-white rounded-2xl flex items-center justify-center shadow-2xl border-2 border-neon-purple z-20 rotate-6">
                     <User className="w-6 h-6 text-neon-purple" />
                   </div>
                 </div>
-                
+
                 <div className="flex items-center justify-center">
                   <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center neon-shadow-blue animate-pulse shrink-0">
                     <ArrowRight className="w-6 h-6 md:w-8 md:h-8 text-neon-blue rotate-90 md:rotate-0" />
@@ -193,11 +221,7 @@ export default function Lookalike() {
                 {matchedIdol && (
                   <div className="relative group/img">
                     <div className="w-48 h-48 xs:w-56 xs:h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-neon-blue neon-shadow-blue relative flex-shrink-0 transition-transform duration-500 group-hover/img:scale-[1.02]">
-                      <img 
-                        src={matchedIdol.member.imageUrl} 
-                        alt={matchedIdol.member.name[currentLang]} 
-                        className="w-full h-full object-cover"
-                      />
+                      <img src={matchedIdol.member.imageUrl} alt={matchedIdol.member.name[currentLang]} className="w-full h-full object-cover" />
                     </div>
                     <div className="absolute -bottom-3 -right-3 w-12 h-12 md:w-14 md:h-14 bg-white rounded-2xl flex items-center justify-center shadow-2xl border-2 border-neon-blue z-20 -rotate-6">
                       <Star className="w-6 h-6 text-neon-blue fill-neon-blue" />
@@ -206,7 +230,7 @@ export default function Lookalike() {
                 )}
               </div>
 
-              {/* Result Info Section */}
+              {/* Result Info */}
               <div className="w-full text-center space-y-8 md:space-y-10">
                 <div className="space-y-2 md:space-y-4">
                   <div className="inline-block px-4 py-1.5 bg-neon-pink/10 border border-neon-pink/30 rounded-full text-neon-pink font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] font-black">Best Match Identified</div>
@@ -223,7 +247,7 @@ export default function Lookalike() {
                     </div>
                   )}
                 </div>
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl mx-auto">
                   <div className="bg-white/5 border border-neon-blue/30 rounded-[28px] p-5 md:p-7 flex flex-col items-center backdrop-blur-md min-w-[160px]">
                     <p className="text-slate-500 font-mono text-[10px] md:text-xs uppercase font-black mb-2 md:mb-3 tracking-widest">{t('similarity')}</p>
@@ -245,9 +269,10 @@ export default function Lookalike() {
                   )}
                 </div>
 
-                {matchedIdol && (
-                  <div className="pt-4 flex justify-center">
-                    <button 
+                {/* Action buttons */}
+                <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+                  {matchedIdol && (
+                    <button
                       onClick={() => navigate('/encyclopedia', { state: { selectedMemberId: matchedIdol.member.id, selectedGroupId: matchedIdol.group.id } })}
                       className="flex items-center gap-4 px-8 py-4 bg-white/5 hover:bg-neon-green/10 border border-white/10 hover:border-neon-green/50 rounded-2xl text-xs md:text-sm font-black uppercase tracking-[0.2em] transition-all group/btn"
                     >
@@ -255,13 +280,41 @@ export default function Lookalike() {
                       <span>{currentLang === 'ko' ? '도감에서 더보기' : 'View in Encyclopedia'}</span>
                       <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
                     </button>
+                  )}
+
+                  {matchedIdol && (
+                    <button
+                      onClick={handleShare}
+                      className="flex items-center gap-3 px-8 py-4 bg-neon-pink/10 hover:bg-neon-pink/20 border border-neon-pink/30 hover:border-neon-pink/60 rounded-2xl text-xs md:text-sm font-black uppercase tracking-[0.2em] transition-all text-neon-pink"
+                    >
+                      <Share2 className="w-5 h-5" />
+                      <span>{currentLang === 'ko' ? '결과 공유하기' : 'Share Result'}</span>
+                    </button>
+                  )}
+                </div>
+
+                {/* Share Panel */}
+                {showSharePanel && matchedIdol && (
+                  <div className="mt-4 pt-6 border-t border-white/10 w-full">
+                    <p className="text-slate-500 font-mono text-[10px] uppercase tracking-widest font-black mb-4">
+                      {currentLang === 'ko' ? '공유 방법 선택' : 'Share via'}
+                    </p>
+                    <SharePanel
+                      title={currentLang === 'ko' ? 'KPOP STUDIO AI 닮은꼴 결과' : 'My KPOP STUDIO AI Result'}
+                      text={shareText}
+                      url="https://kpopstudio.ai/lookalike"
+                      blob={shareBlob}
+                      filename={`kpopstudio-${matchedIdol.member.name.en.replace(/\s+/g, '-').toLowerCase()}.png`}
+                      isGenerating={isGeneratingCard}
+                      lang={i18n.language}
+                    />
                   </div>
                 )}
               </div>
             </div>
           </div>
 
-          <button 
+          <button
             onClick={resetApp}
             className="w-full md:w-auto group relative flex items-center justify-center gap-4 bg-white text-black font-black uppercase italic py-5 md:py-6 px-12 md:px-20 rounded-2xl overflow-hidden transition-all active:scale-95 neon-shadow-pink"
           >

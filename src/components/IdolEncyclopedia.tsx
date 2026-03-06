@@ -3,8 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { 
   Search, User, Star, ChevronLeft, ExternalLink, MessageCircle, 
   Newspaper, Sparkles, Calendar, Fingerprint, Heart, 
-  Instagram, Twitter, Youtube, Music2, Droplets, Moon 
+  Instagram, Twitter, Youtube, Music2, Droplets, Moon, Share2
 } from 'lucide-react';
+import SharePanel from './SharePanel';
 import { KPOP_GROUPS } from '../data/idols';
 import type { KpopGroup, Socials } from '../data/idols';
 import { useLocation } from 'react-router-dom';
@@ -159,6 +160,7 @@ const IdolEncyclopedia: React.FC = () => {
   };
 
   // Initialize state directly from location if available
+  const [showGroupShare, setShowGroupShare] = useState(false);
   const [selectedGroup, setSelectedGroup] = useState<KpopGroup | null>(() => {
     if (location.state && location.state.selectedGroupId) {
       const group = KPOP_GROUPS.find(g => g.id === location.state.selectedGroupId);
@@ -174,6 +176,7 @@ const IdolEncyclopedia: React.FC = () => {
 
   const handleBackToList = () => {
     setSelectedGroup(null);
+    setShowGroupShare(false);
     window.scrollTo(0, 0);
   };
 
@@ -249,6 +252,29 @@ const IdolEncyclopedia: React.FC = () => {
               <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">{getLangText(selectedGroup.description)}</p>
               
               <SocialLinks socials={selectedGroup.socials} accentColor={selectedGroup.accentColor} />
+
+              <div className="mt-4 flex items-center gap-3 flex-wrap">
+                <button
+                  onClick={() => setShowGroupShare(v => !v)}
+                  className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-neon-pink/10 border border-white/15 hover:border-neon-pink/40 rounded-xl text-xs font-mono font-black uppercase tracking-widest text-slate-400 hover:text-neon-pink transition-all"
+                >
+                  <Share2 className="w-4 h-4" />
+                  {i18n.language === 'ko' ? '공유하기' : 'Share'}
+                </button>
+              </div>
+
+              {showGroupShare && (
+                <div className="mt-3">
+                  <SharePanel
+                    title={`${getLangText(selectedGroup.name)} | KPOP STUDIO`}
+                    text={i18n.language === 'ko'
+                      ? `KPOP STUDIO에서 ${getLangText(selectedGroup.name)} 프로필 확인하기 ✨`
+                      : `Check out ${getLangText(selectedGroup.name)} profiles on KPOP STUDIO ✨`}
+                    url="https://kpopstudio.ai/encyclopedia"
+                    lang={i18n.language}
+                  />
+                </div>
+              )}
 
               <div className="mt-6 p-4 bg-neon-blue/5 border-l-4 border-neon-blue rounded-r-xl inline-block">
                 <p className="text-xs font-mono text-neon-blue uppercase tracking-widest font-bold mb-1">Editorial Note</p>
