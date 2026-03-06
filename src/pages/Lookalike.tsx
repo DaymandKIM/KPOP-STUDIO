@@ -373,7 +373,7 @@ export default function Lookalike() {
         <div className="text-center mb-8 md:mb-12 animate-fade-in-up w-full px-2 mt-8 md:mt-12">
           <h1 className="text-5xl xs:text-6xl md:text-8xl font-black mb-4 md:mb-6 tracking-tighter italic text-white leading-[1.1] md:leading-none uppercase">
             {t('app_title')} <br className="xs:hidden" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue drop-shadow-[0_0_20px_rgba(157,0,255,0.6)]">{wrapKpop(t('app_subtitle'))}</span>
+            <span className="inline-block pb-1 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">{wrapKpop(t('app_subtitle'))}</span>
           </h1>
           <p className="text-slate-400 font-mono text-xs md:text-sm max-w-lg mx-auto uppercase tracking-wide px-4">
             {t('upload_instruction')}
@@ -466,7 +466,8 @@ export default function Lookalike() {
         <div className="w-full max-w-5xl flex flex-col items-center animate-fade-in-up px-2 pb-10 mt-8 md:mt-12">
           <div className="flex items-center gap-4 md:gap-6 mb-8 md:mb-12">
             <div className="h-px w-10 xs:w-20 md:w-32 bg-gradient-to-r from-transparent via-neon-pink to-neon-purple"></div>
-            <h2 className="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-black italic uppercase tracking-tighter flex items-center gap-3 md:gap-4 glitch-text text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">
+            <h2 className="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-black italic uppercase tracking-tighter flex items-center gap-3 md:gap-4 text-white"
+              style={{ textShadow: '0 0 24px rgba(157,0,255,0.5), 0 0 48px rgba(157,0,255,0.2)' }}>
               {t('match_found')}
             </h2>
             <div className="h-px w-10 xs:w-20 md:w-32 bg-gradient-to-l from-transparent via-neon-blue to-neon-purple"></div>
@@ -478,7 +479,7 @@ export default function Lookalike() {
               {/* Image Comparison */}
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 w-full mb-10 md:mb-14">
                 <div className="relative group/img">
-                  <div className="w-48 h-48 xs:w-56 xs:h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-white/10 neon-shadow-purple relative flex-shrink-0 transition-transform duration-500 group-hover/img:scale-[1.02]">
+                  <div className="w-48 h-48 xs:w-56 xs:h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-neon-purple/40 neon-shadow-purple relative flex-shrink-0 transition-transform duration-500 group-hover/img:scale-[1.02]">
                     <img src={selectedImage} alt="User" className="w-full h-full object-cover" />
                   </div>
                   <div className="absolute -bottom-3 -right-3 w-12 h-12 md:w-14 md:h-14 bg-white rounded-2xl flex items-center justify-center shadow-2xl border-2 border-neon-purple z-20 rotate-6">
@@ -510,23 +511,23 @@ export default function Lookalike() {
                   <div className="inline-block px-4 py-1.5 rounded-full font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] font-black text-white"
                     style={{ background: 'linear-gradient(90deg, rgba(255,0,255,0.2), rgba(157,0,255,0.2))', border: '1px solid rgba(255,0,255,0.5)', boxShadow: '0 0 12px rgba(255,0,255,0.3)' }}
                   >{t('best_match_badge')}</div>
-                  <h3 className="text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tight w-full text-center break-words">
+                  <h3 className="text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tight w-full text-center break-words" style={{ textShadow: '0 0 20px rgba(157,0,255,0.4), 0 0 40px rgba(157,0,255,0.15)' }}>
                     {matchedIdol ? getLangText(matchedIdol.member.name, i18n.language) : predictions[0].className}
                   </h3>
                   {matchedIdol && (
                     <div className="flex items-center justify-center gap-2 w-full px-2">
-                      <div className="h-px flex-1 max-w-[40px] bg-neon-blue/50 shrink-0"></div>
-                      <p className="text-neon-blue font-black text-xl md:text-3xl lg:text-4xl uppercase tracking-wider italic text-center break-words min-w-0">
+                      <div className="h-px flex-1 max-w-[40px] bg-neon-purple/60 shrink-0"></div>
+                      <p className="text-neon-blue font-black text-xl md:text-3xl lg:text-4xl uppercase tracking-wider italic text-center break-words min-w-0" style={{ textShadow: '0 0 16px rgba(0,212,255,0.6), 0 0 32px rgba(0,212,255,0.2)' }}>
                         {getLangText(matchedIdol.group.name, i18n.language)}
                       </p>
-                      <div className="h-px flex-1 max-w-[40px] bg-neon-blue/50 shrink-0"></div>
+                      <div className="h-px flex-1 max-w-[40px] bg-neon-purple/60 shrink-0"></div>
                     </div>
                   )}
                 </div>
 
                 {/* 유사도 + 포지션 */}
                 <div className="grid grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl mx-auto">
-                  <div className="bg-white/5 border border-neon-blue/30 rounded-[28px] p-5 md:p-7 flex flex-col items-center backdrop-blur-md">
+                  <div className="bg-white/5 border border-neon-blue/30 rounded-[28px] p-5 md:p-7 flex flex-col items-center backdrop-blur-md" style={{ boxShadow: '0 0 16px rgba(0,212,255,0.08) inset, 0 0 12px rgba(0,212,255,0.06)' }}>
                     <p className="text-slate-500 font-mono text-[10px] md:text-xs uppercase font-black mb-2 md:mb-3 tracking-widest">{t('similarity')}</p>
                     <div className="flex items-baseline gap-1 md:gap-2">
                       <span className="text-4xl md:text-6xl font-black text-neon-blue italic">
@@ -537,7 +538,7 @@ export default function Lookalike() {
                   </div>
 
                   {matchedIdol && (
-                    <div className="bg-white/5 border border-neon-purple/30 rounded-[28px] p-5 md:p-7 flex flex-col items-center backdrop-blur-md">
+                    <div className="bg-white/5 border border-neon-purple/30 rounded-[28px] p-5 md:p-7 flex flex-col items-center backdrop-blur-md" style={{ boxShadow: '0 0 16px rgba(157,0,255,0.08) inset, 0 0 12px rgba(157,0,255,0.06)' }}>
                       <p className="text-slate-500 font-mono text-[10px] md:text-xs uppercase font-black mb-2 md:mb-3 tracking-widest">{t('class')}</p>
                       <p className="text-sm md:text-base font-black text-white italic whitespace-normal text-center break-keep leading-snug">
                         {getLangText(matchedIdol.member.role, i18n.language)}
@@ -566,7 +567,7 @@ export default function Lookalike() {
                 {/* 별자리 */}
                 {matchedIdol && (
                   <div className="w-full max-w-2xl mx-auto">
-                    <div className="bg-white/5 border border-white/10 rounded-2xl px-5 py-3 flex items-center justify-center gap-3">
+                    <div className="bg-white/5 border border-neon-purple/25 rounded-2xl px-5 py-3 flex items-center justify-center gap-3">
                       <span className="text-xl">✨</span>
                       <p className="text-slate-300 font-mono text-xs font-black uppercase tracking-widest">
                         {t('zodiac')} &nbsp;·&nbsp;
