@@ -69,8 +69,18 @@ export function useFaceRecognition() {
     }
 
     try {
+      // 이미지가 완전히 로드될 때까지 대기
+      if (imageElement instanceof HTMLImageElement && !imageElement.complete) {
+        await new Promise<void>((resolve, reject) => {
+          imageElement.onload = () => resolve();
+          imageElement.onerror = () => reject(new Error('Image failed to load'));
+        });
+      }
+
       // 1. Detect the face and get the descriptor
-      const detection = await faceapi.detectSingleFace(imageElement)
+      // minConfidence 0.2로 낮춰 다양한 각도/조명의 얼굴도 감지
+      const detection = await faceapi
+        .detectSingleFace(imageElement, new faceapi.SsdMobilenetv1Options({ minConfidence: 0.2 }))
         .withFaceLandmarks()
         .withFaceDescriptor();
 

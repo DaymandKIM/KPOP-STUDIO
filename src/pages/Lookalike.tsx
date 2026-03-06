@@ -48,13 +48,23 @@ export default function Lookalike() {
 
   useEffect(() => {
     if (appState === 'analyzing' && selectedImage && imageRef.current && model) {
-      const timer = setTimeout(async () => {
+      const imgEl = imageRef.current;
+
+      const runPredict = async () => {
+        // 이미지가 아직 로드 중이면 onload 이후 실행
+        const waitLoaded = imgEl.complete
+          ? Promise.resolve()
+          : new Promise<void>(resolve => { imgEl.onload = () => resolve(); });
+
+        await waitLoaded;
+
+        // 최소 1.5초 UI 애니메이션 보장 후 분석
+        await new Promise(resolve => setTimeout(resolve, 1500));
+
         try {
-          if (imageRef.current) {
-            const results = await predict(imageRef.current);
-            setPredictions(results);
-            setAppState('result');
-          }
+          const results = await predict(imgEl);
+          setPredictions(results);
+          setAppState('result');
         } catch (error: unknown) {
           console.error("Analysis failed", error);
           const errorMessage = error instanceof Error ? error.message : "분석 중 오류가 발생했습니다. 다른 사진으로 시도해주세요.";
@@ -62,8 +72,9 @@ export default function Lookalike() {
           setAppState('idle');
           setSelectedImage(null);
         }
-      }, 2500);
-      return () => clearTimeout(timer);
+      };
+
+      runPredict();
     }
   }, [appState, selectedImage, model, predict]);
 
