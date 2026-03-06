@@ -41,7 +41,15 @@ const resources = {
       "feature_3_title": "Hidden TMIs & Facts",
       "feature_3_desc": "Go beyond the stage! Explore fun facts, MBTI types, and those precious TMI details about K-pop stars that only true fans know. It's the perfect place to learn more about your bias.",
       "home_ai_badge": "AI-POWERED LOOKALIKES",
-      "home_cta_btn": "Start Analysis"
+      "home_cta_btn": "Start Analysis",
+      "trust_title": "Why KPOP STUDIO?",
+      "trust_stat_1_label": "AI Accuracy",
+      "trust_stat_2_label": "Privacy Safe",
+      "trust_stat_3_label": "Live Archive",
+      "footer_about": "About Us",
+      "footer_contact": "Contact",
+      "footer_privacy": "Privacy Policy",
+      "footer_terms": "Terms of Service"
     }
   },
   ko: {
@@ -84,7 +92,15 @@ const resources = {
       "home_ai_badge": "AI 기반 닮은꼴 분석",
       "home_cta_btn": "나의 닮은꼴 찾기",
       "home_hero_title": "KPOP STUDIO",
-      "home_hero_subtitle": "나와 가장 닮은 K-POP 스타는?"
+      "home_hero_subtitle": "나와 가장 닮은 K-POP 스타는?",
+      "trust_title": "왜 KPOP STUDIO 인가요?",
+      "trust_stat_1_label": "정확한 AI 분석",
+      "trust_stat_2_label": "개인정보 보호",
+      "trust_stat_3_label": "실시간 데이터",
+      "footer_about": "서비스 소개",
+      "footer_contact": "문의하기",
+      "footer_privacy": "개인정보처리방침",
+      "footer_terms": "이용약관"
     }
   },
   ja: {

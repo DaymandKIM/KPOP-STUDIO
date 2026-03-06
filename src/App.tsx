@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Star, Database, Crosshair, Sparkles, Menu, X } from 'lucide-react';
+import { Star, Database, Crosshair, Globe, ChevronDown, Menu, X } from 'lucide-react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 
 import Home from './pages/Home';
@@ -12,15 +12,77 @@ import IdolEncyclopedia from './components/IdolEncyclopedia';
 
 import './App.css';
 
+const LANGUAGES = [
+  { code: 'ko', name: '한국어', flag: '🇰🇷' },
+  { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'ja', name: '日本語', flag: '🇯🇵' },
+  { code: 'zh', name: '中文', flag: '🇨🇳' },
+  { code: 'es', name: 'Español', flag: '🇪🇸' },
+  { code: 'id', name: 'Bahasa Indonesia', flag: '🇮🇩' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  { code: 'hi', name: 'हिन्दी', flag: '🇮🇳' },
+  { code: 'pt', name: 'Português', flag: '🇵🇹' },
+  { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+  { code: 'th', name: 'ไทย', flag: '🇹🇭' },
+  { code: 'vi', name: 'Tiếng Việt', flag: '🇻🇳' },
+  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+];
+
+function LanguageSelector() {
+  const { i18n } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const currentLang = LANGUAGES.find(l => l.code === i18n.language) || LANGUAGES[0];
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  return (
+    <div className="relative" ref={dropdownRef}>
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-neon-blue/50 transition-all text-xs font-mono font-bold text-white group"
+      >
+        <Globe className="w-4 h-4 text-neon-blue group-hover:rotate-12 transition-transform" />
+        <span className="hidden xs:inline uppercase">{currentLang.code}</span>
+        <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+
+      {isOpen && (
+        <div className="absolute top-full right-0 mt-2 w-48 bg-black/95 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl py-2 z-[100] animate-fade-in-up">
+          <div className="max-h-[300px] overflow-y-auto overflow-x-hidden">
+            {LANGUAGES.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => {
+                  i18n.changeLanguage(lang.code);
+                  setIsOpen(false);
+                }}
+                className={`w-full flex items-center gap-3 px-4 py-2.5 text-left hover:bg-white/10 transition-colors ${i18n.language === lang.code ? 'text-neon-blue font-black' : 'text-slate-300'}`}
+              >
+                <span className="text-base">{lang.flag}</span>
+                <span className="text-xs font-medium">{lang.name}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function AppLayout() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'ko' : 'en';
-    i18n.changeLanguage(newLang);
-  };
 
   const isIdentification = location.pathname === '/lookalike';
   const isEncyclopedia = location.pathname === '/encyclopedia';
@@ -69,13 +131,7 @@ function AppLayout() {
             </Link>
           </nav>
 
-          <button 
-            onClick={toggleLanguage}
-            className="p-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-neon-green/50 transition-all flex items-center gap-2 text-xs font-mono font-bold text-neon-green"
-          >
-            <Sparkles className="w-4 h-4" />
-            <span className="hidden xs:inline">{i18n.language.toUpperCase()}</span>
-          </button>
+          <LanguageSelector />
 
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -125,10 +181,10 @@ function AppLayout() {
       {/* Footer */}
       <footer className="p-8 md:p-12 flex flex-col items-center border-t border-white/5 bg-black/40 backdrop-blur-md z-10 mt-auto">
         <div className="flex flex-wrap justify-center gap-6 md:gap-12 mb-8">
-          <Link to="/about" className="text-slate-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">About Us</Link>
-          <Link to="/about" className="text-slate-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">Contact</Link>
-          <Link to="/privacy" className="text-slate-400 hover:text-neon-blue transition-colors text-xs font-mono uppercase tracking-widest">Privacy Policy</Link>
-          <Link to="/terms" className="text-slate-400 hover:text-neon-pink transition-colors text-xs font-mono uppercase tracking-widest">Terms of Service</Link>
+          <Link to="/about" className="text-slate-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">{t('footer_about')}</Link>
+          <Link to="/about" className="text-slate-400 hover:text-white transition-colors text-xs font-mono uppercase tracking-widest">{t('footer_contact')}</Link>
+          <Link to="/privacy" className="text-slate-400 hover:text-neon-blue transition-colors text-xs font-mono uppercase tracking-widest">{t('footer_privacy')}</Link>
+          <Link to="/terms" className="text-slate-400 hover:text-neon-pink transition-colors text-xs font-mono uppercase tracking-widest">{t('footer_terms')}</Link>
         </div>
         <div className="flex gap-4 md:gap-6">
           <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-neon-blue animate-pulse neon-shadow-blue"></div>

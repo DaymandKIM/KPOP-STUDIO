@@ -82,20 +82,20 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-neon-purple/20 blur-[80px]"></div>
           
           <h2 className="text-2xl md:text-3xl font-black text-white italic uppercase mb-6 tracking-tight">
-            {isKo ? '왜 KPOP STUDIO 인가요?' : 'Why KPOP STUDIO?'}
+            {t('trust_title')}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div className="space-y-2">
               <div className="text-neon-blue font-black text-3xl">99%</div>
-              <p className="text-slate-400 text-xs uppercase font-mono tracking-widest">{isKo ? '정확한 AI 분석' : 'AI Accuracy'}</p>
+              <p className="text-slate-400 text-xs uppercase font-mono tracking-widest">{t('trust_stat_1_label')}</p>
             </div>
             <div className="space-y-2">
               <div className="text-neon-purple font-black text-3xl">100%</div>
-              <p className="text-slate-400 text-xs uppercase font-mono tracking-widest">{isKo ? '개인정보 보호' : 'Privacy Safe'}</p>
+              <p className="text-slate-400 text-xs uppercase font-mono tracking-widest">{t('trust_stat_2_label')}</p>
             </div>
             <div className="space-y-2">
               <div className="text-neon-pink font-black text-3xl">24/7</div>
-              <p className="text-slate-400 text-xs uppercase font-mono tracking-widest">{isKo ? '실시간 데이터' : 'Live Archive'}</p>
+              <p className="text-slate-400 text-xs uppercase font-mono tracking-widest">{t('trust_stat_3_label')}</p>
             </div>
           </div>
         </div>
