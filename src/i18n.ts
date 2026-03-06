@@ -51,6 +51,20 @@ const resources = {
       "footer_contact": "Contact",
       "footer_privacy": "Privacy Policy",
       "footer_terms": "Terms of Service"
+    ,
+      "encyclopedia_desc": "Everything about your favorite groups! From their fresh debut days to the latest viral news and those precious member TMIs, we've gathered it all in one place. Explore the ultimate K-pop archive and level up your fandom experience right now.",
+      "back": "Back",
+      "company": "Company:",
+      "debut_date": "Debut:",
+      "fandom": "Fandom:",
+      "official_site": "Official Site",
+      "editorial_note": "This profile is verified by KPOP STUDIO editors based on the latest official activity data.",
+      "member_profile": "Members",
+      "solo_profile": "Solo Profile",
+      "overview": "Overview",
+      "latest_news": "Latest News",
+      "star_behind": "Star Behind (TMI)",
+      "view_details": "View Details"
     }
   },
   ko: {
@@ -103,6 +117,20 @@ const resources = {
       "footer_contact": "문의하기",
       "footer_privacy": "개인정보처리방침",
       "footer_terms": "이용약관"
+    ,
+      "encyclopedia_desc": "내가 좋아하는 그룹의 모든 것! 데뷔 때의 풋풋한 모습부터 최근 핫한 뉴스, 그리고 멤버들의 깨알 같은 TMI까지 한곳에 모았습니다. 여러분의 덕질 지수를 높여줄 KPOP 아카이브를 지금 바로 탐험해보세요.",
+      "back": "뒤로",
+      "company": "소속사:",
+      "debut_date": "데뷔일:",
+      "fandom": "팬덤:",
+      "official_site": "공식 홈페이지",
+      "editorial_note": "이 프로필은 최신 공식 활동 데이터를 기반으로 KPOP STUDIO 에디터가 검수했습니다.",
+      "member_profile": "멤버 프로필",
+      "solo_profile": "솔로 프로필 있음",
+      "overview": "개요",
+      "latest_news": "최신 뉴스",
+      "star_behind": "스타 비하인드 (TMI)",
+      "view_details": "상세보기"
     }
   },
   ja: {
@@ -155,6 +183,20 @@ const resources = {
       "footer_contact": "お問い合わせ",
       "footer_privacy": "プライバシーポリシー",
       "footer_terms": "利用規約"
+    ,
+      "encyclopedia_desc": "大好きなグループのすべて！デビュー当時の初々しい姿から最新のホットなニュース、そしてメンバーの細かなTMIまで一箇所に集めました。あなたのオタ活指数を高めるK-POPアーカイブを今すぐ探検しましょう。",
+      "back": "戻る",
+      "company": "所属事務所:",
+      "debut_date": "デビュー日:",
+      "fandom": "ファンダム:",
+      "official_site": "公式サイト",
+      "editorial_note": "このプロフィールは最新の公式活動データに基づき、KPOP STUDIOエディターによって検証されています。",
+      "member_profile": "メンバープロフィール",
+      "solo_profile": "ソロプロフィールあり",
+      "overview": "概要",
+      "latest_news": "最新ニュース",
+      "star_behind": "スタービハインド (TMI)",
+      "view_details": "詳細を見る"
     }
   },
   zh: {
@@ -207,6 +249,20 @@ const resources = {
       "footer_contact": "联系我们",
       "footer_privacy": "隐私政策",
       "footer_terms": "服务条款"
+    ,
+      "encyclopedia_desc": "关于你最喜欢的团体的所有内容！从初次亮相到最新的热门新闻，以及成员的珍贵TMI，我们都集中在这里。立即探索终极K-pop档案，提升您的粉丝体验。",
+      "back": "返回",
+      "company": "所属公司:",
+      "debut_date": "出道日期:",
+      "fandom": "粉丝名称:",
+      "official_site": "官方网站",
+      "editorial_note": "此档案由KPOP STUDIO编辑根据最新的官方活动数据进行验证。",
+      "member_profile": "成员档案",
+      "solo_profile": "有个人档案",
+      "overview": "概述",
+      "latest_news": "最新新闻",
+      "star_behind": "明星幕后 (TMI)",
+      "view_details": "查看详情"
     }
   },
   es: {
@@ -259,6 +315,20 @@ const resources = {
       "footer_contact": "Contacto",
       "footer_privacy": "Política de privacidad",
       "footer_terms": "Términos de servicio"
+    ,
+      "encyclopedia_desc": "¡Todo sobre tus grupos favoritos! Desde sus primeros días de debut hasta las últimas noticias virales y los preciados TMI de los miembros, lo hemos reunido todo en un solo lugar. Explora el archivo definitivo del K-pop y mejora tu experiencia de fandom ahora mismo.",
+      "back": "Volver",
+      "company": "Empresa:",
+      "debut_date": "Debut:",
+      "fandom": "Fandom:",
+      "official_site": "Sitio Oficial",
+      "editorial_note": "Este perfil está verificado por los editores de KPOP STUDIO basándose en los últimos datos de actividad oficial.",
+      "member_profile": "Perfil de Miembros",
+      "solo_profile": "Perfil en Solitario",
+      "overview": "Resumen",
+      "latest_news": "Últimas Noticias",
+      "star_behind": "Detrás de la Estrella (TMI)",
+      "view_details": "Ver Detalles"
     }
   },
   id: {
@@ -311,6 +381,20 @@ const resources = {
       "footer_contact": "Kontak",
       "footer_privacy": "Kebijakan Privasi",
       "footer_terms": "Ketentuan Layanan"
+    ,
+      "encyclopedia_desc": "Segalanya tentang grup favorit Anda! Dari hari-hari debut mereka yang segar hingga berita viral terbaru dan TMI anggota yang berharga, kami telah mengumpulkan semuanya di satu tempat. Jelajahi arsip K-pop terbaik dan tingkatkan pengalaman fandom Anda sekarang juga.",
+      "back": "Kembali",
+      "company": "Agensi:",
+      "debut_date": "Debut:",
+      "fandom": "Fandom:",
+      "official_site": "Situs Resmi",
+      "editorial_note": "Profil ini diverifikasi oleh editor KPOP STUDIO berdasarkan data aktivitas resmi terbaru.",
+      "member_profile": "Profil Anggota",
+      "solo_profile": "Profil Solo",
+      "overview": "Ringkasan",
+      "latest_news": "Berita Terbaru",
+      "star_behind": "Di Balik Bintang (TMI)",
+      "view_details": "Lihat Detail"
     }
   },
   fr: {
@@ -363,6 +447,20 @@ const resources = {
       "footer_contact": "Contact",
       "footer_privacy": "Confidentialité",
       "footer_terms": "Conditions"
+    ,
+      "encyclopedia_desc": "Tout sur vos groupes préférés ! De leurs débuts frais aux dernières nouvelles virales et aux précieux TMI des membres, nous avons tout rassemblé au même endroit. Explorez l'archive ultime de la K-pop et améliorez votre expérience de fan dès maintenant.",
+      "back": "Retour",
+      "company": "Agence :",
+      "debut_date": "Début :",
+      "fandom": "Fandom :",
+      "official_site": "Site Officiel",
+      "editorial_note": "Ce profil est vérifié par les éditeurs de KPOP STUDIO sur la base des dernières données d'activité officielle.",
+      "member_profile": "Profil des Membres",
+      "solo_profile": "Profil Solo",
+      "overview": "Aperçu",
+      "latest_news": "Dernières Nouvelles",
+      "star_behind": "Derrière la Star (TMI)",
+      "view_details": "Voir les Détails"
     }
   },
   hi: {
@@ -415,6 +513,20 @@ const resources = {
       "footer_contact": "संपर्क",
       "footer_privacy": "गोपनीयता नीति",
       "footer_terms": "सेवा की शर्तें"
+    ,
+      "encyclopedia_desc": "आपके पसंदीदा समूहों के बारे में सब कुछ! उनके शुरुआती डेब्यू के दिनों से लेकर नवीनतम वायरल खबरों और सदस्यों के अनमोल TMI तक, हमने सब कुछ एक ही जगह पर इकट्ठा किया है। अभी अंतिम K-pop संग्रह का अन्वेषण करें और अपने फ़ैन्डम अनुभव को बढ़ाएं।",
+      "back": "वापस",
+      "company": "कंपनी:",
+      "debut_date": "डेब्यू:",
+      "fandom": "फ़ैन्डम:",
+      "official_site": "आधिकारिक वेबसाइट",
+      "editorial_note": "यह प्रोफ़ाइल नवीनतम आधिकारिक गतिविधि डेटा के आधार पर KPOP STUDIO संपादकों द्वारा सत्यापित है।",
+      "member_profile": "सदस्य प्रोफ़ाइल",
+      "solo_profile": "सोलो प्रोफ़ाइल",
+      "overview": "अवलोकन",
+      "latest_news": "नवीनतम समाचार",
+      "star_behind": "स्टार के पीछे (TMI)",
+      "view_details": "विवरण देखें"
     }
   },
   pt: {
@@ -467,6 +579,20 @@ const resources = {
       "footer_contact": "Contato",
       "footer_privacy": "Privacidade",
       "footer_terms": "Termos"
+    ,
+      "encyclopedia_desc": "Tudo sobre os seus grupos favoritos! Desde os primeiros dias de debut até as últimas notícias virais e os preciosos TMI dos membros, reunimos tudo em um só lugar. Explore o arquivo definitivo de K-pop e melhore a sua experiência de fã agora mesmo.",
+      "back": "Voltar",
+      "company": "Agência:",
+      "debut_date": "Debut:",
+      "fandom": "Fandom:",
+      "official_site": "Site Oficial",
+      "editorial_note": "Este perfil foi verificado pelos editores do KPOP STUDIO com base nos últimos dados de atividades oficiais.",
+      "member_profile": "Perfil dos Membros",
+      "solo_profile": "Perfil Solo",
+      "overview": "Visão Geral",
+      "latest_news": "Últimas Notícias",
+      "star_behind": "Por Trás da Estrela (TMI)",
+      "view_details": "Ver Detalhes"
     }
   },
   ar: {
@@ -519,6 +645,20 @@ const resources = {
       "footer_contact": "اتصل بنا",
       "footer_privacy": "سياسة الخصوصية",
       "footer_terms": "شروط الخدمة"
+    ,
+      "encyclopedia_desc": "كل شيء عن فرقك المفضلة! من أيام ترسيمهم الأولى إلى أحدث الأخبار المنتشرة ومعلومات TMI الثمينة عن الأعضاء، لقد جمعنا كل شيء في مكان واحد. استكشف أرشيف الكيبوب النهائي وارتق بتجربة المعجبين الخاصة بك الآن.",
+      "back": "رجوع",
+      "company": "الوكالة:",
+      "debut_date": "الترسيم:",
+      "fandom": "نادي المعجبين:",
+      "official_site": "الموقع الرسمي",
+      "editorial_note": "تم التحقق من هذا الملف التعريفي بواسطة محرري KPOP STUDIO بناءً على أحدث بيانات النشاط الرسمي.",
+      "member_profile": "ملف الأعضاء",
+      "solo_profile": "ملف منفرد",
+      "overview": "نظرة عامة",
+      "latest_news": "أحدث الأخبار",
+      "star_behind": "خلف النجم (TMI)",
+      "view_details": "عرض التفاصيل"
     }
   },
   th: {
@@ -571,6 +711,20 @@ const resources = {
       "footer_contact": "ติดต่อเรา",
       "footer_privacy": "นโยบายความเป็นส่วนตัว",
       "footer_terms": "เงื่อนไขการใช้บริการ"
+    ,
+      "encyclopedia_desc": "ทุกอย่างเกี่ยวกับศิลปินวงโปรดของคุณ! ตั้งแต่วันเดบิวต์ไปจนถึงข่าวไวรัลล่าสุด และ TMI สุดน่ารักของสมาชิก เรารวบรวมทุกอย่างไว้ที่นี่แล้ว สำรวจคลังข้อมูล K-pop ที่ดีที่สุด และยกระดับประสบการณ์การเป็นแฟนคลับของคุณได้เลย",
+      "back": "กลับ",
+      "company": "ค่ายเพลง:",
+      "debut_date": "เดบิวต์:",
+      "fandom": "แฟนด้อม:",
+      "official_site": "เว็บไซต์ทางการ",
+      "editorial_note": "โปรไฟล์นี้ได้รับการตรวจสอบโดยบรรณาธิการของ KPOP STUDIO ตามข้อมูลกิจกรรมอย่างเป็นทางการล่าสุด",
+      "member_profile": "โปรไฟล์สมาชิก",
+      "solo_profile": "โปรไฟล์เดี่ยว",
+      "overview": "ภาพรวม",
+      "latest_news": "ข่าวล่าสุด",
+      "star_behind": "เบื้องหลังดารา (TMI)",
+      "view_details": "ดูรายละเอียด"
     }
   },
   vi: {
@@ -623,6 +777,20 @@ const resources = {
       "footer_contact": "Liên hệ",
       "footer_privacy": "Chính sách bảo mật",
       "footer_terms": "Điều khoản dịch vụ"
+    ,
+      "encyclopedia_desc": "Mọi thứ về các nhóm nhạc yêu thích của bạn! Từ những ngày mới ra mắt cho đến những tin tức nóng hổi nhất và những TMI quý giá của các thành viên, chúng tôi đã tập hợp tất cả ở một nơi. Khám phá kho lưu trữ K-pop đỉnh cao và nâng tầm trải nghiệm fandom của bạn ngay bây giờ.",
+      "back": "Quay lại",
+      "company": "Công ty:",
+      "debut_date": "Ra mắt:",
+      "fandom": "Fandom:",
+      "official_site": "Trang web chính thức",
+      "editorial_note": "Hồ sơ này được xác minh bởi các biên tập viên của KPOP STUDIO dựa trên dữ liệu hoạt động chính thức mới nhất.",
+      "member_profile": "Hồ sơ thành viên",
+      "solo_profile": "Hồ sơ cá nhân",
+      "overview": "Tổng quan",
+      "latest_news": "Tin tức mới nhất",
+      "star_behind": "Phía sau Ngôi sao (TMI)",
+      "view_details": "Xem chi tiết"
     }
   },
   ru: {
@@ -675,6 +843,20 @@ const resources = {
       "footer_contact": "Контакты",
       "footer_privacy": "Конфиденциальность",
       "footer_terms": "Условия"
+    ,
+      "encyclopedia_desc": "Всё о ваших любимых группах! От дней их дебюта до последних вирусных новостей и драгоценных TMI участников, мы собрали всё в одном месте. Исследуйте лучший архив K-pop и улучшите свой фандомный опыт прямо сейчас.",
+      "back": "Назад",
+      "company": "Агентство:",
+      "debut_date": "Дебют:",
+      "fandom": "Фандом:",
+      "official_site": "Официальный сайт",
+      "editorial_note": "Этот профиль проверен редакторами KPOP STUDIO на основе последних официальных данных об активности.",
+      "member_profile": "Профиль участников",
+      "solo_profile": "Соло профиль",
+      "overview": "Обзор",
+      "latest_news": "Последние новости",
+      "star_behind": "За кулисами звезды (TMI)",
+      "view_details": "Подробнее"
     }
   }
 };
