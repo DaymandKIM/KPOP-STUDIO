@@ -1,27 +1,24 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Search, User, Star, ChevronLeft, ExternalLink, MessageCircle, Newspaper, Sparkles, Calendar, Fingerprint, Heart } from 'lucide-react';
+import { 
+  Search, User, Star, ChevronLeft, ExternalLink, MessageCircle, 
+  Newspaper, Sparkles, Calendar, Fingerprint, Heart, 
+  Instagram, Twitter, Youtube, Music2, Droplets, Moon 
+} from 'lucide-react';
 import { KPOP_GROUPS } from '../data/idols';
-import type { KpopGroup } from '../data/idols';
+import type { KpopGroup, Socials } from '../data/idols';
 import { useLocation } from 'react-router-dom';
 
 // Enhanced Safe Image Component with Image Proxy Bypass
-// Extremely Resilient Image Component with Multiple Fallback Strategies
 const SafeImage: React.FC<{ src: string; alt: string; className?: string; accentColor?: string }> = ({ src, alt, className, accentColor = '#00ffff' }) => {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
   const [retryCount, setRetryCount] = useState(0);
 
-  // Strategy sequence:
-  // 0: Try direct (if Naver) or Primary Proxy (if others)
-  // 1: Try Primary Proxy (wsrv.nl)
-  // 2: Try Secondary Proxy (weserv.nl)
-  // 3: Try Tertiary Proxy (wordpress photon)
   const getAttemptUrl = (count: number): string => {
     if (!src) return '';
     
     let finalSrc = src;
-    // Extract real image from search.pstatic.net if present to avoid nested HTTP issues
     if (src.includes('search.pstatic.net/common')) {
       const match = src.match(/src=([^&]+)/);
       if (match) {
@@ -31,11 +28,6 @@ const SafeImage: React.FC<{ src: string; alt: string; className?: string; accent
 
     const cleanUrl = finalSrc.replace(/^https?:\/\//, '');
 
-    // Strategy sequence:
-    // 0: Always try the extracted/direct URL first (Most SEO friendly and direct)
-    // 1: Try Primary Proxy (wsrv.nl) - handles many CORS/Hotlink issues
-    // 2: Try Secondary Proxy (weserv.nl)
-    // 3: Try Tertiary Proxy (wordpress photon)
     switch (count) {
       case 0: return finalSrc;
       case 1: return `https://wsrv.nl/?url=${encodeURIComponent(cleanUrl)}&w=800`;
@@ -60,9 +52,7 @@ const SafeImage: React.FC<{ src: string; alt: string; className?: string; accent
     return (
       <div 
         className={`${className} flex flex-col items-center justify-center gap-4 relative overflow-hidden bg-slate-900`}
-        style={{ 
-          border: `1px solid ${accentColor}44`
-        }}
+        style={{ border: `1px solid ${accentColor}44` }}
       >
         <div className="relative z-10 flex flex-col items-center gap-2">
           <Sparkles className="w-10 h-10 opacity-50" style={{ color: accentColor }} />
@@ -83,7 +73,7 @@ const SafeImage: React.FC<{ src: string; alt: string; className?: string; accent
         </div>
       )}
       <img 
-        key={retryCount} // Force re-mount on retry to ensure browser tries again
+        key={retryCount}
         src={currentSrc} 
         alt={alt} 
         className={`${className} transition-opacity duration-700 ${loading ? 'opacity-0' : 'opacity-100'}`} 
@@ -92,6 +82,63 @@ const SafeImage: React.FC<{ src: string; alt: string; className?: string; accent
         onLoad={() => setLoading(false)}
         loading="lazy"
       />
+    </div>
+  );
+};
+
+const SocialLinks: React.FC<{ socials?: Socials; accentColor?: string }> = ({ socials, accentColor = '#00ffff' }) => {
+  if (!socials) return null;
+
+  return (
+    <div className="flex gap-3 mt-4">
+      {socials.instagram && (
+        <a 
+          href={socials.instagram} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="p-2 bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 transition-all hover:scale-110 group/social" 
+          title="Instagram"
+          style={{ '--hover-border': accentColor } as React.CSSProperties}
+        >
+          <Instagram className="w-4 h-4 text-white group-hover/social:text-[var(--hover-border)] transition-colors" />
+        </a>
+      )}
+      {socials.twitter && (
+        <a 
+          href={socials.twitter} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="p-2 bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 transition-all hover:scale-110 group/social" 
+          title="X (Twitter)"
+          style={{ '--hover-border': accentColor } as React.CSSProperties}
+        >
+          <Twitter className="w-4 h-4 text-white group-hover/social:text-[var(--hover-border)] transition-colors" />
+        </a>
+      )}
+      {socials.youtube && (
+        <a 
+          href={socials.youtube} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="p-2 bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 transition-all hover:scale-110 group/social" 
+          title="YouTube"
+          style={{ '--hover-border': accentColor } as React.CSSProperties}
+        >
+          <Youtube className="w-4 h-4 text-white group-hover/social:text-[var(--hover-border)] transition-colors" />
+        </a>
+      )}
+      {socials.tiktok && (
+        <a 
+          href={socials.tiktok} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="p-2 bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 transition-all hover:scale-110 group/social" 
+          title="TikTok"
+          style={{ '--hover-border': accentColor } as React.CSSProperties}
+        >
+          <Music2 className="w-4 h-4 text-white group-hover/social:text-[var(--hover-border)] transition-colors" />
+        </a>
+      )}
     </div>
   );
 };
@@ -179,20 +226,22 @@ const IdolEncyclopedia: React.FC = () => {
                 </span>
                 {selectedGroup.fandom && (
                   <span className="px-3 py-1.5 bg-gradient-to-r from-neon-pink/20 to-neon-pink/5 border border-neon-pink/30 text-neon-pink rounded-full text-[10px] font-mono uppercase tracking-widest flex items-center gap-1.5 font-bold shadow-[0_0_10px_rgba(255,0,255,0.1)]">
-                    <Heart className="w-3 h-3 fill-neon-pink/20" />
-                    <span className="text-white/60 font-normal">{currentLang === 'ko' ? '팬덤:' : 'Fandom:'}</span> {selectedGroup.fandom[currentLang]}
-                  </span>
+                  <Heart className="w-3 h-3 fill-neon-pink/20" />
+                  <span className="text-white/60 font-normal">{currentLang === 'ko' ? '팬덤:' : 'Fandom:'}</span> {selectedGroup.fandom[currentLang]}
+                </span>
                 )}
                 {selectedGroup.officialSite && (
                   <a href={selectedGroup.officialSite} target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 bg-white/5 hover:bg-white/10 hover:border-white/50 transition-all border border-white/20 text-white rounded-full text-[10px] font-mono uppercase tracking-widest flex items-center gap-1.5 font-bold">
-                    <ExternalLink className="w-3 h-3" />
-                    {currentLang === 'ko' ? '공식 홈페이지' : 'Official Site'}
-                  </a>
+                  <ExternalLink className="w-3 h-3" />
+                  {currentLang === 'ko' ? '공식 홈페이지' : 'Official Site'}
+                </a>
                 )}
               </div>
               <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4 pr-4 leading-none">{selectedGroup.name[currentLang]}</h2>
               <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">{selectedGroup.description[currentLang]}</p>
               
+              <SocialLinks socials={selectedGroup.socials} accentColor={selectedGroup.accentColor} />
+
               <div className="mt-6 p-4 bg-neon-blue/5 border-l-4 border-neon-blue rounded-r-xl inline-block">
                 <p className="text-xs font-mono text-neon-blue uppercase tracking-widest font-bold mb-1">Editorial Note</p>
                 <p className="text-slate-400 text-xs italic">
@@ -205,7 +254,7 @@ const IdolEncyclopedia: React.FC = () => {
           </div>
         </div>
 
-        {/* Members Section - Only show if it's a group with members */}
+        {/* Members Section */}
         {selectedGroup.members && selectedGroup.members.length > 0 && (
           <section className="px-2">
             <div className="flex items-center gap-3 mb-8">
@@ -251,7 +300,17 @@ const IdolEncyclopedia: React.FC = () => {
                           <Fingerprint className="w-3 h-3 text-neon-green" />
                           MBTI: {member.mbti}
                         </div>
+                        <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
+                          <Moon className="w-3 h-3 text-neon-yellow" />
+                          {member.zodiac[currentLang]}
+                        </div>
+                        <div className="flex items-center gap-1.5 bg-white/5 px-2 py-1 rounded-lg border border-white/10 text-[9px] font-mono text-slate-300 uppercase">
+                          <Droplets className="w-3 h-3 text-neon-pink" />
+                          {member.bloodType}
+                        </div>
                       </div>
+                      
+                      <SocialLinks socials={member.socials} accentColor={selectedGroup.accentColor} />
                     </div>
                   </div>
                   <p className="text-slate-400 text-sm leading-relaxed relative z-10 line-clamp-3">{member.description[currentLang]}</p>
@@ -263,7 +322,6 @@ const IdolEncyclopedia: React.FC = () => {
 
         {/* Wiki & News & Gossip Section */}
         <div className="flex flex-col gap-10 px-2">
-          {/* Overview takes full width */}
           <section className="glass-card rounded-[40px] p-8 md:p-10 border-white/5">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-neon-blue/10 flex items-center justify-center border border-neon-blue/30">
@@ -274,7 +332,6 @@ const IdolEncyclopedia: React.FC = () => {
             <p className="text-slate-300 leading-relaxed text-lg whitespace-pre-wrap">{selectedGroup.wiki[currentLang]}</p>
           </section>
 
-          {/* News and Gossip side-by-side on large screens */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <section className="glass-card rounded-[40px] p-8 md:p-10 border-white/5">
               <div className="flex items-center gap-3 mb-6">
@@ -322,7 +379,6 @@ const IdolEncyclopedia: React.FC = () => {
 
   return (
     <div className="w-full max-w-7xl mx-auto flex flex-col gap-6 md:gap-10 animate-fade-in-up pb-10">
-      {/* Intro Text for AdSense & Fans */}
       <div className="text-center max-w-3xl mx-auto px-4 mb-4">
         <h2 className="text-3xl md:text-4xl font-black text-white italic tracking-tighter uppercase mb-4">
           {t('nav_encyclopedia')}
@@ -334,7 +390,6 @@ const IdolEncyclopedia: React.FC = () => {
         </p>
       </div>
 
-      {/* Search Bar */}
       <div className="relative group max-w-2xl mx-auto w-full px-2">
         <div className="absolute inset-y-0 left-4 pl-4 flex items-center pointer-events-none">
           <Search className="w-5 h-5 md:w-6 h-6 text-slate-500 group-focus-within:text-neon-blue transition-colors" />
