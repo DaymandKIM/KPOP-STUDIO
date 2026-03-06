@@ -284,7 +284,7 @@ export default function Lookalike() {
                   {matchedIdol && (
                     <div className="bg-white/5 border border-neon-purple/30 rounded-[28px] p-5 md:p-7 flex flex-col items-center backdrop-blur-md">
                       <p className="text-slate-500 font-mono text-[10px] md:text-xs uppercase font-black mb-2 md:mb-3 tracking-widest">{t('class')}</p>
-                      <p className="text-xl md:text-3xl font-black text-white italic whitespace-normal text-center break-keep line-clamp-2">
+                      <p className="text-sm md:text-base font-black text-white italic whitespace-normal text-center break-keep leading-snug">
                         {getLangText(matchedIdol.member.role, i18n.language)}
                       </p>
                     </div>
@@ -295,14 +295,14 @@ export default function Lookalike() {
                 {matchedIdol && (
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full max-w-2xl mx-auto">
                     {[
-                      { label: t('birthday'), value: matchedIdol.member.birth, color: 'neon-pink' },
-                      { label: t('blood_type'), value: matchedIdol.member.bloodType + (i18n.language === 'ko' ? '형' : ''), color: 'neon-blue' },
-                      { label: 'MBTI', value: matchedIdol.member.mbti, color: 'neon-purple' },
-                      { label: t('height'), value: matchedIdol.member.height, color: 'neon-green' },
-                    ].map(({ label, value, color }) => (
-                      <div key={label} className={`bg-white/5 border border-${color}/20 rounded-2xl p-3 md:p-4 flex flex-col items-center backdrop-blur-md`}>
+                      { label: t('birthday'), value: matchedIdol.member.birth, borderCls: 'border-neon-pink/30', textCls: 'text-neon-pink' },
+                      { label: t('blood_type'), value: matchedIdol.member.bloodType + (i18n.language === 'ko' ? '형' : ''), borderCls: 'border-neon-blue/30', textCls: 'text-neon-blue' },
+                      { label: 'MBTI', value: matchedIdol.member.mbti, borderCls: 'border-neon-purple/30', textCls: 'text-neon-purple' },
+                      { label: t('height'), value: matchedIdol.member.height, borderCls: 'border-neon-orange/30', textCls: 'text-neon-orange' },
+                    ].map(({ label, value, borderCls, textCls }) => (
+                      <div key={label} className={`bg-white/5 border ${borderCls} rounded-2xl p-3 md:p-4 flex flex-col items-center backdrop-blur-md`}>
                         <p className="text-slate-500 font-mono text-[9px] md:text-[10px] uppercase font-black mb-1 tracking-widest">{label}</p>
-                        <p className={`text-sm md:text-base font-black text-${color} text-center leading-tight`}>{value}</p>
+                        <p className={`text-sm md:text-base font-black ${textCls} text-center leading-tight`}>{value}</p>
                       </div>
                     ))}
                   </div>
@@ -354,10 +354,11 @@ export default function Lookalike() {
                   {matchedIdol && (
                     <button
                       onClick={handleShare}
-                      className="flex items-center gap-3 px-8 py-4 bg-neon-pink/10 hover:bg-neon-pink/20 border border-neon-pink/30 hover:border-neon-pink/60 rounded-2xl text-xs md:text-sm font-black uppercase tracking-[0.2em] transition-all text-neon-pink"
+                      className="flex items-center gap-3 px-8 py-4 bg-neon-pink/10 hover:bg-neon-pink/20 border-2 border-neon-pink/60 hover:border-neon-pink rounded-2xl text-xs md:text-sm font-black uppercase tracking-[0.2em] transition-all text-neon-pink"
+                      style={{ boxShadow: '0 0 20px rgba(255,0,255,0.35), inset 0 0 16px rgba(255,0,255,0.07)' }}
                     >
-                      <Share2 className="w-5 h-5" />
-                      <span>{t('share_result')}</span>
+                      <Share2 className="w-5 h-5 drop-shadow-[0_0_8px_rgba(255,0,255,1)]" />
+                      <span className="drop-shadow-[0_0_8px_rgba(255,0,255,0.8)]">{t('share_result')}</span>
                     </button>
                   )}
                 </div>
@@ -385,11 +386,16 @@ export default function Lookalike() {
 
           <button
             onClick={resetApp}
-            className="w-full md:w-auto group relative flex items-center justify-center gap-4 bg-white text-black font-black uppercase italic py-5 md:py-6 px-12 md:px-20 rounded-2xl overflow-hidden transition-all active:scale-95 neon-shadow-pink"
+            className="w-full md:w-auto group relative flex items-center justify-center gap-4 text-white font-black uppercase italic py-5 md:py-6 px-12 md:px-20 rounded-2xl overflow-hidden transition-all active:scale-95"
+            style={{
+              background: 'linear-gradient(90deg, #ff00ff, #9d00ff, #00ffff, #9d00ff, #ff00ff)',
+              backgroundSize: '300% 100%',
+              animation: 'neon-gradient 4s linear infinite',
+              boxShadow: '0 0 28px rgba(255,0,255,0.45), 0 0 60px rgba(157,0,255,0.2)',
+            }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
             <RefreshCw className="w-5 h-5 md:w-6 md:h-6 relative z-10 group-hover:rotate-180 transition-transform duration-700" />
-            <span className="relative z-10 text-xl md:text-2xl group-hover:text-white transition-colors">{t('try_again')}</span>
+            <span className="relative z-10 text-xl md:text-2xl">{t('try_again')}</span>
           </button>
         </div>
       )}

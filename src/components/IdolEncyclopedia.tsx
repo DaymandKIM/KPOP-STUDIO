@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import SharePanel from './SharePanel';
 import { KPOP_GROUPS } from '../data/idols';
-import type { KpopGroup, Socials } from '../data/idols';
+import type { KpopGroup, Socials, Member } from '../data/idols';
 import { useLocation } from 'react-router-dom';
 import { getLangText, getLangArray } from '../utils/lang';
 
@@ -160,9 +160,25 @@ const IdolEncyclopedia: React.FC = () => {
     return null;
   });
 
-  const filteredGroups = KPOP_GROUPS.filter(group => {
+  // 모든 항목(그룹 + 멤버)을 하나의 리스트로 평탄화
+  const allEntries = React.useMemo(() => {
+    const entries: (KpopGroup | { member: Member; group: KpopGroup; isMember: true })[] = [];
+    KPOP_GROUPS.forEach(group => {
+      entries.push(group);
+      group.members.forEach(member => {
+        entries.push({ member, group, isMember: true });
+      });
+    });
+    return entries;
+  }, []);
+
+  const filteredEntries = allEntries.filter(entry => {
     const term = searchTerm.toLowerCase();
-    return Object.values(group.name).some(val => typeof val === 'string' && val.toLowerCase().includes(term));
+    if ('members' in entry) { // 그룹인 경우
+      return Object.values(entry.name).some(val => typeof val === 'string' && val.toLowerCase().includes(term));
+    } else { // 멤버인 경우
+      return Object.values(entry.member.name).some(val => typeof val === 'string' && val.toLowerCase().includes(term));
+    }
   });
 
   const handleBackToList = () => {
@@ -425,40 +441,90 @@ const IdolEncyclopedia: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
-        {filteredGroups.map(group => (
-          <div 
-            key={group.id}
-            className="glass-card rounded-[32px] p-6 cursor-pointer hover:scale-[1.02] active:scale-95 transition-all group flex flex-col border-white/5"
-            onClick={() => {
-              setSelectedGroup(group);
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-          >
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-6 border border-white/10 group-hover:neon-shadow-blue transition-all duration-500">
-              <SafeImage 
-                src={group.imageUrl} 
-                alt={getLangText(group.name, i18n.language)} 
-                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                accentColor={group.accentColor}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
-              <div className="absolute bottom-4 left-4">
-                <span className="px-2 py-1 bg-black/60 backdrop-blur-md rounded-lg text-[8px] font-mono text-white uppercase border border-white/10">{group.company}</span>
-              </div>
-            </div>
+        {filteredEntries.map((entry, idx) => {
+          if ('members' in entry) {
+            // 그룹 카드 렌더링
+            const group = entry;
+            return (
+              <div 
+                key={`group-${group.id}-${idx}`}
+                className="glass-card rounded-[32px] p-6 cursor-pointer hover:scale-[1.02] active:scale-95 transition-all group flex flex-col border-white/5"
+                onClick={() => {
+                  setSelectedGroup(group);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+              >
+                <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-6 border border-white/10 group-hover:neon-shadow-blue transition-all duration-500">
+                  <SafeImage 
+                    src={group.imageUrl} 
+                    alt={getLangText(group.name, i18n.language)} 
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                    accentColor={group.accentColor}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <span className="px-2 py-1 bg-black/60 backdrop-blur-md rounded-lg text-[8px] font-mono text-white uppercase border border-white/10">{group.company}</span>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <span className="px-2 py-1 bg-neon-purple/20 backdrop-blur-md rounded-lg text-[8px] font-mono text-neon-purple uppercase border border-neon-purple/30 font-black tracking-tighter">GROUP</span>
+                  </div>
+                </div>
 
-            <div className="flex flex-col gap-2 mt-4">
-              <h3 className="text-3xl font-black text-white group-hover:text-neon-blue transition-all italic tracking-tighter pr-2 leading-none">
-                {getLangText(group.name, i18n.language)} {group.name.ko && i18n.language !== 'ko' ? `(${group.name.ko})` : (group.name.en && i18n.language === 'ko' ? `(${group.name.en})` : '')}
-              </h3>
-              <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed mb-4">{getLangText(group.description, i18n.language)}</p>
-              
-              <button className="w-full py-3 bg-white/5 rounded-xl border border-white/10 text-xs font-mono font-black uppercase tracking-widest text-slate-300 group-hover:bg-neon-blue group-hover:text-black group-hover:border-transparent transition-all">
-                {t('view_details')}
-              </button>
-            </div>
-          </div>
-        ))}
+                <div className="flex flex-col gap-2 mt-4">
+                  <h3 className="text-3xl font-black text-white group-hover:text-neon-blue transition-all italic tracking-tighter pr-2 leading-none">
+                    {getLangText(group.name, i18n.language)}
+                  </h3>
+                  <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed mb-4">{getLangText(group.description, i18n.language)}</p>
+                  
+                  <button className="w-full py-3 bg-white/5 rounded-xl border border-white/10 text-xs font-mono font-black uppercase tracking-widest text-slate-300 group-hover:bg-neon-blue group-hover:text-black group-hover:border-transparent transition-all">
+                    {t('view_details')}
+                  </button>
+                </div>
+              </div>
+            );
+          } else {
+            // 멤버 카드 렌더링
+            const { member, group } = entry;
+            return (
+              <div 
+                key={`member-${member.id}-${idx}`}
+                className="glass-card rounded-[32px] p-6 cursor-pointer hover:scale-[1.02] active:scale-95 transition-all group flex flex-col border-white/5"
+                onClick={() => {
+                  setSelectedGroup(group);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+              >
+                <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-6 border border-white/10 group-hover:neon-shadow-pink transition-all duration-500">
+                  <SafeImage 
+                    src={member.imageUrl} 
+                    alt={getLangText(member.name, i18n.language)} 
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                    accentColor={group.accentColor}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <span className="px-2 py-1 bg-black/60 backdrop-blur-md rounded-lg text-[8px] font-mono text-white uppercase border border-white/10">{getLangText(group.name, i18n.language)}</span>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <span className="px-2 py-1 bg-neon-pink/20 backdrop-blur-md rounded-lg text-[8px] font-mono text-neon-pink uppercase border border-neon-pink/30 font-black tracking-tighter">MEMBER</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-2 mt-4">
+                  <h3 className="text-3xl font-black text-white group-hover:text-neon-pink transition-all italic tracking-tighter pr-2 leading-none">
+                    {getLangText(member.name, i18n.language)}
+                  </h3>
+                  <p className="text-neon-blue font-mono text-[10px] uppercase font-black tracking-widest">{getLangText(member.role, i18n.language)}</p>
+                  <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed mb-4 mt-2">{getLangText(member.description, i18n.language)}</p>
+                  
+                  <button className="w-full py-3 bg-white/5 rounded-xl border border-white/10 text-xs font-mono font-black uppercase tracking-widest text-slate-300 group-hover:bg-neon-pink group-hover:text-black group-hover:border-transparent transition-all">
+                    {t('view_details')}
+                  </button>
+                </div>
+              </div>
+            );
+          }
+        })}
       </div>
     </div>
   );
