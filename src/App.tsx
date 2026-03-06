@@ -197,10 +197,10 @@ function AppLayout() {
       {/* Global Styles for Animations */}
       <style>{`
         @keyframes scan {
-          0% { top: 0%; opacity: 0; }
+          0% { transform: translateY(0); opacity: 0; }
           10% { opacity: 1; }
           90% { opacity: 1; }
-          100% { top: 100%; opacity: 0; }
+          100% { transform: translateY(2000px); opacity: 0; }
         }
         @keyframes fade-in-up {
           0% { opacity: 0; transform: translateY(20px); }
