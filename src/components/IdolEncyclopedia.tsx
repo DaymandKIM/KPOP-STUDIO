@@ -9,6 +9,7 @@ import SharePanel from './SharePanel';
 import { KPOP_GROUPS } from '../data/idols';
 import type { KpopGroup, Socials } from '../data/idols';
 import { useLocation } from 'react-router-dom';
+import { getLangText, getLangArray } from '../utils/lang';
 
 // Enhanced Safe Image Component with Image Proxy Bypass
 const SafeImage: React.FC<{ src: string; alt: string; className?: string; accentColor?: string }> = ({ src, alt, className, accentColor = '#00ffff' }) => {
@@ -149,16 +150,6 @@ const IdolEncyclopedia: React.FC = () => {
   const location = useLocation();
   const [searchTerm, setSearchTerm] = useState('');
   
-  const getLangText = (obj: any): string => {
-    if (!obj) return '';
-    return obj[i18n.language] || obj['en'] || obj['ko'] || '';
-  };
-
-  const getLangArray = (arrObj: any): string[] => {
-    if (!arrObj) return [];
-    return arrObj[i18n.language] || arrObj['en'] || arrObj['ko'] || [];
-  };
-
   // Initialize state directly from location if available
   const [showGroupShare, setShowGroupShare] = useState(false);
   const [selectedGroup, setSelectedGroup] = useState<KpopGroup | null>(() => {

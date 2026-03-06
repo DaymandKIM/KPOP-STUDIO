@@ -4,9 +4,8 @@ import { ChevronLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const TermsOfService: React.FC = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const navigate = useNavigate();
-  const currentLang = i18n.language as 'ko' | 'en';
 
   const content = {
     ko: {
@@ -71,7 +70,7 @@ const TermsOfService: React.FC = () => {
     }
   };
 
-  const data = content[currentLang] || content.en;
+  const data = (content as any)[i18n.language] || content.en;
 
   return (
     <div className="min-h-screen bg-black text-slate-50 font-sans p-6 md:p-12 relative overflow-hidden flex justify-center">
@@ -83,7 +82,7 @@ const TermsOfService: React.FC = () => {
           className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors font-mono uppercase text-sm mb-8"
         >
           <ChevronLeft className="w-5 h-5" />
-          {currentLang === 'ko' ? '홈으로 돌아가기' : 'Back to Home'}
+          {t('back_to_home')}
         </button>
 
         <h1 className="text-4xl md:text-5xl font-black italic tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink to-neon-orange">

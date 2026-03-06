@@ -7,6 +7,7 @@ import type { Prediction } from '../hooks/useFaceRecognition';
 import { KPOP_GROUPS } from '../data/idols';
 import { generateShareCard } from '../hooks/useShareCard';
 import SharePanel from '../components/SharePanel';
+import { getLangText, getLangArray } from '../utils/lang';
 
 type AppState = 'idle' | 'analyzing' | 'result';
 
@@ -22,8 +23,6 @@ export default function Lookalike() {
   const [isGeneratingCard, setIsGeneratingCard] = useState(false);
   const [showSharePanel, setShowSharePanel] = useState(false);
   const imageRef = useRef<HTMLImageElement>(null);
-
-  const currentLang = (i18n.language === 'ko' ? 'ko' : 'en') as 'ko' | 'en';
 
   const getMatchedIdol = () => {
     if (predictions.length === 0) return null;
@@ -105,8 +104,8 @@ export default function Lookalike() {
       const blob = await generateShareCard({
         userImageSrc: selectedImage,
         idolImageSrc: matchedIdol.member.imageUrl,
-        idolName: matchedIdol.member.name[currentLang],
-        groupName: matchedIdol.group.name[currentLang],
+        idolName: getLangText(matchedIdol.member.name, i18n.language),
+        groupName: getLangText(matchedIdol.group.name, i18n.language),
         similarity: Math.round(predictions[0].probability * 100),
         lang: i18n.language,
       });
@@ -119,9 +118,11 @@ export default function Lookalike() {
   };
 
   const shareText = matchedIdol
-    ? currentLang === 'ko'
-      ? `나는 AI로 ${Math.round(predictions[0]?.probability * 100)}% ${matchedIdol.member.name.ko}(${matchedIdol.group.name.ko})을(를) 닮았대! 너도 해봐 ✨`
-      : `I'm ${Math.round(predictions[0]?.probability * 100)}% ${matchedIdol.member.name.en} (${matchedIdol.group.name.en}) according to AI! Try yours ✨`
+    ? t('share_text', { 
+        prob: Math.round(predictions[0]?.probability * 100), 
+        name: getLangText(matchedIdol.member.name, i18n.language), 
+        group: getLangText(matchedIdol.group.name, i18n.language) 
+      })
     : '';
 
   return (
@@ -241,7 +242,7 @@ export default function Lookalike() {
                 {matchedIdol && (
                   <div className="relative group/img">
                     <div className="w-48 h-48 xs:w-56 xs:h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-neon-blue neon-shadow-blue relative flex-shrink-0 transition-transform duration-500 group-hover/img:scale-[1.02]">
-                      <img src={matchedIdol.member.imageUrl} alt={matchedIdol.member.name[currentLang]} className="w-full h-full object-cover" />
+                      <img src={matchedIdol.member.imageUrl} alt={getLangText(matchedIdol.member.name, i18n.language)} className="w-full h-full object-cover" />
                     </div>
                     <div className="absolute -bottom-3 -right-3 w-12 h-12 md:w-14 md:h-14 bg-white rounded-2xl flex items-center justify-center shadow-2xl border-2 border-neon-blue z-20 -rotate-6">
                       <Star className="w-6 h-6 text-neon-blue fill-neon-blue" />
@@ -255,13 +256,13 @@ export default function Lookalike() {
                 <div className="space-y-2 md:space-y-4">
                   <div className="inline-block px-4 py-1.5 bg-neon-pink/10 border border-neon-pink/30 rounded-full text-neon-pink font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] font-black">{t('best_match_badge')}</div>
                   <h3 className="text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tight pb-1 pr-2">
-                    {matchedIdol ? matchedIdol.member.name[currentLang] : predictions[0].className}
+                    {matchedIdol ? getLangText(matchedIdol.member.name, i18n.language) : predictions[0].className}
                   </h3>
                   {matchedIdol && (
                     <div className="flex items-center justify-center gap-3">
                       <div className="h-px w-8 bg-neon-blue/50"></div>
                       <p className="text-neon-blue font-black text-2xl md:text-3xl lg:text-4xl uppercase tracking-widest italic">
-                        {matchedIdol.group.name[currentLang]}
+                        {getLangText(matchedIdol.group.name, i18n.language)}
                       </p>
                       <div className="h-px w-8 bg-neon-blue/50"></div>
                     </div>
@@ -284,7 +285,7 @@ export default function Lookalike() {
                     <div className="bg-white/5 border border-neon-purple/30 rounded-[28px] p-5 md:p-7 flex flex-col items-center backdrop-blur-md">
                       <p className="text-slate-500 font-mono text-[10px] md:text-xs uppercase font-black mb-2 md:mb-3 tracking-widest">{t('class')}</p>
                       <p className="text-xl md:text-3xl font-black text-white italic whitespace-normal text-center break-keep line-clamp-2">
-                        {matchedIdol.member.role[currentLang] ?? matchedIdol.member.role.en}
+                        {getLangText(matchedIdol.member.role, i18n.language)}
                       </p>
                     </div>
                   )}
@@ -294,10 +295,10 @@ export default function Lookalike() {
                 {matchedIdol && (
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full max-w-2xl mx-auto">
                     {[
-                      { label: currentLang === 'ko' ? '생년월일' : 'Birthday', value: matchedIdol.member.birth, color: 'neon-pink' },
-                      { label: currentLang === 'ko' ? '혈액형' : 'Blood Type', value: matchedIdol.member.bloodType + '형', color: 'neon-blue' },
+                      { label: t('birthday'), value: matchedIdol.member.birth, color: 'neon-pink' },
+                      { label: t('blood_type'), value: matchedIdol.member.bloodType + (i18n.language === 'ko' ? '형' : ''), color: 'neon-blue' },
                       { label: 'MBTI', value: matchedIdol.member.mbti, color: 'neon-purple' },
-                      { label: currentLang === 'ko' ? '키' : 'Height', value: matchedIdol.member.height, color: 'neon-green' },
+                      { label: t('height'), value: matchedIdol.member.height, color: 'neon-green' },
                     ].map(({ label, value, color }) => (
                       <div key={label} className={`bg-white/5 border border-${color}/20 rounded-2xl p-3 md:p-4 flex flex-col items-center backdrop-blur-md`}>
                         <p className="text-slate-500 font-mono text-[9px] md:text-[10px] uppercase font-black mb-1 tracking-widest">{label}</p>
@@ -313,8 +314,8 @@ export default function Lookalike() {
                     <div className="bg-white/5 border border-white/10 rounded-2xl px-5 py-3 flex items-center justify-center gap-3">
                       <span className="text-xl">✨</span>
                       <p className="text-slate-300 font-mono text-xs font-black uppercase tracking-widest">
-                        {currentLang === 'ko' ? '별자리' : 'Zodiac'} &nbsp;·&nbsp;
-                        <span className="text-white">{matchedIdol.member.zodiac[currentLang] ?? matchedIdol.member.zodiac.en}</span>
+                        {t('zodiac')} &nbsp;·&nbsp;
+                        <span className="text-white">{getLangText(matchedIdol.member.zodiac, i18n.language)}</span>
                       </p>
                     </div>
                   </div>
@@ -327,7 +328,7 @@ export default function Lookalike() {
                       <div className="flex items-center gap-2 mb-3">
                         <Sparkles className="w-4 h-4 text-neon-purple shrink-0" />
                         <p className="text-neon-purple font-mono text-[10px] uppercase font-black tracking-widest">
-                          {currentLang === 'ko' ? '비하인드 스토리' : 'Behind Story'}
+                          {t('behind_story')}
                         </p>
                       </div>
                       <p className="text-slate-300 text-sm md:text-base leading-relaxed font-medium">
@@ -368,7 +369,7 @@ export default function Lookalike() {
                       {t('share_via')}
                     </p>
                     <SharePanel
-                      title={currentLang === 'ko' ? 'KPOP STUDIO AI 닮은꼴 결과' : 'My KPOP STUDIO AI Result'}
+                      title={t('share_title')}
                       text={shareText}
                       url="https://kpopstudio.ai/lookalike"
                       blob={shareBlob}

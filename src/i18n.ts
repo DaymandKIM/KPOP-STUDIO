@@ -69,7 +69,15 @@ const resources = {
       "view_in_encyclopedia": "View in Encyclopedia",
       "share_result": "Share Result",
       "share_via": "Share via",
-      "tap_to_upload": "Tap to Upload"
+      "tap_to_upload": "Tap to Upload",
+      "back_to_home": "Back to Home",
+      "birthday": "Birthday",
+      "blood_type": "Blood Type",
+      "height": "Height",
+      "behind_story": "Behind Story",
+      "zodiac": "Zodiac",
+      "share_title": "My KPOP STUDIO AI Result",
+      "share_text": "I'm {{prob}}% {{name}} ({{group}}) according to AI! Try yours ✨"
     }
   },
   ko: {
@@ -140,7 +148,15 @@ const resources = {
       "view_in_encyclopedia": "도감에서 더보기",
       "share_result": "결과 공유하기",
       "share_via": "공유 방법 선택",
-      "tap_to_upload": "사진을 선택해 주세요"
+      "tap_to_upload": "사진을 선택해 주세요",
+      "back_to_home": "홈으로 돌아가기",
+      "birthday": "생년월일",
+      "blood_type": "혈액형",
+      "height": "키",
+      "behind_story": "비하인드 스토리",
+      "zodiac": "별자리",
+      "share_title": "KPOP STUDIO AI 닮은꼴 결과",
+      "share_text": "나는 AI로 {{prob}}% {{name}}({{group}})을(를) 닮았대! 너도 해봐 ✨"
     }
   },
   ja: {
