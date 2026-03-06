@@ -74,6 +74,176 @@ const GUIDE: Record<string, {title:string; sub:string; good:{icon:string;text:st
     ],
     btn: 'Got it, Select Photo',
   },
+  zh: {
+    title: '获得最准确分析的照片指南',
+    sub: '符合以下条件的照片分析精度更高。',
+    good: [
+      { icon: '🧑‍🦱', text: '面朝正前方的清晰人脸' },
+      { icon: '💡', text: '明亮均匀的光线' },
+      { icon: '🙋', text: '单人照片' },
+      { icon: '😊', text: '自然的表情' },
+    ],
+    bad: [
+      { icon: '😎', text: '墨镜或口罩' },
+      { icon: '↩️', text: '侧面或背面' },
+      { icon: '👥', text: '多人合照' },
+      { icon: '🌑', text: '黑暗或逆光照片' },
+    ],
+    btn: '明白了，选择照片',
+  },
+  es: {
+    title: 'Guía de fotos para mejores resultados',
+    sub: 'Las fotos que cumplan estas condiciones darán un análisis más preciso.',
+    good: [
+      { icon: '🧑‍🦱', text: 'Cara mirando al frente' },
+      { icon: '💡', text: 'Iluminación brillante y uniforme' },
+      { icon: '🙋', text: 'Foto individual' },
+      { icon: '😊', text: 'Expresión natural' },
+    ],
+    bad: [
+      { icon: '😎', text: 'Gafas de sol o mascarilla' },
+      { icon: '↩️', text: 'Vista lateral o trasera' },
+      { icon: '👥', text: 'Varias personas' },
+      { icon: '🌑', text: 'Foto oscura o a contraluz' },
+    ],
+    btn: 'Entendido, elegir foto',
+  },
+  id: {
+    title: 'Panduan Foto untuk Hasil Terbaik',
+    sub: 'Foto yang sesuai kondisi berikut memberikan akurasi analisis lebih tinggi.',
+    good: [
+      { icon: '🧑‍🦱', text: 'Wajah menghadap depan' },
+      { icon: '💡', text: 'Pencahayaan terang dan merata' },
+      { icon: '🙋', text: 'Foto sendiri' },
+      { icon: '😊', text: 'Ekspresi natural' },
+    ],
+    bad: [
+      { icon: '😎', text: 'Kacamata hitam atau masker' },
+      { icon: '↩️', text: 'Tampak samping atau belakang' },
+      { icon: '👥', text: 'Banyak orang' },
+      { icon: '🌑', text: 'Foto gelap atau backlit' },
+    ],
+    btn: 'Mengerti, Pilih Foto',
+  },
+  fr: {
+    title: 'Guide photo pour de meilleurs résultats',
+    sub: 'Les photos correspondant à ces conseils donneront l\'analyse la plus précise.',
+    good: [
+      { icon: '🧑‍🦱', text: 'Visage de face, clair' },
+      { icon: '💡', text: 'Éclairage lumineux et uniforme' },
+      { icon: '🙋', text: 'Photo seul(e)' },
+      { icon: '😊', text: 'Expression naturelle' },
+    ],
+    bad: [
+      { icon: '😎', text: 'Lunettes de soleil ou masque' },
+      { icon: '↩️', text: 'Vue de côté ou de dos' },
+      { icon: '👥', text: 'Plusieurs personnes' },
+      { icon: '🌑', text: 'Photo sombre ou à contre-jour' },
+    ],
+    btn: 'Compris, choisir la photo',
+  },
+  hi: {
+    title: 'सर्वोत्तम परिणामों के लिए फोटो गाइड',
+    sub: 'इन शर्तों को पूरा करने वाली फोटो से विश्लेषण अधिक सटीक होगा।',
+    good: [
+      { icon: '🧑‍🦱', text: 'सामने से साफ चेहरा' },
+      { icon: '💡', text: 'उज्ज्वल और समान प्रकाश' },
+      { icon: '🙋', text: 'अकेला फोटो' },
+      { icon: '😊', text: 'प्राकृतिक भाव' },
+    ],
+    bad: [
+      { icon: '😎', text: 'धूप का चश्मा या मास्क' },
+      { icon: '↩️', text: 'साइड या पीछे का दृश्य' },
+      { icon: '👥', text: 'कई लोग' },
+      { icon: '🌑', text: 'अंधेरी या बैकलिट फोटो' },
+    ],
+    btn: 'समझ गया, फोटो चुनें',
+  },
+  pt: {
+    title: 'Guia de fotos para melhores resultados',
+    sub: 'Fotos que atendam a essas dicas darão a análise mais precisa.',
+    good: [
+      { icon: '🧑‍🦱', text: 'Rosto de frente, claro' },
+      { icon: '💡', text: 'Iluminação brilhante e uniforme' },
+      { icon: '🙋', text: 'Foto individual' },
+      { icon: '😊', text: 'Expressão natural' },
+    ],
+    bad: [
+      { icon: '😎', text: 'Óculos de sol ou máscara' },
+      { icon: '↩️', text: 'Vista lateral ou traseira' },
+      { icon: '👥', text: 'Várias pessoas' },
+      { icon: '🌑', text: 'Foto escura ou contra a luz' },
+    ],
+    btn: 'Entendido, escolher foto',
+  },
+  ar: {
+    title: 'دليل الصور للحصول على أفضل النتائج',
+    sub: 'ستعطي الصور المطابقة لهذه النصائح أدق تحليل.',
+    good: [
+      { icon: '🧑‍🦱', text: 'وجه واضح من الأمام' },
+      { icon: '💡', text: 'إضاءة ساطعة ومنتظمة' },
+      { icon: '🙋', text: 'صورة فردية' },
+      { icon: '😊', text: 'تعبير طبيعي' },
+    ],
+    bad: [
+      { icon: '😎', text: 'نظارات شمسية أو قناع' },
+      { icon: '↩️', text: 'جانبي أو من الخلف' },
+      { icon: '👥', text: 'أشخاص متعددون' },
+      { icon: '🌑', text: 'صورة مظلمة أو في ضوء خلفي' },
+    ],
+    btn: 'فهمت، اختر صورة',
+  },
+  th: {
+    title: 'คู่มือภาพถ่ายเพื่อผลลัพธ์ที่ดีที่สุด',
+    sub: 'ภาพถ่ายที่ตรงตามเงื่อนไขเหล่านี้จะให้การวิเคราะห์ที่แม่นยำยิ่งขึ้น',
+    good: [
+      { icon: '🧑‍🦱', text: 'ใบหน้าหันหน้าตรง ชัดเจน' },
+      { icon: '💡', text: 'แสงสว่างและสม่ำเสมอ' },
+      { icon: '🙋', text: 'ภาพถ่ายคนเดียว' },
+      { icon: '😊', text: 'สีหน้าเป็นธรรมชาติ' },
+    ],
+    bad: [
+      { icon: '😎', text: 'แว่นกันแดดหรือหน้ากาก' },
+      { icon: '↩️', text: 'มุมด้านข้างหรือด้านหลัง' },
+      { icon: '👥', text: 'หลายคน' },
+      { icon: '🌑', text: 'ภาพมืดหรือแสงสวนทาง' },
+    ],
+    btn: 'เข้าใจแล้ว เลือกภาพ',
+  },
+  vi: {
+    title: 'Hướng dẫn ảnh để có kết quả tốt nhất',
+    sub: 'Ảnh phù hợp với các gợi ý này sẽ cho kết quả phân tích chính xác nhất.',
+    good: [
+      { icon: '🧑‍🦱', text: 'Mặt nhìn thẳng, rõ ràng' },
+      { icon: '💡', text: 'Ánh sáng đủ và đều' },
+      { icon: '🙋', text: 'Ảnh chụp một mình' },
+      { icon: '😊', text: 'Biểu cảm tự nhiên' },
+    ],
+    bad: [
+      { icon: '😎', text: 'Kính mát hoặc khẩu trang' },
+      { icon: '↩️', text: 'Nhìn nghiêng hoặc từ phía sau' },
+      { icon: '👥', text: 'Nhiều người' },
+      { icon: '🌑', text: 'Ảnh tối hoặc ngược sáng' },
+    ],
+    btn: 'Hiểu rồi, chọn ảnh',
+  },
+  ru: {
+    title: 'Руководство по фото для лучших результатов',
+    sub: 'Фотографии, соответствующие этим советам, дадут наиболее точный анализ.',
+    good: [
+      { icon: '🧑‍🦱', text: 'Лицо анфас, чёткое' },
+      { icon: '💡', text: 'Яркое равномерное освещение' },
+      { icon: '🙋', text: 'Одиночное фото' },
+      { icon: '😊', text: 'Естественное выражение' },
+    ],
+    bad: [
+      { icon: '😎', text: 'Солнечные очки или маска' },
+      { icon: '↩️', text: 'Вид сбоку или сзади' },
+      { icon: '👥', text: 'Несколько человек' },
+      { icon: '🌑', text: 'Тёмное или засвеченное фото' },
+    ],
+    btn: 'Понятно, выбрать фото',
+  },
 };
 function getGuide(lang: string) {
   return GUIDE[lang] ?? GUIDE[lang.split('-')[0]] ?? GUIDE.en;
@@ -197,12 +367,13 @@ export default function Lookalike() {
     : '';
 
   return (
+    <>
     <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-8 w-full max-w-7xl mx-auto z-10">
       {appState === 'idle' && (
         <div className="text-center mb-8 md:mb-12 animate-fade-in-up w-full px-2 mt-8 md:mt-12">
           <h1 className="text-5xl xs:text-6xl md:text-8xl font-black mb-4 md:mb-6 tracking-tighter italic text-white leading-[1.1] md:leading-none uppercase">
             {t('app_title')} <br className="xs:hidden" />
-            <span className="inline-block pr-4 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">{wrapKpop(t('app_subtitle'))}</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue drop-shadow-[0_0_20px_rgba(157,0,255,0.6)]">{wrapKpop(t('app_subtitle'))}</span>
           </h1>
           <p className="text-slate-400 font-mono text-xs md:text-sm max-w-lg mx-auto uppercase tracking-wide px-4">
             {t('upload_instruction')}
@@ -278,10 +449,15 @@ export default function Lookalike() {
               <Crosshair className="w-16 h-16 md:w-24 md:h-24 text-white opacity-40 animate-pulse rotate-45" />
             </div>
           </div>
-          <div className="text-center">
+          <div className="text-center space-y-3">
             <p className="text-xl md:text-2xl font-black italic tracking-[0.2em] text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink animate-pulse uppercase">
               {t('analyzing')}
             </p>
+            <div className="flex justify-center gap-1.5">
+              {[0,1,2].map(i => (
+                <div key={i} className="w-2 h-2 rounded-full bg-neon-blue animate-bounce" style={{ animationDelay: `${i * 0.15}s` }} />
+              ))}
+            </div>
           </div>
         </div>
       )}
@@ -289,11 +465,11 @@ export default function Lookalike() {
       {appState === 'result' && selectedImage && predictions.length > 0 && (
         <div className="w-full max-w-5xl flex flex-col items-center animate-fade-in-up px-2 pb-10 mt-8 md:mt-12">
           <div className="flex items-center gap-4 md:gap-6 mb-8 md:mb-12">
-            <div className="h-px w-10 xs:w-20 md:w-32 bg-gradient-to-r from-transparent via-neon-pink to-transparent"></div>
-            <h2 className="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-black italic text-white uppercase tracking-tighter flex items-center gap-3 md:gap-4 glitch-text pr-2">
+            <div className="h-px w-10 xs:w-20 md:w-32 bg-gradient-to-r from-transparent via-neon-pink to-neon-purple"></div>
+            <h2 className="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-black italic uppercase tracking-tighter flex items-center gap-3 md:gap-4 glitch-text text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">
               {t('match_found')}
             </h2>
-            <div className="h-px w-10 xs:w-20 md:w-32 bg-gradient-to-r from-transparent via-neon-blue to-transparent"></div>
+            <div className="h-px w-10 xs:w-20 md:w-32 bg-gradient-to-l from-transparent via-neon-blue to-neon-purple"></div>
           </div>
 
           <div className="neon-border-animated glass-card rounded-[32px] md:rounded-[48px] p-1 w-full mb-10 md:mb-16 overflow-hidden max-w-4xl mx-auto">
@@ -331,7 +507,9 @@ export default function Lookalike() {
               {/* Result Info */}
               <div className="w-full text-center space-y-8 md:space-y-10">
                 <div className="space-y-2 md:space-y-4">
-                  <div className="inline-block px-4 py-1.5 bg-neon-pink/10 border border-neon-pink/30 rounded-full text-neon-pink font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] font-black">{t('best_match_badge')}</div>
+                  <div className="inline-block px-4 py-1.5 rounded-full font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] font-black text-white"
+                    style={{ background: 'linear-gradient(90deg, rgba(255,0,255,0.2), rgba(157,0,255,0.2))', border: '1px solid rgba(255,0,255,0.5)', boxShadow: '0 0 12px rgba(255,0,255,0.3)' }}
+                  >{t('best_match_badge')}</div>
                   <h3 className="text-5xl md:text-7xl lg:text-8xl font-black text-white italic tracking-tight w-full text-center break-words">
                     {matchedIdol ? getLangText(matchedIdol.member.name, i18n.language) : predictions[0].className}
                   </h3>
@@ -547,5 +725,6 @@ export default function Lookalike() {
           </div>
         );
       })()}
+    </>
   );
 }

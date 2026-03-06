@@ -227,7 +227,13 @@ const resources = {
       "view_in_encyclopedia": "図鑑で見る",
       "share_result": "結果をシェア",
       "share_via": "シェア方法",
-      "tap_to_upload": "タップして写真を選択"
+      "tap_to_upload": "タップして写真を選択",
+      "birthday": "生年月日",
+      "blood_type": "血液型",
+      "height": "身長",
+      "behind_story": "ビハインドストーリー",
+      "zodiac": "星座",
+      "share_text": "AIで{{prob}}% {{name}}({{group}})に似てると判定！あなたも試して✨"
     }
   },
   zh: {
@@ -298,7 +304,13 @@ const resources = {
       "view_in_encyclopedia": "在百科查看",
       "share_result": "分享结果",
       "share_via": "分享方式",
-      "tap_to_upload": "点击上传图片"
+      "tap_to_upload": "点击上传图片",
+      "birthday": "生日",
+      "blood_type": "血型",
+      "height": "身高",
+      "behind_story": "幕后故事",
+      "zodiac": "星座",
+      "share_text": "AI判定我{{prob}}%像{{name}}({{group}})！快来试试✨"
     }
   },
   es: {
@@ -369,7 +381,13 @@ const resources = {
       "view_in_encyclopedia": "Ver en Enciclopedia",
       "share_result": "Compartir",
       "share_via": "Compartir via",
-      "tap_to_upload": "Toca para Subir"
+      "tap_to_upload": "Toca para Subir",
+      "birthday": "Cumpleaños",
+      "blood_type": "Tipo de sangre",
+      "height": "Altura",
+      "behind_story": "Historia Secreta",
+      "zodiac": "Signo zodiacal",
+      "share_text": "¡La IA dice que soy {{prob}}% {{name}}({{group}})! Pruébalo ✨"
     }
   },
   id: {
@@ -440,7 +458,13 @@ const resources = {
       "view_in_encyclopedia": "Lihat di Ensiklopedia",
       "share_result": "Bagikan Hasil",
       "share_via": "Bagikan via",
-      "tap_to_upload": "Ketuk untuk Unggah"
+      "tap_to_upload": "Ketuk untuk Unggah",
+      "birthday": "Tanggal Lahir",
+      "blood_type": "Golongan Darah",
+      "height": "Tinggi Badan",
+      "behind_story": "Di Balik Layar",
+      "zodiac": "Zodiak",
+      "share_text": "AI bilang aku {{prob}}% mirip {{name}}({{group}})! Coba juga ✨"
     }
   },
   fr: {
@@ -511,7 +535,13 @@ const resources = {
       "view_in_encyclopedia": "Voir dans l'Encyclopédie",
       "share_result": "Partager",
       "share_via": "Partager via",
-      "tap_to_upload": "Appuyer pour Télécharger"
+      "tap_to_upload": "Appuyer pour Télécharger",
+      "birthday": "Anniversaire",
+      "blood_type": "Groupe sanguin",
+      "height": "Taille",
+      "behind_story": "Histoire secrète",
+      "zodiac": "Signe astrologique",
+      "share_text": "L'IA dit que je ressemble à {{prob}}% à {{name}}({{group}}) ! Essayez ✨"
     }
   },
   hi: {
@@ -582,7 +612,13 @@ const resources = {
       "view_in_encyclopedia": "विश्वकोश में देखें",
       "share_result": "परिणाम साझा करें",
       "share_via": "इसके माध्यम से",
-      "tap_to_upload": "अपलोड के लिए टैप करें"
+      "tap_to_upload": "अपलोड के लिए टैप करें",
+      "birthday": "जन्मदिन",
+      "blood_type": "रक्त प्रकार",
+      "height": "ऊंचाई",
+      "behind_story": "पर्दे के पीछे",
+      "zodiac": "राशि",
+      "share_text": "AI ने बताया मैं {{prob}}% {{name}}({{group}}) जैसा/जैसी हूं! आप भी आजमाएं ✨"
     }
   },
   pt: {
@@ -653,7 +689,13 @@ const resources = {
       "view_in_encyclopedia": "Ver na Enciclopédia",
       "share_result": "Compartilhar",
       "share_via": "Compartilhar via",
-      "tap_to_upload": "Toque para Carregar"
+      "tap_to_upload": "Toque para Carregar",
+      "birthday": "Aniversário",
+      "blood_type": "Tipo Sanguíneo",
+      "height": "Altura",
+      "behind_story": "História Secreta",
+      "zodiac": "Signo",
+      "share_text": "A IA disse que sou {{prob}}% parecido/a com {{name}}({{group}})! Tente também ✨"
     }
   },
   ar: {
@@ -724,7 +766,13 @@ const resources = {
       "view_in_encyclopedia": "عرض في الموسوعة",
       "share_result": "مشاركة النتيجة",
       "share_via": "مشاركة عبر",
-      "tap_to_upload": "انقر للرفع"
+      "tap_to_upload": "انقر للرفع",
+      "birthday": "عيد الميلاد",
+      "blood_type": "فصيلة الدم",
+      "height": "الطول",
+      "behind_story": "قصة من الكواليس",
+      "zodiac": "البرج",
+      "share_text": "قال الذكاء الاصطناعي إنني {{prob}}% مثل {{name}}({{group}})! جرّب أنت أيضاً ✨"
     }
   },
   th: {
@@ -795,7 +843,13 @@ const resources = {
       "view_in_encyclopedia": "ดูใน Encyclopedia",
       "share_result": "แชร์ผลลัพธ์",
       "share_via": "แชร์ผ่าน",
-      "tap_to_upload": "แตะเพื่ออัปโหลด"
+      "tap_to_upload": "แตะเพื่ออัปโหลด",
+      "birthday": "วันเกิด",
+      "blood_type": "กรุ๊ปเลือด",
+      "height": "ส่วนสูง",
+      "behind_story": "เรื่องเบื้องหลัง",
+      "zodiac": "ราศี",
+      "share_text": "AI บอกว่าฉัน {{prob}}% เหมือน {{name}}({{group}})! ลองดูสิ ✨"
     }
   },
   vi: {
@@ -866,7 +920,13 @@ const resources = {
       "view_in_encyclopedia": "Xem trong Bách khoa",
       "share_result": "Chia sẻ kết quả",
       "share_via": "Chia sẻ qua",
-      "tap_to_upload": "Nhấn để tải lên"
+      "tap_to_upload": "Nhấn để tải lên",
+      "birthday": "Sinh nhật",
+      "blood_type": "Nhóm máu",
+      "height": "Chiều cao",
+      "behind_story": "Câu chuyện hậu trường",
+      "zodiac": "Cung hoàng đạo",
+      "share_text": "AI nói tôi giống {{name}}({{group}}) {{prob}}%! Thử xem nào ✨"
     }
   },
   ru: {
@@ -937,7 +997,13 @@ const resources = {
       "view_in_encyclopedia": "Смотреть в Энциклопедии",
       "share_result": "Поделиться",
       "share_via": "Поделиться через",
-      "tap_to_upload": "Нажмите для загрузки"
+      "tap_to_upload": "Нажмите для загрузки",
+      "birthday": "День рождения",
+      "blood_type": "Группа крови",
+      "height": "Рост",
+      "behind_story": "История за кадром",
+      "zodiac": "Знак зодиака",
+      "share_text": "ИИ говорит, что я на {{prob}}% похож(а) на {{name}}({{group}})! Попробуй ✨"
     }
   }
 };
