@@ -94,7 +94,7 @@ export default function Home() {
               <p className="text-slate-400 text-xs uppercase font-mono tracking-widest">{t('trust_stat_2_label')}</p>
             </div>
             <div className="space-y-2">
-              <div className="text-neon-pink font-black text-3xl">24/7</div>
+              <div className="text-neon-pink font-black text-3xl uppercase">{t('trust_stat_3_value')}</div>
               <p className="text-slate-400 text-xs uppercase font-mono tracking-widest">{t('trust_stat_3_label')}</p>
             </div>
           </div>
