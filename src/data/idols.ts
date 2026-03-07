@@ -99,11 +99,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
     wiki: {
       ko: "뉴진스(NewJeans)는 청바지(Jeans)처럼 시대의 아이콘이 되겠다는 포부와 'New Genes'(새로운 유전자)가 되겠다는 각오를 담은 어도어(ADOR) 소속의 5인조 다국적 걸그룹입니다. 민희진 전 대표가 총괄 프로듀싱을 맡아 K-POP 시장에 'Y2K'와 '이지리스닝' 열풍을 일으켰습니다. 1990년대 후반~2000년대 초반의 향수를 현대적으로 재해석한 독보적인 컨셉, 과도한 화장이나 킬힐을 배제한 10대 소녀 특유의 자연스러움을 강조하여 데뷔와 동시에 엄청난 신드롬을 일으켰습니다.",
       en: "NewJeans is a 5-member multinational girl group under ADOR, with the ambition to become icons of the times like everyday jeans. Produced by Min Hee-jin, they sparked the 'Y2K' and 'easy-listening' trends in K-pop. By modernly reinterpreting the nostalgia of the late 90s to early 00s and emphasizing natural teenage vibes, they created a massive syndrome upon debut."
-    },
+    , ja: "NewJeans は ADOR 所属の 5 人組多国籍ガールズ グループで、日常のジーンズのように時代のアイコンになるという野望を持っています。ミン・ヒジンがプロデュースしたこの曲は、K-POP における「Y2K」と「イージーリスニング」のトレンドを引き起こしました。 90年代後半から00年代前半のノスタルジーを現代的に再解釈し、10代の自然な雰囲気を強調することで、デビューと同時に大規模なシンドロームを生み出しました。", zh: "NewJeans是ADOR旗下的一个5人跨国女子组合，立志成为像日常牛仔裤一样的时代偶像。它们由 Min Hee-jin 制作，引发了韩国流行音乐中的“Y2K”和“轻松聆听”趋势。他们以现代方式重新诠释 90 年代末至 00 年代初的怀旧情绪，强调自然的青少年氛围，一出道就创造了一种巨大的综合症。", es: "NewJeans es un grupo de chicas multinacional de 5 miembros bajo ADOR, con la ambición de convertirse en íconos de la época como los jeans de todos los días. Producidos por Min Hee-jin, provocaron las tendencias 'Y2K' y 'easy listening' en el K-pop. Al reinterpretar de manera moderna la nostalgia de finales de los 90 y principios de los 2000 y enfatizar las vibraciones naturales de la adolescencia, crearon un síndrome masivo en su debut.", id: "NewJeans adalah girl grup multinasional beranggotakan 5 orang di bawah ADOR, dengan ambisi untuk menjadi ikon zaman seperti jeans sehari-hari. Diproduksi oleh Min Hee-jin, mereka memicu tren 'Y2K' dan 'easy-listening' di K-pop. Dengan menafsirkan kembali nostalgia akhir tahun 90an hingga awal tahun 00an secara modern dan menekankan getaran remaja alami, mereka menciptakan sindrom besar saat debut.", fr: "NewJeans est un groupe féminin multinational de 5 membres dirigé par ADOR, avec l'ambition de devenir des icônes de l'époque comme les jeans de tous les jours. Produits par Min Hee-jin, ils ont déclenché les tendances « Y2K » et « easy-listening » dans la K-pop. En réinterprétant de manière moderne la nostalgie de la fin des années 90 au début des années 2000 et en mettant l’accent sur les vibrations naturelles des adolescents, ils ont créé un énorme syndrome dès leurs débuts.", hi: "न्यूज़ीन्स ADOR के तहत 5-सदस्यीय बहुराष्ट्रीय लड़कियों का समूह है, जिसकी महत्वाकांक्षा रोजमर्रा की जींस की तरह समय की प्रतीक बनने की है। मिन ही-जिन द्वारा निर्मित, उन्होंने के-पॉप में 'Y2K' और 'आसान-सुनने' के रुझान को जन्म दिया। 90 के दशक के उत्तरार्ध से लेकर 00 के दशक की शुरुआत तक की पुरानी यादों की आधुनिक रूप से पुनर्व्याख्या करके और प्राकृतिक किशोर भावनाओं पर जोर देकर, उन्होंने पदार्पण पर एक विशाल सिंड्रोम बनाया।", pt: "NewJeans é um grupo feminino multinacional de 5 membros da ADOR, com a ambição de se tornarem ícones da época como o jeans do dia a dia. Produzidos por Min Hee-jin, eles desencadearam as tendências 'Y2K' e 'easy-listing' no K-pop. Ao reinterpretar modernamente a nostalgia do final dos anos 90 ao início dos anos 2000 e enfatizar as vibrações naturais da adolescência, eles criaram uma enorme síndrome na estreia.", ar: "NewJeans هي مجموعة فتيات متعددة الجنسيات مكونة من 5 أعضاء تحت إشراف ADOR، وتطمح إلى أن تصبح أيقونات العصر مثل الجينز اليومي. تم إنتاجها بواسطة Min Hee-jin، وقد أثارت اتجاهات \"Y2K\" و\"الاستماع السهل\" في موسيقى البوب ​​الكورية. من خلال إعادة تفسير الحنين إلى أواخر التسعينيات وأوائل القرن العشرين بشكل عصري والتأكيد على المشاعر الطبيعية للمراهقين، فقد خلقوا متلازمة هائلة عند ظهورهم لأول مرة.", th: "NewJeans คือเกิร์ลกรุ๊ปข้ามชาติที่มีสมาชิก 5 คนภายใต้ ADOR ด้วยความทะเยอทะยานที่จะกลายเป็นไอคอนแห่งยุคสมัยเช่นเดียวกับยีนส์ในชีวิตประจำวัน ผลิตโดย Min Hee-jin พวกเขาจุดประกายกระแส 'Y2K' และ 'ฟังง่าย' ใน K-pop ด้วยการตีความความคิดถึงของช่วงปลายยุค 90 ถึงต้นยุค 00 ใหม่อย่างทันสมัย ​​และเน้นย้ำถึงกลิ่นอายของวัยรุ่นตามธรรมชาติ สิ่งเหล่านี้จึงสร้างความฮือฮาครั้งใหญ่เมื่อเปิดตัว", vi: "NewJeans là nhóm nhạc nữ đa quốc gia gồm 5 thành viên trực thuộc ADOR, với tham vọng trở thành biểu tượng của thời đại giống như những chiếc quần jean thường ngày. Được sản xuất bởi Min Hee-jin, họ đã khơi dậy xu hướng 'Y2K' và 'dễ nghe' trong K-pop. Bằng cách diễn giải lại nỗi nhớ những năm cuối thập niên 90 đến đầu những năm 00 một cách hiện đại và nhấn mạnh vào cảm xúc tự nhiên của tuổi teen, họ đã tạo ra một hội chứng lớn khi ra mắt.", ru: "NewJeans — это транснациональная женская группа из пяти участниц ADOR, стремящаяся стать иконами времени, как повседневные джинсы. Продюсированные Мин Хи Джин, они положили начало тенденциям «Y2K» и «легкой музыки» в K-pop. Современно интерпретируя ностальгию конца 90-х - начала 00-х и подчеркивая естественные подростковые вибрации, они создали огромный синдром после дебюта." },
     description: {
       ko: "Y2K 신드롬의 주역, 꾸밈없는 자연스러운 매력과 트렌디한 이지리스닝 음악으로 전 세계를 사로잡은 4세대 대표 아이콘입니다.",
       en: "The pioneers of the Y2K syndrome, representing the 4th generation with their unpretentious natural charm and trendy easy-listening music."
-    },
+    , ja: "Y2Kシンドロームの先駆者であり、気取らないナチュラルな魅力とトレンドのイージーリスニングミュージックで第4世代を代表するグループ。", zh: "Y2K综合症的先驱者，以朴实无华的自然魅力和流行轻松的音乐代表第四代。", es: "Los pioneros del síndrome Y2K, que representan la cuarta generación con su encanto natural sin pretensiones y su música moderna y fácil de escuchar.", id: "Pelopor sindrom Y2K, mewakili generasi ke-4 dengan pesona alamnya yang bersahaja dan musik trendi yang enak didengar.", fr: "Les pionniers du syndrome de l'an 2000, représentant la 4ème génération avec leur charme naturel sans prétention et leur musique tendance et facile à écouter.", hi: "Y2K सिंड्रोम के अग्रदूत, अपने स्पष्ट प्राकृतिक आकर्षण और ट्रेंडी आसानी से सुनने वाले संगीत के साथ चौथी पीढ़ी का प्रतिनिधित्व करते हैं।", pt: "Os pioneiros da síndrome Y2K, representando a 4ª geração com seu charme natural despretensioso e música moderna e fácil de ouvir.", ar: "رواد متلازمة Y2K، الذين يمثلون الجيل الرابع بسحرهم الطبيعي المتواضع وموسيقاهم العصرية سهلة الاستماع.", th: "ผู้บุกเบิกกลุ่มอาการ Y2K เป็นตัวแทนของรุ่นที่ 4 ที่มีเสน่ห์ตามธรรมชาติที่ไม่โอ้อวดและเพลงที่ฟังง่ายทันสมัย", vi: "Những người tiên phong tạo nên hội chứng Y2K, đại diện cho thế hệ thứ 4 với nét duyên dáng tự nhiên không phô trương và dòng nhạc thời thượng dễ nghe.", ru: "Первопроходцы синдрома Y2K, представляющие 4-е поколение с их неприхотливым природным обаянием и модной легкой музыкой." },
     tmi: {
       ko: [
         "뉴진스라는 이름은 매일 찾게 되고 언제 입어도 질리지 않는 '청바지(Jeans)'처럼 시대의 아이콘이 되겠다는 의미를 담고 있습니다.",
@@ -122,43 +122,43 @@ export const KPOP_GROUPS: KpopGroup[] = [
     },
     news: [
       {
-        title: { ko: "뉴진스, 'Attention'으로 데뷔 즉시 역주행 신드롬", en: "NewJeans Debut 'Attention' Becomes Instant Reverse-Charting Phenomenon" },
+        title: { ko: "뉴진스, 'Attention'으로 데뷔 즉시 역주행 신드롬", en: "NewJeans Debut 'Attention' Becomes Instant Reverse-Charting Phenomenon" , ja: "NewJeansのデビュー作「注目」がたちまち逆転チャート現象に", zh: "NewJeans 首秀“关注”瞬间成为反向图表现象", es: "La 'atención' del debut de NewJeans se convierte instantáneamente en un fenómeno de gráficos inversos", id: "'Perhatian' Debut NewJeans Menjadi Fenomena Reverse-Charting Instan", fr: "Les débuts de NewJeans, « Attention », deviennent un phénomène instantané de cartographie inversée", hi: "न्यूज़ीन्स का डेब्यू 'अटेंशन' तुरंत रिवर्स-चार्टिंग घटना बन गया", pt: "'Atenção' de estreia da NewJeans se torna um fenômeno instantâneo de gráfico reverso", ar: "ظهور NewJeans لأول مرة \"الانتباه\" يصبح ظاهرة فورية للرسم البياني العكسي", th: "การเปิดตัว NewJeans 'Attention' กลายเป็นปรากฏการณ์การสร้างแผนภูมิย้อนกลับในทันที", vi: "'Sự chú ý' ra mắt của NewJeans trở thành hiện tượng lập biểu đồ ngược ngay lập tức", ru: "Дебют NewJeans «Внимание» мгновенно стал феноменом обратного графика" },
         date: "2022.07.22",
-        summary: { ko: "뉴진스가 데뷔곡 'Attention'과 'Hype Boy'로 발매 즉시 음원차트 상위권을 휩쓸며 4세대 팝 신드롬의 서막을 열었습니다.", en: "NewJeans swept the charts immediately upon debut with 'Attention' and 'Hype Boy', heralding a new 4th-gen pop syndrome." },
+        summary: { ko: "뉴진스가 데뷔곡 'Attention'과 'Hype Boy'로 발매 즉시 음원차트 상위권을 휩쓸며 4세대 팝 신드롬의 서막을 열었습니다.", en: "NewJeans swept the charts immediately upon debut with 'Attention' and 'Hype Boy', heralding a new 4th-gen pop syndrome." , ja: "NewJeansはデビュー直後に「アテンション」と「ハイプ・ボーイ」でチャートを席巻し、新たな第4世代ポップ・シンドロームの到来を告げた。", zh: "NewJeans 凭借《Attention》和《Hype Boy》一经推出就横扫排行榜，预示着新的第四代流行综合症的到来。", es: "NewJeans arrasó en las listas inmediatamente después de su debut con 'Attention' y 'Hype Boy', presagiando un nuevo síndrome pop de cuarta generación.", id: "NewJeans menyapu tangga lagu segera setelah debut dengan 'Attention' dan 'Hype Boy', menandai sindrom pop generasi ke-4 yang baru.", fr: "NewJeans a balayé les charts dès ses débuts avec « Attention » et « Hype Boy », annonçant un nouveau syndrome pop de 4e génération.", hi: "न्यूज़ीन्स ने 'अटेंशन' और 'हाइप बॉय' के साथ शुरुआत करते ही चार्ट में धूम मचा दी, और एक नए चौथी पीढ़ी के पॉप सिंड्रोम की शुरुआत की।", pt: "NewJeans varreu as paradas imediatamente após sua estreia com 'Attention' e 'Hype Boy', anunciando uma nova síndrome pop de 4ª geração.", ar: "اكتسح NewJeans المخططات فور ظهوره لأول مرة بأغنيتي \"Attention\" و\"Hype Boy\"، مما يبشر بمتلازمة البوب ​​​​الجيل الرابع الجديدة.", th: "NewJeans กวาดชาร์ตทันทีที่เปิดตัวด้วยเพลง 'Attention' และ 'Hype Boy' ถือเป็นการประกาศถึงป๊อปซินโดรมเจนเนอเรชั่นที่ 4 ใหม่", vi: "NewJeans đã càn quét các bảng xếp hạng ngay khi ra mắt với \"Attention\" và \"Hype Boy\", báo trước một hội chứng nhạc pop thế hệ thứ 4 mới.", ru: "NewJeans сразу же после дебюта покорили чарты с песнями «Attention» и «Hype Boy», предвещая новый поп-синдром четвертого поколения." },
         url: "#"
       },
       {
-        title: { ko: "뉴진스 'Ditto', 멜론 역대 최장 1위 기록 경신", en: "NewJeans 'Ditto' Breaks Record for Longest No.1 on Melon Chart" },
+        title: { ko: "뉴진스 'Ditto', 멜론 역대 최장 1위 기록 경신", en: "NewJeans 'Ditto' Breaks Record for Longest No.1 on Melon Chart" , ja: "NewJeans「Ditto」がメロンチャート最長1位記録を更新", zh: "NewJeans 'Ditto' 打破 Melon 排行榜上最长第一名的记录", es: "NewJeans 'Ditto' bate el récord del número 1 más largo en Melon Chart", id: "NewJeans 'Ditto' Pecahkan Rekor No.1 Terpanjang di Melon Chart", fr: "NewJeans 'Ditto' bat le record du numéro 1 le plus long du classement Melon", hi: "न्यूज़ीन्स 'डिट्टो' ने मेलन चार्ट पर सबसे लंबे समय तक नंबर 1 रहने का रिकॉर्ड तोड़ा", pt: "NewJeans 'Ditto' quebra recorde de maior número 1 no Melon Chart", ar: "NewJeans 'Ditto' يحطم الرقم القياسي لأطول رقم 1 على مخطط البطيخ", th: "NewJeans 'Ditto' ทำลายสถิติครองอันดับ 1 ยาวนานที่สุดในชาร์ต Melon", vi: "NewJeans 'Ditto' phá kỷ lục đứng đầu lâu nhất trên bảng xếp hạng Melon", ru: "NewJeans 'Ditto' бьет рекорд и занимает первое место в чарте Melon Chart" },
         date: "2023.01.30",
-        summary: { ko: "'Ditto'가 멜론 차트에서 수십 주 연속 1위를 기록하며 역대 최장 기간 1위 기록을 새로 썼습니다.", en: "'Ditto' rewrote history by topping the Melon chart for a record-breaking consecutive streak." },
+        summary: { ko: "'Ditto'가 멜론 차트에서 수십 주 연속 1위를 기록하며 역대 최장 기간 1위 기록을 새로 썼습니다.", en: "'Ditto' rewrote history by topping the Melon chart for a record-breaking consecutive streak." , ja: "「Ditto」は、記録破りの連続連続記録でメロン・チャートの1位となり、歴史を塗り替えた。", zh: "“Ditto”连续打破记录连续登上 Melon 排行榜榜首，改写了历史。", es: "'Ditto' reescribió la historia al encabezar la lista Melon por una racha consecutiva récord.", id: "'Ditto' menulis ulang sejarah dengan menduduki puncak tangga lagu Melon untuk rekor berturut-turut yang memecahkan rekor.", fr: "\"Idem\" a réécrit l'histoire en arrivant en tête du classement Melon pour une séquence consécutive record.", hi: "'डिट्टो' ने लगातार रिकॉर्ड तोड़ मेलोन चार्ट में शीर्ष स्थान हासिल करके इतिहास को फिर से लिखा।", pt: "'Ditto' reescreveu a história ao liderar a parada do Melon por uma seqüência recorde consecutiva.", ar: "أعاد \"Ditto\" كتابة التاريخ من خلال تصدره مخطط Melon لخط متتالية حطمت الأرقام القياسية.", th: "'Ditto' สร้างประวัติศาสตร์ใหม่ด้วยการติดอันดับชาร์ต Melon ทำลายสถิติติดต่อกัน", vi: "'Ditto' đã viết lại lịch sử bằng cách đứng đầu bảng xếp hạng Melon với chuỗi kỷ lục liên tiếp.", ru: "«Ditto» переписал историю, возглавив чарт Melon, установив рекордную серию подряд." },
         url: "#"
       },
       {
-        title: { ko: "뉴진스 미니 2집 'Get Up', 빌보드 200 데뷔 1위", en: "NewJeans Mini Album 'Get Up' Debuts at No.1 on Billboard 200" },
+        title: { ko: "뉴진스 미니 2집 'Get Up', 빌보드 200 데뷔 1위", en: "NewJeans Mini Album 'Get Up' Debuts at No.1 on Billboard 200" , ja: "NewJeansミニアルバム「Get Up」がビルボード200で初登場1位を獲得", zh: "NewJeans 迷你专辑《Get Up》首次亮相就登上 Billboard 200 排行榜第一名", es: "El mini álbum de NewJeans 'Get Up' debuta en el puesto número 1 del Billboard 200", id: "Mini Album NewJeans 'Get Up' Debut di No.1 di Billboard 200", fr: "Le mini album de NewJeans « Get Up » fait ses débuts au n°1 du Billboard 200", hi: "न्यूज़ीन्स मिनी एल्बम 'गेट अप' ने बिलबोर्ड 200 पर नंबर 1 पर डेब्यू किया", pt: "Mini álbum da NewJeans ‘Get Up’ estreia em primeiro lugar na Billboard 200", ar: "ألبوم NewJeans Mini 'Get Up' يظهر لأول مرة في المركز الأول على Billboard 200", th: "มินิอัลบั้ม NewJeans 'Get Up' เปิดตัวอันดับ 1 บน Billboard 200", vi: "Mini Album NewJeans 'Get Up' ra mắt ở vị trí số 1 trên Billboard 200", ru: "Мини-альбом NewJeans «Get Up» дебютировал на первом месте в Billboard 200" },
         date: "2023.08.05",
-        summary: { ko: "미니 2집 'Get Up'이 빌보드 200 차트 정상에 오르며 K-팝 걸그룹 역대 최고 데뷔 성적을 기록했습니다.", en: "Mini album 'Get Up' debuted at #1 on the Billboard 200, marking the highest debut for a K-pop girl group album." },
+        summary: { ko: "미니 2집 'Get Up'이 빌보드 200 차트 정상에 오르며 K-팝 걸그룹 역대 최고 데뷔 성적을 기록했습니다.", en: "Mini album 'Get Up' debuted at #1 on the Billboard 200, marking the highest debut for a K-pop girl group album." , ja: "ミニアルバム「ゲットアップ」はビルボード200で初登場1位を記録し、K-POPガールズグループのアルバムとしては最高位のデビューを記録した。", zh: "迷你专辑《Get Up》首次亮相就在 Billboard 200 排行榜上排名第一，创下了韩国流行女团专辑的最高首秀成绩。", es: "El mini álbum 'Get Up' debutó en el puesto número 1 en el Billboard 200, marcando el debut más alto para un álbum de un grupo de chicas de K-pop.", id: "Mini album 'Get Up' debut di #1 di Billboard 200, menandai debut tertinggi untuk album girl grup K-pop.", fr: "Le mini-album « Get Up » a fait ses débuts au premier rang du Billboard 200, marquant ainsi le plus haut début pour un album de groupe de filles K-pop.", hi: "मिनी एल्बम 'गेट अप' ने बिलबोर्ड 200 पर #1 पर शुरुआत की, जो कि किसी के-पॉप गर्ल समूह एल्बम के लिए सर्वोच्च शुरुआत है।", pt: "O mini-álbum 'Get Up' estreou em primeiro lugar na Billboard 200, marcando a maior estreia de um álbum de grupo feminino de K-pop.", ar: "ظهر الألبوم المصغر \"Get Up\" في المركز الأول في قائمة Billboard 200، وهو أعلى ظهور لألبوم فرقة فتيات كورية.", th: "มินิอัลบั้ม 'Get Up' เปิดตัวที่อันดับ 1 บน Billboard 200 ซึ่งถือเป็นการเปิดตัวสูงสุดสำหรับอัลบั้มเกิร์ลกรุ๊ป K-pop", vi: "Mini album 'Get Up' ra mắt ở vị trí số 1 trên bảng xếp hạng Billboard 200, đánh dấu mức ra mắt cao nhất cho một album của nhóm nhạc nữ K-pop.", ru: "Мини-альбом «Get Up» дебютировал под номером 1 в Billboard 200, что стало самым высоким дебютом для альбома женской K-pop группы." },
         url: "#"
       },
       {
-        title: { ko: "뉴진스, 일본 공식 데뷔… 오리콘 1위 석권", en: "NewJeans Makes Official Japan Debut, Tops Oricon Chart" },
+        title: { ko: "뉴진스, 일본 공식 데뷔… 오리콘 1위 석권", en: "NewJeans Makes Official Japan Debut, Tops Oricon Chart" , ja: "NewJeansが日本正式デビュー、オリコンチャートで1位を獲得", zh: "NewJeans 正式日本出道，登顶 Oricon 排行榜", es: "NewJeans hace su debut oficial en Japón y encabeza la lista Oricon", id: "NewJeans Makes Official Japan Debut, Tops Oricon Chart", fr: "NewJeans Makes Official Japan Debut, Tops Oricon Chart", hi: "NewJeans Makes Official Japan Debut, Tops Oricon Chart", pt: "NewJeans Makes Official Japan Debut, Tops Oricon Chart", ar: "NewJeans Makes Official Japan Debut, Tops Oricon Chart", th: "NewJeans Makes Official Japan Debut, Tops Oricon Chart", vi: "NewJeans Makes Official Japan Debut, Tops Oricon Chart", ru: "NewJeans Makes Official Japan Debut, Tops Oricon Chart" },
         date: "2023.08.16",
-        summary: { ko: "일본 공식 데뷔 앨범이 오리콘 주간 앨범 차트 1위를 기록하며 J-팝 시장에 성공적으로 안착했습니다.", en: "Their official Japanese debut album topped the Oricon weekly album chart, successfully entering the J-pop market." },
+        summary: { ko: "일본 공식 데뷔 앨범이 오리콘 주간 앨범 차트 1위를 기록하며 J-팝 시장에 성공적으로 안착했습니다.", en: "Their official Japanese debut album topped the Oricon weekly album chart, successfully entering the J-pop market." , ja: "Their official Japanese debut album topped the Oricon weekly album chart, successfully entering the J-pop market.", zh: "Their official Japanese debut album topped the Oricon weekly album chart, successfully entering the J-pop market.", es: "Their official Japanese debut album topped the Oricon weekly album chart, successfully entering the J-pop market.", id: "Their official Japanese debut album topped the Oricon weekly album chart, successfully entering the J-pop market.", fr: "Their official Japanese debut album topped the Oricon weekly album chart, successfully entering the J-pop market.", hi: "Their official Japanese debut album topped the Oricon weekly album chart, successfully entering the J-pop market.", pt: "Their official Japanese debut album topped the Oricon weekly album chart, successfully entering the J-pop market.", ar: "Their official Japanese debut album topped the Oricon weekly album chart, successfully entering the J-pop market.", th: "Their official Japanese debut album topped the Oricon weekly album chart, successfully entering the J-pop market.", vi: "Their official Japanese debut album topped the Oricon weekly album chart, successfully entering the J-pop market.", ru: "Their official Japanese debut album topped the Oricon weekly album chart, successfully entering the J-pop market." },
         url: "#"
       },
       {
-        title: { ko: "뉴진스 'How Sweet', 전 세계 동시 발매 후 글로벌 차트 장악", en: "NewJeans 'How Sweet' Dominates Global Charts Upon Release" },
+        title: { ko: "뉴진스 'How Sweet', 전 세계 동시 발매 후 글로벌 차트 장악", en: "NewJeans 'How Sweet' Dominates Global Charts Upon Release" , ja: "NewJeans 'How Sweet' Dominates Global Charts Upon Release", zh: "NewJeans 'How Sweet' Dominates Global Charts Upon Release", es: "NewJeans 'How Sweet' Dominates Global Charts Upon Release", id: "NewJeans 'How Sweet' Dominates Global Charts Upon Release", fr: "NewJeans 'How Sweet' Dominates Global Charts Upon Release", hi: "NewJeans 'How Sweet' Dominates Global Charts Upon Release", pt: "NewJeans 'How Sweet' Dominates Global Charts Upon Release", ar: "NewJeans 'How Sweet' Dominates Global Charts Upon Release", th: "NewJeans 'How Sweet' Dominates Global Charts Upon Release", vi: "NewJeans 'How Sweet' Dominates Global Charts Upon Release", ru: "NewJeans 'How Sweet' Dominates Global Charts Upon Release" },
         date: "2024.05.24",
-        summary: { ko: "신보 'How Sweet'가 멜론·스포티파이 등 국내외 차트를 동시에 점령하며 변함없는 영향력을 증명했습니다.", en: "'How Sweet' simultaneously dominated Melon and Spotify global charts, proving their enduring influence." },
+        summary: { ko: "신보 'How Sweet'가 멜론·스포티파이 등 국내외 차트를 동시에 점령하며 변함없는 영향력을 증명했습니다.", en: "'How Sweet' simultaneously dominated Melon and Spotify global charts, proving their enduring influence." , ja: "'How Sweet' simultaneously dominated Melon and Spotify global charts, proving their enduring influence.", zh: "'How Sweet' simultaneously dominated Melon and Spotify global charts, proving their enduring influence.", es: "'How Sweet' simultaneously dominated Melon and Spotify global charts, proving their enduring influence.", id: "'How Sweet' simultaneously dominated Melon and Spotify global charts, proving their enduring influence.", fr: "'How Sweet' simultaneously dominated Melon and Spotify global charts, proving their enduring influence.", hi: "'How Sweet' simultaneously dominated Melon and Spotify global charts, proving their enduring influence.", pt: "'How Sweet' simultaneously dominated Melon and Spotify global charts, proving their enduring influence.", ar: "'How Sweet' simultaneously dominated Melon and Spotify global charts, proving their enduring influence.", th: "'How Sweet' simultaneously dominated Melon and Spotify global charts, proving their enduring influence.", vi: "'How Sweet' simultaneously dominated Melon and Spotify global charts, proving their enduring influence.", ru: "'How Sweet' simultaneously dominated Melon and Spotify global charts, proving their enduring influence." },
         url: "#"
       },
       {
-        title: { ko: "뉴진스, 도쿄돔 단독 팬미팅 4만 석 전석 매진", en: "NewJeans Sells Out 40,000-Seat Tokyo Dome Fan Meeting" },
+        title: { ko: "뉴진스, 도쿄돔 단독 팬미팅 4만 석 전석 매진", en: "NewJeans Sells Out 40,000-Seat Tokyo Dome Fan Meeting" , ja: "NewJeans Sells Out 40,000-Seat Tokyo Dome Fan Meeting", zh: "NewJeans Sells Out 40,000-Seat Tokyo Dome Fan Meeting", es: "NewJeans Sells Out 40,000-Seat Tokyo Dome Fan Meeting", id: "NewJeans Sells Out 40,000-Seat Tokyo Dome Fan Meeting", fr: "NewJeans Sells Out 40,000-Seat Tokyo Dome Fan Meeting", hi: "NewJeans Sells Out 40,000-Seat Tokyo Dome Fan Meeting", pt: "NewJeans Sells Out 40,000-Seat Tokyo Dome Fan Meeting", ar: "NewJeans Sells Out 40,000-Seat Tokyo Dome Fan Meeting", th: "NewJeans Sells Out 40,000-Seat Tokyo Dome Fan Meeting", vi: "NewJeans Sells Out 40,000-Seat Tokyo Dome Fan Meeting", ru: "NewJeans Sells Out 40,000-Seat Tokyo Dome Fan Meeting" },
         date: "2024.06.26",
-        summary: { ko: "일본 최대 공연장 도쿄돔에서 단독 팬미팅을 개최, 4만 석을 전석 매진시키며 아시아 최정상 걸그룹임을 입증했습니다.", en: "Sold out all 40,000 seats at Tokyo Dome for a solo fan meeting, cementing their status as Asia's top girl group." },
+        summary: { ko: "일본 최대 공연장 도쿄돔에서 단독 팬미팅을 개최, 4만 석을 전석 매진시키며 아시아 최정상 걸그룹임을 입증했습니다.", en: "Sold out all 40,000 seats at Tokyo Dome for a solo fan meeting, cementing their status as Asia's top girl group." , ja: "Sold out all 40,000 seats at Tokyo Dome for a solo fan meeting, cementing their status as Asia's top girl group.", zh: "Sold out all 40,000 seats at Tokyo Dome for a solo fan meeting, cementing their status as Asia's top girl group.", es: "Sold out all 40,000 seats at Tokyo Dome for a solo fan meeting, cementing their status as Asia's top girl group.", id: "Sold out all 40,000 seats at Tokyo Dome for a solo fan meeting, cementing their status as Asia's top girl group.", fr: "Sold out all 40,000 seats at Tokyo Dome for a solo fan meeting, cementing their status as Asia's top girl group.", hi: "Sold out all 40,000 seats at Tokyo Dome for a solo fan meeting, cementing their status as Asia's top girl group.", pt: "Sold out all 40,000 seats at Tokyo Dome for a solo fan meeting, cementing their status as Asia's top girl group.", ar: "Sold out all 40,000 seats at Tokyo Dome for a solo fan meeting, cementing their status as Asia's top girl group.", th: "Sold out all 40,000 seats at Tokyo Dome for a solo fan meeting, cementing their status as Asia's top girl group.", vi: "Sold out all 40,000 seats at Tokyo Dome for a solo fan meeting, cementing their status as Asia's top girl group.", ru: "Sold out all 40,000 seats at Tokyo Dome for a solo fan meeting, cementing their status as Asia's top girl group." },
         url: "#"
       },
       {
-        title: { ko: "어도어 이사회, 민희진 대표이사 해임 의결", en: "ADOR Board Votes to Dismiss CEO Min Hee-jin" },
+        title: { ko: "어도어 이사회, 민희진 대표이사 해임 의결", en: "ADOR Board Votes to Dismiss CEO Min Hee-jin" , ja: "ADOR Board Votes to Dismiss CEO Min Hee-jin", zh: "ADOR Board Votes to Dismiss CEO Min Hee-jin", es: "ADOR Board Votes to Dismiss CEO Min Hee-jin", id: "ADOR Board Votes to Dismiss CEO Min Hee-jin", fr: "ADOR Board Votes to Dismiss CEO Min Hee-jin", hi: "ADOR Board Votes to Dismiss CEO Min Hee-jin", pt: "ADOR Board Votes to Dismiss CEO Min Hee-jin", ar: "ADOR Board Votes to Dismiss CEO Min Hee-jin", th: "ADOR Board Votes to Dismiss CEO Min Hee-jin", vi: "ADOR Board Votes to Dismiss CEO Min Hee-jin", ru: "ADOR Board Votes to Dismiss CEO Min Hee-jin" },
         date: "2024.08.27",
         summary: { ko: "하이브와 민희진 전 대표 간 경영권 분쟁 끝에 어도어 이사회가 민희진 대표 해임을 의결했습니다.", en: "Following a management dispute between HYBE and Min Hee-jin, the ADOR board voted to dismiss her as CEO." },
         url: "#"
@@ -327,16 +327,16 @@ export const KPOP_GROUPS: KpopGroup[] = [
   },
   {
     id: "ive",
-    name: { ko: "아이브", en: "IVE" },
+    name: { ko: "아이브", en: "IVE", ja: "アイブ (IVE)", zh: "IVE", es: "IVE", id: "IVE", fr: "IVE", hi: "आइव (IVE)", pt: "IVE", ar: "آيف (IVE)", th: "ไอฟ์ (IVE)", vi: "IVE", ru: "IVE" },
     officialSite: "http://www.starship-ent.com/profile/musician/ive.php",
     company: "Starship",
     debut: "2021.12.01",
-    fandom: { ko: "다이브 (DIVE)", en: "DIVE" },
+    fandom: { ko: "다이브 (DIVE)", en: "DIVE", ja: "ダイブ (DIVE)", zh: "DIVE", es: "DIVE", id: "DIVE", fr: "DIVE", hi: "डाइव (DIVE)", pt: "DIVE", ar: "دايف (DIVE)", th: "ไดฟ์ (DIVE)", vi: "DIVE", ru: "DIVE" },
     accentColor: "#ff00ff",
     imageUrl: "https://tse1.mm.bing.net/th?q=%EC%95%84%EC%9D%B4%EB%B8%8C%20IVE%20%EA%B7%B8%EB%A3%B9%20%EB%8B%A8%EC%B2%B4%20%EA%B3%A0%ED%99%94%EC%A7%88",
     socials: { instagram: "https://www.instagram.com/ivestarship/", twitter: "https://twitter.com/IVEstarship", youtube: "https://www.youtube.com/@IVEstarship", tiktok: "https://www.tiktok.com/@ive.official" },
     wiki: { ko: "아이브(IVE)는 스타쉽 엔터테인먼트 소속 6인조 걸그룹입니다. 'I HAVE'의 줄임말로, 우리가 가진 것들을 당당하게 보여주겠다는 포부를 담고 있습니다.", en: "IVE is a 6-member girl group under Starship Entertainment. The name stands for 'I HAVE'." },
-    description: { ko: "주체적인 '자기애'를 노래하는 4세대 완성형 걸그룹, 눈부신 비주얼과 우아한 퍼포먼스를 자랑합니다.", en: "The complete 4th-gen girl group singing about independent 'self-love'." },
+    description: { ko: "주체적인 '자기애'를 노래하는 4세대 완성형 걸그룹, 눈부신 비주얼과 우아한 퍼포먼스를 자랑합니다.", en: "The complete 4th-gen girl group singing about independent 'self-love'.", ja: "自立した「自己愛」を歌う4世代完成形ガールグループ。輝くビジュアルと優雅なパフォーマンスが魅力です。", zh: "歌颂独立'自我爱'的4代完整型女团，拥有耀眼颜值和优雅表演。", es: "El grupo de chicas completo de 4ª generación que canta sobre el 'amor propio' independiente, con visuales deslumbrantes.", id: "Grup perempuan generasi ke-4 yang sempurna, menyanyikan lagu tentang 'cinta diri' yang mandiri dengan visual memukau.", fr: "Le girl group complet de 4ème génération chantant l'amour de soi indépendant, avec un visuel éblouissant.", hi: "स्वतंत्र 'आत्म-प्रेम' का गाना गाने वाला 4वीं पीढ़ी का परिपूर्ण गर्ल ग्रुप।", pt: "O grupo de garotas completo da 4ª geração cantando sobre o 'amor próprio' independente, com visuais deslumbrantes.", ar: "مجموعة الفتيات الكاملة من الجيل الرابع التي تغني عن 'حب الذات' المستقل بمظهر مبهر.", th: "เกิร์ลกรุ๊ปเจน 4 ที่สมบูรณ์แบบ ร้องเพลงเกี่ยวกับ 'ความรักตัวเอง' อย่างอิสระ", vi: "Nhóm nhạc nữ thế hệ 4 hoàn chỉnh hát về 'tình yêu bản thân' độc lập với visual rực rỡ.", ru: "Полноценный гёрл-груп 4-го поколения, воспевающий независимую 'любовь к себе'." },
     tmi: {
       ko: [
         "아이브 멤버들의 평균 키는 약 169cm로 K-팝 걸그룹 중에서도 단연 손꼽히는 '장신 그룹'입니다.",
@@ -369,11 +369,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "anyujin",
         name: { ko: "안유진", en: "An Yujin" },
-        role: { ko: "리더/보컬", en: "Leader/Vocalist" },
+        role: { ko: "리더/보컬", en: "Leader/Vocalist", ja: "リーダー/ボーカル", zh: "队长/声乐", es: "Líder/Vocalista", id: "Pemimpin/Vokalis", fr: "Leader/Vocaliste", hi: "लीडर/वोकलिस्ट", pt: "Líder/Vocalista", ar: "القائدة/مغنية", th: "ลีดเดอร์/นักร้อง", vi: "Trưởng nhóm/Ca sĩ", ru: "Лидер/Вокалист" },
         birth: "2003.09.01", mbti: "ISTP",
         zodiac: { ko: "처녀자리", en: "Virgo" },
         height: "173cm", bloodType: "A",
-        description: { ko: "예능 치트키와 카리스마 리더를 오가는 육각형 멤버입니다.", en: "An all-rounder alternating between variety genius and charismatic leader." },
+        description: { ko: "예능 치트키와 카리스마 리더를 오가는 육각형 멤버입니다.", en: "An all-rounder alternating between variety genius and charismatic leader.", ja: "バラエティの天才とカリスマリーダーを行き来する万能メンバー。", zh: "在综艺天才和魅力队长之间自如切换的全能成员。", es: "Miembro completo que alterna entre genio del variety show y líder carismático.", id: "Anggota serbabisa yang berganti peran antara bintang variety dan pemimpin karismatik.", fr: "Membre polyvalent oscillant entre génie de la variété et leader charismatique.", hi: "वैरायटी जीनियस और करिश्माई लीडर के बीच स्विच करने वाले ऑल-राउंडर सदस्य।", pt: "Membro completo que alterna entre gênio do variety e líder carismático.", ar: "عضو متكاملة تتنقل بين عبقرية البرامج والقيادة الكاريزمية.", th: "สมาชิกรอบด้านที่สลับระหว่างอัจฉริยะวาไรตี้และลีดเดอร์ผู้มีเสน่ห์", vi: "Thành viên toàn diện chuyển đổi giữa tài năng variety và lãnh đạo đầy sức hút.", ru: "Разносторонняя участница, сочетающая таланты ведущей шоу и харизматичного лидера." },
         imageUrl: "https://tse1.mm.bing.net/th?q=IVE+An+Yujin+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
@@ -396,11 +396,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "gaeul",
         name: { ko: "가을", en: "Gaeul" },
-        role: { ko: "래퍼/보컬", en: "Rapper/Vocalist" },
+        role: { ko: "래퍼/보컬", en: "Rapper/Vocalist", ja: "ラッパー/ボーカル", zh: "说唱/声乐", es: "Rapera/Vocalista", id: "Rapper/Vokalis", fr: "Rappeuse/Vocaliste", hi: "रैपर/वोकलिस्ट", pt: "Rapper/Vocalista", ar: "مغنية راب/مغنية", th: "แรปเปอร์/นักร้อง", vi: "Rapper/Ca sĩ", ru: "Рэпер/Вокалист" },
         birth: "2002.09.24", mbti: "ISTJ",
         zodiac: { ko: "천칭자리", en: "Libra" },
         height: "164cm", bloodType: "B",
-        description: { ko: "팀의 맏언니이자 매력적인 랩 톤을 가진 멤버입니다.", en: "The oldest and a member with an attractive rap tone." },
+        description: { ko: "팀의 맏언니이자 매력적인 랩 톤을 가진 멤버입니다.", en: "The oldest and a member with an attractive rap tone.", ja: "チームの最年長メンバーで、魅力的なラップトーンの持ち主。", zh: "团队最年长的姐姐，拥有迷人的说唱音色。", es: "La mayor del equipo con un tono de rap muy atractivo.", id: "Anggota tertua tim yang memiliki nada rap yang memikat.", fr: "La doyenne de l'équipe avec un ton de rap captivant.", hi: "टीम की सबसे बड़ी सदस्य और आकर्षक रैप टोन वाली मेंबर।", pt: "A mais velha da equipe com um tom de rap atraente.", ar: "الأكبر سناً في الفريق بنبرة راب جذابة.", th: "สมาชิกอาวุโสสุดของทีมที่มีน้ำเสียงแรปน่าหลงใหล", vi: "Thành viên lớn tuổi nhất của nhóm với giọng rap hấp dẫn.", ru: "Старшая участница группы с привлекательным рэп-голосом." },
         imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Gaeul+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
@@ -423,11 +423,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "rei",
         name: { ko: "레이", en: "Rei" },
-        role: { ko: "래퍼/보컬", en: "Rapper/Vocalist" },
+        role: { ko: "래퍼/보컬", en: "Rapper/Vocalist", ja: "ラッパー/ボーカル", zh: "说唱/声乐", es: "Rapera/Vocalista", id: "Rapper/Vokalis", fr: "Rappeuse/Vocaliste", hi: "रैपर/वोकलिस्ट", pt: "Rapper/Vocalista", ar: "مغنية راب/مغنية", th: "แรปเปอร์/นักร้อง", vi: "Rapper/Ca sĩ", ru: "Рэпер/Вокалист" },
         birth: "2004.02.03", mbti: "INFJ",
         zodiac: { ko: "물병자리", en: "Aquarius" },
         height: "169cm", bloodType: "A",
-        description: { ko: "유니크한 감성과 랩 실력을 가진 일본인 멤버입니다.", en: "Japanese member with unique vibes and rap skills." },
+        description: { ko: "유니크한 감성과 랩 실력을 가진 일본인 멤버입니다.", en: "Japanese member with unique vibes and rap skills.", ja: "ユニークな感性とラップスキルを持つ日本人メンバー。", zh: "拥有独特感性和说唱实力的日本成员。", es: "Miembro japonesa con sensibilidad única y habilidades de rap.", id: "Anggota Jepang dengan sensibilitas unik dan kemampuan rap.", fr: "Membre japonaise avec une sensibilité unique et des talents de rap.", hi: "अनोखी संवेदनशीलता और रैप कौशल वाली जापानी सदस्य।", pt: "Membro japonesa com sensibilidade única e habilidades de rap.", ar: "عضو يابانية بحساسية فريدة ومهارات راب.", th: "สมาชิกชาวญี่ปุ่นที่มีความรู้สึกเฉพาะตัวและทักษะแรป", vi: "Thành viên người Nhật với cảm nhận độc đáo và kỹ năng rap.", ru: "Японская участница с уникальным чутьём и навыками рэпа." },
         imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Rei+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
@@ -450,11 +450,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "jangwonyoung",
         name: { ko: "장원영", en: "Jang Wonyoung" },
-        role: { ko: "센터/보컬", en: "Center/Vocalist" },
+        role: { ko: "센터/보컬", en: "Center/Vocalist", ja: "センター/ボーカル", zh: "中心/声乐", es: "Centro/Vocalista", id: "Center/Vokalis", fr: "Centre/Vocaliste", hi: "सेंटर/वोकलिस्ट", pt: "Centro/Vocalista", ar: "المركز/مغنية", th: "เซ็นเตอร์/นักร้อง", vi: "Trung tâm/Ca sĩ", ru: "Центр/Вокалист" },
         birth: "2004.08.31", mbti: "ENFP",
         zodiac: { ko: "처녀자리", en: "Virgo" },
         height: "173cm", bloodType: "O",
-        description: { ko: "K-POP 4세대를 상징하는 워너비 아이콘이자 비주얼 센터입니다.", en: "The wannabe icon and visual center representing 4th-gen K-POP." },
+        description: { ko: "K-POP 4세대를 상징하는 워너비 아이콘이자 비주얼 센터입니다.", en: "The wannabe icon and visual center representing 4th-gen K-POP.", ja: "4世代K-POPを象徴するウォンビーアイコンでありビジュアルセンター。", zh: "代表4代K-POP的梦想图标和视觉中心。", es: "Icono wannabe y centro visual que representa el K-POP de 4ª generación.", id: "Ikon wannabe dan pusat visual yang mewakili K-POP generasi ke-4.", fr: "L'icône wannabe et le centre visuel représentant le K-POP de 4ème génération.", hi: "4वीं पीढ़ी के K-POP का प्रतिनिधित्व करने वाला wannabe आइकन और विजुअल सेंटर।", pt: "O ícone wannabe e centro visual representando o K-POP da 4ª geração.", ar: "أيقونة أحلام ومركز بصري يمثل K-POP من الجيل الرابع.", th: "ไอคอน wannabe และเซ็นเตอร์วิชวลที่เป็นตัวแทนของ K-POP เจน 4", vi: "Biểu tượng wannabe và trung tâm visual đại diện cho K-POP thế hệ 4.", ru: "Желанная икона и визуальный центр, представляющий K-POP 4-го поколения." },
         imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Jang+Wonyoung+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
@@ -477,11 +477,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "liz",
         name: { ko: "리즈", en: "Liz" },
-        role: { ko: "메인보컬", en: "Main Vocalist" },
+        role: { ko: "메인보컬", en: "Main Vocalist", ja: "メインボーカル", zh: "主唱", es: "Vocalista Principal", id: "Vokalis Utama", fr: "Vocaliste Principale", hi: "मेन वोकलिस्ट", pt: "Vocalista Principal", ar: "المغنية الرئيسية", th: "นักร้องหลัก", vi: "Giọng ca chính", ru: "Главный вокалист" },
         birth: "2004.11.21", mbti: "ISFP",
         zodiac: { ko: "전갈자리", en: "Scorpio" },
         height: "170cm", bloodType: "AB",
-        description: { ko: "맑은 보조개와 시원한 가창력을 가진 메인 보컬급 멤버입니다.", en: "A main vocal-tier member with clear dimples and powerful vocals." },
+        description: { ko: "맑은 보조개와 시원한 가창력을 가진 메인 보컬급 멤버입니다.", en: "A main vocal-tier member with clear dimples and powerful vocals.", ja: "明るいえくぼと伸びやかな歌唱力を持つメインボーカル級メンバー。", zh: "拥有清澈酒窝和强力歌唱实力的主唱级成员。", es: "Miembro de nivel vocalista principal con hoyuelos claros y poderosa voz.", id: "Anggota level main vocal dengan lesung pipit yang cerah dan suara yang kuat.", fr: "Membre de niveau vocaliste principal avec des fossettes claires et une voix puissante.", hi: "स्पष्ट डिम्पल और शक्तिशाली गायन वाली मेन वोकल-स्तर की सदस्य।", pt: "Membro de nível vocalista principal com covinhas claras e voz poderosa.", ar: "عضو بمستوى المغنية الرئيسية بغمازات واضحة وصوت قوي.", th: "สมาชิกระดับนักร้องหลักที่มีลักยิ้มสดใสและเสียงร้องอันทรงพลัง", vi: "Thành viên cấp độ main vocal với lúm đồng tiền rõ ràng và giọng hát mạnh mẽ.", ru: "Участница уровня главного вокалиста с ямочками и мощным голосом." },
         imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Liz+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
@@ -504,11 +504,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "leeseo",
         name: { ko: "이서", en: "Leeseo" },
-        role: { ko: "보컬/막내", en: "Vocalist/Maknae" },
+        role: { ko: "보컬/막내", en: "Vocalist/Maknae", ja: "ボーカル/末っ子", zh: "声乐/最小成员", es: "Vocalista/Maknae", id: "Vokalis/Maknae", fr: "Vocaliste/Maknae", hi: "वोकलिस्ट/मैकने", pt: "Vocalista/Maknae", ar: "مغنية/المدللة الصغيرة", th: "นักร้อง/มักแน", vi: "Ca sĩ/Maknae", ru: "Вокалист/Макне" },
         birth: "2007.02.21", mbti: "ENFP",
         zodiac: { ko: "물병자리", en: "Aquarius" },
         height: "166cm", bloodType: "O",
-        description: { ko: "나이답지 않은 무대 장악력을 보여주는 팀의 막내입니다.", en: "The youngest showing stage presence unbefitting her age." },
+        description: { ko: "나이답지 않은 무대 장악력을 보여주는 팀의 막내입니다.", en: "The youngest showing stage presence unbefitting her age.", ja: "年齢に見合わないステージ掌握力を発揮するチームの末っ子。", zh: "展现出超乎年龄的舞台掌控力的团队最小成员。", es: "La más joven del equipo con un dominio del escenario impropio de su edad.", id: "Anggota termuda yang menunjukkan penguasaan panggung melebihi usianya.", fr: "La benjamine de l'équipe montrant une maîtrise scénique au-delà de son âge.", hi: "अपनी उम्र से परे स्टेज प्रेजेंस दिखाने वाली टीम की सबसे छोटी सदस्य।", pt: "A mais jovem da equipe com domínio de palco além de sua idade.", ar: "أصغر أعضاء الفريق التي تُظهر سيطرة على المسرح تفوق عمرها.", th: "สมาชิกอายุน้อยที่สุดที่แสดงการครองเวทีเกินวัย", vi: "Thành viên nhỏ tuổi nhất của nhóm thể hiện sự làm chủ sân khấu vượt tuổi.", ru: "Младшая участница группы, демонстрирующая владение сценой, несвойственное её возрасту." },
         imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Leeseo+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
@@ -532,16 +532,16 @@ export const KPOP_GROUPS: KpopGroup[] = [
   },
   {
     id: "aespa",
-    name: { ko: "에스파", en: "aespa" },
+    name: { ko: "에스파", en: "aespa", ja: "エスパ (aespa)", zh: "æspa", es: "aespa", id: "aespa", fr: "aespa", hi: "एस्पा (aespa)", pt: "aespa", ar: "إسبا (aespa)", th: "เอสป้า (aespa)", vi: "aespa", ru: "aespa" },
     officialSite: "https://aespa.com/",
     company: "SM Entertainment",
     debut: "2020.11.17",
-    fandom: { ko: "마이 (MY)", en: "MY" },
+    fandom: { ko: "마이 (MY)", en: "MY", ja: "マイ (MY)", zh: "MY", es: "MY", id: "MY", fr: "MY", hi: "माय (MY)", pt: "MY", ar: "ماي (MY)", th: "มาย (MY)", vi: "MY", ru: "MY" },
     accentColor: "#7b46d1",
     imageUrl: "https://tse1.mm.bing.net/th?q=aespa+Group+High+Resolution+Photo+2024",
     socials: { instagram: "https://www.instagram.com/aespa_official/", twitter: "https://twitter.com/aespa_official", youtube: "https://www.youtube.com/@aespa", tiktok: "https://www.tiktok.com/@aespa_official" },
     wiki: { ko: "에스파(aespa)는 SM 엔터테인먼트 소속의 4인조 걸그룹입니다. 독보적인 메타버스 세계관으로 K-POP의 새로운 지평을 열었습니다.", en: "aespa is a 4-member girl group under SM Entertainment." },
-    description: { ko: "메타버스 세계관의 선구자, 독보적인 컨셉과 압도적인 퍼포먼스를 자랑합니다.", en: "The pioneers of the metaverse concept." },
+    description: { ko: "메타버스 세계관의 선구자, 독보적인 컨셉과 압도적인 퍼포먼스를 자랑합니다.", en: "The pioneers of the metaverse concept.", ja: "メタバース世界観の先駆者、独自のコンセプトと圧倒的なパフォーマンスが魅力。", zh: "元宇宙世界观的先驱，拥有独特概念和压倒性演出。", es: "Las pioneras del concepto metaverso, con un concepto único y actuaciones abrumadoras.", id: "Pelopor konsep metaverse dengan konsep unik dan penampilan yang memukau.", fr: "Les pionnières du concept métavers, avec un concept unique et des performances époustouflantes.", hi: "मेटावर्स की अवधारणा की अग्रणी, अद्वितीय कॉन्सेप्ट और जबरदस्त परफॉर्मेंस वाला ग्रुप।", pt: "As pioneiras do conceito metaverso, com um conceito único e atuações impressionantes.", ar: "رائدات مفهوم الميتافيرس بمفهوم فريد وأداء ساحق.", th: "ผู้บุกเบิกคอนเซ็ปต์เมตาเวิร์ส ด้วยคอนเซ็ปต์เฉพาะตัวและการแสดงที่น่าทึ่ง", vi: "Những người tiên phong của khái niệm metaverse với concept độc đáo và màn trình diễn ấn tượng.", ru: "Пионеры концепции метавселенной с уникальным концептом и захватывающими выступлениями." },
     tmi: {
       ko: [
         "에스파의 세계관에는 멤버 각자의 AI 아바타인 'ae-멤버명'이 존재하며, 처음 자신의 아바타를 본 멤버들이 '너무 예뻐서 긴장했다'고 했습니다.",
@@ -574,11 +574,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "karina",
         name: { ko: "카리나", en: "Karina" },
-        role: { ko: "리더/메인댄서/래퍼", en: "Leader/Main Dancer/Rapper" },
+        role: { ko: "리더/메인댄서/래퍼", en: "Leader/Main Dancer/Rapper", ja: "リーダー/メインダンサー/ラッパー", zh: "队长/主要舞者/说唱", es: "Líder/Bailarina Principal/Rapera", id: "Pemimpin/Penari Utama/Rapper", fr: "Leader/Danseuse Principale/Rappeuse", hi: "लीडर/मेन डांसर/रैपर", pt: "Líder/Dançarina Principal/Rapper", ar: "القائدة/الراقصة الرئيسية/مغنية الراب", th: "ลีดเดอร์/นักเต้นหลัก/แรปเปอร์", vi: "Trưởng nhóm/Vũ công chính/Rapper", ru: "Лидер/Главный танцор/Рэпер" },
         birth: "2000.04.11", mbti: "ENFP",
         zodiac: { ko: "양자리", en: "Aries" },
         height: "168cm", bloodType: "B",
-        description: { ko: "AI보다 더 AI 같은 비주얼로 유명하며, 팀의 중심을 잡아주는 카리스마 리더입니다.", en: "Famous for her visuals that look more AI than AI itself, a charismatic leader anchoring the team." },
+        description: { ko: "AI보다 더 AI 같은 비주얼로 유명하며, 팀의 중심을 잡아주는 카리스마 리더입니다.", en: "Famous for her visuals that look more AI than AI itself, a charismatic leader anchoring the team.", ja: "AIよりもAIらしいビジュアルで有名な、チームを引き締めるカリスマリーダー。", zh: "以比AI更像AI的外貌著称，是稳定团队的魅力队长。", es: "Famosa por sus visuales que parecen más IA que la IA misma, una líder carismática que ancla al equipo.", id: "Terkenal dengan visualnya yang tampak lebih AI dari AI itu sendiri, pemimpin karismatik yang menjadi tulang punggung tim.", fr: "Célèbre pour ses visuels plus 'IA' que l'IA elle-même, une leader charismatique qui ancre l'équipe.", hi: "AI से भी ज़्यादा AI जैसे विज़ुअल के लिए प्रसिद्ध, टीम को एकजुट रखने वाली करिश्माई लीडर।", pt: "Famosa por seus visuais que parecem mais IA do que a própria IA, uma líder carismática que ancora a equipe.", ar: "مشهورة بمظهرها الذي يبدو أكثر من الذكاء الاصطناعي، قائدة كاريزمية تُثبّت الفريق.", th: "โด่งดังด้วยวิชวลที่ดูเหมือน AI มากกว่า AI เอง เป็นลีดเดอร์ผู้มีเสน่ห์ที่เป็นหลักของทีม", vi: "Nổi tiếng với visual trông giống AI hơn cả AI, lãnh đạo đầy sức hút là trụ cột của nhóm.", ru: "Знаменита визуалом, похожим на ИИ больше самого ИИ, харизматичный лидер, скрепляющий команду." },
         imageUrl: "https://tse1.mm.bing.net/th?q=aespa+Karina+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
@@ -601,11 +601,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "winter",
         name: { ko: "윈터", en: "Winter" },
-        role: { ko: "메인보컬/리드댄서", en: "Main Vocalist/Lead Dancer" },
+        role: { ko: "메인보컬/리드댄서", en: "Main Vocalist/Lead Dancer", ja: "メインボーカル/リードダンサー", zh: "主唱/领舞", es: "Vocalista Principal/Bailarina Líder", id: "Vokalis Utama/Penari Utama", fr: "Vocaliste Principale/Danseuse Leader", hi: "मेन वोकलिस्ट/लीड डांसर", pt: "Vocalista Principal/Dançarina Líder", ar: "المغنية الرئيسية/الراقصة القائدة", th: "นักร้องหลัก/นักเต้นลีด", vi: "Giọng ca chính/Vũ công dẫn đầu", ru: "Главный вокалист/Ведущий танцор" },
         birth: "2001.01.01", mbti: "INTJ",
         zodiac: { ko: "염소자리", en: "Capricorn" },
         height: "163cm", bloodType: "A",
-        description: { ko: "맑고 깨끗한 음색과 강력한 퍼포먼스를 겸비한 멤버입니다.", en: "A member with a clear, pure voice and powerful performance skills." },
+        description: { ko: "맑고 깨끗한 음색과 강력한 퍼포먼스를 겸비한 멤버입니다.", en: "A member with a clear, pure voice and powerful performance skills.", ja: "澄んで清らかな音色と力強いパフォーマンスを兼ね備えたメンバー。", zh: "兼具清澈纯净音色和有力表演的成员。", es: "Una miembro con una voz clara y pura combinada con poderosas habilidades de actuación.", id: "Anggota dengan suara yang jernih dan murni serta kemampuan performa yang kuat.", fr: "Un membre avec une voix claire et pure combinée à des compétences de performance puissantes.", hi: "स्वच्छ और मधुर आवाज़ और शक्तिशाली परफॉर्मेंस कौशल वाली सदस्य।", pt: "Uma membro com uma voz clara e pura combinada com poderosas habilidades de performance.", ar: "عضو بصوت نقي وصافٍ مع مهارات أداء قوية.", th: "สมาชิกที่มีน้ำเสียงใสบริสุทธิ์ผสานกับทักษะการแสดงอันทรงพลัง", vi: "Thành viên với giọng hát trong trẻo thuần khiết kết hợp kỹ năng biểu diễn mạnh mẽ.", ru: "Участница с чистым, прозрачным голосом и мощными навыками выступления." },
         imageUrl: "https://tse1.mm.bing.net/th?q=aespa+Winter+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
@@ -628,11 +628,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "giselle",
         name: { ko: "지젤", en: "Giselle" },
-        role: { ko: "메인래퍼/서브보컬", en: "Main Rapper/Sub Vocalist" },
+        role: { ko: "메인래퍼/서브보컬", en: "Main Rapper/Sub Vocalist", ja: "メインラッパー/サブボーカル", zh: "主要说唱/副唱", es: "Rapera Principal/Sub Vocalista", id: "Rapper Utama/Sub Vokalis", fr: "Rappeuse Principale/Sous-Vocaliste", hi: "मेन रैपर/सब वोकलिस्ट", pt: "Rapper Principal/Sub Vocalista", ar: "مغنية الراب الرئيسية/مغنية مساعدة", th: "แรปเปอร์หลัก/นักร้องรอง", vi: "Rapper chính/Ca sĩ phụ", ru: "Главный рэпер/Второй вокалист" },
         birth: "2000.10.30", mbti: "INFJ",
         zodiac: { ko: "전갈자리", en: "Scorpio" },
         height: "164cm", bloodType: "O",
-        description: { ko: "3개국어에 능통한 뇌섹녀이자 탄탄한 랩 실력을 가진 멤버입니다.", en: "A multilingual intellectual fluent in three languages with solid rap skills." },
+        description: { ko: "3개국어에 능통한 뇌섹녀이자 탄탄한 랩 실력을 가진 멤버입니다.", en: "A multilingual intellectual fluent in three languages with solid rap skills.", ja: "3ヶ国語に堪能な知性派で、確かなラップスキルを持つメンバー。", zh: "精通三国语言的才女，拥有扎实的说唱实力。", es: "Una intelectual multilingüe fluida en tres idiomas con sólidas habilidades de rap.", id: "Intelektual multibahasa yang fasih dalam tiga bahasa dengan kemampuan rap yang kuat.", fr: "Une intellectuelle multilingue parlant couramment trois langues avec de solides compétences en rap.", hi: "तीन भाषाओं में पारंगत बहुभाषी बुद्धिजीवी और ठोस रैप कौशल वाली सदस्य।", pt: "Uma intelectual multilíngue fluente em três idiomas com sólidas habilidades de rap.", ar: "مثقفة متعددة اللغات طليقة في ثلاث لغات بمهارات راب قوية.", th: "นักปัญญาชนหลายภาษาที่คล่องสามภาษาด้วยทักษะแรปที่แข็งแกร่ง", vi: "Trí thức đa ngôn ngữ thành thạo ba ngôn ngữ với kỹ năng rap vững chắc.", ru: "Полиглот, свободно владеющая тремя языками, с отличными навыками рэпа." },
         imageUrl: "https://tse1.mm.bing.net/th?q=aespa+Giselle+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
@@ -655,11 +655,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "ningning",
         name: { ko: "닝닝", en: "Ningning" },
-        role: { ko: "메인보컬", en: "Main Vocalist" },
+        role: { ko: "메인보컬", en: "Main Vocalist", ja: "メインボーカル", zh: "主唱", es: "Vocalista Principal", id: "Vokalis Utama", fr: "Vocaliste Principale", hi: "मेन वोकलिस्ट", pt: "Vocalista Principal", ar: "المغنية الرئيسية", th: "นักร้องหลัก", vi: "Giọng ca chính", ru: "Главный вокалист" },
         birth: "2002.10.23", mbti: "INFP",
         zodiac: { ko: "천칭자리", en: "Libra" },
         height: "161cm", bloodType: "O",
-        description: { ko: "폭발적인 고음과 소울풀한 가창력을 자랑하는 팀의 막내입니다.", en: "The youngest member boasting explosive high notes and soulful vocals." },
+        description: { ko: "폭발적인 고음과 소울풀한 가창력을 자랑하는 팀의 막내입니다.", en: "The youngest member boasting explosive high notes and soulful vocals.", ja: "爆発的な高音とソウルフルな歌唱力を誇るチームの末っ子。", zh: "拥有爆发性高音和充满灵魂的歌唱实力的团队最小成员。", es: "La más joven del equipo con explosivos agudos y una voz llena de soul.", id: "Anggota termuda dengan nada tinggi yang eksplosif dan vokal yang penuh jiwa.", fr: "La plus jeune du groupe avec des aigus explosifs et une voix pleine d'âme.", hi: "विस्फोटक हाई नोट्स और सोलफुल वोकल्स वाली टीम की सबसे छोटी सदस्य।", pt: "A mais jovem do grupo com agudos explosivos e vocais cheios de alma.", ar: "أصغر أعضاء الفريق بنوتات عالية متفجرة وصوت ممتلئ بالروح.", th: "สมาชิกอายุน้อยที่สุดที่มีโน้ตสูงระเบิดพลังและเสียงร้องเต็มอารมณ์", vi: "Thành viên nhỏ tuổi nhất với những nốt cao bùng nổ và giọng hát đầy cảm xúc.", ru: "Младшая участница группы со взрывными верхними нотами и душевным вокалом." },
         imageUrl: "https://tse1.mm.bing.net/th?q=aespa+Ningning+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
@@ -683,7 +683,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
   },
   {
     id: "bts",
-    name: { ko: "방탄소년단", en: "BTS" },
+    name: { ko: "방탄소년단", en: "BTS", ja: "防弾少年団 (BTS)", zh: "防弹少年团 (BTS)", es: "BTS", id: "BTS", fr: "BTS", hi: "बीटीएस (BTS)", pt: "BTS", ar: "بي تي إس (BTS)", th: "บีทีเอส (BTS)", vi: "BTS", ru: "BTS" },
     company: "BIGHIT MUSIC",
     debut: "2013.06.13",
     fandom: { ko: "아미 (ARMY)", en: "ARMY" },

@@ -370,14 +370,12 @@ const IdolEncyclopedia: React.FC = () => {
               </div>
               <div className="space-y-6">
                 {[...selectedGroup.news].sort((a, b) => new Date(b.date.replace(/\./g, '-')).getTime() - new Date(a.date.replace(/\./g, '-')).getTime()).map((news, i) => (
-                  <div key={i} className="border-b border-white/5 pb-6 last:border-0 last:pb-0 hover:bg-white/[0.02] transition-colors p-4 -mx-4 rounded-2xl group">
+                  <div key={i} className="border-b border-white/5 pb-6 last:border-0 last:pb-0 p-4 -mx-4 rounded-2xl">
                     <div className="text-[10px] font-mono text-neon-green font-bold uppercase mb-2">{news.date}</div>
-                    <a href={news.url} target="_blank" rel="noopener noreferrer" className="block">
-                      <h4 className="text-lg font-bold text-white mb-3 group-hover:text-neon-green transition-colors leading-snug">
-                        {getLangText(news.title, i18n.language)}
-                      </h4>
-                      <p className="text-slate-400 text-sm line-clamp-3">{getLangText(news.summary, i18n.language)}</p>
-                    </a>
+                    <h4 className="text-lg font-bold text-white mb-3 leading-snug">
+                      {getLangText(news.title, i18n.language)}
+                    </h4>
+                    <p className="text-slate-400 text-sm line-clamp-3">{getLangText(news.summary, i18n.language)}</p>
                   </div>
                 ))}
               </div>
@@ -407,11 +405,14 @@ const IdolEncyclopedia: React.FC = () => {
 
   return (
     <div className="w-full max-w-7xl mx-auto flex flex-col gap-6 md:gap-10 animate-fade-in-up pb-10">
-      <div className="text-center max-w-3xl mx-auto px-4 mb-4">
-        <h2 className="text-3xl md:text-4xl font-black text-white italic tracking-tighter uppercase mb-4">
-          {t('nav_encyclopedia')}
+      <div className="text-center max-w-3xl mx-auto px-4 pt-10 md:pt-16 mb-4">
+        <p className="text-neon-pink font-mono text-[10px] uppercase tracking-[0.35em] font-black mb-3 opacity-80">✦ KPOP ARCHIVE ✦</p>
+        <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter uppercase mb-4 leading-none">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue pb-1 pr-2 inline-block">
+            {t('nav_encyclopedia')}
+          </span>
         </h2>
-        <p className="text-slate-400 text-sm md:text-base leading-relaxed">
+        <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
           {t('encyclopedia_desc')}
         </p>
       </div>

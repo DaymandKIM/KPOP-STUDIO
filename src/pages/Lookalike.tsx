@@ -384,7 +384,7 @@ export default function Lookalike() {
         <div className="text-center mb-8 md:mb-12 animate-fade-in-up w-full px-2 mt-8 md:mt-12">
           <h1 className="text-5xl xs:text-6xl md:text-8xl font-black mb-4 md:mb-6 tracking-tighter italic text-white leading-[1.1] md:leading-none uppercase">
             {t('app_title')} <br className="xs:hidden" />
-            <span className="inline-block pb-1 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">{wrapKpop(t('app_subtitle'))}</span>
+            <span className="inline-block pb-1 pr-2 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">{wrapKpop(t('app_subtitle'))}</span>
           </h1>
           <p className="text-slate-400 font-mono text-xs md:text-sm max-w-lg mx-auto uppercase tracking-wide px-4">
             {t('upload_instruction')}
