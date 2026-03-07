@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Trophy, RefreshCw, Heart, Swords } from 'lucide-react';
+import { Trophy, RefreshCw, Heart } from 'lucide-react';
 import { KPOP_GROUPS, type Member, type KpopGroup } from '../data/idols';
 import { getLangText } from '../utils/lang';
 import SharePanel from '../components/SharePanel';
