@@ -307,11 +307,32 @@ export default function Quiz() {
       <div className="flex-1 flex flex-col items-center justify-center px-4 py-12 min-h-[70vh]">
         <div className="w-full max-w-lg">
           <div className="text-center mb-10">
-            <div className="text-6xl mb-4">🎤</div>
-            <h1 className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-white mb-3">
-              {t('nav_quiz')}
-            </h1>
-            <p className="text-slate-400 text-sm">{t('quiz_subtitle')}</p>
+            {/* Main title style matched with Home */}
+            <div className="relative mb-8 pt-6">
+              <h1 className="font-black italic uppercase tracking-tighter text-center leading-[0.85] flex flex-col items-center">
+                <span className="block text-[60px] sm:text-[80px] md:text-[100px] text-white tracking-[-0.05em] select-none">
+                  K-POP
+                </span>
+                <span
+                  className="block text-[60px] sm:text-[80px] md:text-[100px] text-transparent bg-clip-text select-none tracking-[-0.05em]"
+                  style={{
+                    backgroundImage: 'linear-gradient(90deg, #ffe600, #39ff14, #ffe600)',
+                    backgroundSize: '200% 100%',
+                    animation: 'neon-gradient 4s linear infinite',
+                    paddingLeft: '0.25em',
+                    paddingRight: '0.25em',
+                    paddingTop: '0.1em',
+                    paddingBottom: '0.1em',
+                  }}
+                >
+                  QUIZ
+                </span>
+              </h1>
+              {/* Subtle background glow */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-neon-yellow/10 blur-[80px] -z-10 rounded-full" />
+            </div>
+            
+            <p className="text-slate-400 text-sm font-mono uppercase tracking-widest">{t('quiz_subtitle')}</p>
           </div>
 
           {/* Mode selection */}

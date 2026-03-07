@@ -204,6 +204,10 @@ export default function Home() {
                 animationDelay: '0.2s',
                 paddingTop: '0.1em',
                 paddingBottom: '0.1em',
+                paddingLeft: '0.2em',
+                paddingRight: '0.2em',
+                marginLeft: '-0.1em',
+                marginRight: '-0.1em',
                 marginTop: '-0.1em'
               }}
             >
