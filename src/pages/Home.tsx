@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Crosshair, Sparkles, ArrowRight } from 'lucide-react';
+import { Crosshair, Sparkles, ArrowRight, Database } from 'lucide-react';
 
 export default function Home() {
   const { t, i18n } = useTranslation();
@@ -32,20 +32,33 @@ export default function Home() {
           {t('upload_instruction')}
         </p>
 
-        <Link
-          to="/lookalike"
-          className="group relative flex items-center justify-center gap-4 text-white font-black uppercase italic py-5 md:py-6 px-12 md:px-20 rounded-2xl overflow-hidden transition-all active:scale-95 w-full md:w-auto"
-          style={{
-            background: 'linear-gradient(90deg, #00ffff, #9d00ff, #ff00ff, #9d00ff, #00ffff)',
-            backgroundSize: '300% 100%',
-            animation: 'neon-gradient 4s linear infinite',
-            boxShadow: '0 0 28px rgba(0,255,255,0.45), 0 0 60px rgba(157,0,255,0.2)',
-          }}
-        >
-          <Crosshair className="w-5 h-5 md:w-6 md:h-6 relative z-10" />
-          <span className="relative z-10 text-xl md:text-2xl">{t('home_cta_btn')}</span>
-          <ArrowRight className="w-5 h-5 md:w-6 md:h-6 relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+          <Link
+            to="/lookalike"
+            className="group relative flex items-center justify-center gap-4 text-white font-black uppercase italic py-5 md:py-6 px-12 md:px-20 rounded-2xl overflow-hidden transition-all active:scale-95 w-full md:w-auto"
+            style={{
+              background: 'linear-gradient(90deg, #00ffff, #9d00ff, #ff00ff, #9d00ff, #00ffff)',
+              backgroundSize: '300% 100%',
+              animation: 'neon-gradient 4s linear infinite',
+              boxShadow: '0 0 28px rgba(0,255,255,0.45), 0 0 60px rgba(157,0,255,0.2)',
+            }}
+          >
+            <Crosshair className="w-5 h-5 md:w-6 md:h-6 relative z-10" />
+            <span className="relative z-10 text-xl md:text-2xl">{t('home_cta_btn')}</span>
+            <ArrowRight className="w-5 h-5 md:w-6 md:h-6 relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
+          </Link>
+
+          <Link
+            to="/encyclopedia"
+            className="group flex items-center justify-center gap-3 text-white font-black uppercase italic py-5 md:py-6 px-10 md:px-16 rounded-2xl border border-neon-pink/40 bg-neon-pink/10 hover:bg-neon-pink/20 hover:border-neon-pink/70 transition-all active:scale-95 w-full md:w-auto"
+            style={{ boxShadow: '0 0 20px rgba(255,0,255,0.15)' }}
+          >
+            <Database className="w-5 h-5 md:w-6 md:h-6" />
+            <span className="text-xl md:text-2xl">
+              {i18n.language === 'ko' ? 'K-POP 스타 도감' : 'K-POP Encyclopedia'}
+            </span>
+          </Link>
+        </div>
       </div>
 
       {/* About Section */}

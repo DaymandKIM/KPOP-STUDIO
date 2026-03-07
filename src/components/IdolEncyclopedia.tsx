@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import GoogleAd from './GoogleAd';
 import { useTranslation } from 'react-i18next';
 import { 
   Search, User, Star, ChevronLeft, ExternalLink, MessageCircle, 
@@ -429,7 +430,15 @@ const IdolEncyclopedia: React.FC<{
       </div>
 
       <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
-        {filteredEntries.map((entry, idx) => {
+        {filteredEntries.flatMap((entry, idx) => {
+          const adEvery = 6;
+          const showAd = idx > 0 && idx % adEvery === 0;
+          const adEl = showAd ? (
+            <div key={`ad-${idx}`} className="col-span-1 xs:col-span-2 lg:col-span-3">
+              <GoogleAd slot="XXXXXXXXXX" format="horizontal" className="py-2" />
+            </div>
+          ) : null;
+          const card = (() => {
           if ('members' in entry) {
             // 그룹 카드 렌더링
             const group = entry;
@@ -512,6 +521,8 @@ const IdolEncyclopedia: React.FC<{
               </div>
             );
           }
+          })();
+          return adEl ? [adEl, card] : [card];
         })}
       </div>
     </div>
