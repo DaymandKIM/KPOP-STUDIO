@@ -1,14 +1,14 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Star, Database, Crosshair, Globe, ChevronDown, Menu, X } from 'lucide-react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 
 import Home from './pages/Home';
-import Lookalike from './pages/Lookalike';
 import About from './pages/About';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
-import IdolEncyclopedia from './components/IdolEncyclopedia';
+const Lookalike = lazy(() => import('./pages/Lookalike'));
+const IdolEncyclopedia = lazy(() => import('./components/IdolEncyclopedia'));
 
 import './App.css';
 
@@ -85,7 +85,7 @@ function AppLayout() {
   const location = useLocation();
 
   const isIdentification = location.pathname === '/lookalike';
-  const isEncyclopedia = location.pathname === '/encyclopedia';
+  const isEncyclopedia = location.pathname.startsWith('/encyclopedia');
 
   return (
     <div className="min-h-screen text-slate-50 font-sans flex flex-col relative overflow-hidden">
@@ -168,14 +168,17 @@ function AppLayout() {
 
       {/* Main Content Area */}
       <main className="flex-1 w-full max-w-7xl mx-auto z-10 flex flex-col">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/lookalike" element={<Lookalike />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/encyclopedia" element={<IdolEncyclopedia />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<TermsOfService />} />
-        </Routes>
+        <Suspense fallback={<div className="flex-1 flex items-center justify-center"><div className="w-8 h-8 rounded-full border-2 border-white/10 border-t-neon-blue animate-spin" /></div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/lookalike" element={<Lookalike />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/encyclopedia" element={<IdolEncyclopedia />} />
+            <Route path="/encyclopedia/:groupId" element={<IdolEncyclopedia />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
+          </Routes>
+        </Suspense>
       </main>
 
       {/* Footer */}

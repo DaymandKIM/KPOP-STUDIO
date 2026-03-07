@@ -8,7 +8,7 @@ import {
 import SharePanel from './SharePanel';
 import { KPOP_GROUPS } from '../data/idols';
 import type { KpopGroup, Socials, Member } from '../data/idols';
-import { useLocation } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { getLangText, getLangArray } from '../utils/lang';
 
 // Enhanced Safe Image Component with Image Proxy Bypass
@@ -135,20 +135,18 @@ const SocialLinks: React.FC<{ socials?: Socials; accentColor?: string }> = ({ so
   );
 };
 
-const IdolEncyclopedia: React.FC = () => {
+const IdolEncyclopedia: React.FC<{
+  selectedGroup: KpopGroup | null;
+  onGroupSelect: (g: KpopGroup) => void;
+  onBack: () => void;
+}> = ({ selectedGroup, onGroupSelect, onBack }) => {
   const { t, i18n } = useTranslation();
-  const location = useLocation();
   const [searchTerm, setSearchTerm] = useState('');
-  
-  // Initialize state directly from location if available
   const [showGroupShare, setShowGroupShare] = useState(false);
-  const [selectedGroup, setSelectedGroup] = useState<KpopGroup | null>(() => {
-    if (location.state && location.state.selectedGroupId) {
-      const group = KPOP_GROUPS.find(g => g.id === location.state.selectedGroupId);
-      if (group) return group;
-    }
-    return null;
-  });
+
+  React.useEffect(() => {
+    setShowGroupShare(false);
+  }, [selectedGroup?.id]);
 
   // 모든 항목(그룹 + 멤버)을 하나의 리스트로 평탄화
   const allEntries = React.useMemo(() => {
@@ -172,8 +170,7 @@ const IdolEncyclopedia: React.FC = () => {
   });
 
   const handleBackToList = () => {
-    setSelectedGroup(null);
-    setShowGroupShare(false);
+    onBack();
     window.scrollTo(0, 0);
   };
 
@@ -299,7 +296,7 @@ const IdolEncyclopedia: React.FC = () => {
                   onClick={() => {
                     const soloArtist = KPOP_GROUPS.find(g => g.id === member.id);
                     if (soloArtist) {
-                      setSelectedGroup(soloArtist);
+                      onGroupSelect(soloArtist);
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }
                   }}
@@ -441,7 +438,7 @@ const IdolEncyclopedia: React.FC = () => {
                 key={`group-${group.id}-${idx}`}
                 className="glass-card rounded-[32px] p-6 cursor-pointer hover:scale-[1.02] active:scale-95 transition-all group flex flex-col border-white/5"
                 onClick={() => {
-                  setSelectedGroup(group);
+                  onGroupSelect(group);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
               >
@@ -481,7 +478,7 @@ const IdolEncyclopedia: React.FC = () => {
                 key={`member-${member.id}-${idx}`}
                 className="glass-card rounded-[32px] p-6 cursor-pointer hover:scale-[1.02] active:scale-95 transition-all group flex flex-col border-white/5"
                 onClick={() => {
-                  setSelectedGroup(group);
+                  onGroupSelect(group);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
               >
@@ -521,4 +518,21 @@ const IdolEncyclopedia: React.FC = () => {
   );
 };
 
-export default IdolEncyclopedia;
+const IdolEncyclopediaPage: React.FC = () => {
+  const { groupId } = useParams<{ groupId?: string }>();
+  const navigate = useNavigate();
+
+  const selectedGroup = groupId
+    ? (KPOP_GROUPS.find(g => g.id === groupId) ?? null)
+    : null;
+
+  return (
+    <IdolEncyclopedia
+      selectedGroup={selectedGroup}
+      onGroupSelect={(g) => navigate(`/encyclopedia/${g.id}`)}
+      onBack={() => navigate('/encyclopedia')}
+    />
+  );
+};
+
+export default IdolEncyclopediaPage;
