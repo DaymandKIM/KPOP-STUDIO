@@ -122,7 +122,10 @@ const resources = {
       "behind_story": "Behind Story",
       "zodiac": "Zodiac",
       "share_title": "My KPOP STUDIO AI Result",
-      "share_text": "I'm {{prob}}% {{name}} ({{group}}) according to AI! Try yours ✨"
+            "home_svc_lookalike_desc": "Upload your photo and our AI instantly finds which K-pop star you resemble most. Discover your idol twin in seconds!",
+      "home_svc_quiz_desc": "Test your K-pop knowledge with 4 question types — photos, lyrics, hints, and trivia. Challenge yourself in Normal or Survival mode!",
+      "home_svc_enc_desc": "Explore detailed profiles of your favorite K-pop groups and members. From debut info to latest news and hidden TMIs — all in one place.",
+"share_text": "I'm {{prob}}% {{name}} ({{group}}) according to AI! Try yours ✨"
     }
   },
   ko: {
@@ -246,7 +249,10 @@ const resources = {
       "behind_story": "비하인드 스토리",
       "zodiac": "별자리",
       "share_title": "KPOP STUDIO AI 닮은꼴 결과",
-      "share_text": "나는 AI로 {{prob}}% {{name}}({{group}})을(를) 닮았대! 너도 해봐 ✨"
+            "home_svc_lookalike_desc": "사진을 올리면 AI가 즉시 분석해 나와 가장 닮은 K-POP 스타를 찾아줍니다. 내 아이돌 도플갱어를 지금 바로 만나보세요!",
+      "home_svc_quiz_desc": "사진, 가사, 힌트, 상식 4가지 유형으로 K-POP 실력을 테스트해보세요. 일반 모드와 서바이벌 모드 중 선택해 도전하세요!",
+      "home_svc_enc_desc": "좋아하는 K-POP 그룹과 멤버의 프로필을 탐색해보세요. 데뷔 정보부터 최신 뉴스, 깨알 TMI까지 한곳에 모았습니다.",
+"share_text": "나는 AI로 {{prob}}% {{name}}({{group}})을(를) 닮았대! 너도 해봐 ✨"
     }
   },
   ja: {
@@ -368,7 +374,10 @@ const resources = {
       "height": "身長",
       "behind_story": "ビハインドストーリー",
       "zodiac": "星座",
-      "share_text": "AIで{{prob}}% {{name}}({{group}})に似てると判定！あなたも試して✨"
+            "home_svc_lookalike_desc": "写真をアップロードすると、AIがあなたに最も似ているK-POPスターを瞬時に見つけます。運命のアイドルを今すぐ発見！",
+      "home_svc_quiz_desc": "写真・歌詞・ヒント・雑学の4種類でK-POP知識をテスト。ノーマルモードとサバイバルモードで挑戦してみよう！",
+      "home_svc_enc_desc": "お気に入りのK-POPグループとメンバーのプロフィールを探索。デビュー情報から最新ニュース、隠れたTMIまで一か所で確認できます。",
+"share_text": "AIで{{prob}}% {{name}}({{group}})に似てると判定！あなたも試して✨"
     }
   },
   zh: {
@@ -490,7 +499,10 @@ const resources = {
       "height": "身高",
       "behind_story": "幕后故事",
       "zodiac": "星座",
-      "share_text": "AI判定我{{prob}}%像{{name}}({{group}})！快来试试✨"
+            "home_svc_lookalike_desc": "上傳您的照片，AI 立即分析找出與您最相似的 K-POP 明星。立刻發現您的偶像雙胞胎！",
+      "home_svc_quiz_desc": "透過照片、歌詞、提示和知識4種題型測試您的 K-POP 實力。挑戰一般模式或生存模式！",
+      "home_svc_enc_desc": "探索您喜愛的 K-POP 團體和成員資料。從出道資訊到最新新聞和隱藏 TMI，盡在一處。",
+"share_text": "AI判定我{{prob}}%像{{name}}({{group}})！快来试试✨"
     }
   },
   es: {
@@ -612,7 +624,10 @@ const resources = {
       "height": "Altura",
       "behind_story": "Historia Secreta",
       "zodiac": "Signo zodiacal",
-      "share_text": "¡La IA dice que soy {{prob}}% {{name}}({{group}})! Pruébalo ✨"
+            "home_svc_lookalike_desc": "Sube tu foto y nuestra IA encuentra al instante qué estrella K-pop se parece más a ti. ¡Descubre tu doble idol en segundos!",
+      "home_svc_quiz_desc": "Pon a prueba tu conocimiento K-pop con 4 tipos de preguntas: fotos, letras, pistas y curiosidades. ¡Modo Normal o Supervivencia!",
+      "home_svc_enc_desc": "Explora perfiles detallados de tus grupos y miembros K-pop favoritos. De info de debut a últimas noticias y TMIs ocultos, todo en un lugar.",
+"share_text": "¡La IA dice que soy {{prob}}% {{name}}({{group}})! Pruébalo ✨"
     }
   },
   id: {
@@ -734,7 +749,10 @@ const resources = {
       "height": "Tinggi Badan",
       "behind_story": "Di Balik Layar",
       "zodiac": "Zodiak",
-      "share_text": "AI bilang aku {{prob}}% mirip {{name}}({{group}})! Coba juga ✨"
+            "home_svc_lookalike_desc": "Upload fotomu dan AI kami langsung menemukan bintang K-pop yang paling mirip denganmu. Temukan idol kembaranmu sekarang!",
+      "home_svc_quiz_desc": "Uji pengetahuan K-pop kamu dengan 4 jenis soal: foto, lirik, petunjuk, dan trivia. Pilih mode Normal atau Survival!",
+      "home_svc_enc_desc": "Jelajahi profil grup dan member K-pop favoritmu. Dari info debut hingga berita terbaru dan TMI tersembunyi, semua ada di sini.",
+"share_text": "AI bilang aku {{prob}}% mirip {{name}}({{group}})! Coba juga ✨"
     }
   },
   fr: {
@@ -856,7 +874,10 @@ const resources = {
       "height": "Taille",
       "behind_story": "Histoire secrète",
       "zodiac": "Signe astrologique",
-      "share_text": "L'IA dit que je ressemble à {{prob}}% à {{name}}({{group}}) ! Essayez ✨"
+            "home_svc_lookalike_desc": "Télécharge ta photo et notre IA trouve instantanément quelle star K-pop te ressemble le plus. Découvre ton idol sosie en quelques secondes !",
+      "home_svc_quiz_desc": "Teste tes connaissances K-pop avec 4 types de questions : photos, paroles, indices et culture générale. Mode Normal ou Survie !",
+      "home_svc_enc_desc": "Explore les profils de tes groupes et membres K-pop préférés. De l'info de début aux dernières nouvelles et TMIs cachés, tout en un seul endroit.",
+"share_text": "L'IA dit que je ressemble à {{prob}}% à {{name}}({{group}}) ! Essayez ✨"
     }
   },
   hi: {
@@ -978,7 +999,10 @@ const resources = {
       "height": "ऊंचाई",
       "behind_story": "पर्दे के पीछे",
       "zodiac": "राशि",
-      "share_text": "AI ने बताया मैं {{prob}}% {{name}}({{group}}) जैसा/जैसी हूं! आप भी आजमाएं ✨"
+            "home_svc_lookalike_desc": "अपनी फोटो अपलोड करें और हमारी AI तुरंत बताएगी कि आप कौन से K-pop स्टार से सबसे ज़्यादा मिलते-जुलते हैं। अपना idol twin खोजें!",
+      "home_svc_quiz_desc": "4 प्रकार के सवालों से अपना K-pop ज्ञान परखें: फोटो, lyrics, hints और trivia। Normal या Survival mode में challenge करें!",
+      "home_svc_enc_desc": "अपने पसंदीदा K-pop groups और members के profiles explore करें। Debut info से लेकर latest news और hidden TMIs तक सब एक जगह।",
+"share_text": "AI ने बताया मैं {{prob}}% {{name}}({{group}}) जैसा/जैसी हूं! आप भी आजमाएं ✨"
     }
   },
   pt: {
@@ -1100,7 +1124,10 @@ const resources = {
       "height": "Altura",
       "behind_story": "História Secreta",
       "zodiac": "Signo",
-      "share_text": "A IA disse que sou {{prob}}% parecido/a com {{name}}({{group}})! Tente também ✨"
+            "home_svc_lookalike_desc": "Envie sua foto e nossa IA encontra instantaneamente qual estrela K-pop mais se parece com você. Descubra seu idol gêmeo em segundos!",
+      "home_svc_quiz_desc": "Teste seu conhecimento K-pop com 4 tipos de perguntas: fotos, letras, dicas e curiosidades. Modo Normal ou Sobrevivência!",
+      "home_svc_enc_desc": "Explore perfis detalhados dos seus grupos e membros K-pop favoritos. De informações de estreia a últimas notícias e TMIs escondidos, tudo em um lugar.",
+"share_text": "A IA disse que sou {{prob}}% parecido/a com {{name}}({{group}})! Tente também ✨"
     }
   },
   ar: {
@@ -1222,7 +1249,10 @@ const resources = {
       "height": "الطول",
       "behind_story": "قصة من الكواليس",
       "zodiac": "البرج",
-      "share_text": "قال الذكاء الاصطناعي إنني {{prob}}% مثل {{name}}({{group}})! جرّب أنت أيضاً ✨"
+            "home_svc_lookalike_desc": "ارفع صورتك وسيجد الذكاء الاصطناعي على الفور نجم K-pop الأكثر شبهاً بك. اكتشف توأمك من الأيدول الآن!",
+      "home_svc_quiz_desc": "اختبر معلوماتك في K-pop بـ4 أنواع من الأسئلة: صور، كلمات، تلميحات، ومعلومات عامة. وضع عادي أو وضع البقاء!",
+      "home_svc_enc_desc": "استكشف ملفات تعريف مجموعاتك وأعضائك K-pop المفضلين. من معلومات الدبيوه إلى أحدث الأخبار والمعلومات الخفية، كل شيء في مكان واحد.",
+"share_text": "قال الذكاء الاصطناعي إنني {{prob}}% مثل {{name}}({{group}})! جرّب أنت أيضاً ✨"
     }
   },
   th: {
@@ -1344,7 +1374,10 @@ const resources = {
       "height": "ส่วนสูง",
       "behind_story": "เรื่องเบื้องหลัง",
       "zodiac": "ราศี",
-      "share_text": "AI บอกว่าฉัน {{prob}}% เหมือน {{name}}({{group}})! ลองดูสิ ✨"
+            "home_svc_lookalike_desc": "อัปโหลดรูปภาพของคุณ และ AI จะค้นหาดาว K-pop ที่หน้าคล้ายคุณมากที่สุดทันที ค้นพบไอดอลคู่แฝดของคุณเลย!",
+      "home_svc_quiz_desc": "ทดสอบความรู้ K-pop ของคุณด้วย 4 ประเภทคำถาม: รูปภาพ, เนื้อเพลง, คำใบ้ และไตรเวีย ท้าทายในโหมดปกติหรือเซอร์ไวเวิล!",
+      "home_svc_enc_desc": "สำรวจโปรไฟล์ของกลุ่มและสมาชิก K-pop ที่คุณชื่นชอบ จากข้อมูลเดบิวต์ไปจนถึงข่าวล่าสุดและ TMI ที่ซ่อนอยู่ ครบในที่เดียว",
+"share_text": "AI บอกว่าฉัน {{prob}}% เหมือน {{name}}({{group}})! ลองดูสิ ✨"
     }
   },
   vi: {
@@ -1466,7 +1499,10 @@ const resources = {
       "height": "Chiều cao",
       "behind_story": "Câu chuyện hậu trường",
       "zodiac": "Cung hoàng đạo",
-      "share_text": "AI nói tôi giống {{name}}({{group}}) {{prob}}%! Thử xem nào ✨"
+            "home_svc_lookalike_desc": "Tải ảnh lên và AI của chúng tôi ngay lập tức tìm ra ngôi sao K-pop trông giống bạn nhất. Khám phá idol song sinh của bạn ngay!",
+      "home_svc_quiz_desc": "Kiểm tra kiến thức K-pop của bạn với 4 loại câu hỏi: ảnh, lời bài hát, gợi ý và kiến thức. Chế độ Thường hay Sinh tồn!",
+      "home_svc_enc_desc": "Khám phá hồ sơ chi tiết của các nhóm và thành viên K-pop yêu thích. Từ thông tin debut đến tin tức mới nhất và TMI ẩn, tất cả trong một nơi.",
+"share_text": "AI nói tôi giống {{name}}({{group}}) {{prob}}%! Thử xem nào ✨"
     }
   },
   ru: {
@@ -1588,7 +1624,10 @@ const resources = {
       "height": "Рост",
       "behind_story": "История за кадром",
       "zodiac": "Знак зодиака",
-      "share_text": "ИИ говорит, что я на {{prob}}% похож(а) на {{name}}({{group}})! Попробуй ✨"
+            "home_svc_lookalike_desc": "Загрузи фото и наш ИИ мгновенно найдёт K-pop звезду, которая похожа на тебя больше всего. Найди своего idol-двойника прямо сейчас!",
+      "home_svc_quiz_desc": "Проверь свои знания K-pop по 4 типам вопросов: фото, тексты, подсказки и факты. Обычный режим или режим Выживания!",
+      "home_svc_enc_desc": "Изучи профили твоих любимых K-pop групп и участников. От информации о дебюте до последних новостей и скрытых TMI — всё в одном месте.",
+"share_text": "ИИ говорит, что я на {{prob}}% похож(а) на {{name}}({{group}})! Попробуй ✨"
     }
   }
 };
