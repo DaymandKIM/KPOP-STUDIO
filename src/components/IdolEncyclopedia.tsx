@@ -83,6 +83,7 @@ const SafeImage: React.FC<{ src: string; alt: string; className?: string; accent
         onError={handleError}
         onLoad={() => setLoading(false)}
         loading="lazy"
+        decoding="async"
       />
     </div>
   );

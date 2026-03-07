@@ -506,6 +506,8 @@ export default function Lookalike() {
               alt="Target"
               className="w-full h-full md:h-auto md:max-h-[500px] object-cover opacity-70 grayscale contrast-125"
               crossOrigin="anonymous"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 overflow-hidden">
               <div className="w-full h-2 bg-gradient-to-r from-neon-pink via-neon-blue to-neon-green shadow-[0_0_25px_rgba(255,255,255,0.8)] absolute top-0 animate-[scan_2s_linear_infinite]"></div>
@@ -545,7 +547,7 @@ export default function Lookalike() {
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 w-full mb-10 md:mb-14">
                 <div className="relative group/img">
                   <div className="w-48 h-48 xs:w-56 xs:h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-neon-purple/40 neon-shadow-purple relative flex-shrink-0 transition-transform duration-500 group-hover/img:scale-[1.02]">
-                    <img src={selectedImage} alt="User" className="w-full h-full object-cover" />
+                    <img src={selectedImage} alt="User" className="w-full h-full object-cover" loading="lazy" decoding="async" />
                   </div>
                   <div className="absolute -bottom-3 -right-3 w-12 h-12 md:w-14 md:h-14 bg-white rounded-2xl flex items-center justify-center shadow-2xl border-2 border-neon-purple z-20 rotate-6">
                     <User className="w-6 h-6 text-neon-purple" />
@@ -561,7 +563,7 @@ export default function Lookalike() {
                 {matchedIdol && (
                   <div className="relative group/img cursor-pointer" onClick={() => setShowMemberModal(true)}>
                     <div className="w-48 h-48 xs:w-56 xs:h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-neon-blue neon-shadow-blue relative flex-shrink-0 transition-transform duration-500 group-hover/img:scale-[1.02]">
-                      <img src={matchedIdol.member.imageUrl} alt={getLangText(matchedIdol.member.name, i18n.language)} className="w-full h-full object-cover" />
+                      <img src={matchedIdol.member.imageUrl} alt={getLangText(matchedIdol.member.name, i18n.language)} className="w-full h-full object-cover" loading="lazy" decoding="async" crossOrigin="anonymous" />
                       <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/30 transition-colors flex items-end justify-center pb-3">
                         <span className="text-white font-mono text-[10px] uppercase font-black tracking-widest opacity-0 group-hover/img:opacity-100 transition-opacity bg-black/60 px-2 py-1 rounded-lg">
                           {i18n.language === 'ko' ? '탭하여 상세보기' : 'Tap for details'}
@@ -772,6 +774,9 @@ export default function Lookalike() {
                     src={matchedIdol.member.imageUrl}
                     alt={getLangText(matchedIdol.member.name, i18n.language)}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                    crossOrigin="anonymous"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#080810] via-transparent to-transparent" />
                   <button

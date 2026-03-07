@@ -270,7 +270,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "169cm",
         bloodType: "A",
         description: { ko: "고전적인 미인형으로 '국민 첫사랑' 이미지를 가졌으며 책임감이 강한 성격입니다.", en: "A classic beauty with a 'Nation's First Love' image and a strong sense of responsibility.", ja: "古典的な美人顔で「国民の初恋」のイメージを持ち、責任感が強い性格です。", zh: "拥有古典美人相和“国民初恋”的形象，性格具有强烈的责任感。", es: "Una belleza clásica con una imagen de 'Primer Amor de la Nación' y un fuerte sentido de la responsabilidad.", id: "Kecantikan klasik dengan imej 'Cinta Pertama Bangsa' dan rasa tanggung jawab yang kuat.", fr: "Une beauté classique avec une image de « premier amour de la nation » et un sens aigu des responsabilités.", hi: "'राष्ट्र के पहले प्यार' की छवि वाली एक क्लासिक सुंदरता और जिम्मेदारी की गहरी भावना वाली सदस्य।", pt: "Uma beleza clássica com uma imagem de 'Primeiro Amor da Nação' e um forte senso de responsabilidade.", ar: "جمال كلاسيكي مع صورة \"حب الأمة الأول\" وشخصية تتمتع بإحساس قوي بالمسؤولية.", th: "มีความสวยแบบคลาสสิกจนได้รับฉายา 'รักแรกแห่งชาติ' และเป็นคนที่มีความรับผิดชอบสูง", vi: "Sở hữu vẻ đẹp cổ điển với hình ảnh 'Tình đầu quốc dân' và có tính cách đầy trách nhiệm.", ru: "Классическая красавица с образом «Первой любви нации» и сильным чувством ответственности." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans+Minji+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans+Minji+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "팀의 공식 맏언니로, 멤버들 생일과 좋아하는 음식을 모두 꿰고 있는 철저한 리더입니다.",
@@ -375,7 +375,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "161.7cm",
         bloodType: "O",
         description: { ko: "베트남계 호주인. 독보적인 음색과 리듬감을 가졌으며, 무대 위 카리스마가 대단합니다.", en: "Vietnamese-Australian. Has a unique voice and rhythm, showing immense charisma on stage.", ja: "ベトナム系オーストラリア人。独歩的な歌声とリズム感を持ち、ステージ上のカリスマ性が素晴らしいです。", zh: "越南裔澳大利亚人。拥有独特的音色和节奏感，舞台魅力十足。", es: "Vietnamita-australiana. Tiene una voz y un ritmo únicos, mostrando un inmenso carisma en el escenario.", id: "Vietnam-Australia. Memiliki suara dan ritme yang unik, menunjukkan karisma yang luar biasa di atas panggung.", fr: "Vietnamienne-Australienne. Possède une voix et un rythme uniques, faisant preuve d'un immense charisme sur scène.", hi: "वियतनामी-ऑस्ट्रेलियाई सदस्य। उनकी आवाज़ और रिदम अद्वितीय है, और वे मंच पर जबरदस्त करिश्मा दिखाती हैं।", pt: "Vietnamita-australiana. Tem uma voz e um ritmo únicos, mostrando um imenso carisma no palco.", ar: "فيتنامية أسترالية. تمتلك نبرة صوت وإحساساً بالإيقاع لا مثيل لهما، وتظهر كاريزما هائلة على المسرح.", th: "ชาวเวียดนาม-ออสเตรเลีย มีน้ำเสียงและจังหวะที่เป็นเอกลักษณ์ และมีคาริสม่าที่ยอดเยี่ยมบนเวที", vi: "Người Úc gốc Việt. Sở hữu âm sắc và cảm nhận nhịp điệu độc đáo, tỏa sáng với thần thái cực đỉnh trên sân khấu.", ru: "Вьетнамо-австралийка. Обладает уникальным голосом и чувством ритма, демонстрируя на сцене невероятную харизму." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans+Hanni+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans+Hanni+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "베트남계 호주인으로 영어·한국어·베트남어를 모두 유창하게 구사하는 3개 국어 능통자입니다.",
@@ -480,7 +480,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "165cm",
         bloodType: "AB",
         description: { ko: "햇살 같은 에너지를 가진 비타민 같은 멤버. 디즈니 공주 같은 비주얼로 유명합니다.", en: "A vitamin-like member with sunny energy. Famous for her Disney princess visuals.", ja: "日差しのようなエネルギーを持つビタミン剤のようなメンバー。ディズニープリンセスのようなビジュアルで有名です。", zh: "拥有阳光般能量的维他命成员。以迪斯尼公主般的视觉效果而闻名。", es: "Una miembro tipo vitamina con energía solar. Famosa por sus visuales de princesa de Disney.", id: "Anggota seperti vitamin dengan energi matahari. Terkenal dengan visual putri Disney-nya.", fr: "Un membre vitaminé avec une énergie ensoleillée. Célèbre pour ses visuels de princesse Disney.", hi: "धूप जैसी ऊर्जा वाली विटामिन जैसी सदस्य। अपनी डिज़्नी प्रिंसेस जैसी विजुअल्स के लिए प्रसिद्ध।", pt: "Uma integrante tipo vitamina com energia solar. Famosa por seus visuais de princesa da Disney.", ar: "عضوة تشبه الفيتامين بطاقتها المشرقة. مشهورة بمظهرها الذي يشبه أميرة ديزني.", th: "สมาชิกที่เป็นเหมือนวิตามินและมีพลังงานสดใสเหมือนแสงแดด โด่งดังด้วยวิชวลที่ดูเหมือนเจ้าหญิงดิสนีย์", vi: "Thành viên như một loại vitamin với năng lượng tỏa sáng như ánh mặt trời. Nổi tiếng với ngoại hình như công chúa Disney.", ru: "Участница-«витаминка» с солнечной энергией. Знаменита своей внешностью, напоминающей принцессу Диснея." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans+Danielle+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans+Danielle+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "한국-호주 이중 국적자로 유창한 영어 실력 덕분에 해외 인터뷰를 단독으로 소화하는 경우가 많습니다.",
@@ -585,7 +585,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "164.5cm",
         bloodType: "B",
         description: { ko: "고양이 상의 대표 주자. 엉뚱하고 조용한 매력이 있으며 무대에서는 폭발적인 댄스 실력을 보여줍니다.", en: "The representative of cat-like features. Has a quirky, quiet charm but explosive dance skills.", ja: "猫顔の代表格。不思議で静かな魅力があり、ステージでは爆発的なダンスの実力を見せます。", zh: "猫系长相的代表。拥有古灵精怪且安静的魅力，在舞台上展现出爆发性的舞蹈实力。", es: "La representante de los rasgos felinos. Tiene un encanto peculiar y tranquilo, pero habilidades de baile explosivas.", id: "Perwakilan dari fitur wajah seperti kucing. Memiliki pesona yang aneh dan tenang, tetapi kemampuan menari yang luar biasa.", fr: "La représentante des traits félins. Elle a un charme décalé et calme, mais des talents de danse explosifs.", hi: "बिल्ली जैसी विशेषताओं वाली सदस्य। उनका आकर्षण अनोखा और शांत है लेकिन नृत्य कौशल जबरदस्त है।", pt: "A representante das características felinas. Tem un charme peculiar e tranquilo, mas habilidades de dança explosivas.", ar: "الممثلة الأبرز للملامح التي تشبه القطط. تتمتع بسحر غريب وهادئ، لكنها تظهر مهارات رقص مذهلة على المسرح.", th: "ตัวแทนของสาวหน้าแมว มีเสน่ห์ที่แปลกใหม่และเงียบขรึม แต่มีทักษะการเต้นที่ระเบิดพลังบนเวที", vi: "Đại diện tiêu biểu cho gương mặt mèo. Có sức hút kỳ lạ và trầm lặng nhưng lại thể hiện kỹ năng nhảy bùng nổ trên sân khấu.", ru: "Типичная представительница «кошачьего» типа лица. Обладает причудливо-спокойным обаянием, но на сцене демонстрирует взрывные танцевальные навыки." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans+Haerin+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans+Haerin+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "고양이 눈매가 트레이드마크인데, 실제로도 고양이를 매우 좋아하고 고양이처럼 행동한다고 멤버들이 입을 모읍니다.",
@@ -690,7 +690,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "170cm",
         bloodType: "O",
         description: { ko: "팀의 막내지만 모델 같은 피지컬을 자랑합니다. 시크한 마스크와 성숙한 목소리가 매력 포인트입니다.", en: "The youngest but boasts model-like proportions. Her chic mask and mature voice are charming.", ja: "チームの末っ子ですが、モデルのようなフィジカルを誇ります。シックな顔立ちと成熟した歌声が魅力ポイントです。", zh: "虽是团队的老小，但拥有模特般的身材。干练的外貌和成熟的声音是她的魅力所在。", es: "La más joven del equipo pero cuenta con proporciones de modelo. Su máscara chic y su voz madura son sus puntos encantadores.", id: "Anggota termuda tetapi memiliki proporsi tubuh seperti model. Wajahnya yang chic dan suaranya yang dewasa adalah poin menariknya.", fr: "La plus jeune de l'équipe mais possède des proportions de mannequin. Son visage chic et sa voix mature sont ses atouts charme.", hi: "टीम की सबसे छोटी सदस्य लेकिन मॉडल जैसी कद-काठी। उनका ठाठ वाला लुक और परिपक्व आवाज़ उनके आकर्षण के बिंदु हैं।", pt: "A mais jovem da equipe, mas possui proporções de modelo. Seu rosto chique e voz madura são seus pontos charmosos.", ar: "أصغر عضوة في الفريق لكنها تتمتع ببنية جسدية تشبه عارضات الأزياء. ملامحها الأنيقة وصوتها الناضج هما مصدر سحرها.", th: "น้องเล็กของวงที่มีสัดส่วนร่างกายราวกับนางแบบ มีใบหน้าที่ดูเก๋และน้ำเสียงที่ดูโตเกินวัยเป็นจุดเสน่ห์", vi: "Là em út của nhóm nhưng sở hữu vóc dáng như người mẫu. Gương mặt sang chảnh và giọng hát trưởng thành là điểm cuốn hút của cô.", ru: "Самая младшая в группе, но обладающая модельными пропорциями. Ее стильная внешность и зрелый голос — ее главные достоинства." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans+Hyein+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans+Hyein+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "데뷔 당시 만 14세로 역대급 최연소 아이돌 반열에 들었으며, 170cm의 키로 언니들을 넘어서는 압도적인 비율을 자랑합니다.",
@@ -836,7 +836,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         zodiac: { ko: "처녀자리", en: "Virgo" },
         height: "173cm", bloodType: "A",
         description: { ko: "예능 치트키와 카리스마 리더를 오가는 육각형 멤버입니다.", en: "An all-rounder alternating between variety genius and charismatic leader.", ja: "バラエティの天才とカリスマリーダーを行き来する万能メンバー。", zh: "在综艺天才和魅力队长之间自如切换的全能成员。", es: "Miembro completo que alterna entre genio del variety show y líder carismático.", id: "Anggota serbabisa yang berganti peran antara bintang variety dan pemimpin karismatik.", fr: "Membre polyvalent oscillant entre génie de la variété et leader charismatique.", hi: "वैरायटी जीनियस और करिश्माई लीडर के बीच स्विच करने वाले ऑल-राउंडर सदस्य।", pt: "Membro completo que alterna entre gênio do variety e líder carismático.", ar: "عضو متكاملة تتنقل بين عبقرية البرامج والقيادة الكاريزمية.", th: "สมาชิกรอบด้านที่สลับระหว่างอัจฉริยะวาไรตี้และลีดเดอร์ผู้มีเสน่ห์", vi: "Thành viên toàn diện chuyển đổi giữa tài năng variety và lãnh đạo đầy sức hút.", ru: "Разносторонняя участница, сочетающая таланты ведущей шоу и харизматичного лидера." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=IVE+An+Yujin+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=IVE+An+Yujin+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "아이즈원 출신으로 IVE에서도 자연스럽게 리더를 맡게 되었으며, 두 팀 모두에서 팬들의 열렬한 사랑을 받고 있습니다.",
@@ -863,7 +863,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         zodiac: { ko: "천칭자리", en: "Libra" },
         height: "164cm", bloodType: "B",
         description: { ko: "팀의 맏언니이자 매력적인 랩 톤을 가진 멤버입니다.", en: "The oldest and a member with an attractive rap tone.", ja: "チームの最年長メンバーで、魅力的なラップトーンの持ち主。", zh: "团队最年长的姐姐，拥有迷人的说唱音色。", es: "La mayor del equipo con un tono de rap muy atractivo.", id: "Anggota tertua tim yang memiliki nada rap yang memikat.", fr: "La doyenne de l'équipe avec un ton de rap captivant.", hi: "टीम की सबसे बड़ी सदस्य और आकर्षक रैप टोन वाली मेंबर।", pt: "A mais velha da equipe com um tom de rap atraente.", ar: "الأكبر سناً في الفريق بنبرة راب جذابة.", th: "สมาชิกอาวุโสสุดของทีมที่มีน้ำเสียงแรปน่าหลงใหล", vi: "Thành viên lớn tuổi nhất của nhóm với giọng rap hấp dẫn.", ru: "Старшая участница группы с привлекательным рэп-голосом." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Gaeul+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Gaeul+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "실제로 가을(秋)에 태어났기 때문에 '가을'이라는 이름이 붙었고, 팬들에게 '가을선배'라는 애칭으로 불립니다.",
@@ -890,7 +890,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         zodiac: { ko: "물병자리", en: "Aquarius" },
         height: "169cm", bloodType: "A",
         description: { ko: "유니크한 감성과 랩 실력을 가진 일본인 멤버입니다.", en: "Japanese member with unique vibes and rap skills.", ja: "ユニークな感性とラップスキルを持つ日本人メンバー。", zh: "拥有独特感性和说唱实力的日本成员。", es: "Miembro japonesa con sensibilidad única y habilidades de rap.", id: "Anggota Jepang dengan sensibilitas unik dan kemampuan rap.", fr: "Membre japonaise avec une sensibilité unique et des talents de rap.", hi: "अनोखी संवेदनशीलता और रैप कौशल वाली जापानी सदस्य।", pt: "Membro japonesa com sensibilidade única e habilidades de rap.", ar: "عضو يابانية بحساسية فريدة ومهارات راب.", th: "สมาชิกชาวญี่ปุ่นที่มีความรู้สึกเฉพาะตัวและทักษะแรป", vi: "Thành viên người Nhật với cảm nhận độc đáo và kỹ năng rap.", ru: "Японская участница с уникальным чутьём и навыками рэпа." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Rei+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Rei+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "일본 아이치현 출신으로, 한국어를 매우 유창하게 구사해 '사실상 한국인'이라는 별명과 함께 '김레이'로 불립니다.",
@@ -917,7 +917,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         zodiac: { ko: "처녀자리", en: "Virgo" },
         height: "173cm", bloodType: "O",
         description: { ko: "K-POP 4세대를 상징하는 워너비 아이콘이자 비주얼 센터입니다.", en: "The wannabe icon and visual center representing 4th-gen K-POP.", ja: "4世代K-POPを象徴するウォンビーアイコンでありビジュアルセンター。", zh: "代表4代K-POP的梦想图标和视觉中心。", es: "Icono wannabe y centro visual que representa el K-POP de 4ª generación.", id: "Ikon wannabe dan pusat visual yang mewakili K-POP generasi ke-4.", fr: "L'icône wannabe et le centre visuel représentant le K-POP de 4ème génération.", hi: "4वीं पीढ़ी के K-POP का प्रतिनिधित्व करने वाला wannabe आइकन और विजुअल सेंटर।", pt: "O ícone wannabe e centro visual representando o K-POP da 4ª geração.", ar: "أيقونة أحلام ومركز بصري يمثل K-POP من الجيل الرابع.", th: "ไอคอน wannabe และเซ็นเตอร์วิชวลที่เป็นตัวแทนของ K-POP เจน 4", vi: "Biểu tượng wannabe và trung tâm visual đại diện cho K-POP thế hệ 4.", ru: "Желанная икона и визуальный центр, представляющий K-POP 4-го поколения." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Jang+Wonyoung+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Jang+Wonyoung+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "아이즈원 활동 당시부터 센터를 맡아 IVE에서도 자연스럽게 '천생 센터'로 자리매김했습니다.",
@@ -944,7 +944,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         zodiac: { ko: "전갈자리", en: "Scorpio" },
         height: "170cm", bloodType: "AB",
         description: { ko: "맑은 보조개와 시원한 가창력을 가진 메인 보컬급 멤버입니다.", en: "A main vocal-tier member with clear dimples and powerful vocals.", ja: "明るいえくぼと伸びやかな歌唱力を持つメインボーカル級メンバー。", zh: "拥有清澈酒窝和强力歌唱实力的主唱级成员。", es: "Miembro de nivel vocalista principal con hoyuelos claros y poderosa voz.", id: "Anggota level main vocal dengan lesung pipit yang cerah dan suara yang kuat.", fr: "Membre de niveau vocaliste principal avec des fossettes claires et une voix puissante.", hi: "स्पष्ट डिम्पल और शक्तिशाली गायन वाली मेन वोकल-स्तर की सदस्य।", pt: "Membro de nível vocalista principal com covinhas claras e voz poderosa.", ar: "عضو بمستوى المغنية الرئيسية بغمازات واضحة وصوت قوي.", th: "สมาชิกระดับนักร้องหลักที่มีลักยิ้มสดใสและเสียงร้องอันทรงพลัง", vi: "Thành viên cấp độ main vocal với lúm đồng tiền rõ ràng và giọng hát mạnh mẽ.", ru: "Участница уровня главного вокалиста с ямочками и мощным голосом." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Liz+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Liz+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "맑고 선명한 보조개가 대표적인 트레이드마크로, 팬들에게 '보조개 요정'이라는 별명으로 불립니다.",
@@ -971,7 +971,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         zodiac: { ko: "물병자리", en: "Aquarius" },
         height: "166cm", bloodType: "O",
         description: { ko: "나이답지 않은 무대 장악력을 보여주는 팀의 막내입니다.", en: "The youngest showing stage presence unbefitting her age.", ja: "年齢に見合わないステージ掌握力を発揮するチームの末っ子。", zh: "展现出超乎年龄的舞台掌控力的团队最小成员。", es: "La más joven del equipo con un dominio del escenario impropio de su edad.", id: "Anggota termuda yang menunjukkan penguasaan panggung melebihi usianya.", fr: "La benjamine de l'équipe montrant une maîtrise scénique au-delà de son âge.", hi: "अपनी उम्र से परे स्टेज प्रेजेंस दिखाने वाली टीम की सबसे छोटी सदस्य।", pt: "A mais jovem da equipe com domínio de palco além de sua idade.", ar: "أصغر أعضاء الفريق التي تُظهر سيطرة على المسرح تفوق عمرها.", th: "สมาชิกอายุน้อยที่สุดที่แสดงการครองเวทีเกินวัย", vi: "Thành viên nhỏ tuổi nhất của nhóm thể hiện sự làm chủ sân khấu vượt tuổi.", ru: "Младшая участница группы, демонстрирующая владение сценой, несвойственное её возрасту." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Leeseo+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=IVE+Leeseo+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "아이브의 막내지만 또래보다 훨씬 침착하고 성숙한 언행으로 팬들이 '막내 맞냐'고 자주 놀랍니다.",
@@ -1041,7 +1041,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         zodiac: { ko: "양자리", en: "Aries" },
         height: "168cm", bloodType: "B",
         description: { ko: "AI보다 더 AI 같은 비주얼로 유명하며, 팀의 중심을 잡아주는 카리스마 리더입니다.", en: "Famous for her visuals that look more AI than AI itself, a charismatic leader anchoring the team.", ja: "AIよりもAIらしいビジュアルで有名な、チームを引き締めるカリスマリーダー。", zh: "以比AI更像AI的外貌著称，是稳定团队的魅力队长。", es: "Famosa por sus visuales que parecen más IA que la IA misma, una líder carismática que ancla al equipo.", id: "Terkenal dengan visualnya yang tampak lebih AI dari AI itu sendiri, pemimpin karismatik yang menjadi tulang punggung tim.", fr: "Célèbre pour ses visuels plus 'IA' que l'IA elle-même, une leader charismatique qui ancre l'équipe.", hi: "AI से भी ज़्यादा AI जैसे विज़ुअल के लिए प्रसिद्ध, टीम को एकजुट रखने वाली करिश्माई लीडर।", pt: "Famosa por seus visuais que parecem mais IA do que a própria IA, uma líder carismática que ancora a equipe.", ar: "مشهورة بمظهرها الذي يبدو أكثر من الذكاء الاصطناعي، قائدة كاريزمية تُثبّت الفريق.", th: "โด่งดังด้วยวิชวลที่ดูเหมือน AI มากกว่า AI เอง เป็นลีดเดอร์ผู้มีเสน่ห์ที่เป็นหลักของทีม", vi: "Nổi tiếng với visual trông giống AI hơn cả AI, lãnh đạo đầy sức hút là trụ cột của nhóm.", ru: "Знаменита визуалом, похожим на ИИ больше самого ИИ, харизматичный лидер, скрепляющий команду." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=aespa+Karina+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=aespa+Karina+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "'카리나'라는 예명은 그리스어 'Karina(깨끗하고 순수한)'에서 유래했으며, 본명은 유지민입니다.",
@@ -1068,7 +1068,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         zodiac: { ko: "염소자리", en: "Capricorn" },
         height: "163cm", bloodType: "A",
         description: { ko: "맑고 깨끗한 음색과 강력한 퍼포먼스를 겸비한 멤버입니다.", en: "A member with a clear, pure voice and powerful performance skills.", ja: "澄んで清らかな音色と力強いパフォーマンスを兼ね備えたメンバー。", zh: "兼具清澈纯净音色和有力表演的成员。", es: "Una miembro con una voz clara y pura combinada con poderosas habilidades de actuación.", id: "Anggota dengan suara yang jernih dan murni serta kemampuan performa yang kuat.", fr: "Un membre avec une voix claire et pure combinée à des compétences de performance puissantes.", hi: "स्वच्छ और मधुर आवाज़ और शक्तिशाली परफॉर्मेंस कौशल वाली सदस्य।", pt: "Uma membro com uma voz clara e pura combinada com poderosas habilidades de performance.", ar: "عضو بصوت نقي وصافٍ مع مهارات أداء قوية.", th: "สมาชิกที่มีน้ำเสียงใสบริสุทธิ์ผสานกับทักษะการแสดงอันทรงพลัง", vi: "Thành viên với giọng hát trong trẻo thuần khiết kết hợp kỹ năng biểu diễn mạnh mẽ.", ru: "Участница с чистым, прозрачным голосом и мощными навыками выступления." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=aespa+Winter+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=aespa+Winter+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "1월 1일 새해 첫날 태어난 '새해 여신'으로, 팬들이 매년 새해 첫 축하 메시지를 윈터에게 보내는 전통이 생겼습니다.",
@@ -1095,7 +1095,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         zodiac: { ko: "전갈자리", en: "Scorpio" },
         height: "164cm", bloodType: "O",
         description: { ko: "3개국어에 능통한 뇌섹녀이자 탄탄한 랩 실력을 가진 멤버입니다.", en: "A multilingual intellectual fluent in three languages with solid rap skills.", ja: "3ヶ国語に堪能な知性派で、確かなラップスキルを持つメンバー。", zh: "精通三国语言的才女，拥有扎实的说唱实力。", es: "Una intelectual multilingüe fluida en tres idiomas con sólidas habilidades de rap.", id: "Intelektual multibahasa yang fasih dalam tiga bahasa dengan kemampuan rap yang kuat.", fr: "Une intellectuelle multilingue parlant couramment trois langues avec de solides compétences en rap.", hi: "तीन भाषाओं में पारंगत बहुभाषी बुद्धिजीवी और ठोस रैप कौशल वाली सदस्य।", pt: "Uma intelectual multilíngue fluente em três idiomas com sólidas habilidades de rap.", ar: "مثقفة متعددة اللغات طليقة في ثلاث لغات بمهارات راب قوية.", th: "นักปัญญาชนหลายภาษาที่คล่องสามภาษาด้วยทักษะแรปที่แข็งแกร่ง", vi: "Trí thức đa ngôn ngữ thành thạo ba ngôn ngữ với kỹ năng rap vững chắc.", ru: "Полиглот, свободно владеющая тремя языками, с отличными навыками рэпа." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=aespa+Giselle+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=aespa+Giselle+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "일본계 혼혈로 한국어·영어·일본어를 유창하게 구사하며, 세 개 언어가 자연스럽게 섞여 나오는 '트라이링구얼'입니다.",
@@ -1122,7 +1122,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         zodiac: { ko: "천칭자리", en: "Libra" },
         height: "161cm", bloodType: "O",
         description: { ko: "폭발적인 고음과 소울풀한 가창력을 자랑하는 팀의 막내입니다.", en: "The youngest member boasting explosive high notes and soulful vocals.", ja: "爆発的な高音とソウルフルな歌唱力を誇るチームの末っ子。", zh: "拥有爆发性高音和充满灵魂的歌唱实力的团队最小成员。", es: "La más joven del equipo con explosivos agudos y una voz llena de soul.", id: "Anggota termuda dengan nada tinggi yang eksplosif dan vokal yang penuh jiwa.", fr: "La plus jeune du groupe avec des aigus explosifs et une voix pleine d'âme.", hi: "विस्फोटक हाई नोट्स और सोलफुल वोकल्स वाली टीम की सबसे छोटी सदस्य।", pt: "A mais jovem do grupo com agudos explosivos e vocais cheios de alma.", ar: "أصغر أعضاء الفريق بنوتات عالية متفجرة وصوت ممتلئ بالروح.", th: "สมาชิกอายุน้อยที่สุดที่มีโน้ตสูงระเบิดพลังและเสียงร้องเต็มอารมณ์", vi: "Thành viên nhỏ tuổi nhất với những nốt cao bùng nổ và giọng hát đầy cảm xúc.", ru: "Младшая участница группы со взрывными верхними нотами и душевным вокалом." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=aespa+Ningning+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=aespa+Ningning+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "중국 헤이룽장성 출신으로, 어릴 때부터 성악 훈련을 받아 에스파에서도 탄탄한 발성 기반을 자랑합니다.",
@@ -3155,7 +3155,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           vi: "Chị cả và trung tâm hình ảnh của nhóm. Sở hữu khả năng lãnh đạo ấm áp và giọng hát trong trẻo.",
           ru: "Старшая участница и визуальный центр группы. Обладает теплым лидерством и чистым голосом."
         },
-        imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK+Jisoo+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK+Jisoo+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "팀의 맏언니로 포근하고 어른스러운 분위기를 만들어주는 '팀의 엄마' 같은 존재이며, 멤버들이 힘들 때 가장 먼저 찾는 언니입니다.",
@@ -3273,7 +3273,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           vi: "Rapper chính, người làm chủ sân khấu với thần thái và sức hút vô song.",
           ru: "Главный рэпер, который господствует на сцене благодаря непревзойденной ауре и харизме."
         },
-        imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK+Jennie+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK+Jennie+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "뉴질랜드 유학 경험이 있어 유창한 영어 실력을 갖추고 있으며, 블랙핑크의 영어 인터뷰를 사실상 주도합니다.",
@@ -3391,7 +3391,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           vi: "Vũ công chính với kỹ năng nhảy ấn tượng và lượng người hâm mộ toàn cầu đông đảo.",
           ru: "Главный танцор с потрясающими танцевальными навыками и огромной мировой фан-базой."
         },
-        imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK+Lisa+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK+Lisa+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "태국 출신으로 본명은 Pranpriya Manobal이며, '리사'라는 이름은 스스로 선택한 것입니다.",
@@ -3509,7 +3509,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           vi: "Giọng ca chính với âm sắc độc đáo và đầy cảm xúc, đồng thời là một ngôi sao nhạc pop toàn cầu.",
           ru: "Главная вокалистка с уникальным эмоциональным голосом и мировая поп-звезда."
         },
-        imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK+Rose+Rosé+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=BLACKPINK+Rose+Rosé+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "뉴질랜드 출신 한국계 호주인으로 영어와 한국어 모두 모국어 수준이며, 섬세한 감성의 영어 가사를 직접 쓰기도 합니다.",
@@ -4105,7 +4105,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           vi: "Cựu thành viên IZ*ONE và là trưởng nhóm với tâm hồn tinh tế và khả năng lãnh đạo mạnh mẽ.",
           ru: "Бывшая участница IZ*ONE и лидер, сочетающая в себе тонкую эмоциональность и сильные лидерские качества."
         },
-        imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Kim+Chaewon+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Kim+Chaewon+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "IZ*ONE 활동 당시부터 '리더 감'으로 인정받았으며 르세라핌에서도 자연스럽게 팀의 중심 역할을 맡게 되었습니다.",
@@ -4223,7 +4223,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           vi: "Một thành viên kỳ cựu với sự nghiệp vô song trải dài qua HKT48, IZ*ONE và LE SSERAFIM tại hai quốc gia.",
           ru: "Ветеран с уникальной карьерой, охватывающей HKT48, IZ*ONE и LE SSERAFIM в двух странах."
         },
-        imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Sakura+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Sakura+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "HKT48·AKB48·IZ*ONE를 거쳐 르세라핌까지, J-팝과 K-팝 양쪽에서 모두 최정상에 오른 전무후무한 커리어를 보유하고 있습니다.",
@@ -4341,7 +4341,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           vi: "Một ca sĩ kiêm nhạc sĩ solo lớn lên ở Hoa Kỳ với tư duy toàn cầu và là linh hồn trong giọng hát của LE SSERAFIM.",
           ru: "Сольная певица и автор песен, выросшая в США, с глобальным мировоззрением и вокальным ядром LE SSERAFIM."
         },
-        imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Huh+Yunjin+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Huh+Yunjin+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "미국 뉴욕과 캐나다를 거쳐 한국에 온 진정한 글로벌 아티스트로 영어·한국어 모두 모국어 수준으로 구사합니다.",
@@ -4459,7 +4459,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           vi: "Cựu diễn viên múa ba lê chuyên nghiệp người Nhật Bản, người lồng ghép các chuyển động ba lê vào các màn trình diễn K-pop một cách độc đáo.",
           ru: "Бывшая японская профессиональная балерина, уникально сочетающая балетные движения с выступлениями в стиле K-pop."
         },
-        imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Kazuha+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Kazuha+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "오사카 출신으로 7세부터 클래식 발레를 시작, 프로 발레리나로 활동하다 K-팝 아이돌에 도전하는 파격적인 이력을 갖고 있습니다.",
@@ -4577,7 +4577,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           vi: "Em út nhưng toát ra sự hiện diện trên sân khấu không kém gì các chị — nguồn năng lượng của cả nhóm.",
           ru: "Самая младшая, но излучающая на сцене не меньшую уверенность, чем старшие участницы — «зарядное устройство» команды."
         },
-        imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Hong+Eunchae+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=LE+SSERAFIM+Hong+Eunchae+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "르세라핌에 입덕하기 전부터 이미 르세라핌의 팬이었다고 밝혀 '성공한 팬' 대열에 합류한 것으로 유명합니다.",
@@ -5173,7 +5173,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           vi: "Giọng ca chính chịu trách nhiệm về cảm xúc của nhóm với giọng hát thuần khiết và trong trẻo.",
           ru: "Главный вокалист, отвечающий за эмоциональную глубину группы своим чистым и ясным голосом."
         },
-        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Miyeon+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Miyeon+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "YG 연습생 출신으로 블랙핑크 데뷔 멤버 후보였다는 이야기가 있어, 팬들 사이에서 '평행우주의 블랙핑크 미연'이라는 말이 회자됩니다.",
@@ -5291,7 +5291,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           vi: "Giọng ca dẫn người Thái Lan với khả năng đa ngôn ngữ xuất sắc và những màn trình diễn đầy cảm xúc.",
           ru: "Тайская ведущая вокалистка с выдающимися лингвистическими навыками и эмоциональными выступлениями."
         },
-        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Minnie+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Minnie+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "태국 유명 가수 집안 출신으로, 이미 태국에서 '연예인 집안의 아이'로 알려진 상태에서 한국 연예계에 도전했습니다.",
@@ -5409,7 +5409,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           vi: "Một rapper thiên tài đích thân đảm nhận viết lời, sáng tác và sản xuất — cốt lõi sáng tạo của nhóm.",
           ru: "Гениальный рэпер, который сам пишет тексты, музыку и продюсирует — творческое ядро группы."
         },
-        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Soyeon+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Soyeon+face+front+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "JYP 서바이벌 오디션에서 최종 탈락 후 YG, 그리고 큐브로 이어지는 독특한 이력 끝에 (여자)아이들의 리더·프로듀서로 꽃을 피웠습니다.",
@@ -5527,7 +5527,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           vi: "Người tạo bầu không khí cho nhóm với tính cách thẳng thắn và năng lượng bùng nổ.",
           ru: "Заводила группы с искренним характером и безграничной энергией."
         },
-        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Yuqi+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Yuqi+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "중국 상하이 출신으로 어릴 때부터 성악 훈련을 받았으며 K-팝에 빠져 혼자 한국으로 건너온 의지의 멤버입니다.",
@@ -5645,7 +5645,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           vi: "Em út người Đài Loan được người hâm mộ yêu mến bởi những phản ứng chân thật và sức hút độc đáo.",
           ru: "Тайваньская макнэ, любимая фанатами за свои искренние реакции и уникальное обаяние."
         },
-        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Shuhua+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=(G)I-DLE+Shuhua+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         tmi: {
           ko: [
             "대만 출신으로 한국어를 전혀 모르는 상태로 큐브에 입사했지만, 연습생 기간 중 빠르게 습득해 지금은 유창하게 구사합니다.",
@@ -5963,7 +5963,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ENFJ",
         height: "171cm",
         zodiac: { ko: "천칭자리", en: "Libra", ja: "てんびん座", zh: "天秤座", es: "Libra", id: "Libra", fr: "Balance", hi: "तुला", pt: "Libra", ar: "الميزان", th: "ราศีตุล", vi: "Thiên Bình", ru: "Весы" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Bang+Chan+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Bang+Chan+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "호주 출신의 스트레이 키즈 리더이자 자체 제작 유닛 3RACHA의 핵심. 팀 음악 대부분을 직접 프로듀싱하며 매주 'Chan's Room' 라이브로 팬들과 소통한다.",
           en: "Leader of Stray Kids and core of self-producing unit 3RACHA. He produces most of the team's music and connects with fans weekly through 'Chan's Room' live streams.",
@@ -6083,7 +6083,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ISFP",
         height: "171cm",
         zodiac: { ko: "전갈자리", en: "Scorpio", ja: "さそ리座", zh: "天蝎座", es: "Escorpio", id: "Skorpio", fr: "Scorpion", hi: "वृश्चिक", pt: "Escorpião", ar: "العقرب", th: "ราศีพิจิก", vi: "Bọ Cạp", ru: "Скорпион" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Lee+Know+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Lee+Know+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "BTS 'DNA' 백댄서 출신의 스트레이 키즈 메인 댄서. 고양이 3마리를 키우는 집사로, 압도적인 댄스 실력으로 'JYP의 춤의 신'이라 불린다.",
           en: "Former BTS 'DNA' backup dancer turned Stray Kids main dancer. A devoted cat dad to 3 cats, he is called 'JYP's god of dance' for his overwhelming skill.",
@@ -6203,7 +6203,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ENFP",
         height: "167cm",
         zodiac: { ko: "사자자리", en: "Leo", ja: "しし座", zh: "狮子座", es: "Leo", id: "Leo", fr: "Lion", hi: "सिंह", pt: "Leão", ar: "الأسد", th: "ราศีสิงห์", vi: "Sư Tử", ru: "Лев" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Changbin+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Changbin+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "3RACHA의 핵심 래퍼이자 작사가. 특유의 저음 래핑 스타일 '군함'으로 유명하며 일본어를 독학으로 마스터한 언어 재능도 가졌다.",
           en: "Core rapper and lyricist of 3RACHA, nicknamed 'Battleship' for his deep powerful rap style. Also self-taught Japanese, showcasing his linguistic talent.",
@@ -6323,7 +6323,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ESTP",
         height: "179cm",
         zodiac: { ko: "물고기자리", en: "Pisces", ja: "うお座", zh: "双鱼座", es: "Piscis", id: "Pisces", fr: "Poissons", hi: "मीन", pt: "Peixes", ar: "الحوت", th: "ราศีมีน", vi: "Song Ngư", ru: "Рыбы" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Hyunjin+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Hyunjin+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "화가이자 발레 출신 댄서. Versace·Valentino 글로벌 앰배서더로 활동하며 리노와 함께 스트레이 키즈 '춤 양대 산맥'으로 불린다.",
           en: "A painter and ballet-trained dancer. Global ambassador for Versace and Valentino, dubbed one of Stray Kids' two dance pillars alongside Lee Know.",
@@ -6443,7 +6443,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ISTP",
         height: "168cm",
         zodiac: { ko: "처녀자리", en: "Virgo", ja: "おとめ座", zh: "处女座", es: "Virgo", id: "Virgo", fr: "Vierge", hi: "कन्या", pt: "Virgem", ar: "العذراء", th: "ราศีกันย์", vi: "Xử Nữ", ru: "Дева" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Han+Jisung+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Han+Jisung+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "말레이시아 출신의 3RACHA 감성 래퍼·프로듀서. 스트레이 키즈 최다 작사 멤버로, 새벽 감성의 시적인 가사로 팬들의 깊은 공감을 얻는다.",
           en: "Malaysian-raised 3RACHA rapper and producer. The most prolific lyricist in Stray Kids, known for poetic, late-night-inspired lyrics that deeply resonate with fans.",
@@ -6563,7 +6563,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ENFJ",
         height: "171cm",
         zodiac: { ko: "처녀자리", en: "Virgo", ja: "おとめ座", zh: "处女座", es: "Virgo", id: "Virgo", fr: "Vierge", hi: "कन्या", pt: "Virgem", ar: "العذراء", th: "ราศีกันย์", vi: "Xử Nữ", ru: "Дева" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Felix+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Felix+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "호주 출신의 Dior 글로벌 앰배서더. 주근깨 트레이드마크와 '목소리 깡패'로 불리는 저음 보이스, 한국어를 처음 배우며 흘린 눈물이 팬들의 마음을 사로잡았다.",
           en: "Australian-born Dior global ambassador. His trademark freckles, unexpectedly deep 'voice gangster' voice, and tears learning Korean from scratch have captured fans' hearts.",
@@ -6683,7 +6683,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ISFJ",
         height: "176cm",
         zodiac: { ko: "처녀자리", en: "Virgo", ja: "おとめ座", zh: "处女座", es: "Virgo", id: "Virgo", fr: "Vierge", hi: "कन्या", pt: "Virgem", ar: "العذراء", th: "ราศีกันย์", vi: "Xử Nữ", ru: "Дева" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Seungmin+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Seungmin+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "야구를 사랑하는 스트레이 키즈 최강 보컬. 초승달처럼 휘는 눈 웃음으로 유명하며 BTS 정국과 절친한 사이로도 알려져 있다.",
           en: "Baseball-loving main vocalist of Stray Kids. Famous for his crescent-moon eye smile and close friendship with BTS's Jungkook.",
@@ -6803,7 +6803,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "INFJ",
         height: "173cm",
         zodiac: { ko: "물병자리", en: "Aquarius", ja: "みずがめ座", zh: "水瓶座", es: "Acuario", id: "Aquarius", fr: "Verseau", hi: "कुंभ", pt: "Aquário", ar: "الدلو", th: "ราศีกุมภ์", vi: "Bảo Bình", ru: "Водолей" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+IN+Yang+Jeongin+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+IN+Yang+Jeongin+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "서바이벌 탈락 후 최종 합류한 '반전 막내'. 만 16세 데뷔 후 변성기를 거쳐 깊고 매력적인 음색으로 변신했으며, '귀여운 노인'이라는 별명이 있다.",
           en: "The 'plot-twist maknae' who was eliminated then added back. Debuted at 16, and after his voice changed, surprised fans with a deep, charming tone — nicknamed 'cute old man'.",
@@ -7466,7 +7466,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ENFJ",
         height: "163cm",
         zodiac: { ko: "처녀자리", en: "Virgo", ja: "乙女座", zh: "处女座", es: "Virgo", id: "Virgo", fr: "Vierge", hi: "कन्या", pt: "Virgem", ar: "العذراء", th: "ราศีกันย์", vi: "Xử Nữ", ru: "Дева" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Nayeon+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Nayeon+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "트와이스 최연장자이자 첫 솔로 데뷔 멤버. 빌보드 200에 진입한 솔로 앨범과 '토순이' 별명으로 유명하며 특유의 에너지로 팀 분위기를 이끈다.",
           en: "Oldest member and first TWICE soloist. Her Billboard 200-charting solo album and 'bunny' nickname are iconic — her infectious energy keeps the team lively.",
@@ -7586,7 +7586,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ISTP",
         height: "167cm",
         zodiac: { ko: "전갈자리", en: "Scorpio", ja: "さそり座", zh: "天蝎座", es: "Escorpio", id: "Scorpio", fr: "Scorpion", hi: "वृश्चिक", pt: "Escorpião", ar: "العقرب", th: "ราศีพิจิก", vi: "Thiên Yết", ru: "Скорпион" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Jeongyeon+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Jeongyeon+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "배우 엄정화의 조카로 트와이스 내 '팩폭 담당'. 건강 문제 극복 후 복귀해 팬들에게 감동을 선사했으며, 단발 트레이드마크로 사랑받는다.",
           en: "Niece of actress Uhm Jung-hwa, known as TWICE's 'blunt truth-teller'. Her health comeback deeply moved fans, and her signature short hair is beloved.",
@@ -7706,7 +7706,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ESFP",
         height: "163cm",
         zodiac: { ko: "전갈자리", en: "Scorpio", ja: "さそり座", zh: "天蝎座", es: "Escorpio", id: "Scorpio", fr: "Scorpion", hi: "वृश्चिक", pt: "Escorpião", ar: "العقرب", th: "ราศีพิจิก", vi: "Thiên Yết", ru: "Скорпион" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Momo+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Momo+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "오사카 출신의 트와이스 메인 댄서. SIXTEEN 탈락 후 긴급 합류한 '기적의 멤버'로, E-girls 댄서들과 어깨를 나란히 하는 압도적 댄스 실력의 소유자.",
           en: "Osaka-born main dancer of TWICE. A 'miracle member' added back after elimination from SIXTEEN, her dancing is on par with Japan's elite E-girls performers.",
@@ -7826,7 +7826,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ESFJ",
         height: "163cm",
         zodiac: { ko: "염소자리", en: "Capricorn" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Sana+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Sana+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: { ko: "오사카 출신의 '사나 말투' 장인. 'shy shy shy' 밈으로 전 세계에서 유명하며 트와이스 내 인스타 팔로워 1위, '국민 첫사랑' 이미지의 주인공.", en: "Osaka-born queen of the 'Sana dialect'. Famous globally for the 'shy shy shy' meme, she has the most Instagram followers in TWICE and a 'nation's first love' image." },
         tmi: {
           ko: [
@@ -7855,7 +7855,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ESFJ",
         height: "160cm",
         zodiac: { ko: "물병자리", en: "Aquarius" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Jihyo+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Jihyo+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: { ko: "JYP 10년 연습생 출신의 트와이스 리더이자 메인 보컬. '박신이'라는 극찬을 받는 보컬 실력과 9명을 하나로 묶는 리더십으로 팀의 중심이다.", en: "Leader and main vocal of TWICE with a legendary 10-year JYP trainee period. Praised as 'Park Shin-i' (Park sent by God), she is the unifying center of all 9 members." },
         tmi: {
           ko: [
@@ -7884,7 +7884,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ISFP",
         height: "163cm",
         zodiac: { ko: "양자리", en: "Aries" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Mina+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Mina+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: { ko: "텍사스 출신·일본 성장의 발레 댄서. 불안 장애 극복 후 무대 복귀로 팬들에게 큰 용기를 줬으며, '블랙 스완'이라는 별명처럼 가장 우아한 무대를 선보인다.", en: "Texas-born, Japan-raised ballet dancer. Her courageous return to stage after anxiety disorder moved fans worldwide — her graceful presence earns her the nickname 'Black Swan'." },
         tmi: {
           ko: [
@@ -7913,7 +7913,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ENFP",
         height: "163cm",
         zodiac: { ko: "쌍둥이자리", en: "Gemini", ja: "ふたご座", zh: "双子座", es: "Géminis", id: "Gemini", fr: "Gémeaux", hi: "मिथुन", pt: "Gêmeos", ar: "الجوزاء", th: "เมถุน", vi: "Song Tử", ru: "Близнецы" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Dahyun+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Dahyun+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "학예회 영상 바이럴로 길거리 캐스팅된 트와이스 유머 담당. '꼬마 유령', '두부미녀'로 불리는 독특한 매력과 자칭 '닌텐도 천재'로 팬들에게 사랑받는다.",
           en: "Street-cast after a school talent show video went viral. Beloved as TWICE's comedian, nicknamed 'mini ghost' and 'tofu beauty' — also the self-proclaimed Nintendo champion of the group.",
@@ -8033,7 +8033,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "INFP",
         height: "159cm",
         zodiac: { ko: "황소자리", en: "Taurus", ja: "おうし座", zh: "金牛座", es: "Tauro", id: "Taurus", fr: "Taureau", hi: "वृषभ", pt: "Touro", ar: "الثور", th: "พฤษภ", vi: "Kim Ngưu", ru: "Телец" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Chaeyoung+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Chaeyoung+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "자체 작사와 타투로 트와이스 내 가장 '엣지' 있는 이미지. 미술 참여와 힙합 패션으로 독보적인 개성을 드러내며 가장 작은 키로도 무대 장악력은 최강이다.",
           en: "The edgiest image in TWICE, with self-written lyrics and tattoos. Her art involvement, hip-hop fashion, and commanding stage presence make her the group's unique rebel voice.",
@@ -8153,7 +8153,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ISFP",
         height: "172cm",
         zodiac: { ko: "쌍둥이자리", en: "Gemini", ja: "ふたご座", zh: "双子座", es: "Géminis", id: "Gemini", fr: "Gémeaux", hi: "मिथुन", pt: "Gêmeos", ar: "الجوزاء", th: "เมถุน", vi: "Song Tử", ru: "Близнецы" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Tzuyu+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Tzuyu+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "대만 출신의 '인간 비율 표준'. 172cm 완벽한 비율과 한국어·대만어·광둥어·일본어 구사 능력, 활 쏘기 실력까지 갖춘 트와이스의 글로벌 비주얼이다.",
           en: "Taiwan-born 'human body standard'. With her 172cm perfect proportions, fluency in 4 languages, and archery skills, she is TWICE's ultimate global visual.",
@@ -8463,7 +8463,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "INFJ",
         height: "175cm",
         zodiac: { ko: "천칭자리", en: "Libra", ja: "てんびん座", zh: "天秤座", es: "Libra", id: "Libra", fr: "Balance", hi: "तुला", pt: "Libra", ar: "الميزان", th: "ตุลย์", vi: "Thiên Bình", ru: "Весы" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Jeonghan+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Jeonghan+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "성별을 초월한 외모로 세계 미남 차트 단골인 보컬팀 멤버. 군 복귀 후 달라진 분위기로 팬들을 사로잡으며 '정한식 장난'으로도 유명하다.",
           en: "A regular on global 'most handsome' charts for his transcendent beauty. After military service, his transformed vibe captivated fans — and his signature pranks keep members on their toes.",
@@ -8583,7 +8583,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ISFJ",
         height: "176cm",
         zodiac: { ko: "염소자리", en: "Capricorn", ja: "やぎ座", zh: "摩羯座", es: "Capricornio", id: "Capricorn", fr: "Capricorne", hi: "मकर", pt: "Capricórnio", ar: "الجدي", th: "มังกร", vi: "Ma Kết", ru: "Козерог" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Joshua+Hong+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Joshua+Hong+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "LA 출신의 세븐틴 공식 영어 통역사. 기타를 직접 연주하는 뮤지션이자 '인간 비타민'이라는 별명처럼 항상 밝고 긍정적인 에너지를 발산한다.",
           en: "LA-born official English interpreter of SEVENTEEN. A guitarist-musician and 'human vitamin' who radiates constant positive energy to the team and fans alike.",
@@ -8703,7 +8703,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ISTP",
         height: "180cm",
         zodiac: { ko: "쌍둥이자리", en: "Gemini", ja: "双子座", zh: "双子座", es: "Géminis", id: "Gemini", fr: "Gémeaux", hi: "मिथुन", pt: "Gêmeos", ar: "الجوزاء", th: "เมถุน", vi: "Song Tử", ru: "Близнецы" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Jun+Wen+Junhui+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Jun+Wen+Junhui+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "광저우 출신의 중국 아역 배우 출신 퍼포먼스팀. 비보잉과 무술을 결합한 독특한 퍼포먼스로 중화권 팬덤을 주도하며 조용한 일상과 강렬한 무대의 갭이 매력이다.",
           en: "Guangzhou-born former Chinese child actor in SEVENTEEN's Performance Team. Known for fusing B-boying and martial arts, he leads the Chinese fanbase with an off-stage/on-stage contrast that is pure magnetism.",
@@ -8823,7 +8823,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ENFP",
         height: "177cm",
         zodiac: { ko: "쌍둥이자리", en: "Gemini", ja: "双子座", zh: "双子座", es: "Géminis", id: "Gemini", fr: "Gémeaux", hi: "मिथुन", pt: "Gêmeos", ar: "الجوزاء", th: "เมถุน", vi: "Song Tử", ru: "Близнецы" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Hoshi+Kwon+Soonyoung+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Hoshi+Kwon+Soonyoung+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "세븐틴 안무 대부분을 만드는 퍼포먼스팀 리더. 베스트 안무상 3회 수상의 '안무의 신'으로, 고양이 눈매와 무한한 에너지가 트레이드마크다.",
           en: "Performance Team leader who creates most of SEVENTEEN's choreography. A three-time Best Choreography Award winner — nicknamed 'god of dance' for his limitless energy and tiger-like eyes.",
@@ -8943,7 +8943,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "INFP",
         height: "182cm",
         zodiac: { ko: "게자리", en: "Cancer", ja: "かに座", zh: "巨蟹座", es: "Cáncer", id: "Cancer", fr: "Cancer", hi: "कर्क", pt: "Câncer", ar: "السرطان", th: "ราศีกรกฎ", vi: "Cự Giải", ru: "Рак" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Wonwoo+Jeon+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Wonwoo+Jeon+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "세븐틴 최장신의 독서광 래퍼. 저음 보이스 ASMR이 폭발적 반응을 얻었으며, '책 원우'라는 별명처럼 팬 사인회에서도 책을 놓지 않는다.",
           en: "SEVENTEEN's tallest member and bookworm rapper. His deep-voice ASMR sparked massive fan reactions — and as 'book Wonwoo', he literally brings books to fan sign events.",
@@ -9063,7 +9063,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "INTJ",
         height: "164cm",
         zodiac: { ko: "전갈자리", en: "Scorpio", ja: "さそり座", zh: "天蝎座", es: "Escorpio", id: "Scorpio", fr: "Scorpion", hi: "वृश्चिक", pt: "Escorpião", ar: "العقرب", th: "ราศีพิจิก", vi: "Thiên Yết", ru: "Скорпион" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Woozi+Lee+Jihoon+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Woozi+Lee+Jihoon+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "세븐틴 음악 80%를 직접 만드는 보컬팀 리더이자 천재 프로듀서. 164cm로 팬들을 놀라게 하지만 무대 위 존재감은 누구보다 압도적이다.",
           en: "Vocal Team leader and genius producer behind 80%+ of SEVENTEEN's music. His 164cm stature surprises newcomers, but his stage presence completely overpowers anyone around him.",
@@ -9183,7 +9183,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "INFP",
         height: "177cm",
         zodiac: { ko: "전갈자리", en: "Scorpio", ja: "さそり座", zh: "天蝎座", es: "Escorpio", id: "Scorpio", fr: "Scorpion", hi: "वृश्चिक", pt: "Escorpião", ar: "العقرب", th: "ราศีพิจิก", vi: "Thiên Yết", ru: "Скорпион" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+The8+Xu+Minghao+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+The8+Xu+Minghao+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "비보잉 선수 출신의 퍼포먼스팀 댄서. 자체 안무 유튜브 1억 뷰를 달성했으며 중국 럭셔리 패션 앰배서더로도 활발히 활동하는 멀티 아티스트다.",
           en: "Performance Team dancer with a competitive B-boy background. His self-choreographed YouTube content surpassed 100M views, and he's an active ambassador for Chinese luxury fashion brands.",
@@ -9303,7 +9303,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ENFP",
         height: "187cm",
         zodiac: { ko: "양자리", en: "Aries", ja: "おひつじ座", zh: "白羊座", es: "Aries", id: "Aries", fr: "Bélier", hi: "मेष (Aries)", pt: "Áries", ar: "برج الحمل", th: "ราศีเมษ", vi: "Bạch Dương", ru: "Овен" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Mingyu+Kim+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Mingyu+Kim+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "187cm의 세븐틴 공식 비주얼이자 팀의 쉐프. GQ·Vogue 커버 단골이며 무대 위 카리스마와 일상의 귀여움 갭이 극명한 '갭 모에' 캐릭터다.",
           en: "SEVENTEEN's 187cm official visual and team chef. A regular on GQ and Vogue covers, his dramatic gap between on-stage charisma and off-stage cuteness makes him the group's ultimate 'gap moe' figure.",
@@ -9423,7 +9423,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ENFP",
         height: "178cm",
         zodiac: { ko: "물병자리", en: "Aquarius", ja: "みずがめ座", zh: "水瓶座", es: "Acuario", id: "Aquarius", fr: "Verseau", hi: "कुंभ (Aquarius)", pt: "Aquário", ar: "برج الدلو", th: "ราศีกุมภ์", vi: "Bảo Bình", ru: "Водолей" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+DK+Lee+Seokmin+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+DK+Lee+Seokmin+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "뮤지컬 '그리스' 주연을 맡은 세븐틴 메인 보컬. '세븐틴의 해'라는 별명처럼 태양처럼 밝은 에너지로 팀에 활력을 불어넣는 긍정 에너지의 화신이다.",
           en: "SEVENTEEN's main vocal who starred in the musical 'Grease'. Nicknamed 'the sun of SEVENTEEN' for his endless positive energy — widely recognized as the most consistently upbeat member.",
@@ -9543,7 +9543,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ESFJ",
         height: "173cm",
         zodiac: { ko: "염소자리", en: "Capricorn", ja: "やぎ座", zh: "摩羯座", es: "Capricornio", id: "Capricorn", fr: "Capricorne", hi: "मकर (Capricorn)", pt: "Capricórnio", ar: "برج الجدي", th: "ราศีมังกร", vi: "Ma Kết", ru: "Козерог" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Seungkwan+Boo+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Seungkwan+Boo+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "제주도 출신의 세븐틴 예능 능력치 1위. 어머니 사랑이 각별한 효자이며, 각종 시상식 MC로 자주 초청받는 세븐틴의 분위기 메이커다.",
           en: "Jeju Island-born and rated #1 in variety talent in SEVENTEEN. A devoted mother's boy and sought-after awards MC — the ultimate mood-maker who never fails to light up any situation.",
@@ -9663,7 +9663,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "INFP",
         height: "180cm",
         zodiac: { ko: "물병자리", en: "Aquarius", ja: "みずがめ座", zh: "水瓶座", es: "Acuario", id: "Aquarius", fr: "Verseau", hi: "कुंभ", pt: "Aquário", ar: "الدلو", th: "ราศีกุมภ์", vi: "Bảo Bình", ru: "Водолей" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Vernon+Chwe+Hansol+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Vernon+Chwe+Hansol+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "뉴욕 출신 한미 혼혈 래퍼. GQ 커버 장식 후 명품 브랜드 러브콜이 쏟아지는 패션 아이콘이며 '버논 한국어' 밈으로도 글로벌 인지도가 높다.",
           en: "Half-Korean, half-American rapper from New York. A fashion icon after his GQ cover appearance, and globally recognized for the 'Vernon Korean' pronunciation meme that's charmed fans worldwide.",
@@ -9783,7 +9783,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ISFP",
         height: "173cm",
         zodiac: { ko: "물병자리", en: "Aquarius", ja: "みずがめ座", zh: "水瓶座", es: "Acuario", id: "Aquarius", fr: "Verseau", hi: "कुंभ", pt: "Aquário", ar: "الدلو", th: "ราศีกุมภ์", vi: "Bảo Bình", ru: "Водолей" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Dino+Lee+Chan+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Dino+Lee+Chan+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: {
           ko: "마이클 잭슨을 롤모델로 삼은 세븐틴 막내 댄서. 6년 연습 끝에 데뷔한 성실함과 '막내 같지 않은 막내'의 성숙한 퍼포먼스가 트레이드마크다.",
           en: "SEVENTEEN's youngest dancer with Michael Jackson as his role model. Six years of training before debut — and a performance maturity so remarkable he's called 'the maknae who doesn't act like a maknae'.",
@@ -9968,7 +9968,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ISFJ",
         height: "174cm",
         zodiac: { ko: "물병자리", en: "Aquarius", ja: "みずがめ座", zh: "水瓶座", es: "Acuario", id: "Aquarius", fr: "Verseau", hi: "कुंभ (Aquarius)", pt: "Aquário", ar: "برج الدلو", th: "ราศีกุมภ์", vi: "Bảo Bình", ru: "Водолей" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Jungwon+Yang+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Jungwon+Yang+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: { ko: "엔하이픈의 리더로 뛰어난 리더십과 음악적 감성을 겸비한 보컬리스트.", en: "The leader of ENHYPEN, a vocalist who combines exceptional leadership with musical sensibility.", ja: "ENHYPENのリーダー。優れたリーダーシップと音楽적感性を兼ね備えたボーカリスト。", zh: "ENHYPEN的队长，是一位兼具卓越领导力和音乐感性的主唱。", es: "El líder de ENHYPEN, un vocalista que combina un liderazgo excepcional con sensibilidad musical.", id: "Pemimpin ENHYPEN, seorang vokalis yang menggabungkan kepemimpinan luar biasa dengan sensibilitas musik.", fr: "Le leader d'ENHYPEN, un chanteur qui allie un leadership exceptionnel à une sensibilité musicale.", hi: "ENHYPEN के लीडर, एक गायक जो संगीत की समझ के साथ उत्कृष्ट नेतृत्व कौशल का मेल हैं।", pt: "O líder do ENHYPEN, um vocalista que combina uma liderança excepcional com sensibilidade musical.", ar: "قائد فرقة ENHYPEN، مغني يجمع بين القيادة الاستثنائية والحس الموسيقي العميق.", th: "ลีดเดอร์ของ ENHYPEN นักร้องที่มีทั้งความเป็นผู้นำที่ยอดเยี่ยมและความรู้สึกทางดนตรีที่ลึกซึ้ง", vi: "Trưởng nhóm của ENHYPEN, một ca sĩ kết hợp giữa khả năng lãnh đạo xuất sắc và cảm nhận âm nhạc sâu sắc.", ru: "Лидер ENHYPEN, вокалист, сочетающий в себе исключительные лидерские качества и музыкальную чуткость." },
         tmi: {
           ko: [
@@ -10074,7 +10074,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ENFP",
         height: "185cm",
         zodiac: { ko: "천칭자리", en: "Libra", ja: "てんびん座", zh: "天秤座", es: "Libra", id: "Libra", fr: "Balance", hi: "तुला (Libra)", pt: "Libra", ar: "برج الميزان", th: "ราศีตุลย์", vi: "Thiên Bình", ru: "Весы" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Heeseung+Lee+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Heeseung+Lee+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: { ko: "보컬·댄스·랩 모두 소화하는 엔하이픈의 올라운더. I-LAND 전체 1위 출신 에이스.", en: "ENHYPEN's all-rounder who handles vocals, dance, and rap. The ace who finished #1 overall on I-LAND.", ja: "ボーカル、ダンス、ラップをすべてこなすENHYPENのオールラウンダー。I-LAND全体1位出身のエース。", zh: "ENHYPEN的全能成员，精通声乐、舞蹈和说唱。是I-LAND总排名第一的王牌选手。", es: "El todoterreno de ENHYPEN que maneja voz, baile y rap. El as que terminó en el puesto #1 general en I-LAND.", id: "Anggota serbabisa ENHYPEN yang menguasai vokal, tari, dan rap. Ace yang menempati peringkat #1 di I-LAND.", fr: "L'atout polyvalent d'ENHYPEN qui gère le chant, la danse et le rap. L'as qui a terminé n°1 au classement général d'I-LAND.", hi: "ENHYPEN के ऑल-राउंडर जो गायन, नृत्य और रैप तीनों में माहिर हैं। I-LAND में समग्र रूप से #1 स्थान हासिल करने वाले ऐस।", pt: "O 'all-rounder' do ENHYPEN que domina vocal, dança e rap. O ás que terminou em 1º lugar geral no I-LAND.", ar: "العضو المتكامل في ENHYPEN الذي يتقن الغناء والرقص والراب. الآس الذي حقق المركز الأول في برنامج I-LAND.", th: "ออลราวด์เดอร์ของ ENHYPEN ที่เก่งทั้งร้อง เเต้น และแร็ป เป็น 'ตัวตึง' ที่ได้อันดับ 1 จากรายการ I-LAND", vi: "Thành viên đa năng của ENHYPEN, đảm nhiệm tốt cả hát, nhảy và rap. Át chủ bài từng đứng vị trí số 1 tại I-LAND.", ru: "Универсальный участник ENHYPEN, владеющий вокалом, танцами и рэпом. Ас, занявший первое место в общем зачете I-LAND." },
         tmi: {
           ko: [
@@ -10180,7 +10180,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ENTJ",
         height: "180cm",
         zodiac: { ko: "황소자리", en: "Taurus", ja: "おうし座", zh: "金牛座", es: "Tauro", id: "Taurus", fr: "Taureau", hi: "वृषभ (Taurus)", pt: "Touro", ar: "برج الثور", th: "ราศีพฤษภ", vi: "Kim Ngưu", ru: "Телец" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Jay+Park+Jongseong+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Jay+Park+Jongseong+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: { ko: "미국 시애틀 출신 한미 혼혈 보컬리스트. 4개국어를 구사하는 언어 천재이자 패션 아이콘.", en: "A Korean-American vocalist from Seattle. A language genius fluent in 4 languages and a fashion icon.", ja: "アメリカ・シアトル出身の韓国系アメリカ人ボーカリスト。4カ国語を操る語学の天才であり、ファッションアイコン。", zh: "出身美国西雅图的韩美混血主唱学。精通四国语言的语言天才，同时也是时尚标杆。", es: "Un vocalista coreano-estadounidense de Seattle. Un genio de los idiomas que habla 4 lenguas y un ícono de la moda.", id: "Vokalis keturunan Korea-Amerika dari Seattle. Seorang jenius bahasa yang fasih dalam 4 bahasa dan ikon mode.", fr: "Un chanteur coréano-américain originaire de Seattle. Un génie des langues parlant couramment 4 langues et une icône de la mode.", hi: "सिएटल के एक कोरियाई-अमेरिकी गायक। 4 भाषाओं में पारंगत एक भाषा प्रतिभाशाली और फैशन आइकन।", pt: "Um vocalista coreano-americano de Seattle. Um gênio dos idiomas fluente em 4 línguas e um ícone da moda.", ar: "مغني كوري أمريكي من سياتل. عبقري لغات يتقن 4 لغات وأيقونة في الموضة.", th: "นักร้องลูกครึ่งเกาหลี-อเมริกันจากซีแอตเทิล เป็นอัจฉริยะด้านภาษาที่พูดได้ถึง 4 ภาษา และเป็นแฟชั่นไอคอน", vi: "Ca sĩ người Mỹ gốc Hàn đến từ Seattle. Một thiên tài ngôn ngữ thông thạo 4 thứ tiếng và là một biểu tượng thời trang.", ru: "Корейско-американский вокалист из Сиэтла. Лингвистический гений, владеющий 4 языками, и икона моды." },
         tmi: {
           ko: [
@@ -10286,7 +10286,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ENFP",
         height: "174cm",
         zodiac: { ko: "전갈자리", en: "Scorpio", ja: "さそり座", zh: "天蝎座", es: "Escorpio", id: "Scorpio", fr: "Scorpion", hi: "वृश्चिक (Scorpio)", pt: "Escorpião", ar: "برج العقرب", th: "ราศีพิจิก", vi: "Bọ Cạp", ru: "Скорпион" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Jake+Sim+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Jake+Sim+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: { ko: "호주 브리즈번 출신 보컬리스트. 따뜻한 음색과 사진 실력으로 팬들의 깊은 사랑을 받는다.", en: "Vocalist from Brisbane, Australia. Loved by fans for his warm vocal tone and outstanding photography.", ja: "オーストラリア・ブリスベン出身のボーカリスト。温かい歌声と写真の実力でファンから深く愛されている。", zh: "来自澳大利亚布里斯班的主唱。凭借温暖的音色和出色的摄影实力深受粉丝喜爱。", es: "Vocalista de Brisbane, Australia. Amado por los fans por su cálido tono vocal y su destacada fotografía.", id: "Vokalis dari Brisbane, Australia. Dicintai penggemar karena nada vokal yang hangat dan kemampuan fotografi yang luar biasa.", fr: "Chanteur originaire de Brisbane, en Australie. Apprécié des fans pour son timbre de voix chaleureux et ses talents de photographe.", hi: "ब्रिस्बेन, ऑस्ट्रेलिया के एक गायक। उनके मधुर स्वर और उत्कृष्ट फोटोग्राफी कौशल के लिए प्रशंसक उन्हें बहुत पसंद करते हैं।", pt: "Vocalista de Brisbane, Austrália. Amado pelos fãs por seu tom vocal caloroso e fotografia excepcional.", ar: "مغني من بريزبان، أستراليا. محبوب من قبل المعجبين لنبرة صوته الدافئة ومهاراته المتميزة في التصوير الفوتوغرافي.", th: "นักร้องจากบริสเบน ประเทศออสเตรเลีย ได้รับความรักอย่างมากจากแฟนๆ ด้วยน้ำเสียงที่อบอุ่นและทักษะการถ่ายภาพที่ยอดเยี่ยม", vi: "Ca sĩ đến từ Brisbane, Úc. Được người hâm mộ yêu mến nồng nhiệt bởi chất giọng ấm áp và khả năng nhiếp ảnh xuất sắc.", ru: "Вокалист из Брисбена, Австралия. Любим фанатами за теплый тембр голоса и выдающиеся способности к фотографии." },
         tmi: {
           ko: [
@@ -10498,7 +10498,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ENFP",
         height: "170cm",
         zodiac: { ko: "게자리", en: "Cancer", ja: "かに座", zh: "巨蟹座", es: "Cáncer", id: "Cancer", fr: "Cancer", hi: "कर्क (Cancer)", pt: "Câncer", ar: "برج السرطان", th: "ราศีกรกฎ", vi: "Cự Giải", ru: "Рак" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Sunoo+Kim+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Sunoo+Kim+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: { ko: "반달 눈웃음이 트레이드마크인 엔하이픈의 분위기 메이커 보컬리스트.", en: "ENHYPEN's mood-maker vocalist, famous for his crescent-moon eye-smile that lights up every room.", ja: "三日月のような笑顔がトレードマークの、ENHYPENのムードメーカー的なボーカリスト。", zh: "标志性月牙形笑眼，是ENHYPEN的氛围担当主唱。", es: "Vocalista y animador de ENHYPEN, famoso por su sonrisa de ojos en forma de media luna que ilumina cualquier habitación.", id: "Vokalis pembangun suasana ENHYPEN, terkenal dengan senyum matanya yang berbentuk bulan sabit yang mencerahkan setiap ruangan.", fr: "Chanteur et créateur d'ambiance d'ENHYPEN, célèbre pour son sourire aux yeux en forme de croissant de lune qui illumine chaque pièce.", hi: "ENHYPEN के मूड-मेकर गायक, जो अपनी अर्धचंद्राकार मुस्कान के लिए प्रसिद्ध हैं जो हर कमरे को रोशन कर देती है।", pt: "Vocalista e animador do ENHYPEN, famoso pelo seu sorriso com olhos em forma de lua crescente que ilumina qualquer lugar.", ar: "مغني فرقة ENHYPEN وصانع الأجواء، مشهور بابتسامة عينيه التي تشبه الهلال والتي تضيء أي مكان يتواجد فيه.", th: "นักร้องที่เป็นตัวสร้างบรรยากาศของ ENHYPEN โด่งดังด้วยรอยยิ้มรูปพระจันทร์เสี้ยวที่ทำให้โลกสดใส", vi: "Vocalist - người tạo bầu không khí của ENHYPEN, nổi tiếng with nụ cười mắt híp hình trăng khuyết đặc trưng.", ru: "Вокалист и душа компании в ENHYPEN, знаменитый своей улыбкой глазами в форме полумесяца, которая озаряет всё вокруг." },
         tmi: {
           ko: [
@@ -10604,7 +10604,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         mbti: "ISTP",
         height: "180cm",
         zodiac: { ko: "사수자리", en: "Sagittarius", ja: "いて座", zh: "射手座", es: "Sagitario", id: "Sagitarius", fr: "Sagittaire", hi: "धनु (Sagittarius)", pt: "Sagitário", ar: "برج القوس", th: "ราศีธนู", vi: "Nhân Mã", ru: "Стрелец" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Ni-ki+Nishimura+Riki+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Ni-ki+Nishimura+Riki+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
         description: { ko: "일본 출신 엔하이픈 막내이자 메인 댄서. 10대 나이에 천재 퍼포머로 인정받는 퍼포먼스 전문가.", en: "Japanese-born ENHYPEN maknae and main dancer. Recognized as a genius performer while still in his teens.", ja: "日本出身のENHYPENの末っ子でありメインダンサー. 10代にして天才パフォーマーと認められるパフォーマンスのスペシャリスト。", zh: "出身日本的ENHYPEN最小成员兼主舞. 在十几岁时就被公认为天才表演者的表演专家。", es: "Miembro más joven y bailarín principal de ENHYPEN, nacido en Japón. Reconocido como un artista genio siendo aún un adolescente.", id: "Anggota termuda dan penari utama ENHYPEN yang lahir di Jepang. Diakui sebagai penampil jenius meskipun masih remaja.", fr: "Membre benjamin et danseur principal d'ENHYPEN, né au Japon. Reconnu comme un performeur de génie dès son adolescence.", hi: "जापान में जन्मे एनहाइफन के सबसे छोटे सदस्य और मुख्य नर्तक। किशोर उम्र में ही एक प्रतिभाशाली प्रदर्शनकर्ता के रूप में पहचाने गए।", pt: "Membro mais jovem e dançarino principal do ENHYPEN, nascido no Japão. Reconhecido como um performer genial ainda na adolescência.", ar: "أصغر أعضاء فرقة ENHYPEN والراقص الرئيسي، ولد في اليابان. معترف به كؤدي عبقري وهو لا يزال في سن المراهقة.", th: "น้องเล็กและนักเต้นหลักของ ENHYPEN จากประเทศญี่ปุ่น ได้รับการยอมรับว่าเป็นอัจฉริยะด้านการแสดงตั้งแต่วัยรุ่น", vi: "Em út và là vũ công chính của ENHYPEN đến từ Nhật Bản. Chuyên gia biểu diễn được công nhận là một nghệ sĩ thiên tài khi còn ở độ tuổi thiếu niên.", ru: "Японский участник, макнэ и главный танцор ENHYPEN. Признан гениальным исполнителем еще в подростковом возрасте." },
         tmi: {
           ko: [
