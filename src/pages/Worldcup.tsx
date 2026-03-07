@@ -20,7 +20,7 @@ interface Contestant {
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const BOY_GROUP_IDS = new Set(['bts', 'straykids', 'seventeen', 'enhypen']);
+const BOY_GROUP_IDS = new Set(['bts', 'straykids', 'seventeen', 'enhypen', 'riize', 'txt', 'jungkook']);
 
 // ─── Utilities ────────────────────────────────────────────────────────────────
 
