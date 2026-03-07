@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Crosshair, HelpCircle, Database, ArrowRight, Sparkles, Check, Shield, Zap, TrendingUp, Users, Globe } from 'lucide-react';
+import { Crosshair, HelpCircle, Database, Swords, ArrowRight, Sparkles, Check, Shield, Zap, TrendingUp, Users, Globe } from 'lucide-react';
 import { KPOP_GROUPS } from '../data/idols';
 
 // ─── Stat bar ────────────────────────────────────────────────────────────────
@@ -119,6 +119,7 @@ function ServiceCard({
 
 export default function Home() {
   const { t } = useTranslation();
+  const membersCount = KPOP_GROUPS.reduce((acc, g) => acc + g.members.length, 0);
 
   const cards = [
     {
@@ -166,7 +167,7 @@ export default function Home() {
       title: t('nav_encyclopedia'),
       desc: t('home_svc_enc_desc'),
       bullets: [t('home_enc_bullet_1'), t('home_enc_bullet_2'), t('home_enc_bullet_3')],
-      stat: { value: '73', label: t('home_stat_members_label') },
+      stat: { value: membersCount.toString(), label: t('home_stat_members_label') },
       btnLabel: t('feature_try_encyclopedia'),
       to: '/encyclopedia',
       btnGradient: {
@@ -177,6 +178,25 @@ export default function Home() {
       } as React.CSSProperties,
       gradientBg: 'bg-gradient-to-br from-neon-pink/10 to-transparent',
       borderClass: 'border-neon-pink/20 hover:border-neon-pink/50',
+    },
+    {
+      icon: <Swords className="w-10 h-10 md:w-12 md:h-12" />,
+      accentColor: 'neon-purple',
+      badgeText: 'NEW',
+      title: t('nav_worldcup'),
+      desc: t('home_svc_worldcup_desc'),
+      bullets: [t('home_worldcup_bullet_1'), t('home_worldcup_bullet_2'), t('home_worldcup_bullet_3')],
+      stat: { value: '64', label: t('home_stat_worldcup_label') },
+      btnLabel: t('worldcup_start'),
+      to: '/worldcup',
+      btnGradient: {
+        background: 'linear-gradient(90deg, #ff00ff, #9d00ff, #ff00ff)',
+        backgroundSize: '200% 100%',
+        animation: 'neon-gradient 4s linear infinite',
+        boxShadow: '0 0 30px rgba(157,0,255,0.4)',
+      } as React.CSSProperties,
+      gradientBg: 'bg-gradient-to-br from-neon-purple/10 to-transparent',
+      borderClass: 'border-neon-purple/20 hover:border-neon-purple/50',
     },
   ];
 
