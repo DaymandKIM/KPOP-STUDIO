@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { Download, Share2, Copy, Check, Loader2 } from 'lucide-react';
 
 const L: Record<string, Record<string, string>> = {
-  save:       { ko:'저장', ja:'保存', zh:'保存', ar:'حفظ', hi:'सेव', th:'บันทึก', vi:'Lưu', ru:'Сохранить', default:'Save' },
-  share:      { ko:'공유', ja:'シェア', zh:'分享', ar:'مشاركة', hi:'शेयर', th:'แชร์', vi:'Chia sẻ', ru:'Поделиться', default:'Share' },
+  save:       { ko:'이미지 저장', ja:'画像保存', zh:'保存图片', ar:'حفظ الصورة', hi:'इमेज सेव', th:'บันทึกรูป', vi:'Lưu ảnh', ru:'Сохранить', default:'Save Image' },
+  share:      { ko:'링크 공유', ja:'リンク共有', zh:'分享链接', ar:'مشاركة رابط', hi:'लिंक शेयर', th:'แชร์ลิงก์', vi:'Chia sẻ', ru:'Поделиться', default:'Share Link' },
   copied:     { ko:'복사됨!', ja:'コピー済!', zh:'已复制!', ar:'تم النسخ!', hi:'कॉपी!', th:'คัดลอก!', vi:'Đã sao!', ru:'Скопировано!', default:'Copied!' },
-  link:       { ko:'링크', ja:'リンク', zh:'链接', ar:'رابط', hi:'लिंク', th:'ลิงก์', vi:'Liên kết', ru:'Ссылка', default:'Link' },
+  link:       { ko:'링크 복사', ja:'リンクコピー', zh:'复制链接', ar:'نسخ الرابط', hi:'लिंक कॉपी', th:'คัดลอกลิงก์', vi:'Sao chép', ru:'Копировать', default:'Copy Link' },
   generating: { ko:'카드 생성 중...', ja:'カード作成中...', zh:'生成中...', ar:'جارٍ الإنشاء...', hi:'बना रहे हैं...', th:'กำลังสร้าง...', vi:'Đang tạo...', ru:'Создание...', default:'Generating...' },
 };
 function lx(key: string, lang: string) {
@@ -84,29 +84,28 @@ export default function SharePanel({
     setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
   }
 
+  // 저장: 이미지 파일만 저장 (사진첩/다운로드)
   const handleDownload = async () => {
     if (!blob) return;
     const file = new File([blob], filename, { type: 'image/png' });
-    // iOS/Android: 네이티브 공유시트로 이미지 저장 (카메라 롤 포함)
+    // 모바일: 이미지 파일만 네이티브 공유시트로 → 사진첩에 저장 유도
     if (navigator.canShare?.({ files: [file] })) {
       try {
         await navigator.share({ files: [file] });
         return;
       } catch (e) {
-        if ((e as Error).name === 'AbortError') return; // 사용자 취소
-        // 다른 에러는 fallback으로 이어짐
+        if ((e as Error).name === 'AbortError') return;
       }
     }
+    // 데스크탑: 직접 다운로드
     triggerDownload(blob);
   };
 
+  // 공유: URL 링크만 공유 (이미지 없이, 기능 페이지 링크)
   const handleWebShare = async () => {
-    const shareData: ShareData = { title, text, url };
-    if (blob) {
-      const file = new File([blob], filename, { type: 'image/png' });
-      if (navigator.canShare?.({ files: [file] })) shareData.files = [file];
-    }
-    try { await navigator.share(shareData); } catch { /* cancelled */ }
+    try {
+      await navigator.share({ title, text, url });
+    } catch { /* cancelled */ }
   };
 
   // iOS에서 window.open은 반드시 동기 컨텍스트에서 호출해야 팝업 차단 안 됨
@@ -189,105 +188,124 @@ export default function SharePanel({
           </span>
         </div>
       ) : (
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="flex flex-col gap-4">
 
-          {/* Download */}
+          {/* ── 이미지 저장 영역 ────────────────────────── */}
           {blob && (
-            <button
-              onClick={handleDownload}
-              className={`${btnBase} text-white`}
-              style={{ background: 'linear-gradient(135deg, #00bfff 0%, #0050c8 100%)', boxShadow: '0 0 18px rgba(0,191,255,0.5)' }}
-            >
-              <Download className="w-5 h-5" />
-              <span className="text-[10px] font-mono font-black uppercase tracking-wider">
+            <div>
+              <p className="text-[10px] font-mono font-black uppercase tracking-widest text-slate-600 text-center mb-2">
                 {lx('save', lang)}
-              </span>
-            </button>
+              </p>
+              <div className="flex justify-center">
+                <button
+                  onClick={handleDownload}
+                  className={`${btnBase} text-white px-8`}
+                  style={{ background: 'linear-gradient(135deg, #00bfff 0%, #0050c8 100%)', boxShadow: '0 0 18px rgba(0,191,255,0.5)' }}
+                >
+                  <Download className="w-5 h-5" />
+                  <span className="text-[10px] font-mono font-black uppercase tracking-wider">
+                    {lx('save', lang)}
+                  </span>
+                </button>
+              </div>
+            </div>
           )}
 
-          {/* Web Share (mobile) */}
-          {typeof navigator !== 'undefined' && 'share' in navigator && (
-            <button
-              onClick={handleWebShare}
-              className={`${btnBase} text-white`}
-              style={{ background: 'linear-gradient(135deg, #9d00ff 0%, #5500cc 100%)', boxShadow: '0 0 18px rgba(157,0,255,0.5)' }}
-            >
-              <Share2 className="w-5 h-5" />
-              <span className="text-[10px] font-mono font-black uppercase tracking-wider">
-                {lx('share', lang)}
-              </span>
-            </button>
-          )}
+          {/* ── 링크·SNS 공유 영역 ──────────────────────── */}
+          <div>
+            <p className="text-[10px] font-mono font-black uppercase tracking-widest text-slate-600 text-center mb-2">
+              {lx('share', lang)}
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
 
-          {/* Twitter / X */}
-          <button
-            onClick={handleTwitter}
-            className={`${btnBase} text-white`}
-            style={{ background: 'linear-gradient(135deg, #333 0%, #111 100%)', boxShadow: '0 0 14px rgba(255,255,255,0.12)' }}
-          >
-            <IconX />
-            <span className="text-[10px] font-mono font-black uppercase tracking-wider">X</span>
-          </button>
+              {/* Web Share (링크 공유 - 모바일) */}
+              {typeof navigator !== 'undefined' && 'share' in navigator && (
+                <button
+                  onClick={handleWebShare}
+                  className={`${btnBase} text-white`}
+                  style={{ background: 'linear-gradient(135deg, #9d00ff 0%, #5500cc 100%)', boxShadow: '0 0 18px rgba(157,0,255,0.5)' }}
+                >
+                  <Share2 className="w-5 h-5" />
+                  <span className="text-[10px] font-mono font-black uppercase tracking-wider">
+                    {lx('share', lang)}
+                  </span>
+                </button>
+              )}
 
-          {/* Facebook */}
-          <button
-            onClick={handleFacebook}
-            className={`${btnBase} text-white`}
-            style={{ background: 'linear-gradient(135deg, #1877f2 0%, #0a4ea0 100%)', boxShadow: '0 0 18px rgba(24,119,242,0.5)' }}
-          >
-            <IconFacebook />
-            <span className="text-[10px] font-mono font-black uppercase tracking-wider">FB</span>
-          </button>
+              {/* Twitter / X */}
+              <button
+                onClick={handleTwitter}
+                className={`${btnBase} text-white`}
+                style={{ background: 'linear-gradient(135deg, #333 0%, #111 100%)', boxShadow: '0 0 14px rgba(255,255,255,0.12)' }}
+              >
+                <IconX />
+                <span className="text-[10px] font-mono font-black uppercase tracking-wider">X</span>
+              </button>
 
-          {/* Threads */}
-          <button
-            onClick={handleThreads}
-            className={`${btnBase} text-white`}
-            style={{ background: 'linear-gradient(135deg, #ff00ff 0%, #7700cc 100%)', boxShadow: '0 0 18px rgba(255,0,255,0.45)' }}
-          >
-            <IconThreads />
-            <span className="text-[10px] font-mono font-black uppercase tracking-wider">Threads</span>
-          </button>
+              {/* Facebook */}
+              <button
+                onClick={handleFacebook}
+                className={`${btnBase} text-white`}
+                style={{ background: 'linear-gradient(135deg, #1877f2 0%, #0a4ea0 100%)', boxShadow: '0 0 18px rgba(24,119,242,0.5)' }}
+              >
+                <IconFacebook />
+                <span className="text-[10px] font-mono font-black uppercase tracking-wider">FB</span>
+              </button>
 
-          {/* LINE */}
-          <button
-            onClick={handleLine}
-            className={`${btnBase} text-white`}
-            style={{ background: 'linear-gradient(135deg, #06c755 0%, #037a35 100%)', boxShadow: '0 0 18px rgba(6,199,85,0.45)' }}
-          >
-            <IconLine />
-            <span className="text-[10px] font-mono font-black uppercase tracking-wider">LINE</span>
-          </button>
+              {/* Threads */}
+              <button
+                onClick={handleThreads}
+                className={`${btnBase} text-white`}
+                style={{ background: 'linear-gradient(135deg, #ff00ff 0%, #7700cc 100%)', boxShadow: '0 0 18px rgba(255,0,255,0.45)' }}
+              >
+                <IconThreads />
+                <span className="text-[10px] font-mono font-black uppercase tracking-wider">Threads</span>
+              </button>
 
-          {/* Instagram */}
-          <button
-            onClick={handleInstagram}
-            className={`${btnBase} text-white`}
-            style={instaSaved
-              ? { background: 'linear-gradient(135deg, #f77737 0%, #fcaf45 100%)', boxShadow: '0 0 20px rgba(247,119,55,0.6)' }
-              : { background: 'linear-gradient(135deg, #e1306c 0%, #f77737 50%, #fcaf45 100%)', boxShadow: '0 0 18px rgba(225,48,108,0.45)' }
-            }
-          >
-            <IconInstagram />
-            <span className="text-[10px] font-mono font-black uppercase tracking-wider">
-              {instaSaved ? '저장됨↗' : 'Insta'}
-            </span>
-          </button>
+              {/* LINE */}
+              <button
+                onClick={handleLine}
+                className={`${btnBase} text-white`}
+                style={{ background: 'linear-gradient(135deg, #06c755 0%, #037a35 100%)', boxShadow: '0 0 18px rgba(6,199,85,0.45)' }}
+              >
+                <IconLine />
+                <span className="text-[10px] font-mono font-black uppercase tracking-wider">LINE</span>
+              </button>
 
-          {/* Copy Link */}
-          <button
-            onClick={handleCopy}
-            className={`${btnBase} text-white`}
-            style={copied
-              ? { background: 'linear-gradient(135deg, #39ff14 0%, #00aa44 100%)', boxShadow: '0 0 20px rgba(57,255,20,0.55)' }
-              : { background: 'linear-gradient(135deg, #2a2a3a 0%, #111120 100%)', boxShadow: '0 0 12px rgba(255,255,255,0.08)' }
-            }
-          >
-            {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
-            <span className="text-[10px] font-mono font-black uppercase tracking-wider">
-              {copied ? lx('copied', lang) : lx('link', lang)}
-            </span>
-          </button>
+              {/* Instagram (이미지 저장 후 인스타 앱으로) */}
+              {blob && (
+                <button
+                  onClick={handleInstagram}
+                  className={`${btnBase} text-white`}
+                  style={instaSaved
+                    ? { background: 'linear-gradient(135deg, #f77737 0%, #fcaf45 100%)', boxShadow: '0 0 20px rgba(247,119,55,0.6)' }
+                    : { background: 'linear-gradient(135deg, #e1306c 0%, #f77737 50%, #fcaf45 100%)', boxShadow: '0 0 18px rgba(225,48,108,0.45)' }
+                  }
+                >
+                  <IconInstagram />
+                  <span className="text-[10px] font-mono font-black uppercase tracking-wider">
+                    {instaSaved ? '저장됨↗' : 'Insta'}
+                  </span>
+                </button>
+              )}
+
+              {/* Copy Link */}
+              <button
+                onClick={handleCopy}
+                className={`${btnBase} text-white`}
+                style={copied
+                  ? { background: 'linear-gradient(135deg, #39ff14 0%, #00aa44 100%)', boxShadow: '0 0 20px rgba(57,255,20,0.55)' }
+                  : { background: 'linear-gradient(135deg, #2a2a3a 0%, #111120 100%)', boxShadow: '0 0 12px rgba(255,255,255,0.08)' }
+                }
+              >
+                {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
+                <span className="text-[10px] font-mono font-black uppercase tracking-wider">
+                  {copied ? lx('copied', lang) : lx('link', lang)}
+                </span>
+              </button>
+
+            </div>
+          </div>
 
         </div>
       )}
