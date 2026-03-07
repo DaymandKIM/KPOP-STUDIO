@@ -8,6 +8,7 @@ import type { Prediction } from '../hooks/useFaceRecognition';
 import { KPOP_GROUPS } from '../data/idols';
 import { generateShareCard } from '../hooks/useShareCard';
 import SharePanel from '../components/SharePanel';
+import CommentSection from '../components/CommentSection';
 import { getLangText } from '../utils/lang';
 
 type AppState = 'idle' | 'analyzing' | 'result';
@@ -847,6 +848,12 @@ export default function Lookalike() {
                       </ol>
                     </div>
                   )}
+
+                  {/* 댓글 */}
+                  <CommentSection
+                    channelId={`member_${matchedIdol.group.id}_${matchedIdol.member.id}`}
+                    accentColor={matchedIdol.group.accentColor}
+                  />
 
                   {/* 백과사전 링크 */}
                   <button
