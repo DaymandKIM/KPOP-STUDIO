@@ -6,7 +6,7 @@ K-pop Studio Lookalike is an interactive, multi-lingual web application that use
 ## 2. Core Features & Capabilities
 *   **Idol Identification (AI Analysis):** Analyzes facial features using a pre-trained Teachable Machine model to identify the user's K-pop idol lookalike.
 *   **Idol Encyclopedia:** A searchable, filterable database of K-pop idols, including group information, member profiles, and latest news.
-*   **Multilingual Support (i18n):** Full support for English (EN) and Korean (KO) languages.
+*   **Multilingual Support (i18n):** Full support for 13 languages including English (EN), Korean (KO), Japanese (JA), Chinese (ZH), and more.
 *   **Premium Dark Design:** A modern, high-tech interface with neon accents and glassmorphism effects.
 
 ## 3. Technology Stack

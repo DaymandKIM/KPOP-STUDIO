@@ -255,7 +255,7 @@ const IdolEncyclopedia: React.FC<{
                   className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-neon-pink/10 border border-white/15 hover:border-neon-pink/40 rounded-xl text-xs font-mono font-black uppercase tracking-widest text-slate-400 hover:text-neon-pink transition-all"
                 >
                   <Share2 className="w-4 h-4" />
-                  {i18n.language === 'ko' ? '공유하기' : 'Share'}
+                  {t('share_btn')}
                 </button>
               </div>
 
@@ -263,9 +263,7 @@ const IdolEncyclopedia: React.FC<{
                 <div className="mt-3">
                   <SharePanel
                     title={`${getLangText(selectedGroup.name, i18n.language)} | KPOP STUDIO`}
-                    text={i18n.language === 'ko'
-                      ? `KPOP STUDIO에서 ${getLangText(selectedGroup.name, i18n.language)} 프로필 확인하기 ✨`
-                      : `Check out ${getLangText(selectedGroup.name, i18n.language)} profiles on KPOP STUDIO ✨`}
+                    text={t('share_group_text', { name: getLangText(selectedGroup.name, i18n.language) })}
                     url="https://kpopstudio.ai/encyclopedia"
                     lang={i18n.language}
                   />

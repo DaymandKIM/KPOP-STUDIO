@@ -23,7 +23,9 @@ const GoogleAd: React.FC<Props> = ({ slot, format = 'auto', className = '' }) =>
     pushed.current = true;
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (_) {}
+    } catch {
+      // Ad loading failed, silently continue
+    }
   }, []);
 
   if (PUBLISHER_ID.includes('XXXX')) return null; // Publisher ID 미설정 시 숨김

@@ -5,6 +5,7 @@ import { KPOP_GROUPS } from '../data/idols';
 import { generateQuizShareCard } from '../hooks/useShareCard';
 import SharePanel from '../components/SharePanel';
 import FeatureNav from '../components/FeatureNav';
+import { getLangText } from '../utils/lang';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -65,14 +66,13 @@ function pick<T>(arr: T[], n: number): T[] {
 
 // ─── Question Generator ───────────────────────────────────────────────────────
 
-function generateQuestions(difficulty: Difficulty, qt: { photo: string; lyrics: string; hint: string }): Q[] {
+function generateQuestions(difficulty: Difficulty, t: any, lang: string): Q[] {
   const allGroups = KPOP_GROUPS;
   const easyIds = ['bts', 'blackpink', 'twice', 'newjeans', 'ive'];
   const groups = difficulty === 'easy' ? allGroups.filter(g => easyIds.includes(g.id)) : allGroups;
 
   const allMembers = allGroups.flatMap(g => g.members.map(m => ({ m, g })));
   const targetMembers = groups.flatMap(g => g.members.map(m => ({ m, g })));
-  const allGroupNames = allGroups.map(g => g.name.en);
 
   const pool: Q[] = [];
 
@@ -80,14 +80,16 @@ function generateQuestions(difficulty: Difficulty, qt: { photo: string; lyrics: 
   for (const { m, g } of pick(targetMembers, 6)) {
     const isBoy = BOY_GROUP_IDS.has(g.id);
     const sameGenderMembers = allMembers.filter(x => x.m.id !== m.id && BOY_GROUP_IDS.has(x.g.id) === isBoy);
-    const wrongs = pick(sameGenderMembers.map(x => x.m.name.ko), 3);
+    const mName = getLangText(m.name, lang);
+    const gName = getLangText(g.name, lang);
+    const wrongs = pick(sameGenderMembers.map(x => getLangText(x.m.name, lang)), 3);
     pool.push({
       type: 'photo',
-      question: qt.photo,
+      question: t('quiz_q_photo'),
       image: m.imageUrl,
-      answer: m.name.ko,
-      choices: shuffle([m.name.ko, ...wrongs]),
-      explanation: `${m.name.ko} (${g.name.ko})`,
+      answer: mName,
+      choices: shuffle([mName, ...wrongs]),
+      explanation: `${mName} (${gName})`,
     });
   }
 
@@ -98,10 +100,10 @@ function generateQuestions(difficulty: Difficulty, qt: { photo: string; lyrics: 
     LYRICS_BANK;
 
   for (const lq of pick(lyricsPool, 5)) {
-    const wrongs = pick(allGroupNames.filter(n => n !== lq.answer), 3);
+    const wrongs = pick(allGroups.map(g => getLangText(g.name, lang)).filter(n => n !== lq.answer), 3);
     pool.push({
       type: 'lyrics',
-      question: qt.lyrics,
+      question: t('quiz_q_lyrics'),
       content: lq.text,
       answer: lq.answer,
       choices: shuffle([lq.answer, ...wrongs]),
@@ -112,19 +114,24 @@ function generateQuestions(difficulty: Difficulty, qt: { photo: string; lyrics: 
   // C. Hint questions
   for (const { m, g } of pick(targetMembers, 5)) {
     const birthYear = m.birth.slice(0, 4);
+    const mName = getLangText(m.name, lang);
+    const gName = getLangText(g.name, lang);
+    const unitYear = t('quiz_unit_year');
+    const unitBlood = t('blood_type_suffix');
     let hint = '';
-    if (difficulty === 'easy') hint = `${g.name.ko} · ${birthYear}년생 · ${m.bloodType}형`;
-    else if (difficulty === 'medium') hint = `${birthYear}년생 · MBTI ${m.mbti} · ${m.bloodType}형`;
-    else hint = `키 ${m.height} · MBTI ${m.mbti} · 생일 ${m.birth}`;
+    if (difficulty === 'easy') hint = `${gName} · ${birthYear}${unitYear} · ${m.bloodType}${unitBlood}`;
+    else if (difficulty === 'medium') hint = `${birthYear}${unitYear} · MBTI ${m.mbti} · ${m.bloodType}${unitBlood}`;
+    else hint = `${t('height')} ${m.height} · MBTI ${m.mbti} · ${t('birthday')} ${m.birth}`;
 
-    const wrongs = pick(allMembers.filter(x => x.m.id !== m.id).map(x => x.m.name.ko), 3);
+
+    const wrongs = pick(allMembers.filter(x => x.m.id !== m.id).map(x => getLangText(x.m.name, lang)), 3);
     pool.push({
       type: 'hint',
-      question: qt.hint,
+      question: t('quiz_q_hint'),
       content: hint,
-      answer: m.name.ko,
-      choices: shuffle([m.name.ko, ...wrongs]),
-      explanation: `${m.name.ko} (${g.name.ko})`,
+      answer: mName,
+      choices: shuffle([mName, ...wrongs]),
+      explanation: `${mName} (${gName})`,
     });
   }
 
@@ -132,36 +139,41 @@ function generateQuestions(difficulty: Difficulty, qt: { photo: string; lyrics: 
   const triviaTypes = ['count', 'debut', 'fandom'] as const;
   for (const g of pick(groups, 6)) {
     const ttype = pick([...triviaTypes], 1)[0];
+    const gName = getLangText(g.name, lang);
+
     if (ttype === 'count') {
       const count = g.members.length;
+      const unit = t('quiz_unit_members');
+      const answer = `${count}${unit}`;
       const wrongs = shuffle([2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13].filter(n => n !== count)).slice(0, 3);
       pool.push({
         type: 'trivia',
-        question: `${g.name.ko}의 멤버는 몇 명일까요?`,
-        answer: `${count}명`,
-        choices: shuffle([`${count}명`, ...wrongs.map(n => `${n}명`)]),
-        explanation: `${count}명 — ${g.members.map(m => m.name.ko).join(', ')}`,
+        question: t('quiz_q_count', { name: gName }),
+        answer: answer,
+        choices: shuffle([answer, ...wrongs.map(n => `${n}${unit}`)]),
+        explanation: `${answer} — ${g.members.map(m => getLangText(m.name, lang)).join(', ')}`,
       });
     } else if (ttype === 'debut') {
       const year = g.debut.slice(0, 4);
+      const unitYear = t('quiz_unit_year');
       const years = ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'];
       const wrongs = pick(years.filter(y => y !== year), 3);
       pool.push({
         type: 'trivia',
-        question: `${g.name.ko}의 데뷔 연도는?`,
-        answer: `${year}년`,
-        choices: shuffle([`${year}년`, ...wrongs.map(y => `${y}년`)]),
-        explanation: `${year}년 (${g.debut} 데뷔)`,
+        question: t('quiz_q_debut', { name: gName }),
+        answer: `${year}${unitYear}`,
+        choices: shuffle([`${year}${unitYear}`, ...wrongs.map(y => `${y}${unitYear}`)]),
+        explanation: `${year}${unitYear} (${g.debut})`,
       });
     } else {
-      const fandom = g.fandom.ko;
-      const wrongs = pick(allGroups.map(x => x.fandom.ko).filter(f => f !== fandom), 3);
+      const fandom = getLangText(g.fandom, lang);
+      const wrongs = pick(allGroups.map(x => getLangText(x.fandom, lang)).filter(f => f !== fandom), 3);
       pool.push({
         type: 'trivia',
-        question: `${g.name.ko}의 팬덤 이름은?`,
+        question: t('quiz_q_fandom', { name: gName }),
         answer: fandom,
         choices: shuffle([fandom, ...wrongs]),
-        explanation: `팬덤: ${fandom}`,
+        explanation: `${t('fandom')} ${fandom}`,
       });
     }
   }
@@ -223,12 +235,7 @@ export default function Quiz() {
   const progress = questions.length > 0 ? ((currentIndex + (isAnswered ? 1 : 0)) / 10) * 100 : 0;
 
   function startQuiz() {
-    const qt = {
-      photo: t('quiz_q_photo'),
-      lyrics: t('quiz_q_lyrics'),
-      hint: t('quiz_q_hint'),
-    };
-    const pool = generateQuestions(difficulty, qt);
+    const pool = generateQuestions(difficulty, t, i18n.language);
     // normal: 10 questions; survival: unlimited pool (use all, end on first wrong)
     setQuestions(mode === 'normal' ? pool.slice(0, 10) : pool);
     setCurrentIndex(0);
@@ -281,7 +288,7 @@ export default function Quiz() {
         score,
         total: mode === 'normal' ? 10 : score,
         gradeLabel: mode === 'survival'
-          ? `${survivedStages}단계 성공!`
+          ? t('quiz_survival_success', { count: survivedStages })
           : t(`quiz_grade_${gradeKey}`),
         comment: t(`quiz_comment_${gradeKey}`),
         lang: i18n.language,
@@ -309,7 +316,7 @@ export default function Quiz() {
 
           {/* Mode selection */}
           <div className="mb-6">
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3 text-center">모드 선택</p>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3 text-center">{t('quiz_mode_select')}</p>
             <div className="grid grid-cols-2 gap-3">
               <button
                 onClick={() => setMode('normal')}
@@ -318,8 +325,8 @@ export default function Quiz() {
                 }`}
               >
                 <Shield className={`w-6 h-6 ${mode === 'normal' ? 'text-neon-blue' : 'text-slate-400'}`} />
-                <span className={`text-sm font-black ${mode === 'normal' ? 'text-neon-blue' : 'text-white'}`}>일반 모드</span>
-                <span className="text-[10px] text-slate-500 leading-tight text-center">10문제 · 채점</span>
+                <span className={`text-sm font-black ${mode === 'normal' ? 'text-neon-blue' : 'text-white'}`}>{t('quiz_mode_normal')}</span>
+                <span className="text-[10px] text-slate-500 leading-tight text-center">{t('quiz_mode_normal_desc')}</span>
               </button>
               <button
                 onClick={() => setMode('survival')}
@@ -328,8 +335,8 @@ export default function Quiz() {
                 }`}
               >
                 <Zap className={`w-6 h-6 ${mode === 'survival' ? 'text-neon-pink' : 'text-slate-400'}`} />
-                <span className={`text-sm font-black ${mode === 'survival' ? 'text-neon-pink' : 'text-white'}`}>서바이벌</span>
-                <span className="text-[10px] text-slate-500 leading-tight text-center">1번 틀리면 탈락!</span>
+                <span className={`text-sm font-black ${mode === 'survival' ? 'text-neon-pink' : 'text-white'}`}>{t('quiz_mode_survival')}</span>
+                <span className="text-[10px] text-slate-500 leading-tight text-center">{t('quiz_mode_survival_desc')}</span>
               </button>
             </div>
           </div>
@@ -409,12 +416,12 @@ export default function Quiz() {
             {isSurvival ? (
               <>
                 <div className={`text-5xl font-black mb-2 ${style.color}`}>
-                  {survived}<span className="text-2xl text-white/40">단계</span>
+                  {survived}<span className="text-2xl text-white/40">{t('quiz_stage', { count: 0 }).replace(/^[0-9]+/, '')}</span>
                 </div>
                 <div className={`text-xl font-black uppercase tracking-wider mb-1 ${style.color}`}>
-                  {survived}단계 성공!
+                  {t('quiz_survival_success', { count: survived })}
                 </div>
-                <p className="text-slate-500 text-xs mb-3">서바이벌 모드 · {survived}문제 연속 정답</p>
+                <p className="text-slate-500 text-xs mb-3">{t('quiz_survival_streak_desc', { count: survived })}</p>
               </>
             ) : (
               <>
@@ -455,7 +462,7 @@ export default function Quiz() {
           {isSurvival && survived > 0 && (
             <div className="bg-white/5 rounded-2xl p-4 mb-5 border border-white/10">
               <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">
-                연속 정답 기록
+                {t('quiz_survival_streak_label')}
               </p>
               <div className="flex flex-wrap gap-2">
                 {Array.from({ length: survived }).map((_, i) => (
@@ -484,7 +491,7 @@ export default function Quiz() {
               <SharePanel
                 title={t('nav_quiz')}
                 text={isSurvival
-                  ? `K-POP 퀴즈 서바이벌 ${survived}단계 성공! 도전해보세요!`
+                  ? t('quiz_survival_streak_desc', { count: survived })
                   : `${t('nav_quiz')}: ${correctCount}/10 — ${t(`quiz_grade_${gradeKey}`)}! ${t(`quiz_comment_${gradeKey}`)}`
                 }
                 url="https://kpopstudio.ai/quiz"
@@ -523,7 +530,7 @@ export default function Quiz() {
         <div className="flex justify-between items-center mb-2">
           <div className="flex items-center gap-2">
             <span className="text-xs font-black uppercase tracking-widest text-slate-500">
-              {isSurvivalMode ? `${currentIndex + 1}단계` : `${currentIndex + 1} / 10`}
+              {isSurvivalMode ? t('quiz_stage', { count: currentIndex + 1 }) : `${currentIndex + 1} / 10`}
             </span>
             {isSurvivalMode && (
               <span className="text-[10px] px-2 py-0.5 rounded-full bg-neon-pink/20 border border-neon-pink/40 text-neon-pink font-black uppercase">
@@ -622,9 +629,9 @@ export default function Quiz() {
           {isEliminated ? (
             /* Survival elimination banner */
             <div className="rounded-2xl p-5 mb-4 bg-neon-pink/10 border-2 border-neon-pink/50 text-center">
-              <p className="text-2xl font-black text-neon-pink mb-1">💥 탈락!</p>
+              <p className="text-2xl font-black text-neon-pink mb-1">{t('quiz_eliminated')}</p>
               <p className="text-sm text-slate-400 mb-1">{current.explanation}</p>
-              <p className="text-neon-yellow font-black text-lg">{correctCount}단계 성공!</p>
+              <p className="text-neon-yellow font-black text-lg">{t('quiz_survival_success', { count: correctCount })}</p>
             </div>
           ) : (
             <div className={`rounded-2xl p-4 mb-4 flex items-start gap-3 ${
@@ -656,7 +663,7 @@ export default function Quiz() {
             <RefreshCw className={`w-4 h-4 ${isEliminated ? '' : 'hidden'}`} />
             <ChevronRight className={`w-5 h-5 ${isEliminated ? 'hidden' : ''}`} />
             {isEliminated
-              ? '결과 보기'
+              ? t('quiz_show_result')
               : currentIndex >= questions.length - 1 ? t('quiz_show_result') : t('quiz_next')
             }
           </button>
