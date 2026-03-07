@@ -84,20 +84,9 @@ export default function SharePanel({
     setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
   }
 
-  // 저장: 이미지 파일만 저장 (사진첩/다운로드)
-  const handleDownload = async () => {
+  // 저장: 항상 직접 파일 다운로드
+  const handleDownload = () => {
     if (!blob) return;
-    const file = new File([blob], filename, { type: 'image/png' });
-    // 모바일: 이미지 파일만 네이티브 공유시트로 → 사진첩에 저장 유도
-    if (navigator.canShare?.({ files: [file] })) {
-      try {
-        await navigator.share({ files: [file] });
-        return;
-      } catch (e) {
-        if ((e as Error).name === 'AbortError') return;
-      }
-    }
-    // 데스크탑: 직접 다운로드
     triggerDownload(blob);
   };
 
