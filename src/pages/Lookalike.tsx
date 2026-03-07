@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
-import { Upload, RefreshCw, Star, ArrowRight, User, AlertCircle, Crosshair, Database, Share2, Sparkles, CheckCircle2, XCircle } from 'lucide-react';
+import { Upload, RefreshCw, Star, ArrowRight, User, AlertCircle, Crosshair, Database, Share2, Sparkles, CheckCircle2, XCircle, Download } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useFaceRecognition } from '../hooks/useFaceRecognition';
 import type { Prediction } from '../hooks/useFaceRecognition';
@@ -250,6 +250,22 @@ function getGuide(lang: string) {
   return GUIDE[lang] ?? GUIDE[lang.split('-')[0]] ?? GUIDE.en;
 }
 
+const SAVE_TEXT: Record<string, string> = {
+  ko: '이미지로 저장',
+  en: 'Save as Image',
+  ja: '画像として保存',
+  zh: '保存为图片',
+  es: 'Guardar como imagen',
+  id: 'Simpan sebagai gambar',
+  fr: 'Enregistrer l\'image',
+  hi: 'इमेज के रूप में सहेजें',
+  pt: 'Salvar como imagem',
+  ar: 'حفظ كصورة',
+  th: 'บันทึกเป็นรูปภาพ',
+  vi: 'Lưu thành ảnh',
+  ru: 'Сохранить как изображение',
+};
+
 export default function Lookalike() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
@@ -264,6 +280,7 @@ export default function Lookalike() {
   const [predictions, setPredictions] = useState<Prediction[]>([]);
   const [shareBlob, setShareBlob] = useState<Blob | null>(null);
   const [isGeneratingCard, setIsGeneratingCard] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
   const [showSharePanel, setShowSharePanel] = useState(false);
   const imageRef = useRef<HTMLImageElement>(null);
 
@@ -344,6 +361,7 @@ export default function Lookalike() {
     setShareBlob(null);
     setShowSharePanel(false);
     setIsGeneratingCard(false);
+    setIsSaving(false);
     setShowGuide(false);
   };
 
@@ -369,6 +387,39 @@ export default function Lookalike() {
     }
   };
 
+  const handleSaveImage = async () => {
+    if (!matchedIdol || !selectedImage) return;
+    setIsSaving(true);
+    try {
+      let blob = shareBlob;
+      if (!blob) {
+        blob = await generateShareCard({
+          userImageSrc: selectedImage,
+          idolImageSrc: matchedIdol.member.imageUrl,
+          idolName: getLangText(matchedIdol.member.name, i18n.language),
+          groupName: getLangText(matchedIdol.group.name, i18n.language),
+          similarity: Math.round(predictions[0].probability * 100),
+          lang: i18n.language,
+        });
+        setShareBlob(blob);
+      }
+      
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `kpopstudio-${matchedIdol.member.name.en.replace(/\s+/g, '-').toLowerCase()}.png`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      console.error('Image saving failed', e);
+      alert('이미지 저장에 실패했습니다.');
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
   const shareText = matchedIdol
     ? t('share_text', { 
         prob: Math.round(predictions[0]?.probability * 100), 
@@ -376,6 +427,8 @@ export default function Lookalike() {
         group: getLangText(matchedIdol.group.name, i18n.language) 
       })
     : '';
+
+  const saveBtnText = SAVE_TEXT[i18n.language] || SAVE_TEXT.en;
 
   return (
     <>
@@ -627,6 +680,18 @@ export default function Lookalike() {
 
                 {/* Action buttons */}
                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+                  {matchedIdol && (
+                    <button
+                      onClick={handleSaveImage}
+                      disabled={isSaving}
+                      className="flex items-center gap-3 px-8 py-4 bg-white/5 hover:bg-neon-blue/10 border-2 border-neon-blue/40 hover:border-neon-blue rounded-2xl text-xs md:text-sm font-black uppercase tracking-[0.2em] transition-all text-neon-blue disabled:opacity-50"
+                      style={{ boxShadow: '0 0 16px rgba(0,212,255,0.2)' }}
+                    >
+                      <Download className={`w-5 h-5 ${isSaving ? 'animate-bounce' : ''}`} />
+                      <span>{saveBtnText}</span>
+                    </button>
+                  )}
+
                   {matchedIdol && (
                     <button
                       onClick={() => navigate('/encyclopedia', { state: { selectedMemberId: matchedIdol.member.id, selectedGroupId: matchedIdol.group.id } })}
