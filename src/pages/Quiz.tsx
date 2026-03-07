@@ -518,7 +518,11 @@ export default function Quiz() {
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-slate-500">✅ {correctCount} &nbsp;❌ {10 - correctCount}</p>
+              <div className="flex items-center justify-between text-xs text-slate-500">
+                <span>✅ <span className="text-neon-green font-black">{correctCount}</span></span>
+                <span className="text-slate-600 font-mono">{correctCount} / 10</span>
+                <span>❌ <span className="text-neon-pink font-black">{10 - correctCount}</span></span>
+              </div>
             </div>
           )}
 
