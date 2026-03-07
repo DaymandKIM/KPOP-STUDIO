@@ -1,6 +1,10 @@
 import { useState } from 'react';
-import { Trophy, RefreshCw, Share2, Check, X, ChevronRight, HelpCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { Trophy, RefreshCw, Check, X, ChevronRight, HelpCircle } from 'lucide-react';
 import { KPOP_GROUPS } from '../data/idols';
+import { generateQuizShareCard } from '../hooks/useShareCard';
+import SharePanel from '../components/SharePanel';
+import FeatureNav from '../components/FeatureNav';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -56,7 +60,7 @@ function pick<T>(arr: T[], n: number): T[] {
 
 // ─── Question Generator ───────────────────────────────────────────────────────
 
-function generateQuestions(difficulty: Difficulty): Q[] {
+function generateQuestions(difficulty: Difficulty, qt: { photo: string; lyrics: string; hint: string }): Q[] {
   const allGroups = KPOP_GROUPS;
   const easyIds = ['bts', 'blackpink', 'twice', 'newjeans', 'ive'];
   const groups = difficulty === 'easy' ? allGroups.filter(g => easyIds.includes(g.id)) : allGroups;
@@ -67,15 +71,12 @@ function generateQuestions(difficulty: Difficulty): Q[] {
 
   const pool: Q[] = [];
 
-  // === A. Photo: 사진 보고 멤버 맞추기 ===
+  // A. Photo questions
   for (const { m, g } of pick(targetMembers, 6)) {
-    const wrongs = pick(
-      allMembers.filter(x => x.m.id !== m.id).map(x => x.m.name.ko),
-      3
-    );
+    const wrongs = pick(allMembers.filter(x => x.m.id !== m.id).map(x => x.m.name.ko), 3);
     pool.push({
       type: 'photo',
-      question: '이 K-POP 아이돌은 누구일까요?',
+      question: qt.photo,
       image: m.imageUrl,
       answer: m.name.ko,
       choices: shuffle([m.name.ko, ...wrongs]),
@@ -83,19 +84,17 @@ function generateQuestions(difficulty: Difficulty): Q[] {
     });
   }
 
-  // === B. Lyrics: 가사 보고 그룹 맞추기 ===
+  // B. Lyrics questions
   const lyricsPool =
-    difficulty === 'easy'
-      ? LYRICS_BANK.filter(q => q.level === 'easy')
-      : difficulty === 'medium'
-      ? LYRICS_BANK.filter(q => q.level !== 'hard')
-      : LYRICS_BANK;
+    difficulty === 'easy' ? LYRICS_BANK.filter(q => q.level === 'easy') :
+    difficulty === 'medium' ? LYRICS_BANK.filter(q => q.level !== 'hard') :
+    LYRICS_BANK;
 
   for (const lq of pick(lyricsPool, 5)) {
     const wrongs = pick(allGroupNames.filter(n => n !== lq.answer), 3);
     pool.push({
       type: 'lyrics',
-      question: '이 가사는 어느 그룹의 노래일까요?',
+      question: qt.lyrics,
       content: lq.text,
       answer: lq.answer,
       choices: shuffle([lq.answer, ...wrongs]),
@@ -103,24 +102,18 @@ function generateQuestions(difficulty: Difficulty): Q[] {
     });
   }
 
-  // === C. Hint: 힌트 보고 멤버 맞추기 ===
+  // C. Hint questions
   for (const { m, g } of pick(targetMembers, 5)) {
     const birthYear = m.birth.slice(0, 4);
     let hint = '';
-    if (difficulty === 'easy') {
-      hint = `${g.name.ko} 멤버 · ${birthYear}년생 · 혈액형 ${m.bloodType}`;
-    } else if (difficulty === 'medium') {
-      hint = `${birthYear}년생 · MBTI ${m.mbti} · 혈액형 ${m.bloodType}`;
-    } else {
-      hint = `키 ${m.height} · MBTI ${m.mbti} · 생일 ${m.birth}`;
-    }
-    const wrongs = pick(
-      allMembers.filter(x => x.m.id !== m.id).map(x => x.m.name.ko),
-      3
-    );
+    if (difficulty === 'easy') hint = `${g.name.ko} · ${birthYear}년생 · ${m.bloodType}형`;
+    else if (difficulty === 'medium') hint = `${birthYear}년생 · MBTI ${m.mbti} · ${m.bloodType}형`;
+    else hint = `키 ${m.height} · MBTI ${m.mbti} · 생일 ${m.birth}`;
+
+    const wrongs = pick(allMembers.filter(x => x.m.id !== m.id).map(x => x.m.name.ko), 3);
     pool.push({
       type: 'hint',
-      question: '이 멤버는 누구일까요?',
+      question: qt.hint,
       content: hint,
       answer: m.name.ko,
       choices: shuffle([m.name.ko, ...wrongs]),
@@ -128,15 +121,13 @@ function generateQuestions(difficulty: Difficulty): Q[] {
     });
   }
 
-  // === D. Trivia: 그룹 상식 퀴즈 ===
+  // D. Trivia questions
   const triviaTypes = ['count', 'debut', 'fandom'] as const;
   for (const g of pick(groups, 6)) {
     const ttype = pick([...triviaTypes], 1)[0];
     if (ttype === 'count') {
       const count = g.members.length;
-      const wrongs = shuffle(
-        [2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13].filter(n => n !== count)
-      ).slice(0, 3);
+      const wrongs = shuffle([2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13].filter(n => n !== count)).slice(0, 3);
       pool.push({
         type: 'trivia',
         question: `${g.name.ko}의 멤버는 몇 명일까요?`,
@@ -173,27 +164,37 @@ function generateQuestions(difficulty: Difficulty): Q[] {
 
 // ─── Grade ────────────────────────────────────────────────────────────────────
 
-function getGrade(score: number) {
-  if (score === 10) return { label: 'K-POP 천재', comment: '완벽해요! 당신은 진정한 K-POP 마스터입니다!', color: 'text-neon-yellow', border: 'border-neon-yellow', bg: 'from-neon-yellow/20' };
-  if (score >= 8)  return { label: 'K-POP 마스터', comment: '대단해요! 거의 다 맞혔군요!', color: 'text-neon-blue', border: 'border-neon-blue', bg: 'from-neon-blue/20' };
-  if (score >= 6)  return { label: '찐 K-POP 팬', comment: '훌륭해요! 꽤 많이 알고 있군요!', color: 'text-neon-green', border: 'border-neon-green', bg: 'from-neon-green/20' };
-  if (score >= 4)  return { label: 'K-POP 팬 지망생', comment: '괜찮아요! 조금 더 공부해봐요!', color: 'text-neon-purple', border: 'border-neon-purple', bg: 'from-neon-purple/20' };
-  if (score >= 2)  return { label: 'K-POP 입문자', comment: '이제 막 시작했군요! 도감을 둘러보세요!', color: 'text-neon-pink', border: 'border-neon-pink', bg: 'from-neon-pink/20' };
-  return { label: 'K-POP 아기 팬', comment: 'K-POP을 아직 잘 모르는군요. 괜찮아요!', color: 'text-slate-400', border: 'border-white/20', bg: 'from-white/10' };
+type GradeKey = 'genius' | 'master' | 'fan' | 'aspiring' | 'newbie' | 'baby';
+
+function getGradeKey(score: number): GradeKey {
+  if (score === 10) return 'genius';
+  if (score >= 8) return 'master';
+  if (score >= 6) return 'fan';
+  if (score >= 4) return 'aspiring';
+  if (score >= 2) return 'newbie';
+  return 'baby';
 }
+
+const GRADE_STYLE: Record<GradeKey, { border: string; bg: string; color: string }> = {
+  genius:   { border: 'border-neon-yellow', bg: 'from-neon-yellow/20', color: 'text-neon-yellow' },
+  master:   { border: 'border-neon-blue',   bg: 'from-neon-blue/20',   color: 'text-neon-blue' },
+  fan:      { border: 'border-neon-green',  bg: 'from-neon-green/20',  color: 'text-neon-green' },
+  aspiring: { border: 'border-neon-purple', bg: 'from-neon-purple/20', color: 'text-neon-purple' },
+  newbie:   { border: 'border-neon-pink',   bg: 'from-neon-pink/20',   color: 'text-neon-pink' },
+  baby:     { border: 'border-white/20',    bg: 'from-white/10',       color: 'text-slate-400' },
+};
 
 // ─── Type meta ────────────────────────────────────────────────────────────────
 
-const TYPE_META: Record<QType, { icon: string; label: string; color: string }> = {
-  photo:  { icon: '📸', label: '사진 퀴즈', color: 'text-neon-blue' },
-  lyrics: { icon: '🎵', label: '가사 퀴즈', color: 'text-neon-pink' },
-  hint:   { icon: '💡', label: '힌트 퀴즈', color: 'text-neon-yellow' },
-  trivia: { icon: '📊', label: '상식 퀴즈', color: 'text-neon-green' },
+const TYPE_ICON: Record<QType, string> = {
+  photo: '📸', lyrics: '🎵', hint: '💡', trivia: '📊',
 };
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
 export default function Quiz() {
+  const { t, i18n } = useTranslation();
+
   const [phase, setPhase] = useState<Phase>('start');
   const [difficulty, setDifficulty] = useState<Difficulty>('medium');
   const [questions, setQuestions] = useState<Q[]>([]);
@@ -202,16 +203,28 @@ export default function Quiz() {
   const [correctCount, setCorrectCount] = useState(0);
   const [answers, setAnswers] = useState<boolean[]>([]);
 
+  // Share state
+  const [shareBlob, setShareBlob] = useState<Blob | null>(null);
+  const [isGeneratingCard, setIsGeneratingCard] = useState(false);
+  const [showSharePanel, setShowSharePanel] = useState(false);
+
   const current = questions[currentIndex];
   const isAnswered = selectedChoice !== null;
   const progress = ((currentIndex + (isAnswered ? 1 : 0)) / 10) * 100;
 
   function startQuiz() {
-    setQuestions(generateQuestions(difficulty));
+    const qt = {
+      photo: t('quiz_q_photo'),
+      lyrics: t('quiz_q_lyrics'),
+      hint: t('quiz_q_hint'),
+    };
+    setQuestions(generateQuestions(difficulty, qt));
     setCurrentIndex(0);
     setSelectedChoice(null);
     setCorrectCount(0);
     setAnswers([]);
+    setShareBlob(null);
+    setShowSharePanel(false);
     setPhase('quiz');
   }
 
@@ -232,41 +245,50 @@ export default function Quiz() {
     }
   }
 
-  function shareResult() {
-    const grade = getGrade(correctCount);
-    const text = `K-POP 퀴즈 결과: ${correctCount}/10점 — ${grade.label}!\n${grade.comment}\n🎯 도전해보세요 → kpopstudio.ai/quiz`;
-    if (navigator.share) {
-      navigator.share({ text }).catch(() => {});
-    } else {
-      navigator.clipboard.writeText(text).then(() => alert('결과가 클립보드에 복사됐어요!'));
+  async function handleShare() {
+    setShowSharePanel(true);
+    if (shareBlob) return;
+    setIsGeneratingCard(true);
+    try {
+      const gradeKey = getGradeKey(correctCount);
+      const blob = await generateQuizShareCard({
+        score: correctCount,
+        total: 10,
+        gradeLabel: t(`quiz_grade_${gradeKey}`),
+        comment: t(`quiz_comment_${gradeKey}`),
+        lang: i18n.language,
+      });
+      setShareBlob(blob);
+    } catch {
+      // share card generation failed — SharePanel handles missing blob gracefully
+    } finally {
+      setIsGeneratingCard(false);
     }
   }
 
-  // ── Start Screen ────────────────────────────────────────────────────────────
+  // ── Start Screen ──────────────────────────────────────────────────────────
   if (phase === 'start') {
     return (
       <div className="flex-1 flex flex-col items-center justify-center px-4 py-12 min-h-[70vh]">
         <div className="w-full max-w-lg">
-          {/* Header */}
           <div className="text-center mb-10">
             <div className="text-6xl mb-4">🎤</div>
             <h1 className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-white mb-3">
-              K-POP 퀴즈
+              {t('nav_quiz')}
             </h1>
-            <p className="text-slate-400 text-sm">
-              사진 · 가사 · 힌트 · 상식 — 4가지 유형 · 10문제
-            </p>
+            <p className="text-slate-400 text-sm">{t('quiz_subtitle')}</p>
           </div>
 
-          {/* Difficulty */}
           <div className="mb-8">
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4 text-center">난이도 선택</p>
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4 text-center">
+              {t('quiz_select_difficulty')}
+            </p>
             <div className="grid grid-cols-3 gap-3">
               {([
-                { key: 'easy', label: '쉬움', desc: '대형 아이돌 위주', color: 'neon-green', emoji: '🌱' },
-                { key: 'medium', label: '보통', desc: '전체 그룹 혼합', color: 'neon-blue', emoji: '🎵' },
-                { key: 'hard', label: '어려움', desc: '세부 정보 포함', color: 'neon-pink', emoji: '🔥' },
-              ] as const).map(({ key, label, desc, color, emoji }) => (
+                { key: 'easy' as const, emoji: '🌱', color: 'neon-green', descKey: 'quiz_easy_desc' },
+                { key: 'medium' as const, emoji: '🎵', color: 'neon-blue', descKey: 'quiz_medium_desc' },
+                { key: 'hard' as const, emoji: '🔥', color: 'neon-pink', descKey: 'quiz_hard_desc' },
+              ]).map(({ key, emoji, color, descKey }) => (
                 <button
                   key={key}
                   onClick={() => setDifficulty(key)}
@@ -277,120 +299,139 @@ export default function Quiz() {
                   }`}
                 >
                   <span className="text-2xl">{emoji}</span>
-                  <span className={`text-sm font-black ${difficulty === key ? `text-${color}` : 'text-white'}`}>{label}</span>
-                  <span className="text-[10px] text-slate-500 leading-tight">{desc}</span>
+                  <span className={`text-sm font-black ${difficulty === key ? `text-${color}` : 'text-white'}`}>
+                    {t(`quiz_${key}`)}
+                  </span>
+                  <span className="text-[10px] text-slate-500 leading-tight">{t(descKey)}</span>
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Start button */}
           <button
             onClick={startQuiz}
-            className="w-full py-5 rounded-2xl bg-gradient-to-r from-neon-blue to-neon-purple text-white font-black text-lg uppercase tracking-wider hover:opacity-90 transition-opacity neon-shadow-blue flex items-center justify-center gap-3"
+            className="w-full py-5 rounded-2xl bg-gradient-to-r from-neon-blue to-neon-purple text-white font-black text-lg uppercase tracking-wider hover:opacity-90 transition-opacity neon-shadow-blue flex items-center justify-center gap-3 mb-8"
           >
-            퀴즈 시작하기
+            {t('quiz_start')}
             <ChevronRight className="w-5 h-5" />
           </button>
 
-          {/* Quiz types info */}
-          <div className="mt-8 grid grid-cols-2 gap-3">
-            {Object.entries(TYPE_META).map(([type, meta]) => (
+          <div className="grid grid-cols-2 gap-3 mb-8">
+            {([
+              { type: 'photo', icon: '📸' },
+              { type: 'lyrics', icon: '🎵' },
+              { type: 'hint', icon: '💡' },
+              { type: 'trivia', icon: '📊' },
+            ] as const).map(({ type, icon }) => (
               <div key={type} className="bg-white/5 rounded-xl p-3 flex items-center gap-3 border border-white/10">
-                <span className="text-xl">{meta.icon}</span>
+                <span className="text-xl">{icon}</span>
                 <div>
-                  <p className={`text-xs font-black ${meta.color}`}>{meta.label}</p>
-                  <p className="text-[10px] text-slate-500">
-                    {type === 'photo' && '사진 보고 멤버 맞추기'}
-                    {type === 'lyrics' && '가사 보고 그룹 맞추기'}
-                    {type === 'hint' && '힌트 보고 멤버 맞추기'}
-                    {type === 'trivia' && '그룹 상식 맞추기'}
-                  </p>
+                  <p className="text-xs font-black text-white">{t(`quiz_label_${type}`)}</p>
+                  <p className="text-[10px] text-slate-500">{t(`quiz_desc_${type}`)}</p>
                 </div>
               </div>
             ))}
           </div>
+
+          <FeatureNav exclude={['quiz']} />
         </div>
       </div>
     );
   }
 
-  // ── Result Screen ────────────────────────────────────────────────────────────
+  // ── Result Screen ──────────────────────────────────────────────────────────
   if (phase === 'result') {
-    const grade = getGrade(correctCount);
+    const gradeKey = getGradeKey(correctCount);
+    const style = GRADE_STYLE[gradeKey];
+
     return (
-      <div className="flex-1 flex flex-col items-center justify-center px-4 py-12">
+      <div className="flex-1 flex flex-col items-center px-4 py-8">
         <div className="w-full max-w-lg">
           {/* Score card */}
-          <div className={`bg-gradient-to-b ${grade.bg} to-transparent border-2 ${grade.border} rounded-3xl p-8 text-center mb-6`}>
-            <Trophy className={`w-12 h-12 mx-auto mb-4 ${grade.color}`} />
-            <div className={`text-6xl font-black mb-2 ${grade.color}`}>
+          <div className={`bg-gradient-to-b ${style.bg} to-transparent border-2 ${style.border} rounded-3xl p-8 text-center mb-5`}>
+            <Trophy className={`w-12 h-12 mx-auto mb-4 ${style.color}`} />
+            <div className={`text-6xl font-black mb-2 ${style.color}`}>
               {correctCount}<span className="text-3xl text-white/40">/10</span>
             </div>
-            <div className={`text-xl font-black uppercase tracking-wider mb-3 ${grade.color}`}>
-              {grade.label}
+            <div className={`text-xl font-black uppercase tracking-wider mb-3 ${style.color}`}>
+              {t(`quiz_grade_${gradeKey}`)}
             </div>
-            <p className="text-slate-400 text-sm">{grade.comment}</p>
+            <p className="text-slate-400 text-sm">{t(`quiz_comment_${gradeKey}`)}</p>
           </div>
 
-          {/* Answer review */}
-          <div className="bg-white/5 rounded-2xl p-4 mb-6 border border-white/10">
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">문제별 결과</p>
-            <div className="flex flex-wrap gap-2">
+          {/* Answer grid */}
+          <div className="bg-white/5 rounded-2xl p-4 mb-5 border border-white/10">
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">
+              {t('quiz_results_label')}
+            </p>
+            <div className="flex flex-wrap gap-2 mb-3">
               {answers.map((correct, i) => (
                 <div
                   key={i}
-                  className={`w-9 h-9 rounded-xl flex items-center justify-center text-xs font-black border ${
-                    correct
-                      ? 'bg-neon-green/20 border-neon-green text-neon-green'
-                      : 'bg-neon-pink/20 border-neon-pink text-neon-pink'
+                  className={`w-9 h-9 rounded-xl flex items-center justify-center border ${
+                    correct ? 'bg-neon-green/20 border-neon-green' : 'bg-neon-pink/20 border-neon-pink'
                   }`}
                 >
-                  {correct ? <Check className="w-4 h-4" /> : <X className="w-4 h-4" />}
+                  {correct ? <Check className="w-4 h-4 text-neon-green" /> : <X className="w-4 h-4 text-neon-pink" />}
                 </div>
               ))}
             </div>
-            <p className="text-xs text-slate-500 mt-3">
-              정답 {correctCount}개 · 오답 {10 - correctCount}개
+            <p className="text-xs text-slate-500">
+              ✅ {correctCount} &nbsp;❌ {10 - correctCount}
             </p>
           </div>
 
-          {/* Buttons */}
-          <div className="flex gap-3">
-            <button
-              onClick={shareResult}
-              className="flex-1 py-4 rounded-2xl bg-white/10 border border-white/20 text-white font-black flex items-center justify-center gap-2 hover:bg-white/15 transition-colors"
-            >
-              <Share2 className="w-4 h-4" />
-              결과 공유
-            </button>
-            <button
-              onClick={startQuiz}
-              className="flex-1 py-4 rounded-2xl bg-gradient-to-r from-neon-blue to-neon-purple text-white font-black flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
-            >
-              <RefreshCw className="w-4 h-4" />
-              다시 도전
-            </button>
-          </div>
+          {/* Share button */}
+          <button
+            onClick={handleShare}
+            className="w-full py-4 rounded-2xl bg-neon-pink/10 hover:bg-neon-pink/20 border-2 border-neon-pink/60 hover:border-neon-pink text-neon-pink font-black uppercase tracking-wider flex items-center justify-center gap-2 transition-all mb-3"
+            style={{ boxShadow: '0 0 20px rgba(255,0,255,0.2)' }}
+          >
+            {t('quiz_share_result')}
+          </button>
+
+          {showSharePanel && (
+            <div className="mb-5 pt-4 border-t border-white/10">
+              <SharePanel
+                title={t('nav_quiz')}
+                text={`${t('nav_quiz')}: ${correctCount}/10 — ${t(`quiz_grade_${gradeKey}`)}! ${t(`quiz_comment_${gradeKey}`)}`}
+                url="https://kpopstudio.ai/quiz"
+                blob={shareBlob}
+                filename="kpopstudio-quiz-result.png"
+                isGenerating={isGeneratingCard}
+                lang={i18n.language}
+              />
+            </div>
+          )}
+
+          {/* Retry */}
+          <button
+            onClick={startQuiz}
+            className="w-full py-4 rounded-2xl bg-gradient-to-r from-neon-blue to-neon-purple text-white font-black uppercase tracking-wider flex items-center justify-center gap-2 hover:opacity-90 transition-opacity mb-8"
+          >
+            <RefreshCw className="w-4 h-4" />
+            {t('quiz_retry')}
+          </button>
+
+          {/* Feature Nav */}
+          <FeatureNav exclude={['quiz']} />
         </div>
       </div>
     );
   }
 
-  // ── Quiz Screen ──────────────────────────────────────────────────────────────
-
-  const meta = TYPE_META[current.type];
+  // ── Quiz Screen ────────────────────────────────────────────────────────────
 
   return (
     <div className="flex-1 flex flex-col px-4 py-6 max-w-2xl mx-auto w-full">
-      {/* Progress bar */}
+      {/* Progress */}
       <div className="mb-6">
         <div className="flex justify-between items-center mb-2">
           <span className="text-xs font-black uppercase tracking-widest text-slate-500">
             {currentIndex + 1} / 10
           </span>
-          <span className={`text-xs font-black ${meta.color}`}>
-            {meta.icon} {meta.label}
+          <span className="text-xs font-black text-slate-400">
+            {TYPE_ICON[current.type]} {t(`quiz_label_${current.type}`)}
           </span>
         </div>
         <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
@@ -408,7 +449,6 @@ export default function Quiz() {
       <div className="bg-white/5 border border-white/10 rounded-3xl p-6 mb-5 flex-shrink-0">
         <p className="text-white font-black text-lg leading-snug mb-4">{current.question}</p>
 
-        {/* Image */}
         {current.image && (
           <div className="relative w-full aspect-square max-w-xs mx-auto mb-4 rounded-2xl overflow-hidden bg-white/5">
             <img
@@ -420,7 +460,6 @@ export default function Quiz() {
           </div>
         )}
 
-        {/* Lyrics or hint content */}
         {current.content && (
           <div className={`rounded-2xl p-4 ${
             current.type === 'lyrics'
@@ -441,16 +480,11 @@ export default function Quiz() {
         {current.choices.map((choice, i) => {
           const isSelected = selectedChoice === choice;
           const isCorrect = choice === current.answer;
-
           let style = 'bg-white/5 border-white/15 text-slate-300 hover:border-white/40 hover:bg-white/10';
           if (isAnswered) {
-            if (isCorrect) {
-              style = 'bg-neon-green/15 border-neon-green text-neon-green';
-            } else if (isSelected) {
-              style = 'bg-neon-pink/15 border-neon-pink text-neon-pink';
-            } else {
-              style = 'bg-white/3 border-white/10 text-slate-600';
-            }
+            if (isCorrect) style = 'bg-neon-green/15 border-neon-green text-neon-green';
+            else if (isSelected) style = 'bg-neon-pink/15 border-neon-pink text-neon-pink';
+            else style = 'bg-white/3 border-white/10 text-slate-600';
           }
 
           return (
@@ -460,22 +494,16 @@ export default function Quiz() {
               disabled={isAnswered}
               className={`relative p-4 rounded-2xl border-2 text-sm font-black text-left transition-all leading-snug ${style}`}
             >
-              <span className="text-[10px] font-black opacity-50 block mb-1">
-                {String.fromCharCode(65 + i)}
-              </span>
+              <span className="text-[10px] font-black opacity-50 block mb-1">{String.fromCharCode(65 + i)}</span>
               {choice}
-              {isAnswered && isCorrect && (
-                <Check className="absolute top-3 right-3 w-4 h-4 text-neon-green" />
-              )}
-              {isAnswered && isSelected && !isCorrect && (
-                <X className="absolute top-3 right-3 w-4 h-4 text-neon-pink" />
-              )}
+              {isAnswered && isCorrect && <Check className="absolute top-3 right-3 w-4 h-4 text-neon-green" />}
+              {isAnswered && isSelected && !isCorrect && <X className="absolute top-3 right-3 w-4 h-4 text-neon-pink" />}
             </button>
           );
         })}
       </div>
 
-      {/* Answer explanation + Next */}
+      {/* Answer feedback + Next */}
       {isAnswered && (
         <div className="animate-fade-in-up">
           <div className={`rounded-2xl p-4 mb-4 flex items-start gap-3 ${
@@ -488,10 +516,8 @@ export default function Quiz() {
               : <X className="w-5 h-5 text-neon-pink mt-0.5 shrink-0" />
             }
             <div>
-              <p className={`text-sm font-black mb-0.5 ${
-                selectedChoice === current.answer ? 'text-neon-green' : 'text-neon-pink'
-              }`}>
-                {selectedChoice === current.answer ? '정답!' : '오답!'}
+              <p className={`text-sm font-black mb-0.5 ${selectedChoice === current.answer ? 'text-neon-green' : 'text-neon-pink'}`}>
+                {selectedChoice === current.answer ? t('quiz_correct') : t('quiz_wrong')}
               </p>
               <p className="text-xs text-slate-400">{current.explanation}</p>
             </div>
@@ -501,17 +527,16 @@ export default function Quiz() {
             onClick={next}
             className="w-full py-4 rounded-2xl bg-gradient-to-r from-neon-blue to-neon-purple text-white font-black uppercase tracking-wider flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
           >
-            {currentIndex >= questions.length - 1 ? '결과 보기' : '다음 문제'}
+            {currentIndex >= questions.length - 1 ? t('quiz_show_result') : t('quiz_next')}
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
       )}
 
-      {/* Skip hint */}
       {!isAnswered && (
         <div className="flex items-center justify-center gap-2 mt-2">
           <HelpCircle className="w-3 h-3 text-slate-600" />
-          <p className="text-[10px] text-slate-600">보기를 선택하면 정답이 공개됩니다</p>
+          <p className="text-[10px] text-slate-600">{t('quiz_hint_tip')}</p>
         </div>
       )}
     </div>

@@ -8,6 +8,7 @@ import type { Prediction } from '../hooks/useFaceRecognition';
 import { KPOP_GROUPS } from '../data/idols';
 import { generateShareCard } from '../hooks/useShareCard';
 import SharePanel from '../components/SharePanel';
+import FeatureNav from '../components/FeatureNav';
 import { getLangText } from '../utils/lang';
 
 type AppState = 'idle' | 'analyzing' | 'result';
@@ -739,6 +740,8 @@ export default function Lookalike() {
               </div>
             </div>
           </div>
+
+          <FeatureNav exclude={['lookalike']} className="mb-8 max-w-2xl mx-auto px-4 md:px-0" />
 
           <button
             onClick={resetApp}

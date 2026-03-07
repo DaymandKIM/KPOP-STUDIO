@@ -249,3 +249,172 @@ export async function generateShareCard(opts: ShareCardOptions): Promise<Blob> {
     canvas.toBlob(b => b ? resolve(b) : reject(new Error('toBlob failed')), 'image/png')
   );
 }
+
+// ─── Quiz Share Card ─────────────────────────────────────────────────────────
+
+export interface QuizShareCardOptions {
+  score: number;
+  total: number;
+  gradeLabel: string;
+  comment: string;
+  lang: string;
+}
+
+export async function generateQuizShareCard(opts: QuizShareCardOptions): Promise<Blob> {
+  const { score, total, gradeLabel, comment, lang } = opts;
+  const S = 1080;
+  const sans = 'system-ui, -apple-system, "Segoe UI", Arial, sans-serif';
+
+  const canvas = document.createElement('canvas');
+  canvas.width = S;
+  canvas.height = S;
+  const ctx = canvas.getContext('2d')!;
+
+  // Background
+  const bg = ctx.createLinearGradient(0, 0, S, S);
+  bg.addColorStop(0, '#0a0a0f');
+  bg.addColorStop(1, '#0d0a1a');
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, S, S);
+
+  // Grid
+  ctx.strokeStyle = 'rgba(255,255,255,0.03)';
+  ctx.lineWidth = 1;
+  for (let i = 0; i <= S; i += 60) {
+    ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, S); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0, i); ctx.lineTo(S, i); ctx.stroke();
+  }
+
+  // Glow blobs
+  const glows: [number, number, number, string][] = [
+    [200, 300, 500, 'rgba(234,179,8,0.25)'],
+    [880, 700, 420, 'rgba(124,58,237,0.3)'],
+    [540, 900, 380, 'rgba(6,182,212,0.2)'],
+  ];
+  for (const [cx, cy, r, color] of glows) {
+    const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
+    g.addColorStop(0, color);
+    g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, S, S);
+  }
+
+  // Top badge
+  const badgeText = lang === 'ko' ? 'KPOP STUDIO · K-POP 퀴즈 결과' : 'KPOP STUDIO · K-POP QUIZ RESULT';
+  ctx.font = `bold 20px ${sans}`;
+  const bw = ctx.measureText(badgeText).width + 64, bh = 42;
+  const bx = (S - bw) / 2, by = 58;
+  ctx.beginPath();
+  ctx.moveTo(bx + 21, by); ctx.lineTo(bx + bw - 21, by);
+  ctx.quadraticCurveTo(bx + bw, by, bx + bw, by + 21);
+  ctx.lineTo(bx + bw, by + bh - 21);
+  ctx.quadraticCurveTo(bx + bw, by + bh, bx + bw - 21, by + bh);
+  ctx.lineTo(bx + 21, by + bh);
+  ctx.quadraticCurveTo(bx, by + bh, bx, by + bh - 21);
+  ctx.lineTo(bx, by + 21);
+  ctx.quadraticCurveTo(bx, by, bx + 21, by);
+  ctx.closePath();
+  const badgeFill = ctx.createLinearGradient(bx, 0, bx + bw, 0);
+  badgeFill.addColorStop(0, 'rgba(234,179,8,0.2)');
+  badgeFill.addColorStop(1, 'rgba(124,58,237,0.2)');
+  ctx.fillStyle = badgeFill; ctx.fill();
+  ctx.strokeStyle = 'rgba(234,179,8,0.5)'; ctx.lineWidth = 1; ctx.stroke();
+  ctx.fillStyle = '#fbbf24';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(badgeText, S / 2, by + bh / 2);
+
+  // Score circle
+  const cx = S / 2, cy = 400, cr = 200;
+  const scoreGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, cr);
+  scoreGrad.addColorStop(0, 'rgba(234,179,8,0.15)');
+  scoreGrad.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = scoreGrad;
+  ctx.beginPath(); ctx.arc(cx, cy, cr, 0, Math.PI * 2); ctx.fill();
+
+  ctx.strokeStyle = 'rgba(234,179,8,0.4)';
+  ctx.lineWidth = 3;
+  ctx.beginPath(); ctx.arc(cx, cy, cr, 0, Math.PI * 2); ctx.stroke();
+
+  // Score text
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  const scoreGradText = ctx.createLinearGradient(cx - 120, 0, cx + 120, 0);
+  scoreGradText.addColorStop(0, '#fbbf24');
+  scoreGradText.addColorStop(1, '#a855f7');
+  ctx.fillStyle = scoreGradText;
+  ctx.font = `bold 160px ${sans}`;
+  ctx.fillText(`${score}`, cx, cy - 20);
+  ctx.font = `bold 40px ${sans}`;
+  ctx.fillStyle = 'rgba(148,163,184,0.6)';
+  ctx.fillText(`/ ${total}`, cx, cy + 80);
+
+  // Grade label
+  ctx.font = `bold 56px ${sans}`;
+  ctx.fillStyle = '#fbbf24';
+  ctx.textBaseline = 'alphabetic';
+  let gradeSz = 56;
+  ctx.font = `bold ${gradeSz}px ${sans}`;
+  while (ctx.measureText(gradeLabel).width > S - 120 && gradeSz > 28) {
+    gradeSz -= 4;
+    ctx.font = `bold ${gradeSz}px ${sans}`;
+  }
+  ctx.fillText(gradeLabel, S / 2, 670);
+
+  // Comment
+  ctx.font = `bold 30px ${sans}`;
+  ctx.fillStyle = 'rgba(148,163,184,0.75)';
+  // Word wrap comment
+  const words = comment.split(' ');
+  const maxWidth = S - 160;
+  let line = '', lineY = 730;
+  for (const word of words) {
+    const test = line ? line + ' ' + word : word;
+    if (ctx.measureText(test).width > maxWidth && line) {
+      ctx.fillText(line, S / 2, lineY);
+      line = word;
+      lineY += 44;
+    } else {
+      line = test;
+    }
+  }
+  if (line) ctx.fillText(line, S / 2, lineY);
+
+  // Divider
+  const divY = lineY + 60;
+  const divGrad = ctx.createLinearGradient(80, 0, S - 80, 0);
+  divGrad.addColorStop(0, 'transparent');
+  divGrad.addColorStop(0.3, 'rgba(234,179,8,0.4)');
+  divGrad.addColorStop(0.7, 'rgba(124,58,237,0.4)');
+  divGrad.addColorStop(1, 'transparent');
+  ctx.strokeStyle = divGrad;
+  ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(80, divY); ctx.lineTo(S - 80, divY); ctx.stroke();
+
+  // URL
+  ctx.font = `bold 26px ${sans}`;
+  ctx.fillStyle = 'rgba(148,163,184,0.55)';
+  ctx.textBaseline = 'alphabetic';
+  ctx.fillText('kpopstudio.ai/quiz', S / 2, divY + 52);
+
+  // Neon dots
+  const dotY2 = divY + 90;
+  [['#fbbf24', -20], ['#a855f7', 0], ['#06b6d4', 20]].forEach(([c, dx]) => {
+    ctx.beginPath();
+    ctx.arc(S / 2 + (dx as number), dotY2, 5, 0, Math.PI * 2);
+    ctx.fillStyle = c as string;
+    ctx.fill();
+  });
+
+  // Corner brackets
+  const m = 24, bl = 40;
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = 'rgba(234,179,8,0.5)';
+  ctx.beginPath(); ctx.moveTo(m, m + bl); ctx.lineTo(m, m); ctx.lineTo(m + bl, m); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(S - m - bl, m); ctx.lineTo(S - m, m); ctx.lineTo(S - m, m + bl); ctx.stroke();
+  ctx.strokeStyle = 'rgba(124,58,237,0.5)';
+  ctx.beginPath(); ctx.moveTo(m, S - m - bl); ctx.lineTo(m, S - m); ctx.lineTo(m + bl, S - m); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(S - m - bl, S - m); ctx.lineTo(S - m, S - m); ctx.lineTo(S - m, S - m - bl); ctx.stroke();
+
+  return new Promise((resolve, reject) =>
+    canvas.toBlob(b => b ? resolve(b) : reject(new Error('toBlob failed')), 'image/png')
+  );
+}

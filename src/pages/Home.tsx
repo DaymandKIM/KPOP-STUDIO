@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Crosshair, Sparkles, ArrowRight, Database } from 'lucide-react';
+import FeatureNav from '../components/FeatureNav';
 
 export default function Home() {
   const { t, i18n } = useTranslation();
@@ -117,6 +118,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Feature Nav */}
+      <div className="w-full max-w-2xl mt-12 mb-4">
+        <FeatureNav />
       </div>
     </div>
   );
