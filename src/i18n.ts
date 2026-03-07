@@ -127,7 +127,7 @@ const resources = {
       "home_svc_enc_desc": "Explore detailed profiles of your favorite K-pop groups and members. From debut info to latest news and hidden TMIs — all in one place.",
       "home_stat_groups_label": "K-pop Groups",
       "home_stat_members_label": "Members",
-      "home_stat_quiz_label": "Quiz Types",
+      "home_stat_quiz_label": "Questions",
       "home_stat_langs_label": "Languages",
       "home_lookalike_bullet_1": "99% accuracy — deep learning AI analysis",
       "home_lookalike_bullet_2": "Instant results, no sign-up required",
@@ -138,6 +138,7 @@ const resources = {
       "home_enc_bullet_1": "11 groups · 73 members with full profiles",
       "home_enc_bullet_2": "Latest news, TMIs & behind-the-scenes stories",
       "home_enc_bullet_3": "Available in 13 languages",
+      "home_tagline": "AI Lookalikes · K-pop Quizzes · Idol Encyclopedia",
 "share_text": "I'm {{prob}}% {{name}} ({{group}}) according to AI! Try yours ✨"
     }
   },
@@ -267,7 +268,7 @@ const resources = {
       "home_svc_enc_desc": "좋아하는 K-POP 그룹과 멤버의 프로필을 탐색해보세요. 데뷔 정보부터 최신 뉴스, 깨알 TMI까지 한곳에 모았습니다.",
       "home_stat_groups_label": "K-POP 그룹",
       "home_stat_members_label": "멤버 프로필",
-      "home_stat_quiz_label": "퀴즈 유형",
+      "home_stat_quiz_label": "퀴즈 문항",
       "home_stat_langs_label": "지원 언어",
       "home_lookalike_bullet_1": "딥러닝 기반 99% 정확도의 AI 얼굴 분석",
       "home_lookalike_bullet_2": "업로드 즉시 결과 확인 — 회원가입 불필요",
@@ -278,6 +279,7 @@ const resources = {
       "home_enc_bullet_1": "11개 그룹 · 73명 멤버 상세 프로필",
       "home_enc_bullet_2": "최신 뉴스, TMI & 비하인드 스토리",
       "home_enc_bullet_3": "13개 언어로 이용 가능",
+      "home_tagline": "AI 닮은꼴 분석 · K-POP 퀴즈 · 아이돌 도감",
 "share_text": "나는 AI로 {{prob}}% {{name}}({{group}})을(를) 닮았대! 너도 해봐 ✨"
     }
   },
@@ -405,7 +407,7 @@ const resources = {
       "home_svc_enc_desc": "お気に入りのK-POPグループとメンバーのプロフィールを探索。デビュー情報から最新ニュース、隠れたTMIまで一か所で確認できます。",
       "home_stat_groups_label": "K-POPグループ",
       "home_stat_members_label": "メンバー",
-      "home_stat_quiz_label": "クイズ種類",
+      "home_stat_quiz_label": "クイズ問題数",
       "home_stat_langs_label": "対応言語",
       "home_lookalike_bullet_1": "深層学習による99%精度のAI分析",
       "home_lookalike_bullet_2": "アップロード即座に結果 — 登録不要",
@@ -416,6 +418,7 @@ const resources = {
       "home_enc_bullet_1": "11グループ · 73人のメンバープロフィール",
       "home_enc_bullet_2": "最新ニュース、TMI & 舞台裏ストーリー",
       "home_enc_bullet_3": "13言語対応",
+      "home_tagline": "AI似顔検索 · K-POPクイズ · アイドル図鑑",
 "share_text": "AIで{{prob}}% {{name}}({{group}})に似てると判定！あなたも試して✨"
     }
   },
@@ -543,7 +546,7 @@ const resources = {
       "home_svc_enc_desc": "探索您喜愛的 K-POP 團體和成員資料。從出道資訊到最新新聞和隱藏 TMI，盡在一處。",
       "home_stat_groups_label": "K-POP 团体",
       "home_stat_members_label": "成员档案",
-      "home_stat_quiz_label": "题目类型",
+      "home_stat_quiz_label": "题目数量",
       "home_stat_langs_label": "支援语言",
       "home_lookalike_bullet_1": "深度学习驱动的99%精准AI分析",
       "home_lookalike_bullet_2": "上传即得结果 — 无需注册",
@@ -554,6 +557,7 @@ const resources = {
       "home_enc_bullet_1": "11个团体 · 73名成员详细档案",
       "home_enc_bullet_2": "最新新闻、TMI与幕后故事",
       "home_enc_bullet_3": "支援13种语言",
+      "home_tagline": "AI相似分析 · K-POP测验 · 偶像图鉴",
 "share_text": "AI判定我{{prob}}%像{{name}}({{group}})！快来试试✨"
     }
   },
@@ -681,7 +685,7 @@ const resources = {
       "home_svc_enc_desc": "Explora perfiles detallados de tus grupos y miembros K-pop favoritos. De info de debut a últimas noticias y TMIs ocultos, todo en un lugar.",
       "home_stat_groups_label": "Grupos K-pop",
       "home_stat_members_label": "Miembros",
-      "home_stat_quiz_label": "Tipos de Quiz",
+      "home_stat_quiz_label": "Preguntas",
       "home_stat_langs_label": "Idiomas",
       "home_lookalike_bullet_1": "Análisis IA con 99% de precisión",
       "home_lookalike_bullet_2": "Resultados instantáneos — sin registro",
@@ -692,6 +696,7 @@ const resources = {
       "home_enc_bullet_1": "11 grupos · 73 perfiles de miembros",
       "home_enc_bullet_2": "Últimas noticias, TMIs y bastidores",
       "home_enc_bullet_3": "Disponible en 13 idiomas",
+      "home_tagline": "Lookalikes IA · Quiz K-pop · Enciclopedia de Idols",
 "share_text": "¡La IA dice que soy {{prob}}% {{name}}({{group}})! Pruébalo ✨"
     }
   },
@@ -819,7 +824,7 @@ const resources = {
       "home_svc_enc_desc": "Jelajahi profil grup dan member K-pop favoritmu. Dari info debut hingga berita terbaru dan TMI tersembunyi, semua ada di sini.",
       "home_stat_groups_label": "Grup K-pop",
       "home_stat_members_label": "Member",
-      "home_stat_quiz_label": "Jenis Kuis",
+      "home_stat_quiz_label": "Pertanyaan",
       "home_stat_langs_label": "Bahasa",
       "home_lookalike_bullet_1": "Analisis AI dengan akurasi 99%",
       "home_lookalike_bullet_2": "Hasil instan — tanpa daftar",
@@ -830,6 +835,7 @@ const resources = {
       "home_enc_bullet_1": "11 grup · 73 profil member lengkap",
       "home_enc_bullet_2": "Berita terbaru, TMI & behind the scenes",
       "home_enc_bullet_3": "Tersedia dalam 13 bahasa",
+      "home_tagline": "Kembaran AI · Kuis K-pop · Ensiklopedi Idol",
 "share_text": "AI bilang aku {{prob}}% mirip {{name}}({{group}})! Coba juga ✨"
     }
   },
@@ -957,7 +963,7 @@ const resources = {
       "home_svc_enc_desc": "Explore les profils de tes groupes et membres K-pop préférés. De l'info de début aux dernières nouvelles et TMIs cachés, tout en un seul endroit.",
       "home_stat_groups_label": "Groupes K-pop",
       "home_stat_members_label": "Membres",
-      "home_stat_quiz_label": "Types de Quiz",
+      "home_stat_quiz_label": "Questions",
       "home_stat_langs_label": "Langues",
       "home_lookalike_bullet_1": "Analyse IA à 99% de précision",
       "home_lookalike_bullet_2": "Résultats instantanés — sans inscription",
@@ -968,6 +974,7 @@ const resources = {
       "home_enc_bullet_1": "11 groupes · 73 profils de membres",
       "home_enc_bullet_2": "Dernières infos, TMIs et coulisses",
       "home_enc_bullet_3": "Disponible en 13 langues",
+      "home_tagline": "Sosies IA · Quiz K-pop · Encyclopédie des Idols",
 "share_text": "L'IA dit que je ressemble à {{prob}}% à {{name}}({{group}}) ! Essayez ✨"
     }
   },
@@ -1095,7 +1102,7 @@ const resources = {
       "home_svc_enc_desc": "अपने पसंदीदा K-pop groups और members के profiles explore करें। Debut info से लेकर latest news और hidden TMIs तक सब एक जगह।",
       "home_stat_groups_label": "K-pop ग्रुप्स",
       "home_stat_members_label": "मेंबर्स",
-      "home_stat_quiz_label": "क्विज़ प्रकार",
+      "home_stat_quiz_label": "प्रश्न",
       "home_stat_langs_label": "भाषाएँ",
       "home_lookalike_bullet_1": "डीप लर्निंग से 99% सटीक AI विश्लेषण",
       "home_lookalike_bullet_2": "तुरंत परिणाम — बिना रजिस्ट्रेशन के",
@@ -1106,6 +1113,7 @@ const resources = {
       "home_enc_bullet_1": "11 ग्रुप · 73 सदस्यों के विस्तृत प्रोफ़ाइल",
       "home_enc_bullet_2": "ताज़ा खबरें, TMI और बैकस्टेज",
       "home_enc_bullet_3": "13 भाषाओं में उपलब्ध",
+      "home_tagline": "AI लुकलाइक · K-pop क्विज़ · आइडल एनसाइक्लोपीडिया",
 "share_text": "AI ने बताया मैं {{prob}}% {{name}}({{group}}) जैसा/जैसी हूं! आप भी आजमाएं ✨"
     }
   },
@@ -1233,7 +1241,7 @@ const resources = {
       "home_svc_enc_desc": "Explore perfis detalhados dos seus grupos e membros K-pop favoritos. De informações de estreia a últimas notícias e TMIs escondidos, tudo em um lugar.",
       "home_stat_groups_label": "Grupos K-pop",
       "home_stat_members_label": "Membros",
-      "home_stat_quiz_label": "Tipos de Quiz",
+      "home_stat_quiz_label": "Perguntas",
       "home_stat_langs_label": "Idiomas",
       "home_lookalike_bullet_1": "Análise IA com 99% de precisão",
       "home_lookalike_bullet_2": "Resultados instantâneos — sem cadastro",
@@ -1244,6 +1252,7 @@ const resources = {
       "home_enc_bullet_1": "11 grupos · 73 perfis de membros completos",
       "home_enc_bullet_2": "Últimas notícias, TMIs e bastidores",
       "home_enc_bullet_3": "Disponível em 13 idiomas",
+      "home_tagline": "Sósias IA · Quiz K-pop · Enciclopédia de Idols",
 "share_text": "A IA disse que sou {{prob}}% parecido/a com {{name}}({{group}})! Tente também ✨"
     }
   },
@@ -1371,7 +1380,7 @@ const resources = {
       "home_svc_enc_desc": "استكشف ملفات تعريف مجموعاتك وأعضائك K-pop المفضلين. من معلومات الدبيوه إلى أحدث الأخبار والمعلومات الخفية، كل شيء في مكان واحد.",
       "home_stat_groups_label": "مجموعات K-pop",
       "home_stat_members_label": "الأعضاء",
-      "home_stat_quiz_label": "أنواع الأسئلة",
+      "home_stat_quiz_label": "أسئلة",
       "home_stat_langs_label": "اللغات",
       "home_lookalike_bullet_1": "تحليل ذكاء اصطناعي بدقة 99%",
       "home_lookalike_bullet_2": "نتائج فورية — بدون تسجيل",
@@ -1382,6 +1391,7 @@ const resources = {
       "home_enc_bullet_1": "11 مجموعة · 73 ملفاً شاملاً للأعضاء",
       "home_enc_bullet_2": "آخر الأخبار، TMI وكواليس النجوم",
       "home_enc_bullet_3": "متاح بـ13 لغة",
+      "home_tagline": "شبيه AI · كويز K-pop · موسوعة الأيدول",
 "share_text": "قال الذكاء الاصطناعي إنني {{prob}}% مثل {{name}}({{group}})! جرّب أنت أيضاً ✨"
     }
   },
@@ -1509,7 +1519,7 @@ const resources = {
       "home_svc_enc_desc": "สำรวจโปรไฟล์ของกลุ่มและสมาชิก K-pop ที่คุณชื่นชอบ จากข้อมูลเดบิวต์ไปจนถึงข่าวล่าสุดและ TMI ที่ซ่อนอยู่ ครบในที่เดียว",
       "home_stat_groups_label": "กลุ่ม K-pop",
       "home_stat_members_label": "สมาชิก",
-      "home_stat_quiz_label": "ประเภทคำถาม",
+      "home_stat_quiz_label": "คำถาม",
       "home_stat_langs_label": "ภาษา",
       "home_lookalike_bullet_1": "AI วิเคราะห์ด้วยความแม่นยำ 99%",
       "home_lookalike_bullet_2": "ผลลัพธ์ทันที — ไม่ต้องสมัครสมาชิก",
@@ -1520,6 +1530,7 @@ const resources = {
       "home_enc_bullet_1": "11 กลุ่ม · 73 โปรไฟล์สมาชิกครบถ้วน",
       "home_enc_bullet_2": "ข่าวล่าสุด, TMI และเรื่องราวเบื้องหลัง",
       "home_enc_bullet_3": "รองรับ 13 ภาษา",
+      "home_tagline": "AI คู่แฝด · K-pop Quiz · สารานุกรมไอดอล",
 "share_text": "AI บอกว่าฉัน {{prob}}% เหมือน {{name}}({{group}})! ลองดูสิ ✨"
     }
   },
@@ -1647,7 +1658,7 @@ const resources = {
       "home_svc_enc_desc": "Khám phá hồ sơ chi tiết của các nhóm và thành viên K-pop yêu thích. Từ thông tin debut đến tin tức mới nhất và TMI ẩn, tất cả trong một nơi.",
       "home_stat_groups_label": "Nhóm K-pop",
       "home_stat_members_label": "Thành viên",
-      "home_stat_quiz_label": "Loại câu hỏi",
+      "home_stat_quiz_label": "Câu hỏi",
       "home_stat_langs_label": "Ngôn ngữ",
       "home_lookalike_bullet_1": "AI phân tích với độ chính xác 99%",
       "home_lookalike_bullet_2": "Kết quả tức thì — không cần đăng ký",
@@ -1658,6 +1669,7 @@ const resources = {
       "home_enc_bullet_1": "11 nhóm · 73 hồ sơ thành viên đầy đủ",
       "home_enc_bullet_2": "Tin tức mới nhất, TMI và hậu trường",
       "home_enc_bullet_3": "Có sẵn trong 13 ngôn ngữ",
+      "home_tagline": "AI Lookalike · Quiz K-pop · Bách khoa Thần tượng",
 "share_text": "AI nói tôi giống {{name}}({{group}}) {{prob}}%! Thử xem nào ✨"
     }
   },
@@ -1785,7 +1797,7 @@ const resources = {
       "home_svc_enc_desc": "Изучи профили твоих любимых K-pop групп и участников. От информации о дебюте до последних новостей и скрытых TMI — всё в одном месте.",
       "home_stat_groups_label": "K-pop группы",
       "home_stat_members_label": "Участники",
-      "home_stat_quiz_label": "Типы вопросов",
+      "home_stat_quiz_label": "Вопросов",
       "home_stat_langs_label": "Языки",
       "home_lookalike_bullet_1": "ИИ-анализ с точностью 99%",
       "home_lookalike_bullet_2": "Мгновенный результат — без регистрации",
@@ -1796,6 +1808,7 @@ const resources = {
       "home_enc_bullet_1": "11 групп · 73 подробных профиля участников",
       "home_enc_bullet_2": "Последние новости, TMI и закулисные истории",
       "home_enc_bullet_3": "Доступно на 13 языках",
+      "home_tagline": "AI-Двойники · K-pop Квизы · Энциклопедия Айдолов",
 "share_text": "ИИ говорит, что я на {{prob}}% похож(а) на {{name}}({{group}})! Попробуй ✨"
     }
   }

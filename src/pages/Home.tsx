@@ -9,7 +9,7 @@ function StatBar() {
   const stats = [
     { value: '11', labelKey: 'home_stat_groups_label' },
     { value: '73', labelKey: 'home_stat_members_label' },
-    { value: '4', labelKey: 'home_stat_quiz_label' },
+    { value: '200+', labelKey: 'home_stat_quiz_label' },
     { value: '13', labelKey: 'home_stat_langs_label' },
   ];
   return (
@@ -129,7 +129,7 @@ export default function Home() {
       title: t('nav_quiz'),
       desc: t('home_svc_quiz_desc'),
       bullets: [t('home_quiz_bullet_1'), t('home_quiz_bullet_2'), t('home_quiz_bullet_3')],
-      stat: { value: '4', label: t('home_stat_quiz_label') },
+      stat: { value: '200+', label: t('home_stat_quiz_label') },
       btnLabel: t('quiz_start'),
       to: '/quiz',
       btnGradient: {
@@ -174,23 +174,25 @@ export default function Home() {
         </div>
 
         {/* Main title */}
-        <h1 className="text-[68px] xs:text-8xl md:text-[120px] font-black italic uppercase tracking-tighter leading-[0.88] text-white mb-0">
-          KPOP
-        </h1>
-        <h1
-          className="text-[68px] xs:text-8xl md:text-[120px] font-black italic uppercase tracking-tighter leading-[0.88] text-transparent bg-clip-text pb-3"
-          style={{
-            backgroundImage: 'linear-gradient(90deg, #00ffff, #9d00ff, #ff00ff, #9d00ff, #00ffff)',
-            backgroundSize: '300% 100%',
-            animation: 'neon-gradient 4s linear infinite',
-          }}
-        >
-          STUDIO
+        <h1 className="font-black italic uppercase tracking-tighter text-center leading-none">
+          <span className="block text-[72px] xs:text-8xl md:text-[120px] text-white">
+            KPOP
+          </span>
+          <span
+            className="block text-[72px] xs:text-8xl md:text-[120px] text-transparent bg-clip-text pt-1 pb-5"
+            style={{
+              backgroundImage: 'linear-gradient(90deg, #00ffff, #9d00ff, #ff00ff, #9d00ff, #00ffff)',
+              backgroundSize: '300% 100%',
+              animation: 'neon-gradient 4s linear infinite',
+            }}
+          >
+            STUDIO
+          </span>
         </h1>
 
         {/* Tagline */}
-        <p className="text-slate-300 font-mono text-sm md:text-base uppercase tracking-widest max-w-lg mt-6 leading-relaxed">
-          {t('app_subtitle')}
+        <p className="text-slate-300 font-mono text-xs md:text-sm uppercase tracking-[0.2em] max-w-md leading-relaxed -mt-1">
+          {t('home_tagline')}
         </p>
 
         {/* Stat bar */}
