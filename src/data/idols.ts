@@ -10702,5 +10702,123 @@ export const KPOP_GROUPS: KpopGroup[] = [
         socials: {}
       }
     ]
+  },
+  {
+    id: "iu",
+    name: { ko: "아이유", en: "IU", ja: "アイユー (IU)", zh: "李知恩 (IU)", es: "IU", id: "IU", fr: "IU", hi: "आईयू (IU)", pt: "IU", ar: "آيو (IU)", th: "ไอยู (IU)", vi: "IU", ru: "Айю (IU)" },
+    officialSite: "https://edam-ent.com/artist/iu",
+    imageUrl: "https://tse1.mm.bing.net/th?q=IU+The+Golden+Hour+Concert+Poster+High+Res",
+    socials: { instagram: "https://www.instagram.com/dlwlrma/", twitter: "https://twitter.com/_IUofficial", youtube: "https://www.youtube.com/@dlwlrma", tiktok: "https://www.tiktok.com/@iu_official" },
+    fandom: { ko: "유애나 (UAENA)", en: "UAENA", ja: "ユエナ (UAENA)", zh: "UAENA", es: "UAENA", id: "UAENA", fr: "UAENA", hi: "UAENA", pt: "UAENA", ar: "يوينا (UAENA)", th: "ยูแอนา (UAENA)", vi: "UAENA", ru: "UAENA" },
+    debut: "2008.09.18",
+    wiki: { ko: "아이유(IU)는 대한민국의 가수이자 배우로, '국민 여동생'에서 독보적인 싱어송라이터로 성장한 대한민국 최고의 솔로 아티스트입니다.", en: "IU is a South Korean singer-songwriter and actress, widely considered the most successful solo artist in K-pop history." },
+    summary: { ko: "대한민국 가요계의 아이콘이자 전설적인 솔로 아티스트. '좋은 날', '밤편지' 등 수많은 히트곡을 보유한 싱어송라이터이자 배우입니다.", en: "The iconic solo artist and singer-songwriter who represents the Korean music industry, with numerous hits and a successful acting career." },
+    news: [
+      { title: { ko: "아이유, 여성 솔로 최초 잠실 주경기장 입성… 골든 아워 콘서트 성료", en: "IU Becomes First Female Soloist to Headline Seoul Olympic Stadium" }, date: "2022.09.18", summary: { ko: "여성 아티스트 최초로 국내 최대 규모 공연장인 주경기장에서 단독 콘서트를 개최하며 '공연 퀸'의 위상을 증명했습니다.", en: "She made history as the first female soloist to perform at the nation's largest stadium, proving her status as the 'Queen of Performance'." }, url: "#" },
+      { title: { ko: "아이유 '밤편지', 스포티파이 1억 스트리밍 돌파", en: "IU's 'Through the Night' Surpasses 100M Streams on Spotify" }, date: "2023.11.10", summary: { ko: "2017년 발표된 메가 히트곡 '밤편지'가 글로벌 팬들의 꾸준한 사랑을 받으며 1억 스트리밍을 달성했습니다.", en: "The 2017 mega-hit 'Through the Night' continues to receive global love, surpassing 100 million streams on Spotify." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "팬덤 이름 '유애나'는 '유(You) + 애(愛) + 나'의 합성어로 '너와 내가 사랑한다'는 뜻을 가지고 있습니다.",
+        "데뷔 당시 중학생이었으며, 초창기에는 기타를 치며 노래하는 소녀 이미지로 큰 사랑을 받았습니다.",
+        "대한민국 연예계의 대표적인 '기부 천사'로, 데뷔 기념일이나 특별한 날마다 거액의 기부를 이어오고 있습니다.",
+        "음악뿐만 아니라 '나의 아저씨', '호텔 델루나' 등 다수의 작품에서 주연을 맡아 배우로서도 정점에 올랐습니다.",
+        "어쿠스틱, 발라드, 댄스, 재즈 등 장르를 가리지 않는 넓은 음악적 스펙트럼과 깊은 작사 능력을 보유하고 있습니다."
+      ],
+      en: [
+        "The fandom name 'UAENA' is a combination of 'U (You)', 'AE (Love in Sino-Korean)', and 'NA (Me)', meaning 'You and I love each other'.",
+        "Debuted as a middle school student in 2008, starting with an acoustic guitar-playing girl image.",
+        "Widely known as a 'Donation Angel' in Korea, consistently donating large sums on debut anniversaries and special occasions.",
+        "A top-tier actress who starred in critically acclaimed dramas like 'My Mister' and 'Hotel Del Luna'.",
+        "Possesses a vast musical spectrum across folk, ballad, dance, and jazz, with exceptional songwriting skills."
+      ]
+    },
+    members: [
+      {
+        id: "iu_member",
+        name: { ko: "아이유", en: "IU", ja: "アイユー (IU)", zh: "李知恩 (IU)", es: "IU", id: "IU", fr: "IU", hi: "आईयू (IU)", pt: "IU", ar: "آيو (IU)", th: "ไอยู (IU)", vi: "IU", ru: "Айю (IU)" },
+        birth: "1993.05.16",
+        height: "162cm",
+        bloodType: "A",
+        mbti: "INFJ",
+        imageUrl: "https://tse1.mm.bing.net/th?q=IU+Official+Profile+Photo+High+Res",
+        tmi: {
+          ko: [
+            "가장 좋아하는 색깔은 보라색이며, 가사나 앨범 이미지에 자주 활용합니다.",
+            "잠이 오지 않을 때 가사를 쓰는 습관이 있어 수많은 명곡들을 탄생시켰습니다.",
+            "팬들과 소통할 때 '친구' 같은 편안한 관계를 유지하는 것으로 유명합니다.",
+            "민트초코를 좋아하는 '민초파'로 알려져 있습니다.",
+            "작업할 때 완벽주의적인 면모를 보여주며, 본인의 곡 대부분을 직접 작사합니다."
+          ],
+          en: [
+            "Her favorite color is purple, which she often incorporates into her lyrics and album art.",
+            "She has a habit of writing lyrics when she can't sleep, leading to many hit songs.",
+            "Famous for maintaining a comfortable, friend-like relationship with her fans.",
+            "Known as a 'Mint Choco' lover.",
+            "A perfectionist during production, she writes the lyrics for almost all of her songs."
+          ]
+        },
+        socials: {}
+      }
+    ]
+  },
+  {
+    id: "jungkook",
+    name: { ko: "정국", en: "Jungkook", ja: "ジョングク (Jungkook)", zh: "田柾國 (Jungkook)", es: "Jungkook", id: "Jungkook", fr: "Jungkook", hi: "जंगकुक (Jungkook)", pt: "Jungkook", ar: "جونغكوك (Jungkook)", th: "จองกุก (Jungkook)", vi: "Jungkook", ru: "Чонгук (Jungkook)" },
+    officialSite: "https://ibighit.com/bts/kor/profile/",
+    imageUrl: "https://tse1.mm.bing.net/th?q=Jungkook+GOLDEN+Concept+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/bts.bighitofficial/", twitter: "https://twitter.com/bts_bighit", youtube: "https://www.youtube.com/@BTS", tiktok: "https://www.tiktok.com/@bts_official_bighit" },
+    fandom: { ko: "아미 (ARMY)", en: "ARMY", ja: "アーミー (ARMY)", zh: "ARMY", es: "ARMY", id: "ARMY", fr: "ARMY", hi: "ARMY", pt: "ARMY", ar: "آرمي (ARMY)", th: "อาร์มี่ (ARMY)", vi: "ARMY", ru: "АРМИ (ARMY)" },
+    debut: "2013.06.13",
+    wiki: { ko: "정국(Jungkook)은 방탄소년단(BTS)의 멤버이자 글로벌 팝스타로, 2023년 솔로 앨범 'GOLDEN'을 통해 전 세계 차트를 휩쓸며 독보적인 솔로 아티스트로서의 입지를 굳혔습니다.", en: "Jungkook is a member of BTS and a global pop star who dominated world charts with his 2023 solo album 'GOLDEN'." },
+    summary: { ko: "방탄소년단의 '황금 막내'에서 글로벌 팝 아이콘으로. 빌보드 Hot 100 1위를 기록한 'Seven'을 비롯해 전 세계적인 인기를 누리는 아티스트입니다.", en: "From BTS's 'Golden Maknae' to a global pop icon. A record-breaking artist whose hits like 'Seven' topped the Billboard Hot 100." },
+    news: [
+      { title: { ko: "정국 'Seven', 빌보드 Hot 100 1위 데뷔 신기록", en: "Jungkook's 'Seven' Debuts at No.1 on Billboard Hot 100" }, date: "2023.07.24", summary: { ko: "솔로 싱글 'Seven'이 발매와 동시에 빌보드 메인 싱글 차트 1위에 오르며 글로벌 팝스타로서의 저력을 과시했습니다.", en: "His solo single 'Seven' debuted at the top of the Billboard Hot 100, proving his immense global power." }, url: "#" },
+      { title: { ko: "정국 솔로 앨범 'GOLDEN', 영국 오피셜 차트 역대 최고 순위", en: "Jungkook's 'GOLDEN' Sets Highest Record on UK Official Charts" }, date: "2023.11.10", summary: { ko: "첫 솔로 정규 앨범 'GOLDEN'이 영국 오피셜 앨범 차트 상위권에 진입하며 K-팝 솔로 아티스트 신기록을 세웠습니다.", en: "His first solo LP 'GOLDEN' entered the UK Official Album Chart at a record high for a K-pop soloist." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "별명 '황금 막내'는 노래, 춤, 랩, 그림, 운동 등 못하는 게 없어서 붙여진 이름입니다.",
+        "카타르 월드컵 공식 주제가 'Dreamers'를 가창하며 한국 가수 최초로 월드컵 개막식 무대를 장식했습니다.",
+        "그림 실력이 매우 뛰어나며, 본인의 굿즈나 콘텐츠 디자인에 참여하기도 합니다.",
+        "복싱과 웨이트 트레이닝을 즐기는 운동 마니아로 알려져 있습니다.",
+        "완벽주의적인 성격으로 녹음할 때 본인이 만족할 때까지 수없이 반복하는 것으로 유명합니다."
+      ],
+      en: [
+        "His nickname 'Golden Maknae' was given because he excels in everything: singing, dancing, rapping, art, and sports.",
+        "Performed 'Dreamers', the official FIFA World Cup Qatar 2022 soundtrack, as the first Korean artist to perform at a World Cup opening ceremony.",
+        "An incredibly talented artist who often participates in designing his own merchandise and content.",
+        "A fitness enthusiast who enjoys boxing and weight training.",
+        "Known for his perfectionism, often repeating recordings countless times until he is fully satisfied."
+      ]
+    },
+    members: [
+      {
+        id: "jungkook_member",
+        name: { ko: "정국", en: "Jungkook", ja: "ジョングク (Jungkook)", zh: "田柾國 (Jungkook)", es: "Jungkook", id: "Jungkook", fr: "Jungkook", hi: "जंगकुक (Jungkook)", pt: "Jungkook", ar: "جونغكوك (Jungkook)", th: "จองกุก (Jungkook)", vi: "Jungkook", ru: "Чонгук (Jungkook)" },
+        birth: "1997.09.01",
+        height: "179cm",
+        bloodType: "A",
+        mbti: "ISFP",
+        imageUrl: "https://tse1.mm.bing.net/th?q=Jungkook+Official+Profile+Photo+2024+High+Res",
+        tmi: {
+          ko: [
+            "가장 좋아하는 숫자는 1입니다.",
+            "삼겹살과 고기를 매우 좋아하며, 요리 실력도 수준급입니다.",
+            "향기에 민감하여 향수나 섬유유연제를 고르는 데 공을 많이 들인다고 합니다.",
+            "잠이 많기로 유명하며, 어디서든 잘 자는 모습을 보여줍니다.",
+            "본인의 음악적 성장을 위해 꾸준히 팝 아티스트들의 곡을 커버하며 연습합니다."
+          ],
+          en: [
+            "His favorite number is 1.",
+            "A huge meat lover, especially Samgyeopsal (pork belly), and is a skilled cook.",
+            "Very sensitive to scents and takes great care in choosing perfumes and fabric softeners.",
+            "Famous for being a deep sleeper who can nap almost anywhere.",
+            "Consistently covers pop artists' songs to study and grow musically."
+          ]
+        },
+        socials: {}
+      }
+    ]
   }
 ];
