@@ -11,7 +11,7 @@ import { generateWorldcupShareCard } from '../hooks/useShareCard';
 
 type Gender = 'all' | 'girl' | 'boy';
 type WCPhase = 'start' | 'match' | 'champion';
-type BracketSize = 16 | 32;
+type BracketSize = 16 | 32 | 64;
 
 interface Contestant {
   member: Member;
@@ -34,6 +34,7 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 function getRoundName(size: number, t: (k: string) => string): string {
+  if (size === 64) return t('worldcup_round_64');
   if (size === 32) return t('worldcup_round_32');
   if (size === 16) return t('worldcup_round_16');
   if (size === 8)  return t('worldcup_round_8');
@@ -135,7 +136,7 @@ export default function Worldcup() {
   }
 
   const filtered = getFiltered();
-  const maxSize = filtered.length >= 32 ? 32 : 16;
+  const maxSize = filtered.length >= 64 ? 64 : filtered.length >= 32 ? 32 : 16;
   const effectiveSize = bracketSize > maxSize ? 16 : bracketSize;
 
   const left  = pool[matchIdx * 2];
@@ -269,8 +270,8 @@ export default function Worldcup() {
             <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3 text-center">
               {t('worldcup_select_size')}
             </p>
-            <div className="grid grid-cols-2 gap-3">
-              {([16, 32] as BracketSize[]).map(size => {
+            <div className="grid grid-cols-3 gap-3">
+              {([16, 32, 64] as BracketSize[]).map(size => {
                 const tooFew = getFiltered().length < size;
                 return (
                   <button

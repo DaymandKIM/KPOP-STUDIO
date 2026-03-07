@@ -77,10 +77,13 @@ function generateQuestions(difficulty: Difficulty, t: TFunction, lang: string): 
 
   const pool: Q[] = [];
 
+  // 쉬움 오답용 멤버 풀 (쉬움은 같은 범위 내에서만 오답 선택)
+  const wrongPool = difficulty === 'easy' ? targetMembers : allMembers;
+
   // A. Photo questions — gender-filtered wrong choices
   for (const { m, g } of pick(targetMembers, 6)) {
     const isBoy = BOY_GROUP_IDS.has(g.id);
-    const sameGenderMembers = allMembers.filter(x => x.m.id !== m.id && BOY_GROUP_IDS.has(x.g.id) === isBoy);
+    const sameGenderMembers = wrongPool.filter(x => x.m.id !== m.id && BOY_GROUP_IDS.has(x.g.id) === isBoy);
     const mName = getLangText(m.name, lang);
     const gName = getLangText(g.name, lang);
     const wrongs = pick(sameGenderMembers.map(x => getLangText(x.m.name, lang)), 3);
@@ -125,7 +128,7 @@ function generateQuestions(difficulty: Difficulty, t: TFunction, lang: string): 
     else hint = `${t('height')} ${m.height} · MBTI ${m.mbti} · ${t('birthday')} ${m.birth}`;
 
 
-    const wrongs = pick(allMembers.filter(x => x.m.id !== m.id).map(x => getLangText(x.m.name, lang)), 3);
+    const wrongs = pick(wrongPool.filter(x => x.m.id !== m.id).map(x => getLangText(x.m.name, lang)), 3);
     pool.push({
       type: 'hint',
       question: t('quiz_q_hint'),
@@ -192,7 +195,7 @@ function generateQuestions(difficulty: Difficulty, t: TFunction, lang: string): 
     const mName = getLangText(m.name, lang);
     const gName = getLangText(g.name, lang);
     const isBoy = BOY_GROUP_IDS.has(g.id);
-    const sameGender = allMembers.filter(x => x.m.id !== m.id && BOY_GROUP_IDS.has(x.g.id) === isBoy);
+    const sameGender = wrongPool.filter(x => x.m.id !== m.id && BOY_GROUP_IDS.has(x.g.id) === isBoy);
     const wrongs = pick(sameGender.map(x => getLangText(x.m.name, lang)), 3);
     pool.push({
       type: 'tmi',
@@ -210,7 +213,7 @@ function generateQuestions(difficulty: Difficulty, t: TFunction, lang: string): 
     const mName = getLangText(m.name, lang);
     const gName = getLangText(g.name, lang);
     const isBoy = BOY_GROUP_IDS.has(g.id);
-    const diffMbti = allMembers.filter(x => x.m.id !== m.id && x.m.mbti !== m.mbti && BOY_GROUP_IDS.has(x.g.id) === isBoy);
+    const diffMbti = wrongPool.filter(x => x.m.id !== m.id && x.m.mbti !== m.mbti && BOY_GROUP_IDS.has(x.g.id) === isBoy);
     const wrongs = pick(diffMbti.map(x => getLangText(x.m.name, lang)), 3);
     pool.push({
       type: 'mbti',
@@ -506,11 +509,11 @@ export default function Quiz() {
               <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">
                 {t('quiz_results_label')}
               </p>
-              <div className="flex flex-wrap gap-2 mb-3">
+              <div className="grid grid-cols-5 gap-2 mb-3">
                 {answers.map((correct, i) => (
                   <div
                     key={i}
-                    className={`w-9 h-9 rounded-xl flex items-center justify-center border ${
+                    className={`h-9 rounded-xl flex items-center justify-center border ${
                       correct ? 'bg-neon-green/20 border-neon-green' : 'bg-neon-pink/20 border-neon-pink'
                     }`}
                   >
