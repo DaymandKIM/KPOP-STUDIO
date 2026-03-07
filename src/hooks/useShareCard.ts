@@ -418,3 +418,176 @@ export async function generateQuizShareCard(opts: QuizShareCardOptions): Promise
     canvas.toBlob(b => b ? resolve(b) : reject(new Error('toBlob failed')), 'image/png')
   );
 }
+
+// ─── Worldcup Share Card ──────────────────────────────────────────────────────
+
+export interface WorldcupShareCardOptions {
+  imageUrl: string;
+  memberName: string;
+  groupName: string;
+  lang: string;
+}
+
+export async function generateWorldcupShareCard(opts: WorldcupShareCardOptions): Promise<Blob> {
+  const { imageUrl, memberName, groupName, lang } = opts;
+  const isKo = lang === 'ko';
+  const S = 1080;
+  const sans = 'system-ui, -apple-system, "Segoe UI", Arial, sans-serif';
+
+  const canvas = document.createElement('canvas');
+  canvas.width = S;
+  canvas.height = S;
+  const ctx = canvas.getContext('2d')!;
+
+  // Background
+  const bg = ctx.createLinearGradient(0, 0, S, S);
+  bg.addColorStop(0, '#0a0004');
+  bg.addColorStop(0.5, '#140018');
+  bg.addColorStop(1, '#0a0a0f');
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, S, S);
+
+  // Grid
+  ctx.strokeStyle = 'rgba(255,255,255,0.03)';
+  ctx.lineWidth = 1;
+  for (let i = 0; i <= S; i += 60) {
+    ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, S); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0, i); ctx.lineTo(S, i); ctx.stroke();
+  }
+
+  // Glow blobs
+  const wcGlows: [number, number, number, string][] = [
+    [S / 2, S / 2, 500, 'rgba(255,0,255,0.18)'],
+    [100, 200, 350, 'rgba(157,0,255,0.22)'],
+    [980, 880, 400, 'rgba(255,215,0,0.15)'],
+  ];
+  for (const [cx, cy, r, color] of wcGlows) {
+    const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
+    g.addColorStop(0, color);
+    g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, S, S);
+  }
+
+  // Champion photo
+  const idol = await loadIdolImg(imageUrl);
+  const photoW = 580, photoH = 640;
+  const photoX = (S - photoW) / 2, photoY = 100;
+  const photoR = 32;
+
+  ctx.save();
+  rrect(ctx, photoX, photoY, photoW, photoH, photoR);
+  ctx.clip();
+  if (idol) {
+    ctx.drawImage(idol, photoX, photoY, photoW, photoH);
+  } else {
+    ctx.fillStyle = '#1a001a';
+    ctx.fillRect(photoX, photoY, photoW, photoH);
+  }
+  ctx.restore();
+
+  // Gradient overlay on photo bottom
+  const photoGrad = ctx.createLinearGradient(0, photoY + photoH * 0.4, 0, photoY + photoH);
+  photoGrad.addColorStop(0, 'rgba(0,0,0,0)');
+  photoGrad.addColorStop(1, 'rgba(0,0,0,0.85)');
+  ctx.save();
+  rrect(ctx, photoX, photoY, photoW, photoH, photoR);
+  ctx.clip();
+  ctx.fillStyle = photoGrad;
+  ctx.fillRect(photoX, photoY, photoW, photoH);
+  ctx.restore();
+
+  // Photo border
+  rrect(ctx, photoX, photoY, photoW, photoH, photoR);
+  const borderGrad = ctx.createLinearGradient(photoX, photoY, photoX + photoW, photoY + photoH);
+  borderGrad.addColorStop(0, 'rgba(255,215,0,0.8)');
+  borderGrad.addColorStop(0.5, 'rgba(255,0,255,0.6)');
+  borderGrad.addColorStop(1, 'rgba(255,215,0,0.8)');
+  ctx.strokeStyle = borderGrad;
+  ctx.lineWidth = 5;
+  ctx.stroke();
+
+  // Top badge
+  const badgeText = isKo ? 'KPOP STUDIO · 이상형 월드컵 결과' : 'KPOP STUDIO · IDEAL TYPE WORLDCUP';
+  ctx.font = `bold 20px ${sans}`;
+  const bw2 = ctx.measureText(badgeText).width + 64, bh2 = 42;
+  const bx2 = (S - bw2) / 2, by2 = 36;
+  rrect(ctx, bx2, by2, bw2, bh2, 21);
+  const badgeFill2 = ctx.createLinearGradient(bx2, 0, bx2 + bw2, 0);
+  badgeFill2.addColorStop(0, 'rgba(255,0,255,0.2)');
+  badgeFill2.addColorStop(1, 'rgba(255,215,0,0.2)');
+  ctx.fillStyle = badgeFill2; ctx.fill();
+  ctx.strokeStyle = 'rgba(255,0,255,0.5)'; ctx.lineWidth = 1; ctx.stroke();
+  ctx.fillStyle = '#ff00ff';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(badgeText, S / 2, by2 + bh2 / 2);
+
+  // Text section
+  const textY = photoY + photoH + 40;
+
+  // Champion label pill
+  const champLabel = isKo ? '최종 우승' : 'CHAMPION';
+  ctx.font = `bold 16px ${sans}`;
+  const clw = ctx.measureText(champLabel).width + 40;
+  const clx = (S - clw) / 2;
+  rrect(ctx, clx, textY, clw, 32, 16);
+  const clFill = ctx.createLinearGradient(clx, 0, clx + clw, 0);
+  clFill.addColorStop(0, 'rgba(255,215,0,0.2)');
+  clFill.addColorStop(1, 'rgba(255,0,255,0.2)');
+  ctx.fillStyle = clFill; ctx.fill();
+  ctx.strokeStyle = 'rgba(255,215,0,0.6)'; ctx.lineWidth = 1; ctx.stroke();
+  ctx.fillStyle = '#ffd700';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(champLabel, S / 2, textY + 16);
+
+  // Member name
+  ctx.textBaseline = 'alphabetic';
+  let nameSz2 = 88;
+  ctx.font = `bold ${nameSz2}px ${sans}`;
+  while (ctx.measureText(memberName).width > S - 100 && nameSz2 > 36) {
+    nameSz2 -= 4;
+    ctx.font = `bold ${nameSz2}px ${sans}`;
+  }
+  const nameGrad2 = ctx.createLinearGradient(S / 2 - 200, 0, S / 2 + 200, 0);
+  nameGrad2.addColorStop(0, '#ffd700');
+  nameGrad2.addColorStop(0.5, '#ffffff');
+  nameGrad2.addColorStop(1, '#ffd700');
+  ctx.fillStyle = nameGrad2;
+  ctx.fillText(memberName, S / 2, textY + 90);
+
+  // Group name
+  ctx.font = `bold 32px ${sans}`;
+  ctx.fillStyle = '#ff00ff';
+  ctx.fillText(groupName, S / 2, textY + 138);
+
+  // Divider
+  hline(ctx, textY + 170, 100, S - 100);
+
+  // URL
+  ctx.font = `bold 24px ${sans}`;
+  ctx.fillStyle = 'rgba(148,163,184,0.55)';
+  ctx.fillText('kpopstudio.ai/worldcup', S / 2, textY + 216);
+
+  // Neon dots
+  const wcDotY = textY + 254;
+  [['#ffd700', -20], ['#ff00ff', 0], ['#9d00ff', 20]].forEach(([c, dx]) => {
+    ctx.beginPath();
+    ctx.arc(S / 2 + (dx as number), wcDotY, 5, 0, Math.PI * 2);
+    ctx.fillStyle = c as string;
+    ctx.fill();
+  });
+
+  // Corner brackets
+  const wm = 24, wbl = 40;
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = 'rgba(255,215,0,0.5)';
+  ctx.beginPath(); ctx.moveTo(wm, wm + wbl); ctx.lineTo(wm, wm); ctx.lineTo(wm + wbl, wm); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(S - wm - wbl, wm); ctx.lineTo(S - wm, wm); ctx.lineTo(S - wm, wm + wbl); ctx.stroke();
+  ctx.strokeStyle = 'rgba(255,0,255,0.5)';
+  ctx.beginPath(); ctx.moveTo(wm, S - wm - wbl); ctx.lineTo(wm, S - wm); ctx.lineTo(wm + wbl, S - wm); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(S - wm - wbl, S - wm); ctx.lineTo(S - wm, S - wm); ctx.lineTo(S - wm, S - wm - wbl); ctx.stroke();
+
+  return new Promise((resolve, reject) =>
+    canvas.toBlob(b => b ? resolve(b) : reject(new Error('toBlob failed')), 'image/png')
+  );
+}

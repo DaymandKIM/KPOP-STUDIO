@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Star, Database, Crosshair, Globe, ChevronDown, Menu, X, HelpCircle } from 'lucide-react';
+import { Star, Database, Crosshair, Globe, ChevronDown, Menu, X, HelpCircle, Swords } from 'lucide-react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 
 import Home from './pages/Home';
@@ -10,6 +10,7 @@ import TermsOfService from './pages/TermsOfService';
 const Lookalike = lazy(() => import('./pages/Lookalike'));
 const IdolEncyclopedia = lazy(() => import('./components/IdolEncyclopedia'));
 const Quiz = lazy(() => import('./pages/Quiz'));
+const Worldcup = lazy(() => import('./pages/Worldcup'));
 
 import './App.css';
 
@@ -88,6 +89,7 @@ function AppLayout() {
   const isIdentification = location.pathname === '/lookalike';
   const isEncyclopedia = location.pathname.startsWith('/encyclopedia');
   const isQuiz = location.pathname === '/quiz';
+  const isWorldcup = location.pathname === '/worldcup';
 
   return (
     <div className="min-h-screen text-slate-50 font-sans flex flex-col relative overflow-hidden">
@@ -138,6 +140,13 @@ function AppLayout() {
               <HelpCircle className="w-4 h-4" />
               {t('nav_quiz')}
             </Link>
+            <Link
+              to="/worldcup"
+              className={`px-3 lg:px-5 py-2.5 rounded-xl text-[10px] lg:text-xs font-black uppercase transition-all flex items-center gap-2 whitespace-nowrap ${isWorldcup ? 'bg-gradient-to-r from-neon-pink to-neon-purple text-white neon-shadow-pink' : 'text-slate-400 hover:text-white hover:bg-white/5'}`}
+            >
+              <Swords className="w-4 h-4" />
+              {t('nav_worldcup')}
+            </Link>
           </nav>
 
           <LanguageSelector />
@@ -179,6 +188,14 @@ function AppLayout() {
               <HelpCircle className="w-6 h-6" />
               {t('nav_quiz')}
             </Link>
+            <Link
+              to="/worldcup"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`w-full py-5 rounded-2xl text-lg font-black uppercase transition-all flex items-center justify-center gap-3 border ${isWorldcup ? 'bg-gradient-to-r from-neon-pink to-neon-purple text-white border-transparent neon-shadow-pink' : 'bg-white/5 text-slate-400 border-white/10'}`}
+            >
+              <Swords className="w-6 h-6" />
+              {t('nav_worldcup')}
+            </Link>
           </nav>
         </div>
       )}
@@ -192,6 +209,7 @@ function AppLayout() {
             <Route path="/about" element={<About />} />
             <Route path="/encyclopedia/*" element={<IdolEncyclopedia />} />
             <Route path="/quiz" element={<Quiz />} />
+            <Route path="/worldcup" element={<Worldcup />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsOfService />} />
           </Routes>

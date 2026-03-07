@@ -492,7 +492,7 @@ export default function Lookalike() {
                   </div>
                 </div>
                 <div className="absolute bottom-8 md:bottom-12 left-0 w-full text-center z-10 pointer-events-none px-6">
-                  <h3 className="font-black text-3xl md:text-5xl text-white mb-2 md:mb-3 uppercase italic tracking-tighter leading-none">{t('upload_btn')}</h3>
+                  <h3 className="font-black text-xl md:text-3xl text-white mb-2 md:mb-3 uppercase italic tracking-tighter leading-snug">{t('upload_btn')}</h3>
                   <p className="text-[10px] md:text-xs font-mono text-slate-500 uppercase tracking-[0.2em] font-bold">{t('tap_to_upload')}</p>
                 </div>
                 <div className="hud-corner hud-corner-tl !border-neon-blue !w-8 !h-8 md:!w-12 md:!h-12"></div>

@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Crosshair, Database, HelpCircle } from 'lucide-react';
+import { Crosshair, Database, HelpCircle, Swords } from 'lucide-react';
 
-type Feature = 'quiz' | 'lookalike' | 'encyclopedia';
+type Feature = 'quiz' | 'lookalike' | 'encyclopedia' | 'worldcup';
 
 interface FeatureNavProps {
   exclude?: Feature[];
@@ -44,6 +44,15 @@ const FEATURES: {
     gradient: 'from-neon-pink/15 to-neon-orange/15',
     border: 'border-neon-pink/30 hover:border-neon-pink/70',
     glow: 'group-hover:text-neon-pink',
+  },
+  {
+    key: 'worldcup',
+    to: '/worldcup',
+    icon: <Swords className="w-6 h-6" />,
+    labelKey: 'feature_try_worldcup',
+    gradient: 'from-neon-purple/15 to-neon-pink/15',
+    border: 'border-neon-purple/30 hover:border-neon-purple/70',
+    glow: 'group-hover:text-neon-purple',
   },
 ];
 
