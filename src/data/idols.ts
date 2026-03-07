@@ -10958,5 +10958,110 @@ export const KPOP_GROUPS: KpopGroup[] = [
       { id: "sohee", name: { ko: "소희", en: "SOHEE", ja: "SOHEE" }, birth: "2003.11.21", height: "174cm", bloodType: "A", mbti: "ISTP", imageUrl: "https://tse1.mm.bing.net/th?q=RIIZE+Sohee+Profile", socials: {}, tmi: { ko: ["맑고 파워풀한 고음을 소화하는 팀의 핵심 메인 보컬입니다."], en: ["The team's key main vocal who delivers clear and powerful high notes."] } },
       { id: "anton", name: { ko: "앤톤", en: "ANTON", ja: "ANTON" }, birth: "2004.03.21", height: "184cm", bloodType: "O", mbti: "INTP", imageUrl: "https://tse1.mm.bing.net/th?q=RIIZE+Anton+Profile", socials: {}, tmi: { ko: ["음악가 윤상의 아들로, 뛰어난 첼로 연주와 작곡 능력을 갖춘 막내입니다."], en: ["Son of musician Yoon Sang, the maknae is skilled in cello and music production."] } }
     ]
+  },
+  {
+    id: "txt",
+    name: { ko: "투모로우바이투게더", en: "TXT", ja: "トゥモローバイトゥギャザー (TXT)", zh: "TXT", es: "TXT", id: "TXT", fr: "TXT", hi: "TXT", pt: "TXT", ar: "تي إكس تي (TXT)", th: "ทีเอ็กซ์ที (TXT)", vi: "TXT", ru: "TXT" },
+    officialSite: "https://ibighit.com/txt/kor/",
+    imageUrl: "https://tse1.mm.bing.net/th?q=TXT+Group+Concept+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/txt_bighit/", twitter: "https://twitter.com/TXT_bighit", youtube: "https://www.youtube.com/@TXT_bighit", tiktok: "https://www.tiktok.com/@txt.bighitent" },
+    fandom: { ko: "모아 (MOA)", en: "MOA", ja: "モア (MOA)", zh: "MOA", es: "MOA", id: "MOA", fr: "MOA", hi: "MOA", pt: "MOA", ar: "موا (MOA)", th: "โมอา (MOA)", vi: "MOA", ru: "MOA" },
+    debut: "2019.03.04",
+    wiki: { ko: "투모로우바이투게더(TXT)는 빅히트 뮤직 소속의 5인조 보이그룹입니다. '서로 다른 너와 내가 하나의 꿈으로 모여 내일을 함께 만들어간다'는 의미를 담고 있으며 4세대를 대표하는 글로벌 그룹입니다.", en: "TOMORROW X TOGETHER (TXT) is a 5-member boy group under Big Hit Music, representing the 4th generation of K-pop globally." },
+    summary: { ko: "Z세대를 대변하는 4세대 K-팝의 선두주자. 독창적인 판타지 세계관과 뛰어난 스토리텔링으로 글로벌 팬덤의 열광적인 지지를 받고 있습니다.", en: "Leaders of 4th-gen K-pop representing Gen Z. They receive enthusiastic global support for their unique fantasy lore and storytelling." },
+    news: [
+      { title: { ko: "TXT, 미니 6집으로 빌보드 200 3위 진입", en: "TXT Enters Billboard 200 at No.3 with 6th Mini Album" }, date: "2024.04.14", summary: { ko: "미니 6집 'minisode 3: TOMORROW'가 미국 빌보드 메인 앨범 차트에 최상위권으로 진입하며 흔들림 없는 글로벌 위상을 입증했습니다.", en: "Their 6th mini album entered the top of the Billboard main album chart, proving their solid global status." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "그룹명은 너무 길어서 국내외 팬들 모두 '투바투' 또는 'TXT'로 줄여 부릅니다.",
+        "방탄소년단의 직속 후배 그룹으로 데뷔 당시부터 엄청난 스포트라이트를 받았습니다.",
+        "멤버 5명 모두가 센터급 비주얼과 실력을 갖췄다는 평가를 받습니다."
+      ],
+      en: [
+        "The group name is often shortened to 'TXT' globally due to its length.",
+        "They debuted under massive spotlight as the direct junior group to BTS.",
+        "All 5 members are praised for having 'center-level' visuals and skills."
+      ]
+    },
+    members: [
+      { id: "yeonjun", name: { ko: "연준", en: "YEONJUN", ja: "ヨンジュン" }, birth: "1999.09.13", height: "181cm", bloodType: "A", mbti: "ENFP", imageUrl: "https://tse1.mm.bing.net/th?q=TXT+Yeonjun+Profile", socials: {}, tmi: { ko: ["빅히트 전설의 연습생으로 불리며 랩, 댄스, 보컬 모두 뛰어납니다."], en: ["Known as Big Hit's legendary trainee, excelling in rap, dance, and vocals."] } },
+      { id: "soobin", name: { ko: "수빈", en: "SOOBIN", ja: "スビン" }, birth: "2000.12.05", height: "185cm", bloodType: "A", mbti: "ISFP", imageUrl: "https://tse1.mm.bing.net/th?q=TXT+Soobin+Profile", socials: {}, tmi: { ko: ["팀의 리더이자 최장신으로, 청량하고 부드러운 매력을 가졌습니다."], en: ["The leader and tallest member, known for his refreshing and gentle charm."] } },
+      { id: "beomgyu", name: { ko: "범규", en: "BEOMGYU", ja: "ボムギュ" }, birth: "2001.03.13", height: "180cm", bloodType: "AB", mbti: "ENFJ", imageUrl: "https://tse1.mm.bing.net/th?q=TXT+Beomgyu+Profile", socials: {}, tmi: { ko: ["팀의 무드 메이커이며, 기타 연주와 작곡 실력을 보유하고 있습니다."], en: ["The mood maker of the team, skilled in playing guitar and composing."] } },
+      { id: "taehyun", name: { ko: "태현", en: "TAEHYUN", ja: "テヒョン" }, birth: "2002.02.05", height: "177cm", bloodType: "A", mbti: "ESTP", imageUrl: "https://tse1.mm.bing.net/th?q=TXT+Taehyun+Profile", socials: {}, tmi: { ko: ["시원한 고음을 자랑하는 핵심 보컬이자 팀의 브레인입니다."], en: ["A core vocal boasting refreshing high notes and the brain of the team."] } },
+      { id: "hueningkai", name: { ko: "휴닝카이", en: "HUENINGKAI", ja: "ヒュニンカイ" }, birth: "2002.08.14", height: "183cm", bloodType: "A", mbti: "ISTP", imageUrl: "https://tse1.mm.bing.net/th?q=TXT+Hueningkai+Profile", socials: {}, tmi: { ko: ["미국 국적의 막내로 여러 악기를 다루는 다재다능한 음악 천재입니다."], en: ["The American maknae and a versatile musical genius who plays multiple instruments."] } }
+    ]
+  },
+  {
+    id: "jennie",
+    name: { ko: "제니", en: "JENNIE", ja: "ジェニー (JENNIE)", zh: "JENNIE", es: "JENNIE", id: "JENNIE", fr: "JENNIE", hi: "जेनी (JENNIE)", pt: "JENNIE", ar: "جيني (JENNIE)", th: "เจนนี่ (JENNIE)", vi: "JENNIE", ru: "Дженни (JENNIE)" },
+    officialSite: "https://www.oddatelier.net/",
+    imageUrl: "https://tse1.mm.bing.net/th?q=JENNIE+Mantra+Concept+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/jennierubyjane/", twitter: "https://twitter.com/oddatelier", youtube: "https://www.youtube.com/@jennierubyjane", tiktok: "https://www.tiktok.com/@jennierubyjane" },
+    fandom: { ko: "루비즈 (Rubies)", en: "Rubies", ja: "ルビーズ (Rubies)", zh: "Rubies", es: "Rubies", id: "Rubies", fr: "Rubies", hi: "Rubies", pt: "Rubies", ar: "روبيز (Rubies)", th: "รูบี้ส์ (Rubies)", vi: "Rubies", ru: "Rubies" },
+    debut: "2016.08.08",
+    wiki: { ko: "제니(JENNIE)는 블랙핑크(BLACKPINK)의 멤버이자 글로벌 패션·음악 아이콘입니다. 'SOLO'부터 최근 'Mantra'까지 내는 곡마다 글로벌 히트를 기록 중입니다.", en: "JENNIE is a member of BLACKPINK and a global fashion/music icon, known for solo hits ranging from 'SOLO' to 'Mantra'." },
+    summary: { ko: "K-팝을 넘어선 전 세계적인 'It Girl'. 샤넬의 글로벌 앰버서더이자 본인만의 독보적인 트렌드를 만들어내는 솔로 아티스트입니다.", en: "A global 'It Girl' beyond K-pop. A global ambassador for Chanel and a solo artist who sets her own unrivaled trends." },
+    news: [
+      { title: { ko: "제니, 신곡 'Mantra'로 美 빌보드 Hot 100 진입 성공", en: "JENNIE Enters Billboard Hot 100 with New Song 'Mantra'" }, date: "2024.10.22", summary: { ko: "새 싱글 'Mantra'가 발매 첫 주 만에 빌보드 메인 차트에 진입하며 솔로 아티스트로서의 막강한 글로벌 저력을 뽐냈습니다.", en: "Her new single 'Mantra' entered the Billboard main chart in its first week, showing her immense global power as a soloist." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "'인간 샤넬'이라는 수식어가 있을 정도로 패션계에 미치는 영향력이 어마어마합니다.",
+        "자신만의 레이블 '오드 아틀리에(OA)'를 설립하여 독자적인 활동을 펼치고 있습니다.",
+        "차갑고 도도해 보이는 외모와 달리 일상에서는 매우 귀엽고 애교 많은 성격입니다."
+      ],
+      en: [
+        "Her influence in the fashion industry is so massive that she is nicknamed 'Human Chanel'.",
+        "She established her own label 'ODD ATELIER (OA)' to pursue her independent activities.",
+        "Despite her chic appearance, she is known to have a very cute and affectionate personality off-stage."
+      ]
+    },
+    members: [
+      {
+        id: "jennie_member",
+        name: { ko: "제니", en: "JENNIE", ja: "ジェニー", zh: "JENNIE" },
+        birth: "1996.01.16",
+        height: "163cm",
+        bloodType: "B",
+        mbti: "INFP",
+        imageUrl: "https://tse1.mm.bing.net/th?q=JENNIE+Official+Profile+Photo+High+Res",
+        tmi: { ko: ["필라테스를 꾸준히 하며 자기 관리가 철저한 것으로 유명합니다."], en: ["Famous for her strict self-management, consistently doing pilates."] },
+        socials: {}
+      }
+    ]
+  },
+  {
+    id: "illit",
+    name: { ko: "아일릿", en: "ILLIT", ja: "アイリット (ILLIT)", zh: "ILLIT", es: "ILLIT", id: "ILLIT", fr: "ILLIT", hi: "ILLIT", pt: "ILLIT", ar: "آيليت (ILLIT)", th: "ไอลิท (ILLIT)", vi: "ILLIT", ru: "ILLIT" },
+    officialSite: "https://beliftlab.com/artist/profile/ILLIT",
+    imageUrl: "https://tse1.mm.bing.net/th?q=ILLIT+Magnetic+Group+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/illit_official/", twitter: "https://twitter.com/ILLIT_official", youtube: "https://www.youtube.com/@ILLIT_official", tiktok: "https://www.tiktok.com/@illit_official" },
+    fandom: { ko: "글릿 (GLLIT)", en: "GLLIT", ja: "グリット (GLLIT)", zh: "GLLIT", es: "GLLIT", id: "GLLIT", fr: "GLLIT", hi: "GLLIT", pt: "GLLIT", ar: "غليت (GLLIT)", th: "กลิท (GLLIT)", vi: "GLLIT", ru: "GLLIT" },
+    debut: "2024.03.25",
+    wiki: { ko: "아일릿(ILLIT)은 빌리프랩 소속의 5인조 다국적 걸그룹입니다. 데뷔곡 'Magnetic'으로 K-팝 데뷔곡 역사상 가장 빠른 속도로 빌보드 Hot 100에 진입하는 신기록을 세웠습니다.", en: "ILLIT is a 5-member multinational girl group under Belift Lab. Their debut song 'Magnetic' set a record as the fastest K-pop debut track to enter the Billboard Hot 100." },
+    summary: { ko: "전 세계를 강타한 'Magnetic' 신드롬의 주인공. 엉뚱 발랄한 10대의 리얼함을 무기로 5세대를 이끌어갈 슈퍼 루키입니다.", en: "The protagonists of the global 'Magnetic' syndrome. Super rookies leading the 5th generation with their quirky and realistic teenage charm." },
+    news: [
+      { title: { ko: "아일릿 'Magnetic', K-팝 데뷔곡 최초 美 빌보드 Hot 100 진입", en: "ILLIT's 'Magnetic' Becomes First K-pop Debut Song to Enter Billboard Hot 100" }, date: "2024.04.16", summary: { ko: "데뷔곡 'Magnetic'이 발매 한 달도 안 되어 미국 빌보드 메인 차트에 오르는 기적적인 성과를 달성했습니다.", en: "Their debut song 'Magnetic' achieved a miraculous feat by entering the US Billboard main chart in less than a month." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "서바이벌 프로그램 'R U Next?'를 통해 결성된 그룹입니다.",
+        "그룹명 'ILLIT'은 진취적인 의지(I will)와 특별한 무언가(It)를 결합한 뜻입니다.",
+        "중독성 있는 후렴구와 손가락을 이용한 '마그네틱 댄스'가 전 세계 숏폼 플랫폼을 점령했습니다."
+      ],
+      en: [
+        "The group was formed through the survival show 'R U Next?'.",
+        "The name 'ILLIT' combines 'I will' and 'It', meaning they have the potential to become anything.",
+        "Their addictive chorus and 'Magnetic dance' dominated global short-form platforms."
+      ]
+    },
+    members: [
+      { id: "yunah", name: { ko: "윤아", en: "YUNAH", ja: "ユナ" }, birth: "2004.01.15", height: "170cm", bloodType: "A", mbti: "ENFP", imageUrl: "https://tse1.mm.bing.net/th?q=ILLIT+Yunah+Profile", socials: {}, tmi: { ko: ["팀의 맏언니로 서늘한 냉미녀 비주얼과 달리 털털한 반전 매력을 가졌습니다."], en: ["The oldest member, contrasting her cool visuals with an easygoing personality."] } },
+      { id: "minju", name: { ko: "민주", en: "MINJU", ja: "ミンジュ" }, birth: "2004.05.11", height: "166cm", bloodType: "O", mbti: "ISTP", imageUrl: "https://tse1.mm.bing.net/th?q=ILLIT+Minju+Profile", socials: {}, tmi: { ko: ["투명하고 매력적인 음색을 가진 팀의 핵심 보컬입니다."], en: ["The core vocal of the team with a clear and attractive tone."] } },
+      { id: "moka", name: { ko: "모카", en: "MOKA", ja: "モカ" }, birth: "2004.10.08", height: "163cm", bloodType: "B", mbti: "ISFP", imageUrl: "https://tse1.mm.bing.net/th?q=ILLIT+Moka+Profile", socials: {}, tmi: { ko: ["일본 출신으로 무대 위 완벽한 표정 연기로 '직캠 장인'이라 불립니다."], en: ["From Japan, called a 'fancam master' for her perfect facial expressions on stage."] } },
+      { id: "wonhee", name: { ko: "원희", en: "WONHEE", ja: "ウォンヒ" }, birth: "2007.06.26", height: "163cm", bloodType: "A", mbti: "ISFP", imageUrl: "https://tse1.mm.bing.net/th?q=ILLIT+Wonhee+Profile", socials: {}, tmi: { ko: ["사랑스러운 비주얼과 특유의 통통 튀는 매력으로 입덕을 담당합니다."], en: ["In charge of attracting fans with her lovely visuals and bouncy charm."] } },
+      { id: "iroha", name: { ko: "이로하", en: "IROHA", ja: "イロハ" }, birth: "2008.02.04", height: "162cm", bloodType: "A", mbti: "ISFP", imageUrl: "https://tse1.mm.bing.net/th?q=ILLIT+Iroha+Profile", socials: {}, tmi: { ko: ["일본 출신 막내지만 파워풀하고 그루비한 춤 실력을 가진 메인 댄서입니다."], en: ["The Japanese maknae and main dancer with powerful and groovy dance skills."] } }
+    ]
   }
 ];
