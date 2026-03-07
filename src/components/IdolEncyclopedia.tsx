@@ -155,9 +155,12 @@ const IdolEncyclopedia: React.FC<{
     const entries: (KpopGroup | { member: Member; group: KpopGroup; isMember: true })[] = [];
     KPOP_GROUPS.forEach(group => {
       entries.push(group);
-      group.members.forEach(member => {
-        entries.push({ member, group, isMember: true });
-      });
+      // 멤버가 1명인 경우(솔로) 멤버 카드는 따로 노출하지 않음
+      if (group.members.length > 1) {
+        group.members.forEach(member => {
+          entries.push({ member, group, isMember: true });
+        });
+      }
     });
     return entries;
   }, []);
@@ -177,9 +180,12 @@ const IdolEncyclopedia: React.FC<{
   };
 
   if (selectedGroup) {
+    const isSolo = selectedGroup.members.length === 1;
+    const soloMember = isSolo ? selectedGroup.members[0] : null;
+
     const jsonLd = {
       "@context": "https://schema.org",
-      "@type": "MusicGroup",
+      "@type": isSolo ? "Person" : "MusicGroup",
       "name": getLangText(selectedGroup.name, i18n.language),
       "description": getLangText(selectedGroup.description, i18n.language),
       "genre": "K-pop",
@@ -187,7 +193,7 @@ const IdolEncyclopedia: React.FC<{
         "@type": "Place",
         "name": "South Korea"
       },
-      "member": selectedGroup.members.map(m => ({
+      "member": isSolo ? undefined : selectedGroup.members.map(m => ({
         "@type": "OrganizationRole",
         "member": {
           "@type": "Person",
@@ -247,6 +253,27 @@ const IdolEncyclopedia: React.FC<{
               <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4 leading-none break-words">{getLangText(selectedGroup.name, i18n.language)}</h2>
               <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl">{getLangText(selectedGroup.description, i18n.language)}</p>
               
+              {isSolo && soloMember && (
+                <div className="mt-6 flex flex-wrap gap-3 justify-center lg:justify-start">
+                  <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10 text-xs font-mono text-slate-300 uppercase">
+                    <Calendar className="w-4 h-4 text-neon-purple" />
+                    {soloMember.birth}
+                  </div>
+                  <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10 text-xs font-mono text-slate-300 uppercase">
+                    <Fingerprint className="w-4 h-4 text-neon-green" />
+                    MBTI: {soloMember.mbti}
+                  </div>
+                  <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10 text-xs font-mono text-slate-300 uppercase">
+                    <Moon className="w-4 h-4 text-neon-yellow" />
+                    {getLangText(soloMember.zodiac, i18n.language)}
+                  </div>
+                  <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10 text-xs font-mono text-slate-300 uppercase">
+                    <Droplets className="w-4 h-4 text-neon-pink" />
+                    {soloMember.bloodType}
+                  </div>
+                </div>
+              )}
+
               <SocialLinks socials={selectedGroup.socials} accentColor={selectedGroup.accentColor} />
 
               <div className="mt-4 flex items-center gap-3 flex-wrap">
@@ -281,7 +308,7 @@ const IdolEncyclopedia: React.FC<{
         </div>
 
         {/* Members Section */}
-        {selectedGroup.members && selectedGroup.members.length > 0 && (
+        {!isSolo && selectedGroup.members && selectedGroup.members.length > 0 && (
           <section className="px-2">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-10 h-10 rounded-xl bg-neon-pink/10 flex items-center justify-center border border-neon-pink/30">
@@ -464,9 +491,6 @@ const IdolEncyclopedia: React.FC<{
                   <div className="absolute bottom-4 left-4">
                     <span className="px-2 py-1 bg-black/60 backdrop-blur-md rounded-lg text-[8px] font-mono text-white uppercase border border-white/10">{group.company}</span>
                   </div>
-                  <div className="absolute top-4 right-4">
-                    <span className="px-2 py-1 bg-neon-purple/20 backdrop-blur-md rounded-lg text-[8px] font-mono text-neon-purple uppercase border border-neon-purple/30 font-black tracking-tighter">GROUP</span>
-                  </div>
                 </div>
 
                 <div className="flex flex-col gap-2 mt-4">
@@ -484,6 +508,9 @@ const IdolEncyclopedia: React.FC<{
           } else {
             // 멤버 카드 렌더링
             const { member, group } = entry;
+            const tmis = getLangArray(member.tmi, i18n.language);
+            const firstTmi = tmis.length > 0 ? tmis[0] : '';
+            const displayDesc = getLangText(member.description, i18n.language) || firstTmi || getLangText(group.description, i18n.language);
             return (
               <div 
                 key={`member-${member.id}-${idx}`}
@@ -504,9 +531,6 @@ const IdolEncyclopedia: React.FC<{
                   <div className="absolute bottom-4 left-4">
                     <span className="px-2 py-1 bg-black/60 backdrop-blur-md rounded-lg text-[8px] font-mono text-white uppercase border border-white/10">{getLangText(group.name, i18n.language)}</span>
                   </div>
-                  <div className="absolute top-4 right-4">
-                    <span className="px-2 py-1 bg-neon-pink/20 backdrop-blur-md rounded-lg text-[8px] font-mono text-neon-pink uppercase border border-neon-pink/30 font-black tracking-tighter">MEMBER</span>
-                  </div>
                 </div>
 
                 <div className="flex flex-col gap-2 mt-4">
@@ -514,7 +538,7 @@ const IdolEncyclopedia: React.FC<{
                     {getLangText(member.name, i18n.language)}
                   </h3>
                   <p className="text-neon-blue font-mono text-[10px] uppercase font-black tracking-widest">{getLangText(member.role, i18n.language)}</p>
-                  <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed mb-4 mt-2">{getLangText(member.description, i18n.language)}</p>
+                  <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed mb-4 mt-2">{displayDesc}</p>
                   
                   <button className="w-full py-3 bg-white/5 rounded-xl border border-white/10 text-xs font-mono font-black uppercase tracking-widest text-slate-300 group-hover:bg-neon-pink group-hover:text-black group-hover:border-transparent transition-all">
                     {t('view_details')}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { TFunction } from 'i18next';
 import { Trophy, RefreshCw, Check, X, ChevronRight, HelpCircle, Zap, Shield } from 'lucide-react';
 import { KPOP_GROUPS } from '../data/idols';
 import { generateQuizShareCard } from '../hooks/useShareCard';
@@ -12,7 +13,7 @@ import { getLangText } from '../utils/lang';
 type Difficulty = 'easy' | 'medium' | 'hard';
 type QuizMode = 'normal' | 'survival';
 type Phase = 'start' | 'quiz' | 'result';
-type QType = 'photo' | 'lyrics' | 'hint' | 'trivia';
+type QType = 'photo' | 'lyrics' | 'hint' | 'trivia' | 'tmi' | 'mbti';
 
 interface Q {
   type: QType;
@@ -66,7 +67,7 @@ function pick<T>(arr: T[], n: number): T[] {
 
 // ─── Question Generator ───────────────────────────────────────────────────────
 
-function generateQuestions(difficulty: Difficulty, t: any, lang: string): Q[] {
+function generateQuestions(difficulty: Difficulty, t: TFunction, lang: string): Q[] {
   const allGroups = KPOP_GROUPS;
   const easyIds = ['bts', 'blackpink', 'twice', 'newjeans', 'ive'];
   const groups = difficulty === 'easy' ? allGroups.filter(g => easyIds.includes(g.id)) : allGroups;
@@ -178,6 +179,48 @@ function generateQuestions(difficulty: Difficulty, t: any, lang: string): Q[] {
     }
   }
 
+  // E. TMI questions — show a TMI fact, guess the member
+  const tmiCandidates = targetMembers.filter(({ m }) => {
+    const tmiArr = (m.tmi as Record<string, string[]> | undefined);
+    const arr = tmiArr?.[lang] ?? tmiArr?.['en'] ?? tmiArr?.['ko'];
+    return arr && arr.length > 0;
+  });
+  for (const { m, g } of pick(tmiCandidates, 4)) {
+    const tmiArr = (m.tmi as Record<string, string[]>);
+    const arr = tmiArr[lang] ?? tmiArr['en'] ?? tmiArr['ko'];
+    const fact = arr[Math.floor(Math.random() * arr.length)];
+    const mName = getLangText(m.name, lang);
+    const gName = getLangText(g.name, lang);
+    const isBoy = BOY_GROUP_IDS.has(g.id);
+    const sameGender = allMembers.filter(x => x.m.id !== m.id && BOY_GROUP_IDS.has(x.g.id) === isBoy);
+    const wrongs = pick(sameGender.map(x => getLangText(x.m.name, lang)), 3);
+    pool.push({
+      type: 'tmi',
+      question: t('quiz_q_tmi'),
+      content: `"${fact}"`,
+      answer: mName,
+      choices: shuffle([mName, ...wrongs]),
+      explanation: `${mName} (${gName})`,
+    });
+  }
+
+  // F. MBTI questions — show MBTI type, guess which member has it
+  const mbtiCandidates = targetMembers.filter(({ m }) => m.mbti && m.mbti.length > 0);
+  for (const { m, g } of pick(mbtiCandidates, 3)) {
+    const mName = getLangText(m.name, lang);
+    const gName = getLangText(g.name, lang);
+    const isBoy = BOY_GROUP_IDS.has(g.id);
+    const diffMbti = allMembers.filter(x => x.m.id !== m.id && x.m.mbti !== m.mbti && BOY_GROUP_IDS.has(x.g.id) === isBoy);
+    const wrongs = pick(diffMbti.map(x => getLangText(x.m.name, lang)), 3);
+    pool.push({
+      type: 'mbti',
+      question: t('quiz_q_mbti', { mbti: m.mbti }),
+      answer: mName,
+      choices: shuffle([mName, ...wrongs]),
+      explanation: `${mName} (${gName}) — MBTI ${m.mbti}`,
+    });
+  }
+
   // Survival: generate a large pool (shuffle, no slice — we'll use up to all)
   return shuffle(pool);
 }
@@ -207,7 +250,7 @@ const GRADE_STYLE: Record<GradeKey, { border: string; bg: string; color: string 
 // ─── Type meta ────────────────────────────────────────────────────────────────
 
 const TYPE_ICON: Record<QType, string> = {
-  photo: '📸', lyrics: '🎵', hint: '💡', trivia: '📊',
+  photo: '📸', lyrics: '🎵', hint: '💡', trivia: '📊', tmi: '🤫', mbti: '🧠',
 };
 
 // ─── Main Component ───────────────────────────────────────────────────────────
@@ -401,7 +444,7 @@ export default function Quiz() {
           </button>
 
           <div className="grid grid-cols-2 gap-3 mb-8">
-            {(['photo', 'lyrics', 'hint', 'trivia'] as const).map(type => (
+            {(['photo', 'lyrics', 'hint', 'trivia', 'tmi', 'mbti'] as const).map(type => (
               <div key={type} className="bg-white/5 rounded-xl p-3 flex items-center gap-3 border border-white/10">
                 <span className="text-xl">{TYPE_ICON[type]}</span>
                 <div>

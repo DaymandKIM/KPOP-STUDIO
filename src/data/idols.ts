@@ -44,13 +44,13 @@ export interface LocalizedArray {
 export interface Member {
   id: string;
   name: LocalizedString;
-  role: LocalizedString;
+  role?: LocalizedString;
   birth: string;
   mbti: string;
-  zodiac: LocalizedString;
+  zodiac?: LocalizedString;
   height: string;
   bloodType: string;
-  description: LocalizedString;
+  description?: LocalizedString;
   imageUrl: string;
   tmi?: LocalizedArray;
   socials?: Socials;
@@ -66,14 +66,15 @@ export interface News {
 export interface KpopGroup {
   id: string;
   name: LocalizedString;
-  company: string;
+  company?: string;
   debut: string;
   fandom: LocalizedString;
   officialSite?: string;
-  accentColor: string;
+  accentColor?: string;
   imageUrl: string;
   wiki: LocalizedString;
-  description: LocalizedString;
+  description?: LocalizedString;
+  summary?: LocalizedString;
   tmi: LocalizedArray;
   news: News[];
   members: Member[];
@@ -81,6 +82,51 @@ export interface KpopGroup {
 }
 
 export const KPOP_GROUPS: KpopGroup[] = [
+  {
+    id: "twice",
+    name: { ko: "트와이스", en: "TWICE", ja: "トゥワイス (TWICE)", zh: "TWICE", es: "TWICE", id: "TWICE", fr: "TWICE", hi: "ट्वाइस (TWICE)", pt: "TWICE", ar: "توايس (TWICE)", th: "ทไวซ์ (TWICE)", vi: "TWICE", ru: "TWICE" },
+    officialSite: "https://twice.jype.com/",
+    company: "JYP Entertainment",
+    accentColor: "#ff5fa2",
+    imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Group+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/twicetagram/", twitter: "https://twitter.com/JYPETWICE", youtube: "https://www.youtube.com/@TWICE", tiktok: "https://www.tiktok.com/@twice_tiktok_official" },
+    fandom: { ko: "원스 (ONCE)", en: "ONCE", ja: "ワンス (ONCE)", zh: "ONCE", es: "ONCE", id: "ONCE", fr: "ONCE", hi: "वन्स (ONCE)", pt: "ONCE", ar: "وانس (ONCE)", th: "วันซ์ (ONCE)", vi: "ONCE", ru: "ONCE" },
+    debut: "2015.10.20",
+    wiki: { ko: "트와이스(TWICE)는 JYP 엔터테인먼트 소속의 9인조 다국적 걸그룹입니다. '눈으로 한 번, 귀로 한 번 감동을 준다'는 의미를 담고 있으며, K-팝을 대표하는 국민 걸그룹입니다.", en: "TWICE is a 9-member multinational girl group under JYP Entertainment. The name means touching people's hearts twice: once through the ears and once through the eyes." },
+    description: { ko: "K-팝을 대표하는 국민 걸그룹. 눈으로 한 번, 귀로 한 번 감동을 주는 9인 9색의 매력을 자랑합니다.", en: "The nation's girl group representing K-pop. They boast 9 unique charms that touch hearts once through the ears and once through the eyes." },
+    summary: { ko: "아시아를 넘어 글로벌 최정상에 오른 걸그룹. 특유의 밝고 긍정적인 에너지와 수많은 메가 히트곡을 보유하고 있습니다.", en: "A top-tier global girl group beyond Asia. Known for their bright, positive energy and countless mega-hit songs." },
+    news: [
+      { title: { ko: "트와이스, 美 최대 규모 스타디움 공연 매진", en: "TWICE Sells Out Largest US Stadium Tour" }, date: "2023.07.06", summary: { ko: "K-팝 걸그룹 최초로 미국 소파이 스타디움과 메트라이프 스타디움 공연을 매진시키며 글로벌 위상을 증명했습니다.", en: "They proved their global status by becoming the first K-pop girl group to sell out SoFi Stadium and MetLife Stadium." }, url: "#" },
+      { title: { ko: "트와이스 미니 13집 'With YOU-th', 빌보드 200 1위 달성", en: "TWICE's 13th Mini Album 'With YOU-th' Tops Billboard 200" }, date: "2024.03.03", summary: { ko: "미니 13집이 미국 빌보드 메인 앨범 차트 1위에 오르며 데뷔 10년 차에도 끝없는 커리어 하이를 기록했습니다.", en: "Their 13th mini album topped the Billboard main album chart, achieving a new career high even in their 10th year." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "서바이벌 프로그램 'SIXTEEN'을 통해 결성되었습니다.",
+        "팀명 TWICE는 박진영 PD가 직접 지은 이름으로, '좋은 음악으로 한 번, 멋진 퍼포먼스로 또 한 번 감동을 선사하겠다'는 뜻입니다.",
+        "데뷔곡 'OOH-AHH하게'부터 'CHEER UP', 'TT' 등 발표하는 곡마다 메가 히트를 기록했습니다.",
+        "한국, 일본, 대만 3개국 출신 멤버로 구성되어 다국적 팬덤의 탄탄한 지지를 받습니다.",
+        "팬덤 이름 'ONCE'는 '한 번 받은 사랑을 두 배(TWICE)로 보답하겠다'는 의미입니다."
+      ],
+      en: [
+        "Formed through the survival show 'SIXTEEN'.",
+        "The name TWICE was created by J.Y. Park, meaning 'to touch hearts once through good music, and twice through great performance'.",
+        "From their debut 'Like OOH-AHH' to 'CHEER UP' and 'TT', almost every release has been a mega-hit.",
+        "Composed of members from Korea, Japan, and Taiwan, garnering strong support from a multinational fandom.",
+        "The fandom name 'ONCE' means 'we will return the love we receive once, twice (TWICE) as much'."
+      ]
+    },
+    members: [
+      { id: "nayeon", name: { ko: "나연", en: "NAYEON", ja: "ナヨン", zh: "林娜璉" }, role: { ko: "리드보컬, 센터", en: "Lead Vocalist, Center" }, birth: "1995.09.22", height: "163cm", bloodType: "A", mbti: "ISFP", zodiac: { ko: "처녀자리", en: "Virgo" }, imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Nayeon+Profile", socials: {}, tmi: { ko: ["트와이스의 영원한 센터이자 리드보컬. 과즙미 넘치는 맏언니입니다."], en: ["TWICE's eternal center and lead vocalist. The oldest member bursting with fruity charm."] } },
+      { id: "jeongyeon", name: { ko: "정연", en: "JEONGYEON", ja: "ジョンヨン", zh: "俞定延" }, role: { ko: "리드보컬", en: "Lead Vocalist" }, birth: "1996.11.01", height: "167cm", bloodType: "O", mbti: "ISFJ", zodiac: { ko: "전갈자리", en: "Scorpio" }, imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Jeongyeon+Profile", socials: {}, tmi: { ko: ["팀의 걸크러시를 담당하며 따뜻하고 배려심 넘치는 성격의 소유자입니다."], en: ["In charge of girl crush in the team, known for her warm and caring personality."] } },
+      { id: "momo", name: { ko: "모모", en: "MOMO", ja: "モモ", zh: "平井桃" }, role: { ko: "메인댄서, 서브보컬", en: "Main Dancer, Sub Vocalist" }, birth: "1996.11.09", height: "162cm", bloodType: "A", mbti: "INFP", zodiac: { ko: "전갈자리", en: "Scorpio" }, imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Momo+Profile", socials: {}, tmi: { ko: ["일본 출신 메인 댄서로 K-팝 전체에서도 손꼽히는 춤 실력을 자랑합니다."], en: ["Main dancer from Japan, boasting some of the best dance skills in all of K-pop."] } },
+      { id: "sana", name: { ko: "사나", en: "SANA", ja: "サナ", zh: "湊崎紗夏" }, role: { ko: "서브보컬", en: "Sub Vocalist" }, birth: "1996.12.29", height: "163cm", bloodType: "B", mbti: "ENFP", zodiac: { ko: "염소자리", en: "Capricorn" }, imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Sana+Profile", socials: {}, tmi: { ko: ["'샤샤샤' 열풍의 주인공. 애교가 많고 특유의 밝은 에너지로 팬들을 사로잡습니다."], en: ["The star of the 'Shy Shy Shy' craze. Captivates fans with her aegyo and bright energy."] } },
+      { id: "jihyo", name: { ko: "지효", en: "JIHYO", ja: "ジヒョ", zh: "朴志效" }, role: { ko: "리더, 메인보컬", en: "Leader, Main Vocalist" }, birth: "1997.02.01", height: "160cm", bloodType: "O", mbti: "ISFP", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Jihyo+Profile", socials: {}, tmi: { ko: ["10년의 긴 연습생 생활을 거친 탄탄한 실력의 리더이자 메인 보컬입니다."], en: ["The leader and main vocal with solid skills built over 10 years of training."] } },
+      { id: "mina", name: { ko: "미나", en: "MINA", ja: "ミナ", zh: "名井南" }, role: { ko: "메인댄서, 서브보컬", en: "Main Dancer, Sub Vocalist" }, birth: "1997.03.24", height: "163cm", bloodType: "A", mbti: "ISTP", zodiac: { ko: "양자리", en: "Aries" }, imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Mina+Profile", socials: {}, tmi: { ko: ["발레를 전공한 일본 출신 멤버로, 특유의 우아하고 청순한 매력을 뽐냅니다."], en: ["Japanese member who majored in ballet, showcasing a unique elegant and pure charm."] } },
+      { id: "dahyun", name: { ko: "다현", en: "DAHYUN", ja: "ダヒョン", zh: "金多賢" }, role: { ko: "리드래퍼, 서브보컬", en: "Lead Rapper, Sub Vocalist" }, birth: "1998.05.28", height: "159cm", bloodType: "O", mbti: "ISFJ", zodiac: { ko: "쌍둥이자리", en: "Gemini" }, imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Dahyun+Profile", socials: {}, tmi: { ko: ["팀의 리드 래퍼로, 예능감이 뛰어나고 피부가 매우 하얘서 '두부'라는 별명이 있습니다."], en: ["Lead rapper of the team, known for her great sense of humor and pale 'tofu' skin."] } },
+      { id: "chaeyoung", name: { ko: "채영", en: "CHAEYOUNG", ja: "チェヨン", zh: "孫彩瑛" }, role: { ko: "메인래퍼, 서브보컬", en: "Main Rapper, Sub Vocalist" }, birth: "1999.04.23", height: "159cm", bloodType: "B", mbti: "INFP", zodiac: { ko: "황소자리", en: "Taurus" }, imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Chaeyoung+Profile", socials: {}, tmi: { ko: ["독특한 예술적 감각을 지닌 메인 래퍼로 직접 곡 작업과 그림 작업에 참여합니다."], en: ["Main rapper with a unique artistic sense, actively participating in songwriting and drawing."] } },
+      { id: "tzuyu", name: { ko: "쯔위", en: "TZUYU", ja: "ツウィ", zh: "周子瑜" }, role: { ko: "리드댄서, 서브보컬, 막내", en: "Lead Dancer, Sub Vocalist, Maknae" }, birth: "1999.06.14", height: "170cm", bloodType: "A", mbti: "ISFP", zodiac: { ko: "쌍둥이자리", en: "Gemini" }, imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Tzuyu+Profile", socials: {}, tmi: { ko: ["대만 출신 막내로, 압도적인 여신 비주얼로 데뷔 초부터 큰 화제를 모았습니다."], en: ["The maknae from Taiwan, drawing huge attention from debut for her overwhelming goddess visuals."] } }
+    ]
+  },
   {
     id: "newjeans",
     name: { ko: "뉴진스", en: "NewJeans", ja: "ニュージーンズ", zh: "NewJeans", es: "NewJeans", id: "NewJeans", fr: "NewJeans", hi: "न्यूजींस (NewJeans)", pt: "NewJeans", ar: "نيوجينز (NewJeans)", th: "นิวจีนส์ (NewJeans)", vi: "NewJeans", ru: "NewJeans" },
@@ -110,14 +156,24 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "데뷔 전 멤버들은 민희진 전 대표의 집에서 함께 영화를 보고 밥을 먹으며 유대감을 쌓았다고 합니다.",
         "멤버 전원이 영어를 유창하게 구사하거나 수준급의 소통 능력을 갖추고 있어 해외 인터뷰 시 통역 없이 진행하는 경우가 많습니다.",
         "뉴진스 숙소는 '버니하우스'라고 불릴 만큼 멤버들이 서로 붙어 다니며 끈끈한 자매애를 과시합니다.",
-        "뉴진스의 'Hype Boy'는 데뷔 전 티저 영상만으로 음원 차트를 역주행해 데뷔 전부터 신드롬이 된 전무후무한 기록입니다."
+        "뉴진스의 'Hype Boy'는 데뷔 전 티저 영상만으로 음원 차트를 역주행해 데뷔 전부터 신드롬이 된 전무후무한 기록입니다.",
+        "K-팝 걸그룹 최초로 미국의 대형 음악 페스티벌 '롤라팔루자' 무대에 서며 글로벌 인기를 입증했습니다.",
+        "멤버들끼리 옷을 자주 공유해서 입으며, 서로의 패션 스타일에 많은 영향을 준다고 합니다.",
+        "민지와 하니는 데뷔 전 BTS의 'Permission to Dance' 뮤직비디오에 깜짝 출연한 적이 있습니다.",
+        "'Ditto' 뮤직비디오는 팬들 사이에서 수많은 해석을 낳으며 K-팝 뮤직비디오의 예술적 지평을 넓혔다는 평을 받습니다.",
+        "데뷔 앨범의 모든 곡이 타이틀곡 수준의 완성도를 가져 전 곡이 음원 차트 최상위권에 오르는 기염을 토했습니다."
       ],
       en: [
         "The name NewJeans means becoming icons of the era like 'Jeans' that never go out of style.",
         "Before debut, members bonded at former CEO Min Hee-jin's home, watching movies and eating together.",
         "All members have excellent English communication skills, often conducting global interviews without interpreters.",
         "Members are so close they're often described as actual sisters, not just groupmates.",
-        "'Hype Boy' charted on Korean music charts from pre-release teasers alone — a historic first."
+        "'Hype Boy' charted on Korean music charts from pre-release teasers alone — a historic first.",
+        "They were the first K-pop girl group to perform at Lollapalooza, a major US music festival.",
+        "The members often share clothes and influence each other's fashion styles.",
+        "Minji and Hanni made a cameo appearance in BTS's 'Permission to Dance' music video before their debut.",
+        "The 'Ditto' music video sparked numerous fan theories and is praised for its artistic depth.",
+        "All tracks in their debut album were of such high quality that they all topped major music charts."
       ],
       ja: [
         "NewJeansという名前は、毎日履いても飽きない「ジーンズ（Jeans）」のように、時代のアイコンになるという意味が込められています。",
@@ -805,14 +861,24 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "아이브(IVE)라는 이름은 'I HAVE'의 줄임말로, 우리가 이미 가진 것들을 당당하게 보여주겠다는 포부를 담고 있습니다.",
         "'Love Dive', 'After LIKE', 'I AM' 등 연속 히트 행진으로 데뷔 1년 만에 주요 연말 시상식을 모조리 석권했습니다.",
         "멤버 중 안유진, 장원영은 아이즈원 출신이라 데뷔 전부터 이미 국내외에 탄탄한 팬층을 확보한 상태였습니다.",
-        "아이브 팬덤 이름 'DIVE'는 'I + V + E'의 알파벳을 조합한 것으로, 팬과 아티스트가 함께 잠수해 깊이 연결된다는 의미입니다."
+        "아이브 팬덤 이름 'DIVE'는 'I + V + E'의 알파벳을 조합한 것으로, 팬과 아티스트가 함께 잠수해 깊이 연결된다는 의미입니다.",
+        "한 해에 여러 곡으로 '퍼펙트 올킬(PAK)'을 달성한 최초의 4세대 걸그룹이라는 기록을 보유하고 있습니다.",
+        "데뷔곡 'ELEVEN'은 음악 방송 13관왕을 차지하며 역대 걸그룹 데뷔곡 최다 1위 기록을 세웠습니다.",
+        "큰 시상식이 끝난 후에는 항상 멤버들끼리 맛있는 야식을 먹으며 자축하는 전통이 있다고 합니다.",
+        "레이는 스타쉽 엔터테인먼트가 선보인 최초의 일본인 아티스트로, 독보적인 음색과 랩 실력을 갖추고 있습니다.",
+        "'I AM'의 고음 파트는 연습 과정에서 매우 힘들었지만, 리더 안유진이 수백 번의 연습 끝에 완벽히 소화해냈습니다."
       ],
       en: [
         "IVE members have an average height of ~169cm, making them one of K-pop's tallest girl groups.",
         "The name IVE stands for 'I HAVE', embodying the confidence to show off what they already possess.",
         "They swept major year-end awards within just one year of debut with consecutive hits.",
         "Members Yujin and Wonyoung already had global fan bases from their IZ*ONE days before IVE even debuted.",
-        "The fandom name 'DIVE' combines the letters I, V, E — symbolizing fans and artists diving deep together."
+        "The fandom name 'DIVE' combines the letters I, V, E — symbolizing fans and artists diving deep together.",
+        "They hold the record for the first 4th-gen girl group to achieve 'Perfect All-Kill' with multiple songs in a single year.",
+        "Their debut song 'ELEVEN' won 13 music show trophies, the highest record for a girl group's debut track.",
+        "The members have a tradition of celebrating together with a delicious late-night snack after major award ceremonies.",
+        "Rei is the first Japanese artist to debut under Starship Entertainment, possessing a unique voice and rap skills.",
+        "The challenging high-note part in 'I AM' was perfected by leader An Yujin after hundreds of practice takes."
       ]
     },
     news: [
@@ -1010,14 +1076,24 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "에스파는 SM 걸그룹 중 미국 코첼라 밸리 뮤직 페스티벌에 처음으로 공식 무대를 가진 그룹입니다.",
         "'Supernova'는 2024년 국내 음원 차트 최장 기간 1위를 기록하며 에스파 최대 히트곡 반열에 오른 곡입니다.",
         "멤버들은 데뷔 때부터 독보적인 메타버스 세계관을 위해 자체 앱과 게임 콘텐츠까지 별도로 제작하는 혁신적인 방식으로 화제가 되었습니다.",
-        "에스파 4인은 국내외 패션·뷰티 브랜드 앰버서더를 모두 따로 맡으면서도 팀 케미가 넘쳐 '네 개의 솔로 같은 걸그룹'이라 불립니다."
+        "에스파 4인은 국내외 패션·뷰티 브랜드 앰버서더를 모두 따로 맡으면서도 팀 케미가 넘쳐 '네 개의 솔로 같은 걸그룹'이라 불립니다.",
+        "'Next Level'의 'ㄷ'자 안무는 전국적인 챌린지 열풍을 일으키며 에스파를 대중적인 스타 반열에 올렸습니다.",
+        "연습생 시절부터 멤버들이 함께 쓰는 공유 태블릿을 통해 연습 영상을 모니터링하며 칼군무를 완성한다고 합니다.",
+        "윈터는 경상도 양산, 카리나는 경기도 성남 출신으로 서로 다른 지역색이 섞여 독특한 팀 분위기를 만듭니다.",
+        "데뷔 첫해에 각종 가요 시상식에서 신인상을 휩쓸며 '괴물 신인'이라는 별명을 얻었습니다.",
+        "팀 이름 '에스파(aespa)'는 'Avatar X Experience'를 표현한 'ae'와 양면이라는 뜻의 'aspect'를 결합해 만든 이름입니다."
       ],
       en: [
         "In aespa's lore, each member has an AI avatar called 'ae-[name]' — when they first saw their avatars, they were so stunning the members felt nervous.",
         "aespa were the first SM girl group to perform officially at the Coachella Valley Music and Arts Festival.",
         "'Supernova' holds the record for longest consecutive #1 on Korean charts in 2024, making it aespa's biggest hit.",
         "From debut, their metaverse concept extended to a dedicated app and game content, making their world-building approach truly innovative.",
-        "Each of the four members holds separate global brand ambassadorships while maintaining insane group chemistry — dubbed 'four soloists as a group'."
+        "Each of the four members holds separate global brand ambassadorships while maintaining insane group chemistry — dubbed 'four soloists as a group'.",
+        "The 'Next Level' 'ㄷ' dance move sparked a nationwide challenge craze, propelling aespa to mainstream stardom.",
+        "Since trainee days, they've used a shared tablet to monitor rehearsal footage and perfect their sharp choreography.",
+        "Winter is from Yangsan and Karina is from Seongnam — their different regional backgrounds contribute to the team's unique vibe.",
+        "They swept rookie awards at various ceremonies in their debut year, earning the nickname 'Monster Rookies'.",
+        "The name 'aespa' combines 'ae' (Avatar X Experience) and 'aspect' (meaning two sides), representing meeting your other self."
       ]
     },
     news: [
@@ -1189,14 +1265,24 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "BTS는 미국 빌보드 핫 100에서 자체 제작 곡으로 1위에 오른 최초의 한국 아티스트로, K-팝의 새로운 역사를 썼습니다.",
         "멤버 전원이 2022~2023년에 차례로 군 입대를 마치고 2025년까지 순차 전역하며 완전체 컴백을 앞두고 있습니다.",
         "BTS ARMY는 세계 최대 K-팝 팬덤으로, 멤버들의 군 복무 기간에도 스트리밍·구매·지지 캠페인을 이어가며 응원을 멈추지 않았습니다.",
-        "뷔와 지민이 절친인 'VMIN', RM과 진의 투샷 'NamJin' 등 멤버들 간의 각종 케미 조합이 팬덤 내에서 독자적인 서브컬처를 형성하고 있습니다."
+        "뷔와 지민이 절친인 'VMIN', RM과 진의 투샷 'NamJin' 등 멤버들 간의 각종 케미 조합이 팬덤 내에서 독자적인 서브컬처를 형성하고 있습니다.",
+        "멤버들은 서로를 동료 이상의 '가족'이라고 부르며, 휴가 기간에도 자주 모여 시간을 보낸다고 합니다.",
+        "뷔(V)는 독특한 패션 감각과 재즈 음악에 대한 깊은 애정으로 유명하며, 직접 곡을 쓰기도 합니다.",
+        "지민은 현대무용 전공자 출신으로 태권도 검은 띠를 보유하고 있는 반전 매력의 소유자입니다.",
+        "정국은 노래, 춤, 운동 등 못하는 게 없어 팬들 사이에서 '황금 막내'라는 별명으로 통합니다.",
+        "RM은 IQ 148의 수재로, 미드 '프렌즈'를 시청하며 독학으로 영어를 완벽하게 마스터했습니다."
       ],
       en: [
         "The name BTS (Bangtan Sonyeondan) means 'Bulletproof Boy Scouts' — vowing to protect young people from society's prejudice and oppression.",
         "BTS became the first Korean artists to top the Billboard Hot 100 with a self-produced song, rewriting K-pop history.",
         "All members completed their mandatory military service between 2022–2025, with a full group comeback on the horizon.",
         "ARMY, the world's largest K-pop fandom, never stopped streaming, buying, and campaigning for BTS throughout their service.",
-        "Member pairings like 'VMIN' (V+Jimin) and 'NamJin' (RM+Jin) have spawned entire sub-cultures within the fandom."
+        "Member pairings like 'VMIN' (V+Jimin) and 'NamJin' (RM+Jin) have spawned entire sub-cultures within the fandom.",
+        "Members often describe each other as 'family' rather than coworkers, even spending vacations together.",
+        "V is known for his unique fashion sense and deep love for jazz music, often composing his own tracks.",
+        "Jimin was a contemporary dance major and also holds a black belt in Taekwondo.",
+        "Jungkook is called the 'Golden Maknae' because he excels at everything from singing and dancing to sports.",
+        "RM has an IQ of 148 and famously taught himself English by watching the TV show 'Friends'."
       ],
       ja: [
         "BTS（防弾少年団）という名前には、10代・20代が受ける偏見や抑圧を食い止めるという意志が込められています。",
@@ -2703,14 +2789,24 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "멤버들은 식사 메뉴를 정할 때 결정 장애가 오면 사다리 타기나 룰렛 앱을 사용하는 것으로 유명합니다.",
         "블랙핑크 4인은 각자 다른 글로벌 명품 브랜드 앰버서더를 맡고 있으며, 개인별로도 강력한 팬층을 보유하고 있습니다.",
         "2023년 YG와 그룹 활동 재계약을 체결하며 '블랙핑크의 시대는 아직 끝나지 않았다'는 신호를 전 세계에 보냈습니다.",
-        "유튜브 1억 뷰를 돌파한 뮤직비디오가 여러 편에 달하며, 공식 채널 구독자 수가 K-팝 걸그룹 중 역대 최다입니다."
+        "유튜브 1억 뷰를 돌파한 뮤직비디오가 여러 편에 달하며, 공식 채널 구독자 수가 K-팝 걸그룹 중 역대 최다입니다.",
+        "K-팝 걸그룹 최초로 미국 최대 음악 축제인 '코첼라' 페스티벌의 헤드라이너로 서며 글로벌 위상을 입증했습니다.",
+        "멤버들은 데뷔 전 평균 4~6년의 혹독한 연습생 기간을 거치며 탄탄한 실력을 쌓아왔습니다.",
+        "'How You Like That' 뮤직비디오는 공개 당시 여러 개의 기네스 세계 기록을 갈아치우는 기염을 토했습니다.",
+        "넷플릭스 오리지널 다큐멘터리 '블랙핑크: 세상을 밝혀라'를 통해 데뷔 전부터 지금까지의 여정을 공개했습니다.",
+        "팀 이름 '블랙핑크'는 예쁜 색의 대표인 '핑크'에 '블랙'을 섞어 '예쁜 게 다가 아니다'라는 반전의 의미를 담고 있습니다."
       ],
       en: [
         "The 'Born Pink' world tour broke the all-time revenue record for a solo female artist tour — a historic achievement.",
         "They famously use a roulette app or ladder game to decide what to eat when they can't agree.",
         "All four members individually hold ambassadorships with different global luxury brands, each boasting massive solo fan bases.",
         "Their 2023 group contract renewal with YG sent a clear signal to the world: 'The BLACKPINK era is not over yet.'",
-        "Multiple BLACKPINK music videos have surpassed 1 billion YouTube views, and their official channel holds the all-time subscriber record for a K-pop girl group."
+        "Multiple BLACKPINK music videos have surpassed 1 billion YouTube views, and their official channel holds the all-time subscriber record for a K-pop girl group.",
+        "They were the first K-pop girl group to headline Coachella, a major US music festival, proving their global status.",
+        "The members underwent an average of 4-6 years of intense training before their debut to build their solid skills.",
+        "The 'How You Like That' music video shattered several Guinness World Records upon its release.",
+        "They shared their journey from pre-debut to superstardom in the Netflix documentary 'BLACKPINK: Light Up the Sky'.",
+        "The name 'BLACKPINK' signifies that 'beauty (Pink) isn't everything (Black)', representing their dual charm."
       ],
       ja: [
         "ブラックピンクの「Born Pink」ワールドツアーは、女性アーティストの単一ツアーとして歴代最高の収益を記録した歴史的なツアーです。",
@@ -3653,14 +3749,24 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "카즈하는 데뷔 전 일본에서 프로 발레리나로 활동했으며, 이 배경이 르세라핌 무대에 독보적인 우아함을 더합니다.",
         "사쿠라는 HKT48·IZ*ONE을 거쳐 르세라핌까지 두 국가·세 팀에서 활약한 K·J 팝 역사상 유례없는 커리어를 보유하고 있습니다.",
         "르세라핌은 2024 코첼라 무대에 서며 HYBE 걸그룹으로는 최초로 세계 최대 음악 페스티벌에 공식 출연한 그룹이 됐습니다.",
-        "'EASY'가 해외 팬들 사이에서 '발음하기 쉬운 K-팝 입문 노래'로 퍼지며 틱톡에서 전 세계적인 챌린지 밈이 된 이야기는 전설처럼 회자됩니다."
+        "'EASY'가 해외 팬들 사이에서 '발음하기 쉬운 K-팝 입문 노래'로 퍼지며 틱톡에서 전 세계적인 챌린지 밈이 된 이야기는 전설처럼 회자됩니다.",
+        "허윤진은 뛰어난 작사·작곡 능력을 갖춘 싱어송라이터로, 다수의 솔로 자작곡을 발표해 음악적 역량을 인정받았습니다.",
+        "김채원은 리더로서 팀의 중심을 잡으며, 과거 아이즈원 멤버로 활동하며 쌓은 풍부한 무대 경험을 자랑합니다.",
+        "막내 홍은채는 음악방송 '뮤직뱅크'의 최연소 MC로 활약하며 '은행장'이라는 귀여운 별명을 얻었습니다.",
+        "데뷔 과정을 담은 다큐멘터리 'The World Is My Oyster'를 공개해 멤버들의 치열한 연습과 진솔한 고민을 팬들과 공유했습니다.",
+        "팬덤 이름 '피어나(FEARNOT)'는 두려움 없이(FEAR NOT) 앞으로 나아가는 르세라핌과 함께 팬들이 '피어난다'는 중의적 의미를 담고 있습니다."
       ],
       en: [
         "The name LE SSERAFIM is an anagram of 'I AM FEARLESS' — the fearless spirit is literally encoded into their name.",
         "Kazuha was a professional ballerina in Japan before debuting in K-pop, adding unparalleled elegance to LE SSERAFIM's performances.",
         "Sakura has an unprecedented career spanning HKT48, IZ*ONE, and LE SSERAFIM across two countries — unrivaled in K-pop and J-pop history.",
         "LE SSERAFIM became the first HYBE girl group to officially perform at Coachella, the world's largest music festival, in 2024.",
-        "The story of 'EASY' spreading among international fans as 'an easy-to-pronounce K-pop gateway song' and becoming a global TikTok challenge meme is practically legendary."
+        "The story of 'EASY' spreading among international fans as 'an easy-to-pronounce K-pop gateway song' and becoming a global TikTok challenge meme is practically legendary.",
+        "Huh Yunjin is a talented singer-songwriter who has released several self-composed solo tracks, proving her musical depth.",
+        "Leader Kim Chaewon anchors the team with extensive stage experience gained during her days as a member of IZ*ONE.",
+        "Maknae Hong Eunchae is the youngest MC for 'Music Bank', earning the affectionate nickname 'Bank President' from fans.",
+        "They released the documentary 'The World Is My Oyster', sharing the intense training and honest emotions behind their debut.",
+        "The fandom name 'FEARNOT' (Piona in Korean) symbolizes fans 'blooming' alongside LE SSERAFIM as they move forward fearlessly."
       ],
       ja: [
         "グループ名LE SSERAFIMは「I AM FEARLESS」のアナグラムで、恐れることなく前に進むという意志を名前そのものに込めています。",
@@ -4721,14 +4827,24 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "멤버들은 컴백할 때마다 소연이 또 어떤 새로운 장르에 도전했는지 기대하며 '이번엔 또 뭐지?'라고 기다린다고 합니다.",
         "'TOMBOY', 'Queencard', 'Super Lady' 등 연속 히트를 이어가며 자체 제작 걸그룹의 새로운 기준을 제시하고 있습니다.",
         "민니는 태국 유명 가수 집안 출신이고, 슈화는 대만, 우기는 중국 상하이 출신으로 팀 내 국적이 다양해 자연스러운 다국어 소통이 이루어집니다.",
-        "소연이 직접 작사·작곡·안무·영상 제작까지 도맡아 '소연 1인 제작사'라는 말이 나올 정도로 창작 능력이 전방위적으로 뛰어납니다."
+        "소연이 직접 작사·작곡·안무·영상 제작까지 도맡아 '소연 1인 제작사'라는 말이 나올 정도로 창작 능력이 전방위적으로 뛰어납니다.",
+        "민니는 독보적인 몽환적 음색으로 유명하며, 블랙핑크 리사와 절친한 사이로 잘 알려져 있습니다.",
+        "우기는 여성 아이돌로서 보기 드문 깊고 허스키한 저음을 가지고 있어 팀의 음악적 색깔을 풍성하게 만듭니다.",
+        "슈화는 화장기 없는 민낯으로 활동하는 당당함과 거침없는 입담으로 팬들 사이에서 '걸크러시' 아이콘으로 불립니다.",
+        "2022년과 2023년 각종 시상식에서 '올해의 아티스트' 상을 수상하며 최정상 걸그룹으로서의 입지를 다졌습니다.",
+        "팀 이름 '(여자)아이들'은 개인을 뜻하는 'I'와 복수형 어미인 '들'을 합쳐 개성 있는 멤버들이 모였다는 의미를 담고 있습니다."
       ],
       en: [
         "Soyeon passed through JYP, YG, and Cube — a unique background that directly shaped (G)I-DLE's genre diversity.",
         "Members say they always look forward to comebacks thinking 'what new genre did Soyeon try this time?' with genuine excitement.",
         "'TOMBOY', 'Queencard', 'Super Lady' — their consecutive hits have set a new standard for what a self-producing girl group can be.",
         "With Minnie from Thailand, Shuhua from Taiwan, and Yuqi from Shanghai, the group naturally communicates in multiple languages.",
-        "Soyeon handles lyrics, composition, choreography, and video production almost single-handedly — fans joke she's a 'one-person production company'."
+        "Soyeon handles lyrics, composition, choreography, and video production almost single-handedly — fans joke she's a 'one-person production company'.",
+        "Minnie is famous for her unique, dreamy vocal tone and is known to be very close friends with BLACKPINK's Lisa.",
+        "Yuqi possesses a deep, husky low range that is rare among female idols, adding a rich texture to the group's musical color.",
+        "Shuhua is celebrated as a 'girl crush' icon for her confidence in appearing without makeup and her refreshingly honest personality.",
+        "They solidified their status as a top-tier girl group by winning 'Artist of the Year' at several major awards in 2022 and 2023.",
+        "The name '(G)I-DLE' combines 'I' (standing for individual) and 'DLE' (a plural marker in Korean), meaning a collection of unique individuals."
       ],
       ja: [
         "ソヨンはJYP、YG、CUBEを経た独特な経歴を持つ練習生出身で、その経験が(G)I-DLEのジャンルの多様性に直接的な影響を与えました。",
@@ -4947,35 +5063,25 @@ export const KPOP_GROUPS: KpopGroup[] = [
       },
       {
         title: {
-          ko: "(여자)아이들, 데뷔 5주년 단독 콘서트 전석 매진 성료",
-          en: "(G)I-DLE Completes Sold-Out 5th Anniversary Solo Concert",
-          ja: "(G)I-DLE、デビュー5周年単独コンサート全席完売で成功裏に終了",
-          zh: "(G)I-DLE出道五周年单独演唱会全场售罄并圆满结束",
-          es: "(G)I-DLE completa con éxito su concierto de 5º aniversario con entradas agotadas",
-          id: "(G)I-DLE Menyelesaikan Konser Solo HUT ke-5 yang Terjual Habis",
-          fr: "(G)I-DLE termine son concert solo du 5ème anniversaire à guichets fermés",
-          hi: "(G)I-DLE ने सोल्ड-आउट 5वीं वर्षगांठ सोलो कॉन्सर्ट पूरा किया",
-          pt: "(G)I-DLE completa concerto a solo do 5º aniversário com lotação esgotada",
-          ar: "فرقة (G)I-DLE تكمل حفلها المنفرد للذكرى الخامسة بنجاح",
-          th: "(G)I-DLE จัดคอนเสิร์ตเดี่ยวฉลองครบรอบ 5 ปี บัตรขายหมดเกลี้ยง",
-          vi: "(G)I-DLE hoàn thành buổi hòa nhạc solo kỷ niệm 5 năm cháy vé",
-          ru: "(G)I-DLE успешно провела сольный концерт в честь 5-летия с аншлагом"
+          ko: "(여자)아이들, 정규 2집 '2' 발매 직후 글로벌 차트 점령",
+          en: "(G)I-DLE 2nd Full Album '2' Dominates Global Charts"
         },
-        date: "2023.05.02",
+        date: "2024.01.29",
         summary: {
-          ko: "데뷔 5주년을 기념해 개최한 단독 콘서트가 전석 매진을 기록하며 탄탄한 팬덤 파워를 재확인했습니다.",
-          en: "Their 5th anniversary solo concert sold out completely, reconfirming their powerful fandom.",
-          ja: "デビュー5周年を記念して開催された単独コンサートが全席完売を記録し、強固なファンダムのパワーを再確認しました。",
-          zh: "为纪念出道五周年而举行的单独演唱会全场售罄，再次证实了强大的粉丝凝聚力。",
-          es: "Su concierto de aniversario se agotó por completo, confirmando su poderoso fandom.",
-          id: "Konser ulang tahun mereka terjual habis, mengonfirmasi kekuatan fandom mereka.",
-          fr: "Leur concert d'anniversaire était complet, confirmant la force de leur fandom.",
-          hi: "उनकी 5वीं वर्षगांठ का कॉन्सर्ट पूरी तरह से बिक गया, जिससे उनके शक्तिशाली फैंडम की पुष्टि हुई।",
-          pt: "O concerto de aniversário esgotou completamente, confirmando o seu poderoso fandom.",
-          ar: "بيعت تذاكر حفل الذكرى الخامسة بالكامل، مما أكد قوة قاعدتهم الجماهيرية.",
-          th: "คอนเสิร์ตฉลองครบรอบ 5 ปีขายหมดเกลี้ยง ยืนยันพลังของแฟนคลับที่เหนียวแน่น",
-          vi: "Buổi hòa nhạc kỷ niệm 5 năm đã cháy vé hoàn toàn, xác nhận lại sức mạnh fandom của họ.",
-          ru: "Билеты на их юбилейный концерт были полностью раскуплены, подтверждая силу фандома."
+          ko: "정규 2집 '2'와 타이틀곡 'Super Lady'가 발매와 동시에 전 세계 주요 차트 1위를 기록하며 저력을 입증했습니다.",
+          en: "The 2nd full album '2' and its title track 'Super Lady' topped global charts immediately upon release."
+        },
+        url: "#"
+      },
+      {
+        title: {
+          ko: "(여자)아이들, 세 번째 월드투어 'i-DOL' 성황리에 시작",
+          en: "(G)I-DLE Kicks Off Third World Tour 'i-DOL'"
+        },
+        date: "2024.08.03",
+        summary: {
+          ko: "서울 공연을 시작으로 전 세계 주요 도시를 순회하는 세 번째 월드투어 'i-DOL'의 화려한 막을 올렸습니다.",
+          en: "Successfully launched their third world tour 'i-DOL', starting with a spectacular performance in Seoul."
         },
         url: "#"
       },
@@ -6910,1356 +7016,6 @@ export const KPOP_GROUPS: KpopGroup[] = [
             "Несмотря на юный возраст, его спокойная и зрелая аура принесла ему фанатское прозвище «милый старик».",
             "Известен как интроверт, который любит читать и ценит время, проведенное наедине с собой.",
             "После того как его голос изменился, он удивил фанатов неожиданно глубоким и приятным тембром."
-          ]
-        },
-        socials: {}
-      }
-    ]
-  },
-
-  // ==================== TWICE ====================
-  {
-    id: "twice",
-    name: { ko: "트와이스", en: "TWICE", ja: "トゥワイス", zh: "TWICE", es: "TWICE", id: "TWICE", fr: "TWICE", hi: "ट्वाइस", pt: "TWICE", ar: "توايس", th: "ทไวซ์", vi: "TWICE", ru: "TWICE" },
-    description: {
-      ko: "JYP엔터테인먼트 소속의 9인조 걸그룹. 한국·일본·대만 멤버로 구성된 다국적 그룹으로 Spotify 2,560만 월간 리스너를 보유하며 일본 시장을 석권한 '국민 걸그룹'.",
-      en: "9-member girl group under JYP Entertainment. A multinational group of Korean, Japanese, and Taiwanese members with 25.6M Spotify monthly listeners — dubbed 'Nation's Girl Group' and dominant in Japan.",
-      ja: "JYPエンターテインメント所属の9人組ガールズグループ。韓国・日本・台湾メンバーで構成された多国籍グループで、Spotify月間リスナー2560万人を誇る「国民ガールズグループ」。",
-      zh: "JYP娱乐旗下9人女团。由韩国、日本、台湾成员组成的跨国团体，Spotify月活听众2560万，被誉为'国民女团'，在日本市场表现强劲。",
-      es: "Grupo femenino de 9 miembros bajo JYP Entertainment. Grupo multinacional con oyentes mensuales de 25,6M en Spotify, conocido como el 'Grupo de chicas de la nación', dominante en Japón.",
-      id: "Grup wanita 9 anggota di bawah JYP Entertainment. Grup multinasional dengan 25,6 juta pendengar bulanan Spotify, disebut 'Girl Group Nasional', mendominasi pasar Jepang.",
-      fr: "Groupe féminin de 9 membres sous JYP Entertainment. Groupe multinational avec 25,6 millions d'auditeurs mensuels sur Spotify, surnommé 'Girl Group de la nation', dominant au Japon.",
-      hi: "JYP एंटरटेनमेंट के तहत 9 सदस्यीय गर्ल ग्रुप। Spotify पर 25.6M मासिक श्रोताओं के साथ 'राष्ट्रीय गर्ल ग्रुप' का खिताब।",
-      pt: "Grupo feminino de 9 membros sob a JYP Entertainment. Grupo multinacional com 25,6M ouvintes mensais no Spotify, chamado de 'Girl Group da Nação', dominante no Japão.",
-      ar: "مجموعة فتيات من 9 أعضاء تحت JYP Entertainment. مجموعة متعددة الجنسيات مع 25.6 مليون مستمع شهري على Spotify، تُعرف بـ'فرقة البنات الوطنية'.",
-      th: "กลุ่มสาว 9 คนภายใต้ JYP Entertainment กลุ่มข้ามชาติมีผู้ฟังรายเดือน 25.6M บน Spotify ได้รับฉายา 'National Girl Group' และครองตลาดญี่ปุ่น",
-      vi: "Nhóm nhạc nữ 9 thành viên thuộc JYP Entertainment. Nhóm đa quốc tịch với 25,6M người nghe hàng tháng trên Spotify, mệnh danh 'Girl Group quốc dân'.",
-      ru: "Женская группа из 9 участниц под JYP Entertainment. Многонациональная группа с 25,6M месячных слушателей на Spotify, называемая 'Национальной женской группой'."
-    },
-    fandom: { ko: "원스 (ONCE)", en: "ONCE", ja: "ワンス (ONCE)", zh: "ONCE", es: "ONCE", id: "ONCE", fr: "ONCE", hi: "ONCE", pt: "ONCE", ar: "وانس (ONCE)", th: "วันซ์ (ONCE)", vi: "ONCE", ru: "ONCE" },
-    debut: "2015.10.20",
-    accentColor: "#ff69b4",
-    imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+group+kpop+2024+official&w=500&h=500&c=7&rs=1&p=0",
-    wiki: {
-      ko: "트와이스(TWICE)는 JYP엔터테인먼트 소속의 9인조 걸그룹입니다. 2015년 Mnet 서바이벌 프로그램 'SIXTEEN'을 통해 결성됐으며 같은 해 10월 정식 데뷔했습니다. 한국인 5명, 일본인 3명, 대만인 1명으로 구성된 다국적 그룹으로 Spotify 월간 리스너 2560만 명을 보유합니다. '국민 걸그룹'으로 불리며 일본에서 외국 여성 아티스트 최초로 5회 연속 돔 투어를 성공시켰습니다.",
-      en: "TWICE is a 9-member girl group under JYP Entertainment, formed through Mnet's 2015 survival show 'SIXTEEN' and debuting the same October. Consisting of 5 Koreans, 3 Japanese, and 1 Taiwanese, they hold 25.6M monthly Spotify listeners. Known as 'Nation's Girl Group', they became the first foreign female artists to complete 5 consecutive dome tours in Japan.",
-      ja: "TWICE（トゥワイス）は、JYPエンターテインメント所属の9人組ガールズグループです。2015年のMnetサバイバル番組『SIXTEEN』を通じて結成され、同年10月にデビューしました。韓国人5名、日本人3名、台湾人1名で構成された多国籍グループで、Spotifyの月間リスナーは2560万人に達します。「国民的ガールズグループ」と呼ばれ、日本で海外女性アーティストとして初めて5回連続のドームツアーを成功させました。",
-      zh: "TWICE是JYP娱乐旗下的9人女子团体，通过2015年Mnet生存节目《SIXTEEN》成立并于同年10月出道。由5名韩国成员、3名日本成员和1名台湾成员组成，Spotify月听众达2560万。被誉为“国民女团”，是首位在日本连续完成5次圆顶巡演的外国女性艺人。",
-      es: "TWICE es un grupo femenino de 9 miembros de JYP Entertainment, formado en 2015 a través de 'SIXTEEN' y debutando en octubre. Con 5 coreanas, 3 japonesas y 1 taiwanesa, tienen 25,6M de oyentes en Spotify. Llamado el 'Grupo de chicas de la nación', fue el primer artista femenino extranjero en lograr 5 giras consecutivas por domos en Japón.",
-      id: "TWICE adalah grup vokal wanita 9 anggota di bawah JYP Entertainment, dibentuk melalui 'SIXTEEN' tahun 2015 dan debut pada bulan Oktober. Terdiri dari 5 orang Korea, 3 Jepang, dan 1 Taiwan, mereka memiliki 25,6 juta pendengar Spotify. Disebut 'Girl Group Nasional', mereka adalah artis wanita asing pertama yang sukses melakukan 5 tur dome berturut-turut di Jepang.",
-      fr: "TWICE est un groupe féminin de 9 membres sous JYP Entertainment, formé via 'SIXTEEN' en 2015 et ayant débuté en octobre. Composé de 5 Coréennes, 3 Japonaises et 1 Taïwanaise, il compte 25,6M d'auditeurs sur Spotify. Surnommé le 'Girl Group de la Nation', c'est le premier artiste féminin étranger à réussir 5 tournées consécutives dans les dômes au Japon.",
-      hi: "TWICE JYP एंटरटेनमेंट के तहत 9 सदस्यीय गर्ल ग्रुप है, जिसे 2015 के 'SIXTEEN' के माध्यम से बनाया गया था। इसमें 5 कोरियाई, 3 जापानी और 1 ताइवानी सदस्य हैं और इनके Spotify पर 25.6M श्रोता हैं। 'राष्ट्र के गर्ल ग्रुप' के रूप में प्रसिद्ध, वे जापान में लगातार 5 डोม टूर करने वाली पहली विदेशी महिला कलाकार हैं।",
-      pt: "TWICE é um grupo feminino de 9 membros da JYP Entertainment, formado pelo 'SIXTEEN' em 2015 e estreando em outubro. Composto por 5 coreanas, 3 japonesas e 1 taiwanesa, tem 25,6M de ouvintes no Spotify. Conhecido como o 'Girl Group da Nação', foi o primeiro artista feminino estrangeiro a completar 5 turnês consecutivas em domos no Japão.",
-      ar: "توايس هي فرقة فتيات من 9 عضوات تحت JYP Entertainment، تشكلت عبر 'SIXTEEN' عام 2015 وترسمت في أكتوبر. تضم 5 كوريات و3 يابانيات وتايوانية واحدة، ولديهن 25.6 مليون مستمع على Spotify. تُلقب بـ 'فرقة فتيات الأمة'، وهي أول فنانة أجنبية تكمل 5 جولات متتالية في القباب باليابان.",
-      th: "TWICE เป็นเกิร์ลกรุ๊ป 9 คนสังกัด JYP Entertainment ก่อตั้งผ่านรายการ 'SIXTEEN' ในปี 2015 และเดบิวต์ในเดือนตุลาคม มีสมาชิกเกาหลี 5 คน ญี่ปุ่น 3 คน ไต้หวัน 1 คน และมีผู้ฟัง Spotify 25.6 ล้านคน ได้รับฉายา 'เกิร์ลกรุ๊ปแห่งชาติ' และเป็นศิลปินหญิงต่างชาติคนแรกที่จัดโดมทัวร์ในญี่ปุ่นติดต่อกัน 5 ครั้ง",
-      vi: "TWICE là nhóm nhạc nữ 9 thành viên thuộc JYP Entertainment, thành lập qua 'SIXTEEN' năm 2015 và ra mắt vào tháng 10. Gồm 5 người Hàn, 3 người Nhật và 1 người Đài Loan, nhóm có 25,6 triệu người nghe trên Spotify. Được gọi là 'Girl Group quốc dân', họ là nghệ sĩ nữ nước ngoài đầu tiên hoàn thành 5 tour mái vòm liên tiếp tại Nhật.",
-      ru: "TWICE — женская группа из 9 участниц JYP Entertainment, созданная через 'SIXTEEN' в 2015 году. Состоит из 5 кореянок, 3 японок и 1 тайваньки, имеет 25,6 млн слушателей в Spotify. Называемые «Национальной женской группой», они стали первыми иностранными артистками, совершившими 5 последовательных купольных туров в Японии."
-    },
-    company: "JYP Entertainment",
-    tmi: {
-      ko: [
-        "JYP 서바이벌 프로그램 'SIXTEEN'을 통해 결성된 그룹으로, 처음에는 7명이 될 예정이었으나 9명으로 확정됐다.",
-        "그룹명 TWICE는 '음악과 퍼포먼스로 눈과 귀, 두 번 감동을 주겠다'는 의미다.",
-        "일본에서 외국 아티스트 중 가장 많은 음반 판매량을 기록한 그룹 중 하나다.",
-        "'CHEER UP'은 멜론 차트에서 역대 최장 1위 기록을 세우며 '국민 걸그룹' 칭호를 얻었다.",
-        "멤버 9명 중 한국인 5명, 일본인 3명, 대만인 1명으로 구성된 진정한 다국적 그룹이다.",
-        "미나는 무대 공포증을 극복하며 컴백한 사실이 알려져 전 세계 팬들에게 큰 감동을 줬다.",
-        "2023년 이후 성숙하고 세련된 콘셉트로 전환하며 '제2의 전성기'를 맞이하고 있다.",
-        "일본에서 외국 여성 아티스트 최초로 3년 연속 돔 투어를 성공시킨 그룹이다.",
-        "나연은 걸그룹 리드 보컬 중 최다 음원 판매량을 자랑하는 솔로 아티스트이기도 하다.",
-        "9명의 멤버가 각기 다른 포지션을 담당해 무대에서 완벽한 밸런스를 보여준다."
-      ],
-      en: [
-        "Formed through JYP's survival show 'SIXTEEN' — originally set to have 7 members but finalized with 9.",
-        "The name TWICE means 'touching fans twice — once through eyes, once through ears'.",
-        "One of the highest-selling foreign artists in Japan, consistently breaking records there.",
-        "'CHEER UP' set a record for the longest #1 run on Melon chart, earning them the 'Nation's Girl Group' title.",
-        "Among 9 members: 5 Korean, 3 Japanese, 1 Taiwanese — a true multinational lineup.",
-        "Mina's return to the stage after overcoming stage fright moved fans worldwide and became an iconic K-pop moment.",
-        "Since 2023, transitioning to a more mature, sophisticated concept — many call it their 'second peak'.",
-        "First foreign female artist to complete three consecutive dome tours in Japan.",
-        "Nayeon is also a successful solo artist with the highest individual music sales among girl group lead vocalists.",
-        "All 9 members cover distinct performance roles, creating a perfectly balanced stage presence."
-      ],
-      ja: [
-        "JYPのサバイバル番組『SIXTEEN』を通じて結成され、当初は7人の予定でしたが9人に確定しました。",
-        "グループ名TWICEは「良い音楽で一度、素晴らしいパフォーマンスで二度、感動を与える」という意味です。",
-        "日本で海外アーティストの中で最も多いアルバム販売量を記録したグループの一つです。",
-        "「CHEER UP」はMelonチャートで歴代最長1位を記録し、「国民的ガールズグループ」の称号を得ました。",
-        "メンバー9人のうち韓国人5人、日本人3人、台湾人1人で構成された真の多国籍グループです。",
-        "ミナが舞台恐怖症を克服してカムバックした事実は、世界中のファンに大きな感動を与えました。",
-        "2023年以降、成熟して洗練されたコンセプトに転換し、「第二の全盛期」を迎えています。",
-        "日本で海外女性アーティストとして初めて3年連続のドームツアーを成功させたグループです。",
-        "ナヨンはガールズグループのリードボーカルの中で最多の音源販売量を誇るソロアーティストでもあります。",
-        "9人のメンバーがそれぞれ異なるポジションを担当し、ステージで完璧なバランスを見せてくれます。"
-      ],
-      zh: [
-        "通过JYP生存节目《SIXTEEN》成立，最初计划为7人，后确定为9人。",
-        "队名TWICE寓意“通过音乐（耳朵）和表演（眼睛）两次给予感动”。",
-        "是在日本创下最高唱片销量的外国艺人之一。",
-        "《CHEER UP》在Melon榜单创下史上最长冠军纪录，赢得了“国民女团”称号。",
-        "9名成员中包括5名韩国人、3名日本人和1名台湾人，是真正的跨国组合。",
-        "名井南（Mina）克服舞台恐惧症回归，令全球粉丝深受感动。",
-        "2023年后转型为成熟洗练的风格，迎来了“第二全盛期”。",
-        "是首位在日本连续3年成功举办圆顶巡演的外国女性艺人。",
-        "娜琏也是在女团领唱中拥有最高音源销量的个人歌手。",
-        "9名成员各司其职，在舞台上展现了完美的平衡。"
-      ],
-      es: [
-        "Formado a través de 'SIXTEEN' de JYP; originalmente serían 7 miembros pero se finalizó con 9.",
-        "El nombre TWICE significa 'conmover a los fans dos veces: una por los ojos y otra por los oídos'.",
-        "Uno de los artistas extranjeros con mayores ventas de álbumes en Japón, batiendo récords constantes.",
-        "'CHEER UP' logró el récord de mayor tiempo en el #1 de Melon, ganando el título de 'Grupo de chicas de la nación'.",
-        "Entre 9 miembros: 5 coreanas, 3 japonesas, 1 taiwanesa; una verdadera alineación multinacional.",
-        "El regreso de Mina tras superar el miedo escénico conmovió a los fans y fue un momento icónico del K-pop.",
-        "Desde 2023, transicionando a un concepto más maduro y sofisticado, su 'segundo apogeo'.",
-        "Primer artista femenino extranjero en completar tres giras consecutivas por domos en Japón.",
-        "Nayeon es una exitosa solista con las mayores ventas individuales entre vocalistas principales de grupos femeninos.",
-        "Los 9 miembros cubren roles distintos, creando una presencia en el escenario perfectamente equilibrada."
-      ],
-      id: [
-        "Dibentuk melalui acara survival JYP 'SIXTEEN' — awalnya direncanakan 7 anggota tetapi menjadi 9.",
-        "Nama TWICE berarti 'menyentuh hati penggemar dua kali — sekali melalui mata, sekali melalui telinga'.",
-        "Salah satu artis asing dengan penjualan album tertinggi di Jepang, konsisten memecahkan rekor.",
-        "'CHEER UP' mencetak rekor posisi #1 terlama di tangga lagu Melon, memberi mereka gelar 'Girl Group Nasional'.",
-        "Dari 9 anggota: 5 Korea, 3 Jepang, 1 Taiwan — susunan pemain multinasional yang sesungguhnya.",
-        "Kembalinya Mina ke panggung setelah mengatasi kecemasan membuat penggemar terharu di seluruh dunia.",
-        "Sejak 2023, bertransisi ke konsep yang lebih dewasa dan canggih — disebut sebagai 'puncak kedua'.",
-        "Artis wanita asing pertama yang menyelesaikan tiga tur dome berturut-turut di Jepang.",
-        "Nayeon juga artis solo sukses dengan penjualan musik individu tertinggi di antara vokalis grup wanita.",
-        "Semua 9 anggota mencakup peran kinerja yang berbeda, menciptakan keseimbangan panggung yang sempurna."
-      ],
-      fr: [
-        "Formé via l'émission 'SIXTEEN' de JYP — initialement prévu pour 7 membres mais finalisé à 9.",
-        "Le nom TWICE signifie 'toucher les fans deux fois — une fois par les yeux, une fois par les oreilles'.",
-        "L'un des artistes étrangers les plus vendeurs au Japon, battant constamment des records.",
-        "'CHEER UP' a battu le record de longévité au rang #1 sur Melon, leur valant le titre de 'Girl Group de la Nation'.",
-        "Parmi les 9 membres : 5 Coréennes, 3 Japonaises, 1 Taïwanaise — un vrai groupe multinational.",
-        "Le retour de Mina sur scène après avoir surmonté son anxiété a ému les fans du monde entier.",
-        "Depuis 2023, transition vers un concept plus mature et sophistiqué — beaucoup appellent cela leur 'second apogée'.",
-        "Premier artiste féminin étranger à accomplir trois tournées consécutives dans les dômes au Japon.",
-        "Nayeon est aussi une soliste à succès avec les ventes individuelles les plus élevées parmi les chanteuses de groupes.",
-        "Les 9 membres couvrent des rôles de performance distincts, créant un équilibre parfait sur scène."
-      ],
-      hi: [
-        "JYP के सर्वाइवल शो 'SIXTEEN' के माध्यम से गठित — मूल रूप से 7 सदस्य होने थे लेकिन 9 के साथ फाइनल हुआ।",
-        "TWICE नाम का अर्थ है 'प्रशंसकों को दो बार छूना — एक बार आंखों से, एक बार कानों से'।।",
-        "जापान में सबसे अधिक बिकने वाले विदेशी कलाकारों में से एक, वहां लगातार रिकॉर्ड तोड़ते हुए।",
-        "'CHEER UP' ने मेलन चार्ट पर सबसे लंबे समय तक #1 रहने का रिकॉर्ड बनाया, जिससे उन्हें 'नेशन की गर्ल ग्रुप' का खिताब मिला।",
-        "9 सदस्यों में: 5 कोरियाई, 3 जापानी, 1 ताइवानी — एक सच्चा बहुराष्ट्रीय लाइनअप।",
-        "मंच के डर पर काबू पाने के बाद मीना की वापसी ने दुनिया भर के प्रशंसकों को प्रभावित किया।",
-        "2023 के बाद से, एक अधिक परिपक्व, परिष्कृत अवधारणा में संक्रमण — कई लोग इसे उनका 'दूसरा शिखर' कहते हैं।",
-        "जापान में लगातार तीन डोम टूर पूरे करने वाली पहली विदेशी महिला कलाकार।",
-        "नायोन एक सफल सोलो कलाकार भी हैं, जिनकी गर्ल ग्रुप लीड वोकल्स में सबसे अधिक व्यक्तिगत संगीत बिक्री है।",
-        "सभी 9 सदस्य अलग-अलग प्रदर्शन भूमिकाओं को कवर करते हैं, जिससे एक संतुलित मंच उपस्थिति बनती है।"
-      ],
-      pt: [
-        "Formado pelo programa 'SIXTEEN' da JYP — originalmente previsto para 7 membros, mas finalizado com 9.",
-        "O nome TWICE significa 'tocar os fãs duas vezes — uma pelos olhos e outra pelos ouvidos'.",
-        "Um dos artistas estrangeiros mais vendidos no Japão, quebrando recordes constantemente.",
-        "'CHEER UP' bateu o recorde de mais tempo em #1 no Melon, rendendo o título de 'Girl Group da Nação'.",
-        "Entre 9 membros: 5 coreanas, 3 japonesas, 1 taiwanesa — uma verdadeira formação multinacional.",
-        "O retorno de Mina ao palco após superar o medo do palco emocionou fãs em todo o mundo.",
-        "Desde 2023, transicionando para um conceito mais maduro e sofisticado — muitos chamam de seu 'segundo auge'.",
-        "Primeira artista feminina estrangeira a completar três turnês consecutivas em domos no Japão.",
-        "Nayeon também é uma solista de sucesso com as maiores vendas individuais entre as vocalistas de grupos femininos.",
-        "Todas as 9 integrantes cobrem papéis distintos, criando uma presença de palco perfeitamente equilibrada."
-      ],
-      ar: [
-        "تشكلت عبر برنامج 'SIXTEEN' — كان من المفترض أن تضم 7 عضوات ولكن تم الاستقرار على 9.",
-        "اسم توايس يعني 'التأثير في المعجبين مرتين — مرة عبر الأعين ومرة عبر الآذان'.",
-        "واحدة من أكثر الفنانين الأجانب مبيعاً في اليابان، وتحطم الأرقام القياسية هناك باستمرار.",
-        "حققت 'CHEER UP' رقماً قياسياً لأطول فترة في المركز الأول على مخطط Melon، مما منحهن لقب 'فرقة فتيات الأمة'.",
-        "من بين العضوات الـ 9: 5 كوريات، 3 يابانيات، 1 تايوانية — تشكيلة دولية حقيقية.",
-        "عودة مينا للمسرح بعد تجاوز رهاب المسرح أثرت في المعجبين عالمياً وكانت لحظة أيقونية.",
-        "منذ عام 2023، بدأن في الانتقال لمفهوم أكثر نضجاً ورقياً — يسميه الكثيرون 'القمة الثانية'.",
-        "أول فنانة أجنبية تكمل ثلاث جولات متتالية في القباب (Dome Tours) في اليابان.",
-        "نايون هي أيضاً فنانة منفردة ناجحة ولديها أعلى مبيعات موسيقية فردية بين مغنيات فرق الفتيات.",
-        "تغطي العضوات الـ 9 أدواراً استعراضية متميزة، مما يخلق توازناً مثالياً على المسرح."
-      ],
-      th: [
-        "ก่อตั้งผ่านรายการ 'SIXTEEN' — เดิมกำหนดไว้ 7 คน แต่ลงตัวที่ 9 คน",
-        "ชื่อ TWICE หมายถึง 'การสร้างความประทับใจให้แฟนๆ สองครั้ง — ครั้งแรกผ่านดวงตา และครั้งที่สองผ่านหู'",
-        "หนึ่งในศิลปินต่างชาติที่มียอดขายสูงสุดในญี่ปุ่น และทำลายสถิติที่นั่นอย่างต่อเนื่อง",
-        "'CHEER UP' สร้างสถิติอันดับ 1 นานที่สุดบนชาร์ต Melon ทำให้ได้รับฉายา 'เกิร์ลกรุ๊ปแห่งชาติ'",
-        "ในบรรดาสมาชิก 9 คน: เกาหลี 5, ญี่ปุ่น 3, ไต้หวัน 1 — เป็นไลน์อัพข้ามชาติที่แท้จริง",
-        "การกลับมาของมินะหลังจากเอาชนะความกลัวในการขึ้นเวทีสร้างความประทับใจให้แฟนๆ ทั่วโลก",
-        "ตั้งแต่ปี 2023 เริ่มเปลี่ยนไปสู่คอนเซปต์ที่โตและหรูหราขึ้น — หลายคนเรียกว่าเป็น 'ยุคทองครั้งที่สอง'",
-        "ศิลปินหญิงต่างชาติรายแรกที่จัดโดมทัวร์ในญี่ปุ่นติดต่อกัน 3 ปี",
-        "นายอนยังเป็นศิลปินเดี่ยวที่ประสบความสำเร็จด้วยยอดขายเพลงส่วนตัวสูงสุดในบรรดานักร้องนำเกิร์ลกรุ๊ป",
-        "สมาชิกทั้ง 9 คนรับบทบาทการแสดงที่แตกต่างกัน สร้างความสมดุลบนเวทีได้อย่างสมบูรณ์แบบ"
-      ],
-      vi: [
-        "Được thành lập thông qua 'SIXTEEN' — ban đầu dự định có 7 thành viên nhưng cuối cùng chốt 9 người.",
-        "Tên TWICE có nghĩa là 'chạm đến trái tim người hâm mộ hai lần — một lần qua mắt, một lần qua tai'.",
-        "Một trong những nghệ sĩ nước ngoài bán chạy nhất tại Nhật Bản, liên tục phá vỡ các kỷ lục tại đây.",
-        "'CHEER UP' đã lập kỷ lục đứng đầu bảng xếp hạng Melon lâu nhất, mang về danh hiệu 'Girl Group quốc dân'.",
-        "Trong 9 thành viên: 5 người Hàn, 3 người Nhật, 1 người Đài Loan — một đội hình đa quốc tịch thực sự.",
-        "Việc Mina quay lại sân khấu sau khi vượt qua chứng sợ sân khấu đã làm nức lòng fan toàn cầu.",
-        "Từ năm 2023, chuyển sang concept trưởng thành, tinh tế hơn — được gọi là 'thời hoàng kim thứ hai'.",
-        "Nghệ sĩ nữ nước ngoài đầu tiên hoàn thành ba chuyến lưu diễn mái vòm liên tiếp tại Nhật Bản.",
-        "Nayeon cũng là một nghệ sĩ solo thành công với doanh số âm nhạc cá nhân cao nhất trong các giọng ca nữ.",
-        "Cả 9 thành viên đảm nhận các vai trò biểu diễn riêng biệt, tạo nên sự cân bằng hoàn hảo trên sân khấu."
-      ],
-      ru: [
-        "Сформированы через шоу 'SIXTEEN' — изначально планировалось 7 участниц, но в итоге их стало 9.",
-        "Название TWICE означает «тронуть сердца фанатов дважды: через глаза и через уши».",
-        "Одни из самых продаваемых иностранных артистов в Японии, постоянно бьющие там рекорды.",
-        "'CHEER UP' установила рекорд по длительности пребывания на #1 в Melon, принеся им титул «Национальной женской группы».",
-        "Из 9 участниц: 5 кореянок, 3 японки, 1 тайванька — по-настоящему международный состав.",
-        "Возвращение Мины на сцену после преодоления страха перед выступлениями тронуло фанатов по всему миру.",
-        "С 2023 года переходят к более зрелой и утонченной концепции — многие называют это «вторым пиком».",
-        "Первая иностранная артистка, завершившая три последовательных купольных тура в Японии.",
-        "Наён также успешная солистка с самыми высокими продажами среди ведущих вокалисток женских групп.",
-        "Все 9 участниц выполняют разные роли в выступлениях, создавая идеально сбалансированную сцену."
-      ]
-    },
-    news: [
-      {
-        title: {
-          ko: "트와이스, 월드투어 'READY TO BE' 북미·아시아 전석 매진",
-          en: "TWICE World Tour 'READY TO BE' Sells Out North America and Asia",
-          ja: "TWICEワールドツアー「READY TO BE」北米・アジア全公演完売",
-          zh: "TWICE世界巡演“READY TO BE”北美和亚洲门票售罄",
-          es: "Gira Mundial de TWICE 'READY TO BE' se agota en Norteamérica y Asia",
-          id: "Tur Dunia TWICE 'READY TO BE' Terjual Habis di Amerika Utara dan Asia",
-          fr: "La tournée mondiale de TWICE 'READY TO BE' affiche complet en Amérique du Nord et en Asie",
-          hi: "TWICE वर्ल्ड टूर 'READY TO BE' उत्तरी अमेरिका और एशिया में सोल्ड आउट",
-          pt: "Turnê Mundial 'READY TO BE' do TWICE esgota na América do Norte e Ásia",
-          ar: "جولة توايس العالمية 'READY TO BE' تنفد تذاكرها في أمريكا الشمالية وآسيا",
-          th: "เวิลด์ทัวร์ 'READY TO BE' ของ TWICE ขายหมดเกลี้ยงในอเมริกาเหนือและเอเชีย",
-          vi: "World Tour 'READY TO BE' của TWICE cháy vé tại Bắc Mỹ và Châu Á",
-          ru: "Мировой тур TWICE 'READY TO BE' распродан в Северной Америке и Азии"
-        },
-        date: "2025.03.10",
-        summary: {
-          ko: "트와이스의 2025 월드투어 'READY TO BE'가 북미와 아시아 전 공연장에서 전석 매진을 기록했습니다.",
-          en: "TWICE's 2025 world tour 'READY TO BE' sold out every venue across North America and Asia.",
-          ja: "TWICEの2025年ワールドツアー「READY TO BE」が北米とアジアの全会場で完売を記録しました。",
-          zh: "TWICE 2025年世界巡演“READY TO BE”在北美和亚洲的所有场馆均告售罄。",
-          es: "La gira mundial 2025 de TWICE, 'READY TO BE', agotó todas las entradas en Norteamérica y Asia.",
-          id: "Tur dunia 2025 TWICE 'READY TO BE' terjual habis di setiap tempat di Amerika Utara dan Asia.",
-          fr: "La tournée mondiale 2025 de TWICE 'READY TO BE' a affiché complet dans toutes les salles en Amérique du Nord et en Asie.",
-          hi: "TWICE का 2025 का वर्ल्ड टूर 'READY TO BE' उत्तरी अमेरिका और एशिया के हर वेन्यू पर सोल्ड आउट रहा।",
-          pt: "A turnê mundial de 2025 do TWICE, 'READY TO BE', esgotou em todos os locais na América do Norte e Ásia.",
-          ar: "جولة توايس العالمية لعام 2025 'READY TO BE' نفدت تذاكرها في جميع الملاعب عبر أمريكا الشمالية وآسيا.",
-          th: "เวิลด์ทัวร์ 2025 'READY TO BE' ของ TWICE ขายบัตรหมดเกลี้ยงทุกสนามในอเมริกาเหนือและเอเชีย",
-          vi: "World tour 2025 'READY TO BE' của TWICE đã cháy vé tại mọi địa điểm trên khắp Bắc Mỹ và Châu Á.",
-          ru: "Мировой тур TWICE 2025 года 'READY TO BE' был полностью распродан на всех площадках в Северной Америке и Азии."
-        },
-        url: "#"
-      },
-      {
-        title: {
-          ko: "Spotify 2025 K-Pop Wrapped 6위 — 2560만 월간 리스너",
-          en: "Spotify 2025 K-Pop Wrapped: TWICE Ranked #6 with 25.6M Monthly Listeners",
-          ja: "Spotify 2025 K-Pop Wrapped 6位 — 2560万月間リスナー",
-          zh: "Spotify 2025 K-Pop年度回顾：TWICE排名第6，月听众达2560万",
-          es: "Spotify 2025 K-Pop Wrapped: TWICE en el #6 con 25,6M de oyentes mensuales",
-          id: "Spotify 2025 K-Pop Wrapped: TWICE Peringkat #6 dengan 25,6 Juta Pendengar Bulanan",
-          fr: "Spotify 2025 K-Pop Wrapped : TWICE classé #6 avec 25,6M d'auditeurs mensuels",
-          hi: "Spotify 2025 K-Pop Wrapped: TWICE 25.6M मासिक श्रोताओं के साथ #6 स्थान पर",
-          pt: "Spotify 2025 K-Pop Wrapped: TWICE em #6 com 25,6M de ouvintes mensais",
-          ar: "حصاد سبوتيفاي 2025 للكيبوب: توايس في المركز السادس مع 25.6 مليون مستمع شهري",
-          th: "Spotify 2025 K-Pop Wrapped: TWICE อันดับ 6 ด้วยผู้ฟังรายเดือน 25.6 ล้านคน",
-          vi: "Spotify 2025 K-Pop Wrapped: TWICE hạng #6 với 25,6 triệu người nghe hàng tháng",
-          ru: "Spotify 2025 K-Pop Wrapped: TWICE на 6-м месте с 25,6 млн слушателей в месяц"
-        },
-        date: "2025.12.04",
-        summary: {
-          ko: "트와이스가 Spotify 2025 K-Pop Wrapped에서 6위를 기록하며 2560만 월간 리스너를 보유한 것으로 확인됐습니다.",
-          en: "TWICE ranked #6 on Spotify 2025 K-Pop Wrapped, confirmed to have 25.6M monthly listeners.",
-          ja: "TWICEがSpotify 2025 K-Pop Wrappedで6位を記録し、2560万人の月間リスナーを保有していることが確認されました。",
-          zh: "TWICE在Spotify 2025 K-Pop年度回顾中排名第6，确认拥有2560万月活跃听众。",
-          es: "TWICE ocupó el puesto #6 en Spotify 2025 K-Pop Wrapped, confirmando que tiene 25,6M de oyentes mensuales.",
-          id: "TWICE menduduki peringkat #6 di Spotify 2025 K-Pop Wrapped, dikonfirmasi memiliki 25,6 juta pendengar bulanan.",
-          fr: "TWICE s'est classé au 6e rang du Spotify 2025 K-Pop Wrapped, avec 25,6 millions d'auditeurs mensuels.",
-          hi: "TWICE Spotify 2025 K-Pop Wrapped में छठे स्थान पर रहा, और 25.6M मासिक श्रोताओं की पुष्टि हुई।",
-          pt: "O TWICE ficou em #6 no Spotify 2025 K-Pop Wrapped, com 25,6 milhões de ouvintes mensais confirmados.",
-          ar: "احتلت توايس المرتبة السادسة في حصاد سبوتيفاي 2025 للكيبوب، مع تأكيد امتلاكهن لـ 25.6 مليون مستمع شهري.",
-          th: "TWICE ครองอันดับ 6 ใน Spotify 2025 K-Pop Wrapped โดยได้รับการยืนยันว่ามีผู้ฟังรายเดือน 25.6 ล้านคน",
-          vi: "TWICE đứng thứ 6 trên Spotify 2025 K-Pop Wrapped, xác nhận sở hữu 25,6 triệu người nghe hàng tháng.",
-          ru: "TWICE заняли 6-е место в Spotify 2025 K-Pop Wrapped, подтвердив наличие 25,6 млн слушателей в месяц."
-        },
-        url: "#"
-      },
-      {
-        title: {
-          ko: "일본 5회 연속 돔 투어 완료 — 외국 아티스트 신기록",
-          en: "TWICE Complete 5 Consecutive Japan Dome Tours — New Record for Foreign Artists",
-          ja: "日本で5回連続ドームツアー完了 — 海外アーティスト新記録",
-          zh: "完成日本连续5次圆顶巡演 — 外国艺人新纪录",
-          es: "TWICE completa 5 giras consecutivas por domos en Japón: nuevo récord",
-          id: "TWICE Menyelesaikan 5 Tur Dome Jepang Berturut-turut — Rekor Baru Artis Asing",
-          fr: "TWICE termine 5 tournées consécutives dans les dômes au Japon — Nouveau record",
-          hi: "जापान में लगातार 5 डोम टूर पूरे — विदेशी कलाकारों के लिए नया रिकॉर्ड",
-          pt: "TWICE completa 5 turnês consecutivas em domos no Japão — Novo recorde",
-          ar: "توايس تكمل 5 جولات متتالية في القباب باليابان — رقم قياسي جديد لفنان أجنبي",
-          th: "TWICE จัดโดมทัวร์ญี่ปุ่นติดต่อกัน 5 ครั้ง — สถิติใหม่สำหรับศิลปินต่างชาติ",
-          vi: "TWICE hoàn thành 5 tour mái vòm liên tiếp tại Nhật Bản — Kỷ lục mới cho nghệ sĩ nước ngoài",
-          ru: "TWICE завершили 5-й подряд купольный тур в Японии — новый рекорд для иностранных артистов"
-        },
-        date: "2025.01.20",
-        summary: {
-          ko: "트와이스가 일본 돔 투어를 5회 연속 성공하며 외국 여성 아티스트 최초 기록을 세웠습니다.",
-          en: "TWICE completed their 5th consecutive dome tour in Japan, setting a new record for foreign female artists.",
-          ja: "TWICEが日本ドームツアーを5回連続で成功させ、海外女性アーティストとして初の記録を打ち立てました。",
-          zh: "TWICE连续5次在日本圆顶巡演取得成功，创下了外国女性艺人的首个纪录。",
-          es: "TWICE completó su quinta gira consecutiva por domos en Japón, estableciendo un nuevo récord para artistas femeninas extranjeras.",
-          id: "TWICE menyelesaikan tur dome ke-5 berturut-turut di Jepang, mencetak rekor baru bagi artis wanita asing.",
-          fr: "TWICE a terminé sa 5e tournée consécutive dans les dômes au Japon, établissant un record pour une artiste féminine étrangère.",
-          hi: "TWICE ने जापान में अपना 5वां लगातार डोम टूर पूरा किया, जो विदेशी महिला कलाकारों के लिए एक नया रिकॉर्ड है।",
-          pt: "O TWICE completou sua 5ª turnê consecutiva em domos no Japão, estabelecendo um recorde para artistas femininas estrangeiras.",
-          ar: "أكملت توايس جولتها الخامسة متتالية في القباب باليابان، محققة رقماً قياسياً جديداً كفنانة أجنبية.",
-          th: "TWICE เสร็จสิ้นการจัดโดมทัวร์ครั้งที่ 5 ติดต่อกันในญี่ปุ่น สร้างสถิติใหม่สำหรับศิลปินหญิงต่างชาติ",
-          vi: "TWICE đã hoàn thành tour mái vòm thứ 5 liên tiếp tại Nhật Bản, lập kỷ lục mới cho các nghệ sĩ nữ nước ngoài.",
-          ru: "TWICE завершили свой 5-й подряд купольный тур в Японии, установив новый рекорд среди иностранных исполнительниц."
-        },
-        url: "#"
-      },
-      {
-        title: {
-          ko: "정규 15집 'WITH YOU-th' 빌보드 200 3위 진입",
-          en: "15th Album 'WITH YOU-th' Enters Billboard 200 at #3",
-          ja: "フルアルバム15集『WITH YOU-th』ビルボード200で3位ランクイン",
-          zh: "第15张正规专辑《WITH YOU-th》进入Billboard 200榜单第3位",
-          es: "El 15º álbum 'WITH YOU-th' entra en el Billboard 200 en el #3",
-          id: "Album ke-15 'WITH YOU-th' Masuk Billboard 200 di #3",
-          fr: "Le 15e album 'WITH YOU-th' entre au Billboard 200 à la 3e place",
-          hi: "15वां एल्बम 'WITH YOU-th' बिलबोर्ड 200 में #3 पर",
-          pt: "15º álbum 'WITH YOU-th' entra no Billboard 200 em #3",
-          ar: "الألبوم الـ 15 'WITH YOU-th' يدخل مخطط بيلبورد 200 في المركز الثالث",
-          th: "อัลบั้มเต็มชุดที่ 15 'WITH YOU-th' เข้าสู่ชาร์ต Billboard 200 ในอันดับที่ 3",
-          vi: "Album thứ 15 'WITH YOU-th' lọt vào Billboard 200 ở vị trí thứ 3",
-          ru: "15-й альбом 'WITH YOU-th' вошел в Billboard 200 на 3-е место"
-        },
-        date: "2024.04.12",
-        summary: {
-          ko: "트와이스의 정규 15집 'WITH YOU-th'가 빌보드 200 차트 3위에 진입했습니다.",
-          en: "TWICE's 15th album 'WITH YOU-th' entered the Billboard 200 at #3.",
-          ja: "TWICEのフルアルバム15集『WITH YOU-th』がビルボード200チャートで3位を記録しました。",
-          zh: "TWICE的第15张正规专辑《WITH YOU-th》登上了Billboard 200榜单的第3位。",
-          es: "El 15º álbum de TWICE, 'WITH YOU-th', entró en la lista Billboard 200 en el puesto #3.",
-          id: "Album ke-15 TWICE 'WITH YOU-th' memasuki tangga lagu Billboard 200 di peringkat #3.",
-          fr: "Le 15e album de TWICE, 'WITH YOU-th', est entré dans le classement Billboard 200 à la 3e place.",
-          hi: "TWICE का 15वां एल्बम 'WITH YOU-th' बिलबोर्ड 200 चार्ट में तीसरे स्थान पर रहा।",
-          pt: "O 15º álbum do TWICE, 'WITH YOU-th', entrou na parada Billboard 200 na 3ª posição.",
-          ar: "دخل الألبوم الخامس عشر لتوايس 'WITH YOU-th' في المركز الثالث على مخطط بيلبورد 200.",
-          th: "อัลบั้มชุดที่ 15 ของ TWICE 'WITH YOU-th' เข้าสู่ชาร์ต Billboard 200 ในอันดับที่ 3",
-          vi: "Album thứ 15 của TWICE mang tên 'WITH YOU-th' đã lọt vào bảng xếp hạng Billboard 200 ở vị trí thứ 3.",
-          ru: "15-й альбом TWICE 'WITH YOU-th' вошел в чарт Billboard 200 под номером 3."
-        },
-        url: "#"
-      },
-      {
-        title: {
-          ko: "나연, 솔로 2집으로 멜론·지니 실시간 차트 석권",
-          en: "Nayeon Dominates Melon and Genie Charts with 2nd Solo Album",
-          ja: "ナヨン、ソロ2集でMelon・Genieリアルタイムチャートを席巻",
-          zh: "娜琏凭借第二张个人专辑横扫Melon和Genie实时榜单",
-          es: "Nayeon domina las listas de Melon y Genie con su segundo álbum en solitario",
-          id: "Nayeon Mendominasi Tangga Lagu Melon dan Genie dengan Album Solo ke-2",
-          fr: "Nayeon domine les classements Melon et Genie avec son 2e album solo",
-          hi: "नायोन ने दूसरे सोलो एल्बम के साथ मेलन और जिनी चार्ट्स पर कब्जा किया",
-          pt: "Nayeon domina as paradas Melon e Genie com seu 2º álbum solo",
-          ar: "نايون تسيطر على مخططات Melon و Genie بألبومها المنفرد الثاني",
-          th: "นายอนครองชาร์ต Melon และ Genie ด้วยอัลบั้มเดี่ยวชุดที่ 2",
-          vi: "Nayeon thống trị bảng xếp hạng Melon và Genie với album solo thứ 2",
-          ru: "Наён доминирует в чартах Melon и Genie со вторым сольным альбомом"
-        },
-        date: "2024.11.01",
-        summary: {
-          ko: "나연이 솔로 2집을 발매하며 멜론·지니 실시간 차트를 동시에 장악했습니다.",
-          en: "Nayeon dominated Melon and Genie real-time charts simultaneously with the release of her 2nd solo album.",
-          ja: "ナヨンがソロ2集を発売し、MelonとGenieのリアルタイムチャートを同時に制覇しました。",
-          zh: "娜琏发布第二张个人专辑，同时占领了Melon和Genie的实时榜单。",
-          es: "Nayeon dominó simultáneamente las listas en tiempo real de Melon y Genie con el lanzamiento de su segundo álbum en solitario.",
-          id: "Nayeon mendominasi tangga lagu real-time Melon dan Genie secara bersamaan dengan perilisan album solo keduanya.",
-          fr: "Nayeon a dominé simultanément les classements en temps réel Melon et Genie lors de la sortie de son 2e album solo.",
-          hi: "नायोन ने अपने दूसरे सोलो एल्बम की रिलीज के साथ ही मेलन और जिनी रीयल-टाइम चार्ट्स पर एक साथ कब्जा कर लिया।",
-          pt: "Nayeon dominou simultaneamente as paradas em tempo real do Melon e Genie com o lançamento de seu 2º álbum solo.",
-          ar: "سيطرت نايون على مخططات Melon و Genie في وقت واحد مع إصدار ألبومها المنفرد الثاني.",
-          th: "นายอนครองชาร์ตเรียลไทม์ของ Melon และ Genie พร้อมกันหลังวางจำหน่ายอัลบั้มเดี่ยวชุดที่ 2",
-          vi: "Nayeon đã thống trị các bảng xếp hạng thời gian thực của Melon và Genie cùng lúc với việc phát hành album solo thứ 2.",
-          ru: "Наён одновременно возглавила чарты Melon и Genie в реальном времени после выхода своего второго сольного альбома."
-        },
-        url: "#"
-      },
-      {
-        title: {
-          ko: "모모·사나·미나, 일본 패션 매거진 커버 동시 장식",
-          en: "Momo, Sana, and Mina Simultaneously Cover Japanese Fashion Magazines",
-          ja: "モモ・サナ・ミナ、日本のファッション誌の表紙を同時掲載",
-          zh: "Momo、Sana、Mina同时登上日本时尚杂志封面",
-          es: "Momo, Sana y Mina cubren simultáneamente revistas de moda japonesas",
-          id: "Momo, Sana, dan Mina Secara Bersamaan Menjadi Sampul Majalah Fashion Jepang",
-          fr: "Momo, Sana et Mina font simultanément la couverture de magazines de mode japonais",
-          hi: "मोमो, साना और मीना एक साथ जापानी फैशन मैगजीन के कवर पर",
-          pt: "Momo, Sana e Mina estampam simultaneamente capas de revistas de moda japonesas",
-          ar: "مومو وسانا ومينا يتصدرن أغلفة مجلات الموضة اليابانية في وقت واحد",
-          th: "โมโมะ, ซานะ และมินะ ขึ้นปกนิตยสารแฟชั่นญี่ปุ่นพร้อมกัน",
-          vi: "Momo, Sana và Mina đồng loạt xuất hiện trên bìa các tạp chí thời trang Nhật Bản",
-          ru: "Момо, Сана и Мина одновременно украсили обложки японских модных журналов"
-        },
-        date: "2025.06.01",
-        summary: {
-          ko: "트와이스의 일본인 멤버 모모·사나·미나가 같은 달 일본 주요 패션 매거진 표지를 동시에 장식했습니다.",
-          en: "TWICE's Japanese members Momo, Sana, and Mina simultaneously graced the covers of major Japanese fashion magazines in the same month.",
-          ja: "TWICEの日本人メンバーであるモモ、サナ、ミナが、同月に日本の主要ファッション誌の表紙を飾りました。",
-          zh: "TWICE的日本成员Momo、Sana和Mina在同月同时登上了日本主要时尚杂志的封面。",
-          es: "Las miembros japonesas de TWICE, Momo, Sana y Mina, adornaron simultáneamente las portadas de las principales revistas de moda japonesas en el mismo mes.",
-          id: "Anggota TWICE asal Jepang, Momo, Sana, dan Mina, secara bersamaan menghiasi sampul majalah fashion utama Jepang di bulan yang sama.",
-          fr: "Les membres japonaises de TWICE, Momo, Sana et Mina, ont simultanément fait la couverture de grands magazines de mode japonais le même mois.",
-          hi: "TWICE की जापानी सदस्यों मोमो, साना और मीना ने एक ही महीने में प्रमुख जापानी फैशन पत्रिकाओं के कवर की शोभा बढ़ाई।",
-          pt: "As integrantes japonesas do TWICE, Momo, Sana e Mina, estamparam simultaneamente as capas das principais revistas de moda japonesas no mesmo mês.",
-          ar: "تصدرت العضوات اليابانيات في توايس (مومو وسانا ومينا) أغلفة مجلات الموضة اليابانية الكبرى في نفس الشهر.",
-          th: "สมาชิกชาวญี่ปุ่นของ TWICE ได้แก่ โมโมะ, ซานะ และมินะ ขึ้นปกนิตยสารแฟชั่นหลักของญี่ปุ่นพร้อมกันในเดือนเดียวกัน",
-          vi: "Các thành viên người Nhật của TWICE là Momo, Sana và Mina đã đồng loạt xuất hiện trên trang bìa của các tạp chí thời trang lớn của Nhật Bản trong cùng một tháng.",
-          ru: "Японские участницы TWICE Момо, Сана и Мина одновременно украсили обложки крупнейших японских журналов о моде в один и тот же месяц."
-        },
-        url: "#"
-      },
-      {
-        title: {
-          ko: "지효, 2025 MAMA '올해의 여자가수' 수상",
-          en: "Jihyo Wins 'Female Artist of the Year' at 2025 MAMA Awards",
-          ja: "ジヒョ、2025 MAMA「今年の女性歌手賞」受賞",
-          zh: "志效获得2025 MAMA“年度最佳女歌手”",
-          es: "Jihyo gana 'Artista Femenina del Año' en los Premios MAMA 2025",
-          id: "Jihyo Memenangkan 'Artis Wanita Terbaik' di MAMA Awards 2025",
-          fr: "Jihyo remporte le prix de l'Artiste féminine de l'année aux MAMA 2025",
-          hi: "जिह्यो ने 2025 MAMA अवार्ड्स में 'फीमेल आर्टिस्ट ऑफ द ईयर' जीता",
-          pt: "Jihyo vence 'Artista Feminina do Ano' no MAMA Awards 2025",
-          ar: "جيهيو تفوز بجائزة 'فنانة العام' في حفل جوائز MAMA لعام 2025",
-          th: "จีฮโยคว้ารางวัล 'ศิลปินหญิงแห่งปี' จากงาน 2025 MAMA Awards",
-          vi: "Jihyo giành giải 'Nữ nghệ sĩ của năm' tại MAMA Awards 2025",
-          ru: "Джихё победила в номинации «Певица года» на MAMA Awards 2025"
-        },
-        date: "2025.11.22",
-        summary: {
-          ko: "지효가 2025 MAMA 어워즈에서 '올해의 여자가수'상을 수상하며 트와이스 리더로서의 위상을 높였습니다.",
-          en: "Jihyo won 'Female Artist of the Year' at the 2025 MAMA Awards, reaffirming her status as TWICE's leader.",
-          ja: "ジヒョが2025 MAMAアワードで「今年の女性歌手賞」を受賞し、TWICEリーダーとしての存在感を示しました。",
-          zh: "志效在2025 MAMA大奖中获得“年度最佳女歌手”奖，提升了其作为TWICE队长的地位。",
-          es: "Jihyo ganó el premio a la 'Artista Femenina del Año' en los MAMA Awards 2025, elevando su estatus como líder de TWICE.",
-          id: "Jihyo memenangkan penghargaan 'Artis Wanita Terbaik' di MAMA Awards 2025, meningkatkan statusnya sebagai pemimpin TWICE.",
-          fr: "Jihyo a remporté le prix de l'Artiste féminine de l'année aux MAMA Awards 2025, confirmant son statut de leader de TWICE.",
-          hi: "जिह्यो ने 2025 MAMA अवार्ड्स में 'फीमेल आर्टिस्ट ऑफ द ईयर' का पुरस्कार जीता, जिससे TWICE की लीडर के रूप में उनका कद और बढ़ गया।",
-          pt: "Jihyo ganhou o prêmio de 'Artista Feminina do Ano' no MAMA Awards 2025, elevando seu status como líder do TWICE.",
-          ar: "فازت جيهيو بجائزة 'فنانة العام' في حفل جوائز MAMA لعام 2025، مما عزز مكانتها كقائدة لتوايس.",
-          th: "จีฮโยคว้ารางวัล 'ศิลปินหญิงแห่งปี' ในงาน 2025 MAMA Awards ซึ่งช่วยเสริมสร้างสถานะในฐานะลีดเดอร์ของ TWICE",
-          vi: "Jihyo đã giành giải 'Nữ nghệ sĩ của năm' tại lễ trao giải MAMA 2025, nâng cao vị thế của mình với tư cách là nhóm trưởng TWICE.",
-          ru: "Джихё получила награду «Певица года» на церемонии MAMA Awards 2025, укрепив свой статус лидера TWICE."
-        },
-        url: "#"
-      },
-      {
-        title: {
-          ko: "쯔위, 대만 음악 시상식 특별 공로상 수상",
-          en: "Tzuyu Receives Special Contribution Award at Taiwan's Top Music Ceremony",
-          ja: "ツウィ、台湾の音楽授賞式で特別功労賞を受賞",
-          zh: "周子瑜在台湾音乐颁奖礼上获得特别贡献奖",
-          es: "Tzuyu recibe el Premio a la Contribución Especial en ceremonia musical de Taiwán",
-          id: "Tzuyu Menerima Penghargaan Kontribusi Khusus di Upacara Musik Top Taiwan",
-          fr: "Tzuyu reçoit un prix de contribution spéciale lors d'une cérémonie musicale à Taïwan",
-          hi: "त्ज़ुयु को ताइवान के टॉप म्यूजिक समारोह में विशेष योगदान पुरस्कार मिला",
-          pt: "Tzuyu recebe Prêmio de Contribuição Especial em cerimônia de música em Taiwan",
-          ar: "جويو تحصل على جائزة المساهمة الخاصة في أكبر حفل موسيقي في تايوان",
-          th: "จื่อวีรับรางวัลผลงานดีเด่นพิเศษในงานประกาศรางวัลทางดนตรีของไต้หวัน",
-          vi: "Tzuyu nhận giải thưởng đóng góp đặc biệt tại lễ trao giải âm nhạc hàng đầu Đài Loan",
-          ru: "Цзыюй получила награду за особый вклад на главной музыкальной премии Тайваня"
-        },
-        date: "2025.08.15",
-        summary: {
-          ko: "쯔위가 대만 최고 권위 음악 시상식에서 특별 공로상을 수상하며 고향에서도 큰 인정을 받았습니다.",
-          en: "Tzuyu received a special contribution award at Taiwan's most prestigious music ceremony, earning recognition in her home country.",
-          ja: "ツウィが台湾の最高権威の音楽授賞式で特別功労賞を受賞し、故郷でも大きな評価を得ました。",
-          zh: "周子瑜在台湾最权威的音乐颁奖礼上获得了特别贡献奖，在故乡也得到了高度认可。",
-          es: "Tzuyu recibió un premio por contribución especial en la ceremonia musical más prestigiosa de Taiwán, obteniendo un gran reconocimiento en su país de origen.",
-          id: "Tzuyu menerima penghargaan kontribusi khusus di upacara musik paling bergengsi di Taiwan, mendapatkan pengakuan besar di negara asalnya.",
-          fr: "Tzuyu a reçu un prix de contribution spéciale lors de la plus prestigieuse cérémonie musicale de Taïwan, gagnant une grande reconnaissance dans son pays d'origine.",
-          hi: "त्ज़ुयु ने ताइवान के सबसे प्रतिष्ठित संगीत समारोह में विशेष योगदान पुरस्कार प्राप्त किया, जिससे उनके गृह देश में उन्हें बड़ी पहचान मिली।",
-          pt: "Tzuyu recebeu um prêmio de contribuição especial na cerimônia de música mais prestigiosa de Taiwan, ganhando reconhecimento em seu país de origem.",
-          ar: "حصلت جويو على جائزة مساهمة خاصة في أرقى حفل موسيقي في تايوان، مما منحها تقديراً كبيراً في موطنها.",
-          th: "จื่อวีได้รับรางวัลผลงานดีเด่นพิเศษในงานประกาศรางวัลทางดนตรีที่มีชื่อเสียงที่สุดของไต้หวัน ซึ่งได้รับการยอมรับอย่างมากในบ้านเกิดของเธอ",
-          vi: "Tzuyu đã nhận được giải thưởng đóng góp đặc biệt tại lễ trao giải âm nhạc uy tín nhất Đài Loan, nhận được sự công nhận lớn tại quê nhà.",
-          ru: "Цзыюй получила награду за особый вклад на самой престижной музыкальной церемонии Тайваня, получив признание на родине."
-        },
-        url: "#"
-      },
-      {
-        title: {
-          ko: "팬덤 ONCE, 글로벌 규모 2000만 돌파",
-          en: "Fandom ONCE Surpasses 20 Million Global Members",
-          ja: "ファンダムONCE、グローバル規模で2000万人を突破",
-          zh: "粉丝团ONCE全球规模突破2000万",
-          es: "El fandom ONCE supera los 20 millones de miembros a nivel mundial",
-          id: "Fandom ONCE Melampaui 20 Juta Anggota Global",
-          fr: "Le fandom ONCE dépasse les 20 millions de membres dans le monde",
-          hi: "फैनडम ONCE ने वैश्विक स्तर पर 20 मिलियन सदस्यों को पार किया",
-          pt: "O fandom ONCE ultrapassa 20 milhões de membros globais",
-          ar: "فاندوم ONCE يتجاوز 20 مليون عضو عالمياً",
-          th: "แฟนด้อม ONCE มีสมาชิกทั่วโลกทะลุ 20 ล้านคน",
-          vi: "Fandom ONCE vượt mốc 20 triệu thành viên trên toàn cầu",
-          ru: "Фандом ONCE превысил 20 миллионов участников по всему миру"
-        },
-        date: "2025.10.20",
-        summary: {
-          ko: "트와이스의 공식 팬덤 ONCE가 글로벌 팬덤 규모 2000만 명을 돌파했습니다.",
-          en: "TWICE's official fandom ONCE surpassed 20 million members globally.",
-          ja: "TWICEの公式ファンダムONCEがグローバル規模で2000万人を突破しました。",
-          zh: "TWICE的官方粉丝团ONCE在全球范围内的粉丝规模突破了2000万人。",
-          es: "El fandom oficial de TWICE, ONCE, superó los 20 millones de miembros en todo el mundo.",
-          id: "Fandom resmi TWICE, ONCE, melampaui 20 juta anggota secara global.",
-          fr: "Le fandom officiel de TWICE, ONCE, a dépassé les 20 millions de membres dans le monde.",
-          hi: "TWICE के आधिकारिक फैनडम ONCE ने वैश्विक स्तर पर 2 करोड़ सदस्यों का आंकड़ा पार कर लिया है।",
-          pt: "O fandom oficial do TWICE, ONCE, ultrapassou 20 milhões de membros globalmente.",
-          ar: "تجاوز فاندوم توايس الرسمي (ONCE) حاجز 20 مليون عضو عالمياً.",
-          th: "แฟนด้อมอย่างเป็นทางการของ TWICE หรือ ONCE มีสมาชิกทั่วโลกทะลุ 20 ล้านคนแล้ว",
-          vi: "Fandom chính thức của TWICE là ONCE đã vượt mốc 20 triệu thành viên trên toàn cầu.",
-          ru: "Официальный фандом TWICE, ONCE, превысил 20 миллионов участников по всему миру."
-        },
-        url: "#"
-      },
-      {
-        title: {
-          ko: "데뷔 10주년 스페셜 앨범 발매 예정 발표",
-          en: "10th Anniversary Special Album Announced",
-          ja: "デビュー10周年記念スペシャルアルバムの発売予定を発表",
-          zh: "宣布计划发行出道10周年特别专辑",
-          es: "Se anuncia álbum especial por el 10º aniversario del debut",
-          id: "Pengumuman Rencana Perilisan Album Spesial HUT ke-10 Debut",
-          fr: "Annonce de l'album spécial pour le 10e anniversaire de leurs débuts",
-          hi: "डेब्यू की 10वीं सालगिरह पर स्पेशल एल्बम की घोषणा",
-          pt: "Anunciado álbum especial de 10º aniversário de estreia",
-          ar: "الإعلان عن خطة لإصدار ألبوم خاص بمناسبة الذكرى العاشرة للترسيم",
-          th: "ประกาศแผนการวางจำหน่ายอัลบั้มพิเศษฉลองครบรอบ 10 ปีการเดบิวต์",
-          vi: "Thông báo kế hoạch phát hành album đặc biệt kỷ niệm 10 năm ra mắt",
-          ru: "Анонсирован специальный альбом к 10-летию дебюта"
-        },
-        date: "2025.10.20",
-        summary: {
-          ko: "트와이스가 데뷔 10주년을 맞아 스페셜 앨범 발매 계획을 공식 발표했습니다.",
-          en: "TWICE officially announced plans for a special album to celebrate their 10th debut anniversary.",
-          ja: "TWICEがデビュー10周年を迎え、スペシャルアルバムの発売計画を公式発表しました。",
-          zh: "TWICE在出道10周年之际，正式宣布了发行特别专辑的计划。",
-          es: "TWICE anunció oficialmente planes para un álbum especial para celebrar su décimo aniversario desde el debut.",
-          id: "TWICE secara resmi mengumumkan rencana perilisan album spesial untuk merayakan hari jadi debut mereka yang ke-10.",
-          fr: "TWICE a officiellement annoncé le projet d'un album spécial pour célébrer le 10e anniversaire de ses débuts.",
-          hi: "TWICE ने अपनी शुरुआत की 10वीं वर्षगांठ मनाने के लिए एक विशेष एल्범 की योजना की आधिकारिक घोषणा की है।",
-          pt: "O TWICE anunciou oficialmente planos para um álbum especial para celebrar seu 10º aniversário de estreia.",
-          ar: "أعلنت توايس رسمياً عن خطط لإصدار ألبوم خاص للاحتفال بالذكرى العاشرة لترسيمهن.",
-          th: "TWICE ประกาศแผนการออกอัลบั้มพิเศษอย่างเป็นทางการเพื่อเฉลิมฉลองครบรอบ 10 ปีการเดบิวต์",
-          vi: "TWICE đã chính thức công bố kế hoạch phát hành album đặc biệt nhân dịp kỷ niệm 10 năm ra mắt.",
-          ru: "TWICE официально объявили о планах выпуска специального альбома в честь 10-летия своего дебюта."
-        },
-        url: "#"
-      }
-    ],
-    members: [
-      {
-        id: "nayeon",
-        name: { ko: "나연", en: "Nayeon", ja: "ナヨン", zh: "娜琏", es: "Nayeon", id: "Nayeon", fr: "Nayeon", hi: "नायोन", pt: "Nayeon", ar: "نايون", th: "นายอน", vi: "Nayeon", ru: "Наён" },
-        role: { ko: "리드 보컬, 센터", en: "Lead Vocal, Center", ja: "リードボーカル、センター", zh: "领唱、中心", es: "Vocalista principal, Centro", id: "Vokal Utama, Center", fr: "Chanteuse principale, Centre", hi: "लीड वोकल, सेंटर", pt: "Vocalista principal, Centro", ar: "مغنية رئيسية، سنتر", th: "นักร้องนำ, เซ็นเตอร์", vi: "Hát chính, Center", ru: "Ведущая вокалистка, центр" },
-        birth: "1995.09.22",
-        bloodType: "A",
-        mbti: "ENFJ",
-        height: "163cm",
-        zodiac: { ko: "처녀자리", en: "Virgo", ja: "乙女座", zh: "处女座", es: "Virgo", id: "Virgo", fr: "Vierge", hi: "कन्या", pt: "Virgem", ar: "العذراء", th: "ราศีกันย์", vi: "Xử Nữ", ru: "Дева" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Nayeon+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
-        description: {
-          ko: "트와이스 최연장자이자 첫 솔로 데뷔 멤버. 빌보드 200에 진입한 솔로 앨범과 '토순이' 별명으로 유명하며 특유의 에너지로 팀 분위기를 이끈다.",
-          en: "Oldest member and first TWICE soloist. Her Billboard 200-charting solo album and 'bunny' nickname are iconic — her infectious energy keeps the team lively.",
-          ja: "TWICEの最年長であり、最初のソロデビューメンバー。ビルボード200にランクインしたソロアルバムと「トスニ（うさぎ）」というニックネームで有名で、特有のエネルギーでチームの雰囲気をリードします。",
-          zh: "TWICE最年长的成员，也是首位个人出道的成员。凭借进入Billboard 200的个人专辑和“兔牙”绰号而闻名，以特有的活力带动团队气氛。",
-          es: "La mayor de TWICE y la primera en debutar como solista. Su álbum en solitario en el Billboard 200 y su apodo de 'conejito' son icónicos; su energía lidera el grupo.",
-          id: "Anggota tertua TWICE dan anggota pertama yang debut solo. Album solonya yang masuk Billboard 200 dan julukan 'bunny' sangat ikonik — energinya memimpin suasana tim.",
-          fr: "Membre la plus âgée et première soliste de TWICE. Son album solo classé au Billboard 200 et son surnom de 'lapin' sont emblématiques — son énergie mène l'ambiance du groupe.",
-          hi: "TWICE की सबसे बड़ी सदस्य और पहली सोलो डेब्यू सदस्य। बिलबोर्ड 200 में शामिल सोλο एल्बम और 'बनी' निकनेम के लिए प्रसिद्ध, अपनी ऊर्जा से टीम का नेतृत्व करती हैं।",
-          pt: "A integrante mais velha e a primeira solista do TWICE. Seu álbum solo no Billboard 200 e o apelido de 'coelhinha' são icônicos — sua energia lidera o grupo.",
-          ar: "أكبر عضوات توايس وأول من ترسمت منفردة. اشتهرت بألبومها المنفرد الذي دخل بيلبورد 200 ولقبها 'الأرنب' — تقود أجواء الفريق بطاقتها المميزة.",
-          th: "พี่ใหญ่ของ TWICE และสมาชิกคนแรกที่เดบิวต์เดี่ยว อัลบั้มเดี่ยวที่ติดชาร์ต Billboard 200 และฉายา 'กระต่าย' เป็นที่จดจำ — พลังของเธอช่วยสร้างบรรยากาศที่ดีให้ทีม",
-          vi: "Thành viên lớn tuổi nhất và là người đầu tiên ra mắt solo của TWICE. Album solo lọt Billboard 200 và biệt danh 'thỏ con' rất nổi tiếng — năng lượng đặc trưng giúp dẫn dắt bầu không khí của nhóm.",
-          ru: "Старшая участница TWICE и первая, дебютировавшая сольно. Знаменита сольным альбомом в Billboard 200 и прозвищем «зайка» — её энергия задает тон всей группе."
-        },
-        tmi: {
-          ko: [
-            "트와이스 최연장자이자 첫 번째로 솔로 데뷔를 한 멤버로, 솔로 앨범 'IM NAYEON'이 빌보드 200에 진입했다.",
-            "토끼를 너무 좋아해 팬덤 내에서 '토순이'라는 별명이 있으며, 앞니가 귀여운 토끼 같다는 이유다.",
-            "어린 시절 YG 연습생 경력도 있었으며, JYP로 이적 후 7년 만에 데뷔했다.",
-            "매우 활발하고 에너지 넘치는 성격으로 트와이스 분위기 메이커 역할을 한다.",
-            "독특한 '나연 춤' 리액션 짤이 전 세계 SNS에서 밈(meme)으로 퍼지며 글로벌 인지도를 높였다."
-          ],
-          en: [
-            "The oldest in TWICE and first to make a solo debut — 'IM NAYEON' entered the Billboard 200.",
-            "Nicknamed 'rabbit' by fans for her fondness of bunnies and her adorable bunny-like front teeth.",
-            "Was a YG trainee as a child before moving to JYP — debuted 7 years after joining the agency.",
-            "Known as the mood-maker of TWICE with her bubbly, high-energy personality.",
-            "Her unique 'Nayeon dance reaction' clips went viral globally as memes, boosting her international fame."
-          ],
-          ja: [
-            "TWICEの最年長で最初にソロデビューしたメンバー。ソロアルバム『IM NAYEON』はビルボード200にランクインしました。",
-            "ウサギが大好きで、ファンの間では「トスニ」というニックネームがあり、前歯が可愛いウサギに似ているからです。",
-            "子供の頃にYGの練習生だった経歴もあり、JYPに移籍してから7年でデビューしました。",
-            "非常に活発でエネルギーあふれる性格で、TWICEのムードメーカー的な役割を担っています。",
-            "独特な「ナヨン・ダンス」のリアクション動画が世界中のSNSでミームとして広まり、知名度を高めました。"
-          ],
-          zh: [
-            "TWICE最年长的成员，也是第一位个人出道的成员，个人专辑《IM NAYEON》进入了Billboard 200。",
-            "非常喜欢兔子，在粉丝中有“兔牙”的绰号，因为门牙像可爱的兔子一样。",
-            "小时候曾有YG练习生的经历，转入JYP后时隔7年出道。",
-            "性格非常活泼、充满活力，在TWICE中担任气氛制造者的角色。",
-            "独特的“娜琏舞”反应截图在全世界SNS上作为迷因（meme）流传，提高了全球知名度。"
-          ],
-          es: [
-            "La mayor de TWICE y la primera en debutar como solista; su álbum 'IM NAYEON' entró en el Billboard 200.",
-            "Le encantan los conejos y tiene el apodo de 'bunny' entre los fans debido a sus adorables dientes frontales.",
-            "Fue aprendiz de YG cuando era niña antes de mudarse a JYP; debutó 7 años después de unirse a la agencia.",
-            "Conocida como la creadora de ambiente de TWICE por su personalidad alegre y enérgica.",
-            "Sus clips de reacción de baile únicos se volvieron virales globalmente como memes, aumentando su fama internacional."
-          ],
-          id: [
-            "Tertua di TWICE dan yang pertama melakukan debut solo — 'IM NAYEON' memasuki Billboard 200.",
-            "Dijuluki 'kelinci' oleh penggemar karena kesukaannya pada kelinci dan gigi depannya yang menggemaskan.",
-            "Pernah menjadi trainee YG saat kecil sebelum pindah ke JYP — debut 7 tahun setelah bergabung dengan agensi.",
-            "Dikenal sebagai pembuat suasana di TWICE dengan kepribadiannya yang ceria dan energik.",
-            "Klip reaksi tarian uniknya menjadi viral secara global sebagai meme, meningkatkan ketenaran internasionalnya."
-          ],
-          fr: [
-            "La plus âgée de TWICE et la première à faire ses débuts en solo — 'IM NAYEON' est entré au Billboard 200.",
-            "Surnommée 'lapin' par les fans pour son affection pour les lapins et ses adorables dents de devant.",
-            "A été stagiaire chez YG enfant avant de rejoindre JYP — a débuté 7 ans après avoir rejoint l'agence.",
-            "Connue comme la boute-en-train de TWICE avec sa personnalité pétillante et énergique.",
-            "Ses clips de réactions de danse uniques sont devenus viraux mondialement comme mèmes, boostant sa renommée."
-          ],
-          hi: [
-            "TWICE में सबसे बड़ी और सोलो डेब्यू करने वाली पहली सदस्य — 'IM NAYEON' ने बिलबोर्ड 200 में प्रवेश किया।",
-            "खरगोशों के प्रति उनके लगाव और उनके प्यारे खरगोश जैसे सामने के दांतों के लिए प्रशंसकों द्वारा 'बनी' उपनाम दिया गया।",
-            "JYP में आने से पहले बचपन में YG ट्रेनी थीं — एजेंसी में शामिल होने के 7 साल बाद डेब्यू किया।",
-            "अपने चुलबुले, उच्च-ऊर्जा वाले व्यक्तित्व के साथ TWICE के मूड-मेकर के रूप में जानी जाती हैं।",
-            "उनके अद्वितीय 'नायोन डांस रिएक्शन' क्लिप मीम्स के रूप में विश्व स्तर पर वायरल हुए।"
-          ],
-          pt: [
-            "A mais velha do TWICE e a primeira a estrear solo — 'IM NAYEON' entrou no Billboard 200.",
-            "Apelidada de 'coelhinha' pelos fãs por gostar de coelhos e por seus dentes frontais adoráveis.",
-            "Foi trainee da YG quando criança antes de ir para a JYP — estreou 7 anos após entrar na agência.",
-            "Conhecida como a criadora de ambiente do TWICE com sua personalidade alegre e enérgica.",
-            "Seus clipes de reação de dança únicos tornaram-se virais globalmente como memes, aumentando sua fama."
-          ],
-          ar: [
-            "أكبر عضوات توايس وأول من ترسمت منفردة — دخل ألبومها 'IM NAYEON' مخطط بيلبورد 200.",
-            "يلقبها المعجبون بـ 'الأرنب' لحبها للأرانب ولأسنانها الأمامية اللطيفة التي تشبه الأرانب.",
-            "كانت متدربة في شركة YG عندما كانت طفلة قبل الانتقال إلى JYP — ترسمت بعد 7 سنوات من الانضمام.",
-            "تُعرف بصانعة الأجواء في توايس بفضل شخصيتها المبهجة والمليئة بالطاقة.",
-            "انتشرت مقاطع ردود فعل رقصها الفريدة كـ 'ميمز' عالمياً، مما عزز شهرتها الدولية."
-          ],
-          th: [
-            "พี่ใหญ่ของ TWICE และคนแรกที่เดบิวต์เดี่ยว — อัลบั้ม 'IM NAYEON' เข้าสู่ Billboard 200",
-            "แฟนๆ ตั้งฉายาว่า 'กระต่าย' เพราะเธอชอบกระต่ายและมีฟันหน้าที่ดูเหมือนกระต่ายที่น่ารัก",
-            "เคยเป็นเด็กฝึกที่ YG ตอนเด็กๆ ก่อนย้ายมา JYP — เดบิวต์หลังจากอยู่กับเอเจนซี่มา 7 ปี",
-            "เป็นที่รู้จักในฐานะผู้สร้างบรรยากาศของ TWICE ด้วยบุคลิกที่สดใสและมีพลังสูง",
-            "คลิปปฏิกิริยาการเต้นที่เป็นเอกลักษณ์ของเธอกลายเป็นไวรัลไปทั่วโลกในฐานะมีม"
-          ],
-          vi: [
-            "Thành viên lớn tuổi nhất TWICE và là người đầu tiên ra mắt solo — 'IM NAYEON' lọt vào Billboard 200.",
-            "Được fan đặt biệt danh là 'thỏ' vì cô rất thích thỏ và có răng cửa đáng yêu như thỏ.",
-            "Từng là thực tập sinh YG khi còn nhỏ trước khi chuyển sang JYP — ra mắt sau 7 năm gia nhập công ty.",
-            "Được biết đến là người tạo không khí của TWICE với tính cách sôi nổi, năng động.",
-            "Những đoạn clip phản ứng khi nhảy độc đáo của cô đã lan truyền toàn cầu dưới dạng meme."
-          ],
-          ru: [
-            "Старшая в TWICE и первая, кто дебютировал сольно — 'IM NAYEON' вошел в Billboard 200.",
-            "Фанаты прозвали её «зайкой» за любовь к кроликам и очаровательные передние зубки.",
-            "В детстве была стажером YG, прежде чем перейти в JYP — дебютировала через 7 лет после прихода.",
-            "Известна как мастер настроения в TWICE благодаря своему яркому и энергичному характеру.",
-            "Её уникальные танцевальные реакции стали глобальными мемами, повысив её международную популярность."
-          ]
-        },
-        socials: {}
-      },
-      {
-        id: "jeongyeon",
-        name: { ko: "정연", en: "Jeongyeon", ja: "ジョンヨン", zh: "定延", es: "Jeongyeon", id: "Jeongyeon", fr: "Jeongyeon", hi: "जोंगयोन", pt: "Jeongyeon", ar: "جونغيون", th: "จองยอน", vi: "Jeongyeon", ru: "Чонён" },
-        role: { ko: "보컬", en: "Vocal", ja: "ボーカル", zh: "主唱", es: "Vocalista", id: "Vokal", fr: "Chanteuse", hi: "वोकल", pt: "Vocalista", ar: "مغنية", th: "นักร้อง", vi: "Hát", ru: "Вокалистка" },
-        birth: "1996.11.01",
-        bloodType: "O",
-        mbti: "ISTP",
-        height: "167cm",
-        zodiac: { ko: "전갈자리", en: "Scorpio", ja: "さそり座", zh: "天蝎座", es: "Escorpio", id: "Scorpio", fr: "Scorpion", hi: "वृश्चिक", pt: "Escorpião", ar: "العقرب", th: "ราศีพิจิก", vi: "Thiên Yết", ru: "Скорпион" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Jeongyeon+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
-        description: {
-          ko: "배우 엄정화의 조카로 트와이스 내 '팩폭 담당'. 건강 문제 극복 후 복귀해 팬들에게 감동을 선사했으며, 단발 트레이드마크로 사랑받는다.",
-          en: "Niece of actress Uhm Jung-hwa, known as TWICE's 'blunt truth-teller'. Her health comeback deeply moved fans, and her signature short hair is beloved.",
-          ja: "女優オム・ジョンファの姪であり、TWICE内では「毒舌担当」。健康問題を克服して復帰し、ファンに感動を与えました。ショートヘアがトレードマークとして愛されています。",
-          zh: "演员严正化的侄女，在TWICE中担任“事实暴击”。克服健康问题后回归，令粉丝深受感动，以标志性的短发深受喜爱。",
-          es: "Sobrina de la actriz Uhm Jung-hwa, conocida como la 'sincera' de TWICE. Su regreso tras problemas de salud conmovió a los fans; su pelo corto es su marca personal.",
-          id: "Keponakan aktris Uhm Jung-hwa, dikenal sebagai 'pemberi fakta jujur' di TWICE. Kembalinya setelah masalah kesehatan sangat mengharukan; rambut pendeknya adalah ikon.",
-          fr: "Nièce de l'actrice Uhm Jung-hwa, connue pour sa franchise dans TWICE. Son retour après des soucis de santé a ému les fans ; sa coupe courte est sa signature.",
-          hi: "अभिनेत्री उह्म जंग-ह्वा की भतीजी, जिन्हें TWICE के 'स्पष्टवादी' के रूप में जाना जाता है। स्वास्थ्य समस्याओं के बाद उनकी वापसी ने प्रशंसकों को प्रभावित किया।",
-          pt: "Sobrinha da atriz Uhm Jung-hwa, conhecida como a 'sincera' do TWICE. Seu retorno após problemas de saúde emocionou os fãs; seu cabelo curto é sua marca registrada.",
-          ar: "ابنة أخت الممثلة أوم جونغ هوا، وتُعرف بـ 'قاصفة الجبهات' في توايس. أثرت عودتها بعد مشاكل صحية في المعجبين، وتشتهر بشعرها القصير.",
-          th: "หลานสาวของนักแสดงออมจองฮวา เป็นผู้ที่ 'พูดตรง' ที่สุดในวง การกลับมาหลังจากปัญหาสุขภาพสร้างความประทับใจให้แฟนๆ และทรงผมสั้นของเธอก็เป็นที่รักอย่างมาก",
-          vi: "Cháu gái của diễn viên Uhm Jung-hwa, nổi tiếng với sự thẳng thắn trong TWICE. Sự trở lại sau vấn đề sức khỏe đã gây xúc động; mái tóc ngắn là thương hiệu của cô.",
-          ru: "Племянница актрисы Ом Чжон Хва, известная своей прямолинейностью. Её возвращение после проблем со здоровьем тронуло фанатов; короткая стрижка — её визитная карточка."
-        },
-        tmi: {
-          ko: [
-            "배우 엄정화의 조카로, 연예계 혈통을 이어받은 셈이지만 자신만의 길을 개척했다.",
-            "건강 문제로 활동을 잠시 중단했다가 복귀하며 팬들에게 큰 감동을 선사했다.",
-            "단발 머리 트레이드마크로 유명하며, 장발보다 단발이 훨씬 더 잘 어울린다는 평을 받는다.",
-            "트와이스 멤버 중 가장 솔직하고 직설적인 성격으로 '팩트폭격' 캐릭터로 사랑받는다.",
-            "언니 유이는 배우로 활동 중이며, 자매가 모두 연예계에서 성공한 드문 사례다."
-          ],
-          en: [
-            "Niece of renowned actress Uhm Jung-hwa — carrying entertainment industry DNA, but forging her own path.",
-            "Temporarily stepped away from activities due to health issues, and her comeback deeply moved fans.",
-            "Famous for her signature short hair — widely considered to suit her better than long hair.",
-            "Known as the most blunt and honest member of TWICE — fans love her 'fact bomb' personality.",
-            "Her sister Yui is also an actress, making them a rare siblings-both-successful-in-entertainment case."
-          ],
-          ja: [
-            "有名女優オム・ジョンファの姪で、芸能界の血筋を引いていますが、自分自身の道を切り開きました。",
-            "健康問題で活動を一時中断しましたが、復帰してファンに大きな感動を与えました。",
-            "ショートヘアがトレードマークで、ロングヘアよりもショートの方が断然似合うと評判です。",
-            "TWICEメンバーの中で最も正直で直説的な性格で、「ファクト暴力（毒舌）」キャラとして愛されています。",
-            "姉のユイは女優として活動しており、姉妹揃って芸能界で成功した珍しいケースです。"
-          ],
-          zh: [
-            "演员严正化的侄女，虽然继承了演艺圈血统，但开辟了自己的道路。",
-            "曾因健康问题暂时中断活动，回归时带给粉丝很大的感动。",
-            "以标志性的短发闻名，被评价为短发比长发更适合她。",
-            "在TWICE成员中性格最诚实、直爽，因“事实暴击”角色而受到喜爱。",
-            "姐姐孔升妍（本名俞昇延）作为演员活动，是姐妹俩都在演艺圈取得成功的罕见案例。"
-          ],
-          es: [
-            "Sobrina de la actriz Uhm Jung-hwa; lleva el ADN del entretenimiento pero ha forjado su propio camino.",
-            "Dejó temporalmente las actividades por problemas de salud y su regreso conmovió profundamente a los fans.",
-            "Famosa por su característico pelo corto; se considera ampliamente que le queda mejor que el largo.",
-            "Conocida como la miembro más franca y honesta de TWICE; a los fans les encanta su sinceridad.",
-            "Su hermana Yui también es actriz, siendo un caso raro de hermanas exitosas en el entretenimiento."
-          ],
-          id: [
-            "Keponakan aktris Uhm Jung-hwa — membawa DNA industri hiburan, tetapi merintis jalannya sendiri.",
-            "Sempat vakum karena masalah kesehatan, dan kembalinya sangat menyentuh hati penggemar.",
-            "Terkenal dengan rambut pendek khasnya — dianggap lebih cocok untuknya daripada rambut panjang.",
-            "Dikenal sebagai anggota TWICE yang paling jujur dan blak-blakan — penggemar menyukai kepribadiannya.",
-            "Kakaknya Yui juga seorang aktris, menjadikan mereka kasus langka saudara kandung yang sukses di hiburan."
-          ],
-          fr: [
-            "Nièce de l'actrice Uhm Jung-hwa — porte l'ADN de l'industrie, mais trace sa propre voie.",
-            "A temporairement suspendu ses activités pour raisons de santé, son retour a ému les fans.",
-            "Célèbre pour sa coupe courte signature — on considère que cela lui va mieux que les cheveux longs.",
-            "Connue comme la membre la plus franche de TWICE — les fans adorent sa personnalité directe.",
-            "Sa sœur Yui est aussi actrice, ce qui en fait un cas rare de fratrie ayant réussi dans le milieu."
-          ],
-          hi: [
-            "प्रसिद्ध अभिनेत्री उह्म जंग-ह्वा की भतीजी — मनोरंजन उद्योग का DNA होने के बावजूद, अपनी राह खुद बनाई।",
-            "स्वास्थ्य समस्याओं के कारण कुछ समय के लिए गतिविधियों से दूर रहीं, और उनकी वापसी ने प्रशंसकों को भावुक कर दिया।",
-            "अपने सिग्नेचर छोटे बालों के लिए प्रसिद्ध — माना जाता है कि लंबे बालों की तुलना में उन पर छोटे बाल अधिक सूट करते हैं।",
-            "TWICE की सबसे स्पष्ट और ईमानदार सदस्य के रूप में जानी जाती हैं — प्रशंसक उनके व्यक्तित्व को पसंद करते हैं।",
-            "उनकी बहन युई भी एक अभिनेत्री हैं, जो मनोरंजन में दोनों भाई-बहनों के सफल होने का एक दुर्लभ उदाहरण है।"
-          ],
-          pt: [
-            "Sobrinha da renomada atriz Uhm Jung-hwa — carrega o DNA da indústria, mas trilha seu próprio caminho.",
-            "Afastou-se temporariamente devido a problemas de saúde, e seu retorno emocionou profundamente os fãs.",
-            "Famosa por seu cabelo curto — amplamente considerado como combinando mais com ela do que longo.",
-            "Conhecida como a integrante mais franca e honesta do TWICE — os fãs amam sua sinceridade.",
-            "Sua irmã Yui também é atriz, sendo um caso raro de irmãs ambas bem-sucedidas no entretenimento."
-          ],
-          ar: [
-            "ابنة أخت الممثلة الشهيرة أوم جونغ هوا — تحمل جينات الفن، لكنها شقت طريقها الخاص.",
-            "ابتعدت مؤقتاً عن الأنشطة بسبب مشاكل صحية، وكانت عودتها مؤثرة جداً للمعجبين.",
-            "تشتهر بشعرها القصير — ويُعتقد على نطاق واسع أنه يناسبها أكثر من الشعر الطويل.",
-            "تُعرف بأنها الأكثر صراحة وصدقاً في توايس — ويحب المعجبون شخصيتها المباشرة.",
-            "أختها يوي هي أيضاً ممثلة، مما يجعلهما حالة نادرة لأختين ناجحتين في عالم الفن."
-          ],
-          th: [
-            "หลานสาวของนักแสดงชื่อดัง ออมจองฮวา — มีสายเลือดศิลปินแต่สร้างทางเดินของตัวเอง",
-            "หยุดพักกิจกรรมชั่วคราวเนื่องจากปัญหาสุขภาพ และการกลับมาของเธอก็สร้างความประทับใจให้แฟนๆ อย่างมาก",
-            "โด่งดังจากทรงผมสั้นที่เป็นเอกลักษณ์ — ซึ่งได้รับการยอมรับว่าเข้ากับเธอมากกว่าผมยาว",
-            "เป็นที่รู้จักในฐานะสมาชิกที่ซื่อสัตย์และตรงไปตรงมาที่สุดของ TWICE — แฟนๆ ชอบความตรงของเธอ",
-            "พี่สาวของเธอ ยูอี ก็เป็นนักแสดงเช่นกัน ทำให้เป็นพี่น้องที่ประสบความสำเร็จในวงการทั้งคู่"
-          ],
-          vi: [
-            "Cháu gái của nữ diễn viên nổi tiếng Uhm Jung-hwa — mang dòng máu nghệ thuật nhưng tự đi con đường riêng.",
-            "Tạm dừng hoạt động vì vấn đề sức khỏe, sự trở lại của cô đã làm xúc động người hâm mộ.",
-            "Nổi tiếng với mái tóc ngắn thương hiệu — được cho là hợp với cô hơn cả tóc dài.",
-            "Được biết đến là thành viên thẳng thắn và trung thực nhất TWICE — fan yêu thích tính cách này của cô.",
-            "Chị gái Yui cũng là diễn viên, tạo nên cặp chị em cùng thành công trong làng giải trí hiếm hoi."
-          ],
-          ru: [
-            "Племянница знаменитой актрисы Ом Чжон Хва — унаследовала творческие гены, но идет своим путем.",
-            "Временно приостанавливала деятельность по состоянию здоровья, и её возвращение тронуло фанатов.",
-            "Знаменита своей короткой стрижкой — считается, что она идет ей гораздо больше, чем длинные волосы.",
-            "Известна как самая честная и прямолинейная участница TWICE — фанаты любят её за это.",
-            "Её сестра Юи также актриса, что делает их редким примером того, когда обе сестры успешны в искусстве."
-          ]
-        },
-        socials: {}
-      },
-      {
-        id: "momo",
-        name: { ko: "모모", en: "Momo", ja: "モモ", zh: "Momo", es: "Momo", id: "Momo", fr: "Momo", hi: "मोमो", pt: "Momo", ar: "مومو", th: "โมโมะ", vi: "Momo", ru: "Момо" },
-        role: { ko: "댄서, 보컬", en: "Dancer, Vocal", ja: "ダンサー、ボーカル", zh: "舞者、主唱", es: "Bailarina, Vocalista", id: "Dancer, Vokal", fr: "Danseuse, Chanteuse", hi: "डांसर, वोकल", pt: "Dançarina, Vocalista", ar: "راقصة، مغنية", th: "นักเต้น, นักร้อง", vi: "Nhảy, Hát", ru: "Танцовщица, вокалистка" },
-        birth: "1996.11.09",
-        bloodType: "B",
-        mbti: "ESFP",
-        height: "163cm",
-        zodiac: { ko: "전갈자리", en: "Scorpio", ja: "さそり座", zh: "天蝎座", es: "Escorpio", id: "Scorpio", fr: "Scorpion", hi: "वृश्चिक", pt: "Escorpião", ar: "العقرب", th: "ราศีพิจิก", vi: "Thiên Yết", ru: "Скорпион" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Momo+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
-        description: {
-          ko: "오사카 출신의 트와이스 메인 댄서. SIXTEEN 탈락 후 긴급 합류한 '기적의 멤버'로, E-girls 댄서들과 어깨를 나란히 하는 압도적 댄스 실력의 소유자.",
-          en: "Osaka-born main dancer of TWICE. A 'miracle member' added back after elimination from SIXTEEN, her dancing is on par with Japan's elite E-girls performers.",
-          ja: "大阪出身のTWICEメインダンサー。SIXTEEN脱落後に急遽合流した「奇跡のメンバー」で、E-girlsのダンサーたちと肩を並べる圧倒的なダンスの実力の持ち主。",
-          zh: "来自大阪的TWICE主舞。在《SIXTEEN》被淘汰后紧急加入的“奇迹成员”，拥有足以与E-girls舞者媲美的压倒性舞蹈实力。",
-          es: "Bailarina principal de TWICE nacida en Osaka. Una 'miembro milagro' añadida tras ser eliminada de SIXTEEN; su baile está a la altura de la élite de E-girls.",
-          id: "Main dancer TWICE kelahiran Osaka. 'Anggota ajaib' yang bergabung kembali setelah tereliminasi dari SIXTEEN; tariannya setara dengan penari elit E-girls.",
-          fr: "Danseuse principale de TWICE née à Osaka. Membre 'miracle' repêchée après son élimination de SIXTEEN, son niveau de danse égale l'élite des E-girls.",
-          hi: "ओसाका में जन्मी TWICE की मुख्य डांसर। SIXTEEN से बाहर होने के बाद वापस जोड़ी गईं 'चमत्कारी सदस्य', उनका डांस जापान के एलीट डांसर्स के बराबर है।",
-          pt: "Dançarina principal do TWICE nascida em Osaka. Uma 'integrante milagrosa' adicionada após eliminação do SIXTEEN; sua dança está no nível da elite do E-girls.",
-          ar: "الراقصة الرئيسية في توايس من أوساكا. 'عضوة معجزة' أضيفت للفريق بعد استبعادها من SIXTEEN، وتعتبر رقصاتها بمستوى نخبة راقصات E-girls.",
-          th: "เมนแดนซ์ของ TWICE จากโอซาก้า 'สมาชิกที่มหัศจรรย์' ซึ่งถูกเรียกกลับมาหลังจากตกรอบใน SIXTEEN ทักษะการเต้นของเธอเทียบเท่ากับนักเต้นระดับแนวหน้า",
-          vi: "Nhảy chính của TWICE đến từ Osaka. 'Thành viên kỳ diệu' được thêm lại sau khi bị loại khỏi SIXTEEN, kỹ năng nhảy của cô ngang hàng với các vũ công E-girls.",
-          ru: "Главная танцовщица TWICE из Осаки. «Чудо-участница», вернувшаяся в группу после вылета из SIXTEEN; её танцы не уступают элите японских E-girls."
-        },
-        tmi: {
-          ko: [
-            "일본 오사카 출신으로, SIXTEEN 서바이벌 당시 탈락했다가 긴급 합류한 '기적의 멤버'다.",
-            "트와이스 메인 댄서로, 춤 실력 하나로 일본 스타 집단 E-girls 출신 댄서들과 어깨를 나란히 한다는 평을 받는다.",
-            "한국에 온 첫 해 언어 장벽 극복을 위해 하루 종일 한국 TV를 보며 언어를 독학했다.",
-            "먹방 콘텐츠가 인기 있는 멤버로, 엄청난 식욕과 귀여운 먹는 모습으로 유명하다.",
-            "연습생 시절 1주일 동안 밥 한 공기만 먹으며 체중을 감량한 일화가 화제가 된 적 있다."
-          ],
-          en: [
-            "From Osaka, Japan — was eliminated from SIXTEEN but urgently added back, becoming a 'miracle member'.",
-            "TWICE's main dancer, often compared favorably to professional dancers from Japan's elite group E-girls.",
-            "In her first year in Korea, she learned Korean entirely by watching TV all day to overcome the language barrier.",
-            "Famous for her massive appetite and adorable eating habits — her 'mukbang moments' are fan favorites.",
-            "During trainee days, reportedly survived on a single bowl of rice for a week to lose weight before debut — a story that shocked fans."
-          ],
-          ja: [
-            "大阪出身で、SIXTEEN当時一度脱落しましたが、急遽合流した「奇跡のメンバー」です。",
-            "TWICEのメインダンサーで、ダンスの実力だけで日本のE-girls出身のダンサーたちと肩を並べると評価されています。",
-            "韓国に来た最初の年、言葉の壁を克服するために一日中韓国のテレビを見て独学しました。",
-            "モッパン（食べる動画）が人気のメンバーで、旺盛な食欲と可愛い食べ姿で有名です。",
-            "練習生時代、1週間にご飯1杯だけで過ごして減量したというエピソードが話題になったことがあります。"
-          ],
-          zh: [
-            "来自日本大阪，在《SIXTEEN》生存赛中曾被淘汰，后紧急加入成为“奇迹成员”。",
-            "作为TWICE的主舞，被评价为仅凭舞蹈实力就能与日本组合E-girls出身的舞者并驾齐驱。",
-            "到韩国的第一年为了克服语言障碍，整天看韩国电视自学韩语。",
-            "吃播内容非常受欢迎，以惊人的食欲和可爱的吃相闻名。",
-            "练习生时期曾为了减肥，在一周内只吃一碗饭，这一轶事曾引发热议。"
-          ],
-          es: [
-            "De Osaka, Japón; fue eliminada de SIXTEEN pero se reincorporó de urgencia, siendo una 'miembro milagro'.",
-            "Bailarina principal de TWICE, a menudo comparada con bailarinas profesionales de la élite de E-girls.",
-            "En su primer año en Corea, aprendió coreano viendo la televisión todo el día para superar la barrera del idioma.",
-            "Famosa por su gran apetito y adorables hábitos al comer; sus momentos 'mukbang' son favoritos de los fans.",
-            "En sus días de aprendiz, sobrevivió con un solo tazón de arroz por semana para perder peso, una historia que impactó."
-          ],
-          id: [
-            "Berasal dari Osaka, Jepang — tereliminasi dari SIXTEEN tetapi segera dipanggil kembali menjadi 'anggota ajaib'.",
-            "Main dancer TWICE, sering dibandingkan secara positif dengan penari profesional dari grup elit Jepang E-girls.",
-            "Di tahun pertamanya di Korea, dia belajar bahasa Korea sepenuhnya dengan menonton TV sepanjang hari.",
-            "Terkenal dengan nafsu makannya yang besar dan kebiasaan makan yang lucu — momen mukbangnya adalah favorit penggemar.",
-            "Selama masa trainee, dilaporkan bertahan hidup hanya dengan semangkuk nasi selama seminggu untuk menurunkan berat badan."
-          ],
-          fr: [
-            "D'Osaka, Japon — a été éliminée de SIXTEEN puis réintégrée d'urgence, devenant une 'membre miracle'.",
-            "Danseuse principale de TWICE, souvent comparée aux danseuses professionnelles de l'élite japonaise E-girls.",
-            "Lors de sa première année en Corée, elle a appris le coréen seule en regardant la télé toute la journée.",
-            "Célèbre pour son appétit et ses habitudes alimentaires adorables — ses moments 'mukbang' sont cultes.",
-            "En tant que stagiaire, elle n'aurait mangé qu'un bol de riz par semaine pour perdre du poids avant ses débuts."
-          ],
-          hi: [
-            "ओसाका, जापान से — SIXTEEN से बाहर हो गई थीं लेकिन तत्काल वापस बुला लिया गया, जिससे वे 'चमत्कारी सदस्य' बनीं।",
-            "TWICE की मुख्य डांसर, जिनकी तुलना जापान के एलीट ग्रुप E-girls के पेशेवर नर्तकियों से की जाती है।",
-            "कोरिया में अपने पहले वर्ष में, उन्होंने भाषा की बाधा को दूर करने के लिए दिन भर टीवी देखकर कोरियाई सीखी।",
-            "अपनी भूख और खाने की आदतों के लिए प्रसिद्ध — उनके 'मुखबांग मोमेंट्स' प्रशंसकों के पसंदीदा हैं।",
-            "ट्रेनी दिनों के दौरान, वजन घटाने के लिए एक सप्ताह तक केवल एक कटोरी चावल पर जीवित रहीं — एक चौंकाने वाली कहानी।"
-          ],
-          pt: [
-            "De Osaka, Japão — foi eliminada do SIXTEEN, mas reintegrada com urgência, tornando-se uma 'integrante milagrosa'.",
-            "Dançarina principal do TWICE, muitas vezes comparada a dançarinas profissionais do grupo de elite japonês E-girls.",
-            "Em seu primeiro ano na Coreia, aprendeu coreano assistindo TV o dia todo para superar a barreira do idioma.",
-            "Famosa por seu grande apetite e hábitos alimentares adoráveis — seus momentos 'mukbang' são favoritos dos fãs.",
-            "Nos tempos de trainee, sobreviveu com apenas uma tigela de arroz por semana para emagrecer — história que chocou os fãs."
-          ],
-          ar: [
-            "من أوساكا، اليابان — استُبعدت من SIXTEEN لكن أعيدت بشكل عاجل، لتصبح 'العضوة المعجزة'.",
-            "راقصة توايس الرئيسية، وغالباً ما تُقارن بالراقصات المحترفات من فرقة النخبة اليابانية E-girls.",
-            "في سنتها الأولى في كوريا، تعلمت الكورية بمشاهدة التلفاز طوال اليوم لتتجاوز عائق اللغة.",
-            "تشتهر بشهيتها الكبيرة وعاداتها اللطيفة في الأكل — مقاطع أكلها (mukbang) مفضلة لدى المعجبين.",
-            "خلال أيام التدريب، قيل إنها عاشت على وعاء أرز واحد فقط لمدة أسبوع لإنقاص وزنها قبل الترسيم."
-          ],
-          th: [
-            "จากโอซาก้า ญี่ปุ่น — ถูกคัดออกในรายการ SIXTEEN แต่ถูกเรียกกลับมาด่วน จนกลายเป็น 'สมาชิกที่มหัศจรรย์'",
-            "เมนแดนซ์ของ TWICE ซึ่งมักถูกเปรียบเทียบกับนักเต้นมืออาชีพจากวง E-girls ระดับแนวหน้าของญี่ปุ่น",
-            "ในปีแรกที่เกาหลี เธอเรียนภาษาเกาหลีจากการดูทีวีตลอดทั้งวันเพื่อก้าวข้ามกำแพงภาษา",
-            "โด่งดังจากความอยากอาหารและนิสัยการกินที่น่ารัก — ช่วงเวลา 'มุกบัง' ของเธอเป็นที่ชื่นชอบของแฟนๆ",
-            "ในช่วงเป็นเด็กฝึก มีรายงานว่าเธอกินข้าวเพียงวันละถ้วยต่อสัปดาห์เพื่อลดน้ำหนักก่อนเดบิวต์ ซึ่งเป็นเรื่องที่แฟนๆ ตกใจมาก"
-          ],
-          vi: [
-            "Đến từ Osaka, Nhật Bản — bị loại khỏi SIXTEEN nhưng được gọi lại khẩn cấp, trở thành 'thành viên kỳ diệu'.",
-            "Nhảy chính của TWICE, thường được so sánh với các vũ công chuyên nghiệp từ nhóm nhạc ưu tú E-girls Nhật Bản.",
-            "Trong năm đầu tiên ở Hàn Quốc, cô đã tự học tiếng Hàn bằng cách xem TV cả ngày.",
-            "Nổi tiếng với sức ăn lớn và thói quen ăn uống đáng yêu — những khoảnh khắc 'mukbang' của cô là niềm yêu thích của fan.",
-            "Thời thực tập sinh, có thông tin cô chỉ sống bằng một bát cơm trong một tuần để giảm cân trước khi ra mắt."
-          ],
-          ru: [
-            "Из Осаки, Япония — была исключена из SIXTEEN, но экстренно возвращена, став «чудо-участницей».",
-            "Главная танцовщица TWICE, её часто сравнивают с профессиональными танцовщицами из японской группы E-girls.",
-            "В первый год в Корее учила язык, целыми днями смотря телевизор, чтобы преодолеть языковой барьер.",
-            "Знаменита своим аппетитом и очаровательными привычками в еде — её «мукбанг-моменты» обожаемы фанатами.",
-            "В стажерские дни, по слухам, целую неделю жила на одной миске риса, чтобы похудеть перед дебютом."
-          ]
-        },
-        socials: {}
-      },
-      {
-        id: "sana",
-        name: { ko: "사나", en: "Sana" },
-        role: { ko: "보컬", en: "Vocal" },
-        birth: "1996.12.29",
-        bloodType: "A",
-        mbti: "ESFJ",
-        height: "163cm",
-        zodiac: { ko: "염소자리", en: "Capricorn" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Sana+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
-        description: { ko: "오사카 출신의 '사나 말투' 장인. 'shy shy shy' 밈으로 전 세계에서 유명하며 트와이스 내 인스타 팔로워 1위, '국민 첫사랑' 이미지의 주인공.", en: "Osaka-born queen of the 'Sana dialect'. Famous globally for the 'shy shy shy' meme, she has the most Instagram followers in TWICE and a 'nation's first love' image." },
-        tmi: {
-          ko: [
-            "일본 오사카 출신으로, '사나 말투'라고 불리는 독특한 한국어 억양이 트레이드마크가 됐다.",
-            "'shy shy shy' 등 귀여운 멘트가 밈(meme)이 될 정도로 전 세계적으로 유명하다.",
-            "한국 예능에서 보여준 솔직하고 귀여운 모습으로 '국민 첫사랑' 이미지를 굳혔다.",
-            "SNS에서 인스타그램 팔로워 수가 트와이스 멤버 중 가장 많다.",
-            "사실 한국행을 결정하기 전까지 아이돌이 될 생각이 없었으며, 우연히 JYP 오디션 소식을 듣고 도전했다."
-          ],
-          en: [
-            "From Osaka, Japan — her unique Korean accent, called the 'Sana dialect', became a beloved trademark.",
-            "Her 'shy shy shy' moment became a global meme — one of K-pop's most recognizable viral clips.",
-            "Solidified a 'nation's first love' image in Korea through her candid, adorable variety show appearances.",
-            "Has the most Instagram followers among all TWICE members.",
-            "Didn't plan to become an idol before deciding to come to Korea — heard about the JYP audition by chance."
-          ]
-        },
-        socials: {}
-      },
-      {
-        id: "jihyo",
-        name: { ko: "지효", en: "Jihyo" },
-        role: { ko: "리더, 메인 보컬", en: "Leader, Main Vocal" },
-        birth: "1997.02.01",
-        bloodType: "A",
-        mbti: "ESFJ",
-        height: "160cm",
-        zodiac: { ko: "물병자리", en: "Aquarius" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Jihyo+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
-        description: { ko: "JYP 10년 연습생 출신의 트와이스 리더이자 메인 보컬. '박신이'라는 극찬을 받는 보컬 실력과 9명을 하나로 묶는 리더십으로 팀의 중심이다.", en: "Leader and main vocal of TWICE with a legendary 10-year JYP trainee period. Praised as 'Park Shin-i' (Park sent by God), she is the unifying center of all 9 members." },
-        tmi: {
-          ko: [
-            "JYP 연습생 기간이 무려 10년(2008~2018)으로, K-Pop 역사상 가장 긴 연습 기간을 거친 아이돌 중 하나다.",
-            "트와이스 리더이자 메인 보컬로, 팀의 정서적 지주 역할을 한다.",
-            "솔로 데뷔 앨범 'ZONE'이 발매되자마자 각종 차트 상위권에 진입했다.",
-            "팬들 사이에서 '박신이(신이 보낸 박 씨)'라는 별명이 있을 정도로 보컬 실력이 뛰어나다.",
-            "리더로서 9명의 멤버가 각자 목소리를 낼 수 있도록 항상 앞장서서 소통을 이끈다."
-          ],
-          en: [
-            "Was a JYP trainee for 10 years (2008–2018) — one of the longest training periods in K-pop history.",
-            "Leader and main vocal of TWICE, serving as the emotional anchor of the group.",
-            "Her solo debut album 'ZONE' immediately charted high across multiple platforms.",
-            "Fan nickname 'Park Shin-i' (Park sent by God) reflects how fans regard her vocal as divinely gifted.",
-            "As leader, she consistently facilitates open communication so all 9 members can voice their opinions."
-          ]
-        },
-        socials: {}
-      },
-      {
-        id: "mina",
-        name: { ko: "미나", en: "Mina" },
-        role: { ko: "댄서, 보컬", en: "Dancer, Vocal" },
-        birth: "1997.03.24",
-        bloodType: "A",
-        mbti: "ISFP",
-        height: "163cm",
-        zodiac: { ko: "양자리", en: "Aries" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Mina+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
-        description: { ko: "텍사스 출신·일본 성장의 발레 댄서. 불안 장애 극복 후 무대 복귀로 팬들에게 큰 용기를 줬으며, '블랙 스완'이라는 별명처럼 가장 우아한 무대를 선보인다.", en: "Texas-born, Japan-raised ballet dancer. Her courageous return to stage after anxiety disorder moved fans worldwide — her graceful presence earns her the nickname 'Black Swan'." },
-        tmi: {
-          ko: [
-            "미국 텍사스 출신이지만 일본에서 성장했으며, 발레 경력이 트와이스 퍼포먼스에 큰 기여를 한다.",
-            "불안 장애 진단을 받아 활동을 중단했다가 복귀한 스토리가 전 세계 팬들에게 큰 위로와 용기를 줬다.",
-            "트와이스 멤버 중 가장 우아하고 고풍스러운 이미지로 '블랙 스완'이라는 별명을 갖고 있다.",
-            "패션 감각이 뛰어나 일본 럭셔리 패션 잡지의 단골 표지 모델이다.",
-            "JYP 연습생 시절 일본어로만 소통하다가 한국어를 늦게 습득했음에도 현재는 유창하게 구사한다."
-          ],
-          en: [
-            "Born in Texas, USA but grew up in Japan — her ballet background greatly enhances TWICE's performance quality.",
-            "Her journey of taking a hiatus due to anxiety disorder, then returning, moved fans worldwide and became a symbol of courage.",
-            "Has the most elegant, classical image in TWICE — nicknamed 'Black Swan' for her graceful stage presence.",
-            "A regular cover model for Japanese luxury fashion magazines for her impeccable sense of style.",
-            "Learned Korean relatively late while communicating mainly in Japanese as a trainee, but now speaks fluently."
-          ]
-        },
-        socials: {}
-      },
-      {
-        id: "dahyun",
-        name: { ko: "다현", en: "Dahyun", ja: "ダヒョン", zh: "多贤", es: "Dahyun", id: "Dahyun", fr: "Dahyun", hi: "दाह्युन", pt: "Dahyun", ar: "داهيون", th: "ดาฮยอน", vi: "Dahyun", ru: "Дахён" },
-        role: { ko: "래퍼, 보컬", en: "Rapper, Vocal", ja: "ラッパー、ボーカル", zh: "说唱, 领唱", es: "Rapera, Vocalista", id: "Rapper, Vokal", fr: "Rappeuse, Vocale", hi: "रैपर, वोकल", pt: "Rapper, Vocal", ar: "رابر، صوت", th: "แร็ปเปอร์, โวคอล", vi: "Rapper, Hát chính", ru: "Рэпер, Вокалист" },
-        birth: "1998.05.28",
-        bloodType: "A",
-        mbti: "ENFP",
-        height: "163cm",
-        zodiac: { ko: "쌍둥이자리", en: "Gemini", ja: "ふたご座", zh: "双子座", es: "Géminis", id: "Gemini", fr: "Gémeaux", hi: "मिथुन", pt: "Gêmeos", ar: "الجوزاء", th: "เมถุน", vi: "Song Tử", ru: "Близнецы" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Dahyun+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
-        description: {
-          ko: "학예회 영상 바이럴로 길거리 캐스팅된 트와이스 유머 담당. '꼬마 유령', '두부미녀'로 불리는 독특한 매력과 자칭 '닌텐도 천재'로 팬들에게 사랑받는다.",
-          en: "Street-cast after a school talent show video went viral. Beloved as TWICE's comedian, nicknamed 'mini ghost' and 'tofu beauty' — also the self-proclaimed Nintendo champion of the group.",
-          ja: "学芸会の動画がバズったことでスカウトされたTWICEのムードメーカー。「ちびお化け」「豆腐美女」と呼ばれる独特な魅力と、自称「任天堂の天才」としてファンに愛されている。",
-          zh: "因学校才艺展示视频走红而被街头发掘的TWICE搞笑担当。以“小鬼魂”、“豆腐美女”等独特魅力和自封的“任天堂天才”深受粉丝喜爱。",
-          es: "Descubierta tras hacerse viral un vídeo de su festival escolar. Querida como la humorista de TWICE, apodada 'pequeño fantasma' y 'belleza de tofu'; también es la autoproclamada campeona de Nintendo del grupo.",
-          id: "Ditemukan di jalan setelah video acara bakat sekolahnya menjadi viral. Dicintai sebagai pelawak TWICE, dijuluki 'hantu kecil' dan 'kecantikan tahu' — juga memproklamirkan diri sebagai juara Nintendo di grup.",
-          fr: "Repérée dans la rue après qu'une vidéo d'un spectacle scolaire est devenue virale. Aimée comme la comique de TWICE, surnommée 'petit fantôme' et 'beauté de tofu' — elle est aussi l'autoproclamée championne de Nintendo du groupe.",
-          hi: "स्कूल टैलेंट शो वीडियो वायरल होने के बाद स्ट्रीट-कास्ट की गई TWICE की कॉमेडियन। 'मिनी घोस्ट' और 'टोफू ब्यूटी' के नाम से मशहूर, और खुद को ग्रुप की निनटेंडो चैंपियन मानने वाली।",
-          pt: "Escalada na rua após um vídeo de um festival escolar se tornar viral. Amada como a humorista do TWICE, apelidada de 'pequeno fantasma' e 'beleza de tofu' — também a autoproclamada campeã de Nintendo do grupo.",
-          ar: "تم اكتشافها في الشارع بعد انتشار فيديو لها في عرض مواهب مدرسي. محبوبة كعنصر الفكاهة في TWICE، ملقبة بـ 'الشبح الصغير' و'جميلة التوفو' - وتعتبر نفسها بطلة نينتندو في الفرقة.",
-          th: "ได้รับเลือกเข้าวงหลังจากวิดีโอแสดงความสามารถที่โรงเรียนกลายเป็นไวรัล เป็นตัวสร้างเสียงหัวเราะของ TWICE มีเสน่ห์เฉพาะตัวจนได้ฉายา 'ผีน้อย' และ 'เต้าหู้คนสวย' รวมถึงเป็นแชมป์นินเทนโดที่แฟนๆ รัก",
-          vi: "Được phát hiện sau khi video diễn văn nghệ trường trở nên viral. Được yêu mến như cây hài của TWICE, biệt danh 'ma nhỏ' và 'mỹ nhân đậu phụ' — cô cũng tự nhận là thiên tài Nintendo của nhóm.",
-          ru: "Замечена на улице после того, как видео с школьного шоу талантов стало виральным. Любима как юмористка TWICE, получила прозвища «маленькое привидение» и «красавица-тофу»; также самопровозглашенная чемпионка Nintendo в группе."
-        },
-        tmi: {
-          ko: [
-            "학예회에서 'CHU~♡'를 부른 영상이 화제가 돼 길거리 캐스팅으로 JYP에 입사한 독특한 이력이 있다.",
-            "눈이 매우 하얗고 눈동자가 작아 '꼬마 유령', '두부미녀' 등 다양한 별명을 갖고 있다.",
-            "기독교 신앙을 공개적으로 밝힌 멤버로, 매주 교회에 출석하는 것으로 알려져 있다.",
-            "트와이스 공식 유머 담당으로, 엉뚱한 말과 행동으로 멤버들을 항상 웃게 만든다.",
-            "'닌텐도 게임 실력이 멤버 중 최강'이라고 스스로 공언하는 게임 애호가다."
-          ],
-          en: [
-            "Was street-cast after a video of her performing 'CHU~♡' at a school talent show went viral — a uniquely accidental path to JYP.",
-            "Known for her bright white eyes and small pupils — nicknamed 'mini ghost' and 'tofu beauty'.",
-            "Openly practices Christianity and is known to attend church every week.",
-            "Official comedian of TWICE — her random remarks and antics constantly make members burst out laughing.",
-            "Self-proclaimed 'best Nintendo gamer in TWICE', a passionate gaming enthusiast."
-          ],
-          ja: [
-            "学芸会で「CHU~♡」を披露した動画が話題になり、スカウトでJYPに入社したという異色の経歴を持つ。",
-            "目が非常に白く瞳が小さいため、「ちびお化け」「豆腐美女」など様々なあだ名がある。",
-            "キリスト教徒であることを公表しており、毎週教会に通っていることで知られている。",
-            "TWICEの公式ムードメーカーで、突飛な言動でいつもメンバーを笑わせている。",
-            "「任天堂のゲームの実力はメンバー内で最強」と自ら公言するゲーム愛好家だ。"
-          ],
-          zh: [
-            "因在学校才艺展示中表演《CHU~♡》的视频引起关注，通过街头发掘进入JYP，经历独特。",
-            "眼睛非常亮白且瞳孔较小，因此拥有“小鬼魂”、“豆腐美女”等多种绰号。",
-            "公开身份为基督教徒，据称每周都会去教堂。",
-            "TWICE的官方搞笑担当，总是用无厘头的言行逗乐成员。",
-            "自封为“TWICE最强任天堂玩家”，是一个狂热的游戏爱好者。"
-          ],
-          es: [
-            "Fue descubierta en la calle después de que se hiciera viral un vídeo suyo interpretando 'CHU~♡' en un festival escolar, un camino único hacia JYP.",
-            "Conocida por tener el blanco de los ojos muy brillante y pupilas pequeñas; tiene apodos como 'pequeño fantasma' y 'belleza de tofu'.",
-            "Practica abiertamente el cristianismo y se sabe que asiste a la iglesia todas las semanas.",
-            "Humorista oficial de TWICE; sus comentarios aleatorios y travesuras hacen reír constantemente a las demás miembros.",
-            "Se autoproclama la mejor jugadora de Nintendo de TWICE e entusiasta de los videojuegos."
-          ],
-          id: [
-            "Ditemukan di jalan setelah video penampilannya membawakan 'CHU~♡' di acara bakat sekolah menjadi viral — jalur unik menuju JYP.",
-            "Dikenal karena bagian putih matanya yang cerah dan pupil kecil — dijuluki 'hantu kecil' dan 'kecantikan tahu'.",
-            "Secara terbuka menyatakan beragama Kristen dan dikenal rutin pergi ke gereja setiap minggu.",
-            "Pelawak resmi TWICE — ucapan dan tingkah lakunya yang aneh selalu membuat anggota lain tertawa terbahak-bahak.",
-            "Menyatakan diri sebagai pemain Nintendo terbaik di TWICE, seorang penggemar game yang bersemangat."
-          ],
-          fr: [
-            "A été repérée après qu'une vidéo d'elle interprétant 'CHU~♡' lors d'un spectacle scolaire est devenue virale — un chemin atypique vers JYP.",
-            "Connue pour ses yeux très blancs et ses petites pupilles — surnommée 'petit fantôme' et 'beauté de tofu'.",
-            "Pratique ouvertement le christianisme et est connue pour aller à l'église chaque semaine.",
-            "Comique officielle de TWICE — ses remarques aléatoires et ses pitreries font constamment rire les membres.",
-            "S'est autoproclamée 'meilleure joueuse Nintendo de TWICE', une passionnée de jeux vidéo."
-          ],
-          hi: [
-            "स्कूल टैलेंट शो में 'CHU~♡' गाते हुए एक वीडियो वायरल होने के बाद उन्हें सड़क पर ही कास्ट कर लिया गया था - JYP में आने का एक अनोखा तरीका।",
-            "अपनी चमकती सफेद आंखों और छोटी पुतलियों के लिए जानी जाती हैं - 'मिनी घोस्ट' और 'टोफू ब्यूटी' उनके निकनेम हैं।",
-            "खुले तौर पर ईसाई धर्म का पालन करती हैं और हर हफ्ते चर्च जाने के लिए जानी जाती हैं।",
-            "TWICE की आधिकारिक कॉमेडियन - उनकी अजीब बातें और हरकतें सदस्यों को हमेशा हंसाती रहती हैं।",
-            "खुद को 'TWICE में सबसे अच्छी निनटेंडो गेमर' घोषित करने वाली गेमिंग की शौकीन।"
-          ],
-          pt: [
-            "Foi escalada na rua depois que um vídeo seu apresentando 'CHU~♡' num festival escolar se tornou viral — um caminho único e acidental para a JYP.",
-            "Conhecida por seus olhos muito brancos e pupilas pequenas — apelidada de 'pequeno fantasma' e 'beleza de tofu'.",
-            "Pratica abertamente o cristianismo e é conhecida por frequentar a igreja todas as semanas.",
-            "Humorista oficial do TWICE — seus comentários aleatórios e palhaçadas fazem as integrantes rirem constantemente.",
-            "Autoproclamada 'melhor jogadora de Nintendo no TWICE', uma entusiasta apaixonada por jogos."
-          ],
-          ar: [
-            "تم اكتشافها في الشارع بعد انتشار فيديو لها وهي تؤدي 'CHU~♡' في عرض مواهب مدرسي - طريق فريد وغير متوقع إلى JYP.",
-            "تشتهر بعينيها البيضاوتين الساطعتين وبؤبؤي عينيها الصغيرين - ملقبة بـ 'الشبح الصغير' و'جميلة التوفو'.",
-            "تمارس المسيحية علانية ومن المعروف أنها تذهب إلى الكنيسة كل أسبوع.",
-            "عنصر الفكاهة الرسمي في TWICE - تعليقاتها وتصرفاتها العشوائية تجعل العضوات يضحكن باستمرار.",
-            "تعتبر نفسها 'أفضل لاعبة نينتندو في TWICE'، وهي عاشقة للألعاب."
-          ],
-          th: [
-            "ได้รับเลือกเข้าวงหลังจากวิดีโอแสดงเพลง 'CHU~♡' ในงานโรงเรียนกลายเป็นไวรัล เป็นเส้นทางสู่ JYP ที่ไม่เหมือนใคร",
-            "เป็นที่รู้จักจากดวงตาที่ขาวใสและรูม่านตาเล็ก จนได้ฉายาว่า 'ผีน้อย' และ 'เต้าหู้คนสวย'",
-            "เปิดเผยว่านับถือศาสนาคริสต์และเป็นที่รู้กันว่าไปโบสถ์ทุกสัปดาห์",
-            "เป็นตัวสร้างเสียงหัวเราะอย่างเป็นทางการของ TWICE คำพูดและการกระทำที่คาดไม่ถึงของเธอมักทำให้สมาชิกหัวเราะเสมอ",
-            "ประกาศตัวว่าเป็น 'นักเล่นเกมมินเทนโดที่เก่งที่สุดใน TWICE' และเป็นผู้ที่คลั่งไคล้การเล่นเกมมาก"
-          ],
-          vi: [
-            "Được phát hiện sau khi video diễn 'CHU~♡' tại văn nghệ trường trở nên viral — một con đường tình cờ độc đáo đến với JYP.",
-            "Nổi tiếng với đôi mắt trắng sáng và đồng tử nhỏ — biệt danh 'ma nhỏ' và 'mỹ nhân đậu phụ'.",
-            "Công khai niềm tin Cơ đốc giáo và được biết đến là đi lễ nhà thờ mỗi tuần.",
-            "Cây hài chính thức của TWICE — những lời nói và hành động kỳ quặc của cô luôn khiến các thành viên cười nghiêng ngả.",
-            "Tự nhận mình là 'người chơi Nintendo giỏi nhất TWICE', một người cực kỳ đam mê trò chơi điện tử."
-          ],
-          ru: [
-            "Была замечена на улице после того, как видео с её исполнением «CHU~♡» на школьном шоу талантов стало виральным — уникальный путь в JYP.",
-            "Известна своими яркими белыми глазами и маленькими зрачками — получила прозвища «маленькое привидение» и «красавица-тофу».",
-            "Открыто исповедует христианство и, как известно, посещает церковь каждую неделю.",
-            "Официальная юмористка TWICE — её случайные замечания и выходки постоянно заставляют участниц смеяться.",
-            "Самопровозглашенная «лучшая в Nintendo среди TWICE», страстная любительница видеоигр."
-          ]
-        },
-        socials: {}
-      },
-      {
-        id: "chaeyoung",
-        name: { ko: "채영", en: "Chaeyoung", ja: "チェヨン", zh: "彩瑛", es: "Chaeyoung", id: "Chaeyoung", fr: "Chaeyoung", hi: "चेयॉन्ग", pt: "Chaeyoung", ar: "تشايونغ", th: "แชยอง", vi: "Chaeyoung", ru: "Чеён" },
-        role: { ko: "래퍼, 보컬", en: "Rapper, Vocal", ja: "ラッパー、ボーカル", zh: "说唱, 领唱", es: "Rapera, Vocalista", id: "Rapper, Vokal", fr: "Rappeuse, Vocale", hi: "रैपर, वोकल", pt: "Rapper, Vocal", ar: "رابر، صوت", th: "แร็ปเปอร์, โวคอล", vi: "Rapper, Hát chính", ru: "Рэпер, Вокалист" },
-        birth: "1999.04.23",
-        bloodType: "A",
-        mbti: "INFP",
-        height: "159cm",
-        zodiac: { ko: "황소자리", en: "Taurus", ja: "おうし座", zh: "金牛座", es: "Tauro", id: "Taurus", fr: "Taureau", hi: "वृषभ", pt: "Touro", ar: "الثور", th: "พฤษภ", vi: "Kim Ngưu", ru: "Телец" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Chaeyoung+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
-        description: {
-          ko: "자체 작사와 타투로 트와이스 내 가장 '엣지' 있는 이미지. 미술 참여와 힙합 패션으로 독보적인 개성을 드러내며 가장 작은 키로도 무대 장악력은 최강이다.",
-          en: "The edgiest image in TWICE, with self-written lyrics and tattoos. Her art involvement, hip-hop fashion, and commanding stage presence make her the group's unique rebel voice.",
-          ja: "作詞やタトゥーなど、TWICEの中で最もエッジの効いたイメージ。美術への参加やヒップホップファッションで独歩的な個性を放ち、一番小柄ながらもステージ支配力は最強だ。",
-          zh: "凭借亲自作词和纹身在TWICE中拥有最“锋芒”的形象。通过参与美术和嘻哈时尚展现独特的个性，即使个头最小，舞台控制力也是最强的。",
-          es: "La imagen más atrevida de TWICE, con letras propias y tatuajes. Su implicación en el arte, la moda hip-hop y su imponente presencia en el escenario la convierten en la voz rebelde única del grupo.",
-          id: "Citra paling berani di TWICE, dengan lirik buatan sendiri dan tato. Keterlibatannya dalam seni, mode hip-hop, dan penguasaan panggung yang kuat menunjukkan kepribadiannya yang unik.",
-          fr: "L'image la plus audacieuse de TWICE, avec des paroles auto-écrites et des tatouages. Son implication dans l'art, sa mode hip-hop et sa présence scénique imposante font d'elle la voix rebelle unique du groupe.",
-          hi: "खुद लिखे हुए बोल और टैटू के साथ TWICE में सबसे 'एजी' इमेज। कला में उनकी भागीदारी, हिप-हॉप फैशन और प्रभावशाली मंच उपस्थिति उन्हें ग्रुप की अनूठी विद्रोही आवाज बनाती है।",
-          pt: "A imagem mais arrojada do TWICE, com letras próprias e tatuagens. Seu envolvimento com arte, moda hip-hop e presença de palco dominante fazem dela a voz rebelde única do grupo.",
-          ar: "تمتلك الصورة الأكثر جرأة في TWICE، بكلمات أغاني من تأليفها ووشومها. تبرز شخصيتها الفريدة من خلال مشاركتها الفنية وأزياء الهيب هوب، وبراعتها في السيطرة على المسرح رغم قصر قامتها.",
-          th: "มีภาพลักษณ์ที่โฉบเฉี่ยวที่สุดใน TWICE ด้วยการแต่งเนื้อร้องเองและรอยสัก เธอแสดงออกถึงเอกลักษณ์ที่โดดเด่นผ่านงานศิลปะและแฟชั่นแนวฮิปฮอป แม้จะตัวเล็กที่สุดแต่มีพลังในการควบคุมเวทีได้อย่างยอดเยี่ยม",
-          vi: "Hình ảnh cá tính nhất trong TWICE với khả năng tự viết lời và những hình xăm. Sự tham gia vào mỹ thuật và phong cách thời trang hip-hop bộc lộ cá tính độc đáo, dù thấp nhất nhóm nhưng khả năng làm chủ sân khấu vẫn là nhất.",
-          ru: "Самый смелый образ в TWICE с собственными текстами песен и татуировками. Участие в искусстве, хип-хоп мода и властное присутствие на сцене делают её уникальным «мятежным голосом» группы."
-        },
-        tmi: {
-          ko: [
-            "직접 가사를 쓰는 자체 제작 능력을 갖춘 멤버로, 작사에 대한 열정이 남다르다.",
-            "타투를 여러 개 갖고 있는 트와이스 멤버 중 가장 '강렬한' 이미지로 변신에 성공했다.",
-            "미술을 좋아해 앨범 아트나 개인 굿즈 디자인에 직접 참여하기도 한다.",
-            "TWICE에서 키가 가장 작지만 무대 장악력은 누구 못지않다는 평을 받는다.",
-            "스트리트 패션을 즐기며, 힙합·그런지 무드의 패션을 선호해 트와이스 내 독보적 패션 피플로 꼽힌다."
-          ],
-          en: [
-            "A self-producing member who writes her own lyrics — her passion for songwriting sets her apart within TWICE.",
-            "Has multiple tattoos and successfully transformed her image to the most 'edgy' look in TWICE.",
-            "Loves visual art and has participated in album artwork and personal merchandise design.",
-            "The shortest member of TWICE, but her stage presence is second to none.",
-            "Prefers hip-hop and grunge fashion — considered the unique fashion icon within the group."
-          ],
-          ja: [
-            "自ら歌詞を書くセルフプロデュース能力を備えたメンバーで、作詞への情熱が人一倍強い。",
-            "タトゥーをいくつか入れており、TWICEの中で最も「強烈な」イメージへの変身に成功した。",
-            "美術が好きで、アルバムアートや個人グッズのデザインに直接参加することもある。",
-            "TWICEの中で最も小柄だが、ステージ支配力は誰にも引けを取らないという評価を受けている。",
-            "ストリートファッションを楽しみ、ヒップホップやグランジ風のスタイルを好むため、グループ内随一のファッショニスタとされる。"
-          ],
-          zh: [
-            "具备亲自作词的创作能力，对作词有着非同寻常的热情。",
-            "拥有多处纹身，成功转型为TWICE中形象最“强烈”的成员。",
-            "热爱美术，甚至直接参与专辑封面或个人周边产品的设计。",
-            "虽然是TWICE中个头最小的，但舞台控制力被评价为不亚于任何人。",
-            "热衷于街头时尚，偏好嘻哈、朋克风格，被认为是TWICE中独一无二的潮流引领者。"
-          ],
-          es: [
-            "Una miembro con capacidad de autoproducción que escribe sus propias letras; su pasión por la composición la distingue dentro de TWICE.",
-            "Tiene múltiples tatuajes y ha transformado con éxito su imagen hacia el estilo más 'atrevido' de TWICE.",
-            "Le encantan las artes visuales y ha participado en el diseño de portadas de álbumes y merchandising personal.",
-            "La miembro más baja de TWICE, pero su presencia en el escenario es insuperable.",
-            "Prefiere la moda hip-hop y grunge; es considerada el icono de la moda único dentro del grupo."
-          ],
-          id: [
-            "Anggota dengan kemampuan produksi mandiri yang menulis liriknya sendiri — semangatnya dalam menulis lagu membedakannya di TWICE.",
-            "Memiliki beberapa tato dan berhasil mengubah citranya menjadi yang paling 'berani' di TWICE.",
-            "Menyukai seni visual dan telah berpartisipasi dalam pembuatan sampul album serta desain merchandise pribadi.",
-            "Anggota terpendek di TWICE, tetapi penguasaan panggungnya tidak kalah dengan siapa pun.",
-            "Menyukai gaya jalanan, lebih memilih fashion bernuansa hip-hop dan grunge, menjadikannya ikon fashion unik di grup."
-          ],
-          fr: [
-            "Une membre autoproductrice qui écrit ses propres paroles — sa passion pour l'écriture de chansons la distingue au sein de TWICE.",
-            "Possède plusieurs tatouages et a réussi à transformer son image vers le look le plus 'audacieux' de TWICE.",
-            "Adore les arts visuels et a participé à la création de pochettes d'albums et au design de produits dérivés personnels.",
-            "La plus petite membre de TWICE, mais sa présence scénique n'a rien à envier aux autres.",
-            "Apprécie la mode streetwear et préfère les styles hip-hop et grunge — elle est considérée comme l'icône de mode unique du groupe."
-          ],
-          hi: [
-            "एक सेल्फ-प्रोड्यूसिंग सदस्य जो अपने गाने खुद लिखती हैं - गीत लिखने का उनका जुनून उन्हें TWICE में अलग बनाता है।",
-            "उनके शरीर पर कई टैटू हैं और उन्होंने अपनी इमेज को TWICE के सबसे 'एजी' लुक में सफलतापूर्वक बदल लिया है।",
-            "दृश्य कला (Visual Art) से प्यार करती हैं और एल्बम आर्टवर्क और व्यक्तिगत मर्चेंडाइज डिजाइन में भाग लिया है।",
-            "TWICE की सबसे कम कद वाली सदस्य, लेकिन उनकी मंच उपस्थिति किसी से कम नहीं है।",
-            "स्ट्रीट फैशन पसंद करती हैं और हिप-हॉप और ग्रंज फैशन को प्राथमिकता देती हैं - उन्हें ग्रुप का अनूठा फैशन आइकन माना जाता है।"
-          ],
-          pt: [
-            "Uma integrante autoprodutora que escreve suas próprias letras — sua paixão pela composição a destaca dentro do TWICE.",
-            "Possui várias tatuagens e transformou com sucesso sua imagem para o visual mais 'arrojado' do TWICE.",
-            "Ama artes visuais e já participou do design de artes de álbuns e mercadorias pessoais.",
-            "A integrante mais baixa do TWICE, mas sua presença de palco não fica atrás de ninguém.",
-            "Gosta de moda de rua e prefere estilos hip-hop e grunge — considerada o ícone de moda único do grupo."
-          ],
-          ar: [
-            "عضوة ذاتية الإنتاج تكتب كلماتها الخاصة - شغفها بكتابة الأغاني يميزها داخل TWICE.",
-            "تمتلك عدة ووشوم ونجحت في تحويل صورتها إلى المظهر الأكثر 'جرأة' في TWICE.",
-            "تحب الفنون البصرية وشاركت في تصميم الأغلفة والمنتجات الشخصية.",
-            "أقصر عضوة في TWICE، لكن سيطرتها على المسرح لا يعلى عليها.",
-            "تستمتع بأزياء الشارع وتفضل أسلوب الهيب هوب والجرانج - وتعتبر أيقونة الموضة الفريدة في المجموعة."
-          ],
-          th: [
-            "เป็นสมาชิกที่มีความสามารถในการแต่งเนื้อร้องเอง ความหลงใหลในการแต่งเพลงทำให้เธอโดดเด่นใน TWICE",
-            "มีรอยสักหลายแห่งและประสบความสำเร็จในการเปลี่ยนภาพลักษณ์ให้ดู 'โฉบเฉี่ยว' ที่สุดใน TWICE",
-            "ชอบศิลปะและเคยมีส่วนร่วมในการออกแบบหน้าปกอัลบั้มและสินค้าส่วนตัว",
-            "เป็นสมาชิกที่เตี้ยที่สุดใน TWICE แต่พลังในการแสดงบนเวทีของเธอนั้นไม่เป็นรองใคร",
-            "ชอบแฟชั่นแนวสตรีท และชอบการแต่งตัวแนวฮิปฮอปและกรันจ์ จึงถูกยกให้เป็นแฟชั่นไอคอนประจำวง"
-          ],
-          vi: [
-            "Một thành viên có khả năng tự sản xuất, tự viết lời bài hát — niềm đam mê viết lách khiến cô trở nên khác biệt trong TWICE.",
-            "Sở hữu nhiều hình xăm và đã thành công trong việc chuyển đổi hình ảnh sang phong cách 'cá tính' nhất TWICE.",
-            "Yêu thích nghệ thuật thị giác và từng tham gia thiết kế ảnh bìa album cũng như hàng lưu niệm cá nhân.",
-            "Thành viên thấp nhất TWICE, nhưng khả năng làm chủ sân khấu thì không thua kém bất kỳ ai.",
-            "Thích thời trang đường phố, ưu tiên phong cách hip-hop và grunge — được coi là biểu tượng thời trang độc đáo trong nhóm."
-          ],
-          ru: [
-            "Участница-автор, которая сама пишет тексты песен — её страсть к сочинительству выделяет её в TWICE.",
-            "Имеет несколько татуировок и успешно сменила имидж на самый «смелый» в TWICE.",
-            "Любит изобразительное искусство, участвовала в разработке обложек альбомов и дизайне личного мерча.",
-            "Самая низкая участница TWICE, но её присутствие на сцене не имеет равных.",
-            "Предпочитает уличную моду, хип-хоп и гранж — считается уникальной иконой стиля в группе."
-          ]
-        },
-        socials: {}
-      },
-      {
-        id: "tzuyu",
-        name: { ko: "쯔위", en: "Tzuyu", ja: "ツウィ", zh: "子瑜", es: "Tzuyu", id: "Tzuyu", fr: "Tzuyu", hi: "त्ज़ुयू", pt: "Tzuyu", ar: "جويو", th: "จื่อวี", vi: "Tzuyu", ru: "Цзыюй" },
-        role: { ko: "보컬, 비주얼, 막내", en: "Vocal, Visual, Maknae", ja: "ボーカル、ビジュアル、末っ子", zh: "领唱, 门面, 忙内", es: "Vocalista, Visual, Maknae", id: "Vokal, Visual, Maknae", fr: "Vocale, Visuelle, Maknae", hi: "वोकल, विजुअल, मकने", pt: "Vocal, Visual, Maknae", ar: "صوت، فيجوال، ماكني", th: "โวคอล, วิชวล, มักเน่", vi: "Hát chính, Visual, Em út", ru: "Вокалист, Вижуал, Макнэ" },
-        birth: "1999.06.14",
-        bloodType: "A",
-        mbti: "ISFP",
-        height: "172cm",
-        zodiac: { ko: "쌍둥이자리", en: "Gemini", ja: "ふたご座", zh: "双子座", es: "Géminis", id: "Gemini", fr: "Gémeaux", hi: "मिथुन", pt: "Gêmeos", ar: "الجوزاء", th: "เมถุน", vi: "Song Tử", ru: "Близнецы" },
-        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Tzuyu+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
-        description: {
-          ko: "대만 출신의 '인간 비율 표준'. 172cm 완벽한 비율과 한국어·대만어·광둥어·일본어 구사 능력, 활 쏘기 실력까지 갖춘 트와이스의 글로벌 비주얼이다.",
-          en: "Taiwan-born 'human body standard'. With her 172cm perfect proportions, fluency in 4 languages, and archery skills, she is TWICE's ultimate global visual.",
-          ja: "台湾出身の「人間プロポーションの基準」。172cmの完璧なスタイルと韓国語・台湾語・広東語・日本語の語学力、さらにアーチェリーの実力まで兼ね備えたTWICEのグローバルビジュアルだ。",
-          zh: "来自台湾的“人类比例标准”。拥有172cm的完美比例，精通韩语、台语、粤语、日语四种语言，还具备射箭实力，是TWICE的全球视觉中心。",
-          es: "Nacida en Taiwán, es el 'estándar de las proporciones humanas'. Con sus perfectas proporciones y 172 cm de altura, fluidez en 4 idiomas y habilidades con el arco, es la visual global definitiva de TWICE.",
-          id: "Lahir di Taiwan, ia adalah 'standar proporsi manusia'. Dengan proporsi sempurna 172cm, kefasihan dalam 4 bahasa, dan keahlian memanah, ia adalah visual global utama TWICE.",
-          fr: "Née à Taïwan, elle est la 'norme des proportions humaines'. Avec ses proportions parfaites de 172 cm, sa maîtrise de 4 langues et ses talents de tireuse à l'arc, elle est la visuelle mondiale ultime de TWICE.",
-          hi: "ताइवान में जन्मी 'ह्यूमन बॉडी स्टैंडर्ड'। अपने 172 सेमी के परफेक्ट अनुपात, 4 भाषाओं में महारत और तीरंदाजी कौशल के साथ, वह TWICE की अल्टीमेट ग्लोबल विजुअल हैं।",
-          pt: "Nascida em Taiwan, o 'padrão de proporção humana'. Com suas proporções perfeitas e 172 cm, fluência em 4 idiomas e habilidades no arco e flecha, ela é a visual global definitiva do TWICE.",
-          ar: "ولدت في تايوان، وتعتبر 'معيار النسب البشرية'. بطولها البالغ 172 سم ونسبها المثالية، وإتقانها لـ 4 لغات، ومهاراتها في الرماية، فهي الفيجوال العالمي لفرقة TWICE.",
-          th: "สมาชิกชาวไต้หวันที่ได้รับการขนานนามว่าเป็น 'มาตรฐานสัดส่วนมนุษย์' ด้วยความสูง 172 ซม. ที่สมบูรณ์แบบ ความสามารถในการสื่อสารได้ 4 ภาษา และทักษะการยิงธนู เธอคือวิชวลระดับโลกของ TWICE",
-          vi: "Đến từ Đài Loan, được mệnh danh là 'chuẩn mực tỷ lệ cơ thể'. Với tỷ lệ hoàn hảo, chiều cao 172cm cùng khả năng nói 4 thứ tiếng và kỹ năng bắn cung, cô là visual toàn cầu của TWICE.",
-          ru: "Уроженка Тайваня, «эталон человеческих пропорций». С идеальным ростом 172 см, владением 4 языками и навыками стрельбы из лука, она является главным глобальным вижуалом TWICE."
-        },
-        tmi: {
-          ko: [
-            "대만 타이난 출신으로, 데뷔 당시 16세였다. 비율이 완벽하다는 평을 받으며 '인간 비율 표준'이라 불린다.",
-            "2015~2016년 '쯔위 사태'라 불리는 대만 국기 논란으로 공개 사과 영상을 올린 아픈 기억이 있다.",
-            "활 쏘기를 좋아해 국가대표급 실력을 갖췄다는 루머가 있을 정도로 진지하게 수련했다.",
-            "과거 몇 년간 트와이스 멤버 중 가장 많은 인스타그램 팔로워를 보유했던 적이 있다.",
-            "한국어·대만어·광둥어·일본어를 구사하는 언어 재능이 뛰어난 멀티링구얼이다."
-          ],
-          en: [
-            "From Tainan, Taiwan — debuted at 16. Her proportions are so praised she's called a 'human body standard'.",
-            "Was at the center of the 2015–2016 'Tzuyu incident' involving a Taiwan flag controversy, leading to a public apology video — a painful early career moment.",
-            "Practices archery seriously enough that rumors spread of her having near-national-level skill.",
-            "Once held the most Instagram followers among all TWICE members for several years.",
-            "Speaks Korean, Taiwanese, Cantonese, and Japanese — a remarkably gifted multilingual."
-          ],
-          ja: [
-            "台湾の台南出身で、デビュー当時は16歳だった。プロポーションが完璧だという評価を受け、「人間プロポーションの基準」と呼ばれている。",
-            "2015〜2016年に「ツウィ事態」と呼ばれる台湾旗問題で公開謝罪動画を上げた辛い記憶がある。",
-            "アーチェリーが好きで、国家代表級の実力を持っているという噂が出るほど真剣に練習した。",
-            "過去数年間、TWICEのメンバーの中で最も多くのインスタグラムフォロワーを保有していたことがある。",
-            "韓国語・台湾語・広東語・日本語を操る、語学の才能に長けたマルチリンガルだ。"
-          ],
-          zh: [
-            "来自台湾台南，出道时年仅16岁。因身材比例完美被誉为“人类比例标准”。",
-            "2015年至2016年期间，曾因“周子瑜事件”（国旗争议）录制公开道歉视频，是一段痛苦的经历。",
-            "热爱射箭，曾因练习非常认真而传出拥有国家代表级别实力的传闻。",
-            "过去几年里，曾是TWICE成员中Instagram粉丝数最多的一位。",
-            "精通韩语、台语、粤语、日语，是一位极具语言天赋的多语种者。"
-          ],
-          es: [
-            "De Tainan, Taiwán; debutó a los 16 años. Sus proporciones son tan elogiadas que la llaman el 'estándar de las proporciones humanas'.",
-            "Estuvo en el centro del 'incidente Tzuyu' de 2015-2016 relacionado con la controversia de la bandera de Taiwán, lo que llevó a un vídeo de disculpa pública.",
-            "Practica el tiro con arco con tanta seriedad que se rumoreaba que tenía un nivel casi nacional.",
-            "Durante varios años, fue la miembro de TWICE con más seguidores en Instagram.",
-            "Habla coreano, taiwanés, cantonés y japonés; una multilingüe notablemente dotada."
-          ],
-          id: [
-            "Berasal dari Tainan, Taiwan — debut pada usia 16 tahun. Proporsinya sangat dipuji sehingga ia disebut 'standar proporsi manusia'.",
-            "Menjadi pusat dari 'insiden Tzuyu' tahun 2015–2016 yang melibatkan kontroversi bendera Taiwan, yang berujung pada video permintaan maaf publik.",
-            "Berlatih memanah dengan sangat serius hingga muncul rumor bahwa ia memiliki kemampuan setingkat atlet nasional.",
-            "Pernah memiliki pengikut Instagram terbanyak di antara semua anggota TWICE selama beberapa tahun.",
-            "Berbicara bahasa Korea, Taiwan, Kanton, dan Jepang — seorang multilingual yang sangat berbakat."
-          ],
-          fr: [
-            "Originaire de Tainan, Taïwan — a débuté à 16 ans. Ses proportions sont si admirées qu'on l'appelle la 'norme des proportions humaines'.",
-            "A été au centre de l'incident 'Tzuyu' en 2015-2016 impliquant une controverse sur le drapeau taïwanais, menant à une vidéo d'excuses publiques.",
-            "Pratique le tir à l'arc assez sérieusement pour que des rumeurs circulent sur son niveau proche de celui d'une athlète nationale.",
-            "A déjà détenu le plus grand nombre d'abonnés Instagram parmi tous les membres de TWICE pendant plusieurs années.",
-            "Parle coréen, taïwanais, cantonais et japonais — une polyglotte remarquablement douée."
-          ],
-          hi: [
-            "ताइनान, ताइवान से - 16 साल की उम्र में डेब्यू किया। उनके शारीरिक अनुपात की इतनी प्रशंसा की जाती है कि उन्हें 'ह्यूमन बॉडी स्टैंडर्ड' कहा जाता है।",
-            "2015-2016 में ताइवान ध्वज विवाद से जुड़े 'त्ज़ुयू कांड' के केंद्र में थीं, जिसके कारण उन्हें एक सार्वजनिक माफी वीडियो जारी करना पड़ा था।",
-            "तीरंदाजी का इतनी गंभीरता से अभ्यास करती हैं कि उनके पास राष्ट्रीय स्तर के कौशल होने की अफवाहें फैल गई थीं।",
-            "एक समय कई वर्षों तक सभी TWICE सदस्यों में उनके सबसे अधिक इंस्टाग्राम फॉलोअर्स थे।",
-            "कोरियाई, ताइवानी, कैंटोनीज़ और जापानी बोलती हैं - एक उल्लेखनीय प्रतिभाशाली बहुभाषी।"
-          ],
-          pt: [
-            "De Tainan, Taiwan — estreou aos 16 anos. Suas proporções são tão elogiadas que ela é chamada de 'padrão de proporção humana'.",
-            "Esteve no centro do 'incidente Tzuyu' de 2015–2016, envolvendo a controvérsia da bandeira de Taiwan, o que levou a um vídeo de desculpas públicas.",
-            "Pratica tiro com arco seriamente a ponto de surgirem rumores de que ela teria um nível de habilidade quase nacional.",
-            "Já deteve o maior número de seguidores no Instagram entre todas as integrantes do TWICE por vários anos.",
-            "Fala coreano, taiwanês, cantonés e japonês — uma poliglota notavelmente talentosa."
-          ],
-          ar: [
-            "من تاينان، تايوان - ظهرت لأول مرة في سن 16. يتم الإشادة بنسب جسدها لدرجة أنها تسمى 'معيار النسب البشرية'.",
-            "كانت في قلب 'حادثة جويو' 2015-2016 المتعلقة بجدل علم تايوان، مما أدى إلى فيديو اعتذار علني.",
-            "تمارس الرماية بجدية لدرجة انتشار شائعات حول امتلاكها مهارة قريبة من المستوى الوطني.",
-            "كانت تمتلك أكبر عدد من المتابعين على إنستغرام بين جميع عضوات TWICE لعدة سنوات.",
-            "تتحدث الكورية والتايوانية والكانتونية واليابانية - وهي متعددة لغات موهوبة بشكل ملحوظ."
-          ],
-          th: [
-            "มาจากเมืองไถหนาน ไต้หวัน เดบิวต์ตอนอายุ 16 ปี สัดส่วนของเธอได้รับการยกย่องมากจนถูกเรียกว่า 'มาตรฐานสัดส่วนมนุษย์'",
-            "เคยเป็นศูนย์กลางของ 'เหตุการณ์จื่อวี' ในปี 2015–2016 เกี่ยวกับความขัดแย้งเรื่องธงไต้หวัน ซึ่งนำไปสู่การอัดวิดีโอขอโทษต่อสาธารณะ",
-            "ฝึกยิงธนูอย่างจริงจังจนมีข่าวลือว่าเธอมีฝีมือใกล้เคียงระดับนักกีฬาทีมชาติ",
-            "เคยเป็นสมาชิก TWICE ที่มียอดผู้ติดตามอินสตาแกรมมากที่สุดเป็นเวลาหลายปี",
-            "พูดภาษาเกาหลี ไต้หวัน กวางตุ้ง และญี่ปุ่น เป็นผู้มีความสามารถด้านภาษาอย่างน่าทึ่ง"
-          ],
-          vi: [
-            "Đến từ Đài Nam, Đài Loan — ra mắt năm 16 tuổi. Tỷ lệ cơ thể của cô được khen ngợi nhiều đến mức cô được gọi là 'chuẩn mực tỷ lệ cơ thể'.",
-            "Từng là trung tâm của 'sự cố Tzuyu' năm 2015–2016 liên quan đến tranh cãi cờ Đài Loan, dẫn đến video xin lỗi công khai.",
-            "Tập luyện bắn cung nghiêm túc đến mức có tin đồn rằng cô có kỹ năng gần như cấp quốc gia.",
-            "Từng sở hữu lượng người theo dõi Instagram nhiều nhất trong số tất cả các thành viên TWICE trong vài năm.",
-            "Nói được tiếng Hàn, tiếng Đài Loan, tiếng Quảng Đông và tiếng Nhật — một người đa ngôn ngữ tài năng xuất chúng."
-          ],
-          ru: [
-            "Из Тайнаня, Тайвань — дебютировала в 16 лет. Её пропорции настолько хвалят, что называют «эталоном человеческих пропорций».",
-            "Оказалась в центре «инцидента с Цзыюй» в 2015–2016 годах, связанного с спорами о флаге Тайваня, что привело к публическому видео с извинениями.",
-            "Занимается стрельбой из лука настолько серьезно, что ходили слухи о её мастерстве почти национального уровня.",
-            "В течение нескольких лет имела больше всего подписчиков в Instagram среди всех участниц TWICE.",
-            "Говорит на корейском, тайваньском, кантонском и японском языках — удивительно одаренный полиглот."
           ]
         },
         socials: {}
@@ -10707,15 +9463,21 @@ export const KPOP_GROUPS: KpopGroup[] = [
     id: "iu",
     name: { ko: "아이유", en: "IU", ja: "アイユー (IU)", zh: "李知恩 (IU)", es: "IU", id: "IU", fr: "IU", hi: "आईयू (IU)", pt: "IU", ar: "آيو (IU)", th: "ไอยู (IU)", vi: "IU", ru: "Айю (IU)" },
     officialSite: "https://edam-ent.com/artist/iu",
-    imageUrl: "https://tse1.mm.bing.net/th?q=IU+The+Golden+Hour+Concert+Poster+High+Res",
+    company: "EDAM Entertainment",
+    accentColor: "#a366ff",
+    imageUrl: "https://tse1.mm.bing.net/th?q=IU+Celebrity+Pink+Dress+Official+Photo+High+Res&w=600&h=600&rs=1",
     socials: { instagram: "https://www.instagram.com/dlwlrma/", twitter: "https://twitter.com/_IUofficial", youtube: "https://www.youtube.com/@dlwlrma", tiktok: "https://www.tiktok.com/@iu_official" },
     fandom: { ko: "유애나 (UAENA)", en: "UAENA", ja: "ユエナ (UAENA)", zh: "UAENA", es: "UAENA", id: "UAENA", fr: "UAENA", hi: "UAENA", pt: "UAENA", ar: "يوينا (UAENA)", th: "ยูแอนา (UAENA)", vi: "UAENA", ru: "UAENA" },
     debut: "2008.09.18",
     wiki: { ko: "아이유(IU)는 대한민국의 가수이자 배우로, '국민 여동생'에서 독보적인 싱어송라이터로 성장한 대한민국 최고의 솔로 아티스트입니다.", en: "IU is a South Korean singer-songwriter and actress, widely considered the most successful solo artist in K-pop history." },
+    description: { ko: "대한민국 가요계의 아이콘이자 전설적인 싱어송라이터. 독보적인 음색과 깊은 감성으로 전 세대의 사랑을 받는 아티스트입니다.", en: "The iconic singer-songwriter representing South Korea, loved by all generations for her unique voice and deep emotions." },
     summary: { ko: "대한민국 가요계의 아이콘이자 전설적인 솔로 아티스트. '좋은 날', '밤편지' 등 수많은 히트곡을 보유한 싱어송라이터이자 배우입니다.", en: "The iconic solo artist and singer-songwriter who represents the Korean music industry, with numerous hits and a successful acting career." },
     news: [
       { title: { ko: "아이유, 여성 솔로 최초 잠실 주경기장 입성… 골든 아워 콘서트 성료", en: "IU Becomes First Female Soloist to Headline Seoul Olympic Stadium" }, date: "2022.09.18", summary: { ko: "여성 아티스트 최초로 국내 최대 규모 공연장인 주경기장에서 단독 콘서트를 개최하며 '공연 퀸'의 위상을 증명했습니다.", en: "She made history as the first female soloist to perform at the nation's largest stadium, proving her status as the 'Queen of Performance'." }, url: "#" },
-      { title: { ko: "아이유 '밤편지', 스포티파이 1억 스트리밍 돌파", en: "IU's 'Through the Night' Surpasses 100M Streams on Spotify" }, date: "2023.11.10", summary: { ko: "2017년 발표된 메가 히트곡 '밤편지'가 글로벌 팬들의 꾸준한 사랑을 받으며 1억 스트리밍을 달성했습니다.", en: "The 2017 mega-hit 'Through the Night' continues to receive global love, surpassing 100 million streams on Spotify." }, url: "#" }
+      { title: { ko: "아이유 '밤편지', 스포티파이 1억 스트리밍 돌파", en: "IU's 'Through the Night' Surpasses 100M Streams on Spotify" }, date: "2023.11.10", summary: { ko: "2017년 발표된 메가 히트곡 '밤편지'가 글로벌 팬들의 꾸준한 사랑을 받으며 1억 스트리밍을 달성했습니다.", en: "The 2017 mega-hit 'Through the Night' continues to receive global love, surpassing 100 million streams on Spotify." }, url: "#" },
+      { title: { ko: "아이유, 미니 6집 'The Winning' 발매 직후 차트 올킬", en: "IU's 6th Mini Album 'The Winning' Achieves Chart All-Kill" }, date: "2024.02.20", summary: { ko: "타이틀곡 'Love wins all'을 포함한 전 수록곡이 주요 음원 차트 최상위권을 점령하며 아이유의 저력을 보여줬습니다.", en: "All tracks from the new album, including 'Love wins all', dominated major music charts immediately upon release." }, url: "#" },
+      { title: { ko: "아이유, 첫 번째 월드투어 'HEREH' 아시아·유럽 투어 성료", en: "IU Successfully Completes First World Tour 'HEREH'" }, date: "2024.08.30", summary: { ko: "서울을 시작으로 전 세계 주요 도시를 순회한 첫 번째 월드투어를 성공적으로 마무리하며 글로벌 팬덤을 확인했습니다.", en: "Successfully concluded her first world tour across major global cities, confirming her massive international fanbase." }, url: "#" },
+      { title: { ko: "아이유, 데뷔 17주년 기념 대규모 기부 활동", en: "IU Makes Massive Donation to Celebrate 17th Debut Anniversary" }, date: "2025.09.18", summary: { ko: "데뷔 17주년을 맞아 소외계층을 위해 거액을 기부하며 다시 한번 '기부 천사'의 면모를 보여주었습니다.", en: "Celebrating her 17th anniversary, she made a significant donation to underprivileged groups, once again showing her 'Donation Angel' side." }, url: "#" }
     ],
     tmi: {
       ko: [
@@ -10723,14 +9485,24 @@ export const KPOP_GROUPS: KpopGroup[] = [
         "데뷔 당시 중학생이었으며, 초창기에는 기타를 치며 노래하는 소녀 이미지로 큰 사랑을 받았습니다.",
         "대한민국 연예계의 대표적인 '기부 천사'로, 데뷔 기념일이나 특별한 날마다 거액의 기부를 이어오고 있습니다.",
         "음악뿐만 아니라 '나의 아저씨', '호텔 델루나' 등 다수의 작품에서 주연을 맡아 배우로서도 정점에 올랐습니다.",
-        "어쿠스틱, 발라드, 댄스, 재즈 등 장르를 가리지 않는 넓은 음악적 스펙트럼과 깊은 작사 능력을 보유하고 있습니다."
+        "어쿠스틱, 발라드, 댄스, 재즈 등 장르를 가리지 않는 넓은 음악적 스펙트럼과 깊은 작사 능력을 보유하고 있습니다.",
+        "가장 좋아하는 색깔은 보라색이며, 가사나 앨범 이미지에 자주 활용합니다.",
+        "잠이 오지 않을 때 가사를 쓰는 습관이 있어 수많은 명곡들을 탄생시켰습니다.",
+        "민트초코를 좋아하는 것으로 알려져 있으며, 이와 관련된 인터뷰가 팬들 사이에서 큰 화제가 된 적이 있습니다.",
+        "'좋은 날'의 3단 고음은 당시 대한민국 가요계에 엄청난 충격을 주었으며, 아이유를 '국민 여동생' 반열에 올린 결정적 계기가 되었습니다.",
+        "동료 아티스트나 스태프들에게 이어폰, 간식 등이 담긴 '아이유 선물 세트'를 돌리는 따뜻한 마음씨로 유명합니다."
       ],
       en: [
         "The fandom name 'UAENA' is a combination of 'U (You)', 'AE (Love in Sino-Korean)', and 'NA (Me)', meaning 'You and I love each other'.",
         "Debuted as a middle school student in 2008, starting with an acoustic guitar-playing girl image.",
         "Widely known as a 'Donation Angel' in Korea, consistently donating large sums on debut anniversaries and special occasions.",
         "A top-tier actress who starred in critically acclaimed dramas like 'My Mister' and 'Hotel Del Luna'.",
-        "Possesses a vast musical spectrum across folk, ballad, dance, and jazz, with exceptional songwriting skills."
+        "Possesses a vast musical spectrum across folk, ballad, dance, and jazz, with exceptional songwriting skills.",
+        "Her favorite color is purple, which she often incorporates into her lyrics and album art.",
+        "She has a habit of writing lyrics when she can't sleep, which led to the creation of many hit songs.",
+        "She is a well-known fan of Mint Chocolate, and her interview about it became a hot topic among fans.",
+        "The iconic '3-octave high note' in 'Good Day' was a pivotal moment that cemented her status as the 'Nation's Little Sister'.",
+        "She is famous for her generosity, often giving 'IU Gift Sets' (headphones, snacks, etc.) to junior artists and staff."
       ]
     },
     members: [
@@ -10766,11 +9538,14 @@ export const KPOP_GROUPS: KpopGroup[] = [
     id: "jungkook",
     name: { ko: "정국", en: "Jungkook", ja: "ジョングク (Jungkook)", zh: "田柾國 (Jungkook)", es: "Jungkook", id: "Jungkook", fr: "Jungkook", hi: "जंगकुक (Jungkook)", pt: "Jungkook", ar: "جونغكوك (Jungkook)", th: "จองกุก (Jungkook)", vi: "Jungkook", ru: "Чонгук (Jungkook)" },
     officialSite: "https://ibighit.com/bts/kor/profile/",
+    company: "BIGHIT MUSIC",
+    accentColor: "#ffcc00",
     imageUrl: "https://tse1.mm.bing.net/th?q=Jungkook+GOLDEN+Concept+Photo+High+Res",
     socials: { instagram: "https://www.instagram.com/bts.bighitofficial/", twitter: "https://twitter.com/bts_bighit", youtube: "https://www.youtube.com/@BTS", tiktok: "https://www.tiktok.com/@bts_official_bighit" },
     fandom: { ko: "아미 (ARMY)", en: "ARMY", ja: "アーミー (ARMY)", zh: "ARMY", es: "ARMY", id: "ARMY", fr: "ARMY", hi: "ARMY", pt: "ARMY", ar: "آرمي (ARMY)", th: "อาร์มี่ (ARMY)", vi: "ARMY", ru: "АРМИ (ARMY)" },
     debut: "2013.06.13",
     wiki: { ko: "정국(Jungkook)은 방탄소년단(BTS)의 멤버이자 글로벌 팝스타로, 2023년 솔로 앨범 'GOLDEN'을 통해 전 세계 차트를 휩쓸며 독보적인 솔로 아티스트로서의 입지를 굳혔습니다.", en: "Jungkook is a member of BTS and a global pop star who dominated world charts with his 2023 solo album 'GOLDEN'." },
+    description: { ko: "방탄소년단의 '황금 막내'이자 글로벌 팝 아이콘. 빌보드 Hot 100 1위를 기록하며 전 세계를 사로잡은 아티스트입니다.", en: "The 'Golden Maknae' of BTS and a global pop icon. A history-making artist who topped the Billboard Hot 100." },
     summary: { ko: "방탄소년단의 '황금 막내'에서 글로벌 팝 아이콘으로. 빌보드 Hot 100 1위를 기록한 'Seven'을 비롯해 전 세계적인 인기를 누리는 아티스트입니다.", en: "From BTS's 'Golden Maknae' to a global pop icon. A record-breaking artist whose hits like 'Seven' topped the Billboard Hot 100." },
     news: [
       { title: { ko: "정국 'Seven', 빌보드 Hot 100 1위 데뷔 신기록", en: "Jungkook's 'Seven' Debuts at No.1 on Billboard Hot 100" }, date: "2023.07.24", summary: { ko: "솔로 싱글 'Seven'이 발매와 동시에 빌보드 메인 싱글 차트 1위에 오르며 글로벌 팝스타로서의 저력을 과시했습니다.", en: "His solo single 'Seven' debuted at the top of the Billboard Hot 100, proving his immense global power." }, url: "#" },
@@ -10825,11 +9600,14 @@ export const KPOP_GROUPS: KpopGroup[] = [
     id: "lisa",
     name: { ko: "리사", en: "LISA", ja: "リサ (LISA)", zh: "LISA", es: "LISA", id: "LISA", fr: "LISA", hi: "लिसा (LISA)", pt: "LISA", ar: "ليسا (LISA)", th: "ลิซ่า (LISA)", vi: "LISA", ru: "Лиса (LISA)" },
     officialSite: "https://www.lloud.com/",
+    company: "LLOUD / RCA Records",
+    accentColor: "#ffff00",
     imageUrl: "https://tse1.mm.bing.net/th?q=LISA+ROCKSTAR+Concept+Photo+High+Res",
     socials: { instagram: "https://www.instagram.com/lalalalisa_m/", twitter: "https://twitter.com/wearelloud", youtube: "https://www.youtube.com/@lalalalisa_m", tiktok: "https://www.tiktok.com/@lisalarissa.official" },
-    fandom: { ko: "릴리즈 (Lilies)", en: "Lilies", ja: "リリーズ (Lilies)", zh: "Lilies", es: "Lilies", id: "Lilies", fr: "Lilies", hi: "Lilies", pt: "Lilies", ar: "ليليز (Lilies)", th: "ลิลลี่ (Lilies)", vi: "Lilies", ru: "Лилиз (Lilies)" },
+    fandom: { ko: "릴리즈 (Lilies)", en: "Lilies", ja: "리리즈 (Lilies)", zh: "Lilies", es: "Lilies", id: "Lilies", fr: "Lilies", hi: "Lilies", pt: "Lilies", ar: "ليليز (Lilies)", th: "ลิลลี่ (Lilies)", vi: "Lilies", ru: "Лилиз (Lilies)" },
     debut: "2016.08.08",
     wiki: { ko: "리사(LISA)는 블랙핑크(BLACKPINK)의 멤버이자 글로벌 팝스타로, 2021년 솔로 데뷔 이후 'LALISA', 'MONEY', 'ROCKSTAR' 등을 통해 전 세계적인 신드롬을 일으키고 있는 아티스트입니다.", en: "LISA is a member of BLACKPINK and a global pop icon who has created global syndromes with hits like 'LALISA', 'MONEY', and 'ROCKSTAR'." },
+    description: { ko: "글로벌 팝 아이콘이자 퍼포먼스 퀸. 기네스 세계 기록을 다수 보유하며 전 세계 패션과 음악계에 막강한 영향력을 발휘합니다.", en: "Global pop icon and performance queen. Holds multiple Guinness World Records and exerts massive influence in fashion and music." },
     summary: { ko: "글로벌 패션 및 음악 아이콘. 기네스 세계 기록을 다수 보유한 솔로 아티스트이자 전 세계에서 가장 영향력 있는 K-팝 스타 중 한 명입니다.", en: "A global fashion and music icon. A Guinness World Record-holding solo artist and one of the most influential K-pop stars in the world." },
     news: [
       { title: { ko: "리사 'ROCKSTAR', 빌보드 글로벌 200 최상위권 점령", en: "LISA's 'ROCKSTAR' Dominates Billboard Global 200 Charts" }, date: "2024.06.28", summary: { ko: "새로운 레이블 LLOUD 설립 후 발표한 'ROCKSTAR'가 전 세계 음원 차트를 휩쓸며 성공적인 독자 행보를 알렸습니다.", en: "Her first release under new label LLOUD, 'ROCKSTAR', swept global charts, marking a successful solo path." }, url: "#" },
@@ -10884,11 +9662,14 @@ export const KPOP_GROUPS: KpopGroup[] = [
     id: "babymonster",
     name: { ko: "베이비몬스터", en: "BABYMONSTER", ja: "ベイビーモンスター (BABYMONSTER)", zh: "BABYMONSTER", es: "BABYMONSTER", id: "BABYMONSTER", fr: "BABYMONSTER", hi: "बेबीमॉन्स्टर (BABYMONSTER)", pt: "BABYMONSTER", ar: "بيبي مونستر (BABYMONSTER)", th: "เบบี้มอนสเตอร์ (BABYMONSTER)", vi: "BABYMONSTER", ru: "BABYMONSTER" },
     officialSite: "https://yg-babymonster.com/",
+    company: "YG Entertainment",
+    accentColor: "#ff0000",
     imageUrl: "https://tse1.mm.bing.net/th?q=BABYMONSTER+DRIP+Group+Photo+High+Res",
     socials: { instagram: "https://www.instagram.com/babymonster_ygofficial/", twitter: "https://twitter.com/ygbabymonster_", youtube: "https://www.youtube.com/@BABYMONSTER", tiktok: "https://www.tiktok.com/@babymonster_yg_official" },
     fandom: { ko: "몬스트리즈 (MONSTIEZ)", en: "MONSTIEZ", ja: "モンストリーズ (MONSTIEZ)", zh: "MONSTIEZ", es: "MONSTIEZ", id: "MONSTIEZ", fr: "MONSTIEZ", hi: "MONSTIEZ", pt: "MONSTIEZ", ar: "مونستريز (MONSTIEZ)", th: "มอนสตรีซ (MONSTIEZ)", vi: "MONSTIEZ", ru: "MONSTIEZ" },
     debut: "2024.04.01",
     wiki: { ko: "베이비몬스터(BABYMONSTER)는 YG 엔터테인먼트 소속의 7인조 다국적 걸그룹입니다. 보컬, 댄스, 랩 실력을 두루 갖춘 '올라운더' 멤버들로 구성되어 데뷔 전부터 전 세계적인 주목을 받았습니다.", en: "BABYMONSTER is a 7-member multinational girl group under YG Entertainment, known for their exceptional 'all-rounder' skills in vocal, dance, and rap." },
+    description: { ko: "YG의 차세대 '괴물 신인'. 압도적인 실력과 당당한 카리스마로 전 세계 팝 시장에 새로운 충격을 던지고 있습니다.", en: "YG's next-generation 'monster rookies' shaking up the global pop market with overwhelming talent and charisma." },
     summary: { ko: "YG의 차세대 괴물 신인. 압도적인 실력과 당당한 카리스마로 전 세계 팝 시장에 새로운 충격을 던지고 있는 그룹입니다.", en: "YG's next-generation 'monster rookies'. A group that is shaking up the global pop market with their overwhelming talent and charisma." },
     news: [
       { title: { ko: "베이비몬스터 'SHEESH' 뮤직비디오, K-팝 걸그룹 데뷔곡 최단 기간 1억 뷰", en: "BABYMONSTER's 'SHEESH' MV Hits 100M Views in Record Time for K-pop Girl Group Debut" }, date: "2024.04.11", summary: { ko: "공식 데뷔곡 'SHEESH'가 공개 10일 만에 유튜브 조회수 1억 회를 돌파하며 폭발적인 글로벌 인기를 입증했습니다.", en: "Their official debut song 'SHEESH' surpassed 100 million views on YouTube just 10 days after release." }, url: "#" },
@@ -10924,11 +9705,14 @@ export const KPOP_GROUPS: KpopGroup[] = [
     id: "riize",
     name: { ko: "라이즈", en: "RIIZE", ja: "ライズ (RIIZE)", zh: "RIIZE", es: "RIIZE", id: "RIIZE", fr: "RIIZE", hi: "राइज़ (RIIZE)", pt: "RIIZE", ar: "رايز (RIIZE)", th: "ไรซ์ (RIIZE)", vi: "RIIZE", ru: "RIIZE" },
     officialSite: "https://www.smtown.com/artist/profile/10123",
+    company: "SM Entertainment",
+    accentColor: "#0066ff",
     imageUrl: "https://tse1.mm.bing.net/th?q=RIIZE+Boom+Boom+Bass+Group+Photo+High+Res",
     socials: { instagram: "https://www.instagram.com/riize_official/", twitter: "https://twitter.com/riize_official", youtube: "https://www.youtube.com/@RIIZE_official", tiktok: "https://www.tiktok.com/@riize_official" },
     fandom: { ko: "브리즈 (BRIIZE)", en: "BRIIZE", ja: "ブリーズ (BRIIZE)", zh: "BRIIZE", es: "BRIIZE", id: "BRIIZE", fr: "BRIIZE", hi: "BRIIZE", pt: "BRIIZE", ar: "بريز (BRIIZE)", th: "บรีซ (BRIIZE)", vi: "BRIIZE", ru: "BRIIZE" },
     debut: "2023.09.04",
     wiki: { ko: "라이즈(RIIZE)는 SM 엔터테인먼트 소속의 보이그룹입니다. '함께 성장하고 꿈을 실현해 나가는 팀'이라는 의미를 담고 있으며, 독자적인 장르인 '이모셔널 팝(Emotional Pop)'을 선보입니다.", en: "RIIZE is a boy group under SM Entertainment. The name stands for 'Rise' and 'Realize', meaning a team that grows together and realizes dreams." },
+    description: { ko: "5세대를 대표하는 이모셔널 팝 보이그룹. 청량한 비주얼과 압도적인 퍼포먼스로 독자적인 음악 세계를 구축하고 있습니다.", en: "A 5th-gen leading Emotional Pop boy group, building their unique musical world with refreshing visuals and powerful performances." },
     summary: { ko: "5세대를 대표하는 이모셔널 팝의 선두주자. 청량한 비주얼과 압도적인 퍼포먼스로 데뷔와 동시에 글로벌 차트를 휩쓸고 있는 그룹입니다.", en: "Leaders of 5th-gen Emotional Pop. A group dominating global charts with their refreshing visuals and powerful performances since debut." },
     news: [
       { title: { ko: "라이즈 'Get A Guitar', 데뷔와 동시에 밀리언셀러 등극", en: "RIIZE's 'Get A Guitar' Becomes Million Seller Upon Debut" }, date: "2023.09.11", summary: { ko: "데뷔 싱글 'Get A Guitar'가 발매 일주일 만에 판매량 100만 장을 돌파하며 역대급 신인 탄생을 알렸습니다.", en: "Their debut single 'Get A Guitar' surpassed 1 million sales in just one week." }, url: "#" },
@@ -10963,11 +9747,14 @@ export const KPOP_GROUPS: KpopGroup[] = [
     id: "txt",
     name: { ko: "투모로우바이투게더", en: "TXT", ja: "トゥモローバイトゥギャザー (TXT)", zh: "TXT", es: "TXT", id: "TXT", fr: "TXT", hi: "TXT", pt: "TXT", ar: "تي إكس تي (TXT)", th: "ทีเอ็กซ์ที (TXT)", vi: "TXT", ru: "TXT" },
     officialSite: "https://ibighit.com/txt/kor/",
+    company: "BIGHIT MUSIC",
+    accentColor: "#ccff00",
     imageUrl: "https://tse1.mm.bing.net/th?q=TXT+Group+Concept+Photo+High+Res",
     socials: { instagram: "https://www.instagram.com/txt_bighit/", twitter: "https://twitter.com/TXT_bighit", youtube: "https://www.youtube.com/@TXT_bighit", tiktok: "https://www.tiktok.com/@txt.bighitent" },
     fandom: { ko: "모아 (MOA)", en: "MOA", ja: "モア (MOA)", zh: "MOA", es: "MOA", id: "MOA", fr: "MOA", hi: "MOA", pt: "MOA", ar: "موا (MOA)", th: "โมอา (MOA)", vi: "MOA", ru: "MOA" },
     debut: "2019.03.04",
     wiki: { ko: "투모로우바이투게더(TXT)는 빅히트 뮤직 소속의 5인조 보이그룹입니다. '서로 다른 너와 내가 하나의 꿈으로 모여 내일을 함께 만들어간다'는 의미를 담고 있으며 4세대를 대표하는 글로벌 그룹입니다.", en: "TOMORROW X TOGETHER (TXT) is a 5-member boy group under Big Hit Music, representing the 4th generation of K-pop globally." },
+    description: { ko: "4세대 K-팝의 대표주자이자 글로벌 스토리텔러. 독창적인 판타지 세계관과 감각적인 음악으로 전 세계를 사로잡았습니다.", en: "A representative 4th-gen K-pop group and global storytellers, capturing the world with their unique fantasy lore and sensory music." },
     summary: { ko: "Z세대를 대변하는 4세대 K-팝의 선두주자. 독창적인 판타지 세계관과 뛰어난 스토리텔링으로 글로벌 팬덤의 열광적인 지지를 받고 있습니다.", en: "Leaders of 4th-gen K-pop representing Gen Z. They receive enthusiastic global support for their unique fantasy lore and storytelling." },
     news: [
       { title: { ko: "TXT, 미니 6집으로 빌보드 200 3위 진입", en: "TXT Enters Billboard 200 at No.3 with 6th Mini Album" }, date: "2024.04.14", summary: { ko: "미니 6집 'minisode 3: TOMORROW'가 미국 빌보드 메인 앨범 차트에 최상위권으로 진입하며 흔들림 없는 글로벌 위상을 입증했습니다.", en: "Their 6th mini album entered the top of the Billboard main album chart, proving their solid global status." }, url: "#" }
@@ -10996,11 +9783,14 @@ export const KPOP_GROUPS: KpopGroup[] = [
     id: "jennie",
     name: { ko: "제니", en: "JENNIE", ja: "ジェニー (JENNIE)", zh: "JENNIE", es: "JENNIE", id: "JENNIE", fr: "JENNIE", hi: "जेनी (JENNIE)", pt: "JENNIE", ar: "جيني (JENNIE)", th: "เจนนี่ (JENNIE)", vi: "JENNIE", ru: "Дженни (JENNIE)" },
     officialSite: "https://www.oddatelier.net/",
+    company: "OA (ODD ATELIER) / Columbia Records",
+    accentColor: "#000000",
     imageUrl: "https://tse1.mm.bing.net/th?q=JENNIE+Mantra+Concept+Photo+High+Res",
     socials: { instagram: "https://www.instagram.com/jennierubyjane/", twitter: "https://twitter.com/oddatelier", youtube: "https://www.youtube.com/@jennierubyjane", tiktok: "https://www.tiktok.com/@jennierubyjane" },
     fandom: { ko: "루비즈 (Rubies)", en: "Rubies", ja: "ルビーズ (Rubies)", zh: "Rubies", es: "Rubies", id: "Rubies", fr: "Rubies", hi: "Rubies", pt: "Rubies", ar: "روبيز (Rubies)", th: "รูบี้ส์ (Rubies)", vi: "Rubies", ru: "Rubies" },
     debut: "2016.08.08",
     wiki: { ko: "제니(JENNIE)는 블랙핑크(BLACKPINK)의 멤버이자 글로벌 패션·음악 아이콘입니다. 'SOLO'부터 최근 'Mantra'까지 내는 곡마다 글로벌 히트를 기록 중입니다.", en: "JENNIE is a member of BLACKPINK and a global fashion/music icon, known for solo hits ranging from 'SOLO' to 'Mantra'." },
+    description: { ko: "독보적인 아우라를 가진 글로벌 'It Girl'. 샤넬의 앰버서더이자 패션과 음악 트렌드를 주도하는 최정상 솔로 아티스트입니다.", en: "A global 'It Girl' with an unrivaled aura. A Chanel ambassador and top-tier soloist leading fashion and music trends." },
     summary: { ko: "K-팝을 넘어선 전 세계적인 'It Girl'. 샤넬의 글로벌 앰버서더이자 본인만의 독보적인 트렌드를 만들어내는 솔로 아티스트입니다.", en: "A global 'It Girl' beyond K-pop. A global ambassador for Chanel and a solo artist who sets her own unrivaled trends." },
     news: [
       { title: { ko: "제니, 신곡 'Mantra'로 美 빌보드 Hot 100 진입 성공", en: "JENNIE Enters Billboard Hot 100 with New Song 'Mantra'" }, date: "2024.10.22", summary: { ko: "새 싱글 'Mantra'가 발매 첫 주 만에 빌보드 메인 차트에 진입하며 솔로 아티스트로서의 막강한 글로벌 저력을 뽐냈습니다.", en: "Her new single 'Mantra' entered the Billboard main chart in its first week, showing her immense global power as a soloist." }, url: "#" }
@@ -11035,11 +9825,14 @@ export const KPOP_GROUPS: KpopGroup[] = [
     id: "illit",
     name: { ko: "아일릿", en: "ILLIT", ja: "アイリット (ILLIT)", zh: "ILLIT", es: "ILLIT", id: "ILLIT", fr: "ILLIT", hi: "ILLIT", pt: "ILLIT", ar: "آيليت (ILLIT)", th: "ไอลิท (ILLIT)", vi: "ILLIT", ru: "ILLIT" },
     officialSite: "https://beliftlab.com/artist/profile/ILLIT",
+    company: "BELIFT LAB (HYBE)",
+    accentColor: "#ff99cc",
     imageUrl: "https://tse1.mm.bing.net/th?q=ILLIT+Magnetic+Group+Photo+High+Res",
     socials: { instagram: "https://www.instagram.com/illit_official/", twitter: "https://twitter.com/ILLIT_official", youtube: "https://www.youtube.com/@ILLIT_official", tiktok: "https://www.tiktok.com/@illit_official" },
     fandom: { ko: "글릿 (GLLIT)", en: "GLLIT", ja: "グリット (GLLIT)", zh: "GLLIT", es: "GLLIT", id: "GLLIT", fr: "GLLIT", hi: "GLLIT", pt: "GLLIT", ar: "غليت (GLLIT)", th: "กลิท (GLLIT)", vi: "GLLIT", ru: "GLLIT" },
     debut: "2024.03.25",
     wiki: { ko: "아일릿(ILLIT)은 빌리프랩 소속의 5인조 다국적 걸그룹입니다. 데뷔곡 'Magnetic'으로 K-팝 데뷔곡 역사상 가장 빠른 속도로 빌보드 Hot 100에 진입하는 신기록을 세웠습니다.", en: "ILLIT is a 5-member multinational girl group under Belift Lab. Their debut song 'Magnetic' set a record as the fastest K-pop debut track to enter the Billboard Hot 100." },
+    description: { ko: "전 세계를 강타한 'Magnetic' 신드롬의 주인공. 엉뚱 발랄한 10대의 리얼함을 무기로 5세대를 이끌어갈 슈퍼 루키입니다.", en: "The protagonists of the global 'Magnetic' syndrome. Super rookies leading the 5th generation with their quirky and realistic teenage charm." },
     summary: { ko: "전 세계를 강타한 'Magnetic' 신드롬의 주인공. 엉뚱 발랄한 10대의 리얼함을 무기로 5세대를 이끌어갈 슈퍼 루키입니다.", en: "The protagonists of the global 'Magnetic' syndrome. Super rookies leading the 5th generation with their quirky and realistic teenage charm." },
     news: [
       { title: { ko: "아일릿 'Magnetic', K-팝 데뷔곡 최초 美 빌보드 Hot 100 진입", en: "ILLIT's 'Magnetic' Becomes First K-pop Debut Song to Enter Billboard Hot 100" }, date: "2024.04.16", summary: { ko: "데뷔곡 'Magnetic'이 발매 한 달도 안 되어 미국 빌보드 메인 차트에 오르는 기적적인 성과를 달성했습니다.", en: "Their debut song 'Magnetic' achieved a miraculous feat by entering the US Billboard main chart in less than a month." }, url: "#" }

@@ -215,16 +215,31 @@ export default function Worldcup() {
     return (
       <div className="flex-1 flex flex-col items-center justify-center px-4 py-12 min-h-[70vh]">
         <div className="w-full max-w-lg">
-          {/* Header */}
+          {/* Hero title */}
           <div className="text-center mb-10">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br from-neon-pink/20 to-neon-purple/20 border border-neon-pink/30 mb-5"
-              style={{ boxShadow: '0 0 30px rgba(255,0,255,0.2)' }}>
-              <Swords className="w-10 h-10 text-neon-pink" />
+            <div className="relative mb-6 pt-4">
+              <h1 className="font-black italic uppercase tracking-tighter text-center leading-[0.85] flex flex-col items-center">
+                <span className="block text-[56px] sm:text-[72px] md:text-[90px] text-white tracking-[-0.05em] select-none">
+                  이상형
+                </span>
+                <span
+                  className="block text-[56px] sm:text-[72px] md:text-[90px] text-transparent bg-clip-text select-none tracking-[-0.05em]"
+                  style={{
+                    backgroundImage: 'linear-gradient(90deg, #ff00ff, #9d00ff, #ff00ff)',
+                    backgroundSize: '200% 100%',
+                    animation: 'neon-gradient 4s linear infinite',
+                    paddingLeft: '0.25em',
+                    paddingRight: '0.25em',
+                    paddingTop: '0.1em',
+                    paddingBottom: '0.15em',
+                  }}
+                >
+                  WORLDCUP
+                </span>
+              </h1>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-neon-pink/10 blur-[80px] -z-10 rounded-full" />
             </div>
-            <h1 className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-white mb-2">
-              {t('worldcup_title')}
-            </h1>
-            <p className="text-slate-400 text-sm">{t('worldcup_subtitle')}</p>
+            <p className="text-slate-400 text-sm font-mono uppercase tracking-widest">{t('worldcup_subtitle')}</p>
           </div>
 
           {/* Gender filter */}

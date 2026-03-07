@@ -1,14 +1,19 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Crosshair, HelpCircle, Database, ArrowRight, Sparkles, Check, Shield, Zap, TrendingUp, Users, Globe } from 'lucide-react';
+import { KPOP_GROUPS } from '../data/idols';
 
 // ─── Stat bar ────────────────────────────────────────────────────────────────
 
 function StatBar() {
   const { t } = useTranslation();
+  
+  const groupsCount = KPOP_GROUPS.length;
+  const membersCount = KPOP_GROUPS.reduce((acc, group) => acc + group.members.length, 0);
+
   const stats = [
-    { value: '19', labelKey: 'home_stat_groups_label', icon: <TrendingUp className="w-3.5 h-3.5 text-neon-blue" /> },
-    { value: '100', labelKey: 'home_stat_members_label', icon: <Users className="w-3.5 h-3.5 text-neon-pink" /> },
+    { value: groupsCount.toString(), labelKey: 'home_stat_groups_label', icon: <TrendingUp className="w-3.5 h-3.5 text-neon-blue" /> },
+    { value: membersCount.toString(), labelKey: 'home_stat_members_label', icon: <Users className="w-3.5 h-3.5 text-neon-pink" /> },
     { value: '350+', labelKey: 'home_stat_quiz_label', icon: <Zap className="w-3.5 h-3.5 text-neon-yellow" /> },
     { value: '13', labelKey: 'home_stat_langs_label', icon: <Globe className="w-3.5 h-3.5 text-neon-green" /> },
   ];
