@@ -1419,5 +1419,1353 @@ export const KPOP_GROUPS: KpopGroup[] = [
         socials: { instagram: "https://www.instagram.com/shuhua_dlwlrma/" }
       }
     ]
+  },
+
+  // ==================== STRAY KIDS ====================
+  {
+    id: "straykids",
+    name: { ko: "스트레이 키즈", en: "Stray Kids", ja: "ストレイキッズ", zh: "Stray Kids", es: "Stray Kids", id: "Stray Kids", fr: "Stray Kids", hi: "स्ट्रे किड्स", pt: "Stray Kids", ar: "ستراي كيدز", th: "สตรีย์ คิดส์", vi: "Stray Kids", ru: "Stray Kids" },
+    description: {
+      ko: "JYP엔터테인먼트 소속의 8인조 보이그룹. 자체 제작 유닛 3RACHA를 중심으로 독자적인 음악 세계를 구축하며, Spotify 2025 K-Pop 2위, 빌보드 200 1위를 6회 달성한 글로벌 탑 그룹.",
+      en: "8-member boy group under JYP Entertainment. Centered around self-producing unit 3RACHA, they built a unique musical universe — ranking #2 on Spotify 2025 K-Pop and achieving 6 Billboard 200 #1 albums.",
+      ja: "JYPエンターテインメント所属の8人組ボーイズグループ。自己制作ユニット3RACHAを中心に独自の音楽世界を構築し、Spotify 2025 K-Pop 2位、ビルボード200 1位を6回達成。",
+      zh: "JYP娱乐旗下8人男团。以自制单元3RACHA为核心，建立了独特的音乐世界，2025年Spotify K-Pop排名第2，6次登顶Billboard 200。",
+      es: "Grupo masculino de 8 miembros bajo JYP Entertainment. Con 3RACHA como unidad autoproductora, alcanzaron el #2 en Spotify K-Pop 2025 y 6 álbumes #1 en Billboard 200.",
+      id: "Grup pria beranggotakan 8 orang di bawah JYP Entertainment. Dipimpin unit produksi mandiri 3RACHA, meraih posisi #2 Spotify K-Pop 2025 dan 6 album #1 Billboard 200.",
+      fr: "Groupe masculin de 8 membres sous JYP Entertainment. Avec leur unité autoproductrice 3RACHA, ils ont atteint la 2e place Spotify K-Pop 2025 et 6 albums #1 au Billboard 200.",
+      hi: "JYP एंटरटेनमेंट के तहत 8 सदस्यीय बॉय ग्रुप। सेल्फ-प्रोड्यूसिंग यूनिट 3RACHA के साथ, Spotify 2025 K-Pop #2 और 6 Billboard 200 #1 एल्बम हासिल किए।",
+      pt: "Grupo masculino de 8 membros sob a JYP Entertainment. Com a unidade autoprodutora 3RACHA, alcançaram o #2 no Spotify K-Pop 2025 e 6 álbuns #1 no Billboard 200.",
+      ar: "مجموعة فتيان من 8 أعضاء تحت JYP Entertainment. بقيادة وحدة الإنتاج الذاتي 3RACHA، حققوا المرتبة 2 في Spotify K-Pop 2025 و6 ألبومات في صدارة Billboard 200.",
+      th: "กลุ่มชาย 8 คนภายใต้ JYP Entertainment นำโดยยูนิตโปรดิวซ์เอง 3RACHA อันดับ 2 Spotify K-Pop 2025 และ 6 อัลบั้ม #1 Billboard 200",
+      vi: "Nhóm nhạc nam 8 thành viên thuộc JYP Entertainment. Với đơn vị tự sản xuất 3RACHA, đạt #2 Spotify K-Pop 2025 và 6 album #1 Billboard 200.",
+      ru: "Мужская группа из 8 участников под JYP Entertainment. С самопродюсирующим юнитом 3RACHA заняли #2 в Spotify K-Pop 2025 и добились 6 альбомов #1 на Billboard 200."
+    },
+    fandom: { ko: "스테이 (STAY)", en: "STAY", ja: "スティ (STAY)", zh: "STAY", es: "STAY", id: "STAY", fr: "STAY", hi: "STAY", pt: "STAY", ar: "ستاي (STAY)", th: "สเตย์ (STAY)", vi: "STAY", ru: "STAY" },
+    debut: "2018.03.25",
+    accentColor: "#ff3300",
+    imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+group+kpop+2024+official&w=500&h=500&c=7&rs=1&p=0",
+    wiki: {
+      ko: "스트레이 키즈(Stray Kids)는 JYP엔터테인먼트 소속의 8인조 보이그룹입니다. 2017년 Mnet 서바이벌 프로그램 'Stray Kids'를 통해 결성됐으며 2018년 3월 정식 데뷔했습니다. 멤버 방찬·창빈·한으로 구성된 자체 제작 유닛 3RACHA를 중심으로 힙합·EDM·록을 결합한 독자적 음악 세계를 구축했습니다. 2025년 코첼라 단독 헤드라이너, 빌보드 200 6회 정상, Spotify K-Pop 2위 등을 달성한 글로벌 최정상 그룹입니다.",
+      en: "Stray Kids is an 8-member boy group under JYP Entertainment, formed through Mnet's 2017 survival show 'Stray Kids' and officially debuted in March 2018. Centered around self-producing unit 3RACHA (Bang Chan, Changbin, Han), they built a distinctive sound blending hip-hop, EDM, and rock. Global achievements include headlining Coachella 2025, 6 Billboard 200 #1 albums, and ranking #2 on Spotify K-Pop Wrapped 2025."
+    },
+    company: "JYP Entertainment",
+    tmi: {
+      ko: [
+        "그룹명 'Stray Kids'는 '길 잃은 아이들'이라는 뜻으로, 서바이벌 프로그램에서 탈락한 연습생들이 만든 그룹이라는 역설적 의미를 담고 있다.",
+        "자체 제작 유닛 3RACHA(방찬, 창빈, 한)는 데뷔 전부터 SoundCloud에 음악을 올리며 활동했다.",
+        "2025년 코첼라 무대에서 단독 헤드라이너로 서며 K-Pop 보이그룹 최초 기록을 세웠다.",
+        "빌보드 200에서 6장의 앨범을 1위에 올린 K-Pop 그룹 중 하나로, BTS 다음으로 많은 횟수다.",
+        "팬덤명 STAY는 '길 잃은 아이들과 함께 머물다'는 의미로 그룹명과 연결된다.",
+        "멤버 전원이 앨범의 작사·작곡에 참여하는 완전 자체 제작 그룹이다.",
+        "2023년 발매한 'S-Class'는 음원 차트 역주행으로 오랜 기간 상위권을 유지했다.",
+        "방찬은 데뷔 전 JYP 연습생 시절 GOT7 멤버들과 같은 기숙사에서 생활했다.",
+        "유닛 '리노&현진'의 춤 실력은 업계에서 '살아있는 레전드'로 불린다.",
+        "2024년 발매한 'HOP'은 뮤직비디오 24시간 내 5000만 뷰를 돌파했다."
+      ],
+      en: [
+        "The name 'Stray Kids' reflects their origin — members who survived an elimination show, forming a group from 'lost kids' with no pre-set debut path.",
+        "Self-producing unit 3RACHA (Bang Chan, Changbin, Han) had been uploading music to SoundCloud even before the group officially debuted.",
+        "At Coachella 2025, they performed as a headliner — a first for a K-pop boy group at the prestigious festival.",
+        "They are one of the K-pop groups with the most Billboard 200 #1 albums (6), second only to BTS.",
+        "The fandom name STAY connects to the group name — fans who 'stay' with the 'stray kids'.",
+        "All members participate in writing and producing their music, making them a fully self-produced group.",
+        "'S-Class' (2023) experienced a reverse chart run, staying near the top for an unusually long time.",
+        "Bang Chan lived in the same dorm as GOT7 members during his JYP trainee days before debut.",
+        "The dance duo Lee Know & Hyunjin are dubbed 'living legends' for their technical and artistic skill.",
+        "'HOP' (2024) surpassed 50 million MV views within 24 hours of its release."
+      ]
+    },
+    news: [
+      { title: { ko: "스트레이 키즈, 2025 코첼라 단독 헤드라이너 — K-Pop 보이그룹 최초", en: "Stray Kids Headline Coachella 2025 — First K-Pop Boy Group Ever" }, date: "2025.04.12", summary: { ko: "스트레이 키즈가 K-Pop 보이그룹 최초로 코첼라 단독 헤드라이너로 무대에 올라 전 세계 음악 팬들의 이목을 집중시켰습니다.", en: "Stray Kids took the Coachella main stage as headliners — a historic first for any K-pop boy group." }, url: "#" },
+      { title: { ko: "Spotify 2025 K-Pop Wrapped 2위 — BTS에 이어 역대급 성적", en: "Spotify 2025 K-Pop Wrapped: Stray Kids Ranked #2 Behind BTS" }, date: "2025.12.04", summary: { ko: "Spotify가 발표한 2025 K-Pop Wrapped에서 스트레이 키즈가 BTS에 이어 2위를 기록하며 글로벌 영향력을 입증했습니다.", en: "Spotify's 2025 K-Pop Wrapped placed Stray Kids at #2 behind BTS, confirming their global dominance." }, url: "#" },
+      { title: { ko: "정규 5집 'ATE' 빌보드 200 1위 — 통산 6번째 정상", en: "5th Album 'ATE' Tops Billboard 200 — Their 6th #1" }, date: "2024.07.19", summary: { ko: "정규 5집 'ATE'가 빌보드 200에서 1위를 기록해 스트레이 키즈가 통산 6번째 빌보드 200 정상에 올랐습니다.", en: "'ATE' debuted at #1 on the Billboard 200, making it Stray Kids' 6th chart-topping album." }, url: "#" },
+      { title: { ko: "월드투어 'dominATE' 50개 도시 전석 매진", en: "World Tour 'dominATE' Sells Out 50 Cities Worldwide" }, date: "2025.02.01", summary: { ko: "북미·유럽·아시아 50개 도시에서 진행된 월드투어 'dominATE'가 전 회차 매진을 기록했습니다.", en: "The 'dominATE' world tour sold out across 50 cities in North America, Europe, and Asia." }, url: "#" },
+      { title: { ko: "방찬, 2025 그래미 시상식 참석해 글로벌 주목", en: "Bang Chan Attends 2025 Grammy Awards, Draws Global Attention" }, date: "2025.02.02", summary: { ko: "방찬이 2025 그래미 시상식에 참석해 K-Pop의 미국 주류 음악 시장 진출을 상징적으로 보여줬습니다.", en: "Bang Chan's attendance at the 2025 Grammy Awards symbolized K-pop's growing presence in the US mainstream music market." }, url: "#" },
+      { title: { ko: "'Miroh' 발매 6주년 역주행 차트 진입", en: "'Miroh' Re-Enters Charts on Its 6th Anniversary" }, date: "2025.03.25", summary: { ko: "2019년 발매된 'Miroh'가 데뷔 6주년을 맞아 역주행 차트 진입에 성공해 팬들의 열띤 응원이 화제가 됐습니다.", en: "'Miroh', released in 2019, re-entered the charts on its 6th anniversary thanks to a massive fan streaming project." }, url: "#" },
+      { title: { ko: "Felix, Dior 글로벌 앰배서더 공식 발탁", en: "Felix Named Dior Global Brand Ambassador" }, date: "2024.09.10", summary: { ko: "스트레이 키즈 Felix가 세계적인 명품 브랜드 Dior의 글로벌 앰배서더로 공식 발탁돼 패션계에서도 K-Pop의 위상이 높아졌습니다.", en: "Stray Kids' Felix was officially named a global brand ambassador for Dior, elevating K-pop's presence in the fashion world." }, url: "#" },
+      { title: { ko: "현진, 미술 전시회 'HJ Art' 성황리에 마무리", en: "Hyunjin's Art Exhibition 'HJ Art' Concludes Successfully" }, date: "2025.05.20", summary: { ko: "현진이 개최한 개인 미술 전시회 'HJ Art'가 전 세계 팬들의 큰 호응을 받으며 성황리에 마무리됐습니다.", en: "Hyunjin's solo art exhibition 'HJ Art' concluded to massive acclaim from fans worldwide." }, url: "#" },
+      { title: { ko: "'2025 K-Pop 글로벌 대사' 수상", en: "Awarded '2025 K-Pop Global Ambassador'" }, date: "2025.10.09", summary: { ko: "한국 문화체육관광부가 선정한 '2025 K-Pop 글로벌 대사'에 스트레이 키즈가 선정됐습니다.", en: "Stray Kids was selected as '2025 K-Pop Global Ambassador' by Korea's Ministry of Culture, Sports and Tourism." }, url: "#" },
+      { title: { ko: "팬덤 STAY, 글로벌 규모 1500만 돌파", en: "Fandom STAY Surpasses 15 Million Global Members" }, date: "2025.11.15", summary: { ko: "스트레이 키즈의 공식 팬덤 STAY가 글로벌 팬덤 규모 1500만 명을 돌파했습니다.", en: "Stray Kids' official fandom STAY surpassed 15 million members globally." }, url: "#" }
+    ],
+    members: [
+      {
+        id: "bangchan",
+        name: { ko: "방찬", en: "Bang Chan" },
+        role: { ko: "리더, 보컬, 래퍼, 프로듀서", en: "Leader, Vocal, Rapper, Producer" },
+        birth: "2000.10.03",
+        bloodType: "A",
+        mbti: "INFJ",
+        height: "171cm",
+        zodiac: { ko: "천칭자리", en: "Libra" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Bang+Chan+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "호주 출신의 스트레이 키즈 리더이자 자체 제작 유닛 3RACHA의 핵심. 팀 음악 대부분을 직접 프로듀싱하며 매주 'Chan's Room' 라이브로 팬들과 소통한다.", en: "Leader of Stray Kids and core of self-producing unit 3RACHA. He produces most of the team's music and connects with fans weekly through 'Chan's Room' live streams." },
+        tmi: {
+          ko: [
+            "호주 시드니 출신으로, 호주에서 어린 시절을 보내다 JYP 오디션을 위해 한국으로 왔다.",
+            "매주 금요일 새벽 팬들과 라이브 방송 'Chan's Room'을 진행해 리더십과 솔직함으로 유명하다.",
+            "3RACHA의 리더이자 프로듀서로, 스트레이 키즈 곡의 대부분을 직접 제작한다.",
+            "거의 모든 스트레이 키즈 뮤직비디오 의상을 직접 코디하는 패션 감각 소유자.",
+            "훈련생 시절 JYP 기숙사에서 GOT7의 마크, 잭슨과 룸메이트였다고 알려져 있다."
+          ],
+          en: [
+            "Originally from Sydney, Australia — he moved to Korea specifically to audition for JYP Entertainment.",
+            "Hosts 'Chan's Room' live streams every Friday (early morning) for fans, known for his openness and leadership.",
+            "As leader of 3RACHA, he produces the majority of Stray Kids' discography.",
+            "Known to personally style his own outfits for most Stray Kids music videos.",
+            "Was reportedly a roommate with GOT7's Mark and Jackson during JYP trainee days."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "leeknow",
+        name: { ko: "리노", en: "Lee Know" },
+        role: { ko: "댄서, 보컬", en: "Dancer, Vocal" },
+        birth: "1998.10.25",
+        bloodType: "AB",
+        mbti: "ISTP",
+        height: "171cm",
+        zodiac: { ko: "전갈자리", en: "Scorpio" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Lee+Know+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "BTS 'DNA' 백댄서 출신의 스트레이 키즈 메인 댄서. 고양이 3마리를 키우는 집사로, 압도적인 댄스 실력으로 'JYP의 춤의 신'이라 불린다.", en: "Former BTS 'DNA' backup dancer turned Stray Kids main dancer. A devoted cat dad to 3 cats, he is called 'JYP's god of dance' for his overwhelming skill." },
+        tmi: {
+          ko: [
+            "BTS 'DNA' 뮤직비디오 백댄서로 출연한 경력이 있어 데뷔 전부터 이미 유명했다.",
+            "고양이 3마리를 키우는 집사로, 반려묘 '소름·비스킷·도도'는 팬들에게 셀럽급 인기를 누린다.",
+            "원래 다른 그룹으로 데뷔할 예정이었으나 해체 후 재오디션을 거쳐 스트레이 키즈에 합류했다.",
+            "춤 실력이 워낙 뛰어나 JYP 내부에서도 '춤의 신'이라는 별명으로 불렸다.",
+            "이름 '리노(Lee Know)'는 본명 이민호에서 따왔으며, 영어로 'Lee · Know' 즉 '이 알아'라는 말장난 의미도 있다."
+          ],
+          en: [
+            "Appeared as a backup dancer in BTS's 'DNA' music video — making him recognizable even before debut.",
+            "Has three cats (Soeum, Biscuit, Dori) who are practically celebrities in the STAY fandom.",
+            "Originally set to debut with a different group under JYP but joined Stray Kids after a re-audition.",
+            "Known internally at JYP as 'god of dance' for his exceptional technical ability.",
+            "His stage name 'Lee Know' is a play on his real surname Lee Min-ho — a pun on 'I know'."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "changbin",
+        name: { ko: "창빈", en: "Changbin" },
+        role: { ko: "래퍼", en: "Rapper" },
+        birth: "1999.08.11",
+        bloodType: "O",
+        mbti: "INFP",
+        height: "169cm",
+        zodiac: { ko: "사자자리", en: "Leo" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Changbin+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "3RACHA의 핵심 래퍼이자 작사가. 특유의 저음 래핑 스타일 '군함'으로 유명하며 일본어를 독학으로 마스터한 언어 재능도 가졌다.", en: "Core rapper and lyricist of 3RACHA, nicknamed 'Battleship' for his deep powerful rap style. Also self-taught Japanese, showcasing his linguistic talent." },
+        tmi: {
+          ko: [
+            "3RACHA의 핵심 래퍼이자 작사가로, 특유의 저음 래핑 스타일로 '군함'이라는 별명을 얻었다.",
+            "일본어를 독학으로 공부해 일본 팬들과 유창하게 소통하는 언어 능력자다.",
+            "체력 관리에 진심인 멤버로, 하루도 빠짐없이 운동을 한다고 알려져 있다.",
+            "어린 시절 아이돌이 꿈이 아니었으나 학교 친구들의 권유로 오디션에 참가했다.",
+            "팬들 사이에서 '서태지 이후 최고의 래퍼'라는 극찬을 받을 정도로 래핑 실력을 인정받는다."
+          ],
+          en: [
+            "Core rapper of 3RACHA, nicknamed 'Battleship' for his distinctively deep, powerful rap style.",
+            "Self-taught Japanese speaker who communicates fluently with Japanese fans.",
+            "Famous for never missing a workout — fitness is a top priority in his daily routine.",
+            "Didn't dream of being an idol as a child — a school friend encouraged him to audition.",
+            "Often praised as 'the best rapper since Seo Taiji' by fans for his lyrical depth and flow."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "hyunjin",
+        name: { ko: "현진", en: "Hyunjin" },
+        role: { ko: "댄서, 보컬, 비주얼", en: "Dancer, Vocal, Visual" },
+        birth: "2000.03.20",
+        bloodType: "A",
+        mbti: "INFP",
+        height: "179cm",
+        zodiac: { ko: "물고기자리", en: "Pisces" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Hyunjin+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "화가이자 발레 출신 댄서. Versace·Valentino 글로벌 앰배서더로 활동하며 리노와 함께 스트레이 키즈 '춤 양대 산맥'으로 불린다.", en: "A painter and ballet-trained dancer. Global ambassador for Versace and Valentino, dubbed one of Stray Kids' two dance pillars alongside Lee Know." },
+        tmi: {
+          ko: [
+            "화가이자 댄서로, 자신의 미술 작품을 팬미팅 굿즈나 앨범 아트워크에 직접 활용한다.",
+            "발레를 오랫동안 배운 덕에 리노와 함께 '스트레이 키즈 춤 양대 산맥'으로 꼽힌다.",
+            "Versace, Valentino 등 럭셔리 브랜드의 글로벌 앰배서더로 패션 피플들에게도 인지도가 높다.",
+            "학창 시절 공부를 잘해 서울 외고 진학을 고려했으나 결국 연예계를 선택했다.",
+            "혼자 놀기를 좋아하는 '집순이 성향'으로, 쉬는 날에는 그림 그리기와 영화 감상으로 하루를 보낸다."
+          ],
+          en: [
+            "A painter as well as a dancer — he incorporates his own artworks into fan merchandise and album artwork.",
+            "Has trained in ballet for years, making him (along with Lee Know) one of Stray Kids' two dance pillars.",
+            "Global ambassador for Versace and Valentino, earning recognition in the high-fashion world.",
+            "Was academically strong enough to consider entering a prestigious foreign language high school before choosing entertainment.",
+            "A self-proclaimed homebody who spends days off painting and watching movies."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "han",
+        name: { ko: "한", en: "Han" },
+        role: { ko: "래퍼, 보컬, 프로듀서", en: "Rapper, Vocal, Producer" },
+        birth: "2000.09.14",
+        bloodType: "A",
+        mbti: "INFP",
+        height: "168cm",
+        zodiac: { ko: "처녀자리", en: "Virgo" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Han+Jisung+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "말레이시아 출신의 3RACHA 감성 래퍼·프로듀서. 스트레이 키즈 최다 작사 멤버로, 새벽 감성의 시적인 가사로 팬들의 깊은 공감을 얻는다.", en: "Malaysian-raised 3RACHA rapper and producer. The most prolific lyricist in Stray Kids, known for poetic, late-night-inspired lyrics that deeply resonate with fans." },
+        tmi: {
+          ko: [
+            "말레이시아에서 어린 시절을 보냈으며, 한국어·영어·중국어를 구사하는 멀티링구얼이다.",
+            "스트레이 키즈 곡 중 가장 많은 수의 가사를 직접 작성한 멤버로, 감성적인 가사로 유명하다.",
+            "INFP 성격으로 팬들과 가장 공감대가 높다고 평가받으며 '곡 하나에 한 편의 시'라는 평을 받는다.",
+            "음악을 만들 때 새벽 감성으로 작업하는 '새벽 인간'으로, 늦은 밤에 영감을 얻는다고 한다.",
+            "아이돌 데뷔 꿈을 품고 부모님에게 한국행을 설득한 진취적인 면이 있다."
+          ],
+          en: [
+            "Grew up in Malaysia and speaks Korean, English, and Chinese — a true multilingual.",
+            "Has written the most song lyrics within Stray Kids, known for emotionally resonant and poetic words.",
+            "As an INFP, fans say he captures emotions better than anyone — 'each lyric feels like a poem'.",
+            "Self-described 'night person' who finds inspiration in the late hours and writes in a 2AM mindset.",
+            "Convinced his parents to let him move to Korea to pursue his idol dream — showing rare determination at a young age."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "felix",
+        name: { ko: "필릭스", en: "Felix" },
+        role: { ko: "댄서, 래퍼, 보컬", en: "Dancer, Rapper, Vocal" },
+        birth: "2000.09.15",
+        bloodType: "O",
+        mbti: "ENFJ",
+        height: "174cm",
+        zodiac: { ko: "처녀자리", en: "Virgo" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Felix+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "호주 출신의 Dior 글로벌 앰배서더. 주근깨 트레이드마크와 '목소리 깡패'로 불리는 저음 보이스, 한국어를 처음 배우며 흘린 눈물이 팬들의 마음을 사로잡았다.", en: "Australian-born Dior global ambassador. His trademark freckles, unexpectedly deep 'voice gangster' voice, and tears learning Korean from scratch have captured fans' hearts." },
+        tmi: {
+          ko: [
+            "호주 시드니 출신으로, 방찬과 같은 고향이다. 데뷔 전 한국어를 전혀 몰랐다고 한다.",
+            "특유의 저음 보이스로 국내외 팬들에게 '목소리 깡패'라는 별명으로 불린다.",
+            "주근깨가 트레이드마크로, 주근깨를 사랑하는 팬 커뮤니티가 형성될 정도로 인기가 많다.",
+            "Dior 글로벌 앰배서더로 활동하며 파리 패션위크에도 정기적으로 참석한다.",
+            "한국에 온 지 얼마 안 됐을 때 한국어 실력이 부족해 우는 날도 많았다고 솔직하게 고백한 적이 있다."
+          ],
+          en: [
+            "Born in Sydney, Australia — shares his hometown with Bang Chan. Spoke zero Korean before coming to Korea.",
+            "His unexpectedly deep voice has earned him the nickname 'voice gangster' from fans worldwide.",
+            "His freckles are a beloved trademark — fan communities dedicated to his freckles exist online.",
+            "Global ambassador for Dior, attending Paris Fashion Week regularly as a front-row celebrity.",
+            "Openly shared that he cried many nights early on due to the language barrier — endearing himself to fans with his honesty."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "seungmin",
+        name: { ko: "승민", en: "Seungmin" },
+        role: { ko: "보컬", en: "Vocal" },
+        birth: "2000.09.22",
+        bloodType: "A",
+        mbti: "ISFP",
+        height: "176cm",
+        zodiac: { ko: "처녀자리", en: "Virgo" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+Seungmin+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "야구를 사랑하는 스트레이 키즈 최강 보컬. 초승달처럼 휘는 눈 웃음으로 유명하며 BTS 정국과 절친한 사이로도 알려져 있다.", en: "Baseball-loving main vocalist of Stray Kids. Famous for his crescent-moon eye smile and close friendship with BTS's Jungkook." },
+        tmi: {
+          ko: [
+            "야구를 너무 좋아해 프로야구 선수를 꿈꿨던 과거가 있으며, 지금도 경기를 직접 관람하러 다닌다.",
+            "스트레이 키즈 내에서 가장 뛰어난 보컬로 꼽히며, 고음 처리 능력이 탁월하다.",
+            "팬들 사이에서 '눈 웃음' 장인으로 유명하며, 웃을 때 눈이 초승달처럼 휘는 것으로 유명하다.",
+            "동갑내기 정국(BTS)과 절친으로 알려져 있어 두 그룹 팬들 사이에서 화제가 되곤 한다.",
+            "방찬·창빈·한처럼 프로듀싱보다 보컬에 집중하는 순수 퍼포머 포지션을 담당한다."
+          ],
+          en: [
+            "Was so passionate about baseball he dreamed of becoming a professional player — still watches games in person as a fan.",
+            "Considered the strongest pure vocalist in Stray Kids, known for his outstanding high note control.",
+            "Famous for his 'eye smile' — eyes curving into crescents when he laughs, making fans swoon.",
+            "Close friends with Jungkook (BTS) — a friendship that draws frequent attention from fans of both groups.",
+            "Unlike 3RACHA members, Seungmin focuses purely on vocal performance rather than production."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "in",
+        name: { ko: "아이엔", en: "I.N" },
+        role: { ko: "보컬, 막내", en: "Vocal, Maknae" },
+        birth: "2001.02.08",
+        bloodType: "A",
+        mbti: "ISFP",
+        height: "173cm",
+        zodiac: { ko: "물병자리", en: "Aquarius" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=Stray+Kids+IN+Yang+Jeongin+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "서바이벌 탈락 후 최종 합류한 '반전 막내'. 만 16세 데뷔 후 변성기를 거쳐 깊고 매력적인 음색으로 변신했으며, '귀여운 노인'이라는 별명이 있다.", en: "The 'plot-twist maknae' who was eliminated then added back. Debuted at 16, and after his voice changed, surprised fans with a deep, charming tone — nicknamed 'cute old man'." },
+        tmi: {
+          ko: [
+            "스트레이 키즈 막내로, 데뷔 당시 최연소 나이인 16세였다.",
+            "사실 서바이벌 프로그램에서 탈락해 팀에 합류하지 못했다가, 최종 결성 시 추가 합류한 '반전 멤버'다.",
+            "나이에 비해 성숙한 분위기로 팬들 사이에서 '귀여운 노인'이라는 별명이 있다.",
+            "독서를 즐기고 혼자만의 시간을 소중히 여기는 내향적인 성격으로 알려져 있다.",
+            "목소리 변성기가 지나자 의외로 깊고 매력적인 음색으로 변해 팬들을 놀라게 했다."
+          ],
+          en: [
+            "The youngest in Stray Kids, making his debut at just 16 years old.",
+            "Was actually eliminated from the survival show but was later added to the final lineup — a plot-twist member.",
+            "Despite his young age, his calm and mature aura earned him the fan nickname 'cute old man'.",
+            "Known as an introvert who enjoys reading and values his alone time.",
+            "After his voice changed, he surprised fans with an unexpectedly deep and charming vocal tone."
+          ]
+        },
+        socials: {}
+      }
+    ]
+  },
+
+  // ==================== TWICE ====================
+  {
+    id: "twice",
+    name: { ko: "트와이스", en: "TWICE", ja: "トゥワイス", zh: "TWICE", es: "TWICE", id: "TWICE", fr: "TWICE", hi: "ट्वाइस", pt: "TWICE", ar: "توايس", th: "ทไวซ์", vi: "TWICE", ru: "TWICE" },
+    description: {
+      ko: "JYP엔터테인먼트 소속의 9인조 걸그룹. 한국·일본·대만 멤버로 구성된 다국적 그룹으로 Spotify 2,560만 월간 리스너를 보유하며 일본 시장을 석권한 '국민 걸그룹'.",
+      en: "9-member girl group under JYP Entertainment. A multinational group of Korean, Japanese, and Taiwanese members with 25.6M Spotify monthly listeners — dubbed 'Nation's Girl Group' and dominant in Japan.",
+      ja: "JYPエンターテインメント所属の9人組ガールズグループ。韓国・日本・台湾メンバーで構成された多国籍グループで、Spotify月間リスナー2560万人を誇る「国民ガールズグループ」。",
+      zh: "JYP娱乐旗下9人女团。由韩国、日本、台湾成员组成的跨国团体，Spotify月活听众2560万，被誉为'国民女团'，在日本市场表现强劲。",
+      es: "Grupo femenino de 9 miembros bajo JYP Entertainment. Grupo multinacional con oyentes mensuales de 25,6M en Spotify, conocido como el 'Grupo de chicas de la nación', dominante en Japón.",
+      id: "Grup wanita 9 anggota di bawah JYP Entertainment. Grup multinasional dengan 25,6 juta pendengar bulanan Spotify, disebut 'Girl Group Nasional', mendominasi pasar Jepang.",
+      fr: "Groupe féminin de 9 membres sous JYP Entertainment. Groupe multinational avec 25,6 millions d'auditeurs mensuels sur Spotify, surnommé 'Girl Group de la nation', dominant au Japon.",
+      hi: "JYP एंटरटेनमेंट के तहत 9 सदस्यीय गर्ल ग्रुप। Spotify पर 25.6M मासिक श्रोताओं के साथ 'राष्ट्रीय गर्ल ग्रुप' का खिताब।",
+      pt: "Grupo feminino de 9 membros sob a JYP Entertainment. Grupo multinacional com 25,6M ouvintes mensais no Spotify, chamado de 'Girl Group da Nação', dominante no Japão.",
+      ar: "مجموعة فتيات من 9 أعضاء تحت JYP Entertainment. مجموعة متعددة الجنسيات مع 25.6 مليون مستمع شهري على Spotify، تُعرف بـ'فرقة البنات الوطنية'.",
+      th: "กลุ่มสาว 9 คนภายใต้ JYP Entertainment กลุ่มข้ามชาติมีผู้ฟังรายเดือน 25.6M บน Spotify ได้รับฉายา 'National Girl Group' และครองตลาดญี่ปุ่น",
+      vi: "Nhóm nhạc nữ 9 thành viên thuộc JYP Entertainment. Nhóm đa quốc tịch với 25,6M người nghe hàng tháng trên Spotify, mệnh danh 'Girl Group quốc dân'.",
+      ru: "Женская группа из 9 участниц под JYP Entertainment. Многонациональная группа с 25,6M месячных слушателей на Spotify, называемая 'Национальной женской группой'."
+    },
+    fandom: { ko: "원스 (ONCE)", en: "ONCE", ja: "ワンス (ONCE)", zh: "ONCE", es: "ONCE", id: "ONCE", fr: "ONCE", hi: "ONCE", pt: "ONCE", ar: "وانس (ONCE)", th: "วันซ์ (ONCE)", vi: "ONCE", ru: "ONCE" },
+    debut: "2015.10.20",
+    accentColor: "#ff69b4",
+    imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+group+kpop+2024+official&w=500&h=500&c=7&rs=1&p=0",
+    wiki: {
+      ko: "트와이스(TWICE)는 JYP엔터테인먼트 소속의 9인조 걸그룹입니다. 2015년 Mnet 서바이벌 프로그램 'SIXTEEN'을 통해 결성됐으며 같은 해 10월 정식 데뷔했습니다. 한국인 5명, 일본인 3명, 대만인 1명으로 구성된 다국적 그룹으로 Spotify 월간 리스너 2560만 명을 보유합니다. '국민 걸그룹'으로 불리며 일본에서 외국 여성 아티스트 최초로 5회 연속 돔 투어를 성공시켰습니다.",
+      en: "TWICE is a 9-member girl group under JYP Entertainment, formed through Mnet's 2015 survival show 'SIXTEEN' and debuting the same October. Consisting of 5 Koreans, 3 Japanese, and 1 Taiwanese, they hold 25.6M monthly Spotify listeners. Known as 'Nation's Girl Group', they became the first foreign female artists to complete 5 consecutive dome tours in Japan."
+    },
+    company: "JYP Entertainment",
+    tmi: {
+      ko: [
+        "JYP 서바이벌 프로그램 'SIXTEEN'을 통해 결성된 그룹으로, 처음에는 7명이 될 예정이었으나 9명으로 확정됐다.",
+        "그룹명 TWICE는 '음악과 퍼포먼스로 눈과 귀, 두 번 감동을 주겠다'는 의미다.",
+        "일본에서 외국 아티스트 중 가장 많은 음반 판매량을 기록한 그룹 중 하나다.",
+        "'CHEER UP'은 멜론 차트에서 역대 최장 1위 기록을 세우며 '국민 걸그룹' 칭호를 얻었다.",
+        "멤버 9명 중 한국인 5명, 일본인 3명, 대만인 1명으로 구성된 진정한 다국적 그룹이다.",
+        "미나는 무대 공포증을 극복하며 컴백한 사실이 알려져 전 세계 팬들에게 큰 감동을 줬다.",
+        "2023년 이후 성숙하고 세련된 콘셉트로 전환하며 '제2의 전성기'를 맞이하고 있다.",
+        "일본에서 외국 여성 아티스트 최초로 3년 연속 돔 투어를 성공시킨 그룹이다.",
+        "나연은 걸그룹 리드 보컬 중 최다 음원 판매량을 자랑하는 솔로 아티스트이기도 하다.",
+        "9명의 멤버가 각기 다른 포지션을 담당해 무대에서 완벽한 밸런스를 보여준다."
+      ],
+      en: [
+        "Formed through JYP's survival show 'SIXTEEN' — originally set to have 7 members but finalized with 9.",
+        "The name TWICE means 'touching fans twice — once through eyes, once through ears'.",
+        "One of the highest-selling foreign artists in Japan, consistently breaking records there.",
+        "'CHEER UP' set a record for the longest #1 run on Melon chart, earning them the 'Nation's Girl Group' title.",
+        "Among 9 members: 5 Korean, 3 Japanese, 1 Taiwanese — a true multinational lineup.",
+        "Mina's return to the stage after overcoming stage fright moved fans worldwide and became an iconic K-pop moment.",
+        "Since 2023, transitioning to a more mature, sophisticated concept — many call it their 'second peak'.",
+        "First foreign female artist to complete three consecutive dome tours in Japan.",
+        "Nayeon is also a successful solo artist with the highest individual music sales among girl group lead vocalists.",
+        "All 9 members cover distinct performance roles, creating a perfectly balanced stage presence."
+      ]
+    },
+    news: [
+      { title: { ko: "트와이스, 월드투어 'READY TO BE' 북미·아시아 전석 매진", en: "TWICE World Tour 'READY TO BE' Sells Out North America and Asia" }, date: "2025.03.10", summary: { ko: "트와이스의 2025 월드투어 'READY TO BE'가 북미와 아시아 전 공연장에서 전석 매진을 기록했습니다.", en: "TWICE's 2025 world tour 'READY TO BE' sold out every venue across North America and Asia." }, url: "#" },
+      { title: { ko: "Spotify 2025 K-Pop Wrapped 6위 — 2560만 월간 리스너", en: "Spotify 2025 K-Pop Wrapped: TWICE Ranked #6 with 25.6M Monthly Listeners" }, date: "2025.12.04", summary: { ko: "트와이스가 Spotify 2025 K-Pop Wrapped에서 6위를 기록하며 2560만 월간 리스너를 보유한 것으로 확인됐습니다.", en: "TWICE ranked #6 on Spotify 2025 K-Pop Wrapped, confirmed to have 25.6M monthly listeners." }, url: "#" },
+      { title: { ko: "일본 5회 연속 돔 투어 완료 — 외국 아티스트 신기록", en: "TWICE Complete 5 Consecutive Japan Dome Tours — New Record for Foreign Artists" }, date: "2025.01.20", summary: { ko: "트와이스가 일본 돔 투어를 5회 연속 성공하며 외국 여성 아티스트 최초 기록을 세웠습니다.", en: "TWICE completed their 5th consecutive dome tour in Japan, setting a new record for foreign female artists." }, url: "#" },
+      { title: { ko: "정규 15집 'WITH YOU-th' 빌보드 200 3위 진입", en: "15th Album 'WITH YOU-th' Enters Billboard 200 at #3" }, date: "2024.04.12", summary: { ko: "트와이스의 정규 15집 'WITH YOU-th'가 빌보드 200 차트 3위에 진입했습니다.", en: "TWICE's 15th album 'WITH YOU-th' entered the Billboard 200 at #3." }, url: "#" },
+      { title: { ko: "나연, 솔로 2집으로 멜론·지니 실시간 차트 석권", en: "Nayeon Dominates Melon and Genie Charts with 2nd Solo Album" }, date: "2024.11.01", summary: { ko: "나연이 솔로 2집을 발매하며 멜론·지니 실시간 차트를 동시에 장악했습니다.", en: "Nayeon dominated Melon and Genie real-time charts simultaneously with the release of her 2nd solo album." }, url: "#" },
+      { title: { ko: "모모·사나·미나, 일본 패션 매거진 커버 동시 장식", en: "Momo, Sana, and Mina Simultaneously Cover Japanese Fashion Magazines" }, date: "2025.06.01", summary: { ko: "트와이스의 일본인 멤버 모모·사나·미나가 같은 달 일본 주요 패션 매거진 표지를 동시에 장식했습니다.", en: "TWICE's Japanese members Momo, Sana, and Mina simultaneously graced the covers of major Japanese fashion magazines in the same month." }, url: "#" },
+      { title: { ko: "지효, 2025 MAMA '올해의 여자가수' 수상", en: "Jihyo Wins 'Female Artist of the Year' at 2025 MAMA Awards" }, date: "2025.11.22", summary: { ko: "지효가 2025 MAMA 어워즈에서 '올해의 여자가수'상을 수상하며 트와이스 리더로서의 위상을 높였습니다.", en: "Jihyo won 'Female Artist of the Year' at the 2025 MAMA Awards, reaffirming her status as TWICE's leader." }, url: "#" },
+      { title: { ko: "쯔위, 대만 음악 시상식 특별 공로상 수상", en: "Tzuyu Receives Special Contribution Award at Taiwan's Top Music Ceremony" }, date: "2025.08.15", summary: { ko: "쯔위가 대만 최고 권위 음악 시상식에서 특별 공로상을 수상하며 고향에서도 큰 인정을 받았습니다.", en: "Tzuyu received a special contribution award at Taiwan's most prestigious music ceremony, earning recognition in her home country." }, url: "#" },
+      { title: { ko: "팬덤 ONCE, 글로벌 규모 2000만 돌파", en: "Fandom ONCE Surpasses 20 Million Global Members" }, date: "2025.10.20", summary: { ko: "트와이스의 공식 팬덤 ONCE가 글로벌 팬덤 규모 2000만 명을 돌파했습니다.", en: "TWICE's official fandom ONCE surpassed 20 million members globally." }, url: "#" },
+      { title: { ko: "데뷔 10주년 스페셜 앨범 발매 예정 발표", en: "10th Anniversary Special Album Announced" }, date: "2025.10.20", summary: { ko: "트와이스가 데뷔 10주년을 맞아 스페셜 앨범 발매 계획을 공식 발표했습니다.", en: "TWICE officially announced plans for a special album to celebrate their 10th debut anniversary." }, url: "#" }
+    ],
+    members: [
+      {
+        id: "nayeon",
+        name: { ko: "나연", en: "Nayeon" },
+        role: { ko: "리드 보컬, 센터", en: "Lead Vocal, Center" },
+        birth: "1995.09.22",
+        bloodType: "A",
+        mbti: "ENFJ",
+        height: "163cm",
+        zodiac: { ko: "처녀자리", en: "Virgo" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Nayeon+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "트와이스 최연장자이자 첫 솔로 데뷔 멤버. 빌보드 200에 진입한 솔로 앨범과 '토순이' 별명으로 유명하며 특유의 에너지로 팀 분위기를 이끈다.", en: "Oldest member and first TWICE soloist. Her Billboard 200-charting solo album and 'bunny' nickname are iconic — her infectious energy keeps the team lively." },
+        tmi: {
+          ko: [
+            "트와이스 최연장자이자 첫 번째로 솔로 데뷔를 한 멤버로, 솔로 앨범 'IM NAYEON'이 빌보드 200에 진입했다.",
+            "토끼를 너무 좋아해 팬덤 내에서 '토순이'라는 별명이 있으며, 앞니가 귀여운 토끼 같다는 이유다.",
+            "어린 시절 YG 연습생 경력도 있었으며, JYP로 이적 후 7년 만에 데뷔했다.",
+            "매우 활발하고 에너지 넘치는 성격으로 트와이스 분위기 메이커 역할을 한다.",
+            "독특한 '나연 춤' 리액션 짤이 전 세계 SNS에서 밈(meme)으로 퍼지며 글로벌 인지도를 높였다."
+          ],
+          en: [
+            "The oldest in TWICE and first to make a solo debut — 'IM NAYEON' entered the Billboard 200.",
+            "Nicknamed 'rabbit' by fans for her fondness of bunnies and her adorable bunny-like front teeth.",
+            "Was a YG trainee as a child before moving to JYP — debuted 7 years after joining the agency.",
+            "Known as the mood-maker of TWICE with her bubbly, high-energy personality.",
+            "Her unique 'Nayeon dance reaction' clips went viral globally as memes, boosting her international fame."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "jeongyeon",
+        name: { ko: "정연", en: "Jeongyeon" },
+        role: { ko: "보컬", en: "Vocal" },
+        birth: "1996.11.01",
+        bloodType: "O",
+        mbti: "ISTP",
+        height: "167cm",
+        zodiac: { ko: "전갈자리", en: "Scorpio" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Jeongyeon+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "배우 엄정화의 조카로 트와이스 내 '팩폭 담당'. 건강 문제 극복 후 복귀해 팬들에게 감동을 선사했으며, 단발 트레이드마크로 사랑받는다.", en: "Niece of actress Uhm Jung-hwa, known as TWICE's 'blunt truth-teller'. Her health comeback deeply moved fans, and her signature short hair is beloved." },
+        tmi: {
+          ko: [
+            "배우 엄정화의 조카로, 연예계 혈통을 이어받은 셈이지만 자신만의 길을 개척했다.",
+            "건강 문제로 활동을 잠시 중단했다가 복귀하며 팬들에게 큰 감동을 선사했다.",
+            "단발 머리 트레이드마크로 유명하며, 장발보다 단발이 훨씬 더 잘 어울린다는 평을 받는다.",
+            "트와이스 멤버 중 가장 솔직하고 직설적인 성격으로 '팩트폭격' 캐릭터로 사랑받는다.",
+            "언니 유이는 배우로 활동 중이며, 자매가 모두 연예계에서 성공한 드문 사례다."
+          ],
+          en: [
+            "Niece of renowned actress Uhm Jung-hwa — carrying entertainment industry DNA, but forging her own path.",
+            "Temporarily stepped away from activities due to health issues, and her comeback deeply moved fans.",
+            "Famous for her signature short hair — widely considered to suit her better than long hair.",
+            "Known as the most blunt and honest member of TWICE — fans love her 'fact bomb' personality.",
+            "Her sister Yui is also an actress, making them a rare siblings-both-successful-in-entertainment case."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "momo",
+        name: { ko: "모모", en: "Momo" },
+        role: { ko: "댄서, 보컬", en: "Dancer, Vocal" },
+        birth: "1996.11.09",
+        bloodType: "B",
+        mbti: "ESFP",
+        height: "163cm",
+        zodiac: { ko: "전갈자리", en: "Scorpio" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Momo+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "오사카 출신의 트와이스 메인 댄서. SIXTEEN 탈락 후 긴급 합류한 '기적의 멤버'로, E-girls 댄서들과 어깨를 나란히 하는 압도적 댄스 실력의 소유자.", en: "Osaka-born main dancer of TWICE. A 'miracle member' added back after elimination from SIXTEEN, her dancing is on par with Japan's elite E-girls performers." },
+        tmi: {
+          ko: [
+            "일본 오사카 출신으로, SIXTEEN 서바이벌 당시 탈락했다가 긴급 합류한 '기적의 멤버'다.",
+            "트와이스 메인 댄서로, 춤 실력 하나로 일본 스타 집단 E-girls 출신 댄서들과 어깨를 나란히 한다는 평을 받는다.",
+            "한국에 온 첫 해 언어 장벽 극복을 위해 하루 종일 한국 TV를 보며 언어를 독학했다.",
+            "먹방 콘텐츠가 인기 있는 멤버로, 엄청난 식욕과 귀여운 먹는 모습으로 유명하다.",
+            "연습생 시절 1주일 동안 밥 한 공기만 먹으며 체중을 감량한 일화가 화제가 된 적 있다."
+          ],
+          en: [
+            "From Osaka, Japan — was eliminated from SIXTEEN but urgently added back, becoming a 'miracle member'.",
+            "TWICE's main dancer, often compared favorably to professional dancers from Japan's elite group E-girls.",
+            "In her first year in Korea, she learned Korean entirely by watching TV all day to overcome the language barrier.",
+            "Famous for her massive appetite and adorable eating habits — her 'mukbang moments' are fan favorites.",
+            "During trainee days, reportedly survived on a single bowl of rice for a week to lose weight before debut — a story that shocked fans."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "sana",
+        name: { ko: "사나", en: "Sana" },
+        role: { ko: "보컬", en: "Vocal" },
+        birth: "1996.12.29",
+        bloodType: "A",
+        mbti: "ESFJ",
+        height: "163cm",
+        zodiac: { ko: "염소자리", en: "Capricorn" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Sana+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "오사카 출신의 '사나 말투' 장인. 'shy shy shy' 밈으로 전 세계에서 유명하며 트와이스 내 인스타 팔로워 1위, '국민 첫사랑' 이미지의 주인공.", en: "Osaka-born queen of the 'Sana dialect'. Famous globally for the 'shy shy shy' meme, she has the most Instagram followers in TWICE and a 'nation's first love' image." },
+        tmi: {
+          ko: [
+            "일본 오사카 출신으로, '사나 말투'라고 불리는 독특한 한국어 억양이 트레이드마크가 됐다.",
+            "'shy shy shy' 등 귀여운 멘트가 밈(meme)이 될 정도로 전 세계적으로 유명하다.",
+            "한국 예능에서 보여준 솔직하고 귀여운 모습으로 '국민 첫사랑' 이미지를 굳혔다.",
+            "SNS에서 인스타그램 팔로워 수가 트와이스 멤버 중 가장 많다.",
+            "사실 한국행을 결정하기 전까지 아이돌이 될 생각이 없었으며, 우연히 JYP 오디션 소식을 듣고 도전했다."
+          ],
+          en: [
+            "From Osaka, Japan — her unique Korean accent, called the 'Sana dialect', became a beloved trademark.",
+            "Her 'shy shy shy' moment became a global meme — one of K-pop's most recognizable viral clips.",
+            "Solidified a 'nation's first love' image in Korea through her candid, adorable variety show appearances.",
+            "Has the most Instagram followers among all TWICE members.",
+            "Didn't plan to become an idol before deciding to come to Korea — heard about the JYP audition by chance."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "jihyo",
+        name: { ko: "지효", en: "Jihyo" },
+        role: { ko: "리더, 메인 보컬", en: "Leader, Main Vocal" },
+        birth: "1997.02.01",
+        bloodType: "A",
+        mbti: "ESFJ",
+        height: "160cm",
+        zodiac: { ko: "물병자리", en: "Aquarius" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Jihyo+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "JYP 10년 연습생 출신의 트와이스 리더이자 메인 보컬. '박신이'라는 극찬을 받는 보컬 실력과 9명을 하나로 묶는 리더십으로 팀의 중심이다.", en: "Leader and main vocal of TWICE with a legendary 10-year JYP trainee period. Praised as 'Park Shin-i' (Park sent by God), she is the unifying center of all 9 members." },
+        tmi: {
+          ko: [
+            "JYP 연습생 기간이 무려 10년(2008~2018)으로, K-Pop 역사상 가장 긴 연습 기간을 거친 아이돌 중 하나다.",
+            "트와이스 리더이자 메인 보컬로, 팀의 정서적 지주 역할을 한다.",
+            "솔로 데뷔 앨범 'ZONE'이 발매되자마자 각종 차트 상위권에 진입했다.",
+            "팬들 사이에서 '박신이(신이 보낸 박 씨)'라는 별명이 있을 정도로 보컬 실력이 뛰어나다.",
+            "리더로서 9명의 멤버가 각자 목소리를 낼 수 있도록 항상 앞장서서 소통을 이끈다."
+          ],
+          en: [
+            "Was a JYP trainee for 10 years (2008–2018) — one of the longest training periods in K-pop history.",
+            "Leader and main vocal of TWICE, serving as the emotional anchor of the group.",
+            "Her solo debut album 'ZONE' immediately charted high across multiple platforms.",
+            "Fan nickname 'Park Shin-i' (Park sent by God) reflects how fans regard her vocal as divinely gifted.",
+            "As leader, she consistently facilitates open communication so all 9 members can voice their opinions."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "mina",
+        name: { ko: "미나", en: "Mina" },
+        role: { ko: "댄서, 보컬", en: "Dancer, Vocal" },
+        birth: "1997.03.24",
+        bloodType: "A",
+        mbti: "ISFP",
+        height: "163cm",
+        zodiac: { ko: "양자리", en: "Aries" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Mina+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "텍사스 출신·일본 성장의 발레 댄서. 불안 장애 극복 후 무대 복귀로 팬들에게 큰 용기를 줬으며, '블랙 스완'이라는 별명처럼 가장 우아한 무대를 선보인다.", en: "Texas-born, Japan-raised ballet dancer. Her courageous return to stage after anxiety disorder moved fans worldwide — her graceful presence earns her the nickname 'Black Swan'." },
+        tmi: {
+          ko: [
+            "미국 텍사스 출신이지만 일본에서 성장했으며, 발레 경력이 트와이스 퍼포먼스에 큰 기여를 한다.",
+            "불안 장애 진단을 받아 활동을 중단했다가 복귀한 스토리가 전 세계 팬들에게 큰 위로와 용기를 줬다.",
+            "트와이스 멤버 중 가장 우아하고 고풍스러운 이미지로 '블랙 스완'이라는 별명을 갖고 있다.",
+            "패션 감각이 뛰어나 일본 럭셔리 패션 잡지의 단골 표지 모델이다.",
+            "JYP 연습생 시절 일본어로만 소통하다가 한국어를 늦게 습득했음에도 현재는 유창하게 구사한다."
+          ],
+          en: [
+            "Born in Texas, USA but grew up in Japan — her ballet background greatly enhances TWICE's performance quality.",
+            "Her journey of taking a hiatus due to anxiety disorder, then returning, moved fans worldwide and became a symbol of courage.",
+            "Has the most elegant, classical image in TWICE — nicknamed 'Black Swan' for her graceful stage presence.",
+            "A regular cover model for Japanese luxury fashion magazines for her impeccable sense of style.",
+            "Learned Korean relatively late while communicating mainly in Japanese as a trainee, but now speaks fluently."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "dahyun",
+        name: { ko: "다현", en: "Dahyun" },
+        role: { ko: "래퍼, 보컬", en: "Rapper, Vocal" },
+        birth: "1998.05.28",
+        bloodType: "A",
+        mbti: "ENFP",
+        height: "163cm",
+        zodiac: { ko: "쌍둥이자리", en: "Gemini" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Dahyun+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "학예회 영상 바이럴로 길거리 캐스팅된 트와이스 유머 담당. '꼬마 유령', '두부미녀'로 불리는 독특한 매력과 자칭 '닌텐도 천재'로 팬들에게 사랑받는다.", en: "Street-cast after a school talent show video went viral. Beloved as TWICE's comedian, nicknamed 'mini ghost' and 'tofu beauty' — also the self-proclaimed Nintendo champion of the group." },
+        tmi: {
+          ko: [
+            "학예회에서 'CHU~♡'를 부른 영상이 화제가 돼 길거리 캐스팅으로 JYP에 입사한 독특한 이력이 있다.",
+            "눈이 매우 하얗고 눈동자가 작아 '꼬마 유령', '두부미녀' 등 다양한 별명을 갖고 있다.",
+            "기독교 신앙을 공개적으로 밝힌 멤버로, 매주 교회에 출석하는 것으로 알려져 있다.",
+            "트와이스 공식 유머 담당으로, 엉뚱한 말과 행동으로 멤버들을 항상 웃게 만든다.",
+            "'닌텐도 게임 실력이 멤버 중 최강'이라고 스스로 공언하는 게임 애호가다."
+          ],
+          en: [
+            "Was street-cast after a video of her performing 'CHU~♡' at a school talent show went viral — a uniquely accidental path to JYP.",
+            "Known for her bright white eyes and small pupils — nicknamed 'mini ghost' and 'tofu beauty'.",
+            "Openly practices Christianity and is known to attend church every week.",
+            "Official comedian of TWICE — her random remarks and antics constantly make members burst out laughing.",
+            "Self-proclaimed 'best Nintendo gamer in TWICE', a passionate gaming enthusiast."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "chaeyoung",
+        name: { ko: "채영", en: "Chaeyoung" },
+        role: { ko: "래퍼, 보컬", en: "Rapper, Vocal" },
+        birth: "1999.04.23",
+        bloodType: "A",
+        mbti: "INFP",
+        height: "159cm",
+        zodiac: { ko: "황소자리", en: "Taurus" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Chaeyoung+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "자체 작사와 타투로 트와이스 내 가장 '엣지' 있는 이미지. 미술 참여와 힙합 패션으로 독보적인 개성을 드러내며 가장 작은 키로도 무대 장악력은 최강이다.", en: "The edgiest image in TWICE, with self-written lyrics and tattoos. Her art involvement, hip-hop fashion, and commanding stage presence make her the group's unique rebel voice." },
+        tmi: {
+          ko: [
+            "직접 가사를 쓰는 자체 제작 능력을 갖춘 멤버로, 작사에 대한 열정이 남다르다.",
+            "타투를 여러 개 갖고 있는 트와이스 멤버 중 가장 '강렬한' 이미지로 변신에 성공했다.",
+            "미술을 좋아해 앨범 아트나 개인 굿즈 디자인에 직접 참여하기도 한다.",
+            "TWICE에서 키가 가장 작지만 무대 장악력은 누구 못지않다는 평을 받는다.",
+            "스트리트 패션을 즐기며, 힙합·그런지 무드의 패션을 선호해 트와이스 내 독보적 패션 피플로 꼽힌다."
+          ],
+          en: [
+            "A self-producing member who writes her own lyrics — her passion for songwriting sets her apart within TWICE.",
+            "Has multiple tattoos and successfully transformed her image to the most 'edgy' look in TWICE.",
+            "Loves visual art and has participated in album artwork and personal merchandise design.",
+            "The shortest member of TWICE, but her stage presence is second to none.",
+            "Prefers hip-hop and grunge fashion — considered the unique fashion icon within the group."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "tzuyu",
+        name: { ko: "쯔위", en: "Tzuyu" },
+        role: { ko: "보컬, 비주얼, 막내", en: "Vocal, Visual, Maknae" },
+        birth: "1999.06.14",
+        bloodType: "A",
+        mbti: "ISFP",
+        height: "172cm",
+        zodiac: { ko: "쌍둥이자리", en: "Gemini" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=TWICE+Tzuyu+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "대만 출신의 '인간 비율 표준'. 172cm 완벽한 비율과 한국어·대만어·광둥어·일본어 구사 능력, 활 쏘기 실력까지 갖춘 트와이스의 글로벌 비주얼이다.", en: "Taiwan-born 'human body standard'. With her 172cm perfect proportions, fluency in 4 languages, and archery skills, she is TWICE's ultimate global visual." },
+        tmi: {
+          ko: [
+            "대만 타이난 출신으로, 데뷔 당시 16세였다. 비율이 완벽하다는 평을 받으며 '인간 비율 표준'이라 불린다.",
+            "2015~2016년 '쯔위 사태'라 불리는 대만 국기 논란으로 공개 사과 영상을 올린 아픈 기억이 있다.",
+            "활 쏘기를 좋아해 국가대표급 실력을 갖췄다는 루머가 있을 정도로 진지하게 수련했다.",
+            "과거 몇 년간 트와이스 멤버 중 가장 많은 인스타그램 팔로워를 보유했던 적이 있다.",
+            "한국어·대만어·광둥어·일본어를 구사하는 언어 재능이 뛰어난 멀티링구얼이다."
+          ],
+          en: [
+            "From Tainan, Taiwan — debuted at 16. Her proportions are so praised she's called a 'human body standard'.",
+            "Was at the center of the 2015–2016 'Tzuyu incident' involving a Taiwan flag controversy, leading to a public apology video — a painful early career moment.",
+            "Practices archery seriously enough that rumors spread of her having near-national-level skill.",
+            "Once held the most Instagram followers among all TWICE members for several years.",
+            "Speaks Korean, Taiwanese, Cantonese, and Japanese — a remarkably gifted multilingual."
+          ]
+        },
+        socials: {}
+      }
+    ]
+  },
+
+  // ==================== SEVENTEEN ====================
+  {
+    id: "seventeen",
+    name: { ko: "세븐틴", en: "SEVENTEEN", ja: "セブンティーン", zh: "SEVENTEEN", es: "SEVENTEEN", id: "SEVENTEEN", fr: "SEVENTEEN", hi: "सेवेंटीन", pt: "SEVENTEEN", ar: "سيفنتين", th: "เซเว่นทีน", vi: "SEVENTEEN", ru: "SEVENTEEN" },
+    description: {
+      ko: "플레디스엔터테인먼트(현 HYBE) 소속 13인조 보이그룹. 보컬·힙합·퍼포먼스 3개 유닛으로 구성된 완전 자체 제작 그룹으로, 2025 빌보드 K-Pop Artist 100 1위를 달성했다.",
+      en: "13-member boy group under Pledis Entertainment (now HYBE). A fully self-producing group with three units — Vocal, Hip-hop, and Performance — ranked #1 on Billboard's 2025 K-Pop Artist 100.",
+      ja: "プレディスエンターテインメント（現HYBE）所属の13人組ボーイズグループ。ボーカル・ヒップホップ・パフォーマンスの3ユニット構成の完全自己制作グループで、2025年ビルボードK-Pop Artist 100で1位を獲得。",
+      zh: "Pledis Entertainment（现HYBE）旗下13人男团。由声乐、嘻哈和表演三个单元组成的完全自制团体，荣登2025年Billboard K-Pop Artist 100榜首。",
+      es: "Grupo masculino de 13 miembros bajo Pledis Entertainment (ahora HYBE). Grupo autoproductor con tres unidades, clasificado #1 en el Billboard K-Pop Artist 100 de 2025.",
+      id: "Grup pria 13 anggota di bawah Pledis Entertainment (sekarang HYBE). Grup produksi mandiri dengan tiga unit, meraih #1 di Billboard K-Pop Artist 100 2025.",
+      fr: "Groupe masculin de 13 membres sous Pledis Entertainment (maintenant HYBE). Groupe autoproducteur avec trois unités, classé #1 au Billboard K-Pop Artist 100 en 2025.",
+      hi: "Pledis Entertainment (अब HYBE) के तहत 13 सदस्यीय बॉय ग्रुप। तीन यूनिट के साथ सेल्फ-प्रोड्यूसिंग ग्रुप, 2025 Billboard K-Pop Artist 100 में #1।",
+      pt: "Grupo masculino de 13 membros sob a Pledis Entertainment (agora HYBE). Grupo autoprodutivo com três unidades, #1 no Billboard K-Pop Artist 100 em 2025.",
+      ar: "مجموعة فتيان من 13 عضواً تحت Pledis Entertainment (الآن HYBE). مجموعة ذاتية الإنتاج بثلاث وحدات، احتلت المرتبة 1 في Billboard K-Pop Artist 100 لعام 2025.",
+      th: "กลุ่มชาย 13 คนภายใต้ Pledis Entertainment (ปัจจุบัน HYBE) กลุ่มโปรดิวซ์เองมีสามยูนิต อันดับ 1 Billboard K-Pop Artist 100 ปี 2025",
+      vi: "Nhóm nhạc nam 13 thành viên thuộc Pledis Entertainment (nay là HYBE). Nhóm tự sản xuất với ba đơn vị, xếp hạng #1 trên Billboard K-Pop Artist 100 năm 2025.",
+      ru: "Мужская группа из 13 участников под Pledis Entertainment (сейчас HYBE). Полностью самопродюсирующаяся группа с тремя юнитами, занявшая #1 в Billboard K-Pop Artist 100 2025 года."
+    },
+    fandom: { ko: "캐럿 (Carat)", en: "Carat", ja: "キャロット (Carat)", zh: "Carat", es: "Carat", id: "Carat", fr: "Carat", hi: "Carat", pt: "Carat", ar: "كاريت (Carat)", th: "คารัต (Carat)", vi: "Carat", ru: "Carat" },
+    debut: "2015.05.26",
+    accentColor: "#1e90ff",
+    imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+group+kpop+2024+official&w=500&h=500&c=7&rs=1&p=0",
+    wiki: {
+      ko: "세븐틴(SEVENTEEN)은 플레디스엔터테인먼트(현 HYBE) 소속의 13인조 보이그룹입니다. 2015년 5월 데뷔한 완전 자체 제작 그룹으로, 보컬팀·힙합팀·퍼포먼스팀 3개 유닛 체제로 운영됩니다. 2025년 빌보드 K-Pop Artist 100에서 1위를 달성했으며, 월드투어 'RIGHT HERE'에서 865,000장의 티켓을 판매했습니다. 그룹명은 13명 + 3개 유닛 + 1팀 = 17이라는 공식에서 비롯됐습니다.",
+      en: "SEVENTEEN is a 13-member boy group under Pledis Entertainment (now HYBE), debuting May 2015 as a fully self-producing group organized into three units: Vocal Team, Hip-hop Team, and Performance Team. They ranked #1 on Billboard's 2025 K-Pop Artist 100 and sold 865,000 tickets on their 'RIGHT HERE' world tour. The name comes from the formula: 13 members + 3 units + 1 team = 17."
+    },
+    company: "Pledis Entertainment (HYBE)",
+    tmi: {
+      ko: [
+        "그룹명 SEVENTEEN은 멤버 13명 + 3개 유닛 + 1팀 = 17이라는 공식에서 유래했다.",
+        "보컬팀·힙합팀·퍼포먼스팀 3개 유닛이 독립적으로도 활동하며 다양한 콘텐츠를 생산한다.",
+        "2025 빌보드 K-Pop Artist 100에서 1위를 차지하며 역대 최고 성적을 기록했다.",
+        "월드투어 'RIGHT HERE'가 865,000장 티켓을 판매하며 역대급 흥행을 기록했다.",
+        "멤버 우지(Woozi)는 세븐틴 음악의 80% 이상을 직접 작곡·편곡하는 천재 프로듀서다.",
+        "데뷔 때부터 모든 안무를 자체 제작하는 그룹으로, 호시가 주 안무가 역할을 맡는다.",
+        "호랑이 기운 솟아라!로 유명한 버논의 한국어 실력이 화제가 돼 예능에서 단골 소재로 등장한다.",
+        "미국·중국·일본 등 다양한 국적의 멤버로 구성된 진정한 글로벌 그룹이다.",
+        "팬덤명 Carat은 다이아몬드의 무게 단위로, '세븐틴이 다이아몬드가 되도록 빛내주는 존재'라는 뜻이다.",
+        "2025년 발매한 'HAPPY BURSTDAY'가 빌보드 200 2위에 올라 역대 최고 성적을 기록했다."
+      ],
+      en: [
+        "The name SEVENTEEN comes from the formula: 13 members + 3 units + 1 team = 17.",
+        "Three units — Vocal Team, Hip-hop Team, Performance Team — each release independent content.",
+        "Ranked #1 on the 2025 Billboard K-Pop Artist 100, the highest achievement in group history.",
+        "World tour 'RIGHT HERE' sold 865,000 tickets — a record-breaking run.",
+        "Woozi produces and arranges over 80% of SEVENTEEN's music — considered a genius songwriter.",
+        "Since debut, all choreography is self-created; Hoshi serves as the primary choreographer.",
+        "Vernon's Korean skills went viral for comedic reasons, becoming a recurring variety show topic.",
+        "Members from the US, China, Japan and Korea make SEVENTEEN a genuinely global group.",
+        "Fandom name Carat (diamond weight unit) means 'those who make SEVENTEEN shine like diamonds'.",
+        "'HAPPY BURSTDAY' (2025) peaked at #2 on Billboard 200 — their personal best chart position."
+      ]
+    },
+    news: [
+      { title: { ko: "세븐틴, 2025 빌보드 K-Pop Artist 100 1위 달성", en: "SEVENTEEN Ranks #1 on 2025 Billboard K-Pop Artist 100" }, date: "2025.12.20", summary: { ko: "세븐틴이 빌보드 2025 K-Pop Artist 100에서 1위를 차지해 그룹 역대 최고 성적을 기록했습니다.", en: "SEVENTEEN ranked #1 on Billboard's 2025 K-Pop Artist 100, achieving their all-time best chart position." }, url: "#" },
+      { title: { ko: "월드투어 'RIGHT HERE' 865,000장 매진", en: "World Tour 'RIGHT HERE' Sells 865,000 Tickets" }, date: "2025.06.30", summary: { ko: "세븐틴의 월드투어 'RIGHT HERE'가 865,000장을 판매해 K-Pop 역대 가장 많은 티켓이 팔린 투어 중 하나가 됐습니다.", en: "SEVENTEEN's 'RIGHT HERE' world tour sold 865,000 tickets, making it one of the highest-selling K-pop tours ever." }, url: "#" },
+      { title: { ko: "정규 12집 'HAPPY BURSTDAY' 빌보드 200 2위 진입", en: "12th Album 'HAPPY BURSTDAY' Enters Billboard 200 at #2" }, date: "2025.09.05", summary: { ko: "세븐틴의 정규 12집 'HAPPY BURSTDAY'가 빌보드 200 차트 2위에 진입해 역대 최고 성적을 기록했습니다.", en: "'HAPPY BURSTDAY' debuted at #2 on the Billboard 200 — SEVENTEEN's highest-charting album ever." }, url: "#" },
+      { title: { ko: "서브유닛 BSS, 빌보드 200 진입 달성", en: "Sub-unit BSS Enters Billboard 200" }, date: "2025.02.10", summary: { ko: "세븐틴 서브유닛 BSS(부석순)의 첫 솔로 미니앨범이 빌보드 200에 진입하며 유닛의 글로벌 인지도를 높였습니다.", en: "SEVENTEEN sub-unit BSS's first solo mini-album entered the Billboard 200, raising the unit's global profile." }, url: "#" },
+      { title: { ko: "우지, 2025 대한민국 최고 작곡가상 수상", en: "Woozi Wins Korea's Top Songwriter Award 2025" }, date: "2025.11.01", summary: { ko: "세븐틴 우지가 2025 대한민국 최고 작곡가상을 수상하며 자체 제작 능력을 공식적으로 인정받았습니다.", en: "SEVENTEEN's Woozi won Korea's Top Songwriter Award 2025, officially recognizing his self-producing genius." }, url: "#" },
+      { title: { ko: "호시, '2025 베스트 안무상' 세 번째 수상", en: "Hoshi Wins 'Best Choreography 2025' — His Third Time" }, date: "2025.11.22", summary: { ko: "호시가 2025 베스트 안무상을 수상하며 같은 상을 세 번 받은 최초의 안무가가 됐습니다.", en: "Hoshi won the Best Choreography Award for 2025, becoming the first choreographer to receive it three times." }, url: "#" },
+      { title: { ko: "디에잇, 자체 안무 유튜브 영상 1억 뷰 돌파", en: "The8's Self-Choreographed YouTube Video Surpasses 100M Views" }, date: "2025.04.15", summary: { ko: "세븐틴 디에잇의 자체 안무 유튜브 영상이 1억 뷰를 넘기며 개인 댄서로서의 위상을 증명했습니다.", en: "The8's self-choreographed YouTube video surpassed 100M views, proving his status as a world-class individual dancer." }, url: "#" },
+      { title: { ko: "버논·민규, GQ 매거진 커버 장식", en: "Vernon and Mingyu Cover GQ Magazine" }, date: "2025.07.01", summary: { ko: "세븐틴 버논과 민규가 미국 GQ 매거진 표지를 장식하며 글로벌 패션 아이콘으로 자리잡았습니다.", en: "SEVENTEEN's Vernon and Mingyu graced the cover of US GQ Magazine, establishing themselves as global fashion icons." }, url: "#" },
+      { title: { ko: "팬덤 캐럿, 글로벌 규모 1800만 돌파", en: "Fandom Carat Surpasses 18 Million Global Members" }, date: "2025.10.10", summary: { ko: "세븐틴의 공식 팬덤 캐럿이 글로벌 팬덤 규모 1800만 명을 돌파했습니다.", en: "SEVENTEEN's official fandom Carat surpassed 18 million members globally." }, url: "#" },
+      { title: { ko: "뉴욕 MSG 단독 콘서트 전석 매진", en: "Sell Out Madison Square Garden in New York" }, date: "2025.08.20", summary: { ko: "세븐틴이 뉴욕 매디슨 스퀘어 가든에서 단독 콘서트를 열어 전석을 매진시키며 미국 진출을 확장했습니다.", en: "SEVENTEEN sold out Madison Square Garden in New York, marking a major milestone in their US market expansion." }, url: "#" }
+    ],
+    members: [
+      {
+        id: "scoups",
+        name: { ko: "에스쿱스", en: "S.Coups" },
+        role: { ko: "리더, 힙합팀 리더, 래퍼", en: "Leader, Hip-hop Unit Leader, Rapper" },
+        birth: "1995.08.08",
+        bloodType: "O",
+        mbti: "ESTP",
+        height: "178cm",
+        zodiac: { ko: "사자자리", en: "Leo" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+S.Coups+Choi+Seungcheol+face+closeup+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "13명을 하나로 묶는 세븐틴의 든든한 리더. 힙합팀을 이끌며 군 복무 중 부상 후 완벽히 복귀해 팬들에게 감동을 선사했다.", en: "The unifying leader who holds 13 members together. Led the hip-hop team and moved fans with a full comeback after a military service injury." },
+        tmi: {
+          ko: [
+            "세븐틴의 든든한 리더로, 13명을 하나로 묶는 구심점 역할을 한다.",
+            "군 복무 중 부상을 입어 수술 후 복귀하면서 팬들에게 큰 감동을 줬다.",
+            "힙합팀 리더로 팀 내 래핑 능력이 가장 뛰어나며 특유의 두꺼운 음색이 트레이드마크다.",
+            "13명을 이끄는 리더십이 뛰어나 업계에서도 '리더 중의 리더'로 평가받는다.",
+            "데뷔 전 개인 연습 영상이 유출됐을 때 이를 오히려 계기로 삼아 더 열심히 한 일화가 유명하다."
+          ],
+          en: [
+            "The sturdy leader of SEVENTEEN, serving as the unifying force for all 13 members.",
+            "Suffered an injury during military service, returned post-surgery, deeply moving fans worldwide.",
+            "Hip-hop unit leader with the deepest rap voice in the team — his thick vocal tone is iconic.",
+            "Considered a 'leader among leaders' by industry insiders for managing a 13-person group.",
+            "When pre-debut practice footage leaked, he used it as motivation to work harder — a well-known story."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "jeonghan",
+        name: { ko: "정한", en: "Jeonghan" },
+        role: { ko: "보컬팀, 보컬", en: "Vocal Unit, Vocal" },
+        birth: "1995.10.04",
+        bloodType: "B",
+        mbti: "INFJ",
+        height: "175cm",
+        zodiac: { ko: "천칭자리", en: "Libra" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Jeonghan+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "성별을 초월한 외모로 세계 미남 차트 단골인 보컬팀 멤버. 군 복귀 후 달라진 분위기로 팬들을 사로잡으며 '정한식 장난'으로도 유명하다.", en: "A regular on global 'most handsome' charts for his transcendent beauty. After military service, his transformed vibe captivated fans — and his signature pranks keep members on their toes." },
+        tmi: {
+          ko: [
+            "성별을 초월한 외모로 '천사가 현현한 얼굴'이라는 극찬을 받으며 세계 미남 차트에 꾸준히 등장한다.",
+            "멤버들을 잘 챙기는 반면 특유의 '정한식 장난'으로 멤버들을 당황하게 하는 이중적 매력이 있다.",
+            "긴 머리 시절이 특히 유명해 '천사 정한'이라는 이미지가 국내외에 깊이 박혔다.",
+            "세 번째로 빠른 외국어 습득 능력을 자랑하며 영어·일본어 학습 속도가 빠르다.",
+            "군 복무 후 완벽히 달라진 분위기로 컴백해 팬들 사이에서 '군바리 정한' 열풍이 일었다."
+          ],
+          en: [
+            "Praised for transcending gender with his face — regularly appears on global 'most handsome' charts as 'an angel made flesh'.",
+            "Known for doting on members while also pulling uniquely crafty 'Jeonghan-style pranks' — a dual charm.",
+            "His long-hair era is legendary — the 'angel Jeonghan' image is deeply imprinted on fans worldwide.",
+            "One of the fastest language learners in the group, quickly picking up English and Japanese.",
+            "Returned from military service with a dramatically different vibe, sparking the 'military Jeonghan' fan craze."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "joshua",
+        name: { ko: "조슈아", en: "Joshua" },
+        role: { ko: "보컬팀, 보컬", en: "Vocal Unit, Vocal" },
+        birth: "1995.12.30",
+        bloodType: "O",
+        mbti: "ISFJ",
+        height: "176cm",
+        zodiac: { ko: "염소자리", en: "Capricorn" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Joshua+Hong+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "LA 출신의 세븐틴 공식 영어 통역사. 기타를 직접 연주하는 뮤지션이자 '인간 비타민'이라는 별명처럼 항상 밝고 긍정적인 에너지를 발산한다.", en: "LA-born official English interpreter of SEVENTEEN. A guitarist-musician and 'human vitamin' who radiates constant positive energy to the team and fans alike." },
+        tmi: {
+          ko: [
+            "미국 로스앤젤레스 출신으로, 영어가 모국어라 세븐틴의 공식 영어 통역사 역할을 한다.",
+            "기타 실력이 뛰어나 솔로 프로젝트에서 직접 기타를 치며 노래를 부르는 모습이 팬들에게 큰 인기다.",
+            "캐럿들에게 '인간 비타민', '걸어다니는 미소'라는 별명으로 불릴 만큼 밝은 에너지를 발산한다.",
+            "유튜브 'Going Seventeen' 시리즈에서 특유의 눈치 없는(?) 캐릭터로 편집의 신이 됐다.",
+            "독실한 기독교 신자로 알려져 있으며, 매 공연 전 팀을 위해 기도하는 모습이 포착된 적 있다."
+          ],
+          en: [
+            "From Los Angeles, USA — serves as SEVENTEEN's unofficial English interpreter since it's his native language.",
+            "An accomplished guitarist who performs live guitar in solo projects — a beloved fan moment.",
+            "Nicknamed 'human vitamin' and 'walking smile' by Carats for his consistently bright, positive energy.",
+            "Became the 'editing icon' of 'Going Seventeen' series for his endearingly oblivious character moments.",
+            "Known as a devout Christian — has been spotted praying for the team before performances."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "jun",
+        name: { ko: "준", en: "Jun" },
+        role: { ko: "퍼포먼스팀, 댄서, 보컬", en: "Performance Unit, Dancer, Vocal" },
+        birth: "1996.06.10",
+        bloodType: "O",
+        mbti: "ISTP",
+        height: "180cm",
+        zodiac: { ko: "쌍둥이자리", en: "Gemini" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Jun+Wen+Junhui+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "광저우 출신의 중국 아역 배우 출신 퍼포먼스팀. 비보잉과 무술을 결합한 독특한 퍼포먼스로 중화권 팬덤을 주도하며 조용한 일상과 강렬한 무대의 갭이 매력이다.", en: "Guangzhou-born former Chinese child actor in SEVENTEEN's Performance Team. Known for fusing B-boying and martial arts, he leads the Chinese fanbase with an off-stage/on-stage contrast that is pure magnetism." },
+        tmi: {
+          ko: [
+            "중국 광저우 출신으로, 데뷔 전 중국 드라마에 출연한 아역 배우 경력이 있다.",
+            "중국어·광둥어·한국어·영어를 구사하는 멀티링구얼로, 세븐틴의 중화권 팬 소통 창구 역할을 한다.",
+            "무술 실력이 뛰어나 퍼포먼스팀 안무에 무술 요소를 자연스럽게 녹여내는 것으로 유명하다.",
+            "중국 팬덤 규모가 세븐틴 내에서 독보적으로 커, 웨이보 팔로워가 수천만 명에 달한다.",
+            "조용한 성격이지만 무대에서는 완전히 다른 사람이 되는 '무대 체인지' 캐릭터로 유명하다."
+          ],
+          en: [
+            "From Guangzhou, China — was a child actor in Chinese dramas before joining SEVENTEEN.",
+            "Speaks Mandarin, Cantonese, Korean, and English — serves as the key bridge to Chinese-speaking fans.",
+            "Known for naturally incorporating martial arts techniques into Performance Unit choreography.",
+            "Has an unrivaled Chinese fanbase within SEVENTEEN — his Weibo followers number in the tens of millions.",
+            "Quiet off-stage but transforms completely during performances — the classic 'stage switch' idol."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "hoshi",
+        name: { ko: "호시", en: "Hoshi" },
+        role: { ko: "퍼포먼스팀 리더, 댄서", en: "Performance Unit Leader, Dancer" },
+        birth: "1996.06.15",
+        bloodType: "O",
+        mbti: "ENFP",
+        height: "177cm",
+        zodiac: { ko: "쌍둥이자리", en: "Gemini" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Hoshi+Kwon+Soonyoung+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "세븐틴 안무 대부분을 만드는 퍼포먼스팀 리더. 베스트 안무상 3회 수상의 '안무의 신'으로, 고양이 눈매와 무한한 에너지가 트레이드마크다.", en: "Performance Team leader who creates most of SEVENTEEN's choreography. A three-time Best Choreography Award winner — nicknamed 'god of dance' for his limitless energy and tiger-like eyes." },
+        tmi: {
+          ko: [
+            "세븐틴 안무의 대부분을 직접 만드는 퍼포먼스팀 리더로, '안무의 신'이라 불린다.",
+            "고양이 눈매로 유명해 팬들에게 '호랑이'라는 별명이 있으며, 무대에서 눈빛이 특히 강렬하다.",
+            "어린 시절부터 춤에 진심이었으며, 초등학교 때부터 댄스 학원을 다닌 것으로 알려졌다.",
+            "2025 베스트 안무상 수상 후 '세 번 받은 건 처음'이라며 눈물을 보인 영상이 화제가 됐다.",
+            "에너지가 넘쳐 촬영 현장에서 혼자 춤 연습하는 모습이 자주 목격되는 '춤 중독자'다."
+          ],
+          en: [
+            "As Performance Unit leader, he creates most of SEVENTEEN's choreography — called 'god of dance'.",
+            "Famous for his cat-like eyes, earning the nickname 'tiger' — his stage gaze is especially intense.",
+            "Was passionate about dance since childhood, attending dance academies from elementary school.",
+            "A video of him tearing up after winning his third Best Choreography Award went viral — 'first time getting it three times'.",
+            "A 'dance addict' frequently spotted practicing alone on set — his energy is limitless."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "wonwoo",
+        name: { ko: "원우", en: "Wonwoo" },
+        role: { ko: "힙합팀, 래퍼", en: "Hip-hop Unit, Rapper" },
+        birth: "1996.07.17",
+        bloodType: "A",
+        mbti: "INFP",
+        height: "182cm",
+        zodiac: { ko: "게자리", en: "Cancer" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Wonwoo+Jeon+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "세븐틴 최장신의 독서광 래퍼. 저음 보이스 ASMR이 폭발적 반응을 얻었으며, '책 원우'라는 별명처럼 팬 사인회에서도 책을 놓지 않는다.", en: "SEVENTEEN's tallest member and bookworm rapper. His deep-voice ASMR sparked massive fan reactions — and as 'book Wonwoo', he literally brings books to fan sign events." },
+        tmi: {
+          ko: [
+            "세븐틴 내에서 가장 키가 크고 분위기 있는 외모로 '남자 중의 남자' 이미지를 갖고 있다.",
+            "독서 마니아로, 팬 사인회에서 항상 책을 들고 오는 모습이 포착돼 '책 원우'로 유명하다.",
+            "저음의 목소리가 인상적인 래퍼로, ASMR 영상 출연 시 청취자 반응이 폭발적이었다.",
+            "멤버 우지와 절친한 사이로 '원지'라는 CP 이름이 팬들 사이에서 유명하다.",
+            "건강 문제로 잠시 활동을 중단한 적이 있으며, 완벽히 회복해 컴백한 사실이 팬들에게 감동을 줬다."
+          ],
+          en: [
+            "The tallest member with the most brooding image — considered the 'man among men' in SEVENTEEN.",
+            "A devoted bookworm who brings books to fan sign events — known as 'book Wonwoo'.",
+            "His deep voice as a rapper was explosive in ASMR content — listener reactions went viral.",
+            "Closest friends with Woozi — their 'Wonzi' pairing name is iconic in the fandom.",
+            "Took a brief hiatus due to health issues but made a full comeback — a deeply moving moment for fans."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "woozi",
+        name: { ko: "우지", en: "Woozi" },
+        role: { ko: "보컬팀 리더, 메인 보컬, 프로듀서", en: "Vocal Unit Leader, Main Vocal, Producer" },
+        birth: "1996.11.22",
+        bloodType: "A",
+        mbti: "INTJ",
+        height: "164cm",
+        zodiac: { ko: "전갈자리", en: "Scorpio" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Woozi+Lee+Jihoon+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "세븐틴 음악 80%를 직접 만드는 보컬팀 리더이자 천재 프로듀서. 164cm로 팬들을 놀라게 하지만 무대 위 존재감은 누구보다 압도적이다.", en: "Vocal Team leader and genius producer behind 80%+ of SEVENTEEN's music. His 164cm stature surprises newcomers, but his stage presence completely overpowers anyone around him." },
+        tmi: {
+          ko: [
+            "세븐틴 음악의 80% 이상을 직접 작곡·편곡하는 그룹의 핵심 프로듀서로, K-Pop 역사상 손꼽히는 자체 제작 능력을 가졌다.",
+            "작은 키(164cm)로 인해 처음 만나는 사람들이 깜짝 놀란다는 일화가 많지만, 무대 위에서는 전혀 그 아우라가 느껴지지 않는다.",
+            "원래는 래퍼를 꿈꿨으나, 소속사의 제안으로 보컬로 전환한 것이 신의 한 수였다는 평가를 받는다.",
+            "후배 그룹들의 곡도 프로듀싱하는 것으로 알려져 있어 'JYP의 박진영급'이라는 평가를 받는다.",
+            "팬들 앞에서는 귀엽고 소심해 보이지만 스튜디오에서는 완전히 다른 집중력을 발휘하는 '스튜디오 몬스터'다."
+          ],
+          en: [
+            "The core producer of SEVENTEEN, composing and arranging 80%+ of their music — considered one of K-pop's greatest self-producing artists.",
+            "At 164cm, newcomers are always surprised — yet on stage, his presence dwarfs everyone around him.",
+            "Originally dreamed of being a rapper, but the agency's push toward vocals turned out to be a stroke of genius.",
+            "Reportedly produces for junior groups too — compared to JYP's Park Jinyoung for his industry influence.",
+            "Seems shy and cute in front of fans, but transforms into a 'studio monster' with laser-focused intensity when producing."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "the8",
+        name: { ko: "디에잇", en: "The8" },
+        role: { ko: "퍼포먼스팀, 댄서, 보컬", en: "Performance Unit, Dancer, Vocal" },
+        birth: "1996.11.07",
+        bloodType: "O",
+        mbti: "INFP",
+        height: "177cm",
+        zodiac: { ko: "전갈자리", en: "Scorpio" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+The8+Xu+Minghao+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "비보잉 선수 출신의 퍼포먼스팀 댄서. 자체 안무 유튜브 1억 뷰를 달성했으며 중국 럭셔리 패션 앰배서더로도 활발히 활동하는 멀티 아티스트다.", en: "Performance Team dancer with a competitive B-boy background. His self-choreographed YouTube content surpassed 100M views, and he's an active ambassador for Chinese luxury fashion brands." },
+        tmi: {
+          ko: [
+            "중국 출신으로 비보잉 선수 출신이며, 이 실력이 세븐틴 퍼포먼스팀의 수준을 한 단계 끌어올렸다.",
+            "자체 안무 유튜브 영상이 1억 뷰를 넘길 정도로 댄서로서의 개인 역량이 독보적이다.",
+            "패션 감각이 뛰어나 중국 럭셔리 패션 브랜드들의 앰배서더로 활발히 활동하고 있다.",
+            "한국어를 완벽히 습득한 뒤에도 특유의 억양을 유지해 이것이 오히려 매력 포인트가 됐다.",
+            "조용하고 신중한 성격이지만 팬들에게 보내는 손편지가 가장 감성적이라는 평을 받는다."
+          ],
+          en: [
+            "From China with a B-boy competition background — his skills elevated SEVENTEEN's Performance Unit to a new level.",
+            "His self-choreographed YouTube videos have surpassed 100M views — his individual dance talent is unmatched.",
+            "Excellent fashion sense leads to active ambassadorships with Chinese luxury fashion brands.",
+            "Maintained his distinct accent after mastering Korean — it became a charming trademark rather than a barrier.",
+            "Quiet and thoughtful, but his handwritten fan letters are consistently rated the most emotionally moving in the group."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "mingyu",
+        name: { ko: "민규", en: "Mingyu" },
+        role: { ko: "힙합팀, 래퍼, 비주얼", en: "Hip-hop Unit, Rapper, Visual" },
+        birth: "1997.04.06",
+        bloodType: "A",
+        mbti: "ENFP",
+        height: "187cm",
+        zodiac: { ko: "양자리", en: "Aries" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Mingyu+Kim+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "187cm의 세븐틴 공식 비주얼이자 팀의 쉐프. GQ·Vogue 커버 단골이며 무대 위 카리스마와 일상의 귀여움 갭이 극명한 '갭 모에' 캐릭터다.", en: "SEVENTEEN's 187cm official visual and team chef. A regular on GQ and Vogue covers, his dramatic gap between on-stage charisma and off-stage cuteness makes him the group's ultimate 'gap moe' figure." },
+        tmi: {
+          ko: [
+            "187cm의 장신으로 세븐틴 공식 비주얼 담당이며, 글로벌 패션 잡지에 단골로 등장한다.",
+            "요리 실력이 뛰어나 멤버들을 위해 자주 요리해주는 '세븐틴 쉐프'로 불린다.",
+            "GQ·Vogue 등 해외 유명 패션 매거진 커버를 여러 차례 장식한 패션 아이콘이다.",
+            "무대 위 카리스마와 일상에서의 귀여운 모습의 갭이 극명해 '갭 모에 민규'로 사랑받는다.",
+            "데뷔 전 외모가 지금과 많이 달라 '성형 의혹'이 일었으나, JYP 연습생 시절부터 꾸준히 성장한 과정이 공개되며 해명됐다."
+          ],
+          en: [
+            "At 187cm, he is SEVENTEEN's official visual — a regular on global fashion magazine covers.",
+            "An accomplished cook who often makes meals for the members — nicknamed 'SEVENTEEN's chef'.",
+            "Has graced the covers of GQ, Vogue, and other major international fashion magazines multiple times.",
+            "The gap between his on-stage charisma and his off-stage cuteness makes him a beloved 'gap moe' figure.",
+            "Pre-debut photos looked significantly different, sparking plastic surgery rumors — but his growth timeline as a trainee was shared as evidence."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "dk",
+        name: { ko: "도겸", en: "DK" },
+        role: { ko: "보컬팀, 메인 보컬", en: "Vocal Unit, Main Vocal" },
+        birth: "1997.02.18",
+        bloodType: "O",
+        mbti: "ENFP",
+        height: "178cm",
+        zodiac: { ko: "물병자리", en: "Aquarius" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+DK+Lee+Seokmin+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "뮤지컬 '그리스' 주연을 맡은 세븐틴 메인 보컬. '세븐틴의 해'라는 별명처럼 태양처럼 밝은 에너지로 팀에 활력을 불어넣는 긍정 에너지의 화신이다.", en: "SEVENTEEN's main vocal who starred in the musical 'Grease'. Nicknamed 'the sun of SEVENTEEN' for his endless positive energy — widely recognized as the most consistently upbeat member." },
+        tmi: {
+          ko: [
+            "세븐틴 메인 보컬로, 뮤지컬 '그리스'에 주연으로 캐스팅될 정도로 뛰어난 보컬 실력을 인정받는다.",
+            "웃음이 태양처럼 밝고 에너지 넘쳐 '세븐틴 해'라는 별명이 있다.",
+            "단 한 번도 기분 나쁜 표정을 보인 적이 없다는 게 팬들 사이에서 정설이 될 만큼 긍정적인 성격이다.",
+            "뮤지컬과 콘서트를 넘나들며 활발히 활동해 '만능 엔터테이너'라는 평가를 받는다.",
+            "자신의 목소리가 컸을 때 연습실에서 울다가 그것이 강점이 됐다는 일화가 팬들에게 큰 감동을 줬다."
+          ],
+          en: [
+            "SEVENTEEN's main vocal — talented enough to be cast as lead in the musical 'Grease'.",
+            "His smile is as bright as the sun — nicknamed 'the sun of SEVENTEEN'.",
+            "Fans widely agree he has never once shown a bad mood — his positivity is almost legendary.",
+            "Active across musicals and concerts — called a 'complete entertainer'.",
+            "A story of him crying in the practice room over his loud voice, then turning it into a strength, deeply moved fans."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "seungkwan",
+        name: { ko: "승관", en: "Seungkwan" },
+        role: { ko: "보컬팀, 메인 보컬", en: "Vocal Unit, Main Vocal" },
+        birth: "1998.01.16",
+        bloodType: "A",
+        mbti: "ESFJ",
+        height: "173cm",
+        zodiac: { ko: "염소자리", en: "Capricorn" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Seungkwan+Boo+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "제주도 출신의 세븐틴 예능 능력치 1위. 어머니 사랑이 각별한 효자이며, 각종 시상식 MC로 자주 초청받는 세븐틴의 분위기 메이커다.", en: "Jeju Island-born and rated #1 in variety talent in SEVENTEEN. A devoted mother's boy and sought-after awards MC — the ultimate mood-maker who never fails to light up any situation." },
+        tmi: {
+          ko: [
+            "제주도 출신으로 독특한 제주 사투리를 구사해 예능에서 큰 사랑을 받는다.",
+            "세븐틴 예능 능력치 1위로 꼽히며, 어떤 상황에서도 분위기를 살리는 '예능인 승관'으로 유명하다.",
+            "어머니를 극진히 사랑하는 효자 아들로 알려져 있어 팬들에게 '엄마 바보'라는 애칭으로 불린다.",
+            "팬 사인회에서 팬들이 우울하다고 하면 그 자리에서 즉석 노래를 불러주는 것으로 유명하다.",
+            "세븐틴 내에서 MC 능력이 가장 뛰어나 각종 시상식 MC로 자주 초청된다."
+          ],
+          en: [
+            "From Jeju Island — uses unique Jeju dialect that makes him an instant variety show favorite.",
+            "Rated #1 in variety talent within SEVENTEEN — always lifts the mood regardless of circumstances.",
+            "Known as an extremely devoted son who adores his mother — fans call him 'mom's boy' affectionately.",
+            "Famous for spontaneously singing to fans at sign events when they say they're feeling down.",
+            "Best MC in SEVENTEEN — regularly invited to host major award ceremonies."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "vernon",
+        name: { ko: "버논", en: "Vernon" },
+        role: { ko: "힙합팀, 래퍼", en: "Hip-hop Unit, Rapper" },
+        birth: "1998.02.18",
+        bloodType: "O",
+        mbti: "INFP",
+        height: "180cm",
+        zodiac: { ko: "물병자리", en: "Aquarius" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Vernon+Chwe+Hansol+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "뉴욕 출신 한미 혼혈 래퍼. GQ 커버 장식 후 명품 브랜드 러브콜이 쏟아지는 패션 아이콘이며 '버논 한국어' 밈으로도 글로벌 인지도가 높다.", en: "Half-Korean, half-American rapper from New York. A fashion icon after his GQ cover appearance, and globally recognized for the 'Vernon Korean' pronunciation meme that's charmed fans worldwide." },
+        tmi: {
+          ko: [
+            "미국 뉴욕 출신 한미 혼혈로, 영어와 한국어를 모두 완벽하게 구사한다.",
+            "어린 시절 오디션 영상이 공개됐을 때 이미 완성형 퍼포머였다는 사실이 밝혀져 화제가 됐다.",
+            "말이 적고 철학적인 성격으로 팬들 사이에서 '세븐틴 철학자'라는 별명을 얻었다.",
+            "GQ 잡지 커버 장식 후 글로벌 패션 아이콘으로 주목받기 시작해 명품 브랜드 러브콜이 이어지고 있다.",
+            "한국어 발음이 독특해 '버논 한국어'가 팬들 사이에서 밈(meme)이 됐다."
+          ],
+          en: [
+            "Half Korean, half American from New York City — speaks both English and Korean perfectly.",
+            "His childhood audition footage showed he was already a complete performer even then — fans were amazed.",
+            "Rarely speaks but is deeply philosophical — known as 'SEVENTEEN's philosopher' in the fandom.",
+            "After gracing GQ's cover, luxury brand calls poured in — now a recognized global fashion icon.",
+            "His unique Korean pronunciation became a fan meme — 'Vernon Korean' is its own inside joke."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "dino",
+        name: { ko: "디노", en: "Dino" },
+        role: { ko: "퍼포먼스팀, 댄서, 막내", en: "Performance Unit, Dancer, Maknae" },
+        birth: "1999.02.11",
+        bloodType: "B",
+        mbti: "ISFP",
+        height: "173cm",
+        zodiac: { ko: "물병자리", en: "Aquarius" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=SEVENTEEN+Dino+Lee+Chan+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "마이클 잭슨을 롤모델로 삼은 세븐틴 막내 댄서. 6년 연습 끝에 데뷔한 성실함과 '막내 같지 않은 막내'의 성숙한 퍼포먼스가 트레이드마크다.", en: "SEVENTEEN's youngest dancer with Michael Jackson as his role model. Six years of training before debut — and a performance maturity so remarkable he's called 'the maknae who doesn't act like a maknae'." },
+        tmi: {
+          ko: [
+            "세븐틴 막내이지만 데뷔 때부터 '막내 같지 않은 막내'로 성숙한 퍼포먼스를 선보여 왔다.",
+            "마이클 잭슨을 롤모델로 삼아 댄스 스타일에도 MJ 영향이 강하게 드러나는 것으로 유명하다.",
+            "직접 안무를 짜고 멤버들과 공유하는 창작 욕구가 강한 퍼포머다.",
+            "세븐틴에서 가장 오랫동안 연습생 생활을 한 멤버로, 데뷔까지 6년을 기다렸다.",
+            "팬들에게 항상 성실하고 겸손한 태도를 유지하는 '모범생 디노'로 사랑받는다."
+          ],
+          en: [
+            "SEVENTEEN's youngest, but never acted like it — his mature performances have impressed since debut.",
+            "Michael Jackson is his role model — MJ's influence is clearly visible in his dance style.",
+            "A creative performer who composes choreography and shares it with members.",
+            "Waited 6 years as a trainee before debuting — the longest trainee period in SEVENTEEN.",
+            "Consistently maintains a humble and diligent attitude — fans adore him as 'model student Dino'."
+          ]
+        },
+        socials: {}
+      }
+    ]
+  },
+
+  // ==================== ENHYPEN ====================
+  {
+    id: "enhypen",
+    name: { ko: "엔하이픈", en: "ENHYPEN", ja: "エンハイフン", zh: "ENHYPEN", es: "ENHYPEN", id: "ENHYPEN", fr: "ENHYPEN", hi: "एनहाइफन", pt: "ENHYPEN", ar: "إنهايفن", th: "เอนไฮเฟน", vi: "ENHYPEN", ru: "ENHYPEN" },
+    description: {
+      ko: "HYBE·빌리프랩 소속 7인조 보이그룹. 글로벌 오디션 프로그램 'I-LAND'를 통해 결성됐으며, 2025 Spotify K-Pop 9위로 4세대 보이그룹 중 최상위권에 위치한 그룹.",
+      en: "7-member boy group under HYBE·Belift Lab. Formed through global audition show 'I-LAND', ranked #9 on Spotify 2025 K-Pop — one of the highest positions for a 4th gen boy group.",
+      ja: "HYBE・ビリーフラボ所属の7人組ボーイズグループ。グローバルオーディション番組「I-LAND」を通じて結成され、Spotify 2025 K-Pop 9位を獲得した4世代ボーイグループのトップ。",
+      zh: "HYBE·Belift Lab旗下7人男团。通过全球选秀节目'I-LAND'组建，2025年Spotify K-Pop排名第9，是第四代男团中最高排名之一。",
+      es: "Grupo masculino de 7 miembros bajo HYBE·Belift Lab. Formado a través del programa de audiciones global 'I-LAND', clasificado #9 en Spotify K-Pop 2025.",
+      id: "Grup pria 7 anggota di bawah HYBE·Belift Lab. Dibentuk melalui program audisi global 'I-LAND', meraih posisi #9 di Spotify K-Pop 2025.",
+      fr: "Groupe masculin de 7 membres sous HYBE·Belift Lab. Formé via le programme d'audition mondial 'I-LAND', classé #9 sur Spotify K-Pop 2025.",
+      hi: "HYBE·Belift Lab के तहत 7 सदस्यीय बॉय ग्रुप। 'I-LAND' ग्लोबल ऑडिशन शो से बना, Spotify 2025 K-Pop में #9।",
+      pt: "Grupo masculino de 7 membros sob HYBE·Belift Lab. Formado através do programa de audição global 'I-LAND', classificado em #9 no Spotify K-Pop 2025.",
+      ar: "مجموعة فتيان من 7 أعضاء تحت HYBE·Belift Lab. تشكلت عبر برنامج التصفيات العالمي 'I-LAND'، في المرتبة 9 على Spotify K-Pop 2025.",
+      th: "กลุ่มชาย 7 คนภายใต้ HYBE·Belift Lab ก่อตั้งผ่านรายการออดิชัน 'I-LAND' อันดับ 9 Spotify K-Pop 2025",
+      vi: "Nhóm nhạc nam 7 thành viên thuộc HYBE·Belift Lab. Thành lập qua chương trình I-LAND, xếp hạng #9 Spotify K-Pop 2025.",
+      ru: "Мужская группа из 7 участников под HYBE·Belift Lab. Основана через глобальное шоу I-LAND, заняла #9 в Spotify K-Pop 2025."
+    },
+    fandom: { ko: "엔진 (ENGENE)", en: "ENGENE", ja: "エンジン (ENGENE)", zh: "ENGENE", es: "ENGENE", id: "ENGENE", fr: "ENGENE", hi: "ENGENE", pt: "ENGENE", ar: "إنجين (ENGENE)", th: "เอนจิน (ENGENE)", vi: "ENGENE", ru: "ENGENE" },
+    debut: "2020.11.30",
+    accentColor: "#9d00ff",
+    imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+group+kpop+2024+official&w=500&h=500&c=7&rs=1&p=0",
+    wiki: {
+      ko: "엔하이픈(ENHYPEN)은 HYBE·빌리프랩 소속의 7인조 보이그룹입니다. 2020년 Mnet 글로벌 오디션 프로그램 'I-LAND'를 통해 결성됐으며 같은 해 11월 데뷔했습니다. 하이픈(-)처럼 사람과 사람, 세계와 세계를 연결한다는 그룹명의 의미처럼, 한국·일본·미국·호주 출신의 다국적 멤버 구성으로 글로벌 팬덤을 보유하고 있습니다. 2025 Spotify K-Pop 9위를 기록한 4세대 대표 보이그룹입니다.",
+      en: "ENHYPEN is a 7-member boy group under HYBE·Belift Lab, formed through Mnet's global audition show 'I-LAND' in 2020 and debuting the same November. Like a hyphen connecting people and worlds, their multinational lineup (Korea, Japan, USA, Australia) reflects their global identity. They rank #9 on Spotify K-Pop 2025 — one of the top 4th generation boy groups worldwide."
+    },
+    company: "HYBE · Belift Lab",
+    tmi: {
+      ko: [
+        "그룹명 ENHYPEN의 의미는 '하이픈(-)처럼 서로를 연결하고 새로운 것을 만들어 가는 그룹'이다.",
+        "글로벌 오디션 'I-LAND'에서 전 세계 팬들의 투표로 최종 멤버가 결정됐다.",
+        "데뷔 1주년 만에 빌보드 200 진입, K-Pop 신인 역사를 새로 썼다.",
+        "뱀파이어·달빛·어둠 등 신비로운 세계관을 중심으로 스토리텔링 앨범을 제작한다.",
+        "멤버 전원이 평균 나이 20대 초반의 젊은 구성으로 '4세대 최강 자리' 경쟁 중이다.",
+        "일본 데뷔 앨범이 오리콘 1위를 기록해 한일 양국에서 동시에 사랑받는 그룹이다.",
+        "BTS와 같은 레이블 HYBE 소속이라는 점이 데뷔 초부터 전 세계 주목을 받는 원동력이 됐다.",
+        "2025년 발매한 'ROMANCE : UNTOLD' 시리즈가 팬들 사이에서 역대급 앨범으로 평가받는다.",
+        "멤버 모두가 다양한 국적(한국·일본·미국·호주)을 보유한 글로벌 구성이다.",
+        "Spotify 2025 K-Pop 9위로, 4세대 보이그룹 중 스트레이 키즈 다음으로 높은 순위를 기록했다."
+      ],
+      en: [
+        "The name ENHYPEN means 'connected by a hyphen — connecting people and creating something new'.",
+        "Final members were chosen by global fan votes during 'I-LAND' — truly built by the fans.",
+        "Entered the Billboard 200 within their first year — rewriting K-pop rookie history.",
+        "Their albums are built around a rich narrative universe involving vampires, moonlight, and mystery.",
+        "All members are in their early 20s — fiercely competing for the '4th gen #1' crown.",
+        "Their Japanese debut album topped Oricon, making them beloved in both Korea and Japan.",
+        "Being under HYBE (same label as BTS) drew global spotlight from day one of their debut.",
+        "The 2025 'ROMANCE : UNTOLD' series is considered their best album to date by fans.",
+        "Members come from diverse nationalities — Korea, Japan, the US, Australia — a global lineup.",
+        "Ranked #9 on Spotify K-Pop 2025 — the highest-charting 4th gen boy group after Stray Kids."
+      ]
+    },
+    news: [
+      { title: { ko: "엔하이픈, Spotify 2025 K-Pop Wrapped 9위", en: "ENHYPEN ranks #9 on Spotify 2025 K-Pop Wrapped" }, date: "2025.11.20", summary: { ko: "4세대 보이그룹 최상위권으로 글로벌 팬덤 확인", en: "Confirmed as top 4th gen boy group with a global fanbase" }, url: "#" },
+      { title: { ko: "'ROMANCE : UNTOLD' 스포티파이 글로벌 200 진입", en: "'ROMANCE : UNTOLD' enters Spotify Global 200" }, date: "2025.07.12", summary: { ko: "발매 24시간 만에 스포티파이 글로벌 200 차트 진입", en: "Entered Spotify Global 200 chart within 24 hours of release" }, url: "#" },
+      { title: { ko: "월드투어 'FATE PLUS' 전석 매진", en: "World tour 'FATE PLUS' sells out" }, date: "2025.03.15", summary: { ko: "북미·유럽·아시아 전 회차 전석 매진 달성", en: "All shows across North America, Europe and Asia sold out" }, url: "#" },
+      { title: { ko: "일본 돔 투어 성공적 마무리", en: "Japan dome tour successfully completed" }, date: "2025.02.01", summary: { ko: "도쿄돔·오사카돔 연속 공연으로 일본 팬덤 결집", en: "Tokyo Dome and Osaka Dome back-to-back performances" }, url: "#" },
+      { title: { ko: "성훈, Burberry 글로벌 앰배서더 발탁", en: "Sunghoon named Burberry global ambassador" }, date: "2024.09.10", summary: { ko: "글로벌 패션 브랜드 Burberry의 공식 앰배서더로 선정", en: "Selected as official ambassador for global fashion brand Burberry" }, url: "#" },
+    ],
+    members: [
+      {
+        id: "jungwon",
+        name: { ko: "정원", en: "Jungwon" },
+        role: { ko: "리더, 보컬", en: "Leader, Vocal" },
+        birth: "2004.02.09",
+        bloodType: "O",
+        mbti: "ISFJ",
+        height: "174cm",
+        zodiac: { ko: "물병자리", en: "Aquarius" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Jungwon+Yang+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "엔하이픈의 리더로 뛰어난 리더십과 음악적 감성을 겸비한 보컬리스트.", en: "ENHYPEN's leader — a vocalist combining exceptional leadership with deep musical sensibility." },
+        tmi: {
+          ko: [
+            "엔하이픈 막내급 나이임에도 리더로 선발돼 7명을 이끄는 남다른 리더십을 인정받는다.",
+            "고양이를 너무 좋아해 팬들 사이에서 '고양이 인간'이라는 별명이 있다.",
+            "뛰어난 음악적 감수성으로 작사에 참여하며 자체 제작 능력을 키워가고 있다.",
+            "평소 말이 많지 않지만 무대에서는 강렬한 눈빛으로 팬들을 압도하는 '무대 체인지' 캐릭터다.",
+            "I-LAND 시절부터 리더 후보 1순위로 꼽혔으며, 실제로 팀 결성 후 리더가 됐다."
+          ],
+          en: [
+            "Selected as leader despite being one of the youngest — his leadership capabilities were recognized from the start.",
+            "Nicknamed 'cat human' by fans for his deep love of cats and feline-like facial expressions.",
+            "Growing as a self-producing artist, participating in lyric writing with strong musical sensibility.",
+            "Quiet in daily life but transforms with an intense gaze on stage — a 'stage switch' personality.",
+            "Was the top leader candidate throughout I-LAND — became leader when the team officially formed."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "heeseung",
+        name: { ko: "희승", en: "Heeseung" },
+        role: { ko: "보컬, 댄서, 래퍼 (멀티 포지션)", en: "Vocal, Dancer, Rapper (Multi-position)" },
+        birth: "2001.10.15",
+        bloodType: "O",
+        mbti: "ENFP",
+        height: "185cm",
+        zodiac: { ko: "천칭자리", en: "Libra" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Heeseung+Lee+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "보컬·댄스·랩 모두 소화하는 엔하이픈의 올라운더. I-LAND 전체 1위 출신 에이스.", en: "ENHYPEN's all-rounder handling vocals, dance, and rap. The ace who finished #1 overall on I-LAND." },
+        tmi: {
+          ko: [
+            "보컬·댄서·래퍼 모두 가능한 완벽한 올라운더로, 'I-LAND 전체 1등' 출신이다.",
+            "피아노·기타·드럼 등 다양한 악기를 연주할 수 있는 뮤지션 기질을 타고났다.",
+            "185cm의 장신에 뛰어난 외모로 데뷔 전부터 '차세대 에이스' 타이틀을 달았다.",
+            "BTS 정국을 롤모델로 꼽으며 연습 열정이 남다르다고 알려져 있다.",
+            "게임 실력이 출중해 팬들과 직접 게임을 즐기는 라이브 방송이 인기다."
+          ],
+          en: [
+            "A perfect all-rounder in vocals, dance, and rap — finished #1 overall on I-LAND.",
+            "Can play piano, guitar, and drums — a naturally gifted musician.",
+            "At 185cm with exceptional looks, he was called 'next-gen ace' even before debut.",
+            "Cites BTS's Jungkook as his role model — known for his extraordinary practice ethic.",
+            "An accomplished gamer who hosts popular live streams playing games with fans."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "jay",
+        name: { ko: "제이", en: "Jay" },
+        role: { ko: "보컬, 래퍼", en: "Vocal, Rapper" },
+        birth: "2002.04.20",
+        bloodType: "O",
+        mbti: "ENTJ",
+        height: "180cm",
+        zodiac: { ko: "황소자리", en: "Taurus" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Jay+Park+Jongseong+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "미국 시애틀 출신 한미 혼혈 보컬리스트. 4개국어를 구사하는 언어 천재이자 패션 아이콘.", en: "Half-Korean, half-American vocalist from Seattle. A language genius fluent in 4 languages and a fashion icon." },
+        tmi: {
+          ko: [
+            "미국 시애틀 출신 한미 혼혈로, 영어·한국어·일본어·스페인어까지 구사하는 언어 천재다.",
+            "가장 솔직하고 직설적인 성격으로 팬들에게 '팩폭 제이'라는 애칭을 얻었다.",
+            "패션 감각이 독보적으로 뛰어나 음악 활동 외에도 패션 브랜드 콜라보 제안이 꾸준히 들어온다.",
+            "요리를 즐겨 '제이의 쿠킹 클래스' 같은 콘텐츠가 팬들에게 인기 있다.",
+            "공부도 잘해 미국에서 학교를 다닐 때 우등생이었으며, 아이돌이 되지 않았다면 의사가 됐을 것이라고 밝혔다."
+          ],
+          en: [
+            "Half Korean, half American from Seattle — speaks English, Korean, Japanese, and Spanish, making him a language genius.",
+            "The most blunt and direct member — fans affectionately call him 'fact-bomb Jay'.",
+            "Unmatched fashion sense — receives regular fashion brand collaboration offers beyond music activities.",
+            "Loves cooking — 'Jay's Cooking Class' style content is popular with fans.",
+            "Was an honors student in the US — says if not an idol, he would have become a doctor."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "jake",
+        name: { ko: "제이크", en: "Jake" },
+        role: { ko: "보컬", en: "Vocal" },
+        birth: "2002.11.15",
+        bloodType: "AB",
+        mbti: "ENFP",
+        height: "174cm",
+        zodiac: { ko: "전갈자리", en: "Scorpio" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Jake+Sim+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "호주 브리즈번 출신 보컬리스트. 따뜻한 음색과 사진 실력으로 팬들의 깊은 사랑을 받는다.", en: "Vocalist from Brisbane, Australia. Loved by fans for his warm vocal tone and outstanding photography." },
+        tmi: {
+          ko: [
+            "호주 브리즈번 출신으로, 엔하이픈 최초의 호주인 멤버다.",
+            "인스타그램에 직접 찍은 사진을 꾸준히 올리는 사진 덕후로, '아이돌 중 사진 실력 최고'라는 평을 받는다.",
+            "처음엔 한국어가 서툴렀지만 1년 만에 유창하게 구사해 '언어 스폰지'라는 별명을 얻었다.",
+            "강아지를 너무 좋아해 팬들 사이에서 '강아지 닮은 강아지 좋아하는 사람'으로 유명하다.",
+            "호주에서 I-LAND 오디션 지원 소식을 혼자 접하고 부모님을 설득해 한국에 온 결단력 있는 청년이다."
+          ],
+          en: [
+            "From Brisbane, Australia — the first Australian member in ENHYPEN.",
+            "A photography enthusiast who regularly shares self-taken shots on Instagram — rated 'best photographer among idols'.",
+            "Struggled with Korean initially but became fluent within a year — earning the nickname 'language sponge'.",
+            "Loves dogs deeply — fans describe him as 'a dog-like person who loves dogs'.",
+            "Found out about I-LAND auditions alone in Australia and convinced his parents to let him come to Korea — showing remarkable determination."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "sunghoon",
+        name: { ko: "성훈", en: "Sunghoon" },
+        role: { ko: "보컬, 비주얼", en: "Vocal, Visual" },
+        birth: "2002.12.08",
+        bloodType: "A",
+        mbti: "ISTJ",
+        height: "180cm",
+        zodiac: { ko: "사수자리", en: "Sagittarius" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Sunghoon+Park+figure+skater+face+closeup+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "국가대표급 피겨 스케이팅 선수 출신 비주얼 보컬. Burberry 글로벌 앰배서더로 활약 중.", en: "Visual vocalist with national-level figure skating background. Active as a global Burberry brand ambassador." },
+        tmi: {
+          ko: [
+            "국가대표급 피겨 스케이팅 선수 출신으로, I-LAND에서 이 경력이 알려지며 '피겨 왕자'로 불렸다.",
+            "Burberry 글로벌 앰배서더로 활동하며 패션계에서도 탄탄한 입지를 다지고 있다.",
+            "완벽주의 성향으로 무대 준비에 특히 철저한 것으로 알려져 있다.",
+            "조용하고 신중한 성격이지만 팬들 앞에서는 수줍은 미소로 무장해제를 시키는 매력이 있다.",
+            "피겨 선수 시절 각종 대회에서 입상한 실력파로, 그 훈련 덕분에 무대 매너가 남다르다."
+          ],
+          en: [
+            "Former competitive figure skater with national-level skills — earned the 'ice prince' title when revealed on I-LAND.",
+            "Active as a global brand ambassador for Burberry, building a solid fashion industry presence.",
+            "A perfectionist who is especially thorough in stage preparation.",
+            "Quiet and careful in daily life, but his shy smile completely disarms fans.",
+            "Won multiple figure skating competitions — that training gave him exceptional stage poise and elegance."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "sunoo",
+        name: { ko: "선우", en: "Sunoo" },
+        role: { ko: "보컬", en: "Vocal" },
+        birth: "2003.06.24",
+        bloodType: "O",
+        mbti: "ENFP",
+        height: "170cm",
+        zodiac: { ko: "게자리", en: "Cancer" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Sunoo+Kim+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "반달 눈웃음이 트레이드마크인 엔하이픈의 분위기 메이커 보컬리스트.", en: "ENHYPEN's mood-maker vocalist, famous for his crescent-moon eye-smile that lights up every room." },
+        tmi: {
+          ko: [
+            "눈이 반달 모양으로 휘는 미소가 트레이드마크로, '세상에서 가장 행복한 미소'를 가진 아이돌로 불린다.",
+            "엔하이픈 분위기 메이커이자 예능 능력자로, 어떤 상황도 웃음으로 바꾸는 능력이 있다.",
+            "I-LAND에서 시청자 투표 1위로 선발돼 사실상 '국민이 뽑은 멤버'라는 타이틀을 갖고 있다.",
+            "수줍음을 많이 타는 면이 있지만 카메라 앞에서는 완전히 다른 에너지를 발산한다.",
+            "식욕이 왕성하기로 멤버들 사이에서 유명해 '선우 먹방'이 팬들 사이에서 인기 콘텐츠다."
+          ],
+          en: [
+            "His crescent-moon smile is his trademark — called 'the idol with the happiest smile in the world'.",
+            "ENHYPEN's mood-maker and variety talent — capable of turning any situation into laughter.",
+            "Received the highest viewer votes on I-LAND — essentially 'the member chosen by the public'.",
+            "Shy in private but radiates completely different energy in front of cameras.",
+            "Famous among members for his massive appetite — 'Sunoo mukbang' is a beloved fan content genre."
+          ]
+        },
+        socials: {}
+      },
+      {
+        id: "niki",
+        name: { ko: "니키", en: "Ni-ki" },
+        role: { ko: "댄서, 막내", en: "Dancer, Maknae" },
+        birth: "2005.12.09",
+        bloodType: "A",
+        mbti: "ISTP",
+        height: "180cm",
+        zodiac: { ko: "사수자리", en: "Sagittarius" },
+        imageUrl: "https://tse1.mm.bing.net/th?q=ENHYPEN+Ni-ki+Nishimura+Riki+face+closeup+fancam+2024&w=500&h=500&c=7&rs=1&p=0",
+        description: { ko: "일본 출신 엔하이픈 막내이자 메인 댄서. 10대 나이에 천재 퍼포머로 인정받는 퍼포먼스 전문가.", en: "Japanese-born ENHYPEN maknae and main dancer. Recognized as a genius performer while still in his teens." },
+        tmi: {
+          ko: [
+            "일본 출신 막내로, 데뷔 당시 만 15세였으며 이미 일본 최고 수준의 댄서로 인정받고 있었다.",
+            "팝핀·힙합·SM댄스 등 다양한 장르를 섭렵한 댄서로 퍼포먼스팀의 핵심 역할을 한다.",
+            "나이에 비해 굉장히 성숙한 퍼포먼스로 데뷔 초부터 '천재 무용수'라는 칭호를 얻었다.",
+            "평소에는 장난끼 많은 막내이지만 무대에서는 완전히 다른 카리스마를 발산한다.",
+            "일본어·한국어를 모두 유창하게 구사해 양국 팬들과 자유롭게 소통할 수 있다."
+          ],
+          en: [
+            "Japanese-born youngest member — debuted at 15 and was already recognized as one of Japan's top dancers.",
+            "Covers popping, hip-hop, and SM dance styles — a versatile dancer who is the performance team's cornerstone.",
+            "Earned the title 'genius dancer' from debut for performances mature far beyond his age.",
+            "The classic mischievous youngest off-stage, but radiates completely different charisma on stage.",
+            "Fluent in both Japanese and Korean — freely communicates with fans from both countries."
+          ]
+        },
+        socials: {}
+      }
+    ]
   }
 ];

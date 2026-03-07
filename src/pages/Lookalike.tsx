@@ -299,6 +299,7 @@ export default function Lookalike() {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
       const imageUrl = URL.createObjectURL(file);
+      setShowGuide(false);
       setSelectedImage(imageUrl);
       setAppState('analyzing');
     }
@@ -411,6 +412,7 @@ export default function Lookalike() {
             <>
               <input
                 ref={fileInputRef}
+                id="file-upload-input"
                 type="file"
                 accept="image/*"
                 onChange={handleImageUpload}
@@ -843,9 +845,9 @@ export default function Lookalike() {
                       </ul>
                     </div>
                   </div>
-                  <button
-                    onClick={() => { setShowGuide(false); fileInputRef.current?.click(); }}
-                    className="w-full relative flex items-center justify-center gap-3 text-white font-black uppercase italic py-4 px-8 rounded-2xl overflow-hidden active:scale-95 transition-transform"
+                  <label
+                    htmlFor="file-upload-input"
+                    className="w-full relative flex items-center justify-center gap-3 text-white font-black uppercase italic py-4 px-8 rounded-2xl overflow-hidden active:scale-95 transition-transform cursor-pointer"
                     style={{
                       background: 'linear-gradient(90deg, #00ffff, #9d00ff, #ff00ff, #9d00ff, #00ffff)',
                       backgroundSize: '300% 100%',
@@ -855,7 +857,7 @@ export default function Lookalike() {
                   >
                     <Upload className="w-5 h-5 shrink-0" />
                     <span>{guide.btn}</span>
-                  </button>
+                  </label>
                 </div>
               </div>
             </div>
