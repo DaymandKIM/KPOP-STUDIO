@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import GoogleAd from './GoogleAd';
 import { useTranslation } from 'react-i18next';
-import { 
-  Search, User, Star, ChevronLeft, ExternalLink, MessageCircle, 
-  Newspaper, Sparkles, Calendar, Fingerprint, Heart, 
+import {
+  Search, User, Star, ChevronLeft, ExternalLink, MessageCircle,
+  Newspaper, Sparkles, Calendar, Fingerprint, Heart,
   Instagram, Twitter, Youtube, Music2, Droplets, Moon, Share2
 } from 'lucide-react';
 import SharePanel from './SharePanel';
+import FeatureNav from './FeatureNav';
 import { KPOP_GROUPS } from '../data/idols';
 import type { KpopGroup, Socials, Member } from '../data/idols';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -398,6 +399,9 @@ const IdolEncyclopedia: React.FC<{
             </section>
           </div>
         </div>
+        <div className="max-w-2xl mx-auto w-full px-4 mt-8 mb-4">
+          <FeatureNav exclude={['encyclopedia']} />
+        </div>
       </div>
     );
   }
@@ -524,6 +528,9 @@ const IdolEncyclopedia: React.FC<{
           })();
           return adEl ? [adEl, card] : [card];
         })}
+      </div>
+      <div className="max-w-2xl mx-auto w-full px-4 mt-4 mb-4">
+        <FeatureNav exclude={['encyclopedia']} />
       </div>
     </div>
   );

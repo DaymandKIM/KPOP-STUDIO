@@ -505,6 +505,12 @@ export default function Lookalike() {
         </div>
       )}
 
+      {appState === 'idle' && !isModelLoading && !modelError && (
+        <div className="w-full max-w-lg px-2 mt-6">
+          <FeatureNav exclude={['lookalike']} />
+        </div>
+      )}
+
       {appState === 'analyzing' && selectedImage && (
         <div className="flex flex-col items-center justify-center w-full max-w-lg animate-fade-in-up px-2 mt-8 md:mt-16">
           <div className="relative rounded-[28px] md:rounded-[32px] overflow-hidden mb-8 md:mb-12 border-4 border-neon-purple/50 neon-shadow-purple w-full aspect-square md:aspect-auto">

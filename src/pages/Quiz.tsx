@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Trophy, RefreshCw, Check, X, ChevronRight, HelpCircle } from 'lucide-react';
+import { Trophy, RefreshCw, Check, X, ChevronRight, HelpCircle, Zap, Shield } from 'lucide-react';
 import { KPOP_GROUPS } from '../data/idols';
 import { generateQuizShareCard } from '../hooks/useShareCard';
 import SharePanel from '../components/SharePanel';
@@ -9,6 +9,7 @@ import FeatureNav from '../components/FeatureNav';
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 type Difficulty = 'easy' | 'medium' | 'hard';
+type QuizMode = 'normal' | 'survival';
 type Phase = 'start' | 'quiz' | 'result';
 type QType = 'photo' | 'lyrics' | 'hint' | 'trivia';
 
@@ -21,6 +22,10 @@ interface Q {
   choices: string[];
   explanation: string;
 }
+
+// ─── Boy group IDs (for gender filtering in photo questions) ──────────────────
+
+const BOY_GROUP_IDS = new Set(['bts', 'straykids', 'seventeen', 'enhypen']);
 
 // ─── Lyrics Bank ──────────────────────────────────────────────────────────────
 
@@ -71,9 +76,11 @@ function generateQuestions(difficulty: Difficulty, qt: { photo: string; lyrics: 
 
   const pool: Q[] = [];
 
-  // A. Photo questions
+  // A. Photo questions — gender-filtered wrong choices
   for (const { m, g } of pick(targetMembers, 6)) {
-    const wrongs = pick(allMembers.filter(x => x.m.id !== m.id).map(x => x.m.name.ko), 3);
+    const isBoy = BOY_GROUP_IDS.has(g.id);
+    const sameGenderMembers = allMembers.filter(x => x.m.id !== m.id && BOY_GROUP_IDS.has(x.g.id) === isBoy);
+    const wrongs = pick(sameGenderMembers.map(x => x.m.name.ko), 3);
     pool.push({
       type: 'photo',
       question: qt.photo,
@@ -159,7 +166,8 @@ function generateQuestions(difficulty: Difficulty, qt: { photo: string; lyrics: 
     }
   }
 
-  return shuffle(pool).slice(0, 10);
+  // Survival: generate a large pool (shuffle, no slice — we'll use up to all)
+  return shuffle(pool);
 }
 
 // ─── Grade ────────────────────────────────────────────────────────────────────
@@ -197,11 +205,13 @@ export default function Quiz() {
 
   const [phase, setPhase] = useState<Phase>('start');
   const [difficulty, setDifficulty] = useState<Difficulty>('medium');
+  const [mode, setMode] = useState<QuizMode>('normal');
   const [questions, setQuestions] = useState<Q[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
   const [answers, setAnswers] = useState<boolean[]>([]);
+  const [survivedStages, setSurvivedStages] = useState(0); // survival: how many correct before elimination
 
   // Share state
   const [shareBlob, setShareBlob] = useState<Blob | null>(null);
@@ -210,7 +220,7 @@ export default function Quiz() {
 
   const current = questions[currentIndex];
   const isAnswered = selectedChoice !== null;
-  const progress = ((currentIndex + (isAnswered ? 1 : 0)) / 10) * 100;
+  const progress = questions.length > 0 ? ((currentIndex + (isAnswered ? 1 : 0)) / 10) * 100 : 0;
 
   function startQuiz() {
     const qt = {
@@ -218,11 +228,14 @@ export default function Quiz() {
       lyrics: t('quiz_q_lyrics'),
       hint: t('quiz_q_hint'),
     };
-    setQuestions(generateQuestions(difficulty, qt));
+    const pool = generateQuestions(difficulty, qt);
+    // normal: 10 questions; survival: unlimited pool (use all, end on first wrong)
+    setQuestions(mode === 'normal' ? pool.slice(0, 10) : pool);
     setCurrentIndex(0);
     setSelectedChoice(null);
     setCorrectCount(0);
     setAnswers([]);
+    setSurvivedStages(0);
     setShareBlob(null);
     setShowSharePanel(false);
     setPhase('quiz');
@@ -234,9 +247,19 @@ export default function Quiz() {
     const correct = choice === current.answer;
     if (correct) setCorrectCount(c => c + 1);
     setAnswers(a => [...a, correct]);
+
+    // Survival: if wrong → immediately end after brief delay
+    if (mode === 'survival' && !correct) {
+      setSurvivedStages(currentIndex); // survived `currentIndex` stages (0-based → stages passed)
+    }
   }
 
   function next() {
+    // Survival elimination: wrong answer → go to result
+    if (mode === 'survival' && selectedChoice !== current.answer) {
+      setPhase('result');
+      return;
+    }
     if (currentIndex >= questions.length - 1) {
       setPhase('result');
     } else {
@@ -250,17 +273,22 @@ export default function Quiz() {
     if (shareBlob) return;
     setIsGeneratingCard(true);
     try {
-      const gradeKey = getGradeKey(correctCount);
+      const score = mode === 'normal' ? correctCount : survivedStages;
+      const gradeKey = mode === 'survival'
+        ? (survivedStages >= 15 ? 'genius' : survivedStages >= 10 ? 'master' : survivedStages >= 7 ? 'fan' : survivedStages >= 4 ? 'aspiring' : 'newbie')
+        : getGradeKey(correctCount);
       const blob = await generateQuizShareCard({
-        score: correctCount,
-        total: 10,
-        gradeLabel: t(`quiz_grade_${gradeKey}`),
+        score,
+        total: mode === 'normal' ? 10 : score,
+        gradeLabel: mode === 'survival'
+          ? `${survivedStages}단계 성공!`
+          : t(`quiz_grade_${gradeKey}`),
         comment: t(`quiz_comment_${gradeKey}`),
         lang: i18n.language,
       });
       setShareBlob(blob);
     } catch {
-      // share card generation failed — SharePanel handles missing blob gracefully
+      // silently fail — SharePanel handles missing blob
     } finally {
       setIsGeneratingCard(false);
     }
@@ -279,8 +307,36 @@ export default function Quiz() {
             <p className="text-slate-400 text-sm">{t('quiz_subtitle')}</p>
           </div>
 
+          {/* Mode selection */}
+          <div className="mb-6">
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3 text-center">모드 선택</p>
+            <div className="grid grid-cols-2 gap-3">
+              <button
+                onClick={() => setMode('normal')}
+                className={`p-4 rounded-2xl border-2 transition-all flex flex-col items-center gap-2 ${
+                  mode === 'normal' ? 'border-neon-blue bg-neon-blue/10' : 'border-white/10 bg-white/5 hover:border-white/30'
+                }`}
+              >
+                <Shield className={`w-6 h-6 ${mode === 'normal' ? 'text-neon-blue' : 'text-slate-400'}`} />
+                <span className={`text-sm font-black ${mode === 'normal' ? 'text-neon-blue' : 'text-white'}`}>일반 모드</span>
+                <span className="text-[10px] text-slate-500 leading-tight text-center">10문제 · 채점</span>
+              </button>
+              <button
+                onClick={() => setMode('survival')}
+                className={`p-4 rounded-2xl border-2 transition-all flex flex-col items-center gap-2 ${
+                  mode === 'survival' ? 'border-neon-pink bg-neon-pink/10' : 'border-white/10 bg-white/5 hover:border-white/30'
+                }`}
+              >
+                <Zap className={`w-6 h-6 ${mode === 'survival' ? 'text-neon-pink' : 'text-slate-400'}`} />
+                <span className={`text-sm font-black ${mode === 'survival' ? 'text-neon-pink' : 'text-white'}`}>서바이벌</span>
+                <span className="text-[10px] text-slate-500 leading-tight text-center">1번 틀리면 탈락!</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Difficulty selection */}
           <div className="mb-8">
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4 text-center">
+            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3 text-center">
               {t('quiz_select_difficulty')}
             </p>
             <div className="grid grid-cols-3 gap-3">
@@ -317,14 +373,9 @@ export default function Quiz() {
           </button>
 
           <div className="grid grid-cols-2 gap-3 mb-8">
-            {([
-              { type: 'photo', icon: '📸' },
-              { type: 'lyrics', icon: '🎵' },
-              { type: 'hint', icon: '💡' },
-              { type: 'trivia', icon: '📊' },
-            ] as const).map(({ type, icon }) => (
+            {(['photo', 'lyrics', 'hint', 'trivia'] as const).map(type => (
               <div key={type} className="bg-white/5 rounded-xl p-3 flex items-center gap-3 border border-white/10">
-                <span className="text-xl">{icon}</span>
+                <span className="text-xl">{TYPE_ICON[type]}</span>
                 <div>
                   <p className="text-xs font-black text-white">{t(`quiz_label_${type}`)}</p>
                   <p className="text-[10px] text-slate-500">{t(`quiz_desc_${type}`)}</p>
@@ -341,7 +392,11 @@ export default function Quiz() {
 
   // ── Result Screen ──────────────────────────────────────────────────────────
   if (phase === 'result') {
-    const gradeKey = getGradeKey(correctCount);
+    const isSurvival = mode === 'survival';
+    const survived = isSurvival ? survivedStages : correctCount;
+    const gradeKey: GradeKey = isSurvival
+      ? (survived >= 15 ? 'genius' : survived >= 10 ? 'master' : survived >= 7 ? 'fan' : survived >= 4 ? 'aspiring' : survived >= 2 ? 'newbie' : 'baby')
+      : getGradeKey(correctCount);
     const style = GRADE_STYLE[gradeKey];
 
     return (
@@ -350,36 +405,70 @@ export default function Quiz() {
           {/* Score card */}
           <div className={`bg-gradient-to-b ${style.bg} to-transparent border-2 ${style.border} rounded-3xl p-8 text-center mb-5`}>
             <Trophy className={`w-12 h-12 mx-auto mb-4 ${style.color}`} />
-            <div className={`text-6xl font-black mb-2 ${style.color}`}>
-              {correctCount}<span className="text-3xl text-white/40">/10</span>
-            </div>
-            <div className={`text-xl font-black uppercase tracking-wider mb-3 ${style.color}`}>
-              {t(`quiz_grade_${gradeKey}`)}
-            </div>
+
+            {isSurvival ? (
+              <>
+                <div className={`text-5xl font-black mb-2 ${style.color}`}>
+                  {survived}<span className="text-2xl text-white/40">단계</span>
+                </div>
+                <div className={`text-xl font-black uppercase tracking-wider mb-1 ${style.color}`}>
+                  {survived}단계 성공!
+                </div>
+                <p className="text-slate-500 text-xs mb-3">서바이벌 모드 · {survived}문제 연속 정답</p>
+              </>
+            ) : (
+              <>
+                <div className={`text-6xl font-black mb-2 ${style.color}`}>
+                  {correctCount}<span className="text-3xl text-white/40">/10</span>
+                </div>
+                <div className={`text-xl font-black uppercase tracking-wider mb-3 ${style.color}`}>
+                  {t(`quiz_grade_${gradeKey}`)}
+                </div>
+              </>
+            )}
             <p className="text-slate-400 text-sm">{t(`quiz_comment_${gradeKey}`)}</p>
           </div>
 
-          {/* Answer grid */}
-          <div className="bg-white/5 rounded-2xl p-4 mb-5 border border-white/10">
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">
-              {t('quiz_results_label')}
-            </p>
-            <div className="flex flex-wrap gap-2 mb-3">
-              {answers.map((correct, i) => (
-                <div
-                  key={i}
-                  className={`w-9 h-9 rounded-xl flex items-center justify-center border ${
-                    correct ? 'bg-neon-green/20 border-neon-green' : 'bg-neon-pink/20 border-neon-pink'
-                  }`}
-                >
-                  {correct ? <Check className="w-4 h-4 text-neon-green" /> : <X className="w-4 h-4 text-neon-pink" />}
-                </div>
-              ))}
+          {/* Answer grid (normal mode) */}
+          {!isSurvival && (
+            <div className="bg-white/5 rounded-2xl p-4 mb-5 border border-white/10">
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">
+                {t('quiz_results_label')}
+              </p>
+              <div className="flex flex-wrap gap-2 mb-3">
+                {answers.map((correct, i) => (
+                  <div
+                    key={i}
+                    className={`w-9 h-9 rounded-xl flex items-center justify-center border ${
+                      correct ? 'bg-neon-green/20 border-neon-green' : 'bg-neon-pink/20 border-neon-pink'
+                    }`}
+                  >
+                    {correct ? <Check className="w-4 h-4 text-neon-green" /> : <X className="w-4 h-4 text-neon-pink" />}
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-slate-500">✅ {correctCount} &nbsp;❌ {10 - correctCount}</p>
             </div>
-            <p className="text-xs text-slate-500">
-              ✅ {correctCount} &nbsp;❌ {10 - correctCount}
-            </p>
-          </div>
+          )}
+
+          {/* Survival: stage dots */}
+          {isSurvival && survived > 0 && (
+            <div className="bg-white/5 rounded-2xl p-4 mb-5 border border-white/10">
+              <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-3">
+                연속 정답 기록
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {Array.from({ length: survived }).map((_, i) => (
+                  <div key={i} className="w-8 h-8 rounded-xl bg-neon-green/20 border border-neon-green flex items-center justify-center">
+                    <Check className="w-3 h-3 text-neon-green" />
+                  </div>
+                ))}
+                <div className="w-8 h-8 rounded-xl bg-neon-pink/20 border border-neon-pink flex items-center justify-center">
+                  <X className="w-3 h-3 text-neon-pink" />
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Share button */}
           <button
@@ -394,7 +483,10 @@ export default function Quiz() {
             <div className="mb-5 pt-4 border-t border-white/10">
               <SharePanel
                 title={t('nav_quiz')}
-                text={`${t('nav_quiz')}: ${correctCount}/10 — ${t(`quiz_grade_${gradeKey}`)}! ${t(`quiz_comment_${gradeKey}`)}`}
+                text={isSurvival
+                  ? `K-POP 퀴즈 서바이벌 ${survived}단계 성공! 도전해보세요!`
+                  : `${t('nav_quiz')}: ${correctCount}/10 — ${t(`quiz_grade_${gradeKey}`)}! ${t(`quiz_comment_${gradeKey}`)}`
+                }
                 url="https://kpopstudio.ai/quiz"
                 blob={shareBlob}
                 filename="kpopstudio-quiz-result.png"
@@ -413,7 +505,6 @@ export default function Quiz() {
             {t('quiz_retry')}
           </button>
 
-          {/* Feature Nav */}
           <FeatureNav exclude={['quiz']} />
         </div>
       </div>
@@ -422,31 +513,53 @@ export default function Quiz() {
 
   // ── Quiz Screen ────────────────────────────────────────────────────────────
 
+  const isSurvivalMode = mode === 'survival';
+  const isEliminated = isSurvivalMode && isAnswered && selectedChoice !== current.answer;
+
   return (
     <div className="flex-1 flex flex-col px-4 py-6 max-w-2xl mx-auto w-full">
       {/* Progress */}
       <div className="mb-6">
         <div className="flex justify-between items-center mb-2">
-          <span className="text-xs font-black uppercase tracking-widest text-slate-500">
-            {currentIndex + 1} / 10
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-black uppercase tracking-widest text-slate-500">
+              {isSurvivalMode ? `${currentIndex + 1}단계` : `${currentIndex + 1} / 10`}
+            </span>
+            {isSurvivalMode && (
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-neon-pink/20 border border-neon-pink/40 text-neon-pink font-black uppercase">
+                SURVIVAL
+              </span>
+            )}
+          </div>
           <span className="text-xs font-black text-slate-400">
             {TYPE_ICON[current.type]} {t(`quiz_label_${current.type}`)}
           </span>
         </div>
-        <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-gradient-to-r from-neon-blue to-neon-purple rounded-full transition-all duration-500"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
+        {!isSurvivalMode && (
+          <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-gradient-to-r from-neon-blue to-neon-purple rounded-full transition-all duration-500"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+        )}
+        {isSurvivalMode && (
+          <div className="flex items-center gap-1 flex-wrap mt-1">
+            {Array.from({ length: correctCount }).map((_, i) => (
+              <div key={i} className="w-3 h-3 rounded-full bg-neon-green shadow-[0_0_6px_rgba(57,255,20,0.8)]" />
+            ))}
+            <div className="w-3 h-3 rounded-full bg-white/10 border border-white/20" />
+          </div>
+        )}
         <div className="flex justify-end mt-1">
-          <span className="text-xs text-neon-green font-black">+{correctCount}</span>
+          <span className="text-xs text-neon-green font-black">✅ {correctCount}</span>
         </div>
       </div>
 
       {/* Question Card */}
-      <div className="bg-white/5 border border-white/10 rounded-3xl p-6 mb-5 flex-shrink-0">
+      <div className={`bg-white/5 border rounded-3xl p-6 mb-5 flex-shrink-0 ${
+        isSurvivalMode ? 'border-neon-pink/20' : 'border-white/10'
+      }`}>
         <p className="text-white font-black text-lg leading-snug mb-4">{current.question}</p>
 
         {current.image && (
@@ -506,29 +619,46 @@ export default function Quiz() {
       {/* Answer feedback + Next */}
       {isAnswered && (
         <div className="animate-fade-in-up">
-          <div className={`rounded-2xl p-4 mb-4 flex items-start gap-3 ${
-            selectedChoice === current.answer
-              ? 'bg-neon-green/10 border border-neon-green/30'
-              : 'bg-neon-pink/10 border border-neon-pink/30'
-          }`}>
-            {selectedChoice === current.answer
-              ? <Check className="w-5 h-5 text-neon-green mt-0.5 shrink-0" />
-              : <X className="w-5 h-5 text-neon-pink mt-0.5 shrink-0" />
-            }
-            <div>
-              <p className={`text-sm font-black mb-0.5 ${selectedChoice === current.answer ? 'text-neon-green' : 'text-neon-pink'}`}>
-                {selectedChoice === current.answer ? t('quiz_correct') : t('quiz_wrong')}
-              </p>
-              <p className="text-xs text-slate-400">{current.explanation}</p>
+          {isEliminated ? (
+            /* Survival elimination banner */
+            <div className="rounded-2xl p-5 mb-4 bg-neon-pink/10 border-2 border-neon-pink/50 text-center">
+              <p className="text-2xl font-black text-neon-pink mb-1">💥 탈락!</p>
+              <p className="text-sm text-slate-400 mb-1">{current.explanation}</p>
+              <p className="text-neon-yellow font-black text-lg">{correctCount}단계 성공!</p>
             </div>
-          </div>
+          ) : (
+            <div className={`rounded-2xl p-4 mb-4 flex items-start gap-3 ${
+              selectedChoice === current.answer
+                ? 'bg-neon-green/10 border border-neon-green/30'
+                : 'bg-neon-pink/10 border border-neon-pink/30'
+            }`}>
+              {selectedChoice === current.answer
+                ? <Check className="w-5 h-5 text-neon-green mt-0.5 shrink-0" />
+                : <X className="w-5 h-5 text-neon-pink mt-0.5 shrink-0" />
+              }
+              <div>
+                <p className={`text-sm font-black mb-0.5 ${selectedChoice === current.answer ? 'text-neon-green' : 'text-neon-pink'}`}>
+                  {selectedChoice === current.answer ? t('quiz_correct') : t('quiz_wrong')}
+                </p>
+                <p className="text-xs text-slate-400">{current.explanation}</p>
+              </div>
+            </div>
+          )}
 
           <button
             onClick={next}
-            className="w-full py-4 rounded-2xl bg-gradient-to-r from-neon-blue to-neon-purple text-white font-black uppercase tracking-wider flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+            className={`w-full py-4 rounded-2xl font-black uppercase tracking-wider flex items-center justify-center gap-2 hover:opacity-90 transition-opacity ${
+              isEliminated
+                ? 'bg-gradient-to-r from-neon-pink to-neon-purple text-white'
+                : 'bg-gradient-to-r from-neon-blue to-neon-purple text-white'
+            }`}
           >
-            {currentIndex >= questions.length - 1 ? t('quiz_show_result') : t('quiz_next')}
-            <ChevronRight className="w-5 h-5" />
+            <RefreshCw className={`w-4 h-4 ${isEliminated ? '' : 'hidden'}`} />
+            <ChevronRight className={`w-5 h-5 ${isEliminated ? 'hidden' : ''}`} />
+            {isEliminated
+              ? '결과 보기'
+              : currentIndex >= questions.length - 1 ? t('quiz_show_result') : t('quiz_next')
+            }
           </button>
         </div>
       )}
