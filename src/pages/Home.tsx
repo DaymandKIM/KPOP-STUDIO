@@ -7,9 +7,9 @@ import { Crosshair, HelpCircle, Database, ArrowRight, Sparkles, Check, Shield, Z
 function StatBar() {
   const { t } = useTranslation();
   const stats = [
-    { value: '13', labelKey: 'home_stat_groups_label', icon: <TrendingUp className="w-3.5 h-3.5 text-neon-blue" /> },
-    { value: '75', labelKey: 'home_stat_members_label', icon: <Users className="w-3.5 h-3.5 text-neon-pink" /> },
-    { value: '250+', labelKey: 'home_stat_quiz_label', icon: <Zap className="w-3.5 h-3.5 text-neon-yellow" /> },
+    { value: '16', labelKey: 'home_stat_groups_label', icon: <TrendingUp className="w-3.5 h-3.5 text-neon-blue" /> },
+    { value: '89', labelKey: 'home_stat_members_label', icon: <Users className="w-3.5 h-3.5 text-neon-pink" /> },
+    { value: '300+', labelKey: 'home_stat_quiz_label', icon: <Zap className="w-3.5 h-3.5 text-neon-yellow" /> },
     { value: '13', labelKey: 'home_stat_langs_label', icon: <Globe className="w-3.5 h-3.5 text-neon-green" /> },
   ];
   return (

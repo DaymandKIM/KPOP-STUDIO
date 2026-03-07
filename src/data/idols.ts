@@ -10795,7 +10795,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     members: [
       {
         id: "jungkook_member",
-        name: { ko: "정국", en: "Jungkook", ja: "ジョングク (Jungkook)", zh: "田柾國 (Jungkook)", es: "Jungkook", id: "Jungkook", fr: "Jungkook", hi: "जंगकुक (Jungkook)", pt: "Jungkook", ar: "جونغكوك (Jungkook)", th: "จองกุก (Jungkook)", vi: "Jungkook", ru: "Чонгук (Jungkook)" },
+        name: { ko: "정국", en: "Jungkook", ja: "ジョングク (Jungkook)", zh: "田柾國 (Jungkook)", es: "Jungkook", id: "Jungkook", fr: "Jungkook", hi: "जंगकुक (Jungkook)", pt: "Jungkook", ar: "جونغكوك (Jungkook)", th: "จองกุก (Jungkook)", vi: "Jungkook", ru: "Чон구к (Jungkook)" },
         birth: "1997.09.01",
         height: "179cm",
         bloodType: "A",
@@ -10819,6 +10819,144 @@ export const KPOP_GROUPS: KpopGroup[] = [
         },
         socials: {}
       }
+    ]
+  },
+  {
+    id: "lisa",
+    name: { ko: "리사", en: "LISA", ja: "リサ (LISA)", zh: "LISA", es: "LISA", id: "LISA", fr: "LISA", hi: "लिसा (LISA)", pt: "LISA", ar: "ليسا (LISA)", th: "ลิซ่า (LISA)", vi: "LISA", ru: "Лиса (LISA)" },
+    officialSite: "https://www.lloud.com/",
+    imageUrl: "https://tse1.mm.bing.net/th?q=LISA+ROCKSTAR+Concept+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/lalalalisa_m/", twitter: "https://twitter.com/wearelloud", youtube: "https://www.youtube.com/@lalalalisa_m", tiktok: "https://www.tiktok.com/@lisalarissa.official" },
+    fandom: { ko: "릴리즈 (Lilies)", en: "Lilies", ja: "リリーズ (Lilies)", zh: "Lilies", es: "Lilies", id: "Lilies", fr: "Lilies", hi: "Lilies", pt: "Lilies", ar: "ليليز (Lilies)", th: "ลิลลี่ (Lilies)", vi: "Lilies", ru: "Лилиз (Lilies)" },
+    debut: "2016.08.08",
+    wiki: { ko: "리사(LISA)는 블랙핑크(BLACKPINK)의 멤버이자 글로벌 팝스타로, 2021년 솔로 데뷔 이후 'LALISA', 'MONEY', 'ROCKSTAR' 등을 통해 전 세계적인 신드롬을 일으키고 있는 아티스트입니다.", en: "LISA is a member of BLACKPINK and a global pop icon who has created global syndromes with hits like 'LALISA', 'MONEY', and 'ROCKSTAR'." },
+    summary: { ko: "글로벌 패션 및 음악 아이콘. 기네스 세계 기록을 다수 보유한 솔로 아티스트이자 전 세계에서 가장 영향력 있는 K-팝 스타 중 한 명입니다.", en: "A global fashion and music icon. A Guinness World Record-holding solo artist and one of the most influential K-pop stars in the world." },
+    news: [
+      { title: { ko: "리사 'ROCKSTAR', 빌보드 글로벌 200 최상위권 점령", en: "LISA's 'ROCKSTAR' Dominates Billboard Global 200 Charts" }, date: "2024.06.28", summary: { ko: "새로운 레이블 LLOUD 설립 후 발표한 'ROCKSTAR'가 전 세계 음원 차트를 휩쓸며 성공적인 독자 행보를 알렸습니다.", en: "Her first release under new label LLOUD, 'ROCKSTAR', swept global charts, marking a successful solo path." }, url: "#" },
+      { title: { ko: "리사, K-팝 솔로 최초 'VMA' 2회 수상 신기록", en: "LISA Becomes First K-pop Soloist to Win Twice at MTV VMAs" }, date: "2024.09.12", summary: { ko: "'Best K-Pop' 부문에서 두 차례 수상하며 글로벌 음악 시장에서 독보적인 존재감을 다시 한번 입증했습니다.", en: "She won 'Best K-Pop' for the second time, proving her unrivaled presence in the global music market." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "고향인 태국에서 '태국의 보물'로 불리며 국가적인 사랑과 존경을 받고 있습니다.",
+        "K-팝 아티스트 중 인스타그램 팔로워 수 압도적 1위를 기록하고 있는 글로벌 SNS 퀸입니다.",
+        "글로벌 럭셔리 브랜드의 앰버서더로 활동하며 패션계에서도 막강한 영향력을 발휘합니다.",
+        "다섯 마리의 고양이를 키우는 열혈 '집사'로 알려져 있으며, 고양이들의 이름은 모두 'L'로 시작합니다.",
+        "어린 시절부터 댄스 크루 활동을 하며 실력을 쌓았고, 현재는 세계 최고의 여성 댄서 중 한 명으로 꼽힙니다."
+      ],
+      en: [
+        "Known as 'Thailand's Pride' in her home country, receiving national-level love and respect.",
+        "The most followed K-pop artist on Instagram, holding the title of global SNS Queen.",
+        "A powerhouse in the fashion industry, serving as a global ambassador for top luxury brands.",
+        "A dedicated cat lover who owns five cats, all with names starting with the letter 'L'.",
+        "Started dancing in a crew from a young age and is now widely regarded as one of the world's best female dancers."
+      ]
+    },
+    members: [
+      {
+        id: "lisa_member",
+        name: { ko: "리사", en: "LISA", ja: "リ사 (LISA)", zh: "LISA", es: "LISA", id: "LISA", fr: "LISA", hi: "लिसा (LISA)", pt: "LISA", ar: "ليسا (LISA)", th: "ลิซ่า (LISA)", vi: "LISA", ru: "Лиса (LISA)" },
+        birth: "1997.03.27",
+        height: "167cm",
+        bloodType: "O",
+        mbti: "ESFJ",
+        imageUrl: "https://tse1.mm.bing.net/th?q=LISA+LLOUD+Official+Profile+Photo+High+Res",
+        tmi: {
+          ko: [
+            "가장 좋아하는 음식은 감자탕과 태국 요리입니다.",
+            "사진 촬영이 취미이며, 고가의 카메라 장비를 다수 보유하고 있습니다.",
+            "한국어, 태국어, 영어, 일본어 등 4개 국어에 능통한 언어 천재입니다.",
+            "무대 위에서는 카리스마 넘치지만, 일상에서는 장난기 가득한 성격입니다.",
+            "연습생 시절부터 남다른 춤선과 습득력으로 주목받았습니다."
+          ],
+          en: [
+            "Her favorite foods include Gamja-tang (pork bone soup) and Thai cuisine.",
+            "An avid photographer who owns a vast collection of professional camera equipment.",
+            "A linguistic genius fluent in Korean, Thai, English, and Japanese.",
+            "While charismatic on stage, she is known for her playful and mischievous personality off-stage.",
+            "Was highly recognized during her trainee days for her exceptional dance lines and quick learning ability."
+          ]
+        },
+        socials: {}
+      }
+    ]
+  },
+  {
+    id: "babymonster",
+    name: { ko: "베이비몬스터", en: "BABYMONSTER", ja: "ベイビーモンスター (BABYMONSTER)", zh: "BABYMONSTER", es: "BABYMONSTER", id: "BABYMONSTER", fr: "BABYMONSTER", hi: "बेबीमॉन्स्टर (BABYMONSTER)", pt: "BABYMONSTER", ar: "بيبي مونستر (BABYMONSTER)", th: "เบบี้มอนสเตอร์ (BABYMONSTER)", vi: "BABYMONSTER", ru: "BABYMONSTER" },
+    officialSite: "https://yg-babymonster.com/",
+    imageUrl: "https://tse1.mm.bing.net/th?q=BABYMONSTER+DRIP+Group+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/babymonster_ygofficial/", twitter: "https://twitter.com/ygbabymonster_", youtube: "https://www.youtube.com/@BABYMONSTER", tiktok: "https://www.tiktok.com/@babymonster_yg_official" },
+    fandom: { ko: "몬스트리즈 (MONSTIEZ)", en: "MONSTIEZ", ja: "モンストリーズ (MONSTIEZ)", zh: "MONSTIEZ", es: "MONSTIEZ", id: "MONSTIEZ", fr: "MONSTIEZ", hi: "MONSTIEZ", pt: "MONSTIEZ", ar: "مونستريز (MONSTIEZ)", th: "มอนสตรีซ (MONSTIEZ)", vi: "MONSTIEZ", ru: "MONSTIEZ" },
+    debut: "2024.04.01",
+    wiki: { ko: "베이비몬스터(BABYMONSTER)는 YG 엔터테인먼트 소속의 7인조 다국적 걸그룹입니다. 보컬, 댄스, 랩 실력을 두루 갖춘 '올라운더' 멤버들로 구성되어 데뷔 전부터 전 세계적인 주목을 받았습니다.", en: "BABYMONSTER is a 7-member multinational girl group under YG Entertainment, known for their exceptional 'all-rounder' skills in vocal, dance, and rap." },
+    summary: { ko: "YG의 차세대 괴물 신인. 압도적인 실력과 당당한 카리스마로 전 세계 팝 시장에 새로운 충격을 던지고 있는 그룹입니다.", en: "YG's next-generation 'monster rookies'. A group that is shaking up the global pop market with their overwhelming talent and charisma." },
+    news: [
+      { title: { ko: "베이비몬스터 'SHEESH' 뮤직비디오, K-팝 걸그룹 데뷔곡 최단 기간 1억 뷰", en: "BABYMONSTER's 'SHEESH' MV Hits 100M Views in Record Time for K-pop Girl Group Debut" }, date: "2024.04.11", summary: { ko: "공식 데뷔곡 'SHEESH'가 공개 10일 만에 유튜브 조회수 1억 회를 돌파하며 폭발적인 글로벌 인기를 입증했습니다.", en: "Their official debut song 'SHEESH' surpassed 100 million views on YouTube just 10 days after release." }, url: "#" },
+      { title: { ko: "베이비몬스터, 첫 정규 앨범 'DRIP'으로 빌보드 차트 강타", en: "BABYMONSTER Hits Billboard Charts with 1st Full Album 'DRIP'" }, date: "2024.11.01", summary: { ko: "첫 정규 앨범 'DRIP'이 발매와 동시에 다수의 글로벌 차트 상위권에 진입하며 강력한 존재감을 과시했습니다.", en: "Their first full album 'DRIP' entered top global charts immediately upon release, showing their strong market presence." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "멤버 전원이 보컬, 댄스, 랩 능력을 모두 갖춘 '올라운더'를 지향하며, 라이브 실력이 매우 뛰어난 것으로 유명합니다.",
+        "한국, 태국, 일본 국적의 멤버들로 구성된 다국적 그룹으로 글로벌 소통 능력이 탁월합니다.",
+        "데뷔 전 서바이벌 프로그램을 통해 멤버들의 선발 과정과 연습생 시절이 전 세계 팬들에게 공개되었습니다.",
+        "팬덤 이름 'MONSTIEZ'는 그룹 이름의 'MONSTER'와 유대감을 뜻하는 'TIES'의 합성어입니다.",
+        "YG 특유의 힙합 아이덴티티를 계승하면서도 멤버들 각각의 개성 있는 보컬 컬러가 돋보입니다."
+      ],
+      en: [
+        "Every member aims to be an 'all-rounder' with top-tier vocal, dance, and rap skills, and they are famous for their stable live performances.",
+        "A multinational group with members from Korea, Thailand, and Japan, possessing excellent global communication skills.",
+        "Their selection process and trainee days were shared with global fans through a pre-debut survival program.",
+        "The fandom name 'MONSTIEZ' is a combination of 'MONSTER' and 'TIES', representing the strong bond between the group and fans.",
+        "They inherit YG's signature hip-hop identity while showcasing each member's unique vocal colors."
+      ]
+    },
+    members: [
+      { id: "ruka", name: { ko: "루카", en: "RUKA", ja: "ルカ", zh: "RUKA" }, birth: "2002.03.20", height: "164cm", bloodType: "O", mbti: "ISFP", imageUrl: "https://tse1.mm.bing.net/th?q=BABYMONSTER+Ruka+Profile", socials: {}, tmi: { ko: ["일본 출신 멤버로, YG 역사상 가장 오래 연습한 여성 연습생 중 한 명입니다."], en: ["A member from Japan, she is one of the longest-trained female trainees in YG history."] } },
+      { id: "pharita", name: { ko: "파리타", en: "PHARITA", ja: "パリタ", zh: "PHARITA" }, birth: "2005.08.26", height: "171cm", bloodType: "A", mbti: "ENFJ", imageUrl: "https://tse1.mm.bing.net/th?q=BABYMONSTER+Pharita+Profile", socials: {}, tmi: { ko: ["태국 출신 멤버로, 디즈니 애니메이션 주인공 같은 비주얼과 맑은 음색이 특징입니다."], en: ["A member from Thailand, known for her Disney-like visuals and clear vocal tone."] } },
+      { id: "asa", name: { ko: "아사", en: "ASA", ja: "アサ", zh: "ASA" }, birth: "2006.04.17", height: "166cm", bloodType: "O", mbti: "ENFP", imageUrl: "https://tse1.mm.bing.net/th?q=BABYMONSTER+Asa+Profile", socials: {}, tmi: { ko: ["일본 출신 멤버로, 매우 빠르고 정확한 딕션의 랩 실력을 보유하고 있습니다."], en: ["A member from Japan, she possesses incredibly fast and precise rap delivery."] } },
+      { id: "ahyeon", name: { ko: "아현", en: "AHYEON", ja: "アヒョン", zh: "AHYEON" }, birth: "2007.04.11", height: "163cm", bloodType: "A", mbti: "ESTP", imageUrl: "https://tse1.mm.bing.net/th?q=BABYMONSTER+Ahyeon+Profile", socials: {}, tmi: { ko: ["보컬, 랩, 댄스 모두 최정상급 실력을 갖춰 '확신의 센터'로 불립니다."], en: ["Known as the 'sure-fire center' with top-tier skills in vocal, rap, and dance."] } },
+      { id: "rami", name: { ko: "라미", en: "RAMI", ja: "ラミ", zh: "RAMI" }, birth: "2007.10.17", height: "172cm", bloodType: "O", mbti: "INFJ", imageUrl: "https://tse1.mm.bing.net/th?q=BABYMONSTER+Rami+Profile", socials: {}, tmi: { ko: ["독보적인 소울풀한 보컬과 파워풀한 가창력을 가진 메인 보컬입니다."], en: ["The main vocal with a unique soulful voice and powerful vocal range."] } },
+      { id: "rora", name: { ko: "로라", en: "RORA", ja: "ローラ", zh: "RORA" }, birth: "2008.08.14", height: "168cm", bloodType: "A", mbti: "INTP", imageUrl: "https://tse1.mm.bing.net/th?q=BABYMONSTER+Rora+Profile", socials: {}, tmi: { ko: ["우아한 분위기와 중저음의 매력적인 보컬 톤을 가지고 있습니다."], en: ["Known for her elegant aura and attractive mid-to-low vocal tones."] } },
+      { id: "chiquita", name: { ko: "치키타", en: "CHIQUITA", ja: "チキータ", zh: "CHIQUITA" }, birth: "2009.02.17", height: "165cm", bloodType: "O", mbti: "ENFP", imageUrl: "https://tse1.mm.bing.net/th?q=BABYMONSTER+Chiquita+Profile", socials: {}, tmi: { ko: ["태국 출신 막내로, 타고난 스타성과 성장 속도로 '천재 신인'이라 불립니다."], en: ["The Thai maknae, called a 'genius rookie' for her natural star quality and fast growth."] } }
+    ]
+  },
+  {
+    id: "riize",
+    name: { ko: "라이즈", en: "RIIZE", ja: "ライズ (RIIZE)", zh: "RIIZE", es: "RIIZE", id: "RIIZE", fr: "RIIZE", hi: "राइज़ (RIIZE)", pt: "RIIZE", ar: "رايز (RIIZE)", th: "ไรซ์ (RIIZE)", vi: "RIIZE", ru: "RIIZE" },
+    officialSite: "https://www.smtown.com/artist/profile/10123",
+    imageUrl: "https://tse1.mm.bing.net/th?q=RIIZE+Boom+Boom+Bass+Group+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/riize_official/", twitter: "https://twitter.com/riize_official", youtube: "https://www.youtube.com/@RIIZE_official", tiktok: "https://www.tiktok.com/@riize_official" },
+    fandom: { ko: "브리즈 (BRIIZE)", en: "BRIIZE", ja: "ブリーズ (BRIIZE)", zh: "BRIIZE", es: "BRIIZE", id: "BRIIZE", fr: "BRIIZE", hi: "BRIIZE", pt: "BRIIZE", ar: "بريز (BRIIZE)", th: "บรีซ (BRIIZE)", vi: "BRIIZE", ru: "BRIIZE" },
+    debut: "2023.09.04",
+    wiki: { ko: "라이즈(RIIZE)는 SM 엔터테인먼트 소속의 보이그룹입니다. '함께 성장하고 꿈을 실현해 나가는 팀'이라는 의미를 담고 있으며, 독자적인 장르인 '이모셔널 팝(Emotional Pop)'을 선보입니다.", en: "RIIZE is a boy group under SM Entertainment. The name stands for 'Rise' and 'Realize', meaning a team that grows together and realizes dreams." },
+    summary: { ko: "5세대를 대표하는 이모셔널 팝의 선두주자. 청량한 비주얼과 압도적인 퍼포먼스로 데뷔와 동시에 글로벌 차트를 휩쓸고 있는 그룹입니다.", en: "Leaders of 5th-gen Emotional Pop. A group dominating global charts with their refreshing visuals and powerful performances since debut." },
+    news: [
+      { title: { ko: "라이즈 'Get A Guitar', 데뷔와 동시에 밀리언셀러 등극", en: "RIIZE's 'Get A Guitar' Becomes Million Seller Upon Debut" }, date: "2023.09.11", summary: { ko: "데뷔 싱글 'Get A Guitar'가 발매 일주일 만에 판매량 100만 장을 돌파하며 역대급 신인 탄생을 알렸습니다.", en: "Their debut single 'Get A Guitar' surpassed 1 million sales in just one week." }, url: "#" },
+      { title: { ko: "라이즈, 첫 미니앨범 'RIIZING'으로 글로벌 차트 석권", en: "RIIZE Sweeps Global Charts with 1st Mini Album 'RIIZING'" }, date: "2024.06.17", summary: { ko: "타이틀곡 'Boom Boom Bass'가 국내외 주요 음원 차트 최상위권에 오르며 대세 입지를 굳혔습니다.", en: "The title track 'Boom Boom Bass' topped major charts, solidifying their status as a top-tier group." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "그룹명은 '성장하다(Rise)'와 '실현하다(Realize)'를 결합한 것으로, 함께 성장하고 꿈을 실현한다는 뜻입니다.",
+        "멤버들의 일상을 공유하는 인스타그램 계정이 데뷔 전부터 폭발적인 팔로워를 기록하며 화제가 되었습니다.",
+        "독자적인 음악 장르인 '이모셔널 팝'은 멤버들의 다양한 감정을 음악에 담아 전달하는 것을 목표로 합니다.",
+        "루이비통(Louis Vuitton)의 하우스 앰버서더로 발탁되는 등 패션계에서도 주목받는 아이콘입니다.",
+        "탄탄한 기본기를 바탕으로 한 고난도의 퍼포먼스와 멤버들 간의 완벽한 합이 강점입니다."
+      ],
+      en: [
+        "The group name combines 'Rise' and 'Realize', symbolizing a team that grows together and achieves dreams.",
+        "Their Instagram account sharing daily lives became a hot topic with massive followers even before debut.",
+        "'Emotional Pop' is their unique genre that aims to express and share various emotions through music.",
+        "Recognized as fashion icons, serving as House Ambassadors for Louis Vuitton.",
+        "Known for their high-difficulty performances and perfect teamwork built on strong fundamental skills."
+      ]
+    },
+    members: [
+      { id: "shotaro", name: { ko: "쇼타로", en: "SHOTARO", ja: "ショウタロウ" }, birth: "2000.11.25", height: "178cm", bloodType: "A", mbti: "ESFP", imageUrl: "https://tse1.mm.bing.net/th?q=RIIZE+Shotaro+Profile", socials: {}, tmi: { ko: ["일본 출신으로, 압도적인 춤 실력과 귀여운 눈웃음이 매력 포인트입니다."], en: ["From Japan, known for his overwhelming dance skills and charming eye smile."] } },
+      { id: "eunseok", name: { ko: "은석", en: "EUNSEOK", ja: "ウンソク" }, birth: "2001.03.19", height: "180cm", bloodType: "AB", mbti: "ISTP", imageUrl: "https://tse1.mm.bing.net/th?q=RIIZE+Eunseok+Profile", socials: {}, tmi: { ko: ["차분하고 시크한 매력의 소유자로, 중저음의 매력적인 보이스를 가졌습니다."], en: ["Possesses a calm and chic charm with an attractive mid-to-low vocal tone."] } },
+      { id: "sungchan", name: { ko: "성찬", en: "SUNGCHAN", ja: "ソンチャン" }, birth: "2001.09.13", height: "185cm", bloodType: "A", mbti: "ESTP", imageUrl: "https://tse1.mm.bing.net/th?q=RIIZE+Sungchan+Profile", socials: {}, tmi: { ko: ["큰 키와 뚜렷한 이목구비의 비주얼, 그리고 파워풀한 랩 실력이 특징입니다."], en: ["Known for his tall stature, distinct facial features, and powerful rap skills."] } },
+      { id: "wonbin", name: { ko: "원빈", en: "WONBIN", ja: "WONBIN" }, birth: "2002.03.02", height: "176cm", bloodType: "AB", mbti: "ISTP", imageUrl: "https://tse1.mm.bing.net/th?q=RIIZE+Wonbin+Profile", socials: {}, tmi: { ko: ["독보적인 비주얼과 뛰어난 댄스, 기타 연주 실력까지 겸비한 센터입니다."], en: ["A center who possesses unrivaled visuals, excellent dance, and guitar skills."] } },
+      { id: "sohee", name: { ko: "소희", en: "SOHEE", ja: "SOHEE" }, birth: "2003.11.21", height: "174cm", bloodType: "A", mbti: "ISTP", imageUrl: "https://tse1.mm.bing.net/th?q=RIIZE+Sohee+Profile", socials: {}, tmi: { ko: ["맑고 파워풀한 고음을 소화하는 팀의 핵심 메인 보컬입니다."], en: ["The team's key main vocal who delivers clear and powerful high notes."] } },
+      { id: "anton", name: { ko: "앤톤", en: "ANTON", ja: "ANTON" }, birth: "2004.03.21", height: "184cm", bloodType: "O", mbti: "INTP", imageUrl: "https://tse1.mm.bing.net/th?q=RIIZE+Anton+Profile", socials: {}, tmi: { ko: ["음악가 윤상의 아들로, 뛰어난 첼로 연주와 작곡 능력을 갖춘 막내입니다."], en: ["Son of musician Yoon Sang, the maknae is skilled in cello and music production."] } }
     ]
   }
 ];
