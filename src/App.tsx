@@ -173,8 +173,7 @@ function AppLayout() {
             <Route path="/" element={<Home />} />
             <Route path="/lookalike" element={<Lookalike />} />
             <Route path="/about" element={<About />} />
-            <Route path="/encyclopedia" element={<IdolEncyclopedia />} />
-            <Route path="/encyclopedia/:groupId" element={<IdolEncyclopedia />} />
+            <Route path="/encyclopedia/*" element={<IdolEncyclopedia />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsOfService />} />
           </Routes>

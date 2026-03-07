@@ -218,22 +218,29 @@ const About: React.FC = () => {
             </div>
             
             <div className="flex flex-col md:flex-row justify-center gap-6">
-              <div className="flex items-center gap-4 bg-black/40 p-6 rounded-2xl border border-white/5">
-                <div className="w-12 h-12 rounded-xl bg-neon-blue/10 flex items-center justify-center border border-neon-blue/30">
+              <div className="flex items-center gap-4 bg-black/40 p-6 rounded-2xl border border-white/5 min-w-0">
+                <div className="w-12 h-12 rounded-xl bg-neon-blue/10 flex items-center justify-center border border-neon-blue/30 shrink-0">
                   <Mail className="w-6 h-6 text-neon-blue" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">Email Support</p>
-                  <p className="text-white font-bold">{data.email}</p>
+                  <p className="text-white font-bold break-all">{data.email}</p>
                 </div>
               </div>
               <div className="flex items-center gap-4 bg-black/40 p-6 rounded-2xl border border-white/5">
-                <div className="w-12 h-12 rounded-xl bg-neon-pink/10 flex items-center justify-center border border-neon-pink/30">
+                <div className="w-12 h-12 rounded-xl bg-neon-pink/10 flex items-center justify-center border border-neon-pink/30 shrink-0">
                   <Shield className="w-6 h-6 text-neon-pink" />
                 </div>
                 <div>
                   <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">Location</p>
-                  <p className="text-white font-bold">{data.location}</p>
+                  {data.location.split(',').length > 1 ? (
+                    <>
+                      <p className="text-white font-bold">{data.location.split(',').slice(1).join(',').trim()}</p>
+                      <p className="text-white font-bold">{data.location.split(',')[0].trim()}</p>
+                    </>
+                  ) : (
+                    <p className="text-white font-bold whitespace-pre-line">{data.location.replace(' ', '\n')}</p>
+                  )}
                 </div>
               </div>
             </div>

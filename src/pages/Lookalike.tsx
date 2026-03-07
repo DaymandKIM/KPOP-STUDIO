@@ -274,7 +274,6 @@ export default function Lookalike() {
   const [appState, setAppState] = useState<AppState>('idle');
   const [showGuide, setShowGuide] = useState(false);
   const [tmiIndex, setTmiIndex] = useState(0);
-  const [showMemberModal, setShowMemberModal] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [predictions, setPredictions] = useState<Prediction[]>([]);
@@ -404,10 +403,18 @@ export default function Lookalike() {
         setShareBlob(blob);
       }
       
+      const filename = `kpopstudio-${matchedIdol.member.name.en.replace(/\s+/g, '-').toLowerCase()}.png`;
+      if (navigator.canShare) {
+        const file = new File([blob], filename, { type: 'image/png' });
+        if (navigator.canShare({ files: [file] })) {
+          await navigator.share({ files: [file] });
+          return;
+        }
+      }
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = `kpopstudio-${matchedIdol.member.name.en.replace(/\s+/g, '-').toLowerCase()}.png`;
+      link.download = filename;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -440,7 +447,7 @@ export default function Lookalike() {
             <span className="inline-block pb-1 pr-2 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">{wrapKpop(t('app_subtitle'))}</span>
           </h1>
           <p className="text-slate-400 font-mono text-xs md:text-sm max-w-lg mx-auto uppercase tracking-wide px-4">
-            {t('upload_instruction')}
+            {wrapKpop(t('upload_instruction'))}
           </p>
         </div>
       )}
@@ -561,11 +568,11 @@ export default function Lookalike() {
                 </div>
 
                 {matchedIdol && (
-                  <div className="relative group/img cursor-pointer" onClick={() => setShowMemberModal(true)}>
-                    <div className="w-48 h-48 xs:w-56 xs:h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-neon-blue neon-shadow-blue relative flex-shrink-0 transition-transform duration-500 group-hover/img:scale-[1.02]">
+                  <div className="relative">
+                    <div className="w-48 h-48 xs:w-56 xs:h-56 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 border-neon-blue neon-shadow-blue relative flex-shrink-0">
                       <img src={matchedIdol.member.imageUrl} alt={getLangText(matchedIdol.member.name, i18n.language)} className="w-full h-full object-cover" loading="lazy" decoding="async" crossOrigin="anonymous" />
-                      <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/30 transition-colors flex items-end justify-center pb-3">
-                        <span className="text-white font-mono text-[10px] uppercase font-black tracking-widest opacity-0 group-hover/img:opacity-100 transition-opacity bg-black/60 px-2 py-1 rounded-lg">
+                      <div className="absolute inset-0 flex items-end justify-center pb-3">
+                        <span className="text-white font-mono text-[10px] uppercase font-black tracking-widest opacity-0 bg-black/60 px-2 py-1 rounded-lg">
                           {i18n.language === 'ko' ? '탭하여 상세보기' : 'Tap for details'}
                         </span>
                       </div>
@@ -624,7 +631,7 @@ export default function Lookalike() {
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full max-w-2xl mx-auto">
                     {[
                       { label: t('birthday'), value: matchedIdol.member.birth, borderCls: 'border-neon-pink/30', textCls: 'text-neon-pink' },
-                      { label: t('blood_type'), value: matchedIdol.member.bloodType + (i18n.language === 'ko' ? '형' : ''), borderCls: 'border-neon-blue/30', textCls: 'text-neon-blue' },
+                      { label: t('blood_type'), value: matchedIdol.member.bloodType + (i18n.language === 'ko' ? '형' : ''), borderCls: 'border-neon-green/30', textCls: 'text-neon-green' },
                       { label: 'MBTI', value: matchedIdol.member.mbti, borderCls: 'border-neon-purple/30', textCls: 'text-neon-purple' },
                       { label: t('height'), value: matchedIdol.member.height, borderCls: 'border-neon-orange/30', textCls: 'text-neon-orange' },
                     ].map(({ label, value, borderCls, textCls }) => (
@@ -652,25 +659,20 @@ export default function Lookalike() {
                 {/* TMI 비하인드 스토리 */}
                 {currentTmi && (
                   <div className="w-full max-w-2xl mx-auto">
-                    <div className="bg-neon-purple/5 border border-neon-purple/20 rounded-2xl p-5 md:p-6 text-left">
+                    <div className="bg-neon-yellow/5 border border-neon-yellow/20 rounded-2xl p-5 md:p-6 text-left">
                       <div className="flex items-center gap-2 mb-3">
-                        <Sparkles className="w-4 h-4 text-neon-purple shrink-0" />
-                        <p className="text-neon-purple font-mono text-[10px] uppercase font-black tracking-widest flex-1">
+                        <Sparkles className="w-4 h-4 text-neon-yellow shrink-0" />
+                        <p className="text-neon-yellow font-mono text-[10px] uppercase font-black tracking-widest flex-1">
                           {t('behind_story')}
                         </p>
                         {tmiArr.length > 1 && (
-                          <div className="flex items-center gap-2">
-                            <span className="text-slate-500 font-mono text-[10px] font-black">
-                              {(tmiIndex % tmiArr.length) + 1}/{tmiArr.length}
-                            </span>
-                            <button
-                              onClick={() => setTmiIndex(i => i + 1)}
-                              className="w-7 h-7 rounded-lg bg-neon-purple/10 hover:bg-neon-purple/25 border border-neon-purple/30 hover:border-neon-purple/60 flex items-center justify-center transition-all active:scale-90"
-                              title="다음 TMI"
-                            >
-                              <RefreshCw className="w-3.5 h-3.5 text-neon-purple" />
-                            </button>
-                          </div>
+                          <button
+                            onClick={() => setTmiIndex(i => i + 1)}
+                            className="w-7 h-7 rounded-lg bg-neon-yellow/10 hover:bg-neon-yellow/25 border border-neon-yellow/30 hover:border-neon-yellow/60 flex items-center justify-center transition-all active:scale-90"
+                            title="다음 TMI"
+                          >
+                            <RefreshCw className="w-3.5 h-3.5 text-neon-yellow" />
+                          </button>
                         )}
                       </div>
                       <p className="text-slate-300 text-sm md:text-base leading-relaxed font-medium">
@@ -755,115 +757,6 @@ export default function Lookalike() {
       )}
     </div>
 
-      {/* 멤버 상세보기 모달 */}
-      {showMemberModal && matchedIdol && createPortal(
-        <div
-          className="fixed inset-0 z-[200] flex items-center justify-center p-4"
-          onClick={() => setShowMemberModal(false)}
-        >
-          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
-          <div
-            className="relative z-10 w-full max-w-lg max-h-[90vh] overflow-y-auto animate-fade-in-up"
-            onClick={e => e.stopPropagation()}
-          >
-            <div className="neon-border-animated rounded-[32px] overflow-hidden">
-              <div className="bg-[#080810]/95 backdrop-blur-3xl rounded-[30px] overflow-hidden">
-                {/* 상단 멤버 이미지 */}
-                <div className="relative w-full aspect-square max-h-72 overflow-hidden">
-                  <img
-                    src={matchedIdol.member.imageUrl}
-                    alt={getLangText(matchedIdol.member.name, i18n.language)}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                    crossOrigin="anonymous"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#080810] via-transparent to-transparent" />
-                  <button
-                    onClick={() => setShowMemberModal(false)}
-                    className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
-                  >
-                    ✕
-                  </button>
-                </div>
-
-                <div className="p-6 md:p-8 space-y-6 -mt-2">
-                  {/* 이름 + 그룹 + 포지션 */}
-                  <div className="text-center space-y-1">
-                    <h3 className="text-3xl md:text-4xl font-black text-white italic tracking-tight"
-                      style={{ textShadow: '0 0 20px rgba(157,0,255,0.4)' }}>
-                      {getLangText(matchedIdol.member.name, i18n.language)}
-                    </h3>
-                    <p className="text-neon-blue font-black text-lg uppercase tracking-wider"
-                      style={{ textShadow: '0 0 12px rgba(0,212,255,0.5)' }}>
-                      {getLangText(matchedIdol.group.name, i18n.language)}
-                    </p>
-                    <span className="inline-block px-3 py-1 rounded-full font-mono text-[10px] uppercase tracking-widest font-black text-white mt-1"
-                      style={{ background: 'rgba(157,0,255,0.2)', border: '1px solid rgba(157,0,255,0.4)' }}>
-                      {getLangText(matchedIdol.member.role, i18n.language)}
-                    </span>
-                  </div>
-
-                  {/* 프로필 그리드 */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                    {[
-                      { label: t('birthday'), value: matchedIdol.member.birth, borderCls: 'border-neon-pink/30', textCls: 'text-neon-pink' },
-                      { label: 'MBTI', value: matchedIdol.member.mbti, borderCls: 'border-neon-purple/30', textCls: 'text-neon-purple' },
-                      { label: t('blood_type'), value: matchedIdol.member.bloodType + (i18n.language === 'ko' ? '형' : ''), borderCls: 'border-neon-blue/30', textCls: 'text-neon-blue' },
-                      { label: t('height'), value: matchedIdol.member.height, borderCls: 'border-neon-orange/30', textCls: 'text-neon-orange' },
-                    ].map(({ label, value, borderCls, textCls }) => (
-                      <div key={label} className={`bg-white/5 border ${borderCls} rounded-2xl p-3 flex flex-col items-center`}>
-                        <p className="text-slate-500 font-mono text-[9px] uppercase font-black mb-1 tracking-widest">{label}</p>
-                        <p className={`text-sm font-black ${textCls} text-center leading-tight`}>{value}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* 별자리 */}
-                  <div className="bg-white/5 border border-neon-purple/25 rounded-2xl px-4 py-3 flex items-center justify-center gap-2">
-                    <span className="text-lg">✨</span>
-                    <p className="text-slate-300 font-mono text-xs font-black uppercase tracking-widest">
-                      {t('zodiac')} &nbsp;·&nbsp;
-                      <span className="text-white">{getLangText(matchedIdol.member.zodiac, i18n.language)}</span>
-                    </p>
-                  </div>
-
-                  {/* TMI 전체 목록 */}
-                  {tmiArr.length > 0 && (
-                    <div className="bg-neon-purple/5 border border-neon-purple/20 rounded-2xl p-5 space-y-3">
-                      <div className="flex items-center gap-2">
-                        <Sparkles className="w-4 h-4 text-neon-purple shrink-0" />
-                        <p className="text-neon-purple font-mono text-[10px] uppercase font-black tracking-widest">
-                          {t('behind_story')}
-                        </p>
-                      </div>
-                      <ol className="space-y-2">
-                        {tmiArr.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-3 text-sm text-slate-300 leading-relaxed">
-                            <span className="text-neon-purple font-black font-mono text-[11px] mt-0.5 shrink-0">{idx + 1}.</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ol>
-                    </div>
-                  )}
-
-                  {/* 백과사전 링크 */}
-                  <button
-                    onClick={() => { setShowMemberModal(false); navigate('/encyclopedia', { state: { selectedMemberId: matchedIdol.member.id, selectedGroupId: matchedIdol.group.id } }); }}
-                    className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-white/5 hover:bg-neon-green/10 border border-white/10 hover:border-neon-green/50 rounded-2xl text-xs font-black uppercase tracking-[0.2em] transition-all group/btn"
-                  >
-                    <Database className="w-4 h-4 text-neon-green" />
-                    <span>{t('view_in_encyclopedia')}</span>
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>,
-        document.body
-      )}
 
       {/* Photo guide modal overlay */}
       {showGuide && appState === 'idle' && createPortal((() => {

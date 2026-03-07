@@ -12,7 +12,7 @@ interface Props {
   className?: string;
 }
 
-const PUBLISHER_ID = 'ca-pub-XXXXXXXXXXXXXXXX'; // TODO: 실제 Publisher ID로 교체
+const PUBLISHER_ID = 'ca-pub-7497573383428681';
 
 const GoogleAd: React.FC<Props> = ({ slot, format = 'auto', className = '' }) => {
   const adRef = useRef<HTMLModElement>(null);

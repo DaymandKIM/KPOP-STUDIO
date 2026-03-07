@@ -99,7 +99,7 @@ export default function Home() {
           <div className="absolute top-0 right-0 w-32 h-32 bg-neon-blue/20 blur-[80px]"></div>
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-neon-purple/20 blur-[80px]"></div>
           
-          <h2 className="text-2xl md:text-3xl font-black text-white italic uppercase mb-6 tracking-tight">
+          <h2 className="text-2xl md:text-3xl font-black text-white italic uppercase mb-6 tracking-tight break-keep">
             {t('trust_title')}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">

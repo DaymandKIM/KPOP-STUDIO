@@ -197,7 +197,7 @@ const IdolEncyclopedia: React.FC<{
     };
 
     return (
-      <div className="w-full max-w-7xl mx-auto flex flex-col gap-10 animate-fade-in-up pb-20">
+      <div className="w-full max-w-7xl mx-auto flex flex-col gap-10 animate-fade-in-up pb-20 pt-8 md:pt-12">
         {/* Dynamic SEO for AI */}
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}
@@ -530,7 +530,8 @@ const IdolEncyclopedia: React.FC<{
 };
 
 const IdolEncyclopediaPage: React.FC = () => {
-  const { groupId } = useParams<{ groupId?: string }>();
+  const { '*': splat } = useParams<{ '*': string }>();
+  const groupId = splat || undefined;
   const navigate = useNavigate();
 
   const selectedGroup = groupId

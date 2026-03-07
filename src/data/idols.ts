@@ -480,7 +480,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         height: "165cm",
         bloodType: "AB",
         description: { ko: "햇살 같은 에너지를 가진 비타민 같은 멤버. 디즈니 공주 같은 비주얼로 유명합니다.", en: "A vitamin-like member with sunny energy. Famous for her Disney princess visuals.", ja: "日差しのようなエネルギーを持つビタミン剤のようなメンバー。ディズニープリンセスのようなビジュアルで有名です。", zh: "拥有阳光般能量的维他命成员。以迪斯尼公主般的视觉效果而闻名。", es: "Una miembro tipo vitamina con energía solar. Famosa por sus visuales de princesa de Disney.", id: "Anggota seperti vitamin dengan energi matahari. Terkenal dengan visual putri Disney-nya.", fr: "Un membre vitaminé avec une énergie ensoleillée. Célèbre pour ses visuels de princesse Disney.", hi: "धूप जैसी ऊर्जा वाली विटामिन जैसी सदस्य। अपनी डिज़्नी प्रिंसेस जैसी विजुअल्स के लिए प्रसिद्ध।", pt: "Uma integrante tipo vitamina com energia solar. Famosa por seus visuais de princesa da Disney.", ar: "عضوة تشبه الفيتامين بطاقتها المشرقة. مشهورة بمظهرها الذي يشبه أميرة ديزني.", th: "สมาชิกที่เป็นเหมือนวิตามินและมีพลังงานสดใสเหมือนแสงแดด โด่งดังด้วยวิชวลที่ดูเหมือนเจ้าหญิงดิสนีย์", vi: "Thành viên như một loại vitamin với năng lượng tỏa sáng như ánh mặt trời. Nổi tiếng với ngoại hình như công chúa Disney.", ru: "Участница-«витаминка» с солнечной энергией. Знаменита своей внешностью, напоминающей принцессу Диснея." },
-        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans+Danielle+face+closeup+official+portrait+2024&w=500&h=500&c=7&rs=1&p=0",
+        imageUrl: "https://tse1.mm.bing.net/th?q=NewJeans+Danielle+kpop+idol+color+photo+2024&w=500&h=500&c=1&rs=1&p=0",
         tmi: {
           ko: [
             "한국-호주 이중 국적자로 유창한 영어 실력 덕분에 해외 인터뷰를 단독으로 소화하는 경우가 많습니다.",
