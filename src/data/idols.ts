@@ -9857,4 +9857,629 @@ export const KPOP_GROUPS: KpopGroup[] = [
       { id: "iroha", name: { ko: "이로하", en: "IROHA", ja: "イロハ" }, birth: "2008.02.04", height: "162cm", bloodType: "A", mbti: "ISFP", imageUrl: "https://tse1.mm.bing.net/th?q=ILLIT+Iroha+Profile", socials: {}, tmi: { ko: ["일본 출신 막내지만 파워풀하고 그루비한 춤 실력을 가진 메인 댄서입니다."], en: ["The Japanese maknae and main dancer with powerful and groovy dance skills."] } }
     ]
   }
+,
+  {
+    id: "itzy",
+    name: { ko: "있지", en: "ITZY", ja: "イッチ (ITZY)", zh: "ITZY", es: "ITZY", id: "ITZY", fr: "ITZY", hi: "इत्ज़ी (ITZY)", pt: "ITZY", ar: "إتزي (ITZY)", th: "อิทจี (ITZY)", vi: "ITZY", ru: "ITZY" },
+    officialSite: "https://itzy.jype.com/",
+    company: "JYP Entertainment",
+    accentColor: "#ff2d55",
+    imageUrl: "https://tse1.mm.bing.net/th?q=ITZY+Group+Photo+Gold+Concept+High+Res",
+    socials: { instagram: "https://www.instagram.com/itzy.all.in.us/", twitter: "https://twitter.com/ITZYofficial", youtube: "https://www.youtube.com/@ITZY", tiktok: "https://www.tiktok.com/@itzyofficial" },
+    fandom: { ko: "믿지 (MIDZY)", en: "MIDZY", ja: "ミッジ (MIDZY)", zh: "MIDZY", es: "MIDZY", id: "MIDZY", fr: "MIDZY", hi: "मिद्ज़ी (MIDZY)", pt: "MIDZY", ar: "ميدزي (MIDZY)", th: "มิดจี (MIDZY)", vi: "MIDZY", ru: "MIDZY" },
+    debut: "2019.02.12",
+    wiki: { ko: "ITZY(있지)는 JYP 엔터테인먼트 소속의 5인조 걸그룹입니다. '너희가 원하는 거 전부 있지? 있지!'라는 당당한 포부로 데뷔했으며, 독보적인 퍼포먼스 실력으로 '무대 장인'이라 불립니다.", en: "ITZY is a 5-member girl group under JYP Entertainment. Known for their powerful performances and self-love message, they are often called 'Stage Masters'." },
+    description: { ko: "퍼포먼스 퀸, 4세대 걸그룹의 시작. 당당한 자기 사랑과 파워풀한 에너지를 전파하는 그룹입니다.", en: "Performance queens and pioneers of the 4th generation. A group spreading messages of self-confidence and powerful energy." },
+    summary: { ko: "당당함이 매력인 4세대 대표 걸그룹. 압도적인 안무 난이도와 라이브 실력으로 전 세계적인 인기를 얻고 있습니다.", en: "A representative 4th-gen girl group defined by confidence. Globally loved for their intense choreography and stable live vocals." },
+    news: [
+      { title: { ko: "ITZY, 미니 9집 'GOLD'로 화려한 컴백", en: "ITZY Makes Grand Comeback with 9th Mini Album 'GOLD'" }, date: "2024.10.15", summary: { ko: "건강상의 이유로 휴식했던 멤버 리아가 복귀하며 오랜만에 5인 완전체로 돌아와 강력한 시너지를 보여주었습니다.", en: "Member Lia returned from her hiatus, marking the group's long-awaited comeback as a full 5-member unit." }, url: "#" },
+      { title: { ko: "ITZY, 두 번째 월드투어 'BORN TO BE' 성공적 마무리", en: "ITZY Successfully Concludes Second World Tour 'BORN TO BE'" }, date: "2024.08.10", summary: { ko: "전 세계 28개 지역에서 개최된 월드투어를 성황리에 마치며 글로벌 퍼포먼스 퀸의 위상을 재확인했습니다.", en: "Concluded their 28-city world tour, reconfirming their status as global performance queens." }, url: "#" },
+      { title: { ko: "리아, 활동 중단 1년 만에 복귀 소감 전해", en: "Lia Shares Feelings on Returning After 1-Year Hiatus" }, date: "2024.07.08", summary: { ko: "팬들의 응원 덕분에 건강을 회복하고 돌아올 수 있었다며 앞으로의 활발한 활동을 약속했습니다.", en: "Expressed gratitude to fans for their support during her recovery and promised active participation in upcoming projects." }, url: "#" },
+      { title: { ko: "ITZY 'WANNABE' 뮤직비디오 유튜브 6억 뷰 돌파", en: "ITZY's 'WANNABE' MV Surpasses 600 Million Views" }, date: "2024.05.20", summary: { ko: "메가 히트곡 'WANNABE'가 꾸준한 사랑을 받으며 자체 최고 조회수를 경신했습니다.", en: "The iconic hit 'WANNABE' continues its streak, reaching a new milestone on YouTube." }, url: "#" },
+      { title: { ko: "ITZY, 데뷔 5주년 팬미팅에서 눈물과 감동의 시간", en: "ITZY Shares Emotional Moments at 5th Anniversary Fan Meeting" }, date: "2024.02.12", summary: { ko: "데뷔 5주년을 맞아 팬들과 소통하며 지난 여정을 되돌아보는 뜻깊은 시간을 가졌습니다.", en: "Celebrated 5 years since debut with fans, reflecting on their journey together with deep emotion." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "그룹명 'ITZY'는 '너희가 원하는 거 전부 있지? 있지!'라는 의미로 지어졌습니다.",
+        "데뷔곡 '달라달라'는 공개 57시간 만에 1,000만 뷰를 돌파하며 당시 K-팝 데뷔곡 최단 기록을 세웠습니다.",
+        "멤버들은 무대 위 카리스마와 달리 일상에서는 장난기 넘치고 서로를 '가족'처럼 아낍니다.",
+        "류진은 데뷔 전 영화 '더 킹'에 단역으로 출연한 적이 있습니다.",
+        "예지는 JYP 오디션 당시 원더걸스의 'Like This'를 춤춰 합격했습니다.",
+        "채령은 아이즈원 출신 이채연의 친동생으로, 자매가 모두 독보적인 댄스 실력을 갖춘 것으로 유명합니다.",
+        "유나는 팀의 막내로, 학생 시절 플로어볼 선수로 활동하며 도 대회 1위를 기록한 이력이 있습니다.",
+        "리아는 영어 이름 'Julia'에서 따온 예명 '리아'를 사용하며 유창한 영어 실력을 보유하고 있습니다.",
+        "멤버들은 모두 '자기 사랑(Self-love)'이라는 팀의 메시지에 큰 자부심을 가지고 있습니다.",
+        "격렬한 안무를 소화하면서도 흔들림 없는 라이브 실력을 유지하기 위해 엄청난 연습량을 소화합니다."
+      ],
+      en: [
+        "The name 'ITZY' means 'everything you want is within us' (using the Korean word 'itzy' meaning 'to have').",
+        "Their debut song 'DALLA DALLA' broke the record for the fastest K-pop debut MV to reach 10M views (57 hours).",
+        "Despite their fierce stage presence, they are playful off-stage and treat each other like real family.",
+        "Ryujin made a brief appearance in the movie 'The King' before her debut.",
+        "Yeji passed her JYP audition by dancing to Wonder Girls' 'Like This'.",
+        "Chaeryeong is the younger sister of Lee Chae-yeon (former IZ*ONE); both sisters are famous for their dance skills.",
+        "Maknae Yuna was a competitive floorball player in school and even won first place at a provincial tournament.",
+        "Lia uses her stage name derived from her English name 'Julia' and is fluent in English.",
+        "All members take great pride in the team's core message of 'Self-love'.",
+        "They undergo intense training to maintain stable live vocals while performing their notoriously difficult choreography."
+      ]
+    },
+    members: [
+      { id: "yeji", name: { ko: "예지", en: "YEJI", ja: "イェジ", zh: "黃禮志" }, role: { ko: "리더, 메인댄서, 리드보컬", en: "Leader, Main Dancer, Lead Vocalist" }, birth: "2000.05.26", height: "167cm", bloodType: "A", mbti: "ESFJ", zodiac: { ko: "쌍둥이자리", en: "Gemini" }, imageUrl: "https://tse1.mm.bing.net/th?q=ITZY+Yeji+Official+Profile+Photo+High+Res", description: { ko: "JYP의 비밀병기에서 4세대를 대표하는 리더로. 독보적인 춤선과 카리스마를 가진 멤버.", en: "From JYP's secret weapon to a representative 4th-gen leader. Known for her unique dance lines." }, socials: {}, tmi: { ko: ["고양이 같은 날카롭고 매력적인 눈매가 특징입니다.", "연습생 시절부터 성실함의 표본으로 불렸습니다."], en: ["Known for her sharp, cat-like charming eyes.", "Was called the epitome of diligence during her trainee days."] } },
+      { id: "lia", name: { ko: "리아", en: "LIA", ja: "リア", zh: "崔智壽" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "2000.07.21", height: "162cm", bloodType: "AB", mbti: "ENFJ", zodiac: { ko: "게자리", en: "Cancer" }, imageUrl: "https://tse1.mm.bing.net/th?q=ITZY+Lia+Official+Profile+Photo+High+Res", description: { ko: "매력적인 음색과 우아한 분위기를 가진 ITZY의 메인 보컬.", en: "ITZY's main vocal with a charming voice and elegant aura." }, socials: {}, tmi: { ko: ["유창한 영어 실력으로 해외 인터뷰를 주도합니다.", "특유의 눈웃음이 팬들에게 큰 사랑을 받습니다."], en: ["Leads global interviews with her fluent English.", "Her unique eye smile is much loved by fans."] } },
+      { id: "ryujin", name: { ko: "류진", en: "RYUJIN", ja: "リュジン", zh: "申留眞" }, role: { ko: "메인래퍼, 리드댄서, 센터", en: "Main Rapper, Lead Dancer, Center" }, birth: "2001.04.17", height: "164cm", bloodType: "B", mbti: "INTJ", zodiac: { ko: "양자리", en: "Aries" }, imageUrl: "https://tse1.mm.bing.net/th?q=ITZY+Ryujin+Official+Profile+Photo+High+Res", description: { ko: "독보적인 랩 실력과 춤선, 그리고 강력한 센터 아우라를 가진 멤버.", en: "A member with unrivaled rap skills, dance lines, and a powerful center aura." }, socials: {}, tmi: { ko: ["'믹스나인' 여자 부문 1위를 차지한 실력파입니다.", "걸크러시의 대명사로 불리며 여성 팬들에게 인기가 많습니다."], en: ["Won 1st place in the female category on 'MIXNINE'.", "Called the definition of 'Girl Crush' and has many female fans."] } },
+      { id: "chaeryeong", name: { ko: "채령", en: "CHAERYEONG", ja: "チェリョン", zh: "李彩領" }, role: { ko: "메인댄서, 서브보컬", en: "Main Dancer, Sub Vocalist" }, birth: "2001.06.05", height: "166cm", bloodType: "B", mbti: "ISFJ", zodiac: { ko: "쌍둥이자리", en: "Gemini" }, imageUrl: "https://tse1.mm.bing.net/th?q=ITZY+Chaeryeong+Official+Profile+Photo+High+Res", description: { ko: "깃털처럼 가볍고 정확한 춤선을 가진 퍼포먼스의 핵심 멤버.", en: "The core of the performance with a feather-light and precise dance style." }, socials: {}, tmi: { ko: ["'K팝 스타 시즌3', 'SIXTEEN' 등 다수의 서바이벌을 거쳤습니다.", "차분하고 조용한 성격이지만 유머 감각이 뛰어납니다."], en: ["Participated in multiple survivals like 'K-pop Star 3' and 'SIXTEEN'.", "Has a calm personality but possesses a great sense of humor."] } },
+      { id: "yuna", name: { ko: "유나", en: "YUNA", ja: "ユナ", zh: "申有娜" }, role: { ko: "리드댄서, 서브보컬, 비주얼, 막내", en: "Lead Dancer, Sub Vocalist, Visual, Maknae" }, birth: "2003.12.09", height: "170cm", bloodType: "A", mbti: "ENFP", zodiac: { ko: "사수자리", en: "Sagittarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=ITZY+Yuna+Official+Profile+Photo+High+Res", description: { ko: "밝고 긍정적인 에너지와 완벽한 비주얼을 자랑하는 팀의 막내.", en: "The maknae boasting bright positive energy and perfect visuals." }, socials: {}, tmi: { ko: ["데뷔 당시 빨간 머리로 '인어공주'라는 별명을 얻었습니다.", "매우 밝고 사교적인 성격으로 팀의 활력소 역할을 합니다."], en: ["Earned the nickname 'Ariel' for her red hair during debut.", "Acts as the team's energizer with her bright and sociable personality."] } }
+    ]
+  }
+,
+  {
+    id: "nmixx",
+    name: { ko: "엔믹스", en: "NMIXX", ja: "エンミックス (NMIXX)", zh: "NMIXX", es: "NMIXX", id: "NMIXX", fr: "NMIXX", hi: "एनमिक्स (NMIXX)", pt: "NMIXX", ar: "إن ميكس (NMIXX)", th: "เอ็นมิกซ์ (NMIXX)", vi: "NMIXX", ru: "NMIXX" },
+    officialSite: "https://nmixx.jype.com/",
+    company: "JYP Entertainment",
+    accentColor: "#000000",
+    imageUrl: "https://tse1.mm.bing.net/th?q=NMIXX+Group+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/nmixx_official/", twitter: "https://twitter.com/NMIXX_official", youtube: "https://www.youtube.com/@NMIXXOfficial", tiktok: "https://www.tiktok.com/@nmixx_official" },
+    fandom: { ko: "엔써 (NSWER)", en: "NSWER", ja: "エンサー (NSWER)", zh: "NSWER", es: "NSWER", id: "NSWER", fr: "NSWER", hi: "NSWER", pt: "NSWER", ar: "إن ثير (NSWER)", th: "เอ็นเซอร์ (NSWER)", vi: "NSWER", ru: "NSWER" },
+    debut: "2022.02.22",
+    wiki: { ko: "NMIXX(엔믹스)는 JYP 엔터테인먼트 소속의 6인조 다국적 걸그룹입니다. 두 가지 이상의 장르를 한 곡에 융합한 'MIXX POP'이라는 독창적인 장르를 선보이며, 멤버 전원이 뛰어난 보컬과 댄스 실력을 갖춘 '올라운더' 그룹으로 평가받습니다.", en: "NMIXX is a 6-member multinational girl group under JYP Entertainment. They are known for their experimental 'MIXX POP' genre and for being a group where every member is an all-rounder in both vocals and performance." },
+    description: { ko: "전원 에이스, 실력파 4세대 걸그룹. 장르를 넘나드는 'MIXX POP'과 압도적인 라이브 실력을 자랑합니다.", en: "A powerhouse 4th-gen girl group where every member is an ace. Known for their 'MIXX POP' genre and incredible live vocals." },
+    summary: { ko: "실력으로 증명하는 JYP의 차세대 걸그룹. 독창적인 음악 스타일과 빈틈없는 라이브 퍼포먼스로 글로벌 팬덤을 확장하고 있습니다.", en: "JYP's next-gen girl group proving their talent. Expanding their global fandom with unique music styles and flawless live performances." },
+    news: [
+      { title: { ko: "NMIXX 미니 2집 'Fe3O4: BREAK', 빌보드 200 진입", en: "NMIXX's 2nd Mini Album 'Fe3O4: BREAK' Enters Billboard 200" }, date: "2024.01.30", summary: { ko: "타이틀곡 'DASH'가 큰 인기를 끌며 빌보드 메인 차트에 진입, 엔믹스만의 음악적 세계관을 널리 알렸습니다.", en: "The title track 'DASH' became a hit, helping the group enter the Billboard main chart and solidify their musical identity." }, url: "#" },
+      { title: { ko: "NMIXX, 첫 번째 월드투어 'NICE TO MIXX YOU' 성료", en: "NMIXX Successfully Completes First World Tour 'NICE TO MIXX YOU'" }, date: "2023.07.01", summary: { ko: "북미와 아시아 주요 도시를 순회하며 전 세계 팬들에게 엔믹스만의 강력한 퍼포먼스를 선보였습니다.", en: "Toured major cities in North America and Asia, showcasing their powerful performances to global fans." }, url: "#" },
+      { title: { ko: "NMIXX 'DICE' 뮤직비디오 유튜브 1억 뷰 돌파", en: "NMIXX's 'DICE' MV Surpasses 100 Million Views" }, date: "2023.11.15", summary: { ko: "화려한 영상미와 중독성 있는 퍼포먼스가 돋보이는 'DICE'가 1억 뷰를 달성하며 꾸준한 인기를 증명했습니다.", en: "The visually stunning and addictive performance of 'DICE' reached a new milestone on YouTube." }, url: "#" },
+      { title: { ko: "NMIXX, 밀라노 패션위크 참석… 로에베 글로벌 앰버서더 행보", en: "NMIXX Attends Milan Fashion Week as Loewe Global Ambassadors" }, date: "2024.02.23", summary: { ko: "패션계에서도 주목받는 아이콘으로 부상하며 글로벌 명품 브랜드와의 협업을 이어갔습니다.", en: "Solidifying their status as fashion icons, they attended Milan Fashion Week representing Loewe." }, url: "#" },
+      { title: { ko: "NMIXX, 데뷔 2주년 기념 팬미팅에서 팬들과 뜨거운 소통", en: "NMIXX Celebrates 2nd Anniversary with Special Fan Meeting" }, date: "2024.02.22", summary: { ko: "데뷔 2주년을 맞아 팬들과 함께 소중한 추억을 나누며 앞으로의 활발한 활동을 다짐했습니다.", en: "Shared precious moments with NSWER to celebrate their 2nd anniversary and promised more great music." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "그룹명 'NMIXX'는 Now, New, Next, 미지수 n을 뜻하는 문자 'N'과 조합, 다양성을 상징하는 단어 'MIX'의 합성어입니다.",
+        "데뷔 전부터 '보컬, 댄스, 비주얼' 삼박자를 갖춘 멤버들의 연습 영상이 공개되어 큰 기대를 모았습니다.",
+        "엔믹스의 독자적인 장르 'MIXX POP'은 한 곡 안에서 여러 번 분위기가 바뀌는 실험적인 구성을 특징으로 합니다.",
+        "멤버들은 평소 라이브 연습을 위해 격렬한 춤을 추며 노래를 부르는 훈련을 게을리하지 않는다고 합니다.",
+        "해원이 팀의 리더이자 뛰어난 예능감으로 팬들 사이에서 '차세대 예능 퀸'으로 불립니다.",
+        "릴리는 호주 출신으로 'K팝 스타 시즌4' TOP 4 출신의 검증된 실력파 보컬리스트입니다.",
+        "설윤은 인형 같은 비주얼로 데뷔와 동시에 '4세대 비주얼 끝판왕'이라는 수식어를 얻었습니다.",
+        "멤버들은 서로의 MBTI를 완벽히 꿰고 있을 정도로 평소 대화를 많이 나누며 깊은 유대감을 가지고 있습니다.",
+        "팬덤 이름 'NSWER'는 North, South, West, East, Route의 약자로, 팬들이 엔믹스의 길이자 정답이라는 의미입니다.",
+        "격렬한 안무 중에도 흔들림 없는 고음을 내지르는 모습이 직캠을 통해 화제가 되며 '라이브 괴물'이라는 별명을 얻었습니다."
+      ],
+      en: [
+        "The name 'NMIXX' combines 'N' (representing Now, New, Next, and the variable n) with 'MIX' (symbolizing combination and diversity).",
+        "Even before debut, their practice videos showcasing top-tier vocals, dance, and visuals generated massive hype.",
+        "Their signature genre 'MIXX POP' features experimental structures where the mood shifts multiple times within a single track.",
+        "They are known for their rigorous live vocal training, which includes singing while performing intense choreography.",
+        "Leader Haewon is celebrated by fans as a 'next-gen variety queen' for her wit and humor.",
+        "Lily, from Australia, was a TOP 4 finalist on 'K-pop Star 4' and is a proven powerhouse vocalist.",
+        "Sullyoon gained immediate attention for her doll-like visuals, being dubbed a '4th-gen visual peak'.",
+        "The members share a deep bond and know each other so well they even memorized everyone's MBTI types.",
+        "The fandom name 'NSWER' stands for North, South, West, East, Route, meaning fans are the compass and the answer for NMIXX.",
+        "They earned the nickname 'Live Monsters' after numerous stage videos went viral showing their flawless high notes during difficult dances."
+      ]
+    },
+    members: [
+      { id: "lily", name: { ko: "릴리", en: "LILY", ja: "リリー", zh: "梅莉" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "2002.10.17", height: "165cm", bloodType: "O", mbti: "ENFP", zodiac: { ko: "천칭자리", en: "Libra" }, imageUrl: "https://tse1.mm.bing.net/th?q=NMIXX+Lily+Official+Profile+Photo+High+Res", description: { ko: "K-팝 최고 수준의 가창력을 보유한 호주 출신 메인 보컬.", en: "A powerhouse main vocal from Australia with top-tier singing skills." }, socials: {}, tmi: { ko: ["호주인 아버지와 한국인 어머니 사이에서 태어난 다국적 멤버입니다.", "데뷔 전 'K팝 스타 시즌4'에서 놀라운 실력을 보여주었습니다."], en: ["A multinational member born to an Australian father and a Korean mother.", "Showcased incredible talent on 'K-pop Star 4' before her debut."] } },
+      { id: "haewon", name: { ko: "해원", en: "HAEWON", ja: "ヘウォン", zh: "海嫄" }, role: { ko: "리더, 메인보컬", en: "Leader, Main Vocalist" }, birth: "2003.02.25", height: "163cm", bloodType: "O", mbti: "ESTP", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=NMIXX+Haewon+Official+Profile+Photo+High+Res", description: { ko: "청아한 음색과 뛰어난 리더십, 그리고 예능감까지 겸비한 만능 리더.", en: "The all-rounder leader with a pure vocal tone and great variety sense." }, socials: {}, tmi: { ko: ["유창한 영어와 스페인어 실력을 보유한 언어 천재입니다.", "팬들과 소통하는 라이브 방송에서 남다른 입담을 자랑합니다."], en: ["A linguistic genius fluent in English and Spanish.", "Famous for her witty and entertaining live streams with fans."] } },
+      { id: "sullyoon", name: { ko: "설윤", en: "SULLYOON", ja: "ソリュン", zh: "薛侖娥" }, role: { ko: "보컬, 댄서", en: "Vocalist, Dancer" }, birth: "2004.01.26", height: "168cm", bloodType: "A", mbti: "ISFP", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=NMIXX+Sullyoon+Official+Profile+Photo+High+Res", description: { ko: "비현실적인 비주얼과 탄탄한 보컬 실력을 갖춘 팀의 센터.", en: "The team's center with unreal visuals and solid vocal abilities." }, socials: {}, tmi: { ko: ["데뷔 전 여러 대형 기획사 오디션에 동시 합격한 전설적인 일화가 있습니다.", "좌우명이 '주위에 휘둘리지 말고 나만의 길을 가자'입니다."], en: ["Famously passed auditions for multiple major agencies simultaneously before joining JYP.", "Her motto is 'Let’s walk our own path without being influenced by others'."] } },
+      { id: "bae", name: { ko: "배이", en: "BAE", ja: "ベイ", zh: "裴真率" }, role: { ko: "보컬, 댄서", en: "Vocalist, Dancer" }, birth: "2004.12.28", height: "171cm", bloodType: "B", mbti: "ENFP", zodiac: { ko: "염소자리", en: "Capricorn" }, imageUrl: "https://tse1.mm.bing.net/th?q=NMIXX+Bae+Official+Profile+Photo+High+Res", description: { ko: "매력적인 중저음 보이스와 밝은 에너지로 팀의 분위기를 이끄는 멤버.", en: "Leading the team's vibe with an attractive low-register voice and bright energy." }, socials: {}, tmi: { ko: ["길거리 캐스팅을 통해 JYP에 입사하게 되었습니다.", "팀 내에서 가장 장난기가 많고 엉뚱한 매력을 가지고 있습니다."], en: ["Joined JYP through street casting.", "The most playful and quirky member of the group."] } },
+      { id: "jiwoo", name: { ko: "지우", en: "JIWOO", ja: "ジウ", zh: "金智佑" }, role: { ko: "래퍼, 보컬, 댄서", en: "Rapper, Vocalist, Dancer" }, birth: "2005.04.13", height: "162cm", bloodType: "AB", mbti: "ESFP", zodiac: { ko: "양자리", en: "Aries" }, imageUrl: "https://tse1.mm.bing.net/th?q=NMIXX+Jiwoo+Official+Profile+Photo+High+Res", description: { ko: "파워풀한 댄스와 허스키한 랩이 매력적인 올라운더.", en: "An all-rounder with powerful dance moves and a charming husky rap style." }, socials: {}, tmi: { ko: ["어릴 적부터 댄스 학원을 다니며 탄탄한 기본기를 쌓았습니다.", "팀의 활력소 역할을 하며 귀여운 눈웃음이 특징입니다."], en: ["Built solid dance skills through years of training since childhood.", "Known for her cute eye smile and acting as the team's mood maker."] } },
+      { id: "kyujin", name: { ko: "규진", en: "KYUJIN", ja: "ギュジン", zh: "張圭真" }, role: { ko: "래퍼, 보컬, 댄서, 막내", en: "Rapper, Vocalist, Dancer, Maknae" }, birth: "2006.05.26", height: "166cm", bloodType: "A", mbti: "ESFJ", zodiac: { ko: "쌍둥이자리", en: "Gemini" }, imageUrl: "https://tse1.mm.bing.net/th?q=NMIXX+Kyujin+Official+Profile+Photo+High+Res", description: { ko: "막내답지 않은 완벽한 실력과 당당한 매력의 '앙큼한 고양이' 막내.", en: "The confident 'cute cat' maknae with flawless skills far beyond her years." }, socials: {}, tmi: { ko: ["연습생 시절부터 매우 야무지고 똑부러지는 성격으로 유명했습니다.", "팀의 막내이지만 무대 위에서는 압도적인 카리스마를 보여줍니다."], en: ["Was known for being incredibly sharp and diligent since her trainee days.", "Despite being the youngest, she radiates powerful charisma on stage."] } }
+    ]
+  }
+,
+  {
+    id: "redvelvet",
+    name: { ko: "레드벨벳", en: "Red Velvet", ja: "レッド벨벳 (Red Velvet)", zh: "Red Velvet", es: "Red Velvet", id: "Red Velvet", fr: "Red Velvet", hi: "रेड 벨벳 (Red Velvet)", pt: "Red Velvet", ar: "ريفيلوف (Red Velvet)", th: "เรเวเลิฟ (Red Velvet)", vi: "Red Velvet", ru: "Red Velvet" },
+    officialSite: "https://redvelvet.smtown.com/",
+    company: "SM Entertainment",
+    accentColor: "#ff2d55",
+    imageUrl: "https://tse1.mm.bing.net/th?q=Red+Velvet+Group+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/redvelvet.smtown/", twitter: "https://twitter.com/RVsmtown", youtube: "https://www.youtube.com/@redvelvet", tiktok: "https://www.tiktok.com/@redvelvet_smtown" },
+    fandom: { ko: "레베럽 (ReReveluv)", en: "ReReveluv", ja: "レベラブ (ReReveluv)", zh: "ReReveluv", es: "ReReveluv", id: "ReReveluv", fr: "ReReveluv", hi: "रेवेलुव (ReReveluv)", pt: "ReReveluv", ar: "ريفيلوف (Red Velvet)", th: "เรเวเลิฟ (Red Velvet)", vi: "ReReveluv", ru: "ReReveluv" },
+    debut: "2014.08.01",
+    wiki: { ko: "Red Velvet(레드벨벳)은 SM 엔터테인먼트 소속의 5인조 걸그룹입니다. 강렬하고 매혹적인 컬러 'Red'와 부드러운 느낌의 'Velvet'에서 연상되는 감각적인 음악과 퍼포먼스로 전 세계적인 사랑을 받고 있습니다.", en: "Red Velvet is a 5-member girl group under SM Entertainment. They are known for their unique dual concept of 'Red' (bright and bold) and 'Velvet' (smooth and sophisticated), earning global acclaim for their experimental music and visuals." },
+    description: { ko: "장르의 경계를 넘나드는 컨셉 퀸. 독보적인 음악성과 예술적인 퍼포먼스를 선보이는 그룹입니다.", en: "The concept queens blurring genre boundaries. A group delivering unrivaled musicality and artistic performances." },
+    summary: { ko: "K-팝 대표 컨셉 퀸. 매 컴백마다 파격적인 음악적 시도와 완성도 높은 비주얼로 독자적인 영역을 구축한 그룹입니다.", en: "K-pop's representative concept queens. A group that has built its own territory with bold musical experiments and high-quality visuals." },
+    news: [
+      { title: { ko: "레드벨벳, 데뷔 10주년 팬송 'Sweet Dreams' 공개", en: "Red Velvet Releases 10th Anniversary Fan Song 'Sweet Dreams'" }, date: "2024.08.01", summary: { ko: "데뷔 10주년을 맞아 팬들을 향한 고마움을 담은 특별한 곡을 발표하며 전 세계 팬들과 기쁨을 나누었습니다.", en: "Released a special track dedicated to ReReveluv to celebrate their decade-long journey since debut." }, url: "#" },
+      { title: { ko: "레드벨벳 미니앨범 'Cosmic', 전 세계 아이튠즈 차트 석권", en: "Red Velvet's Mini Album 'Cosmic' Tops iTunes Charts Worldwide" }, date: "2024.06.24", summary: { ko: "여름 퀸의 화려한 귀환을 알린 이번 앨범이 국내외 주요 음원 차트 최상위권을 점령했습니다.", en: "The Summer Queens made a grand return with 'Cosmic', dominating major music charts globally." }, url: "#" },
+      { title: { ko: "슬기, 두 번째 솔로 활동으로 독보적인 존재감 발휘", en: "Seulgi Showcases Strong Presence with Second Solo Project" }, date: "2024.03.12", summary: { ko: "그룹 활동과는 또 다른 감각적이고 파격적인 퍼포먼스로 솔로 아티스트로서의 역량을 증명했습니다.", en: "Delivered a sensory and bold performance, further establishing herself as a top-tier soloist." }, url: "#" },
+      { title: { ko: "레드벨벳 'Psycho' 뮤직비디오 유튜브 4억 뷰 돌파", en: "Red Velvet's 'Psycho' MV Hits 400 Million Views" }, date: "2024.01.05", summary: { ko: "발매 후 수년이 지나도 꾸준히 사랑받는 스테디셀러 'Psycho'가 새로운 이정표를 세웠습니다.", en: "The timeless hit 'Psycho' reached a new milestone on YouTube, proving its enduring popularity." }, url: "#" },
+      { title: { ko: "웬디, 두 번째 미니앨범 'Wish You Hell'로 감성 보컬의 정점", en: "Wendy Returns with 2nd Mini Album 'Wish You Hell'" }, date: "2024.03.12", summary: { ko: "독보적인 가창력과 섬세한 표현력으로 리스너들의 귀를 사로잡으며 보컬리스트로서의 위상을 굳혔습니다.", en: "Captivated listeners with her unparalleled vocal range and delicate emotions in the new album." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "그룹명 'Red Velvet'은 강렬하고 매혹적인 Red와 클래식하고 부드러운 Velvet의 두 가지 컨셉을 모두 소화하겠다는 뜻입니다.",
+        "데뷔 당시 멤버들은 각자의 고유 색깔(아이린-핑크, 슬기-오렌지, 웬디-블루, 조이-그린)로 구분되었습니다.",
+        "예리는 2015년 'Ice Cream Cake' 활동부터 팀에 합류한 다섯 번째 멤버입니다.",
+        "아이린은 연습생 시절부터 뛰어난 비주얼로 유명했으며, '대구 얼짱' 출신으로도 잘 알려져 있습니다.",
+        "슬기 는 7년이라는 긴 연습생 기간을 거쳐 데뷔했으며, 성실함과 노력의 아이콘으로 통합니다.",
+        "웬디는 캐나다와 미국에서 유학 생활을 하여 영어가 매우 유창하고, 학창 시절 성적도 매우 우수했습니다.",
+        "조이는 웃는 모습이 과일을 한 입 베어 문 것처럼 상큼하다고 하여 '과즙상'의 대명사로 불립니다.",
+        "멤버들은 숙소에서 함께 영화를 보거나 맛있는 음식을 시켜 먹으며 돈독한 우정을 다진다고 합니다.",
+        "레드벨벳의 음악은 실험적인 코러스와 하모니가 특징이며, 난이도가 높기로 유명합니다.",
+        "팬덤 이름 '레베럽(ReReveluv)'은 Red Velvet + Love의 합성어로, 서로 사랑하는 사이라는 뜻입니다."
+      ],
+      en: [
+        "The name 'Red Velvet' signifies their ability to master both the bold, vivid 'Red' side and the sophisticated 'Velvet' side.",
+        "During debut, each member was assigned a signature color: Irene (Pink), Seulgi (Orange), Wendy (Blue), and Joy (Green).",
+        "Yeri joined as the fifth member during the 'Ice Cream Cake' promotions in 2015.",
+        "Irene was famous for her stunning visuals even as a trainee and was a well-known 'ulzzang' in her hometown, Daegu.",
+        "Seulgi trained for 7 years before debuting and is considered an icon of diligence and hard work.",
+        "Wendy is fluent in English, having studied in Canada and the US, and was an honor student during her school years.",
+        "Joy is known as the representative of 'fruity visuals' because her smile is as refreshing as a bite of fresh fruit.",
+        "The members enjoy bonding at their dorm by watching movies and ordering delicious delivery food together.",
+        "Red Velvet's music is characterized by complex harmonies and experimental sounds, often considered difficult to perform.",
+        "The fandom name 'ReReveluv' combines 'Red Velvet' and 'Love', symbolizing the loving bond between the group and fans."
+      ]
+    },
+    members: [
+      { id: "irene", name: { ko: "아이린", en: "IRENE", ja: "아이린", zh: "裴柱現" }, role: { ko: "리더, 메인래퍼, 리드댄서", en: "Leader, Main Rapper, Lead Dancer" }, birth: "1991.03.29", height: "158cm", bloodType: "A", mbti: "ENTJ", zodiac: { ko: "양자리", en: "Aries" }, imageUrl: "https://tse1.mm.bing.net/th?q=Red+Velvet+Irene+Official+Profile+Photo+High+Res", description: { ko: "K-팝을 대표하는 독보적인 비주얼과 강력한 카리스마를 가진 리더.", en: "A representative K-pop visual and charismatic leader." }, socials: {}, tmi: { ko: ["다림질과 세탁을 좋아해 '어머니'라는 별명을 얻기도 했습니다.", "평소 수줍음이 많지만 무대 위에서는 완벽한 퍼포먼스를 보여줍니다."], en: ["Earned the nickname 'Mother' because she loves ironing and laundry.", "Is quite shy in person but delivers perfect performances on stage."] } },
+      { id: "seulgi", name: { ko: "슬기", en: "SEULGI", ja: "슬기", zh: "姜瑟琪" }, role: { ko: "메인댄서, 리드보컬", en: "Main Dancer, Lead Vocalist" }, birth: "1994.02.10", height: "161cm", bloodType: "A", mbti: "ISFP", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=Red+Velvet+Seulgi+Official+Profile+Photo+High+Res", description: { ko: "탄탄한 보컬 실력과 압도적인 춤선을 가진 '올라운더' 멤버.", en: "An all-rounder member with solid vocals and overwhelming dance lines." }, socials: {}, tmi: { ko: ["7년의 긴 연습생 기간을 거친 노력의 아이콘입니다.", "그림 실력이 매우 뛰어나 팬들에게 자주 작품을 공개합니다."], en: ["An icon of effort who trained for 7 long years.", "An incredibly talented artist who frequently shares her drawings with fans."] } },
+      { id: "wendy", name: { ko: "웬디", en: "WENDY", ja: "웬디", zh: "孫勝完" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "1994.02.21", height: "159cm", bloodType: "O", mbti: "ISFP", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=Red+Velvet+Wendy+Official+Profile+Photo+High+Res", description: { ko: "맑은 음색과 폭발적인 가창력을 보유한 K-팝 대표 보컬리스트.", en: "A top-tier K-pop vocalist with a clear tone and explosive power." }, socials: {}, tmi: { ko: ["유창한 영어 실력으로 글로벌 팬들과 적극적으로 소통합니다.", "매우 다정하고 배려심 넘치는 성격으로 '천사'라 불립니다."], en: ["Communicates actively with global fans using her fluent English.", "Called an 'angel' for her incredibly kind and caring personality."] } },
+      { id: "joy", name: { ko: "조이", en: "JOY", ja: "조이", zh: "朴秀英" }, role: { ko: "리드래퍼, 서브보컬", en: "Lead Rapper, Sub Vocalist" }, birth: "1996.09.03", height: "167cm", bloodType: "A", mbti: "INFP", zodiac: { ko: "처녀자리", en: "Virgo" }, imageUrl: "https://tse1.mm.bing.net/th?q=Red+Velvet+Joy+Official+Profile+Photo+High+Res", description: { ko: "상큼한 비주얼과 매력적인 음색, 배우로서도 활약하는 멤버.", en: "A refreshing visual with a charming voice, also active as an actress." }, socials: {}, tmi: { ko: ["웃는 모습이 매우 예뻐 '과즙상'의 정석으로 통합니다.", "반려견 '햇님이'를 지극히 아끼는 애견가입니다."], en: ["Known as the textbook definition of 'fruity visuals' for her beautiful smile.", "A dedicated dog lover who deeply cares for her pet, Haetnim."] } },
+      { id: "yeri", name: { ko: "예리", en: "YERI", ja: "예리", zh: "金藝琳" }, role: { ko: "서브래퍼, 서브보컬, 막내", en: "Sub Rapper, Sub Vocalist, Maknae" }, birth: "1999.03.05", height: "159cm", bloodType: "O", mbti: "INFP", zodiac: { ko: "물고기자리", en: "Pisces" }, imageUrl: "https://tse1.mm.bing.net/th?q=Red+Velvet+Yeri+Official+Profile+Photo+High+Res", description: { ko: "밝고 사교적인 성격과 작사·작곡 능력까지 갖춘 팀의 활력소.", en: "The group's energizer with a bright personality and songwriting skills." }, socials: {}, tmi: { ko: ["친화력이 매우 좋아 연예계 마당발로 유명합니다.", "자신만의 감성이 담긴 자작곡을 발표하기도 합니다."], en: ["Famous for her amazing social skills and large circle of celebrity friends.", "Has released self-composed tracks that showcase her unique musical vibe."] } }
+    ]
+  }
+,
+  {
+    id: "exo",
+    name: { ko: "엑소", en: "EXO", ja: "エクソ (EXO)", zh: "EXO", es: "EXO", id: "EXO", fr: "EXO", hi: "एक्सो (EXO)", pt: "EXO", ar: "إكسو (EXO)", th: "เอ็กโซ (EXO)", vi: "EXO", ru: "EXO" },
+    officialSite: "https://exo.smtown.com/",
+    company: "SM Entertainment",
+    accentColor: "#ffffff",
+    imageUrl: "https://tse1.mm.bing.net/th?q=EXO+Group+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/weareone.exo/", twitter: "https://twitter.com/weareoneEXO", youtube: "https://www.youtube.com/@EXO", tiktok: "https://www.tiktok.com/@weareone.exo_official" },
+    fandom: { ko: "엑소엘 (EXO-L)", en: "EXO-L", ja: "エクソエル (EXO-L)", zh: "EXO-L", es: "EXO-L", id: "EXO-L", fr: "EXO-L", hi: "एक्सो-एल (EXO-L)", pt: "EXO-L", ar: "إكسو إل (EXO-L)", th: "เอ็กโซ-แอล (EXO-L)", vi: "EXO-L", ru: "EXO-L" },
+    debut: "2012.04.08",
+    wiki: { ko: "EXO(엑소)는 SM 엔터테인먼트 소속의 보이그룹입니다. 태양계 외행성을 뜻하는 'EXOPLANET'에서 모티브를 얻었으며, 각 멤버마다 고유의 초능력 세계관을 가지고 있는 독보적인 컨셉으로 K-팝의 제왕이라 불립니다.", en: "EXO is a boy group under SM Entertainment. The name is derived from 'EXOPLANET,' and the group is known for its unique lore where each member possesses a specific superpower, cementing their status as kings of K-pop." },
+    description: { ko: "K-팝의 제왕, 독보적인 세계관의 선구자. 압도적인 퍼포먼스와 가창력으로 시대를 풍미한 그룹입니다.", en: "The kings of K-pop and pioneers of unique world-building. A group that defined an era with powerful vocals and performances." },
+    summary: { ko: "글로벌 최정상 보이그룹. 밀리언셀러 기록 제조기로 불리며 강력한 팬덤과 함께 수많은 전설적인 기록을 세운 그룹입니다.", en: "A top-tier global boy group. Known as million-seller record makers, they have established numerous legendary milestones with their massive fandom." },
+    news: [
+      { title: { ko: "엑소, 데뷔 12주년 기념 팬미팅 'ONE' 전석 매진", en: "EXO Sells Out 12th Anniversary Fan Meeting 'ONE'" }, date: "2024.04.14", summary: { ko: "데뷔 12주년을 맞아 멤버들이 한자리에 모여 팬들과 소중한 시간을 보냈습니다. 여전한 티켓 파워를 과시했습니다.", en: "Celebrated 12 years since debut with a sold-out fan meeting, proving their enduring popularity and ticket power." }, url: "#" },
+      { title: { ko: "백현, 솔로 아시아 투어 'Lonsdaleite' 성황리 개최", en: "Baekhyun Successfully Holds Solo Asia Tour 'Lonsdaleite'" }, date: "2024.03.16", summary: { ko: "서울을 시작으로 아시아 주요 도시를 순회하며 솔로 아티스트로서의 독보적인 역량을 다시 한번 입증했습니다.", en: "Toured major Asian cities starting from Seoul, showcasing his unrivaled talent as a solo artist." }, url: "#" },
+      { title: { ko: "수호, 세 번째 미니앨범 '점선면'으로 감성 보컬 선사", en: "Suho Returns with 3rd Mini Album '1 to 3'" }, date: "2024.05.31", summary: { ko: "본인만의 음악적 색깔이 듬뿍 담긴 앨범으로 리스너들에게 깊은 울림을 주었습니다.", en: "Shared his unique musical color through his 3rd mini album, receiving praise for his emotional vocals." }, url: "#" },
+      { title: { ko: "도경수(D.O.), 세 번째 미니앨범 '성장' 차트 1위", en: "D.O. Tops Charts with 3rd Mini Album 'Blossom'" }, date: "2024.05.07", summary: { ko: "특유의 따뜻하고 감성적인 음색으로 국내외 음원 차트 정상을 차지하며 사랑을 받았습니다.", en: "His warm and emotional vocal tone helped his new album reach the top of various music charts." }, url: "#" },
+      { title: { ko: "엑소 '으르렁' 뮤직비디오 유튜브 3억 뷰 돌파", en: "EXO's 'Growl' MV Hits 300 Million Views" }, date: "2023.12.20", summary: { ko: "K-팝 역사의 한 페이지를 장식한 메가 히트곡 '으르렁'이 변함없는 인기를 증명하며 기록을 경신했습니다.", en: "The legendary hit 'Growl' continues its legacy by reaching a new milestone on YouTube." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "그룹명 'EXO'는 태양계 외행성을 뜻하는 'EXOPLANET'에서 따왔습니다.",
+        "데뷔 당시 EXO-K와 EXO-M으로 나뉘어 한국과 중국에서 동시에 활동하는 파격적인 시스템을 선보였습니다.",
+        "각 멤버마다 초능력(수호-물, 백현-빛, 찬열-불 등)이 있다는 독특한 세계관을 가지고 있습니다.",
+        "정규 1집 'XOXO'로 12년 만에 가요계 밀리언셀러 시대를 다시 열었습니다.",
+        "백현은 그룹 활동뿐만 아니라 솔로 아티스트로서도 밀리언셀러를 기록한 '더블 밀리언셀러'입니다.",
+        "찬열은 악기 연주 능력이 뛰어나 기타, 드럼, 피아노 등을 자유자재로 다룹니다.",
+        "디오(D.O.)는 뛰어난 연기력으로 영화와 드라마에서도 주연 배우로서 입지를 굳혔습니다.",
+        "카이는 'K-팝의 퍼포먼스 장인'이라 불릴 정도로 뛰어난 춤 실력을 가졌습니다.",
+        "멤버들은 바쁜 개인 활동 중에도 엑소의 기념일이나 컴백 때는 항상 강력한 팀워크를 보여줍니다.",
+        "팬덤 이름 'EXO-L'에서 L은 'Love'를 뜻하며, EXO-K와 EXO-M 사이에 위치한 알파벳으로 두 팀을 모두 사랑한다는 의미도 담고 있습니다."
+      ],
+      en: [
+        "The name 'EXO' is derived from 'EXOPLANET,' referring to planets outside our solar system.",
+        "They debuted with a revolutionary system, dividing into EXO-K and EXO-M to promote in Korea and China simultaneously.",
+        "The group features a unique lore where each member has a specific superpower (e.g., Suho-Water, Baekhyun-Light).",
+        "With their 1st full album 'XOXO,' they revived the 'million-seller' era in the Korean music industry after 12 years.",
+        "Baekhyun is a 'Double Million Seller,' having achieved million-seller status both as a group member and a soloist.",
+        "Chanyeol is a multi-talented instrumentalist who can play guitar, drums, and piano proficiently.",
+        "D.O. has established himself as a respected lead actor in films and dramas, known for his deep emotional acting.",
+        "Kai is widely regarded as a performance master in K-pop and is also a global icon in the fashion industry.",
+        "Despite busy individual schedules, the members always show strong solidarity during group anniversaries and comebacks.",
+        "The 'L' in the fandom name 'EXO-L' stands for 'Love' and represents the link between EXO-K and EXO-M."
+      ]
+    },
+    members: [
+      { id: "xiumin", name: { ko: "시우민", en: "XIUMIN", ja: "シウミン", zh: "金珉錫" }, role: { ko: "서브래퍼, 서브보컬", en: "Sub Rapper, Sub Vocalist" }, birth: "1990.03.26", height: "173cm", bloodType: "B", mbti: "ENFJ", zodiac: { ko: "양자리", en: "Aries" }, imageUrl: "https://tse1.mm.bing.net/th?q=EXO+Xiumin+Official+Profile+Photo+High+Res", description: { ko: "동안 외모와 탄탄한 실력을 겸비한 엑소의 맏형.", en: "EXO's eldest member with a youthful appearance and solid skills." }, socials: {}, tmi: { ko: ["초능력은 결빙(Frost)입니다.", "깔끔한 것을 매우 좋아하며 정돈의 달인으로 통합니다."], en: ["His superpower is Frost.", "He loves cleanliness and is known as a master of organization."] } },
+      { id: "suho", name: { ko: "수호", en: "SUHO", ja: "スホ", zh: "金俊勉" }, role: { ko: "리더, 리드보컬", en: "Leader, Lead Vocalist" }, birth: "1991.05.22", height: "173cm", bloodType: "AB", mbti: "ENFJ", zodiac: { ko: "쌍둥이자리", en: "Gemini" }, imageUrl: "https://tse1.mm.bing.net/th?q=EXO+Suho+Official+Profile+Photo+High+Res", description: { ko: "부드러운 리더십과 모범적인 이미지의 엑소 리더.", en: "EXO's leader with gentle leadership and an exemplary image." }, socials: {}, tmi: { ko: ["초능력은 물(Water)입니다.", "예명 수호는 '엑소를 수호한다'는 의미를 담고 있습니다."], en: ["His superpower is Water.", "His stage name Suho means 'to protect' (EXO)."] } },
+      { id: "lay_exo", name: { ko: "레이", en: "LAY", ja: "レイ", zh: "張藝興" }, role: { ko: "메인댄서, 서브보컬", en: "Main Dancer, Sub Vocalist" }, birth: "1991.10.07", height: "177cm", bloodType: "A", mbti: "ENFP", zodiac: { ko: "천칭자리", en: "Libra" }, imageUrl: "https://tse1.mm.bing.net/th?q=EXO+Lay+Official+Profile+Photo+High+Res", description: { ko: "뛰어난 춤 실력과 프로듀싱 능력을 갖춘 다재다능한 멤버.", en: "A versatile member with exceptional dance and producing skills." }, socials: {}, tmi: { ko: ["초능력은 치유(Healing)입니다.", "중국에서 솔로 아티스트로서 엄청난 성공을 거두었습니다."], en: ["His superpower is Healing.", "Has achieved massive success as a solo artist in China."] } },
+      { id: "baekhyun", name: { ko: "백현", en: "BAEKHYUN", ja: "ベクヒョン", zh: "邊伯賢" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "1992.05.06", height: "174cm", bloodType: "O", mbti: "ESTP", zodiac: { ko: "황소자리", en: "Taurus" }, imageUrl: "https://tse1.mm.bing.net/th?q=EXO+Baekhyun+Official+Profile+Photo+High+Res", description: { ko: "천재적인 보컬 실력과 압도적인 팬덤을 보유한 톱 솔로 아티스트.", en: "A genius vocalist with a massive global following." }, socials: {}, tmi: { ko: ["초능력은 빛(Light)입니다.", "연습생 기간이 매우 짧았음에도 불구하고 완벽한 실력으로 데뷔했습니다."], en: ["His superpower is Light.", "Debuted with perfect skills despite having a very short training period."] } },
+      { id: "chen", name: { ko: "첸", en: "CHEN", ja: "チェン", zh: "金鐘대" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "1992.09.21", height: "173cm", bloodType: "B", mbti: "ISTJ", zodiac: { ko: "처녀자리", en: "Virgo" }, imageUrl: "https://tse1.mm.bing.net/th?q=EXO+Chen+Official+Profile+Photo+High+Res", description: { ko: "폭발적인 고음과 감성적인 보이스의 명품 보컬리스트.", en: "A top-tier vocalist with explosive high notes and an emotional voice." }, socials: {}, tmi: { ko: ["초능력은 번개(Thunder)입니다.", "다양한 드라마 OST에 참여하여 큰 사랑을 받았습니다."], en: ["His superpower is Thunder.", "Is much loved for his contributions to various drama soundtracks."] } },
+      { id: "chanyeol", name: { ko: "찬열", en: "CHANYEOL", ja: "チャニョル", zh: "朴燦烈" }, role: { ko: "메인래퍼, 서브보컬", en: "Main Rapper, Sub Vocalist" }, birth: "1992.11.27", height: "185cm", bloodType: "A", mbti: "ENFJ", zodiac: { ko: "사수자리", en: "Sagittarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=EXO+Chanyeol+Official+Profile+Photo+High+Res", description: { ko: "매력적인 저음 랩과 다채로운 악기 연주 실력의 소유자.", en: "Known for his charming low-register rap and multi-instrumental skills." }, socials: {}, tmi: { ko: ["초능력은 불(Fire)입니다.", "팀 내에서 가장 장신이며 밝고 사교적인 성격입니다."], en: ["His superpower is Fire.", "Is the tallest member and has a bright, social personality."] } },
+      { id: "do", name: { ko: "디오", en: "D.O.", ja: "ディオ", zh: "都敬秀" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "1993.01.12", height: "172cm", bloodType: "A", mbti: "ENTJ", zodiac: { ko: "염소자리", en: "Capricorn" }, imageUrl: "https://tse1.mm.bing.net/th?q=EXO+DO+Kyungsoo+Official+Profile+Photo+High+Res", description: { ko: "감미로운 음색의 보컬이자 믿고 보는 실력파 배우.", en: "A sweet-voiced vocalist and a highly acclaimed actor." }, socials: {}, tmi: { ko: ["초능력은 힘(Earth)입니다.", "요리하는 것을 좋아하며 멤버들에게 자주 음식을 해줍니다."], en: ["His superpower is Earth.", "Enjoys cooking and often prepares meals for the other members."] } },
+      { id: "kai", name: { ko: "카이", en: "KAI", ja: "カイ", zh: "金鐘仁" }, role: { ko: "메인댄서, 서브래퍼", en: "Main Dancer, Sub Rapper" }, birth: "1994.01.14", height: "182cm", bloodType: "A", mbti: "INFJ", zodiac: { ko: "염소자리", en: "Capricorn" }, imageUrl: "https://tse1.mm.bing.net/th?q=EXO+Kai+Official+Profile+Photo+High+Res", description: { ko: "K-팝을 대표하는 퍼포먼스 퀸이자 독보적인 춤선을 가진 멤버.", en: "A representative K-pop performer with unrivaled dance lines." }, socials: {}, tmi: { ko: ["초능력은 순간이동(Teleportation)입니다.", "무대 위 카리스마와 달리 평소에는 매우 순수하고 귀여운 성격입니다."], en: ["His superpower is Teleportation.", "Contrasting his fierce stage presence, he is very pure and cute off-stage."] } },
+      { id: "sehun", name: { ko: "세훈", en: "SEHUN", ja: "セフン", zh: "吳世勳" }, role: { ko: "리드댄서, 리드래퍼, 막내", en: "Lead Dancer, Lead Rapper, Maknae" }, birth: "1994.04.12", height: "183cm", bloodType: "O", mbti: "INTP", zodiac: { ko: "양자리", en: "Aries" }, imageUrl: "https://tse1.mm.bing.net/th?q=EXO+Sehun+Official+Profile+Photo+High+Res", description: { ko: "차가운 도시 남자 이미지와 달리 속 깊은 반전 매력의 막내.", en: "The maknae with a chic 'cold city boy' image but a warm heart." }, socials: {}, tmi: { ko: ["초능력은 바람(Wind)입니다.", "길거리에서 떡볶이를 먹다가 캐스팅된 일화가 유명합니다."], en: ["His superpower is Wind.", "Is famous for being street-casted while eating spicy rice cakes."] } }
+    ]
+  }
+,
+  {
+    id: "redvelvet",
+    name: { ko: "레드벨벳", en: "Red Velvet", ja: "レッド벨벳 (Red Velvet)", zh: "Red Velvet", es: "Red Velvet", id: "Red Velvet", fr: "Red Velvet", hi: "रेड 벨벳 (Red Velvet)", pt: "Red Velvet", ar: "ريفيلوف (Red Velvet)", th: "เรเวเลิฟ (Red Velvet)", vi: "Red Velvet", ru: "Red Velvet" },
+    officialSite: "https://redvelvet.smtown.com/",
+    company: "SM Entertainment",
+    accentColor: "#ff2d55",
+    imageUrl: "https://tse1.mm.bing.net/th?q=Red+Velvet+Group+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/redvelvet.smtown/", twitter: "https://twitter.com/RVsmtown", youtube: "https://www.youtube.com/@redvelvet", tiktok: "https://www.tiktok.com/@redvelvet_smtown" },
+    fandom: { ko: "레베럽 (ReReveluv)", en: "ReReveluv", ja: "レベラブ (ReReveluv)", zh: "ReReveluv", es: "ReReveluv", id: "ReReveluv", fr: "ReReveluv", hi: "रेवेलुव (ReReveluv)", pt: "ReReveluv", ar: "ريفيلوف (Red Velvet)", th: "เรเวเลิฟ (Red Velvet)", vi: "ReReveluv", ru: "ReReveluv" },
+    debut: "2014.08.01",
+    wiki: { ko: "Red Velvet(레드벨벳)은 SM 엔터테인먼트 소속의 5인조 걸그룹입니다. 강렬하고 매혹적인 컬러 'Red'와 부드러운 느낌의 'Velvet'에서 연상되는 감각적인 음악과 퍼포먼스로 전 세계적인 사랑을 받고 있습니다.", en: "Red Velvet is a 5-member girl group under SM Entertainment. They are known for their unique dual concept of 'Red' (bright and bold) and 'Velvet' (smooth and sophisticated), earning global acclaim for their experimental music and visuals." },
+    description: { ko: "장르의 경계를 넘나드는 컨셉 퀸. 독보적인 음악성과 예술적인 퍼포먼스를 선보이는 그룹입니다.", en: "The concept queens blurring genre boundaries. A group delivering unrivaled musicality and artistic performances." },
+    summary: { ko: "K-팝 대표 컨셉 퀸. 매 컴백마다 파격적인 음악적 시도와 완성도 높은 비주얼로 독자적인 영역을 구축한 그룹입니다.", en: "K-pop's representative concept queens. A group that has built its own territory with bold musical experiments and high-quality visuals." },
+    news: [
+      { title: { ko: "레드벨벳, 데뷔 10주년 팬송 'Sweet Dreams' 공개", en: "Red Velvet Releases 10th Anniversary Fan Song 'Sweet Dreams'" }, date: "2024.08.01", summary: { ko: "데뷔 10주년을 맞아 팬들을 향한 고마움을 담은 특별한 곡을 발표하며 전 세계 팬들과 기쁨을 나누었습니다.", en: "Released a special track dedicated to ReReveluv to celebrate their decade-long journey since debut." }, url: "#" },
+      { title: { ko: "레드벨벳 미니앨범 'Cosmic', 전 세계 아이튠즈 차트 석권", en: "Red Velvet's Mini Album 'Cosmic' Tops iTunes Charts Worldwide" }, date: "2024.06.24", summary: { ko: "여름 퀸의 화려한 귀환을 알린 이번 앨범이 국내외 주요 음원 차트 최상위권을 점령했습니다.", en: "The Summer Queens made a grand return with 'Cosmic', dominating major music charts globally." }, url: "#" },
+      { title: { ko: "슬기, 두 번째 솔로 활동으로 독보적인 존재감 발휘", en: "Seulgi Showcases Strong Presence with Second Solo Project" }, date: "2024.03.12", summary: { ko: "그룹 활동과는 또 다른 감각적이고 파격적인 퍼포먼스로 솔로 아티스트로서의 역량을 증명했습니다.", en: "Delivered a sensory and bold performance, further establishing herself as a top-tier soloist." }, url: "#" },
+      { title: { ko: "레드벨벳 'Psycho' 뮤직비디오 유튜브 4억 뷰 돌파", en: "Red Velvet's 'Psycho' MV Hits 400 Million Views" }, date: "2024.01.05", summary: { ko: "발매 후 수년이 지나도 꾸준히 사랑받는 스테디셀러 'Psycho'가 새로운 이정표를 세웠습니다.", en: "The timeless hit 'Psycho' reached a new milestone on YouTube, proving its enduring popularity." }, url: "#" },
+      { title: { ko: "웬디, 두 번째 미니앨범 'Wish You Hell'로 감성 보컬의 정점", en: "Wendy Returns with 2nd Mini Album 'Wish You Hell'" }, date: "2024.03.12", summary: { ko: "독보적인 가창력과 섬세한 표현력으로 리스너들의 귀를 사로잡으며 보컬리스트로서의 위상을 굳혔습니다.", en: "Captivated listeners with her unparalleled vocal range and delicate emotions in the new album." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "그룹명 'Red Velvet'은 강렬하고 매혹적인 Red와 클래식하고 부드러운 Velvet의 두 가지 컨셉을 모두 소화하겠다는 뜻입니다.",
+        "데뷔 당시 멤버들은 각자의 고유 색깔(아이린-핑크, 슬기-오렌지, 웬디-블루, 조이-그린)로 구분되었습니다.",
+        "예리는 2015년 'Ice Cream Cake' 활동부터 팀에 합류한 다섯 번째 멤버입니다.",
+        "아이린은 연습생 시절부터 뛰어난 비주얼로 유명했으며, '대구 얼짱' 출신으로도 잘 알려져 있습니다.",
+        "슬기 는 7년이라는 긴 연습생 기간을 거쳐 데뷔했으며, 성실함과 노력의 아이콘으로 통합니다.",
+        "웬디는 캐나다와 미국에서 유학 생활을 하여 영어가 매우 유창하고, 학창 시절 성적도 매우 우수했습니다.",
+        "조이는 웃는 모습이 과일을 한 입 베어 문 것처럼 상큼하다고 하여 '과즙상'의 대명사로 불립니다.",
+        "멤버들은 숙소에서 함께 영화를 보거나 맛있는 음식을 시켜 먹으며 돈독한 우정을 다진다고 합니다.",
+        "레드벨벳의 음악은 실험적인 코러스와 하모니가 특징이며, 난이도가 높기로 유명합니다.",
+        "팬덤 이름 '레베럽(ReReveluv)'은 Red Velvet + Love의 합성어로, 서로 사랑하는 사이라는 뜻입니다."
+      ],
+      en: [
+        "The name 'Red Velvet' signifies their ability to master both the bold, vivid 'Red' side and the sophisticated 'Velvet' side.",
+        "During debut, each member was assigned a signature color: Irene (Pink), Seulgi (Orange), Wendy (Blue), and Joy (Green).",
+        "Yeri joined as the fifth member during the 'Ice Cream Cake' promotions in 2015.",
+        "Irene was famous for her stunning visuals even as a trainee and was a well-known 'ulzzang' in her hometown, Daegu.",
+        "Seulgi trained for 7 years before debuting and is considered an icon of diligence and hard work.",
+        "Wendy is fluent in English, having studied in Canada and the US, and was an honor student during her school years.",
+        "Joy is known as the representative of 'fruity visuals' because her smile is as refreshing as a bite of fresh fruit.",
+        "The members enjoy bonding at their dorm by watching movies and ordering delicious delivery food together.",
+        "Red Velvet's music is characterized by complex harmonies and experimental sounds, often considered difficult to perform.",
+        "The fandom name 'ReReveluv' combines 'Red Velvet' and 'Love', symbolizing the loving bond between the group and fans."
+      ]
+    },
+    members: [
+      { id: "irene", name: { ko: "아이린", en: "IRENE", ja: "아이린", zh: "裴柱現" }, role: { ko: "리더, 메인래퍼, 리드댄서", en: "Leader, Main Rapper, Lead Dancer" }, birth: "1991.03.29", height: "158cm", bloodType: "A", mbti: "ENTJ", zodiac: { ko: "양자리", en: "Aries" }, imageUrl: "https://tse1.mm.bing.net/th?q=Red+Velvet+Irene+Official+Profile+Photo+High+Res", description: { ko: "K-팝을 대표하는 독보적인 비주얼과 강력한 카리스마를 가진 리더.", en: "A representative K-pop visual and charismatic leader." }, socials: {}, tmi: { ko: ["다림질과 세탁을 좋아해 '어머니'라는 별명을 얻기도 했습니다.", "평소 수줍음이 많지만 무대 위에서는 완벽한 퍼포먼스를 보여줍니다."], en: ["Earned the nickname 'Mother' because she loves ironing and laundry.", "Is quite shy in person but delivers perfect performances on stage."] } },
+      { id: "seulgi", name: { ko: "슬기", en: "SEULGI", ja: "슬기", zh: "姜瑟琪" }, role: { ko: "메인댄서, 리드보컬", en: "Main Dancer, Lead Vocalist" }, birth: "1994.02.10", height: "161cm", bloodType: "A", mbti: "ISFP", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=Red+Velvet+Seulgi+Official+Profile+Photo+High+Res", description: { ko: "탄탄한 보컬 실력과 압도적인 춤선을 가진 '올라운더' 멤버.", en: "An all-rounder member with solid vocals and overwhelming dance lines." }, socials: {}, tmi: { ko: ["7년의 긴 연습생 기간을 거친 노력의 아이콘입니다.", "그림 실력이 매우 뛰어나 팬들에게 자주 작품을 공개합니다."], en: ["An icon of effort who trained for 7 long years.", "An incredibly talented artist who frequently shares her drawings with fans."] } },
+      { id: "wendy", name: { ko: "웬디", en: "WENDY", ja: "웬디", zh: "孫勝完" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "1994.02.21", height: "159cm", bloodType: "O", mbti: "ISFP", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=Red+Velvet+Wendy+Official+Profile+Photo+High+Res", description: { ko: "맑은 음색과 폭발적인 가창력을 보유한 K-팝 대표 보컬리스트.", en: "A top-tier K-pop vocalist with a clear tone and explosive power." }, socials: {}, tmi: { ko: ["유창한 영어 실력으로 글로벌 팬들과 적극적으로 소통합니다.", "매우 다정하고 배려심 넘치는 성격으로 '천사'라 불립니다."], en: ["Communicates actively with global fans using her fluent English.", "Called an 'angel' for her incredibly kind and caring personality."] } },
+      { id: "joy", name: { ko: "조이", en: "JOY", ja: "조이", zh: "朴秀英" }, role: { ko: "리드래퍼, 서브보컬", en: "Lead Rapper, Sub Vocalist" }, birth: "1996.09.03", height: "167cm", bloodType: "A", mbti: "INFP", zodiac: { ko: "처녀자리", en: "Virgo" }, imageUrl: "https://tse1.mm.bing.net/th?q=Red+Velvet+Joy+Official+Profile+Photo+High+Res", description: { ko: "상큼한 비주얼과 매력적인 음색, 배우로서도 활약하는 멤버.", en: "A refreshing visual with a charming voice, also active as an actress." }, socials: {}, tmi: { ko: ["웃는 모습이 매우 예뻐 '과즙상'의 정석으로 통합니다.", "반려견 '햇님이'를 지극히 아끼는 애견가입니다."], en: ["Known as the textbook definition of 'fruity visuals' for her beautiful smile.", "A dedicated dog lover who deeply cares for her pet, Haetnim."] } },
+      { id: "yeri", name: { ko: "예리", en: "YERI", ja: "예리", zh: "金藝琳" }, role: { ko: "서브래퍼, 서브보컬, 막내", en: "Sub Rapper, Sub Vocalist, Maknae" }, birth: "1999.03.05", height: "159cm", bloodType: "O", mbti: "INFP", zodiac: { ko: "물고기자리", en: "Pisces" }, imageUrl: "https://tse1.mm.bing.net/th?q=Red+Velvet+Yeri+Official+Profile+Photo+High+Res", description: { ko: "밝고 사교적인 성격과 작사·작곡 능력까지 갖춘 팀의 활력소.", en: "The group's energizer with a bright personality and songwriting skills." }, socials: {}, tmi: { ko: ["친화력이 매우 좋아 연예계 마당발로 유명합니다.", "자신만의 감성이 담긴 자작곡을 발표하기도 합니다."], en: ["Famous for her amazing social skills and large circle of celebrity friends.", "Has released self-composed tracks that showcase her unique musical vibe."] } }
+    ]
+  }
+,
+  {
+    id: "nmixx",
+    name: { ko: "엔믹스", en: "NMIXX", ja: "エンミックス (NMIXX)", zh: "NMIXX", es: "NMIXX", id: "NMIXX", fr: "NMIXX", hi: "एनमिक्स (NMIXX)", pt: "NMIXX", ar: "إن ميكس (NMIXX)", th: "เอ็นมิกซ์ (NMIXX)", vi: "NMIXX", ru: "NMIXX" },
+    officialSite: "https://nmixx.jype.com/",
+    company: "JYP Entertainment",
+    accentColor: "#000000",
+    imageUrl: "https://tse1.mm.bing.net/th?q=NMIXX+Group+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/nmixx_official/", twitter: "https://twitter.com/NMIXX_official", youtube: "https://www.youtube.com/@NMIXXOfficial", tiktok: "https://www.tiktok.com/@nmixx_official" },
+    fandom: { ko: "엔써 (NSWER)", en: "NSWER", ja: "エンサー (NSWER)", zh: "NSWER", es: "NSWER", id: "NSWER", fr: "NSWER", hi: "NSWER", pt: "NSWER", ar: "إن ثير (NSWER)", th: "เอ็นเซอร์ (NSWER)", vi: "NSWER", ru: "NSWER" },
+    debut: "2022.02.22",
+    wiki: { ko: "NMIXX(엔믹스)는 JYP 엔터테인먼트 소속의 6인조 다국적 걸그룹입니다. 두 가지 이상의 장르를 한 곡에 융합한 'MIXX POP'이라는 독창적인 장르를 선보이며, 멤버 전원이 뛰어난 보컬과 댄스 실력을 갖춘 '올라운더' 그룹으로 평가받습니다.", en: "NMIXX is a 6-member multinational girl group under JYP Entertainment. They are known for their experimental 'MIXX POP' genre and for being a group where every member is an all-rounder in both vocals and performance." },
+    description: { ko: "전원 에이스, 실력파 4세대 걸그룹. 장르를 넘나드는 'MIXX POP'과 압도적인 라이브 실력을 자랑합니다.", en: "A powerhouse 4th-gen girl group where every member is an ace. Known for their 'MIXX POP' genre and incredible live vocals." },
+    summary: { ko: "실력으로 증명하는 JYP의 차세대 걸그룹. 독창적인 음악 스타일과 빈틈없는 라이브 퍼포먼스로 글로벌 팬덤을 확장하고 있습니다.", en: "JYP's next-gen girl group proving their talent. Expanding their global fandom with unique music styles and flawless live performances." },
+    news: [
+      { title: { ko: "NMIXX 미니 2집 'Fe3O4: BREAK', 빌보드 200 진입", en: "NMIXX's 2nd Mini Album 'Fe3O4: BREAK' Enters Billboard 200" }, date: "2024.01.30", summary: { ko: "타이틀곡 'DASH'가 큰 인기를 끌며 빌보드 메인 차트에 진입, 엔믹스만의 음악적 세계관을 널리 알렸습니다.", en: "The title track 'DASH' became a hit, helping the group enter the Billboard main chart and solidify their musical identity." }, url: "#" },
+      { title: { ko: "NMIXX, 첫 번째 월드투어 'NICE TO MIXX YOU' 성료", en: "NMIXX Successfully Completes First World Tour 'NICE TO MIXX YOU'" }, date: "2023.07.01", summary: { ko: "북미와 아시아 주요 도시를 순회하며 전 세계 팬들에게 엔믹스만의 강력한 퍼포먼스를 선보였습니다.", en: "Toured major cities in North America and Asia, showcasing their powerful performances to global fans." }, url: "#" },
+      { title: { ko: "NMIXX 'DICE' 뮤직비디오 유튜브 1억 뷰 돌파", en: "NMIXX's 'DICE' MV Surpasses 100 Million Views" }, date: "2023.11.15", summary: { ko: "화려한 영상미와 중독성 있는 퍼포먼스가 돋보이는 'DICE'가 1억 뷰를 달성하며 꾸준한 인기를 증명했습니다.", en: "The visually stunning and addictive performance of 'DICE' reached a new milestone on YouTube." }, url: "#" },
+      { title: { ko: "NMIXX, 밀라노 패션위크 참석… 로에베 글로벌 앰버서더 행보", en: "NMIXX Attends Milan Fashion Week as Loewe Global Ambassadors" }, date: "2024.02.23", summary: { ko: "패션계에서도 주목받는 아이콘으로 부상하며 글로벌 명품 브랜드와의 협업을 이어갔습니다.", en: "Solidifying their status as fashion icons, they attended Milan Fashion Week representing Loewe." }, url: "#" },
+      { title: { ko: "NMIXX, 데뷔 2주년 기념 팬미팅에서 팬들과 뜨거운 소통", en: "NMIXX Celebrates 2nd Anniversary with Special Fan Meeting" }, date: "2024.02.22", summary: { ko: "데뷔 2주년을 맞아 팬들과 함께 소중한 추억을 나누며 앞으로의 활발한 활동을 다짐했습니다.", en: "Shared precious moments with NSWER to celebrate their 2nd anniversary and promised more great music." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "그룹명 'NMIXX'는 Now, New, Next, 미지수 n을 뜻하는 문자 'N'과 조합, 다양성을 상징하는 단어 'MIX'의 합성어입니다.",
+        "데뷔 전부터 '보컬, 댄스, 비주얼' 삼박자를 갖춘 멤버들의 연습 영상이 공개되어 큰 기대를 모았습니다.",
+        "엔믹스의 독자적인 장르 'MIXX POP'은 한 곡 안에서 여러 번 분위기가 바뀌는 실험적인 구성을 특징으로 합니다.",
+        "멤버들은 평소 라이브 연습을 위해 격렬한 춤을 추며 노래를 부르는 훈련을 게을리하지 않는다고 합니다.",
+        "해원이 팀의 리더이자 뛰어난 예능감으로 팬들 사이에서 '차세대 예능 퀸'으로 불립니다.",
+        "릴리는 호주 출신으로 'K팝 스타 시즌4' TOP 4 출신의 검증된 실력파 보컬리스트입니다.",
+        "설윤은 인형 같은 비주얼로 데뷔와 동시에 '4세대 비주얼 끝판왕'이라는 수식어를 얻었습니다.",
+        "멤버들은 서로의 MBTI를 완벽히 꿰고 있을 정도로 평소 대화를 많이 나누며 깊은 유대감을 가지고 있습니다.",
+        "팬덤 이름 'NSWER'는 North, South, West, East, Route의 약자로, 팬들이 엔믹스의 길이자 정답이라는 의미입니다.",
+        "격렬한 안무 중에도 흔들림 없는 고음을 내지르는 모습이 직캠을 통해 화제가 되며 '라이브 괴물'이라는 별명을 얻었습니다."
+      ],
+      en: [
+        "The name 'NMIXX' combines 'N' (representing Now, New, Next, and the variable n) with 'MIX' (symbolizing combination and diversity).",
+        "Even before debut, their practice videos showcasing top-tier vocals, dance, and visuals generated massive hype.",
+        "Their signature genre 'MIXX POP' features experimental structures where the mood shifts multiple times within a single track.",
+        "They are known for their rigorous live vocal training, which includes singing while performing intense choreography.",
+        "Leader Haewon is celebrated by fans as a 'next-gen variety queen' for her wit and humor.",
+        "Lily, from Australia, was a TOP 4 finalist on 'K-pop Star 4' and is a proven powerhouse vocalist.",
+        "Sullyoon gained immediate attention for her doll-like visuals, being dubbed a '4th-gen visual peak'.",
+        "The members share a deep bond and know each other so well they even memorized everyone's MBTI types.",
+        "The fandom name 'NSWER' stands for North, South, West, East, Route, meaning fans are the compass and the answer for NMIXX.",
+        "They earned the nickname 'Live Monsters' after numerous stage videos went viral showing their flawless high notes during difficult dances."
+      ]
+    },
+    members: [
+      { id: "lily", name: { ko: "릴리", en: "LILY", ja: "リリー", zh: "梅莉" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "2002.10.17", height: "165cm", bloodType: "O", mbti: "ENFP", zodiac: { ko: "천칭자리", en: "Libra" }, imageUrl: "https://tse1.mm.bing.net/th?q=NMIXX+Lily+Official+Profile+Photo+High+Res", description: { ko: "K-팝 최고 수준의 가창력을 보유한 호주 출신 메인 보컬.", en: "A powerhouse main vocal from Australia with top-tier singing skills." }, socials: {}, tmi: { ko: ["호주인 아버지와 한국인 어머니 사이에서 태어난 다국적 멤버입니다.", "데뷔 전 'K팝 스타 시즌4'에서 놀라운 실력을 보여주었습니다."], en: ["A multinational member born to an Australian father and a Korean mother.", "Showcased incredible talent on 'K-pop Star 4' before her debut."] } },
+      { id: "haewon", name: { ko: "해원", en: "HAEWON", ja: "ヘウォン", zh: "海嫄" }, role: { ko: "리더, 메인보컬", en: "Leader, Main Vocalist" }, birth: "2003.02.25", height: "163cm", bloodType: "O", mbti: "ESTP", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=NMIXX+Haewon+Official+Profile+Photo+High+Res", description: { ko: "청아한 음색과 뛰어난 리더십, 그리고 예능감까지 겸비한 만능 리더.", en: "The all-rounder leader with a pure vocal tone and great variety sense." }, socials: {}, tmi: { ko: ["유창한 영어와 스페인어 실력을 보유한 언어 천재입니다.", "팬들과 소통하는 라이브 방송에서 남다른 입담을 자랑합니다."], en: ["A linguistic genius fluent in English and Spanish.", "Famous for her witty and entertaining live streams with fans."] } },
+      { id: "sullyoon", name: { ko: "설윤", en: "SULLYOON", ja: "ソリュン", zh: "薛侖娥" }, role: { ko: "보컬, 댄서", en: "Vocalist, Dancer" }, birth: "2004.01.26", height: "168cm", bloodType: "A", mbti: "ISFP", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=NMIXX+Sullyoon+Official+Profile+Photo+High+Res", description: { ko: "비현실적인 비주얼과 탄탄한 보컬 실력을 갖춘 팀의 센터.", en: "The team's center with unreal visuals and solid vocal abilities." }, socials: {}, tmi: { ko: ["데뷔 전 여러 대형 기획사 오디션에 동시 합격한 전설적인 일화가 있습니다.", "좌우명이 '주위에 휘둘리지 말고 나만의 길을 가자'입니다."], en: ["Famously passed auditions for multiple major agencies simultaneously before joining JYP.", "Her motto is 'Let’s walk our own path without being influenced by others'."] } },
+      { id: "bae", name: { ko: "배이", en: "BAE", ja: "ベイ", zh: "裴真率" }, role: { ko: "보컬, 댄서", en: "Vocalist, Dancer" }, birth: "2004.12.28", height: "171cm", bloodType: "B", mbti: "ENFP", zodiac: { ko: "염소자리", en: "Capricorn" }, imageUrl: "https://tse1.mm.bing.net/th?q=NMIXX+Bae+Official+Profile+Photo+High+Res", description: { ko: "매력적인 중저음 보이스와 밝은 에너지로 팀의 분위기를 이끄는 멤버.", en: "Leading the team's vibe with an attractive low-register voice and bright energy." }, socials: {}, tmi: { ko: ["길거리 캐스팅을 통해 JYP에 입사하게 되었습니다.", "팀 내에서 가장 장난기가 많고 엉뚱한 매력을 가지고 있습니다."], en: ["Joined JYP through street casting.", "The most playful and quirky member of the group."] } },
+      { id: "jiwoo", name: { ko: "지우", en: "JIWOO", ja: "ジウ", zh: "金智佑" }, role: { ko: "래퍼, 보컬, 댄서", en: "Rapper, Vocalist, Dancer" }, birth: "2005.04.13", height: "162cm", bloodType: "AB", mbti: "ESFP", zodiac: { ko: "양자리", en: "Aries" }, imageUrl: "https://tse1.mm.bing.net/th?q=NMIXX+Jiwoo+Official+Profile+Photo+High+Res", description: { ko: "파워풀한 댄스와 허스키한 랩이 매력적인 올라운더.", en: "An all-rounder with powerful dance moves and a charming husky rap style." }, socials: {}, tmi: { ko: ["어릴 적부터 댄스 학원을 다니며 탄탄한 기본기를 쌓았습니다.", "팀의 활력소 역할을 하며 귀여운 눈웃음이 특징입니다."], en: ["Built solid dance skills through years of training since childhood.", "Known for her cute eye smile and acting as the team's mood maker."] } },
+      { id: "kyujin", name: { ko: "규진", en: "KYUJIN", ja: "ギュジン", zh: "張圭真" }, role: { ko: "래퍼, 보컬, 댄서, 막내", en: "Rapper, Vocalist, Dancer, Maknae" }, birth: "2006.05.26", height: "166cm", bloodType: "A", mbti: "ESFJ", zodiac: { ko: "쌍둥이자리", en: "Gemini" }, imageUrl: "https://tse1.mm.bing.net/th?q=NMIXX+Kyujin+Official+Profile+Photo+High+Res", description: { ko: "막내답지 않은 완벽한 실력과 당당한 매력의 '앙큼한 고양이' 막내.", en: "The confident 'cute cat' maknae with flawless skills far beyond her years." }, socials: {}, tmi: { ko: ["연습생 시절부터 매우 야무지고 똑부러지는 성격으로 유명했습니다.", "팀의 막내이지만 무대 위에서는 압도적인 카리스마를 보여줍니다."], en: ["Was known for being incredibly sharp and diligent since her trainee days.", "Despite being the youngest, she radiates powerful charisma on stage."] } }
+    ]
+  }
+,
+  {
+    id: "itzy",
+    name: { ko: "있지", en: "ITZY", ja: "イッチ (ITZY)", zh: "ITZY", es: "ITZY", id: "ITZY", fr: "ITZY", hi: "इत्ज़ी (ITZY)", pt: "ITZY", ar: "إتزي (ITZY)", th: "อิทจี (ITZY)", vi: "ITZY", ru: "ITZY" },
+    officialSite: "https://itzy.jype.com/",
+    company: "JYP Entertainment",
+    accentColor: "#ff2d55",
+    imageUrl: "https://tse1.mm.bing.net/th?q=ITZY+Group+Photo+Gold+Concept+High+Res",
+    socials: { instagram: "https://www.instagram.com/itzy.all.in.us/", twitter: "https://twitter.com/ITZYofficial", youtube: "https://www.youtube.com/@ITZY", tiktok: "https://www.tiktok.com/@itzyofficial" },
+    fandom: { ko: "믿지 (MIDZY)", en: "MIDZY", ja: "ミッジ (MIDZY)", zh: "MIDZY", es: "MIDZY", id: "MIDZY", fr: "MIDZY", hi: "मिद्ज़ी (MIDZY)", pt: "MIDZY", ar: "ميدزي (MIDZY)", th: "มิดจี (MIDZY)", vi: "MIDZY", ru: "MIDZY" },
+    debut: "2019.02.12",
+    wiki: { ko: "ITZY(있지)는 JYP 엔터테인먼트 소속의 5인조 걸그룹입니다. '너희가 원하는 거 전부 있지? 있지!'라는 당당한 포부로 데뷔했으며, 독보적인 퍼포먼스 실력으로 '무대 장인'이라 불립니다.", en: "ITZY is a 5-member girl group under JYP Entertainment. Known for their powerful performances and self-love message, they are often called 'Stage Masters'." },
+    description: { ko: "퍼포먼스 퀸, 4세대 걸그룹의 시작. 당당한 자기 사랑과 파워풀한 에너지를 전파하는 그룹입니다.", en: "Performance queens and pioneers of the 4th generation. A group spreading messages of self-confidence and powerful energy." },
+    summary: { ko: "당당함이 매력인 4세대 대표 걸그룹. 압도적인 안무 난이도와 라이브 실력으로 전 세계적인 인기를 얻고 있습니다.", en: "A representative 4th-gen girl group defined by confidence. Globally loved for their intense choreography and stable live vocals." },
+    news: [
+      { title: { ko: "ITZY, 미니 9집 'GOLD'로 화려한 컴백", en: "ITZY Makes Grand Comeback with 9th Mini Album 'GOLD'" }, date: "2024.10.15", summary: { ko: "건강상의 이유로 휴식했던 멤버 리아가 복귀하며 오랜만에 5인 완전체로 돌아와 강력한 시너지를 보여주었습니다.", en: "Member Lia returned from her hiatus, marking the group's long-awaited comeback as a full 5-member unit." }, url: "#" },
+      { title: { ko: "ITZY, 두 번째 월드투어 'BORN TO BE' 성공적 마무리", en: "ITZY Successfully Concludes Second World Tour 'BORN TO BE'" }, date: "2024.08.10", summary: { ko: "전 세계 28개 지역에서 개최된 월드투어를 성황리에 마치며 글로벌 퍼포먼스 퀸의 위상을 재확인했습니다.", en: "Concluded their 28-city world tour, reconfirming their status as global performance queens." }, url: "#" },
+      { title: { ko: "리아, 활동 중단 1년 만에 복귀 소감 전해", en: "Lia Shares Feelings on Returning After 1-Year Hiatus" }, date: "2024.07.08", summary: { ko: "팬들의 응원 덕분에 건강을 회복하고 돌아올 수 있었다며 앞으로의 활발한 활동을 약속했습니다.", en: "Expressed gratitude to fans for their support during her recovery and promised active participation in upcoming projects." }, url: "#" },
+      { title: { ko: "ITZY 'WANNABE' 뮤직비디오 유튜브 6억 뷰 돌파", en: "ITZY's 'WANNABE' MV Surpasses 600 Million Views" }, date: "2024.05.20", summary: { ko: "메가 히트곡 'WANNABE'가 꾸준한 사랑을 받으며 자체 최고 조회수를 경신했습니다.", en: "The iconic hit 'WANNABE' continues its streak, reaching a new milestone on YouTube." }, url: "#" },
+      { title: { ko: "ITZY, 데뷔 5주년 팬미팅에서 눈물과 감동의 시간", en: "ITZY Shares Emotional Moments at 5th Anniversary Fan Meeting" }, date: "2024.02.12", summary: { ko: "데뷔 5주년을 맞아 팬들과 소통하며 지난 여정을 되돌아보는 뜻깊은 시간을 가졌습니다.", en: "Celebrated 5 years since debut with fans, reflecting on their journey together with deep emotion." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "그룹명 'ITZY'는 '너희가 원하는 거 전부 있지? 있지!'라는 의미로 지어졌습니다.",
+        "데뷔곡 '달라달라'는 공개 57시간 만에 1,000만 뷰를 돌파하며 당시 K-팝 데뷔곡 최단 기록을 세웠습니다.",
+        "멤버들은 무대 위 카리스마와 달리 일상에서는 장난기 넘치고 서로를 '가족'처럼 아낍니다.",
+        "류진은 데뷔 전 영화 '더 킹'에 단역으로 출연한 적이 있습니다.",
+        "예지는 JYP 오디션 당시 원더걸스의 'Like This'를 춤춰 합격했습니다.",
+        "채령은 아이즈원 출신 이채연의 친동생으로, 자매가 모두 독보적인 댄스 실력을 갖춘 것으로 유명합니다.",
+        "유나는 팀의 막내로, 학생 시절 플로어볼 선수로 활동하며 도 대회 1위를 기록한 이력이 있습니다.",
+        "리아는 영어 이름 'Julia'에서 따온 예명 '리아'를 사용하며 유창한 영어 실력을 보유하고 있습니다.",
+        "멤버들은 모두 '자기 사랑(Self-love)'이라는 팀의 메시지에 큰 자부심을 가지고 있습니다.",
+        "격렬한 안무를 소화하면서도 흔들림 없는 라이브 실력을 유지하기 위해 엄청난 연습량을 소화합니다."
+      ],
+      en: [
+        "The name 'ITZY' means 'everything you want is within us' (using the Korean word 'itzy' meaning 'to have').",
+        "Their debut song 'DALLA DALLA' broke the record for the fastest K-pop debut MV to reach 10M views (57 hours).",
+        "Despite their fierce stage presence, they are playful off-stage and treat each other like real family.",
+        "Ryujin made a brief appearance in the movie 'The King' before her debut.",
+        "Yeji passed her JYP audition by dancing to Wonder Girls' 'Like This'.",
+        "Chaeryeong is the younger sister of Lee Chae-yeon (former IZ*ONE); both sisters are famous for their dance skills.",
+        "Maknae Yuna was a competitive floorball player in school and even won first place at a provincial tournament.",
+        "Lia uses her stage name derived from her English name 'Julia' and is fluent in English.",
+        "All members take great pride in the team's core message of 'Self-love'.",
+        "They undergo intense training to maintain stable live vocals while performing their notoriously difficult choreography."
+      ]
+    },
+    members: [
+      { id: "yeji", name: { ko: "예지", en: "YEJI", ja: "イェジ", zh: "黃禮志" }, role: { ko: "리더, 메인댄서, 리드보컬", en: "Leader, Main Dancer, Lead Vocalist" }, birth: "2000.05.26", height: "167cm", bloodType: "A", mbti: "ESFJ", zodiac: { ko: "쌍둥이자리", en: "Gemini" }, imageUrl: "https://tse1.mm.bing.net/th?q=ITZY+Yeji+Official+Profile+Photo+High+Res", description: { ko: "JYP의 비밀병기에서 4세대를 대표하는 리더로. 독보적인 춤선과 카리스마를 가진 멤버.", en: "From JYP's secret weapon to a representative 4th-gen leader. Known for her unique dance lines." }, socials: {}, tmi: { ko: ["고양이 같은 날카롭고 매력적인 눈매가 특징입니다.", "연습생 시절부터 성실함의 표본으로 불렸습니다."], en: ["Known for her sharp, cat-like charming eyes.", "Was called the epitome of diligence during her trainee days."] } },
+      { id: "lia", name: { ko: "리아", en: "LIA", ja: "リア", zh: "崔智壽" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "2000.07.21", height: "162cm", bloodType: "AB", mbti: "ENFJ", zodiac: { ko: "게자리", en: "Cancer" }, imageUrl: "https://tse1.mm.bing.net/th?q=ITZY+Lia+Official+Profile+Photo+High+Res", description: { ko: "매력적인 음색과 우아한 분위기를 가진 ITZY의 메인 보컬.", en: "ITZY's main vocal with a charming voice and elegant aura." }, socials: {}, tmi: { ko: ["유창한 영어 실력으로 해외 인터뷰를 주도합니다.", "특유의 눈웃음이 팬들에게 큰 사랑을 받습니다."], en: ["Leads global interviews with her fluent English.", "Her unique eye smile is much loved by fans."] } },
+      { id: "ryujin", name: { ko: "류진", en: "RYUJIN", ja: "リュジン", zh: "申留眞" }, role: { ko: "메인래퍼, 리드댄서, 센터", en: "Main Rapper, Lead Dancer, Center" }, birth: "2001.04.17", height: "164cm", bloodType: "B", mbti: "INTJ", zodiac: { ko: "양자리", en: "Aries" }, imageUrl: "https://tse1.mm.bing.net/th?q=ITZY+Ryujin+Official+Profile+Photo+High+Res", description: { ko: "독보적인 랩 실력과 춤선, 그리고 강력한 센터 아우라를 가진 멤버.", en: "A member with unrivaled rap skills, dance lines, and a powerful center aura." }, socials: {}, tmi: { ko: ["'믹스나인' 여자 부문 1위를 차지한 실력파입니다.", "걸크러시의 대명사로 불리며 여성 팬들에게 인기가 많습니다."], en: ["Won 1st place in the female category on 'MIXNINE'.", "Called the definition of 'Girl Crush' and has many female fans."] } },
+      { id: "chaeryeong", name: { ko: "채령", en: "CHAERYEONG", ja: "チェリョン", zh: "李彩領" }, role: { ko: "메인댄서, 서브보컬", en: "Main Dancer, Sub Vocalist" }, birth: "2001.06.05", height: "166cm", bloodType: "B", mbti: "ISFJ", zodiac: { ko: "쌍둥이자리", en: "Gemini" }, imageUrl: "https://tse1.mm.bing.net/th?q=ITZY+Chaeryeong+Official+Profile+Photo+High+Res", description: { ko: "깃털처럼 가볍고 정확한 춤선을 가진 퍼포먼스의 핵심 멤버.", en: "The core of the performance with a feather-light and precise dance style." }, socials: {}, tmi: { ko: ["'K팝 스타 시즌3', 'SIXTEEN' 등 다수의 서바이벌을 거쳤습니다.", "차분하고 조용한 성격이지만 유머 감각이 뛰어납니다."], en: ["Participated in multiple survivals like 'K-pop Star 3' and 'SIXTEEN'.", "Has a calm personality but possesses a great sense of humor."] } },
+      { id: "yuna", name: { ko: "유나", en: "YUNA", ja: "ユナ", zh: "申有娜" }, role: { ko: "리드댄서, 서브보컬, 비주얼, 막내", en: "Lead Dancer, Sub Vocalist, Visual, Maknae" }, birth: "2003.12.09", height: "170cm", bloodType: "A", mbti: "ENFP", zodiac: { ko: "사수자리", en: "Sagittarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=ITZY+Yuna+Official+Profile+Photo+High+Res", description: { ko: "밝고 긍정적인 에너지와 완벽한 비주얼을 자랑하는 팀의 막내.", en: "The maknae boasting bright positive energy and perfect visuals." }, socials: {}, tmi: { ko: ["데뷔 당시 빨간 머리로 '인어공주'라는 별명을 얻었습니다.", "매우 밝고 사교적인 성격으로 팀의 활력소 역할을 합니다."], en: ["Earned the nickname 'Ariel' for her red hair during debut.", "Acts as the team's energizer with her bright and sociable personality."] } }
+    ]
+  }
+,
+  {
+    id: "nct127",
+    name: { ko: "NCT 127", en: "NCT 127", ja: "NCT 127", zh: "NCT 127", es: "NCT 127", id: "NCT 127", fr: "NCT 127", hi: "NCT 127", pt: "NCT 127", ar: "NCT 127", th: "NCT 127", vi: "NCT 127", ru: "NCT 127" },
+    officialSite: "https://www.smtown.com/artist/profile/10051",
+    company: "SM Entertainment",
+    accentColor: "#57ff00",
+    imageUrl: "https://tse1.mm.bing.net/th?q=NCT+127+Group+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/nct127/", twitter: "https://twitter.com/NCTsmtown_127", youtube: "https://www.youtube.com/@NCT127", tiktok: "https://www.tiktok.com/@nct127_official" },
+    fandom: { ko: "시즈니 (NCTzen)", en: "NCTzen", ja: "シズニー (NCTzen)", zh: "NCTzen", es: "NCTzen", id: "NCTzen", fr: "NCTzen", hi: "NCTzen", pt: "NCTzen", ar: "NCTzen", th: "NCTzen", vi: "NCTzen", ru: "NCTzen" },
+    debut: "2016.07.07",
+    wiki: { ko: "NCT 127은 SM 엔터테인먼트 소속의 보이그룹으로, NCT의 서울 팀입니다. '127'은 서울의 경도를 의미하며, K-팝의 본고장인 서울을 기반으로 전 세계 무대에서 활약하는 월드와이드 그룹입니다.", en: "NCT 127 is a boy group under SM Entertainment and the Seoul-based unit of NCT. The number '127' represents the longitude of Seoul, symbolizing their base in the home of K-pop as they perform on the global stage." },
+    description: { ko: "서울을 기반으로 한 월드와이드 그룹. 네오한 감성과 압도적인 퍼포먼스로 독자적인 음악 장르를 개척하고 있습니다.", en: "A Seoul-based worldwide group. Pioneering a unique musical genre with their 'Neo' aesthetic and powerful performances." },
+    summary: { ko: "글로벌 대세 보이그룹. 강렬한 에너지와 실험적인 사운드로 전 세계 팬들을 사로잡으며 K-팝의 새로운 지평을 넓히고 있습니다.", en: "A global trend-leading boy group. Captivating fans worldwide with intense energy and experimental sounds, expanding the horizons of K-pop." },
+    news: [
+      { title: { ko: "NCT 127, 정규 6집 'WALK' 발매와 동시에 차트 1위", en: "NCT 127 Tops Charts with 6th Full Album 'WALK'" }, date: "2024.07.15", summary: { ko: "발매와 동시에 국내외 주요 음원 및 음반 차트 정상을 차지하며 'NCT 127'만의 힙한 감성을 다시 한번 증명했습니다.", en: "Dominated music and album charts immediately upon release, proving their unique hip aesthetic." }, url: "#" },
+      { title: { ko: "NCT 127, 세 번째 월드투어 'NEO CITY : THE UNITY' 성료", en: "NCT 127 Successfully Completes Third World Tour 'NEO CITY : THE UNITY'" }, date: "2024.03.10", summary: { ko: "전 세계 주요 도시를 순회하며 압도적인 규모의 공연을 펼쳐 글로벌 팬들과 뜨겁게 호흡했습니다.", en: "Performed high-scale shows across major global cities, connecting deeply with international fans." }, url: "#" },
+      { title: { ko: "태용, 군 입대 전 첫 솔로 콘서트 'TY TRACK' 개최", en: "Taeyong Holds First Solo Concert 'TY TRACK' Before Enlistment" }, date: "2024.02.24", summary: { ko: "입대 전 팬들을 위해 준비한 솔로 콘서트를 통해 본인만의 예술적 감각을 아낌없이 보여주었습니다.", en: "Showcased his unique artistic vision through a solo concert prepared for fans before his military service." }, url: "#" },
+      { title: { ko: "도영, 첫 솔로 앨범 '청춘의 포말'로 감성 보컬 선사", en: "Doyoung Delivers Emotional Vocals with 1st Solo Album 'YOUTH'" }, date: "2024.04.22", summary: { ko: "그룹 활동과는 또 다른 도영만의 섬세하고 깊은 감성을 담은 발라드 곡들로 리스너들을 사로잡았습니다.", en: "Captured listeners with delicate and deep emotional ballads, showing a new side of his artistry." }, url: "#" },
+      { title: { ko: "NCT 127 '질주 (2 Baddies)' 뮤직비디오 유튜브 2억 뷰 돌파", en: "NCT 127's '2 Baddies' MV Hits 200 Million Views" }, date: "2024.01.12", summary: { ko: "강렬한 퍼포먼스와 중독성 있는 멜로디의 '질주'가 꾸준한 사랑을 받으며 새로운 기록을 세웠습니다.", en: "The high-energy hit '2 Baddies' continues to thrive, reaching a new milestone on YouTube." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "그룹명 NCT 127의 127은 서울의 경도(127도)를 의미합니다.",
+        "NCT의 유닛들 중 가장 먼저 고정 팀으로 결성되어 활동을 시작했습니다.",
+        "멤버들은 각자의 개성이 매우 뚜렷하여 '네오(Neo)하다'는 말을 팀의 정체성으로 삼고 있습니다.",
+        "데뷔곡 '소방차 (Fire Truck)'는 당시 파격적인 컨셉과 안무로 큰 화제를 모았습니다.",
+        "태용은 팀의 리더이자 메인 래퍼로, 곡 작업뿐만 아니라 안무 창작에도 적극적으로 참여합니다.",
+        "재현은 부드러운 중저음의 목소리와 완벽한 비주얼로 '첫사랑 기억 조작남'이라는 별명을 가지고 있습니다.",
+        "쟈니는 미국 시카고 출신으로 팀 내에서 가장 장신이며 유창한 영어 실력을 보유하고 있습니다.",
+        "마크는 NCT의 거의 모든 유닛에 참여하며 '열일의 아이콘'으로 불릴 정도로 엄청난 활동량을 보여줍니다.",
+        "멤버들은 숙소에서 함께 게임을 하거나 맛있는 것을 시켜 먹으며 끈끈한 우정을 쌓는다고 합니다.",
+        "팬덤 이름 'NCTzen'은 'NCT'와 'Citizen'의 합성어로, 팬들이 NCT의 시민이라는 뜻입니다."
+      ],
+      en: [
+        "The number '127' in the group's name represents the longitude of Seoul.",
+        "NCT 127 was the first unit of NCT to be established as a fixed group.",
+        "The members take pride in their 'Neo' identity, characterized by distinct individualities and experimental styles.",
+        "Their debut song 'Fire Truck' made waves with its unconventional concept and intense choreography.",
+        "Leader Taeyong is a main rapper who actively participates in both songwriting and choreography.",
+        "Jaehyun is nicknamed the 'First Love Memory Manipulator' for his soft baritone voice and striking visuals.",
+        "Johnny is from Chicago and is the tallest member, often leading the group's English communications.",
+        "Mark is known as the 'Icon of Hard Work' for participating in almost all NCT units and maintaining a busy schedule.",
+        "The members bond at their dorm through gaming and ordering delivery food together.",
+        "The fandom name 'NCTzen' combines 'NCT' and 'Citizen', signifying that fans are the citizens of NCT."
+      ]
+    },
+    members: [
+      { id: "taeyong", name: { ko: "태용", en: "TAEYONG", ja: "テヨン", zh: "泰容" }, role: { ko: "리더, 메인래퍼, 메인댄서", en: "Leader, Main Rapper, Main Dancer" }, birth: "1995.07.01", height: "175cm", bloodType: "O", mbti: "ENFP", zodiac: { ko: "게자리", en: "Cancer" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+127+Taeyong+Official+Profile+Photo+High+Res", description: { ko: "NCT 127의 리더이자 독보적인 비주얼과 실력을 겸비한 센터.", en: "The leader of NCT 127 and a center with striking visuals and talent." }, socials: {}, tmi: { ko: ["청소와 정돈을 매우 좋아하며 깔끔한 성격으로 유명합니다.", "직접 작사·작곡한 다수의 솔로곡을 보유하고 있습니다."], en: ["Known for being very organized and loving cleanliness.", "Has composed and written lyrics for numerous solo tracks."] } },
+      { id: "taeil_nct", name: { ko: "태일", en: "TAEIL", ja: "テイル", zh: "泰一" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "1994.06.14", height: "171cm", bloodType: "O", mbti: "ISFP", zodiac: { ko: "쌍둥이자리", en: "Gemini" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+127+Taeil+Official+Profile+Photo+High+Res", description: { ko: "탄탄한 가창력과 맑은 고음을 자랑하는 엑소의 메인 보컬.", en: "A main vocalist with solid singing skills and clear high notes." }, socials: {}, tmi: { ko: ["다양한 드라마 OST에 참여하여 가창력을 인정받았습니다.", "평소 조용하고 차분한 성격이지만 가끔 엉뚱한 매력을 보여줍니다."], en: ["Recognized for his vocal prowess through various drama soundtracks.", "Has a calm personality but occasionally shows a quirky side."] } },
+      { id: "johnny", name: { ko: "쟈니", en: "JOHNNY", ja: "ジャニー", zh: "徐煐淏" }, role: { ko: "리드댄서, 서브래퍼, 서브보컬", en: "Lead Dancer, Sub Rapper, Sub Vocalist" }, birth: "1995.02.09", height: "185cm", bloodType: "B", mbti: "ENTP", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+127+Johnny+Official+Profile+Photo+High+Res", description: { ko: "시카고 출신의 시원시원한 피지컬과 매력적인 성격의 멤버.", en: "A member from Chicago with great physical presence and a charming personality." }, socials: {}, tmi: { ko: ["유창한 영어 실력으로 해외 활동 시 주도적인 역할을 합니다.", "패션에 관심이 많아 자신만의 스타일을 즐깁니다."], en: ["Takes a leading role during global activities due to his fluent English.", "Very interested in fashion and enjoys experimenting with styles."] } },
+      { id: "yuta", name: { ko: "유타", en: "YUTA", ja: "ユウタ", zh: "悠太" }, role: { ko: "리드댄서, 서브래퍼, 서브보컬", en: "Lead Dancer, Sub Rapper, Sub Vocalist" }, birth: "1995.10.26", height: "176cm", bloodType: "A", mbti: "ENFP", zodiac: { ko: "전갈자리", en: "Scorpio" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+127+Yuta+Official+Profile+Photo+High+Res", description: { ko: "강렬한 퍼포먼스와 카리스마 있는 눈빛이 매력적인 일본 출신 멤버.", en: "A Japanese member known for intense performances and charismatic eyes." }, socials: {}, tmi: { ko: ["축구 선수 출신으로 운동 신경이 매우 뛰어납니다.", "일본에서 배우로도 데뷔하여 활동 영역을 넓히고 있습니다."], en: ["A former soccer player with excellent athletic abilities.", "Expanded his career by debuting as an actor in Japan."] } },
+      { id: "doyoung", name: { ko: "도영", en: "DOYOUNG", ja: "ドヨン", zh: "道英" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "1996.02.01", height: "178cm", bloodType: "B", mbti: "ISFJ", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+127+Doyoung+Official+Profile+Photo+High+Res", description: { ko: "맑고 섬세한 음색과 뛰어난 가창력을 가진 보컬리스트.", en: "A vocalist with a pure, delicate tone and exceptional singing skills." }, socials: {}, tmi: { ko: ["친형이 배우 공명인 것으로 잘 알려져 있습니다.", "평소 팬들에게 다정하고 따뜻한 말을 많이 해주는 것으로 유명합니다."], en: ["Well-known for being the younger brother of actor Gong Myung.", "Famous for his kind and warm words to fans."] } },
+      { id: "jaehyun", name: { ko: "재현", en: "JAEHYUN", ja: "ジェヒョン", zh: "在玹" }, role: { ko: "메인보컬, 리드댄서, 서브래퍼", en: "Main Vocalist, Lead Dancer, Sub Rapper" }, birth: "1997.02.14", height: "180cm", bloodType: "A", mbti: "ESFP", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+127+Jaehyun+Official+Profile+Photo+High+Res", description: { ko: "완벽한 비주얼과 감미로운 보컬 실력을 모두 갖춘 멤버.", en: "A member with both perfect visuals and a sweet vocal tone." }, socials: {}, tmi: { ko: ["어릴 적 미국에서 거주한 경험이 있어 영어가 유창합니다.", "흰 피부와 보조개가 매력 포인트로 꼽힙니다."], en: ["Lived in the US as a child and is fluent in English.", "His pale skin and dimples are considered his major charming points."] } },
+      { id: "winwin", name: { ko: "윈윈", en: "WINWIN", ja: "ウィンウィン", zh: "昀昀" }, role: { ko: "리드댄서, 서브보컬", en: "Lead Dancer, Sub Vocalist" }, birth: "1997.10.28", height: "179cm", bloodType: "B", mbti: "INFJ", zodiac: { ko: "전갈자리", en: "Scorpio" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+127+Winwin+Official+Profile+Photo+High+Res", description: { ko: "중국 무용을 전공한 우아한 춤선의 중국 출신 멤버.", en: "A Chinese member with an elegant dance style, having majored in Chinese dance." }, socials: {}, tmi: { ko: ["WayV의 멤버로도 활약하며 중화권에서 큰 인기를 얻고 있습니다.", "순수하고 귀여운 성격으로 멤버들의 사랑을 많이 받습니다."], en: ["Also a member of WayV, gaining massive popularity in the Chinese-speaking world.", "Much loved by fellow members for his pure and cute personality."] } },
+      { id: "jungwoo", name: { ko: "정우", en: "JUNGWOO", ja: "ジョンウ", zh: "廷祐" }, role: { ko: "리드보컬, 리드댄서", en: "Lead Vocalist, Lead Dancer" }, birth: "1998.02.19", height: "180cm", bloodType: "AB", mbti: "INFJ", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+127+Jungwoo+Official+Profile+Photo+High+Res", description: { ko: "청순한 비주얼과 맑은 음색, 그리고 뛰어난 예능감을 가진 멤버.", en: "A member with pure visuals, a clear voice, and great variety sense." }, socials: {}, tmi: { ko: ["팀 내에서 분위기 메이커 역할을 톡톡히 해냅니다.", "강아지 같은 귀여운 이미지로 팬들 사이에서 인기가 많습니다."], en: ["Acts as the team's mood maker with his upbeat personality.", "Highly popular among fans for his puppy-like, cute image."] } },
+      { id: "mark_nct127", name: { ko: "마크", en: "MARK", ja: "マーク", zh: "馬克" }, role: { ko: "메인래퍼, 메인댄서, 서브보컬", en: "Main Rapper, Main Dancer, Sub Vocalist" }, birth: "1999.08.02", height: "175cm", bloodType: "A", mbti: "INFJ", zodiac: { ko: "사자자리", en: "Leo" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+127+Mark+Official+Profile+Photo+High+Res", description: { ko: "독보적인 랩 실력과 성실함을 가진 NCT의 핵심 멤버.", en: "An essential NCT member with unrivaled rap skills and diligence." }, socials: {}, tmi: { ko: ["캐나다 밴쿠버 출신으로 유창한 영어를 구사합니다.", "다수의 NCT 유닛에 참여하며 엄청난 노력과 실력을 증명했습니다."], en: ["From Vancouver, Canada, and is fluent in English.", "Proven his immense dedication and talent by participating in multiple NCT units."] } },
+      { id: "haechan_nct127", name: { ko: "해찬", en: "HAECHAN", ja: "ヘチャン", zh: "楷燦" }, role: { ko: "메인보컬, 리드댄서", en: "Main Vocalist, Lead Dancer" }, birth: "2000.06.06", height: "174cm", bloodType: "AB", mbti: "ENFP", zodiac: { ko: "쌍둥이자리", en: "Gemini" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+127+Haechan+Official+Profile+Photo+High+Res", description: { ko: "유니크하고 맑은 미성의 보컬과 뛰어난 춤 실력을 가진 멤버.", en: "A member with a unique, high-pitched vocal tone and excellent dance skills." }, socials: {}, tmi: { ko: ["특유의 재치와 입담으로 팀의 활력소 역할을 합니다.", "NCT DREAM의 멤버로도 활약하며 다재다능함을 보여줍니다."], en: ["Energizes the team with his wit and sense of humor.", "Showcases his versatility by also being a member of NCT DREAM."] } }
+    ]
+  }
+,
+  {
+    id: "nctdream",
+    name: { ko: "NCT DREAM", en: "NCT DREAM", ja: "NCT DREAM", zh: "NCT DREAM", es: "NCT DREAM", id: "NCT DREAM", fr: "NCT DREAM", hi: "NCT DREAM", pt: "NCT DREAM", ar: "NCT DREAM", th: "NCT DREAM", vi: "NCT DREAM", ru: "NCT DREAM" },
+    officialSite: "https://www.smtown.com/artist/profile/10052",
+    company: "SM Entertainment",
+    accentColor: "#57ff00",
+    imageUrl: "https://tse1.mm.bing.net/th?q=NCT+DREAM+Group+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/nct_dream/", twitter: "https://twitter.com/NCTsmtown_DREAM", youtube: "https://www.youtube.com/@NCTDREAM", tiktok: "https://www.tiktok.com/@nctdream_official" },
+    fandom: { ko: "시즈니 (NCTzen)", en: "NCTzen", ja: "シズニー (NCTzen)", zh: "NCTzen", es: "NCTzen", id: "NCTzen", fr: "NCTzen", hi: "NCTzen", pt: "NCTzen", ar: "NCTzen", th: "NCTzen", vi: "NCTzen", ru: "NCTzen" },
+    debut: "2016.08.25",
+    wiki: { ko: "NCT DREAM은 SM 엔터테인먼트 소속의 보이그룹으로, NCT의 청소년 연합 팀으로 시작해 현재는 고정 팀으로 활동하고 있습니다. 밝고 희망찬 에너지와 성장의 서사를 담은 음악으로 전 세계 MZ세대의 큰 지지를 받고 있습니다.", en: "NCT DREAM is a boy group under SM Entertainment. Originally formed as NCT's teen unit, they are now a fixed group known for their bright energy and narrative of growth, gaining massive support from Gen Z worldwide." },
+    description: { ko: "성장의 아이콘, 청춘의 에너지를 전하는 그룹. 독보적인 팀워크와 밝은 에너지로 전 세계를 사로잡고 있습니다.", en: "Icons of growth spreading youthful energy. Captivating the world with their exceptional teamwork and upbeat vibes." },
+    summary: { ko: "글로벌 톱 보이그룹. 성장의 서사와 강력한 퍼포먼스로 전 세계 팬들에게 꿈과 희망을 전하는 그룹입니다.", en: "A top-tier global boy group. Delivering dreams and hope to fans through their growth narrative and powerful performances." },
+    news: [
+      { title: { ko: "NCT DREAM, 정규 4집 'DREAMSCAPE' 발매", en: "NCT DREAM Releases 4th Full Album 'DREAMSCAPE'" }, date: "2024.11.11", summary: { ko: "청춘의 설렘과 성장을 담은 새로운 앨범으로 전 세계 차트 정상을 휩쓸며 막강한 저력을 과시했습니다.", en: "Swept global charts with their new album capturing the excitement and growth of youth." }, url: "#" },
+      { title: { ko: "NCT DREAM, 세 번째 월드투어 'THE DREAM SHOW 3' 성료", en: "NCT DREAM Successfully Completes Third World Tour 'THE DREAM SHOW 3'" }, date: "2024.09.30", summary: { ko: "서울을 시작으로 아시아, 북미, 유럽 등 전 세계 주요 도시에서 단독 공연을 펼치며 글로벌 대세 입지를 굳혔습니다.", en: "Solidified their global status with solo shows across Asia, North America, and Europe." }, url: "#" },
+      { title: { ko: "NCT DREAM 'Hello Future' 뮤직비디오 1억 뷰 돌파", en: "NCT DREAM's 'Hello Future' MV Hits 100 Million Views" }, date: "2024.03.15", summary: { ko: "특유의 청량한 감성이 돋보이는 곡으로 꾸준한 인기를 끌며 새로운 기록을 달성했습니다.", en: "The refreshing hit 'Hello Future' reached a new milestone on YouTube." }, url: "#" },
+      { title: { ko: "마크, 솔로 싱글 '200'으로 독보적인 감성 선사", en: "Mark Delivers Unique Vibes with Solo Single '200'" }, date: "2024.05.16", summary: { ko: "자신만의 음악적 색깔을 듬뿍 담은 곡으로 래퍼뿐만 아니라 보컬리스트로서의 매력도 보여주었습니다.", en: "Showcased his charm as a vocalist beyond his rapping skills in the new solo track." }, url: "#" },
+      { title: { ko: "NCT DREAM, '2024 iHeartRadio Jingle Ball' 투어 출연", en: "NCT DREAM to Perform at 2024 iHeartRadio Jingle Ball Tour" }, date: "2024.12.10", summary: { ko: "미국 최대 연말 음악 축제인 '징글볼' 투어에 참여하여 현지 관객들과 만날 예정입니다.", en: "Joining the lineup for the prestigious US year-end music festival tour." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "그룹명 NCT DREAM은 전 세계 청소년들에게 꿈과 희망을 주겠다는 의미를 담고 있습니다.",
+        "데뷔곡 'Chewing Gum' 당시 멤버들은 전동 휠(호버보드)을 이용한 파격적인 퍼포먼스를 선보였습니다.",
+        "멤버 전원이 10대에 데뷔하여 팬들과 함께 성장해 나가는 '성장형 아이돌'의 표본으로 꼽힙니다.",
+        "멤버들은 서로를 '가족'이라고 부르며, 데뷔 때부터 쌓아온 끈끈한 우정을 자랑합니다.",
+        "제노는 팀의 메인 댄서이자 리드 래퍼로, 웃을 때 반달 모양이 되는 눈웃음이 매력 포인트입니다.",
+        "해찬은 NCT 127과 NCT DREAM 두 팀 모두에서 핵심 보컬로 활약하는 '열일의 아이콘'입니다.",
+        "재민은 팬들에 대한 사랑이 지극하여 '팬 사랑꾼'이라는 별명을 가지고 있습니다.",
+        "천러는 중국 상하이 출신으로, 요리하는 것을 좋아해 멤버들에게 자주 음식을 해준다고 합니다.",
+        "지성은 팀의 막내이지만 무대 위에서는 가장 파워풀한 댄스를 선보여 '반전 매력'을 뽐냅니다.",
+        "런쥔은 그림 실력이 매우 뛰어나며, 특유의 감성적이고 섬세한 성격의 소유자입니다."
+      ],
+      en: [
+        "The name 'NCT DREAM' reflects their goal to give dreams and hope to youth around the world.",
+        "For their debut song 'Chewing Gum', they performed using hoverboards, which became a huge topic.",
+        "Having all debuted in their teens, they are seen as the textbook example of 'growth-type idols'.",
+        "The members often refer to each other as 'family', sharing a bond built over many years.",
+        "Jeno is a main dancer and lead rapper known for his charming 'eye smile' that forms crescents.",
+        "Haechan is a key vocalist in both NCT 127 and NCT DREAM, known for his incredible work ethic.",
+        "Jaemin is famous for his deep love for fans, often being called a 'professional fan-lover'.",
+        "Chenle is from Shanghai and enjoys cooking for his fellow members.",
+        "Jisung is the youngest but delivers the most powerful dance performances on stage.",
+        "Renjun is highly skilled in drawing and has a very sensitive and artistic personality."
+      ]
+    },
+    members: [
+      { id: "mark_dream", name: { ko: "마크", en: "MARK", ja: "マーク", zh: "馬克" }, role: { ko: "리더, 메인래퍼, 메인댄서", en: "Leader, Main Rapper, Main Dancer" }, birth: "1999.08.02", height: "175cm", bloodType: "A", mbti: "INFJ", zodiac: { ko: "사자자리", en: "Leo" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+DREAM+Mark+Official+Profile+Photo+High+Res", description: { ko: "NCT DREAM의 든든한 맏형이자 정신적 지주인 리더.", en: "The eldest member and spiritual pillar of NCT DREAM." }, socials: {}, tmi: { ko: ["성실함과 노력의 아이콘으로 모든 멤버들의 귀감이 됩니다.", "수박을 매우 좋아하는 것으로 유명합니다."], en: ["An icon of sincerity and effort who inspires his members.", "Famous for his extreme love for watermelon."] } },
+      { id: "renjun", name: { ko: "런쥔", en: "RENJUN", ja: "ロンジュン", zh: "黃仁俊" }, role: { ko: "메인보컬, 리드댄서", en: "Main Vocalist, Lead Dancer" }, birth: "2000.03.23", height: "171cm", bloodType: "O", mbti: "ISFP", zodiac: { ko: "양자리", en: "Aries" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+DREAM+Renjun+Official+Profile+Photo+High+Res", description: { ko: "순수하고 맑은 감성의 보컬과 우아한 춤선을 가진 멤버.", en: "A member with a pure, sensitive voice and elegant dance lines." }, socials: {}, tmi: { ko: ["중국 길림성 출신으로 감수성이 풍부합니다.", "그림 그리는 것이 취미이며 미적인 감각이 뛰어납니다."], en: ["From Jilin, China, and is very sensitive and artistic.", "Enjoys drawing and has a great eye for aesthetics."] } },
+      { id: "jeno", name: { ko: "제노", en: "JENO", ja: "ジェノ", zh: "李帝努" }, role: { ko: "리드댄서, 리드래퍼, 서브보컬", en: "Lead Dancer, Lead Rapper, Sub Vocalist" }, birth: "2000.04.23", height: "178cm", bloodType: "A", mbti: "ISFP", zodiac: { ko: "황소자리", en: "Taurus" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+DREAM+Jeno+Official+Profile+Photo+High+Res", description: { ko: "조각 같은 비주얼과 파워풀한 퍼포먼스가 매력적인 멤버.", en: "A member with sculpted visuals and powerful performances." }, socials: {}, tmi: { ko: ["어릴 적 아역 모델로 활동한 경력이 있습니다.", "웃을 때 눈이 사라지는 눈웃음이 트레이드 마크입니다."], en: ["Was a child model before debuting as an idol.", "His crescent-shaped eye smile is his signature trait."] } },
+      { id: "haechan_dream", name: { ko: "해찬", en: "HAECHAN", ja: "ヘチャン", zh: "楷燦" }, role: { ko: "메인보컬, 리드댄서", en: "Main Vocalist, Lead Dancer" }, birth: "2000.06.06", height: "174cm", bloodType: "AB", mbti: "ENFP", zodiac: { ko: "쌍둥이자리", en: "Gemini" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+DREAM+Haechan+Official+Profile+Photo+High+Res", description: { ko: "독보적인 음색과 재치 넘치는 입담을 가진 팀의 활력소.", en: "The group's energizer with a unique vocal tone and witty humor." }, socials: {}, tmi: { ko: ["분위기 메이커 역할을 하며 멤버들을 잘 챙깁니다.", "기억력이 매우 좋아 한 번 본 안무는 금방 따라합니다."], en: ["Acts as the mood maker and takes good care of his members.", "Has an amazing memory and learns choreography very quickly."] } },
+      { id: "jaemin", name: { ko: "재민", en: "JAEMIN", ja: "ジェミン", zh: "羅渽民" }, role: { ko: "리드댄서, 리드래퍼, 서브보컬", en: "Lead Dancer, Lead Rapper, Sub Vocalist" }, birth: "2000.08.13", height: "177cm", bloodType: "AB", mbti: "ISFJ", zodiac: { ko: "사자자리", en: "Leo" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+DREAM+Jaemin+Official+Profile+Photo+High+Res", description: { ko: "다정한 성격과 완벽한 비주얼로 팬들의 사랑을 한몸에 받는 멤버.", en: "Much loved for his kind personality and perfect visuals." }, socials: {}, tmi: { ko: ["커피를 매우 좋아하며 '에스프레소 8샷' 일화가 유명합니다.", "사진 촬영이 취미이며 직접 멤버들의 사진을 찍어주기도 합니다."], en: ["Huge coffee lover, famous for his '8-shot espresso' story.", "Avid photographer who often takes pictures of his fellow members."] } },
+      { id: "chenle", name: { ko: "천러", en: "CHENLE", ja: "チョンロ", zh: "鍾辰樂" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "2001.11.22", height: "178cm", bloodType: "A", mbti: "INFP", zodiac: { ko: "전갈자리", en: "Scorpio" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+DREAM+Chenle+Official+Profile+Photo+High+Res", description: { ko: "밝은 에너지와 파워풀한 가창력을 가진 상하이 소년.", en: "A boy from Shanghai with bright energy and a powerful voice." }, socials: {}, tmi: { ko: ["어릴 적 중국에서 솔로 가수로 활동하며 앨범도 여러 장 냈습니다.", "농구를 매우 좋아하며 NBA 팬으로도 잘 알려져 있습니다."], en: ["Was a child singer in China and released several solo albums.", "Huge basketball fan and a well-known NBA enthusiast."] } },
+      { id: "jisung", name: { ko: "지성", en: "JISUNG", ja: "チソン", zh: "朴志晟" }, role: { ko: "메인댄서, 서브래퍼, 서브보컬, 막내", en: "Main Dancer, Sub Rapper, Sub Vocalist, Maknae" }, birth: "2002.02.05", height: "180cm", bloodType: "O", mbti: "INFJ", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=NCT+DREAM+Jisung+Official+Profile+Photo+High+Res", description: { ko: "NCT DREAM의 막내이자 압도적인 춤 실력을 가진 퍼포머.", en: "The youngest of NCT DREAM and a performer with incredible dance skills." }, socials: {}, tmi: { ko: ["팀의 막내임에도 불구하고 가장 큰 손과 발을 가지고 있습니다.", "NCT 멤버들 중 가장 먼저 데뷔를 확정 지은 멤버 중 한 명입니다."], en: ["Despite being the youngest, he has the largest hands and feet in the group.", "One of the first NCT members to have his debut confirmed."] } }
+    ]
+  }
+,
+  {
+    id: "monstax",
+    name: { ko: "몬스타엑스", en: "MONSTA X", ja: "モンスタエックス (MONSTA X)", zh: "MONSTA X", es: "MONSTA X", id: "MONSTA X", fr: "MONSTA X", hi: "मोंस्टा एक्स (MONSTA X)", pt: "MONSTA X", ar: "مونستا إكس (MONSTA X)", th: "มอนสตา เอ็กซ์ (MONSTA X)", vi: "MONSTA X", ru: "MONSTA X" },
+    officialSite: "http://www.monstax-e.com/",
+    company: "Starship Entertainment",
+    accentColor: "#ff0000",
+    imageUrl: "https://tse1.mm.bing.net/th?q=MONSTA+X+Group+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/official_monsta_x/", twitter: "https://twitter.com/OfficialMonstaX", youtube: "https://www.youtube.com/@monstax", tiktok: "https://www.tiktok.com/@monsta_x_official" },
+    fandom: { ko: "몬베베 (MONBEBE)", en: "MONBEBE", ja: "モンベベ (MONBEBE)", zh: "MONBEBE", es: "MONBEBE", id: "MONBEBE", fr: "MONBEBE", hi: "मोंबे베 (MONBEBE)", pt: "MONBEBE", ar: "مونبيبي (MONBEBE)", th: "มอนเบเบ้ (MONBEBE)", vi: "MONBEBE", ru: "MONBEBE" },
+    debut: "2015.05.14",
+    wiki: { ko: "몬스타엑스(MONSTA X)는 스타쉽 엔터테인먼트 소속의 보이그룹입니다. 서바이벌 프로그램 'NO.MERCY'를 통해 결성되었으며, 강렬하고 파워풀한 힙합 기반의 음악과 압도적인 피지컬, 퍼포먼스로 '짐승돌'의 대표주자로 불립니다.", en: "MONSTA X is a boy group under Starship Entertainment, formed through the survival show 'NO.MERCY'. Known for their powerful hip-hop-based music, impressive physiques, and intense performances, they are a leading example of 'beast idols'." },
+    description: { ko: "강렬한 카리스마와 압도적인 퍼포먼스. 시원시원한 피지컬과 파워풀한 에너지를 자랑하는 그룹입니다.", en: "Intense charisma and overwhelming performances. A group boasting powerful energy and impressive stage presence." },
+    summary: { ko: "글로벌 대세 보이그룹. 파격적인 컨셉과 탄탄한 가창력으로 전 세계 팬들을 사로잡으며 꾸준한 인기를 얻고 있는 그룹입니다.", en: "A global powerhouse boy group. Captivating fans worldwide with bold concepts and solid vocal skills, maintaining long-term popularity." },
+    news: [
+      { title: { ko: "셔누X형원, 유닛 활동으로 색다른 매력 발산", en: "Shownu X Hyungwon Showcase New Charm via Unit Activities" }, date: "2023.07.25", summary: { ko: "몬스타엑스 첫 유닛으로 데뷔하여 절제된 섹시미와 완성도 높은 퍼포먼스로 큰 호응을 얻었습니다.", en: "Debuted as the group's first unit, receiving high praise for their sophisticated and sexy performances." }, url: "#" },
+      { title: { ko: "몬스타엑스, 데뷔 9주년 기념 자축 영상 공개", en: "MONSTA X Shares 9th Anniversary Celebration Video" }, date: "2024.05.14", summary: { ko: "데뷔 9주년을 맞아 멤버들이 팬들을 향한 진심 어린 메시지를 전하며 변함없는 우정을 과시했습니다.", en: "Members shared heartfelt messages to MONBEBE to celebrate their 9-year journey together." }, url: "#" },
+      { title: { ko: "기현, 군 입대 전 첫 솔로 정규 앨범으로 보컬 저력 입증", en: "Kihyun Proves Vocal Prowess with 1st Solo LP Before Enlistment" }, date: "2023.10.24", summary: { ko: "믿고 듣는 보컬리스트로서의 면모를 유감없이 발휘하며 차트 상위권을 휩쓸었습니다.", en: "Showcased his status as a trusted vocalist, sweeping charts with his powerful solo debut." }, url: "#" },
+      { title: { ko: "아이엠(I.M), 새로운 레이블에서 활발한 솔로 행보", en: "I.M Pursues Active Solo Career Under New Label" }, date: "2024.04.03", summary: { ko: "자신만의 독보적인 음악 세계를 담은 앨범을 발표하며 아티스트로서의 깊이를 보여주었습니다.", en: "Released albums showcasing his unique musical world and artistic depth as a soloist." }, url: "#" },
+      { title: { ko: "몬스타엑스 'Alligator' 뮤직비디오 유튜브 1억 뷰 돌파", en: "MONSTA X's 'Alligator' MV Hits 100 Million Views" }, date: "2023.11.10", summary: { ko: "강렬한 야성미가 돋보이는 곡 'Alligator'가 팬들의 꾸준한 사랑 속에 1억 뷰를 달성했습니다.", en: "The powerful hit 'Alligator' reached a new milestone on YouTube thanks to dedicated fans." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "그룹명 '몬스타엑스'는 '가요계를 평정할 괴물(MONSTA)'과 '나의 스타(MON)'라는 중의적인 의미를 담고 있습니다.",
+        "서바이벌 프로그램 'NO.MERCY'를 통해 가장 실력이 뛰어난 멤버들이 선발되어 결성되었습니다.",
+        "멤버들의 평균 신장이 크고 체격이 좋아 '피지컬 그룹'이라는 별명을 가지고 있습니다.",
+        "격렬한 안무 중에도 흔들림 없는 라이브 실력을 유지하는 것으로 매우 유명합니다.",
+        "셔누는 팀의 리더이자 메인 댄서로, 평소 조용하지만 묵묵히 멤버들을 챙기는 '아빠' 같은 존재입니다.",
+        "민혁은 팀의 분위기 메이커로, 뛰어난 입담과 센스로 각종 예능 프로그램에서 활약합니다.",
+        "기현은 팀의 메인 보컬로, 시원한 고음과 탄탄한 성량 덕분에 'K-팝 보컬의 정석'이라 불립니다.",
+        "형원은 비현실적인 비주얼과 큰 키로 모델 활동과 DJ 활동도 병행하는 다재다능한 멤버입니다.",
+        "주헌은 독보적인 랩 실력과 카리스마를 가졌지만, 일상에서는 애교가 매우 많은 반전 매력의 소유자입니다.",
+        "아이엠(I.M)은 팀의 막내로, 유창한 영어 실력을 보유하고 있으며 몬스타엑스의 글로벌 활동에 큰 기여를 합니다."
+      ],
+      en: [
+        "The name 'MONSTA X' combines 'Monster' (to conquer the industry) and 'My Star' ('Mon' in French).",
+        "The group was formed through the survival show 'NO.MERCY', selecting the most talented trainees.",
+        "They are known as a 'Physical Group' due to their tall stature and well-built physiques.",
+        "They are highly regarded for their stable live vocals even during intense and complex choreography.",
+        "Leader Shownu is a main dancer who is quiet but takes great care of his members like a father figure.",
+        "Minhyuk is the group's mood maker, known for his wit and active presence on variety shows.",
+        "Main vocal Kihyun is often called the 'K-pop Vocal Standard' for his powerful high notes and stability.",
+        "Hyungwon boasts unreal visuals and height, and is also active as a model and DJ (as DJ H.ONE).",
+        "Joohoney possesses fierce rap skills and charisma but is actually very playful and full of aegyo off-stage.",
+        "Maknae I.M is fluent in English and plays a key role in leading the group's international promotions."
+      ]
+    },
+    members: [
+      { id: "shownu", name: { ko: "셔누", en: "SHOWNU", ja: "ショヌ", zh: "孫賢祐" }, role: { ko: "리더, 메인댄서, 리드보컬", en: "Leader, Main Dancer, Lead Vocalist" }, birth: "1992.06.18", height: "181cm", bloodType: "O", mbti: "ISFP", zodiac: { ko: "쌍둥이자리", en: "Gemini" }, imageUrl: "https://tse1.mm.bing.net/th?q=MONSTA+X+Shownu+Official+Profile+Photo+High+Res", description: { ko: "몬스타엑스의 든든한 리더이자 압도적인 퍼포먼스를 선보이는 멤버.", en: "The strong leader of MONSTA X and a powerhouse performer." }, socials: {}, tmi: { ko: ["수영 선수 출신으로 넓은 어깨와 탄탄한 피지컬을 자랑합니다.", "평소 말수가 적고 느긋한 성격으로 팬들에게 '곰셔누'라 불립니다."], en: ["A former competitive swimmer with broad shoulders and a great physique.", "Known for his quiet and relaxed personality, nicknamed 'Bear Shownu'."] } },
+      { id: "minhyuk_mx", name: { ko: "민혁", en: "MINHYUK", ja: "ミニョク", zh: "李玟赫" }, role: { ko: "서브보컬", en: "Sub Vocalist" }, birth: "1993.11.03", height: "179cm", bloodType: "A", mbti: "ENTP", zodiac: { ko: "전갈자리", en: "Scorpio" }, imageUrl: "https://tse1.mm.bing.net/th?q=MONSTA+X+Minhyuk+Official+Profile+Photo+High+Res", description: { ko: "밝은 에너지와 뛰어난 입담으로 팀의 활력소 역할을 하는 멤버.", en: "The team's energizer with bright energy and great variety sense." }, socials: {}, tmi: { ko: ["그림 그리는 것과 고래를 매우 좋아하는 것으로 유명합니다.", "밝은 성격과 사교성 덕분에 연예계 마당발로 통합니다."], en: ["Known for his love for drawing and whales.", "A social butterfly with a bright personality and many celebrity friends."] } },
+      { id: "kihyun", name: { ko: "기현", en: "KIHYUN", ja: "キヒョン", zh: "劉基賢" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "1993.11.22", height: "175cm", bloodType: "B", mbti: "ENTP", zodiac: { ko: "전갈자리", en: "Scorpio" }, imageUrl: "https://tse1.mm.bing.net/th?q=MONSTA+X+Kihyun+Official+Profile+Photo+High+Res", description: { ko: "폭발적인 가창력과 섬세한 감성을 모두 갖춘 K-팝 대표 보컬.", en: "A representative K-pop vocal with explosive power and delicate emotions." }, socials: {}, tmi: { ko: ["팀 내에서 잔소리가 가장 많지만 그만큼 멤버들을 잘 챙깁니다.", "요리 실력이 뛰어나 멤버들에게 자주 맛있는 음식을 해줍니다."], en: ["The most talkative member who nags often but only because he cares.", "A skilled cook who often prepares meals for the other members."] } },
+      { id: "hyungwon", name: { ko: "형원", en: "HYUNGWON", ja: "ヒョンウォン", zh: "蔡亨願" }, role: { ko: "리드댄서, 서브보컬", en: "Lead Dancer, Sub Vocalist" }, birth: "1994.01.15", height: "182cm", bloodType: "O", mbti: "INFP", zodiac: { ko: "염소자리", en: "Capricorn" }, imageUrl: "https://tse1.mm.bing.net/th?q=MONSTA+X+Hyungwon+Official+Profile+Photo+High+Res", description: { ko: "비현실적인 모델 비주얼과 우아한 춤선을 가진 다재다능한 멤버.", en: "A versatile member with unreal model-like visuals and elegant dance lines." }, socials: {}, tmi: { ko: ["특유의 멍한 표정으로 '짤 생성기'라는 별명을 가지고 있습니다.", "DJ 활동을 병행하며 음악적 스펙트럼을 넓혀가고 있습니다."], en: ["Known as a 'meme generator' for his unique blank expressions.", "Active as a DJ, expanding his musical spectrum beyond idol activities."] } },
+      { id: "joohoney", name: { ko: "주헌", en: "JOOHONEY", ja: "ジュホン", zh: "李周憲" }, role: { ko: "메인래퍼", en: "Main Rapper" }, birth: "1994.10.06", height: "177cm", bloodType: "O", mbti: "ENFJ", zodiac: { ko: "천칭자리", en: "Libra" }, imageUrl: "https://tse1.mm.bing.net/th?q=MONSTA+X+Joohoney+Official+Profile+Photo+High+Res", description: { ko: "강렬한 랩 실력과 카리스마, 그리고 귀여운 반전 매력을 가진 멤버.", en: "A member with fierce rap skills, charisma, and a cute side." }, socials: {}, tmi: { ko: ["'꾸꾸까까' 등 수많은 애교 짤을 생성한 애교 장인입니다.", "작사, 작곡, 프로듀싱 능력이 매우 뛰어나 다수의 곡을 작업했습니다."], en: ["A master of aegyo who created numerous famous viral clips.", "Highly talented in songwriting and producing, having worked on many tracks."] } },
+      { id: "im", name: { ko: "아이엠", en: "I.M", ja: "아이엠", zh: "任創均" }, role: { ko: "리드래퍼, 막내", en: "Lead Rapper, Maknae" }, birth: "1996.01.26", height: "175cm", bloodType: "O", mbti: "ISFP", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=MONSTA+X+IM+Official+Profile+Photo+High+Res", description: { ko: "매력적인 저음 랩과 세련된 감성을 가진 팀의 막내.", en: "The maknae with charming low-register rap and sophisticated vibes." }, socials: {}, tmi: { ko: ["어릴 적 해외에서 거주한 경험이 있어 영어가 매우 유창합니다.", "차분하고 진중한 성격으로 자신만의 음악 색깔이 뚜렷합니다."], en: ["Lived abroad as a child and is fluent in English.", "Has a calm personality and a very distinct musical color."] } }
+    ]
+  }
+,
+  {
+    id: "theboyz",
+    name: { ko: "더보이즈", en: "THE BOYZ", ja: "ザ・ボーイズ (THE BOYZ)", zh: "THE BOYZ", es: "THE BOYZ", id: "THE BOYZ", fr: "THE BOYZ", hi: "द बॉयज़ (THE BOYZ)", pt: "THE BOYZ", ar: "ذا بويز (THE BOYZ)", th: "เดอะบอยซ์ (THE BOYZ)", vi: "THE BOYZ", ru: "THE BOYZ" },
+    officialSite: "https://isthetboyz.com/",
+    company: "IST Entertainment",
+    accentColor: "#ff0000",
+    imageUrl: "https://tse1.mm.bing.net/th?q=THE+BOYZ+Group+Photo+High+Res",
+    socials: { instagram: "https://www.instagram.com/official_theboyz/", twitter: "https://twitter.com/IST_THEBOYZ", youtube: "https://www.youtube.com/@OFFICIALTHEBOYZ", tiktok: "https://www.tiktok.com/@official_theboyz" },
+    fandom: { ko: "더비 (THE B)", en: "THE B", ja: "ドビ (THE B)", zh: "THE B", es: "THE B", id: "THE B", fr: "THE B", hi: "द बी (THE B)", pt: "THE B", ar: "ذا بي (THE B)", th: "เดอะบี (THE B)", vi: "THE B", ru: "THE B" },
+    debut: "2017.12.06",
+    wiki: { ko: "더보이즈(THE BOYZ)는 IST 엔터테인먼트 소속의 11인조 보이그룹입니다. 전원 센터급 비주얼과 압도적인 퍼포먼스 실력을 갖춘 팀으로, '로드 투 킹덤' 우승을 통해 대세 보이그룹으로 자리매김했습니다.", en: "THE BOYZ is an 11-member boy group under IST Entertainment. Known for having 'all-center' visuals and powerful performances, they solidified their status as a top-tier group after winning 'Road to Kingdom'." },
+    description: { ko: "전원 센터급 비주얼과 압도적인 퍼포먼스. 무대를 가득 채우는 11명의 에너지를 자랑하는 그룹입니다.", en: "All-center visuals and overwhelming performances. A group boasting the energy of 11 members that fills the stage." },
+    summary: { ko: "4세대 대표 퍼포먼스 보이그룹. 탄탄한 팬덤과 함께 매 컴백마다 눈부신 성장을 보여주며 글로벌 차트를 휩쓸고 있는 그룹입니다.", en: "A representative 4th-gen performance boy group. Showing dazzling growth with each comeback and sweeping global charts with a solid fandom." },
+    news: [
+      { title: { ko: "더보이즈, 정규 2집 'PHANTASY' 파트 3로 컴백", en: "THE BOYZ Comeback with 2nd Full Album 'PHANTASY' Part 3" }, date: "2024.03.18", summary: { ko: "시리즈의 대미를 장식하는 앨범으로 독보적인 컨셉과 음악적 완성도를 보여주며 큰 사랑을 받았습니다.", en: "The final part of their album series showcased unique concepts and high musical quality." }, url: "#" },
+      { title: { ko: "더보이즈, 세 번째 월드투어 'ZENERATION II' 개최", en: "THE BOYZ Holds Third World Tour 'ZENERATION II'" }, date: "2024.07.12", summary: { ko: "서울을 시작으로 미주, 아시아, 유럽 전역을 누비며 글로벌 팬들과 뜨겁게 소통하고 있습니다.", en: "Toured across the Americas, Asia, and Europe, connecting deeply with global fans starting from Seoul." }, url: "#" },
+      { title: { ko: "주연, 파리 패션위크에서 독보적인 아우라 과시", en: "Juyeon Showcases Strong Presence at Paris Fashion Week" }, date: "2024.01.20", summary: { ko: "글로벌 명품 브랜드의 초청을 받아 패션계의 이목을 집중시키며 글로벌 패션 아이콘으로 부상했습니다.", en: "Invited by major luxury brands, attracting massive attention as a global fashion icon." }, url: "#" },
+      { title: { ko: "더보이즈 'THRILL RIDE' 뮤직비디오 유튜브 1억 뷰 돌파", en: "THE BOYZ's 'THRILL RIDE' MV Hits 100 Million Views" }, date: "2023.12.05", summary: { ko: "청량하고 에너제틱한 매력의 'THRILL RIDE'가 팬들의 꾸준한 사랑을 받으며 새로운 기록을 달성했습니다.", en: "The refreshing hit 'THRILL RIDE' reached a new milestone on YouTube." }, url: "#" },
+      { title: { ko: "더보이즈, 데뷔 6주년 기념 팬미팅에서 팬들과 감동의 재회", en: "THE BOYZ Celebrates 6th Anniversary with Emotional Fan Meeting" }, date: "2023.12.06", summary: { ko: "데뷔 6주년을 맞아 팬들과 소중한 추억을 나누며 앞으로의 활발한 활동을 약속했습니다.", en: "Shared precious moments with THE B to celebrate 6 years since debut and promised active future activities." }, url: "#" }
+    ],
+    tmi: {
+      ko: [
+        "그룹명 '더보이즈'는 대중의 마음을 사로잡을 단 하나의 소년들이라는 의미를 담고 있습니다.",
+        "멤버 전원이 센터라고 해도 손색없는 뛰어난 비주얼을 갖춰 '전원 센터 그룹'이라 불립니다.",
+        "서바이벌 프로그램 '로드 투 킹덤'에서 우승하며 실력과 스타성을 동시에 증명했습니다.",
+        "멤버들은 평소 서로의 고민을 진지하게 들어주며 끈끈한 동료애를 유지하는 것으로 유명합니다.",
+        "상연은 팀의 반장(리더)으로, 멤버들을 부드럽게 이끄는 리더십을 발휘합니다.",
+        "주연은 압도적인 피지컬과 춤선으로 무대 위에서 시선을 강탈하는 퍼포먼스 핵심 멤버입니다.",
+        "현재는 제주도 출신으로, 상큼한 비주얼과 달리 씩씩하고 밝은 에너지를 전해줍니다.",
+        "영훈은 조각 같은 외모로 데뷔 전부터 화제가 되었으며 배우로서도 활발히 활동 중입니다.",
+        "뉴는 독보적인 고음과 감성적인 보컬 실력을 갖춘 팀의 메인 보컬입니다.",
+        "팬덤 이름 '더비(THE B)'는 THE BOYZ의 B와 팬들이 더보이즈의 비타민이 되어준다는 의미가 담겨 있습니다."
+      ],
+      en: [
+        "The name 'THE BOYZ' signifies they are the one and only group of boys who will capture the public's heart.",
+        "Often called an 'all-center group' because every member has visuals worthy of being a center.",
+        "Proven their talent and star quality by winning the survival show 'Road to Kingdom'.",
+        "Famous for their strong bond, frequently sharing their concerns and supporting each other deeply.",
+        "Sangyeon is the group's leader (often called the 'Class President'), leading the members with gentle strength.",
+        "Juyeon is a performance standout known for his impressive physique and sharp dance moves.",
+        "Haknyeon is from Jeju Island and is known for his bright energy and refreshing visuals.",
+        "Younghoon drew attention for his sculpted looks even before debut and is also a talented actor.",
+        "New is a main vocalist with a unique high-pitched tone and deep emotional range.",
+        "The fandom name 'THE B' stands for the 'B' in THE BOYZ and signifies that fans are the group's Vitamin."
+      ]
+    },
+    members: [
+      { id: "sangyeon", name: { ko: "상연", en: "SANGYEON", ja: "サンヨン", zh: "上淵" }, role: { ko: "리더, 메인보컬", en: "Leader, Main Vocalist" }, birth: "1996.11.04", height: "176cm", bloodType: "A", mbti: "ESFP", zodiac: { ko: "전갈자리", en: "Scorpio" }, imageUrl: "https://tse1.mm.bing.net/th?q=THE+BOYZ+Sangyeon+Official+Profile+Photo+High+Res", description: { ko: "더보이즈의 든든한 반장이자 따뜻한 음색의 메인 보컬.", en: "The strong leader of THE BOYZ and a main vocalist with a warm voice." }, socials: {}, tmi: { ko: ["멤버들을 잘 챙기는 다정한 성격으로 '상연 엄마'라고 불리기도 합니다.", "개인기로 사물 모사나 성취 모사를 아주 잘합니다."], en: ["Known for his kind nature and taking great care of members, nicknamed 'Mother Sangyeon'.", "Has a talent for vocal and object imitations."] } },
+      { id: "jacob", name: { ko: "제이콥", en: "JACOB", ja: "ジェイコブ", zh: "裵 Jacob" }, role: { ko: "리드보컬", en: "Lead Vocalist" }, birth: "1997.05.30", height: "175cm", bloodType: "B", mbti: "INFP", zodiac: { ko: "쌍둥이자리", en: "Gemini" }, imageUrl: "https://tse1.mm.bing.net/th?q=THE+BOYZ+Jacob+Official+Profile+Photo+High+Res", description: { ko: "캐나다 토론토 출신의 천사 같은 마음씨와 감미로운 목소리의 소유자.", en: "A member from Toronto with an angelic heart and sweet voice." }, socials: {}, tmi: { ko: ["팀 내 공식 '천사'로 불릴 만큼 화를 거의 내지 않는 성격입니다.", "기타 연주 실력이 뛰어나 직접 연주하며 노래하는 것을 즐깁니다."], en: ["Called the 'Angel' of the group for his incredibly kind and patient nature.", "Highly skilled in playing guitar and loves performing acoustic covers."] } },
+      { id: "younghoon", name: { ko: "영훈", en: "YOUNGHOON", ja: "ヨンフン", zh: "泳勛" }, role: { ko: "서브보컬, 비주얼", en: "Sub Vocalist, Visual" }, birth: "1997.08.08", height: "183cm", bloodType: "A", mbti: "INFP", zodiac: { ko: "사자자리", en: "Leo" }, imageUrl: "https://tse1.mm.bing.net/th?q=THE+BOYZ+Younghoon+Official+Profile+Photo+High+Res", description: { ko: "조각 같은 외모와 훤칠한 피지컬을 자랑하는 팀의 비주얼.", en: "A visual standout with sculpted features and a tall stature." }, socials: {}, tmi: { ko: ["편의점에서 빵을 먹다가 길거리 캐스팅된 일화가 매우 유명합니다.", "겉모습과 달리 눈물이 많고 마음이 여린 편입니다."], en: ["Famously street-casted while eating bread at a convenience store.", "Despite his chic looks, he is soft-hearted and easily moved to tears."] } },
+      { id: "hyunjae", name: { ko: "현재", en: "HYUNJAE", ja: "ヒョンジェ", zh: "賢在" }, role: { ko: "리드보컬, 리드댄서, 비주얼", en: "Lead Vocalist, Lead Dancer, Visual" }, birth: "1997.09.13", height: "181cm", bloodType: "B", mbti: "ESTP", zodiac: { ko: "처녀자리", en: "Virgo" }, imageUrl: "https://tse1.mm.bing.net/th?q=THE+BOYZ+Hyunjae+Official+Profile+Photo+High+Res", description: { ko: "완벽한 비주얼과 장난기 넘치는 성격, 탄탄한 보컬 실력을 모두 갖춘 멤버.", en: "A member with perfect visuals, a playful personality, and solid vocals." }, socials: {}, tmi: { ko: ["팀 내에서 가장 장난기가 많아 멤버들을 자주 골탕 먹입니다.", "치킨을 매우 좋아하여 '치킨 감별사' 수준의 애정을 보입니다."], en: ["The biggest prankster in the group who loves teasing his members.", "A huge chicken lover with expert-level knowledge of different brands."] } },
+      { id: "juyeon_tbz", name: { ko: "주연", en: "JUYEON", ja: "ジュヨン", zh: "柱延" }, role: { ko: "메인댄서, 비주얼", en: "Main Dancer, Visual" }, birth: "1998.01.15", height: "181cm", bloodType: "AB", mbti: "ENTP", zodiac: { ko: "염소자리", en: "Capricorn" }, imageUrl: "https://tse1.mm.bing.net/th?q=THE+BOYZ+Juyeon+Official+Profile+Photo+High+Res", description: { ko: "압도적인 춤 실력과 피지컬로 무대를 장악하는 퍼포먼스 퀸.", en: "A performance standout dominating the stage with his dance and physique." }, socials: {}, tmi: { ko: ["손이 매우 커서 농구공을 한 손으로 쉽게 잡을 수 있습니다.", "무대 위 카리스마와 달리 일상에서는 허당미 넘치는 순수한 성격입니다."], en: ["Has very large hands, capable of easily gripping a basketball with one hand.", "Contrasting his fierce stage presence, he has a very pure and sometimes clumsy personality off-stage."] } },
+      { id: "kevin", name: { ko: "케빈", en: "KEVIN", ja: "ケビン", zh: "凱文" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "1998.02.23", height: "176cm", bloodType: "AB", mbti: "INFP", zodiac: { ko: "물병자리", en: "Aquarius" }, imageUrl: "https://tse1.mm.bing.net/th?q=THE+BOYZ+Kevin+Official+Profile+Photo+High+Res", description: { ko: "캐나다 밴쿠버 출신의 예술적 감각이 뛰어난 감성 보컬.", en: "A member from Vancouver with an artistic soul and emotional voice." }, socials: {}, tmi: { ko: ["디자인과 그림 실력이 뛰어나 팀의 굿즈나 로고 작업에 참여하기도 합니다.", "유창한 영어 실력으로 해외 활동 시 통역 없이 소통합니다."], en: ["Highly talented in design and drawing, often contributing to group logos and merchandise.", "Fluent in English, leading global communications for the group."] } },
+      { id: "new_tbz", name: { ko: "뉴", en: "NEW", ja: "ニュー", zh: "澯熙" }, role: { ko: "메인보컬", en: "Main Vocalist" }, birth: "1998.04.26", height: "177cm", bloodType: "B", mbti: "INFP", zodiac: { ko: "황소자리", en: "Taurus" }, imageUrl: "https://tse1.mm.bing.net/th?q=THE+BOYZ+New+Official+Profile+Photo+High+Res", description: { ko: "독보적인 미성과 폭발적인 고음을 자랑하는 팀의 핵심 보컬.", en: "A core vocalist with a unique high-pitched tone and explosive range." }, socials: {}, tmi: { ko: ["어릴 적부터 아르바이트를 많이 해서 '알바왕'이라는 별명이 있습니다.", "패션 감각이 매우 뛰어나 자신만의 독특한 스타일을 즐깁니다."], en: ["Nicknamed the 'Part-time Job King' for having many different jobs before debut.", "Has a great fashion sense and enjoys experimenting with unique styles."] } },
+      { id: "q_tbz", name: { ko: "큐", en: "Q", ja: "キュー", zh: "昌民" }, role: { ko: "메인댄서", en: "Main Dancer" }, birth: "1998.11.05", height: "175cm", bloodType: "AB", mbti: "ESFP", zodiac: { ko: "전갈자리", en: "Scorpio" }, imageUrl: "https://tse1.mm.bing.net/th?q=THE+BOYZ+Q+Official+Profile+Photo+High+Res", description: { ko: "파워풀하면서도 절제된 춤선을 가진 퍼포먼스 장인.", en: "A performance master with powerful yet controlled dance lines." }, socials: {}, tmi: { ko: ["목이 길어 '기린'이라는 별명을 가지고 있습니다.", "공포 영화를 보는 것을 즐기는 강심장의 소유자입니다."], en: ["Nicknamed 'Giraffe' due to his exceptionally long neck.", "A horror movie enthusiast who enjoys watching scary films."] } },
+      { id: "ju_haknyeon", name: { ko: "주학년", en: "JU HAKNYEON", ja: "チュ・ハンニョン", zh: "周鶴年" }, role: { ko: "리드댄서, 서브보컬", en: "Lead Dancer, Sub Vocalist" }, birth: "1999.03.09", height: "175cm", bloodType: "B", mbti: "ENTP", zodiac: { ko: "물고기자리", en: "Pisces" }, imageUrl: "https://tse1.mm.bing.net/th?q=THE+BOYZ+Ju+Haknyeon+Official+Profile+Photo+High+Res", description: { ko: "제주도 출신의 밝고 긍정적인 에너지로 팀의 활력소 역할을 하는 멤버.", en: "A boy from Jeju Island with bright energy and a positive vibe." }, socials: {}, tmi: { ko: ["어머니께서 제주도에서 큰 돼지 농장을 운영하시는 것으로 유명합니다.", "먹는 것을 매우 좋아하며 특히 고기를 가장 선호합니다."], en: ["Famous for his family's large pig farm in Jeju Island.", "A huge foodie who particularly loves all kinds of meat."] } },
+      { id: "sunwoo_tbz", name: { ko: "선우", en: "SUNWOO", ja: "ソヌ", zh: "善旴" }, role: { ko: "메인래퍼", en: "Main Rapper" }, birth: "2000.04.12", height: "177cm", bloodType: "B", mbti: "ENTP", zodiac: { ko: "양자리", en: "Aries" }, imageUrl: "https://tse1.mm.bing.net/th?q=THE+BOYZ+Sunwoo+Official+Profile+Photo+High+Res", description: { ko: "독보적인 랩 실력과 가사 전달력을 가진 팀의 메인 래퍼.", en: "The main rapper with incredible flow and lyrical delivery." }, socials: {}, tmi: { ko: ["축구 선수 출신으로 운동 신경이 뛰어나며 승부욕이 강합니다.", "작사 능력이 뛰어나 팀의 랩 파트 작업에 주도적으로 참여합니다."], en: ["A former soccer player with great athletic skills and a competitive spirit.", "A talented lyricist who leads the creation of the group's rap sections."] } },
+      { id: "eric", name: { ko: "에릭", en: "ERIC", ja: "エリック", zh: "英宰" }, role: { ko: "리드댄서, 리드래퍼, 막내", en: "Lead Dancer, Lead Rapper, Maknae" }, birth: "2000.12.22", height: "174cm", bloodType: "A", mbti: "ENFJ", zodiac: { ko: "염소자리", en: "Capricorn" }, imageUrl: "https://tse1.mm.bing.net/th?q=THE+BOYZ+Eric+Official+Profile+Photo+High+Res", description: { ko: "미국 LA 출신의 넘치는 에너지와 열정을 가진 팀의 막내.", en: "The energetic maknae from LA with endless passion." }, socials: {}, tmi: { ko: ["팀 내에서 가장 에너지가 넘쳐 '에너자이저'로 통합니다.", "야구를 매우 좋아하며 메이저리그 팬으로도 잘 알려져 있습니다."], en: ["Known as the group's 'Energizer' for his high spirits and activity levels.", "A huge baseball fan and an avid follower of the MLB."] } }
+    ]
+  }
 ];
